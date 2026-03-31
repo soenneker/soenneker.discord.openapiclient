@@ -24,6 +24,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #endif
         /// <summary>The color property</summary>
         public int? Color { get; set; }
+        /// <summary>The components property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse>? Components { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse> Components { get; set; }
+#endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -133,6 +141,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedAuthorResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedAuthorResponse.CreateFromDiscriminatorValue); } },
                 { "color", n => { Color = n.GetIntValue(); } },
+                { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse>(global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFieldResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFieldResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "footer", n => { Footer = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFooterResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFooterResponse.CreateFromDiscriminatorValue); } },
@@ -155,6 +164,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedAuthorResponse>("author", Author);
             writer.WriteIntValue("color", Color);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse>("components", Components);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFieldResponse>("fields", Fields);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFooterResponse>("footer", Footer);
