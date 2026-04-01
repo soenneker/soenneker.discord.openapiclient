@@ -70,6 +70,16 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The placeholder property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Placeholder { get; set; }
+#nullable restore
+#else
+        public string Placeholder { get; set; }
+#endif
+        /// <summary>The placeholder_version property</summary>
+        public int? PlaceholderVersion { get; set; }
         /// <summary>The proxy_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -141,6 +151,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "filename", n => { Filename = n.GetStringValue(); } },
                 { "height", n => { Height = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "placeholder", n => { Placeholder = n.GetStringValue(); } },
+                { "placeholder_version", n => { PlaceholderVersion = n.GetIntValue(); } },
                 { "proxy_url", n => { ProxyUrl = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetIntValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -166,6 +178,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("filename", Filename);
             writer.WriteIntValue("height", Height);
             writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("placeholder", Placeholder);
+            writer.WriteIntValue("placeholder_version", PlaceholderVersion);
             writer.WriteStringValue("proxy_url", ProxyUrl);
             writer.WriteIntValue("size", Size);
             writer.WriteStringValue("title", Title);
