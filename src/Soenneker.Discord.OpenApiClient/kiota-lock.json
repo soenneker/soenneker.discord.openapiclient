@@ -1,5 +1,5 @@
 {
-  "descriptionHash": "5FBEF95906D33718E8D032D488D107DA7404B6FF48C5FA96DEF8741E9C1E26D28CB118F25EC8CCB9664259E3FCAB05D4F7558FC43732015595590D8AE84AF354",
+  "descriptionHash": "8C15710090B8403D649F38648E01045D643BA84773E12FBA75EEFE1C7EBD0D87BD911F4AB2ED0641C969A1DA14DFC1DDE1C1DC851157C042248B25D2A2BD23BE",
   "descriptionLocation": "../../openapi.json",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.30.0",
@@ -8,7 +8,7 @@
   "clientNamespaceName": "Soenneker.Discord.OpenApiClient",
   "language": "CSharp",
   "usesBackingStore": false,
-  "excludeBackwardCompatible": false,
+  "excludeBackwardCompatible": true,
   "includeAdditionalData": true,
   "disableSSLValidation": false,
   "serializers": [

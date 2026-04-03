@@ -27,19 +27,6 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers
                 return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswer_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item.polls.item.answers.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswer_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswer_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("answer_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswer_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.AnswersRequestBuilder"/> and sets the default values.
         /// </summary>
