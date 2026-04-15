@@ -60,6 +60,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Filename { get; set; }
 #endif
+        /// <summary>The flags property</summary>
+        public int? Flags { get; set; }
         /// <summary>The height property</summary>
         public int? Height { get; set; }
         /// <summary>The id property</summary>
@@ -149,6 +151,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "duration_secs", n => { DurationSecs = n.GetDoubleValue(); } },
                 { "ephemeral", n => { Ephemeral = n.GetBoolValue(); } },
                 { "filename", n => { Filename = n.GetStringValue(); } },
+                { "flags", n => { Flags = n.GetIntValue(); } },
                 { "height", n => { Height = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
@@ -176,6 +179,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteDoubleValue("duration_secs", DurationSecs);
             writer.WriteBoolValue("ephemeral", Ephemeral);
             writer.WriteStringValue("filename", Filename);
+            writer.WriteIntValue("flags", Flags);
             writer.WriteIntValue("height", Height);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("placeholder", Placeholder);

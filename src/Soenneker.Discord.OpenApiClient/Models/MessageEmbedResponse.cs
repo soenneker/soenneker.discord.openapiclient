@@ -48,6 +48,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public List<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFieldResponse> Fields { get; set; }
 #endif
+        /// <summary>The flags property</summary>
+        public int? Flags { get; set; }
         /// <summary>The footer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -144,6 +146,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse>(global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFieldResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFieldResponse.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "flags", n => { Flags = n.GetIntValue(); } },
                 { "footer", n => { Footer = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFooterResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFooterResponse.CreateFromDiscriminatorValue); } },
                 { "image", n => { Image = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedImageResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedImageResponse.CreateFromDiscriminatorValue); } },
                 { "provider", n => { Provider = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedProviderResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedProviderResponse.CreateFromDiscriminatorValue); } },
@@ -167,6 +170,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse>("components", Components);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFieldResponse>("fields", Fields);
+            writer.WriteIntValue("flags", Flags);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedFooterResponse>("footer", Footer);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedImageResponse>("image", Image);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedProviderResponse>("provider", Provider);

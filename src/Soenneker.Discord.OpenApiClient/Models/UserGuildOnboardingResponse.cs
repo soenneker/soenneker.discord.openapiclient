@@ -32,6 +32,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string GuildId { get; set; }
 #endif
+        /// <summary>The mode property</summary>
+        public int? Mode { get; set; }
         /// <summary>The prompts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,6 +70,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "default_channel_ids", n => { DefaultChannelIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
+                { "mode", n => { Mode = n.GetIntValue(); } },
                 { "prompts", n => { Prompts = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptResponse>(global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptResponse.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -81,6 +84,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("default_channel_ids", DefaultChannelIds);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("guild_id", GuildId);
+            writer.WriteIntValue("mode", Mode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptResponse>("prompts", Prompts);
             writer.WriteAdditionalData(AdditionalData);
         }

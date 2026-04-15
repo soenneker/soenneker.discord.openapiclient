@@ -100,6 +100,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The incidents_data property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildResponse.GuildResponse_incidents_data? IncidentsData { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildResponse.GuildResponse_incidents_data IncidentsData { get; set; }
+#endif
         /// <summary>The max_members property</summary>
         public int? MaxMembers { get; set; }
         /// <summary>The max_presences property</summary>
@@ -270,6 +278,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "home_header", n => { HomeHeader = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "incidents_data", n => { IncidentsData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildResponse.GuildResponse_incidents_data>(global::Soenneker.Discord.OpenApiClient.Models.GuildResponse.GuildResponse_incidents_data.CreateFromDiscriminatorValue); } },
                 { "max_members", n => { MaxMembers = n.GetIntValue(); } },
                 { "max_presences", n => { MaxPresences = n.GetIntValue(); } },
                 { "max_stage_video_channel_users", n => { MaxStageVideoChannelUsers = n.GetIntValue(); } },
@@ -319,6 +328,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("home_header", HomeHeader);
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildResponse.GuildResponse_incidents_data>("incidents_data", IncidentsData);
             writer.WriteIntValue("max_members", MaxMembers);
             writer.WriteIntValue("max_presences", MaxPresences);
             writer.WriteIntValue("max_stage_video_channel_users", MaxStageVideoChannelUsers);
@@ -495,6 +505,81 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 else if(SnowflakeType != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildResponse_incidents_dataMember1"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class GuildResponse_incidents_data : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse? GuildIncidentsDataResponse { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse GuildIncidentsDataResponse { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildResponse_incidents_dataMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Discord.OpenApiClient.Models.GuildResponse_incidents_dataMember1? GuildResponseIncidentsDataMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Discord.OpenApiClient.Models.GuildResponse_incidents_dataMember1 GuildResponseIncidentsDataMember1 { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildResponse.GuildResponse_incidents_data"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Discord.OpenApiClient.Models.GuildResponse.GuildResponse_incidents_data CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildResponse.GuildResponse_incidents_data();
+                if("GuildIncidentsDataResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.GuildIncidentsDataResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse();
+                }
+                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.GuildResponseIncidentsDataMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildResponse_incidents_dataMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(GuildIncidentsDataResponse != null)
+                {
+                    return GuildIncidentsDataResponse.GetFieldDeserializers();
+                }
+                else if(GuildResponseIncidentsDataMember1 != null)
+                {
+                    return GuildResponseIncidentsDataMember1.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(GuildIncidentsDataResponse != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse>(null, GuildIncidentsDataResponse);
+                }
+                else if(GuildResponseIncidentsDataMember1 != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildResponse_incidents_dataMember1>(null, GuildResponseIncidentsDataMember1);
                 }
             }
         }

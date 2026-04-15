@@ -9,37 +9,31 @@ namespace Soenneker.Discord.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class MessageActivityResponse : IAdditionalDataHolder, IParsable
+    public partial class GuildIncidentsDataResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The party_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PartyId { get; set; }
-#nullable restore
-#else
-        public string PartyId { get; set; }
-#endif
-        /// <summary>The type property</summary>
-        public int? Type { get; set; }
+        /// <summary>The dms_disabled_until property</summary>
+        public DateTimeOffset? DmsDisabledUntil { get; set; }
+        /// <summary>The invites_disabled_until property</summary>
+        public DateTimeOffset? InvitesDisabledUntil { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageActivityResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse"/> and sets the default values.
         /// </summary>
-        public MessageActivityResponse()
+        public GuildIncidentsDataResponse()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageActivityResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Discord.OpenApiClient.Models.MessageActivityResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.MessageActivityResponse();
+            return new global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,8 +43,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "party_id", n => { PartyId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "dms_disabled_until", n => { DmsDisabledUntil = n.GetDateTimeOffsetValue(); } },
+                { "invites_disabled_until", n => { InvitesDisabledUntil = n.GetDateTimeOffsetValue(); } },
             };
         }
         /// <summary>
@@ -60,8 +54,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("party_id", PartyId);
-            writer.WriteIntValue("type", Type);
+            writer.WriteDateTimeOffsetValue("dms_disabled_until", DmsDisabledUntil);
+            writer.WriteDateTimeOffsetValue("invites_disabled_until", InvitesDisabledUntil);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
