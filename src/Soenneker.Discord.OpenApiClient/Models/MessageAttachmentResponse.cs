@@ -24,6 +24,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #endif
         /// <summary>The clip_created_at property</summary>
         public DateTimeOffset? ClipCreatedAt { get; set; }
+        /// <summary>The clip_events_timeline property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ClipEventTimelineEntryResponse>? ClipEventsTimeline { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ClipEventTimelineEntryResponse> ClipEventsTimeline { get; set; }
+#endif
         /// <summary>The clip_participants property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -145,6 +153,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponse>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponse.CreateFromDiscriminatorValue); } },
                 { "clip_created_at", n => { ClipCreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "clip_events_timeline", n => { ClipEventsTimeline = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ClipEventTimelineEntryResponse>(global::Soenneker.Discord.OpenApiClient.Models.ClipEventTimelineEntryResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "clip_participants", n => { ClipParticipants = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "content_type", n => { ContentType = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -173,6 +182,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponse>("application", Application);
             writer.WriteDateTimeOffsetValue("clip_created_at", ClipCreatedAt);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ClipEventTimelineEntryResponse>("clip_events_timeline", ClipEventsTimeline);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("clip_participants", ClipParticipants);
             writer.WriteStringValue("content_type", ContentType);
             writer.WriteStringValue("description", Description);

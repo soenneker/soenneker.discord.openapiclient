@@ -125,10 +125,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The mention_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_mention_channels>? MentionChannels { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse>? MentionChannels { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_mention_channels> MentionChannels { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse> MentionChannels { get; set; }
 #endif
         /// <summary>The mention_everyone property</summary>
         public bool? MentionEveryone { get; set; }
@@ -211,10 +211,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The shared_client_theme property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_shared_client_theme? SharedClientTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse? SharedClientTheme { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_shared_client_theme SharedClientTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse SharedClientTheme { get; set; }
 #endif
         /// <summary>The sticker_items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -294,7 +294,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "interaction", n => { Interaction = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageInteractionResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageInteractionResponse.CreateFromDiscriminatorValue); } },
                 { "interaction_metadata", n => { InteractionMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_interaction_metadata>(global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_interaction_metadata.CreateFromDiscriminatorValue); } },
-                { "mention_channels", n => { MentionChannels = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_mention_channels>(global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_mention_channels.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "mention_channels", n => { MentionChannels = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "mention_everyone", n => { MentionEveryone = n.GetBoolValue(); } },
                 { "mention_roles", n => { MentionRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "mentions", n => { Mentions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -307,7 +307,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "purchase_notification", n => { PurchaseNotification = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PurchaseNotificationResponse>(global::Soenneker.Discord.OpenApiClient.Models.PurchaseNotificationResponse.CreateFromDiscriminatorValue); } },
                 { "resolved", n => { Resolved = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse>(global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse.CreateFromDiscriminatorValue); } },
                 { "role_subscription_data", n => { RoleSubscriptionData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageRoleSubscriptionDataResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageRoleSubscriptionDataResponse.CreateFromDiscriminatorValue); } },
-                { "shared_client_theme", n => { SharedClientTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_shared_client_theme>(global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_shared_client_theme.CreateFromDiscriminatorValue); } },
+                { "shared_client_theme", n => { SharedClientTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse>(global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse.CreateFromDiscriminatorValue); } },
                 { "sticker_items", n => { StickerItems = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageStickerItemResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageStickerItemResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "stickers", n => { Stickers = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_stickers>(global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_stickers.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "thread", n => { Thread = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>(global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse.CreateFromDiscriminatorValue); } },
@@ -339,7 +339,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageInteractionResponse>("interaction", Interaction);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_interaction_metadata>("interaction_metadata", InteractionMetadata);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_mention_channels>("mention_channels", MentionChannels);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse>("mention_channels", MentionChannels);
             writer.WriteBoolValue("mention_everyone", MentionEveryone);
             writer.WriteCollectionOfPrimitiveValues<string>("mention_roles", MentionRoles);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("mentions", Mentions);
@@ -352,7 +352,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PurchaseNotificationResponse>("purchase_notification", PurchaseNotification);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse>("resolved", Resolved);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageRoleSubscriptionDataResponse>("role_subscription_data", RoleSubscriptionData);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_shared_client_theme>("shared_client_theme", SharedClientTheme);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse>("shared_client_theme", SharedClientTheme);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageStickerItemResponse>("sticker_items", StickerItems);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_stickers>("stickers", Stickers);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>("thread", Thread);
@@ -633,94 +633,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_mention_channelsMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BasicMessageResponse_mention_channels : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_mention_channelsMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_mention_channelsMember1? BasicMessageResponseMentionChannelsMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_mention_channelsMember1 BasicMessageResponseMentionChannelsMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse? MessageMentionChannelResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse MessageMentionChannelResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_mention_channels"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_mention_channels CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_mention_channels();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.BasicMessageResponseMentionChannelsMember1 = new global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_mention_channelsMember1();
-                }
-                else if("MessageMentionChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MessageMentionChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BasicMessageResponseMentionChannelsMember1 != null)
-                {
-                    return BasicMessageResponseMentionChannelsMember1.GetFieldDeserializers();
-                }
-                else if(MessageMentionChannelResponse != null)
-                {
-                    return MessageMentionChannelResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(BasicMessageResponseMentionChannelsMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_mention_channelsMember1>(null, BasicMessageResponseMentionChannelsMember1);
-                }
-                else if(MessageMentionChannelResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse>(null, MessageMentionChannelResponse);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_nonceMember1"/>, <see cref="long"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="long"/>, <see cref="string"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BasicMessageResponse_nonce : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_nonceMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_nonceMember1? BasicMessageResponseNonceMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_nonceMember1 BasicMessageResponseNonceMember1 { get; set; }
-#endif
             /// <summary>Composed type representation for type <see cref="long"/></summary>
             public long? Int64 { get; set; }
             /// <summary>Composed type representation for type <see cref="string"/></summary>
@@ -741,11 +658,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
                 var result = new global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_nonce();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.BasicMessageResponseNonceMember1 = new global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_nonceMember1();
-                }
-                else if(parseNode.GetLongValue() is long int64Value)
+                if(parseNode.GetLongValue() is long int64Value)
                 {
                     result.Int64 = int64Value;
                 }
@@ -761,10 +674,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BasicMessageResponseNonceMember1 != null)
-                {
-                    return BasicMessageResponseNonceMember1.GetFieldDeserializers();
-                }
                 return new Dictionary<string, Action<IParseNode>>();
             }
             /// <summary>
@@ -774,92 +683,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(BasicMessageResponseNonceMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_nonceMember1>(null, BasicMessageResponseNonceMember1);
-                }
-                else if(Int64 != null)
+                if(Int64 != null)
                 {
                     writer.WriteLongValue(null, Int64);
                 }
                 else if(String != null)
                 {
                     writer.WriteStringValue(null, String);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_shared_client_themeMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BasicMessageResponse_shared_client_theme : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_shared_client_themeMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_shared_client_themeMember1? BasicMessageResponseSharedClientThemeMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_shared_client_themeMember1 BasicMessageResponseSharedClientThemeMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse? CustomClientThemeResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse CustomClientThemeResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_shared_client_theme"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_shared_client_theme CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.BasicMessageResponse_shared_client_theme();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.BasicMessageResponseSharedClientThemeMember1 = new global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_shared_client_themeMember1();
-                }
-                else if("CustomClientThemeResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CustomClientThemeResponse = new global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BasicMessageResponseSharedClientThemeMember1 != null)
-                {
-                    return BasicMessageResponseSharedClientThemeMember1.GetFieldDeserializers();
-                }
-                else if(CustomClientThemeResponse != null)
-                {
-                    return CustomClientThemeResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(BasicMessageResponseSharedClientThemeMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse_shared_client_themeMember1>(null, BasicMessageResponseSharedClientThemeMember1);
-                }
-                else if(CustomClientThemeResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse>(null, CustomClientThemeResponse);
                 }
             }
         }

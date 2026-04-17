@@ -46,18 +46,18 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements
         public EntitlementsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/entitlements{?after*,before*,exclude_deleted*,exclude_ended*,guild_id*,limit*,only_active*,sku_ids*,user_id*}", rawUrl)
         {
         }
-        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.Entitlements&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.Entitlements>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.EntitlementsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.EntitlementsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.Entitlements>> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.EntitlementsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse>> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.EntitlementsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -66,7 +66,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.Entitlements>(requestInfo, global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.Entitlements.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse"/></returns>
@@ -136,81 +136,6 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements
         public global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Entitlements : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse? EntitlementResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse EntitlementResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsMember1? EntitlementsMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsMember1 EntitlementsMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.Entitlements"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.Entitlements CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.Entitlements();
-                if("EntitlementResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.EntitlementResponse = new global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.EntitlementsMember1 = new global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(EntitlementResponse != null)
-                {
-                    return EntitlementResponse.GetFieldDeserializers();
-                }
-                else if(EntitlementsMember1 != null)
-                {
-                    return EntitlementsMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(EntitlementResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse>(null, EntitlementResponse);
-                }
-                else if(EntitlementsMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsMember1>(null, EntitlementsMember1);
-                }
-            }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591

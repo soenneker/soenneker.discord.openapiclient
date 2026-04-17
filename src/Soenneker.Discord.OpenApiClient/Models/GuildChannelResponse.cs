@@ -27,13 +27,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The default_auto_archive_duration property</summary>
         public int? DefaultAutoArchiveDuration { get; set; }
         /// <summary>The default_forum_layout property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_forum_layout? DefaultForumLayout { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_forum_layout DefaultForumLayout { get; set; }
-#endif
+        public int? DefaultForumLayout { get; set; }
         /// <summary>The default_reaction_emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -186,7 +180,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "available_tags", n => { AvailableTags = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse>(global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "bitrate", n => { Bitrate = n.GetIntValue(); } },
                 { "default_auto_archive_duration", n => { DefaultAutoArchiveDuration = n.GetIntValue(); } },
-                { "default_forum_layout", n => { DefaultForumLayout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_forum_layout>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_forum_layout.CreateFromDiscriminatorValue); } },
+                { "default_forum_layout", n => { DefaultForumLayout = n.GetIntValue(); } },
                 { "default_reaction_emoji", n => { DefaultReactionEmoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_reaction_emoji>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_reaction_emoji.CreateFromDiscriminatorValue); } },
                 { "default_sort_order", n => { DefaultSortOrder = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_sort_order>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_sort_order.CreateFromDiscriminatorValue); } },
                 { "default_tag_setting", n => { DefaultTagSetting = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_tag_setting>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_tag_setting.CreateFromDiscriminatorValue); } },
@@ -222,7 +216,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse>("available_tags", AvailableTags);
             writer.WriteIntValue("bitrate", Bitrate);
             writer.WriteIntValue("default_auto_archive_duration", DefaultAutoArchiveDuration);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_forum_layout>("default_forum_layout", DefaultForumLayout);
+            writer.WriteIntValue("default_forum_layout", DefaultForumLayout);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_reaction_emoji>("default_reaction_emoji", DefaultReactionEmoji);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_sort_order>("default_sort_order", DefaultSortOrder);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_tag_setting>("default_tag_setting", DefaultTagSetting);
@@ -247,81 +241,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("user_limit", UserLimit);
             writer.WriteIntValue("video_quality_mode", VideoQualityMode);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ForumLayout"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_forum_layoutMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildChannelResponse_default_forum_layout : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ForumLayout"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ForumLayout? ForumLayout { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ForumLayout ForumLayout { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_forum_layoutMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_forum_layoutMember1? GuildChannelResponseDefaultForumLayoutMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_forum_layoutMember1 GuildChannelResponseDefaultForumLayoutMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_forum_layout"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_forum_layout CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_forum_layout();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ForumLayout = new global::Soenneker.Discord.OpenApiClient.Models.ForumLayout();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildChannelResponseDefaultForumLayoutMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_forum_layoutMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ForumLayout != null)
-                {
-                    return ForumLayout.GetFieldDeserializers();
-                }
-                else if(GuildChannelResponseDefaultForumLayoutMember1 != null)
-                {
-                    return GuildChannelResponseDefaultForumLayoutMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ForumLayout != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ForumLayout>(null, ForumLayout);
-                }
-                else if(GuildChannelResponseDefaultForumLayoutMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_forum_layoutMember1>(null, GuildChannelResponseDefaultForumLayoutMember1);
-                }
-            }
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_reaction_emojiMember1"/>

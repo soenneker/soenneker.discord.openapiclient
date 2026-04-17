@@ -15,6 +15,7 @@ using Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers;
 using Soenneker.Discord.OpenApiClient.Channels.Item.Threads;
 using Soenneker.Discord.OpenApiClient.Channels.Item.Typing;
 using Soenneker.Discord.OpenApiClient.Channels.Item.Users;
+using Soenneker.Discord.OpenApiClient.Channels.Item.VoiceStatus;
 using Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks;
 using Soenneker.Discord.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -89,6 +90,11 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item
         public global::Soenneker.Discord.OpenApiClient.Channels.Item.Users.UsersRequestBuilder Users
         {
             get => new global::Soenneker.Discord.OpenApiClient.Channels.Item.Users.UsersRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The voiceStatus property</summary>
+        public global::Soenneker.Discord.OpenApiClient.Channels.Item.VoiceStatus.VoiceStatusRequestBuilder VoiceStatus
+        {
+            get => new global::Soenneker.Discord.OpenApiClient.Channels.Item.VoiceStatus.VoiceStatusRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The webhooks property</summary>
         public global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder Webhooks

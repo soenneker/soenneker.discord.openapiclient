@@ -1206,14 +1206,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "$ref": "#/components/schemas/EntitlementResponse"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/EntitlementResponse"
                   }
                 }
               }
@@ -5342,6 +5335,75 @@
                 "schema": {
                   "$ref": "#/components/schemas/ThreadsResponse"
                 }
+              }
+            }
+          },
+          "429": {
+            "$ref": "#/components/responses/ClientRatelimitedResponse"
+          },
+          "4XX": {
+            "$ref": "#/components/responses/ClientErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "BotToken": []
+          }
+        ]
+      }
+    },
+    "/channels/{channel_id}/voice-status": {
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "schema": {
+            "$ref": "#/components/schemas/SnowflakeType"
+          },
+          "required": true
+        }
+      ],
+      "put": {
+        "description": "Set a voice channel's status.",
+        "operationId": "update_voice_channel_status",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "The new voice channel status",
+                    "maxLength": 500
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "204 response for update_voice_channel_status",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
               }
             }
           },
@@ -13988,14 +14050,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "$ref": "#/components/schemas/EntitlementResponse"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/EntitlementResponse"
                   }
                 }
               }
@@ -16015,6 +16070,11 @@
             "title": "CHANNEL_CREATE",
             "description": "New guild channel created",
             "const": "CHANNEL_CREATE"
+          },
+          {
+            "title": "VOICE_CHANNEL_STATUS_UPDATE",
+            "description": "Voice channel status was updated",
+            "const": "VOICE_CHANNEL_STATUS_UPDATE"
           },
           {
             "title": "CHANNEL_UPDATE",
@@ -18880,7 +18940,23 @@
       },
       "ApplicationEventWebhooksStatus": {
         "type": "integer",
-        "oneOf": [],
+        "oneOf": [
+          {
+            "title": "DISABLED",
+            "description": "Webhook events are disabled by developer",
+            "const": 1
+          },
+          {
+            "title": "ENABLED",
+            "description": "Webhook events are enabled by developer",
+            "const": 2
+          },
+          {
+            "title": "DISABLED_BY_DISCORD",
+            "description": "Webhook events are disabled by Discord, usually due to inactivity",
+            "const": 3
+          }
+        ],
         "format": "int32"
       },
       "ApplicationExplicitContentFilterTypes": {
@@ -19048,6 +19124,50 @@
             },
             "minProperties": 1,
             "maxProperties": 2
+          },
+          "event_webhooks_status": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "integer",
+                "enum": [
+                  1,
+                  2
+                ],
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ApplicationEventWebhooksStatus"
+                  }
+                ],
+                "format": "int32"
+              }
+            ]
+          },
+          "event_webhooks_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2048,
+            "format": "uri"
+          },
+          "event_webhooks_types": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string",
+              "enum": [],
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ActionTypes"
+                }
+              ]
+            },
+            "uniqueItems": true
           }
         }
       },
@@ -19304,10 +19424,7 @@
           "rpc_origins": {
             "type": "array",
             "items": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": "string"
             }
           },
           "bot_public": {
@@ -19483,10 +19600,7 @@
         "type": "object",
         "properties": {
           "platform_name": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": "string"
           },
           "platform_username": {
             "type": [
@@ -19552,16 +19666,10 @@
             "format": "int32"
           },
           "placeholder": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": "string"
           },
           "placeholder_version": {
-            "type": [
-              "integer",
-              "null"
-            ],
+            "type": "integer",
             "format": "int32"
           },
           "title": {
@@ -19581,6 +19689,12 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/UserResponse"
+            }
+          },
+          "clip_events_timeline": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ClipEventTimelineEntryResponse"
             }
           }
         },
@@ -20660,9 +20774,6 @@
                 "type": "string",
                 "maxLength": 25,
                 "format": "nonce"
-              },
-              {
-                "type": "null"
               }
             ]
           },
@@ -20678,14 +20789,7 @@
           "mention_channels": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "type": "null"
-                },
-                {
-                  "$ref": "#/components/schemas/MessageMentionChannelResponse"
-                }
-              ]
+              "$ref": "#/components/schemas/MessageMentionChannelResponse"
             }
           },
           "role_subscription_data": {
@@ -20705,14 +20809,7 @@
             "$ref": "#/components/schemas/PollResponse"
           },
           "shared_client_theme": {
-            "oneOf": [
-              {
-                "type": "null"
-              },
-              {
-                "$ref": "#/components/schemas/CustomClientThemeResponse"
-              }
-            ]
+            "$ref": "#/components/schemas/CustomClientThemeResponse"
           },
           "interaction_metadata": {
             "oneOf": [
@@ -21801,6 +21898,37 @@
         "required": [
           "label",
           "value"
+        ]
+      },
+      "ClipEventTimelineEntryResponse": {
+        "type": "object",
+        "properties": {
+          "timestamp_ms": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "speaking": {
+            "$ref": "#/components/schemas/ClipSpeakingEventResponse"
+          }
+        },
+        "required": [
+          "timestamp_ms"
+        ]
+      },
+      "ClipSpeakingEventResponse": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "$ref": "#/components/schemas/SnowflakeType"
+          },
+          "speaking_flags": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "user_id",
+          "speaking_flags"
         ]
       },
       "CommandPermissionResponse": {
@@ -22938,10 +23066,7 @@
             "$ref": "#/components/schemas/VideoQualityModes"
           },
           "permissions": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": "string"
           },
           "owner_id": {
             "$ref": "#/components/schemas/SnowflakeType"
@@ -23370,7 +23495,11 @@
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "emoji_id",
+          "emoji_name"
+        ]
       },
       "DiscordIntegrationResponse": {
         "type": "object",
@@ -23601,10 +23730,7 @@
             ]
           },
           "consumed": {
-            "type": [
-              "boolean",
-              "null"
-            ]
+            "type": "boolean"
           },
           "gifter_user_id": {
             "oneOf": [
@@ -23633,6 +23759,8 @@
           "application_id",
           "user_id",
           "deleted",
+          "starts_at",
+          "ends_at",
           "type"
         ]
       },
@@ -25366,10 +25494,7 @@
             "$ref": "#/components/schemas/VideoQualityModes"
           },
           "permissions": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": "string"
           },
           "topic": {
             "type": [
@@ -25424,14 +25549,7 @@
             ]
           },
           "default_forum_layout": {
-            "oneOf": [
-              {
-                "type": "null"
-              },
-              {
-                "$ref": "#/components/schemas/ForumLayout"
-              }
-            ]
+            "$ref": "#/components/schemas/ForumLayout"
           },
           "default_tag_setting": {
             "oneOf": [
@@ -25641,27 +25759,13 @@
           "new_member_actions": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "type": "null"
-                },
-                {
-                  "$ref": "#/components/schemas/NewMemberActionResponse"
-                }
-              ]
+              "$ref": "#/components/schemas/NewMemberActionResponse"
             }
           },
           "resource_channels": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "type": "null"
-                },
-                {
-                  "$ref": "#/components/schemas/ResourceChannelResponse"
-                }
-              ]
+              "$ref": "#/components/schemas/ResourceChannelResponse"
             }
           }
         },
@@ -25689,7 +25793,11 @@
             ],
             "format": "date-time"
           }
-        }
+        },
+        "required": [
+          "invites_disabled_until",
+          "dms_disabled_until"
+        ]
       },
       "GuildIncomingWebhookResponse": {
         "type": "object",
@@ -26632,7 +26740,8 @@
           "nsfw",
           "nsfw_level",
           "emojis",
-          "stickers"
+          "stickers",
+          "incidents_data"
         ]
       },
       "GuildRoleColorsResponse": {
@@ -27047,14 +27156,7 @@
           "permission_overwrites": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "type": "null"
-                },
-                {
-                  "$ref": "#/components/schemas/ChannelPermissionOverwriteResponse"
-                }
-              ]
+              "$ref": "#/components/schemas/ChannelPermissionOverwriteResponse"
             }
           },
           "available_tags": {
@@ -27812,7 +27914,8 @@
           "nsfw",
           "nsfw_level",
           "emojis",
-          "stickers"
+          "stickers",
+          "incidents_data"
         ]
       },
       "HasOption": {
@@ -28677,10 +28780,7 @@
           "rpc_origins": {
             "type": "array",
             "items": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": "string"
             }
           },
           "bot_public": {
@@ -30525,10 +30625,7 @@
             "$ref": "#/components/schemas/ActivityActionTypes"
           },
           "party_id": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": "string"
           }
         },
         "required": [
@@ -30704,16 +30801,10 @@
             "format": "int32"
           },
           "placeholder": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": "string"
           },
           "placeholder_version": {
-            "type": [
-              "integer",
-              "null"
-            ],
+            "type": "integer",
             "format": "int32"
           },
           "title": {
@@ -30733,6 +30824,12 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/UserResponse"
+            }
+          },
+          "clip_events_timeline": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ClipEventTimelineEntryResponse"
             }
           }
         },
@@ -31722,9 +31819,6 @@
                 "type": "string",
                 "maxLength": 25,
                 "format": "nonce"
-              },
-              {
-                "type": "null"
               }
             ]
           },
@@ -31740,14 +31834,7 @@
           "mention_channels": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "type": "null"
-                },
-                {
-                  "$ref": "#/components/schemas/MessageMentionChannelResponse"
-                }
-              ]
+              "$ref": "#/components/schemas/MessageMentionChannelResponse"
             }
           },
           "role_subscription_data": {
@@ -31767,14 +31854,7 @@
             "$ref": "#/components/schemas/PollResponse"
           },
           "shared_client_theme": {
-            "oneOf": [
-              {
-                "type": "null"
-              },
-              {
-                "$ref": "#/components/schemas/CustomClientThemeResponse"
-              }
-            ]
+            "$ref": "#/components/schemas/CustomClientThemeResponse"
           },
           "interaction_metadata": {
             "oneOf": [
@@ -33466,10 +33546,7 @@
           "rpc_origins": {
             "type": "array",
             "items": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": "string"
             }
           },
           "bot_public": {
@@ -33523,10 +33600,7 @@
           "redirect_uris": {
             "type": "array",
             "items": {
-              "type": [
-                "string",
-                "null"
-              ],
+              "type": "string",
               "format": "uri"
             }
           },
@@ -33548,10 +33622,7 @@
             "$ref": "#/components/schemas/UserResponse"
           },
           "approximate_guild_count": {
-            "type": [
-              "integer",
-              "null"
-            ],
+            "type": "integer",
             "format": "int32"
           },
           "approximate_user_install_count": {
@@ -33570,20 +33641,10 @@
             "format": "uri"
           },
           "event_webhooks_status": {
-            "oneOf": [
-              {
-                "type": "null"
-              },
-              {
-                "$ref": "#/components/schemas/ApplicationEventWebhooksStatus"
-              }
-            ]
+            "$ref": "#/components/schemas/ApplicationEventWebhooksStatus"
           },
           "event_webhooks_types": {
-            "type": [
-              "array",
-              "null"
-            ],
+            "type": "array",
             "items": {
               "type": "string",
               "enum": [],
@@ -35361,9 +35422,6 @@
                 "type": "string",
                 "maxLength": 25,
                 "format": "nonce"
-              },
-              {
-                "type": "null"
               }
             ]
           },
@@ -35379,14 +35437,7 @@
           "mention_channels": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "type": "null"
-                },
-                {
-                  "$ref": "#/components/schemas/MessageMentionChannelResponse"
-                }
-              ]
+              "$ref": "#/components/schemas/MessageMentionChannelResponse"
             }
           },
           "role_subscription_data": {
@@ -35406,14 +35457,7 @@
             "$ref": "#/components/schemas/PollResponse"
           },
           "shared_client_theme": {
-            "oneOf": [
-              {
-                "type": "null"
-              },
-              {
-                "$ref": "#/components/schemas/CustomClientThemeResponse"
-              }
-            ]
+            "$ref": "#/components/schemas/CustomClientThemeResponse"
           },
           "interaction_metadata": {
             "oneOf": [
@@ -37449,10 +37493,7 @@
             "$ref": "#/components/schemas/VideoQualityModes"
           },
           "permissions": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": "string"
           },
           "owner_id": {
             "$ref": "#/components/schemas/SnowflakeType"

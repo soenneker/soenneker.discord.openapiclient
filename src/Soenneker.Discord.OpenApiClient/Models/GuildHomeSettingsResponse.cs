@@ -27,18 +27,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The new_member_actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_new_member_actions>? NewMemberActions { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse>? NewMemberActions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_new_member_actions> NewMemberActions { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse> NewMemberActions { get; set; }
 #endif
         /// <summary>The resource_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_resource_channels>? ResourceChannels { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse>? ResourceChannels { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_resource_channels> ResourceChannels { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse> ResourceChannels { get; set; }
 #endif
         /// <summary>The welcome_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,8 +75,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
-                { "new_member_actions", n => { NewMemberActions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_new_member_actions>(global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_new_member_actions.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "resource_channels", n => { ResourceChannels = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_resource_channels>(global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_resource_channels.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "new_member_actions", n => { NewMemberActions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse>(global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "resource_channels", n => { ResourceChannels = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse>(global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "welcome_message", n => { WelcomeMessage = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.WelcomeMessageResponse>(global::Soenneker.Discord.OpenApiClient.Models.WelcomeMessageResponse.CreateFromDiscriminatorValue); } },
             };
         }
@@ -89,160 +89,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("guild_id", GuildId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_new_member_actions>("new_member_actions", NewMemberActions);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_resource_channels>("resource_channels", ResourceChannels);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse>("new_member_actions", NewMemberActions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse>("resource_channels", ResourceChannels);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.WelcomeMessageResponse>("welcome_message", WelcomeMessage);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_new_member_actionsMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildHomeSettingsResponse_new_member_actions : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_new_member_actionsMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_new_member_actionsMember1? GuildHomeSettingsResponseNewMemberActionsMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_new_member_actionsMember1 GuildHomeSettingsResponseNewMemberActionsMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse? NewMemberActionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse NewMemberActionResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_new_member_actions"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_new_member_actions CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_new_member_actions();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildHomeSettingsResponseNewMemberActionsMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_new_member_actionsMember1();
-                }
-                else if("NewMemberActionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.NewMemberActionResponse = new global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildHomeSettingsResponseNewMemberActionsMember1 != null)
-                {
-                    return GuildHomeSettingsResponseNewMemberActionsMember1.GetFieldDeserializers();
-                }
-                else if(NewMemberActionResponse != null)
-                {
-                    return NewMemberActionResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildHomeSettingsResponseNewMemberActionsMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_new_member_actionsMember1>(null, GuildHomeSettingsResponseNewMemberActionsMember1);
-                }
-                else if(NewMemberActionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse>(null, NewMemberActionResponse);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_resource_channelsMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildHomeSettingsResponse_resource_channels : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_resource_channelsMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_resource_channelsMember1? GuildHomeSettingsResponseResourceChannelsMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_resource_channelsMember1 GuildHomeSettingsResponseResourceChannelsMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse? ResourceChannelResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse ResourceChannelResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_resource_channels"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_resource_channels CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.GuildHomeSettingsResponse_resource_channels();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildHomeSettingsResponseResourceChannelsMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_resource_channelsMember1();
-                }
-                else if("ResourceChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ResourceChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildHomeSettingsResponseResourceChannelsMember1 != null)
-                {
-                    return GuildHomeSettingsResponseResourceChannelsMember1.GetFieldDeserializers();
-                }
-                else if(ResourceChannelResponse != null)
-                {
-                    return ResourceChannelResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildHomeSettingsResponseResourceChannelsMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse_resource_channelsMember1>(null, GuildHomeSettingsResponseResourceChannelsMember1);
-                }
-                else if(ResourceChannelResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse>(null, ResourceChannelResponse);
-                }
-            }
         }
     }
 }
