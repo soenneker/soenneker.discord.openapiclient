@@ -61,10 +61,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The event_webhooks_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EventWebhooksTypes { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_event_webhooks_types?>? EventWebhooksTypes { get; set; }
 #nullable restore
 #else
-        public List<string> EventWebhooksTypes { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_event_webhooks_types?> EventWebhooksTypes { get; set; }
 #endif
         /// <summary>The event_webhooks_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -267,7 +267,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "custom_install_url", n => { CustomInstallUrl = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "event_webhooks_status", n => { EventWebhooksStatus = n.GetIntValue(); } },
-                { "event_webhooks_types", n => { EventWebhooksTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "event_webhooks_types", n => { EventWebhooksTypes = n.GetCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_event_webhooks_types>()?.AsList(); } },
                 { "event_webhooks_url", n => { EventWebhooksUrl = n.GetStringValue(); } },
                 { "explicit_content_filter", n => { ExplicitContentFilter = n.GetIntValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
@@ -310,7 +310,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("custom_install_url", CustomInstallUrl);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("event_webhooks_status", EventWebhooksStatus);
-            writer.WriteCollectionOfPrimitiveValues<string>("event_webhooks_types", EventWebhooksTypes);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_event_webhooks_types>("event_webhooks_types", EventWebhooksTypes);
             writer.WriteStringValue("event_webhooks_url", EventWebhooksUrl);
             writer.WriteIntValue("explicit_content_filter", ExplicitContentFilter);
             writer.WriteIntValue("flags", Flags);
