@@ -18,6 +18,7 @@ using Soenneker.Discord.OpenApiClient.Guilds.Item.Onboarding;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.Preview;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.Prune;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.Regions;
+using Soenneker.Discord.OpenApiClient.Guilds.Item.Requests;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.Roles;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.SoundboardSounds;
@@ -119,6 +120,11 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item
         public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Regions.RegionsRequestBuilder Regions
         {
             get => new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Regions.RegionsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The requests property</summary>
+        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Requests.RequestsRequestBuilder Requests
+        {
+            get => new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Requests.RequestsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The roles property</summary>
         public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Roles.RolesRequestBuilder Roles

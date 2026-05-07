@@ -78,6 +78,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public int? ExplicitContentFilter { get; set; }
         /// <summary>The flags property</summary>
         public int? Flags { get; set; }
+        /// <summary>The flags_new property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FlagsNew { get; set; }
+#nullable restore
+#else
+        public string FlagsNew { get; set; }
+#endif
         /// <summary>The guild_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -271,6 +279,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "event_webhooks_url", n => { EventWebhooksUrl = n.GetStringValue(); } },
                 { "explicit_content_filter", n => { ExplicitContentFilter = n.GetIntValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
+                { "flags_new", n => { FlagsNew = n.GetStringValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -314,6 +323,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("event_webhooks_url", EventWebhooksUrl);
             writer.WriteIntValue("explicit_content_filter", ExplicitContentFilter);
             writer.WriteIntValue("flags", Flags);
+            writer.WriteStringValue("flags_new", FlagsNew);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("id", Id);
