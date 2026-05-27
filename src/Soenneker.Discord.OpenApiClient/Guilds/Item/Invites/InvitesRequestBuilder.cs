@@ -33,18 +33,18 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Invites
         public InvitesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/invites", rawUrl)
         {
         }
-        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.Invites&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.ListGuildInvites200&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.Invites>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.ListGuildInvites200>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.Invites>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.ListGuildInvites200>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -53,7 +53,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Invites
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.Invites>(requestInfo, global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.Invites.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.ListGuildInvites200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.ListGuildInvites200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
@@ -82,10 +82,10 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Invites
             return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Invites : IComposedTypeWrapper, IParsable
+        public partial class ListGuildInvites200 : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,24 +111,16 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Invites
 #else
             public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse GuildInviteResponse { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesMember1? InvitesMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesMember1 InvitesMember1 { get; set; }
-#endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.Invites"/></returns>
+            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.ListGuildInvites200"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.Invites CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.ListGuildInvites200 CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.Invites();
+                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesRequestBuilder.ListGuildInvites200();
                 if("FriendInviteResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.FriendInviteResponse = new global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse();
@@ -140,10 +132,6 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Invites
                 else if("GuildInviteResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.GuildInviteResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.InvitesMember1 = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesMember1();
                 }
                 return result;
             }
@@ -165,10 +153,6 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Invites
                 {
                     return GuildInviteResponse.GetFieldDeserializers();
                 }
-                else if(InvitesMember1 != null)
-                {
-                    return InvitesMember1.GetFieldDeserializers();
-                }
                 return new Dictionary<string, Action<IParseNode>>();
             }
             /// <summary>
@@ -189,10 +173,6 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Invites
                 else if(GuildInviteResponse != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse>(null, GuildInviteResponse);
-                }
-                else if(InvitesMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Invites.InvitesMember1>(null, InvitesMember1);
                 }
             }
         }

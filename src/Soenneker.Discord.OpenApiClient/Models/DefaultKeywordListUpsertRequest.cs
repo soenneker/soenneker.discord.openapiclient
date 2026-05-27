@@ -25,7 +25,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The enabled property</summary>
         public bool? Enabled { get; set; }
         /// <summary>The event_type property</summary>
-        public int? EventType { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType? EventType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType EventType { get; set; }
+#endif
         /// <summary>The exempt_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,7 +65,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListTriggerMetadata TriggerMetadata { get; set; }
 #endif
         /// <summary>The trigger_type property</summary>
-        public int? TriggerType { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequest_trigger_type? TriggerType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequest_trigger_type TriggerType { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequest"/> and sets the default values.
         /// </summary>
@@ -87,12 +99,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequest.DefaultKeywordListUpsertRequest_actions>(global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequest.DefaultKeywordListUpsertRequest_actions.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "event_type", n => { EventType = n.GetIntValue(); } },
+                { "event_type", n => { EventType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType>(global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType.CreateFromDiscriminatorValue); } },
                 { "exempt_channels", n => { ExemptChannels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "exempt_roles", n => { ExemptRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "trigger_metadata", n => { TriggerMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListTriggerMetadata>(global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListTriggerMetadata.CreateFromDiscriminatorValue); } },
-                { "trigger_type", n => { TriggerType = n.GetIntValue(); } },
+                { "trigger_type", n => { TriggerType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequest_trigger_type>(global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequest_trigger_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -104,12 +116,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequest.DefaultKeywordListUpsertRequest_actions>("actions", Actions);
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteIntValue("event_type", EventType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType>("event_type", EventType);
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_channels", ExemptChannels);
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_roles", ExemptRoles);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListTriggerMetadata>("trigger_metadata", TriggerMetadata);
-            writer.WriteIntValue("trigger_type", TriggerType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequest_trigger_type>("trigger_type", TriggerType);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>

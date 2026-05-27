@@ -27,10 +27,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The avatar_decoration_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_avatar_decoration_data? AvatarDecorationData { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse? AvatarDecorationData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_avatar_decoration_data AvatarDecorationData { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse AvatarDecorationData { get; set; }
 #endif
         /// <summary>The banner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -45,10 +45,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The collectibles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_collectibles? Collectibles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? Collectibles { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_collectibles Collectibles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse Collectibles { get; set; }
 #endif
         /// <summary>The discriminator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,10 +79,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The primary_guild property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_primary_guild? PrimaryGuild { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse? PrimaryGuild { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_primary_guild PrimaryGuild { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse PrimaryGuild { get; set; }
 #endif
         /// <summary>The public_flags property</summary>
         public int? PublicFlags { get; set; }
@@ -123,15 +123,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "accent_color", n => { AccentColor = n.GetIntValue(); } },
                 { "avatar", n => { Avatar = n.GetStringValue(); } },
-                { "avatar_decoration_data", n => { AvatarDecorationData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_avatar_decoration_data>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_avatar_decoration_data.CreateFromDiscriminatorValue); } },
+                { "avatar_decoration_data", n => { AvatarDecorationData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse.CreateFromDiscriminatorValue); } },
                 { "banner", n => { Banner = n.GetStringValue(); } },
                 { "bot", n => { Bot = n.GetBoolValue(); } },
-                { "collectibles", n => { Collectibles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_collectibles>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_collectibles.CreateFromDiscriminatorValue); } },
+                { "collectibles", n => { Collectibles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse.CreateFromDiscriminatorValue); } },
                 { "discriminator", n => { Discriminator = n.GetStringValue(); } },
                 { "flags", n => { Flags = n.GetLongValue(); } },
                 { "global_name", n => { GlobalName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "primary_guild", n => { PrimaryGuild = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_primary_guild>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_primary_guild.CreateFromDiscriminatorValue); } },
+                { "primary_guild", n => { PrimaryGuild = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse.CreateFromDiscriminatorValue); } },
                 { "public_flags", n => { PublicFlags = n.GetIntValue(); } },
                 { "system", n => { System = n.GetBoolValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
@@ -146,244 +146,19 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("accent_color", AccentColor);
             writer.WriteStringValue("avatar", Avatar);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_avatar_decoration_data>("avatar_decoration_data", AvatarDecorationData);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse>("avatar_decoration_data", AvatarDecorationData);
             writer.WriteStringValue("banner", Banner);
             writer.WriteBoolValue("bot", Bot);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_collectibles>("collectibles", Collectibles);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>("collectibles", Collectibles);
             writer.WriteStringValue("discriminator", Discriminator);
             writer.WriteLongValue("flags", Flags);
             writer.WriteStringValue("global_name", GlobalName);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_primary_guild>("primary_guild", PrimaryGuild);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse>("primary_guild", PrimaryGuild);
             writer.WriteIntValue("public_flags", PublicFlags);
             writer.WriteBoolValue("system", System);
             writer.WriteStringValue("username", Username);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserResponse_avatar_decoration_dataMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class UserResponse_avatar_decoration_data : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse? UserAvatarDecorationResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse UserAvatarDecorationResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserResponse_avatar_decoration_dataMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UserResponse_avatar_decoration_dataMember1? UserResponseAvatarDecorationDataMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UserResponse_avatar_decoration_dataMember1 UserResponseAvatarDecorationDataMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_avatar_decoration_data"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_avatar_decoration_data CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_avatar_decoration_data();
-                if("UserAvatarDecorationResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UserAvatarDecorationResponse = new global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UserResponseAvatarDecorationDataMember1 = new global::Soenneker.Discord.OpenApiClient.Models.UserResponse_avatar_decoration_dataMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(UserAvatarDecorationResponse != null)
-                {
-                    return UserAvatarDecorationResponse.GetFieldDeserializers();
-                }
-                else if(UserResponseAvatarDecorationDataMember1 != null)
-                {
-                    return UserResponseAvatarDecorationDataMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(UserAvatarDecorationResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse>(null, UserAvatarDecorationResponse);
-                }
-                else if(UserResponseAvatarDecorationDataMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse_avatar_decoration_dataMember1>(null, UserResponseAvatarDecorationDataMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserResponse_collectiblesMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class UserResponse_collectibles : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? UserCollectiblesResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse UserCollectiblesResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserResponse_collectiblesMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UserResponse_collectiblesMember1? UserResponseCollectiblesMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UserResponse_collectiblesMember1 UserResponseCollectiblesMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_collectibles"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_collectibles CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_collectibles();
-                if("UserCollectiblesResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UserCollectiblesResponse = new global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UserResponseCollectiblesMember1 = new global::Soenneker.Discord.OpenApiClient.Models.UserResponse_collectiblesMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(UserCollectiblesResponse != null)
-                {
-                    return UserCollectiblesResponse.GetFieldDeserializers();
-                }
-                else if(UserResponseCollectiblesMember1 != null)
-                {
-                    return UserResponseCollectiblesMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(UserCollectiblesResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>(null, UserCollectiblesResponse);
-                }
-                else if(UserResponseCollectiblesMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse_collectiblesMember1>(null, UserResponseCollectiblesMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserResponse_primary_guildMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class UserResponse_primary_guild : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse? UserPrimaryGuildResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse UserPrimaryGuildResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserResponse_primary_guildMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UserResponse_primary_guildMember1? UserResponsePrimaryGuildMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UserResponse_primary_guildMember1 UserResponsePrimaryGuildMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_primary_guild"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_primary_guild CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.UserResponse.UserResponse_primary_guild();
-                if("UserPrimaryGuildResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UserPrimaryGuildResponse = new global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UserResponsePrimaryGuildMember1 = new global::Soenneker.Discord.OpenApiClient.Models.UserResponse_primary_guildMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(UserPrimaryGuildResponse != null)
-                {
-                    return UserPrimaryGuildResponse.GetFieldDeserializers();
-                }
-                else if(UserResponsePrimaryGuildMember1 != null)
-                {
-                    return UserResponsePrimaryGuildMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(UserPrimaryGuildResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse>(null, UserPrimaryGuildResponse);
-                }
-                else if(UserResponsePrimaryGuildMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse_primary_guildMember1>(null, UserResponsePrimaryGuildMember1);
-                }
-            }
         }
     }
 }

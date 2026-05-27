@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The auto_archive_duration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_auto_archive_duration? AutoArchiveDuration { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper? AutoArchiveDuration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_auto_archive_duration AutoArchiveDuration { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper AutoArchiveDuration { get; set; }
 #endif
         /// <summary>The invitable property</summary>
         public bool? Invitable { get; set; }
@@ -37,10 +37,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_type? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UnionBranch? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_type Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UnionBranch Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest"/> and sets the default values.
@@ -67,11 +67,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_auto_archive_duration>(global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_auto_archive_duration.CreateFromDiscriminatorValue); } },
+                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper.CreateFromDiscriminatorValue); } },
                 { "invitable", n => { Invitable = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "rate_limit_per_user", n => { RateLimitPerUser = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UnionBranch>(global::Soenneker.Discord.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,162 +81,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_auto_archive_duration>("auto_archive_duration", AutoArchiveDuration);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper>("auto_archive_duration", AutoArchiveDuration);
             writer.WriteBoolValue("invitable", Invitable);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UnionBranch>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_auto_archive_durationMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CreateTextThreadWithoutMessageRequest_auto_archive_duration : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_auto_archive_durationMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_auto_archive_durationMember1? CreateTextThreadWithoutMessageRequestAutoArchiveDurationMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_auto_archive_durationMember1 CreateTextThreadWithoutMessageRequestAutoArchiveDurationMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration? ThreadAutoArchiveDuration { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration ThreadAutoArchiveDuration { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_auto_archive_duration"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_auto_archive_duration CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_auto_archive_duration();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CreateTextThreadWithoutMessageRequestAutoArchiveDurationMember1 = new global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_auto_archive_durationMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ThreadAutoArchiveDuration = new global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(CreateTextThreadWithoutMessageRequestAutoArchiveDurationMember1 != null)
-                {
-                    return CreateTextThreadWithoutMessageRequestAutoArchiveDurationMember1.GetFieldDeserializers();
-                }
-                else if(ThreadAutoArchiveDuration != null)
-                {
-                    return ThreadAutoArchiveDuration.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(CreateTextThreadWithoutMessageRequestAutoArchiveDurationMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_auto_archive_durationMember1>(null, CreateTextThreadWithoutMessageRequestAutoArchiveDurationMember1);
-                }
-                else if(ThreadAutoArchiveDuration != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration>(null, ThreadAutoArchiveDuration);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ChannelTypes"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_typeMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CreateTextThreadWithoutMessageRequest_type : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ChannelTypes"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ChannelTypes? ChannelTypes { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ChannelTypes ChannelTypes { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_typeMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_typeMember1? CreateTextThreadWithoutMessageRequestTypeMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_typeMember1 CreateTextThreadWithoutMessageRequestTypeMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_type"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_type CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest.CreateTextThreadWithoutMessageRequest_type();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ChannelTypes = new global::Soenneker.Discord.OpenApiClient.Models.ChannelTypes();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CreateTextThreadWithoutMessageRequestTypeMember1 = new global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_typeMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ChannelTypes != null)
-                {
-                    return ChannelTypes.GetFieldDeserializers();
-                }
-                else if(CreateTextThreadWithoutMessageRequestTypeMember1 != null)
-                {
-                    return CreateTextThreadWithoutMessageRequestTypeMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ChannelTypes != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelTypes>(null, ChannelTypes);
-                }
-                else if(CreateTextThreadWithoutMessageRequestTypeMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest_typeMember1>(null, CreateTextThreadWithoutMessageRequestTypeMember1);
-                }
-            }
         }
     }
 }

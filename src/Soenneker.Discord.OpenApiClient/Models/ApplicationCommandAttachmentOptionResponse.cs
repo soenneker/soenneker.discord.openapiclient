@@ -65,7 +65,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The required property</summary>
         public bool? Required { get; set; }
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse"/> and sets the default values.
         /// </summary>
@@ -98,7 +104,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse_name_localizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse_name_localizations.CreateFromDiscriminatorValue); } },
                 { "name_localized", n => { NameLocalized = n.GetStringValue(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -115,7 +121,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse_name_localizations>("name_localizations", NameLocalizations);
             writer.WriteStringValue("name_localized", NameLocalized);
             writer.WriteBoolValue("required", Required);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

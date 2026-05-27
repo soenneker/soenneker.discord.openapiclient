@@ -23,7 +23,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.GuildProductPurchaseResponse GuildProductPurchase { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.PurchaseType? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.PurchaseType Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PurchaseNotificationResponse"/> and sets the default values.
         /// </summary>
@@ -50,7 +56,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "guild_product_purchase", n => { GuildProductPurchase = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildProductPurchaseResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildProductPurchaseResponse.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PurchaseType>(global::Soenneker.Discord.OpenApiClient.Models.PurchaseType.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildProductPurchaseResponse>("guild_product_purchase", GuildProductPurchase);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PurchaseType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

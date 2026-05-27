@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The emoji_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags.GuildTemplateChannelTags_emoji_id? EmojiId { get; set; }
+        public string? EmojiId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags.GuildTemplateChannelTags_emoji_id EmojiId { get; set; }
+        public string EmojiId { get; set; }
 #endif
         /// <summary>The emoji_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "emoji_id", n => { EmojiId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags.GuildTemplateChannelTags_emoji_id>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags.GuildTemplateChannelTags_emoji_id.CreateFromDiscriminatorValue); } },
+                { "emoji_id", n => { EmojiId = n.GetStringValue(); } },
                 { "emoji_name", n => { EmojiName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "moderated", n => { Moderated = n.GetBoolValue(); } },
@@ -81,87 +81,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags.GuildTemplateChannelTags_emoji_id>("emoji_id", EmojiId);
+            writer.WriteStringValue("emoji_id", EmojiId);
             writer.WriteStringValue("emoji_name", EmojiName);
             writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("moderated", Moderated);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags_emoji_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildTemplateChannelTags_emoji_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags_emoji_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags_emoji_idMember1? GuildTemplateChannelTagsEmojiIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags_emoji_idMember1 GuildTemplateChannelTagsEmojiIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags.GuildTemplateChannelTags_emoji_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags.GuildTemplateChannelTags_emoji_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags.GuildTemplateChannelTags_emoji_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildTemplateChannelTagsEmojiIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags_emoji_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildTemplateChannelTagsEmojiIdMember1 != null)
-                {
-                    return GuildTemplateChannelTagsEmojiIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildTemplateChannelTagsEmojiIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelTags_emoji_idMember1>(null, GuildTemplateChannelTagsEmojiIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
         }
     }
 }

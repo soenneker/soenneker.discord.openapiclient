@@ -33,17 +33,18 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item
         public WithRule_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/auto-moderation/rules/{rule_id}", rawUrl)
         {
         }
+        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -52,20 +53,20 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_GetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GetAutoModerationRule200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_GetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GetAutoModerationRule200?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_GetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GetAutoModerationRule200> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -74,9 +75,9 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_GetResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_GetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.GetAutoModerationRule200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.GetAutoModerationRule200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateAutoModerationRule200"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -84,11 +85,11 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchResponse?> PatchAsync(global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.UpdateAutoModerationRule200?> PatchAsync(global::Soenneker.Discord.OpenApiClient.Models.UpdateAutoModerationRule body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchResponse> PatchAsync(global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.UpdateAutoModerationRule200> PatchAsync(global::Soenneker.Discord.OpenApiClient.Models.UpdateAutoModerationRule body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -98,7 +99,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.UpdateAutoModerationRule200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.UpdateAutoModerationRule200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -137,11 +138,11 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.UpdateAutoModerationRule body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.UpdateAutoModerationRule body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -159,351 +160,6 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item
         public global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithRule_GetResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse? DefaultKeywordRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse DefaultKeywordRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse? KeywordRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse KeywordRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse? MentionSpamRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse MentionSpamRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse? MLSpamRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse MLSpamRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse? SpamLinkRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse SpamLinkRuleResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_GetResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_GetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_GetResponse();
-                if("DefaultKeywordRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.DefaultKeywordRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse();
-                }
-                else if("KeywordRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.KeywordRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse();
-                }
-                else if("MLSpamRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MLSpamRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse();
-                }
-                else if("MentionSpamRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MentionSpamRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse();
-                }
-                else if("SpamLinkRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SpamLinkRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(DefaultKeywordRuleResponse != null)
-                {
-                    return DefaultKeywordRuleResponse.GetFieldDeserializers();
-                }
-                else if(KeywordRuleResponse != null)
-                {
-                    return KeywordRuleResponse.GetFieldDeserializers();
-                }
-                else if(MentionSpamRuleResponse != null)
-                {
-                    return MentionSpamRuleResponse.GetFieldDeserializers();
-                }
-                else if(MLSpamRuleResponse != null)
-                {
-                    return MLSpamRuleResponse.GetFieldDeserializers();
-                }
-                else if(SpamLinkRuleResponse != null)
-                {
-                    return SpamLinkRuleResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(DefaultKeywordRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse>(null, DefaultKeywordRuleResponse);
-                }
-                else if(KeywordRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse>(null, KeywordRuleResponse);
-                }
-                else if(MentionSpamRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse>(null, MentionSpamRuleResponse);
-                }
-                else if(MLSpamRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse>(null, MLSpamRuleResponse);
-                }
-                else if(SpamLinkRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse>(null, SpamLinkRuleResponse);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartial"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartial"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MLSpamUpsertRequestPartial"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithRule_PatchRequestBody : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial? DefaultKeywordListUpsertRequestPartial { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial DefaultKeywordListUpsertRequestPartial { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartial"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartial? KeywordUpsertRequestPartial { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartial KeywordUpsertRequestPartial { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartial"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartial? MentionSpamUpsertRequestPartial { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartial MentionSpamUpsertRequestPartial { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MLSpamUpsertRequestPartial"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MLSpamUpsertRequestPartial? MLSpamUpsertRequestPartial { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MLSpamUpsertRequestPartial MLSpamUpsertRequestPartial { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchRequestBody"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchRequestBody();
-                result.DefaultKeywordListUpsertRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial();
-                result.KeywordUpsertRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartial();
-                result.MentionSpamUpsertRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartial();
-                result.MLSpamUpsertRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.MLSpamUpsertRequestPartial();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(DefaultKeywordListUpsertRequestPartial != null || KeywordUpsertRequestPartial != null || MentionSpamUpsertRequestPartial != null || MLSpamUpsertRequestPartial != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DefaultKeywordListUpsertRequestPartial, KeywordUpsertRequestPartial, MentionSpamUpsertRequestPartial, MLSpamUpsertRequestPartial);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial>(null, DefaultKeywordListUpsertRequestPartial, KeywordUpsertRequestPartial, MentionSpamUpsertRequestPartial, MLSpamUpsertRequestPartial);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithRule_PatchResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse? DefaultKeywordRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse DefaultKeywordRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse? KeywordRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse KeywordRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse? MentionSpamRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse MentionSpamRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse? MLSpamRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse MLSpamRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse? SpamLinkRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse SpamLinkRuleResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder.WithRule_PatchResponse();
-                if("DefaultKeywordRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.DefaultKeywordRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse();
-                }
-                else if("KeywordRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.KeywordRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse();
-                }
-                else if("MLSpamRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MLSpamRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse();
-                }
-                else if("MentionSpamRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MentionSpamRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse();
-                }
-                else if("SpamLinkRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SpamLinkRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(DefaultKeywordRuleResponse != null)
-                {
-                    return DefaultKeywordRuleResponse.GetFieldDeserializers();
-                }
-                else if(KeywordRuleResponse != null)
-                {
-                    return KeywordRuleResponse.GetFieldDeserializers();
-                }
-                else if(MentionSpamRuleResponse != null)
-                {
-                    return MentionSpamRuleResponse.GetFieldDeserializers();
-                }
-                else if(MLSpamRuleResponse != null)
-                {
-                    return MLSpamRuleResponse.GetFieldDeserializers();
-                }
-                else if(SpamLinkRuleResponse != null)
-                {
-                    return SpamLinkRuleResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(DefaultKeywordRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse>(null, DefaultKeywordRuleResponse);
-                }
-                else if(KeywordRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse>(null, KeywordRuleResponse);
-                }
-                else if(MentionSpamRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse>(null, MentionSpamRuleResponse);
-                }
-                else if(MLSpamRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse>(null, MLSpamRuleResponse);
-                }
-                else if(SpamLinkRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse>(null, SpamLinkRuleResponse);
-                }
-            }
         }
     }
 }

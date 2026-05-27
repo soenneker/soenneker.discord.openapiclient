@@ -41,21 +41,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_description_localizations DescriptionLocalizations { get; set; }
 #endif
         /// <summary>The max_value property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_max_value? MaxValue { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_max_value MaxValue { get; set; }
-#endif
+        public long? MaxValue { get; set; }
         /// <summary>The min_value property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_min_value? MinValue { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_min_value MinValue { get; set; }
-#endif
+        public long? MinValue { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +63,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The required property</summary>
         public bool? Required { get; set; }
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption"/> and sets the default values.
         /// </summary>
@@ -105,12 +99,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "choices", n => { Choices = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_description_localizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_description_localizations.CreateFromDiscriminatorValue); } },
-                { "max_value", n => { MaxValue = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_max_value>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_max_value.CreateFromDiscriminatorValue); } },
-                { "min_value", n => { MinValue = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_min_value>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_min_value.CreateFromDiscriminatorValue); } },
+                { "max_value", n => { MaxValue = n.GetLongValue(); } },
+                { "min_value", n => { MinValue = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_name_localizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_name_localizations.CreateFromDiscriminatorValue); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_type>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -124,163 +118,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice>("choices", Choices);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_description_localizations>("description_localizations", DescriptionLocalizations);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_max_value>("max_value", MaxValue);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_min_value>("min_value", MinValue);
+            writer.WriteLongValue("max_value", MaxValue);
+            writer.WriteLongValue("min_value", MinValue);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_name_localizations>("name_localizations", NameLocalizations);
             writer.WriteBoolValue("required", Required);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_max_valueMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.Int53Type"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationCommandIntegerOption_max_value : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_max_valueMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_max_valueMember1? ApplicationCommandIntegerOptionMaxValueMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_max_valueMember1 ApplicationCommandIntegerOptionMaxValueMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.Int53Type"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.Int53Type? Int53Type { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.Int53Type Int53Type { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_max_value"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_max_value CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_max_value();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandIntegerOptionMaxValueMember1 = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_max_valueMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.Int53Type = new global::Soenneker.Discord.OpenApiClient.Models.Int53Type();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationCommandIntegerOptionMaxValueMember1 != null)
-                {
-                    return ApplicationCommandIntegerOptionMaxValueMember1.GetFieldDeserializers();
-                }
-                else if(Int53Type != null)
-                {
-                    return Int53Type.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApplicationCommandIntegerOptionMaxValueMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_max_valueMember1>(null, ApplicationCommandIntegerOptionMaxValueMember1);
-                }
-                else if(Int53Type != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.Int53Type>(null, Int53Type);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_min_valueMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.Int53Type"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationCommandIntegerOption_min_value : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_min_valueMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_min_valueMember1? ApplicationCommandIntegerOptionMinValueMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_min_valueMember1 ApplicationCommandIntegerOptionMinValueMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.Int53Type"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.Int53Type? Int53Type { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.Int53Type Int53Type { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_min_value"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_min_value CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption.ApplicationCommandIntegerOption_min_value();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandIntegerOptionMinValueMember1 = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_min_valueMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.Int53Type = new global::Soenneker.Discord.OpenApiClient.Models.Int53Type();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationCommandIntegerOptionMinValueMember1 != null)
-                {
-                    return ApplicationCommandIntegerOptionMinValueMember1.GetFieldDeserializers();
-                }
-                else if(Int53Type != null)
-                {
-                    return Int53Type.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApplicationCommandIntegerOptionMinValueMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption_min_valueMember1>(null, ApplicationCommandIntegerOptionMinValueMember1);
-                }
-                else if(Int53Type != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.Int53Type>(null, Int53Type);
-                }
-            }
         }
     }
 }

@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The choices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData.InteractionApplicationCommandAutocompleteCallbackNumberData_choices>? Choices { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice>? Choices { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData.InteractionApplicationCommandAutocompleteCallbackNumberData_choices> Choices { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice> Choices { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "choices", n => { Choices = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData.InteractionApplicationCommandAutocompleteCallbackNumberData_choices>(global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData.InteractionApplicationCommandAutocompleteCallbackNumberData_choices.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "choices", n => { Choices = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,83 +57,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData.InteractionApplicationCommandAutocompleteCallbackNumberData_choices>("choices", Choices);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice>("choices", Choices);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData_choicesMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class InteractionApplicationCommandAutocompleteCallbackNumberData_choices : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice? ApplicationCommandOptionNumberChoice { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice ApplicationCommandOptionNumberChoice { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData_choicesMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData_choicesMember1? InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData_choicesMember1 InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData.InteractionApplicationCommandAutocompleteCallbackNumberData_choices"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData.InteractionApplicationCommandAutocompleteCallbackNumberData_choices CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData.InteractionApplicationCommandAutocompleteCallbackNumberData_choices();
-                if("ApplicationCommandOptionNumberChoice".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandOptionNumberChoice = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesMember1 = new global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData_choicesMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationCommandOptionNumberChoice != null)
-                {
-                    return ApplicationCommandOptionNumberChoice.GetFieldDeserializers();
-                }
-                else if(InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesMember1 != null)
-                {
-                    return InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApplicationCommandOptionNumberChoice != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice>(null, ApplicationCommandOptionNumberChoice);
-                }
-                else if(InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData_choicesMember1>(null, InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesMember1);
-                }
-            }
         }
     }
 }

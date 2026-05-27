@@ -36,6 +36,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Messages.Item.ModerationM
         /// <summary>
         /// Update the external moderation metadata for a lobby message.
         /// </summary>
+        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The moderation metadata attached to the message</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -43,11 +44,11 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Messages.Item.ModerationM
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task PutAsync(global::Soenneker.Discord.OpenApiClient.Lobbies.Item.Messages.Item.ModerationMetadata.ModerationMetadataPutRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> PutAsync(global::Soenneker.Discord.OpenApiClient.Lobbies.Item.Messages.Item.ModerationMetadata.ModerationMetadataPutRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task PutAsync(global::Soenneker.Discord.OpenApiClient.Lobbies.Item.Messages.Item.ModerationMetadata.ModerationMetadataPutRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> PutAsync(global::Soenneker.Discord.OpenApiClient.Lobbies.Item.Messages.Item.ModerationMetadata.ModerationMetadataPutRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -57,7 +58,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Messages.Item.ModerationM
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the external moderation metadata for a lobby message.

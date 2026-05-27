@@ -19,9 +19,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>The spacing property</summary>
-        public int? Spacing { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize? Spacing { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize Spacing { get; set; }
+#endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse"/> and sets the default values.
         /// </summary>
@@ -49,8 +61,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "divider", n => { Divider = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "spacing", n => { Spacing = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "spacing", n => { Spacing = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize>(global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -62,8 +74,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("divider", Divider);
             writer.WriteIntValue("id", Id);
-            writer.WriteIntValue("spacing", Spacing);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize>("spacing", Spacing);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

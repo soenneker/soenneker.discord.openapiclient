@@ -27,9 +27,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The enable_emoticons property</summary>
         public bool? EnableEmoticons { get; set; }
         /// <summary>The expire_behavior property</summary>
-        public int? ExpireBehavior { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireBehaviorTypes? ExpireBehavior { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireBehaviorTypes ExpireBehavior { get; set; }
+#endif
         /// <summary>The expire_grace_period property</summary>
-        public int? ExpireGracePeriod { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireGracePeriodTypes? ExpireGracePeriod { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireGracePeriodTypes ExpireGracePeriod { get; set; }
+#endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -51,10 +63,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The role_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse.ExternalConnectionIntegrationResponse_role_id? RoleId { get; set; }
+        public string? RoleId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse.ExternalConnectionIntegrationResponse_role_id RoleId { get; set; }
+        public string RoleId { get; set; }
 #endif
         /// <summary>The subscriber_count property</summary>
         public int? SubscriberCount { get; set; }
@@ -100,12 +112,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "account", n => { Account = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AccountResponse>(global::Soenneker.Discord.OpenApiClient.Models.AccountResponse.CreateFromDiscriminatorValue); } },
                 { "enable_emoticons", n => { EnableEmoticons = n.GetBoolValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "expire_behavior", n => { ExpireBehavior = n.GetIntValue(); } },
-                { "expire_grace_period", n => { ExpireGracePeriod = n.GetIntValue(); } },
+                { "expire_behavior", n => { ExpireBehavior = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireBehaviorTypes>(global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireBehaviorTypes.CreateFromDiscriminatorValue); } },
+                { "expire_grace_period", n => { ExpireGracePeriod = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireGracePeriodTypes>(global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireGracePeriodTypes.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "revoked", n => { Revoked = n.GetBoolValue(); } },
-                { "role_id", n => { RoleId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse.ExternalConnectionIntegrationResponse_role_id>(global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse.ExternalConnectionIntegrationResponse_role_id.CreateFromDiscriminatorValue); } },
+                { "role_id", n => { RoleId = n.GetStringValue(); } },
                 { "subscriber_count", n => { SubscriberCount = n.GetIntValue(); } },
                 { "synced_at", n => { SyncedAt = n.GetDateTimeOffsetValue(); } },
                 { "syncing", n => { Syncing = n.GetBoolValue(); } },
@@ -123,93 +135,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AccountResponse>("account", Account);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteBoolValue("enable_emoticons", EnableEmoticons);
-            writer.WriteIntValue("expire_behavior", ExpireBehavior);
-            writer.WriteIntValue("expire_grace_period", ExpireGracePeriod);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireBehaviorTypes>("expire_behavior", ExpireBehavior);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireGracePeriodTypes>("expire_grace_period", ExpireGracePeriod);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("revoked", Revoked);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse.ExternalConnectionIntegrationResponse_role_id>("role_id", RoleId);
+            writer.WriteStringValue("role_id", RoleId);
             writer.WriteIntValue("subscriber_count", SubscriberCount);
             writer.WriteDateTimeOffsetValue("synced_at", SyncedAt);
             writer.WriteBoolValue("syncing", Syncing);
             writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse_type>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse_role_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ExternalConnectionIntegrationResponse_role_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse_role_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse_role_idMember1? ExternalConnectionIntegrationResponseRoleIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse_role_idMember1 ExternalConnectionIntegrationResponseRoleIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse.ExternalConnectionIntegrationResponse_role_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse.ExternalConnectionIntegrationResponse_role_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse.ExternalConnectionIntegrationResponse_role_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ExternalConnectionIntegrationResponseRoleIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse_role_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ExternalConnectionIntegrationResponseRoleIdMember1 != null)
-                {
-                    return ExternalConnectionIntegrationResponseRoleIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ExternalConnectionIntegrationResponseRoleIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse_role_idMember1>(null, ExternalConnectionIntegrationResponseRoleIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
         }
     }
 }

@@ -25,32 +25,44 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The bitrate property</summary>
         public int? Bitrate { get; set; }
         /// <summary>The default_auto_archive_duration property</summary>
-        public int? DefaultAutoArchiveDuration { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration? DefaultAutoArchiveDuration { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration DefaultAutoArchiveDuration { get; set; }
+#endif
         /// <summary>The default_forum_layout property</summary>
-        public int? DefaultForumLayout { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ForumLayout? DefaultForumLayout { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ForumLayout DefaultForumLayout { get; set; }
+#endif
         /// <summary>The default_reaction_emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_reaction_emoji? DefaultReactionEmoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse? DefaultReactionEmoji { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_reaction_emoji DefaultReactionEmoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse DefaultReactionEmoji { get; set; }
 #endif
         /// <summary>The default_sort_order property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_sort_order? DefaultSortOrder { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder_Wrapper? DefaultSortOrder { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_sort_order DefaultSortOrder { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder_Wrapper DefaultSortOrder { get; set; }
 #endif
         /// <summary>The default_tag_setting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_tag_setting? DefaultTagSetting { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting_Wrapper? DefaultTagSetting { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_tag_setting DefaultTagSetting { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting_Wrapper DefaultTagSetting { get; set; }
 #endif
         /// <summary>The default_thread_rate_limit_per_user property</summary>
         public int? DefaultThreadRateLimitPerUser { get; set; }
@@ -85,10 +97,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The last_message_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_last_message_id? LastMessageId { get; set; }
+        public string? LastMessageId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_last_message_id LastMessageId { get; set; }
+        public string LastMessageId { get; set; }
 #endif
         /// <summary>The last_pin_timestamp property</summary>
         public DateTimeOffset? LastPinTimestamp { get; set; }
@@ -105,10 +117,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The parent_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_parent_id? ParentId { get; set; }
+        public string? ParentId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_parent_id ParentId { get; set; }
+        public string ParentId { get; set; }
 #endif
         /// <summary>The permission_overwrites property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -147,11 +159,23 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Topic { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_type Type { get; set; }
+#endif
         /// <summary>The user_limit property</summary>
         public int? UserLimit { get; set; }
         /// <summary>The video_quality_mode property</summary>
-        public int? VideoQualityMode { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes? VideoQualityMode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes VideoQualityMode { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse"/> and sets the default values.
         /// </summary>
@@ -179,31 +203,31 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "available_tags", n => { AvailableTags = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse>(global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "bitrate", n => { Bitrate = n.GetIntValue(); } },
-                { "default_auto_archive_duration", n => { DefaultAutoArchiveDuration = n.GetIntValue(); } },
-                { "default_forum_layout", n => { DefaultForumLayout = n.GetIntValue(); } },
-                { "default_reaction_emoji", n => { DefaultReactionEmoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_reaction_emoji>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_reaction_emoji.CreateFromDiscriminatorValue); } },
-                { "default_sort_order", n => { DefaultSortOrder = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_sort_order>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_sort_order.CreateFromDiscriminatorValue); } },
-                { "default_tag_setting", n => { DefaultTagSetting = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_tag_setting>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_tag_setting.CreateFromDiscriminatorValue); } },
+                { "default_auto_archive_duration", n => { DefaultAutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration>(global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration.CreateFromDiscriminatorValue); } },
+                { "default_forum_layout", n => { DefaultForumLayout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ForumLayout>(global::Soenneker.Discord.OpenApiClient.Models.ForumLayout.CreateFromDiscriminatorValue); } },
+                { "default_reaction_emoji", n => { DefaultReactionEmoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse>(global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse.CreateFromDiscriminatorValue); } },
+                { "default_sort_order", n => { DefaultSortOrder = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder_Wrapper.CreateFromDiscriminatorValue); } },
+                { "default_tag_setting", n => { DefaultTagSetting = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting_Wrapper.CreateFromDiscriminatorValue); } },
                 { "default_thread_rate_limit_per_user", n => { DefaultThreadRateLimitPerUser = n.GetIntValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "hd_streaming_buyer_id", n => { HdStreamingBuyerId = n.GetStringValue(); } },
                 { "hd_streaming_until", n => { HdStreamingUntil = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "last_message_id", n => { LastMessageId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_last_message_id>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_last_message_id.CreateFromDiscriminatorValue); } },
+                { "last_message_id", n => { LastMessageId = n.GetStringValue(); } },
                 { "last_pin_timestamp", n => { LastPinTimestamp = n.GetDateTimeOffsetValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "nsfw", n => { Nsfw = n.GetBoolValue(); } },
-                { "parent_id", n => { ParentId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_parent_id>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_parent_id.CreateFromDiscriminatorValue); } },
+                { "parent_id", n => { ParentId = n.GetStringValue(); } },
                 { "permission_overwrites", n => { PermissionOverwrites = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteResponse>(global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "permissions", n => { Permissions = n.GetStringValue(); } },
                 { "position", n => { Position = n.GetIntValue(); } },
                 { "rate_limit_per_user", n => { RateLimitPerUser = n.GetIntValue(); } },
                 { "rtc_region", n => { RtcRegion = n.GetStringValue(); } },
                 { "topic", n => { Topic = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_type.CreateFromDiscriminatorValue); } },
                 { "user_limit", n => { UserLimit = n.GetIntValue(); } },
-                { "video_quality_mode", n => { VideoQualityMode = n.GetIntValue(); } },
+                { "video_quality_mode", n => { VideoQualityMode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>(global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -215,407 +239,32 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse>("available_tags", AvailableTags);
             writer.WriteIntValue("bitrate", Bitrate);
-            writer.WriteIntValue("default_auto_archive_duration", DefaultAutoArchiveDuration);
-            writer.WriteIntValue("default_forum_layout", DefaultForumLayout);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_reaction_emoji>("default_reaction_emoji", DefaultReactionEmoji);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_sort_order>("default_sort_order", DefaultSortOrder);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_tag_setting>("default_tag_setting", DefaultTagSetting);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration>("default_auto_archive_duration", DefaultAutoArchiveDuration);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ForumLayout>("default_forum_layout", DefaultForumLayout);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse>("default_reaction_emoji", DefaultReactionEmoji);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder_Wrapper>("default_sort_order", DefaultSortOrder);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting_Wrapper>("default_tag_setting", DefaultTagSetting);
             writer.WriteIntValue("default_thread_rate_limit_per_user", DefaultThreadRateLimitPerUser);
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("hd_streaming_buyer_id", HdStreamingBuyerId);
             writer.WriteDateTimeOffsetValue("hd_streaming_until", HdStreamingUntil);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_last_message_id>("last_message_id", LastMessageId);
+            writer.WriteStringValue("last_message_id", LastMessageId);
             writer.WriteDateTimeOffsetValue("last_pin_timestamp", LastPinTimestamp);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("nsfw", Nsfw);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_parent_id>("parent_id", ParentId);
+            writer.WriteStringValue("parent_id", ParentId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteResponse>("permission_overwrites", PermissionOverwrites);
             writer.WriteStringValue("permissions", Permissions);
             writer.WriteIntValue("position", Position);
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);
             writer.WriteStringValue("rtc_region", RtcRegion);
             writer.WriteStringValue("topic", Topic);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_type>("type", Type);
             writer.WriteIntValue("user_limit", UserLimit);
-            writer.WriteIntValue("video_quality_mode", VideoQualityMode);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>("video_quality_mode", VideoQualityMode);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_reaction_emojiMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildChannelResponse_default_reaction_emoji : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse? DefaultReactionEmojiResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse DefaultReactionEmojiResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_reaction_emojiMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_reaction_emojiMember1? GuildChannelResponseDefaultReactionEmojiMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_reaction_emojiMember1 GuildChannelResponseDefaultReactionEmojiMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_reaction_emoji"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_reaction_emoji CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_reaction_emoji();
-                if("DefaultReactionEmojiResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.DefaultReactionEmojiResponse = new global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildChannelResponseDefaultReactionEmojiMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_reaction_emojiMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(DefaultReactionEmojiResponse != null)
-                {
-                    return DefaultReactionEmojiResponse.GetFieldDeserializers();
-                }
-                else if(GuildChannelResponseDefaultReactionEmojiMember1 != null)
-                {
-                    return GuildChannelResponseDefaultReactionEmojiMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(DefaultReactionEmojiResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse>(null, DefaultReactionEmojiResponse);
-                }
-                else if(GuildChannelResponseDefaultReactionEmojiMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_reaction_emojiMember1>(null, GuildChannelResponseDefaultReactionEmojiMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_sort_orderMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildChannelResponse_default_sort_order : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_sort_orderMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_sort_orderMember1? GuildChannelResponseDefaultSortOrderMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_sort_orderMember1 GuildChannelResponseDefaultSortOrderMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder? ThreadSortOrder { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder ThreadSortOrder { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_sort_order"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_sort_order CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_sort_order();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildChannelResponseDefaultSortOrderMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_sort_orderMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ThreadSortOrder = new global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildChannelResponseDefaultSortOrderMember1 != null)
-                {
-                    return GuildChannelResponseDefaultSortOrderMember1.GetFieldDeserializers();
-                }
-                else if(ThreadSortOrder != null)
-                {
-                    return ThreadSortOrder.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildChannelResponseDefaultSortOrderMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_sort_orderMember1>(null, GuildChannelResponseDefaultSortOrderMember1);
-                }
-                else if(ThreadSortOrder != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder>(null, ThreadSortOrder);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_tag_settingMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildChannelResponse_default_tag_setting : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_tag_settingMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_tag_settingMember1? GuildChannelResponseDefaultTagSettingMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_tag_settingMember1 GuildChannelResponseDefaultTagSettingMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting? ThreadSearchTagSetting { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting ThreadSearchTagSetting { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_tag_setting"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_tag_setting CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_default_tag_setting();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildChannelResponseDefaultTagSettingMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_tag_settingMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ThreadSearchTagSetting = new global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildChannelResponseDefaultTagSettingMember1 != null)
-                {
-                    return GuildChannelResponseDefaultTagSettingMember1.GetFieldDeserializers();
-                }
-                else if(ThreadSearchTagSetting != null)
-                {
-                    return ThreadSearchTagSetting.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildChannelResponseDefaultTagSettingMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_default_tag_settingMember1>(null, GuildChannelResponseDefaultTagSettingMember1);
-                }
-                else if(ThreadSearchTagSetting != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>(null, ThreadSearchTagSetting);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_last_message_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildChannelResponse_last_message_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_last_message_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_last_message_idMember1? GuildChannelResponseLastMessageIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_last_message_idMember1 GuildChannelResponseLastMessageIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_last_message_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_last_message_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_last_message_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildChannelResponseLastMessageIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_last_message_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildChannelResponseLastMessageIdMember1 != null)
-                {
-                    return GuildChannelResponseLastMessageIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildChannelResponseLastMessageIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_last_message_idMember1>(null, GuildChannelResponseLastMessageIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_parent_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildChannelResponse_parent_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_parent_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_parent_idMember1? GuildChannelResponseParentIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_parent_idMember1 GuildChannelResponseParentIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_parent_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_parent_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.GuildChannelResponse_parent_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildChannelResponseParentIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_parent_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildChannelResponseParentIdMember1 != null)
-                {
-                    return GuildChannelResponseParentIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildChannelResponseParentIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse_parent_idMember1>(null, GuildChannelResponseParentIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
         }
     }
 }

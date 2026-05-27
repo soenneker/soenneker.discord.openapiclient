@@ -27,10 +27,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The creator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse.GuildTemplateResponse_creator? Creator { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? Creator { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse.GuildTemplateResponse_creator Creator { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse Creator { get; set; }
 #endif
         /// <summary>The creator_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,7 +105,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "code", n => { Code = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "creator", n => { Creator = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse.GuildTemplateResponse_creator>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse.GuildTemplateResponse_creator.CreateFromDiscriminatorValue); } },
+                { "creator", n => { Creator = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
                 { "creator_id", n => { CreatorId = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "is_dirty", n => { IsDirty = n.GetBoolValue(); } },
@@ -125,7 +125,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code", Code);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse.GuildTemplateResponse_creator>("creator", Creator);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("creator", Creator);
             writer.WriteStringValue("creator_id", CreatorId);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("is_dirty", IsDirty);
@@ -135,81 +135,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteIntValue("usage_count", UsageCount);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse_creatorMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildTemplateResponse_creator : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse_creatorMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse_creatorMember1? GuildTemplateResponseCreatorMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse_creatorMember1 GuildTemplateResponseCreatorMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? UserResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UserResponse UserResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse.GuildTemplateResponse_creator"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse.GuildTemplateResponse_creator CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse.GuildTemplateResponse_creator();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildTemplateResponseCreatorMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse_creatorMember1();
-                }
-                else if("UserResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UserResponse = new global::Soenneker.Discord.OpenApiClient.Models.UserResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildTemplateResponseCreatorMember1 != null)
-                {
-                    return GuildTemplateResponseCreatorMember1.GetFieldDeserializers();
-                }
-                else if(UserResponse != null)
-                {
-                    return UserResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildTemplateResponseCreatorMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponse_creatorMember1>(null, GuildTemplateResponseCreatorMember1);
-                }
-                else if(UserResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(null, UserResponse);
-                }
-            }
         }
     }
 }

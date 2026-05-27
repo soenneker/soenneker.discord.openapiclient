@@ -55,7 +55,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.UserResponse TargetUser { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandInteractionMetadataResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandInteractionMetadataResponse_type Type { get; set; }
+#endif
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +100,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "original_response_message_id", n => { OriginalResponseMessageId = n.GetStringValue(); } },
                 { "target_message_id", n => { TargetMessageId = n.GetStringValue(); } },
                 { "target_user", n => { TargetUser = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandInteractionMetadataResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandInteractionMetadataResponse_type.CreateFromDiscriminatorValue); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
             };
         }
@@ -110,7 +116,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("original_response_message_id", OriginalResponseMessageId);
             writer.WriteStringValue("target_message_id", TargetMessageId);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("target_user", TargetUser);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandInteractionMetadataResponse_type>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }

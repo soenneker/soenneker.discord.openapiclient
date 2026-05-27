@@ -17,18 +17,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The afk_channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_channel_id? AfkChannelId { get; set; }
+        public string? AfkChannelId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_channel_id AfkChannelId { get; set; }
+        public string AfkChannelId { get; set; }
 #endif
         /// <summary>The afk_timeout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_timeout? AfkTimeout { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts_Wrapper? AfkTimeout { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_timeout AfkTimeout { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts_Wrapper AfkTimeout { get; set; }
 #endif
         /// <summary>The banner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The default_message_notifications property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_default_message_notifications? DefaultMessageNotifications { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings_Wrapper? DefaultMessageNotifications { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_default_message_notifications DefaultMessageNotifications { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings_Wrapper DefaultMessageNotifications { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,10 +65,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The explicit_content_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_explicit_content_filter? ExplicitContentFilter { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes_Wrapper? ExplicitContentFilter { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_explicit_content_filter ExplicitContentFilter { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes_Wrapper ExplicitContentFilter { get; set; }
 #endif
         /// <summary>The features property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,20 +105,20 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The preferred_locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_preferred_locale? PreferredLocale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum_Wrapper? PreferredLocale { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_preferred_locale PreferredLocale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum_Wrapper PreferredLocale { get; set; }
 #endif
         /// <summary>The premium_progress_bar_enabled property</summary>
         public bool? PremiumProgressBarEnabled { get; set; }
         /// <summary>The public_updates_channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_public_updates_channel_id? PublicUpdatesChannelId { get; set; }
+        public string? PublicUpdatesChannelId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_public_updates_channel_id PublicUpdatesChannelId { get; set; }
+        public string PublicUpdatesChannelId { get; set; }
 #endif
         /// <summary>The region property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -131,18 +131,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The rules_channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_rules_channel_id? RulesChannelId { get; set; }
+        public string? RulesChannelId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_rules_channel_id RulesChannelId { get; set; }
+        public string RulesChannelId { get; set; }
 #endif
         /// <summary>The safety_alerts_channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_safety_alerts_channel_id? SafetyAlertsChannelId { get; set; }
+        public string? SafetyAlertsChannelId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_safety_alerts_channel_id SafetyAlertsChannelId { get; set; }
+        public string SafetyAlertsChannelId { get; set; }
 #endif
         /// <summary>The splash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -157,18 +157,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The system_channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_system_channel_id? SystemChannelId { get; set; }
+        public string? SystemChannelId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_system_channel_id SystemChannelId { get; set; }
+        public string SystemChannelId { get; set; }
 #endif
         /// <summary>The verification_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_verification_level? VerificationLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper? VerificationLevel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_verification_level VerificationLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper VerificationLevel { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial"/> and sets the default values.
@@ -195,27 +195,27 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "afk_channel_id", n => { AfkChannelId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_channel_id>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_channel_id.CreateFromDiscriminatorValue); } },
-                { "afk_timeout", n => { AfkTimeout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_timeout>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_timeout.CreateFromDiscriminatorValue); } },
+                { "afk_channel_id", n => { AfkChannelId = n.GetStringValue(); } },
+                { "afk_timeout", n => { AfkTimeout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts_Wrapper.CreateFromDiscriminatorValue); } },
                 { "banner", n => { Banner = n.GetStringValue(); } },
-                { "default_message_notifications", n => { DefaultMessageNotifications = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_default_message_notifications>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_default_message_notifications.CreateFromDiscriminatorValue); } },
+                { "default_message_notifications", n => { DefaultMessageNotifications = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings_Wrapper.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discovery_splash", n => { DiscoverySplash = n.GetStringValue(); } },
-                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_explicit_content_filter>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_explicit_content_filter.CreateFromDiscriminatorValue); } },
+                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes_Wrapper.CreateFromDiscriminatorValue); } },
                 { "features", n => { Features = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "home_header", n => { HomeHeader = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "preferred_locale", n => { PreferredLocale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_preferred_locale>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_preferred_locale.CreateFromDiscriminatorValue); } },
+                { "preferred_locale", n => { PreferredLocale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum_Wrapper.CreateFromDiscriminatorValue); } },
                 { "premium_progress_bar_enabled", n => { PremiumProgressBarEnabled = n.GetBoolValue(); } },
-                { "public_updates_channel_id", n => { PublicUpdatesChannelId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_public_updates_channel_id>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_public_updates_channel_id.CreateFromDiscriminatorValue); } },
+                { "public_updates_channel_id", n => { PublicUpdatesChannelId = n.GetStringValue(); } },
                 { "region", n => { Region = n.GetStringValue(); } },
-                { "rules_channel_id", n => { RulesChannelId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_rules_channel_id>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_rules_channel_id.CreateFromDiscriminatorValue); } },
-                { "safety_alerts_channel_id", n => { SafetyAlertsChannelId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_safety_alerts_channel_id>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_safety_alerts_channel_id.CreateFromDiscriminatorValue); } },
+                { "rules_channel_id", n => { RulesChannelId = n.GetStringValue(); } },
+                { "safety_alerts_channel_id", n => { SafetyAlertsChannelId = n.GetStringValue(); } },
                 { "splash", n => { Splash = n.GetStringValue(); } },
                 { "system_channel_flags", n => { SystemChannelFlags = n.GetIntValue(); } },
-                { "system_channel_id", n => { SystemChannelId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_system_channel_id>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_system_channel_id.CreateFromDiscriminatorValue); } },
-                { "verification_level", n => { VerificationLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_verification_level>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_verification_level.CreateFromDiscriminatorValue); } },
+                { "system_channel_id", n => { SystemChannelId = n.GetStringValue(); } },
+                { "verification_level", n => { VerificationLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -225,778 +225,28 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_channel_id>("afk_channel_id", AfkChannelId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_timeout>("afk_timeout", AfkTimeout);
+            writer.WriteStringValue("afk_channel_id", AfkChannelId);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts_Wrapper>("afk_timeout", AfkTimeout);
             writer.WriteStringValue("banner", Banner);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_default_message_notifications>("default_message_notifications", DefaultMessageNotifications);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings_Wrapper>("default_message_notifications", DefaultMessageNotifications);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("discovery_splash", DiscoverySplash);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_explicit_content_filter>("explicit_content_filter", ExplicitContentFilter);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes_Wrapper>("explicit_content_filter", ExplicitContentFilter);
             writer.WriteCollectionOfPrimitiveValues<string>("features", Features);
             writer.WriteStringValue("home_header", HomeHeader);
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_preferred_locale>("preferred_locale", PreferredLocale);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum_Wrapper>("preferred_locale", PreferredLocale);
             writer.WriteBoolValue("premium_progress_bar_enabled", PremiumProgressBarEnabled);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_public_updates_channel_id>("public_updates_channel_id", PublicUpdatesChannelId);
+            writer.WriteStringValue("public_updates_channel_id", PublicUpdatesChannelId);
             writer.WriteStringValue("region", Region);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_rules_channel_id>("rules_channel_id", RulesChannelId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_safety_alerts_channel_id>("safety_alerts_channel_id", SafetyAlertsChannelId);
+            writer.WriteStringValue("rules_channel_id", RulesChannelId);
+            writer.WriteStringValue("safety_alerts_channel_id", SafetyAlertsChannelId);
             writer.WriteStringValue("splash", Splash);
             writer.WriteIntValue("system_channel_flags", SystemChannelFlags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_system_channel_id>("system_channel_id", SystemChannelId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_verification_level>("verification_level", VerificationLevel);
+            writer.WriteStringValue("system_channel_id", SystemChannelId);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper>("verification_level", VerificationLevel);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_channel_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildPatchRequestPartial_afk_channel_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_channel_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_channel_idMember1? GuildPatchRequestPartialAfkChannelIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_channel_idMember1 GuildPatchRequestPartialAfkChannelIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_channel_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_channel_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_channel_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildPatchRequestPartialAfkChannelIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_channel_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildPatchRequestPartialAfkChannelIdMember1 != null)
-                {
-                    return GuildPatchRequestPartialAfkChannelIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildPatchRequestPartialAfkChannelIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_channel_idMember1>(null, GuildPatchRequestPartialAfkChannelIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_timeoutMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildPatchRequestPartial_afk_timeout : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts? AfkTimeouts { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts AfkTimeouts { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_timeoutMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_timeoutMember1? GuildPatchRequestPartialAfkTimeoutMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_timeoutMember1 GuildPatchRequestPartialAfkTimeoutMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_timeout"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_timeout CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_afk_timeout();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.AfkTimeouts = new global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildPatchRequestPartialAfkTimeoutMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_timeoutMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(AfkTimeouts != null)
-                {
-                    return AfkTimeouts.GetFieldDeserializers();
-                }
-                else if(GuildPatchRequestPartialAfkTimeoutMember1 != null)
-                {
-                    return GuildPatchRequestPartialAfkTimeoutMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(AfkTimeouts != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts>(null, AfkTimeouts);
-                }
-                else if(GuildPatchRequestPartialAfkTimeoutMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_afk_timeoutMember1>(null, GuildPatchRequestPartialAfkTimeoutMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_default_message_notificationsMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildPatchRequestPartial_default_message_notifications : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_default_message_notificationsMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_default_message_notificationsMember1? GuildPatchRequestPartialDefaultMessageNotificationsMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_default_message_notificationsMember1 GuildPatchRequestPartialDefaultMessageNotificationsMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings? UserNotificationSettings { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings UserNotificationSettings { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_default_message_notifications"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_default_message_notifications CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_default_message_notifications();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildPatchRequestPartialDefaultMessageNotificationsMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_default_message_notificationsMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UserNotificationSettings = new global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildPatchRequestPartialDefaultMessageNotificationsMember1 != null)
-                {
-                    return GuildPatchRequestPartialDefaultMessageNotificationsMember1.GetFieldDeserializers();
-                }
-                else if(UserNotificationSettings != null)
-                {
-                    return UserNotificationSettings.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildPatchRequestPartialDefaultMessageNotificationsMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_default_message_notificationsMember1>(null, GuildPatchRequestPartialDefaultMessageNotificationsMember1);
-                }
-                else if(UserNotificationSettings != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings>(null, UserNotificationSettings);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_explicit_content_filterMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildPatchRequestPartial_explicit_content_filter : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes? GuildExplicitContentFilterTypes { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes GuildExplicitContentFilterTypes { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_explicit_content_filterMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_explicit_content_filterMember1? GuildPatchRequestPartialExplicitContentFilterMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_explicit_content_filterMember1 GuildPatchRequestPartialExplicitContentFilterMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_explicit_content_filter"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_explicit_content_filter CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_explicit_content_filter();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildExplicitContentFilterTypes = new global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildPatchRequestPartialExplicitContentFilterMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_explicit_content_filterMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildExplicitContentFilterTypes != null)
-                {
-                    return GuildExplicitContentFilterTypes.GetFieldDeserializers();
-                }
-                else if(GuildPatchRequestPartialExplicitContentFilterMember1 != null)
-                {
-                    return GuildPatchRequestPartialExplicitContentFilterMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildExplicitContentFilterTypes != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes>(null, GuildExplicitContentFilterTypes);
-                }
-                else if(GuildPatchRequestPartialExplicitContentFilterMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_explicit_content_filterMember1>(null, GuildPatchRequestPartialExplicitContentFilterMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_preferred_localeMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildPatchRequestPartial_preferred_locale : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum? AvailableLocalesEnum { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum AvailableLocalesEnum { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_preferred_localeMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_preferred_localeMember1? GuildPatchRequestPartialPreferredLocaleMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_preferred_localeMember1 GuildPatchRequestPartialPreferredLocaleMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_preferred_locale"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_preferred_locale CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_preferred_locale();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.AvailableLocalesEnum = new global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildPatchRequestPartialPreferredLocaleMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_preferred_localeMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(AvailableLocalesEnum != null)
-                {
-                    return AvailableLocalesEnum.GetFieldDeserializers();
-                }
-                else if(GuildPatchRequestPartialPreferredLocaleMember1 != null)
-                {
-                    return GuildPatchRequestPartialPreferredLocaleMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(AvailableLocalesEnum != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>(null, AvailableLocalesEnum);
-                }
-                else if(GuildPatchRequestPartialPreferredLocaleMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_preferred_localeMember1>(null, GuildPatchRequestPartialPreferredLocaleMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_public_updates_channel_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildPatchRequestPartial_public_updates_channel_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_public_updates_channel_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_public_updates_channel_idMember1? GuildPatchRequestPartialPublicUpdatesChannelIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_public_updates_channel_idMember1 GuildPatchRequestPartialPublicUpdatesChannelIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_public_updates_channel_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_public_updates_channel_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_public_updates_channel_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildPatchRequestPartialPublicUpdatesChannelIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_public_updates_channel_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildPatchRequestPartialPublicUpdatesChannelIdMember1 != null)
-                {
-                    return GuildPatchRequestPartialPublicUpdatesChannelIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildPatchRequestPartialPublicUpdatesChannelIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_public_updates_channel_idMember1>(null, GuildPatchRequestPartialPublicUpdatesChannelIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_rules_channel_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildPatchRequestPartial_rules_channel_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_rules_channel_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_rules_channel_idMember1? GuildPatchRequestPartialRulesChannelIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_rules_channel_idMember1 GuildPatchRequestPartialRulesChannelIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_rules_channel_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_rules_channel_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_rules_channel_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildPatchRequestPartialRulesChannelIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_rules_channel_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildPatchRequestPartialRulesChannelIdMember1 != null)
-                {
-                    return GuildPatchRequestPartialRulesChannelIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildPatchRequestPartialRulesChannelIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_rules_channel_idMember1>(null, GuildPatchRequestPartialRulesChannelIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_safety_alerts_channel_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildPatchRequestPartial_safety_alerts_channel_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_safety_alerts_channel_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_safety_alerts_channel_idMember1? GuildPatchRequestPartialSafetyAlertsChannelIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_safety_alerts_channel_idMember1 GuildPatchRequestPartialSafetyAlertsChannelIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_safety_alerts_channel_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_safety_alerts_channel_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_safety_alerts_channel_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildPatchRequestPartialSafetyAlertsChannelIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_safety_alerts_channel_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildPatchRequestPartialSafetyAlertsChannelIdMember1 != null)
-                {
-                    return GuildPatchRequestPartialSafetyAlertsChannelIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildPatchRequestPartialSafetyAlertsChannelIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_safety_alerts_channel_idMember1>(null, GuildPatchRequestPartialSafetyAlertsChannelIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_system_channel_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildPatchRequestPartial_system_channel_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_system_channel_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_system_channel_idMember1? GuildPatchRequestPartialSystemChannelIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_system_channel_idMember1 GuildPatchRequestPartialSystemChannelIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_system_channel_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_system_channel_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_system_channel_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildPatchRequestPartialSystemChannelIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_system_channel_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildPatchRequestPartialSystemChannelIdMember1 != null)
-                {
-                    return GuildPatchRequestPartialSystemChannelIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildPatchRequestPartialSystemChannelIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_system_channel_idMember1>(null, GuildPatchRequestPartialSystemChannelIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_verification_levelMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildPatchRequestPartial_verification_level : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_verification_levelMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_verification_levelMember1? GuildPatchRequestPartialVerificationLevelMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_verification_levelMember1 GuildPatchRequestPartialVerificationLevelMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels? VerificationLevels { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels VerificationLevels { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_verification_level"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_verification_level CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial.GuildPatchRequestPartial_verification_level();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildPatchRequestPartialVerificationLevelMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_verification_levelMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.VerificationLevels = new global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildPatchRequestPartialVerificationLevelMember1 != null)
-                {
-                    return GuildPatchRequestPartialVerificationLevelMember1.GetFieldDeserializers();
-                }
-                else if(VerificationLevels != null)
-                {
-                    return VerificationLevels.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildPatchRequestPartialVerificationLevelMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial_verification_levelMember1>(null, GuildPatchRequestPartialVerificationLevelMember1);
-                }
-                else if(VerificationLevels != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels>(null, VerificationLevels);
-                }
-            }
         }
     }
 }

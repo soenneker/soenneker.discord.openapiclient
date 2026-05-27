@@ -21,7 +21,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Whether you are being ratelimited by the global ratelimit or a per-endpoint ratelimit</summary>
         public bool? Global { get; set; }
         /// <summary>The primary error message.</summary>
-        public override string Message { get => base.Message; }
+        public override string Message { get => MessageEscaped ?? string.Empty; }
+        /// <summary>Human-readable error message</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MessageEscaped { get; set; }
+#nullable restore
+#else
+        public string MessageEscaped { get; set; }
+#endif
         /// <summary>The number of seconds to wait before retrying your request</summary>
         public double? RetryAfter { get; set; }
         /// <summary>
@@ -51,6 +59,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "code", n => { Code = n.GetIntValue(); } },
                 { "global", n => { Global = n.GetBoolValue(); } },
+                { "message", n => { MessageEscaped = n.GetStringValue(); } },
                 { "retry_after", n => { RetryAfter = n.GetDoubleValue(); } },
             };
         }
@@ -63,6 +72,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("code", Code);
             writer.WriteBoolValue("global", Global);
+            writer.WriteStringValue("message", MessageEscaped);
             writer.WriteDoubleValue("retry_after", RetryAfter);
             writer.WriteAdditionalData(AdditionalData);
         }

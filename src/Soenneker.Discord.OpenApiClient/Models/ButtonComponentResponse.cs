@@ -51,9 +51,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string SkuId { get; set; }
 #endif
         /// <summary>The style property</summary>
-        public int? Style { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ButtonStyleTypes? Style { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ButtonStyleTypes Style { get; set; }
+#endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentResponse_type Type { get; set; }
+#endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,8 +105,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "sku_id", n => { SkuId = n.GetStringValue(); } },
-                { "style", n => { Style = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "style", n => { Style = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonStyleTypes>(global::Soenneker.Discord.OpenApiClient.Models.ButtonStyleTypes.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentResponse_type.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -111,8 +123,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("sku_id", SkuId);
-            writer.WriteIntValue("style", Style);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonStyleTypes>("style", Style);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentResponse_type>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

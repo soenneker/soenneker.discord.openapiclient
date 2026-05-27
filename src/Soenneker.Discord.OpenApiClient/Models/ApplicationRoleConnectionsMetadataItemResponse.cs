@@ -55,7 +55,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponse_name_localizations NameLocalizations { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.MetadataItemTypes? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.MetadataItemTypes Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponse"/> and sets the default values.
         /// </summary>
@@ -86,7 +92,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponse_name_localizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponse_name_localizations.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MetadataItemTypes>(global::Soenneker.Discord.OpenApiClient.Models.MetadataItemTypes.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -101,7 +107,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponse_name_localizations>("name_localizations", NameLocalizations);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MetadataItemTypes>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

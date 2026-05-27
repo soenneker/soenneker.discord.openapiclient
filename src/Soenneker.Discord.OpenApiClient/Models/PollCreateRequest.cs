@@ -27,13 +27,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The duration property</summary>
         public int? Duration { get; set; }
         /// <summary>The layout_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.PollCreateRequest_layout_type? LayoutType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.PollCreateRequest_layout_type LayoutType { get; set; }
-#endif
+        public int? LayoutType { get; set; }
         /// <summary>The question property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,7 +64,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "allow_multiselect", n => { AllowMultiselect = n.GetBoolValue(); } },
                 { "answers", n => { Answers = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
-                { "layout_type", n => { LayoutType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.PollCreateRequest_layout_type>(global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.PollCreateRequest_layout_type.CreateFromDiscriminatorValue); } },
+                { "layout_type", n => { LayoutType = n.GetIntValue(); } },
                 { "question", n => { Question = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMedia>(global::Soenneker.Discord.OpenApiClient.Models.PollMedia.CreateFromDiscriminatorValue); } },
             };
         }
@@ -84,84 +78,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("allow_multiselect", AllowMultiselect);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>("answers", Answers);
             writer.WriteIntValue("duration", Duration);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.PollCreateRequest_layout_type>("layout_type", LayoutType);
+            writer.WriteIntValue("layout_type", LayoutType);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMedia>("question", Question);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest_layout_typeMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PollCreateRequest_layout_type : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest_layout_typeMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest_layout_typeMember1? PollCreateRequestLayoutTypeMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest_layout_typeMember1 PollCreateRequestLayoutTypeMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes? PollLayoutTypes { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes PollLayoutTypes { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.PollCreateRequest_layout_type"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.PollCreateRequest_layout_type CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.PollCreateRequest_layout_type();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PollCreateRequestLayoutTypeMember1 = new global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest_layout_typeMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PollLayoutTypes = new global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PollCreateRequestLayoutTypeMember1 != null)
-                {
-                    return PollCreateRequestLayoutTypeMember1.GetFieldDeserializers();
-                }
-                else if(PollLayoutTypes != null)
-                {
-                    return PollLayoutTypes.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PollCreateRequestLayoutTypeMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest_layout_typeMember1>(null, PollCreateRequestLayoutTypeMember1);
-                }
-                else if(PollLayoutTypes != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes>(null, PollLayoutTypes);
-                }
-            }
         }
     }
 }

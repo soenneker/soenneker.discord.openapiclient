@@ -57,7 +57,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The event_webhooks_status property</summary>
-        public int? EventWebhooksStatus { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationEventWebhooksStatus? EventWebhooksStatus { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationEventWebhooksStatus EventWebhooksStatus { get; set; }
+#endif
         /// <summary>The event_webhooks_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +81,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string EventWebhooksUrl { get; set; }
 #endif
         /// <summary>The explicit_content_filter property</summary>
-        public int? ExplicitContentFilter { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes? ExplicitContentFilter { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes ExplicitContentFilter { get; set; }
+#endif
         /// <summary>The flags property</summary>
         public int? Flags { get; set; }
         /// <summary>The flags_new property</summary>
@@ -211,10 +223,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_team? Team { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.TeamResponse? Team { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_team Team { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.TeamResponse Team { get; set; }
 #endif
         /// <summary>The terms_of_service_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -227,10 +239,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_type? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_type Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper Type { get; set; }
 #endif
         /// <summary>The verify_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -274,10 +286,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "cover_image", n => { CoverImage = n.GetStringValue(); } },
                 { "custom_install_url", n => { CustomInstallUrl = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "event_webhooks_status", n => { EventWebhooksStatus = n.GetIntValue(); } },
+                { "event_webhooks_status", n => { EventWebhooksStatus = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationEventWebhooksStatus>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationEventWebhooksStatus.CreateFromDiscriminatorValue); } },
                 { "event_webhooks_types", n => { EventWebhooksTypes = n.GetCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_event_webhooks_types>()?.AsList(); } },
                 { "event_webhooks_url", n => { EventWebhooksUrl = n.GetStringValue(); } },
-                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetIntValue(); } },
+                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes.CreateFromDiscriminatorValue); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "flags_new", n => { FlagsNew = n.GetStringValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
@@ -296,9 +308,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "rpc_origins", n => { RpcOrigins = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_team>(global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_team.CreateFromDiscriminatorValue); } },
+                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamResponse>(global::Soenneker.Discord.OpenApiClient.Models.TeamResponse.CreateFromDiscriminatorValue); } },
                 { "terms_of_service_url", n => { TermsOfServiceUrl = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper.CreateFromDiscriminatorValue); } },
                 { "verify_key", n => { VerifyKey = n.GetStringValue(); } },
             };
         }
@@ -318,10 +330,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("cover_image", CoverImage);
             writer.WriteStringValue("custom_install_url", CustomInstallUrl);
             writer.WriteStringValue("description", Description);
-            writer.WriteIntValue("event_webhooks_status", EventWebhooksStatus);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationEventWebhooksStatus>("event_webhooks_status", EventWebhooksStatus);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_event_webhooks_types>("event_webhooks_types", EventWebhooksTypes);
             writer.WriteStringValue("event_webhooks_url", EventWebhooksUrl);
-            writer.WriteIntValue("explicit_content_filter", ExplicitContentFilter);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes>("explicit_content_filter", ExplicitContentFilter);
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("flags_new", FlagsNew);
             writer.WriteStringValue("guild_id", GuildId);
@@ -340,161 +352,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("rpc_origins", RpcOrigins);
             writer.WriteStringValue("slug", Slug);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_team>("team", Team);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamResponse>("team", Team);
             writer.WriteStringValue("terms_of_service_url", TermsOfServiceUrl);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper>("type", Type);
             writer.WriteStringValue("verify_key", VerifyKey);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_teamMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.TeamResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PrivateApplicationResponse_team : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_teamMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_teamMember1? PrivateApplicationResponseTeamMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_teamMember1 PrivateApplicationResponseTeamMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.TeamResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.TeamResponse? TeamResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.TeamResponse TeamResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_team"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_team CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_team();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PrivateApplicationResponseTeamMember1 = new global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_teamMember1();
-                }
-                else if("TeamResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.TeamResponse = new global::Soenneker.Discord.OpenApiClient.Models.TeamResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PrivateApplicationResponseTeamMember1 != null)
-                {
-                    return PrivateApplicationResponseTeamMember1.GetFieldDeserializers();
-                }
-                else if(TeamResponse != null)
-                {
-                    return TeamResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(PrivateApplicationResponseTeamMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_teamMember1>(null, PrivateApplicationResponseTeamMember1);
-                }
-                else if(TeamResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamResponse>(null, TeamResponse);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_typeMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PrivateApplicationResponse_type : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes? ApplicationTypes { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes ApplicationTypes { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_typeMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_typeMember1? PrivateApplicationResponseTypeMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_typeMember1 PrivateApplicationResponseTypeMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_type"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_type CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse.PrivateApplicationResponse_type();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationTypes = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PrivateApplicationResponseTypeMember1 = new global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_typeMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationTypes != null)
-                {
-                    return ApplicationTypes.GetFieldDeserializers();
-                }
-                else if(PrivateApplicationResponseTypeMember1 != null)
-                {
-                    return PrivateApplicationResponseTypeMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApplicationTypes != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes>(null, ApplicationTypes);
-                }
-                else if(PrivateApplicationResponseTypeMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_typeMember1>(null, PrivateApplicationResponseTypeMember1);
-                }
-            }
         }
     }
 }

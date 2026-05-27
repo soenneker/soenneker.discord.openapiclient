@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The format_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse.StandardStickerResponse_format_type? FormatType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes_Wrapper? FormatType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse.StandardStickerResponse_format_type FormatType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes_Wrapper FormatType { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Tags { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse"/> and sets the default values.
         /// </summary>
@@ -92,13 +98,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "format_type", n => { FormatType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse.StandardStickerResponse_format_type>(global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse.StandardStickerResponse_format_type.CreateFromDiscriminatorValue); } },
+                { "format_type", n => { FormatType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes_Wrapper.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "pack_id", n => { PackId = n.GetStringValue(); } },
                 { "sort_value", n => { SortValue = n.GetIntValue(); } },
                 { "tags", n => { Tags = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -109,89 +115,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse.StandardStickerResponse_format_type>("format_type", FormatType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes_Wrapper>("format_type", FormatType);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("pack_id", PackId);
             writer.WriteIntValue("sort_value", SortValue);
             writer.WriteStringValue("tags", Tags);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_format_typeMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class StandardStickerResponse_format_type : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_format_typeMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_format_typeMember1? StandardStickerResponseFormatTypeMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_format_typeMember1 StandardStickerResponseFormatTypeMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes? StickerFormatTypes { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes StickerFormatTypes { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse.StandardStickerResponse_format_type"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse.StandardStickerResponse_format_type CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse.StandardStickerResponse_format_type();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.StandardStickerResponseFormatTypeMember1 = new global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_format_typeMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.StickerFormatTypes = new global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(StandardStickerResponseFormatTypeMember1 != null)
-                {
-                    return StandardStickerResponseFormatTypeMember1.GetFieldDeserializers();
-                }
-                else if(StickerFormatTypes != null)
-                {
-                    return StickerFormatTypes.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(StandardStickerResponseFormatTypeMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_format_typeMember1>(null, StandardStickerResponseFormatTypeMember1);
-                }
-                else if(StickerFormatTypes != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes>(null, StickerFormatTypes);
-                }
-            }
         }
     }
 }

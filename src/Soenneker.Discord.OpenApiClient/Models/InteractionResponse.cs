@@ -51,7 +51,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The response_message_loading property</summary>
         public bool? ResponseMessageLoading { get; set; }
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.InteractionTypes? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.InteractionTypes Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.InteractionResponse"/> and sets the default values.
         /// </summary>
@@ -83,7 +89,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "response_message_ephemeral", n => { ResponseMessageEphemeral = n.GetBoolValue(); } },
                 { "response_message_id", n => { ResponseMessageId = n.GetStringValue(); } },
                 { "response_message_loading", n => { ResponseMessageLoading = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InteractionTypes>(global::Soenneker.Discord.OpenApiClient.Models.InteractionTypes.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -99,7 +105,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("response_message_ephemeral", ResponseMessageEphemeral);
             writer.WriteStringValue("response_message_id", ResponseMessageId);
             writer.WriteBoolValue("response_message_loading", ResponseMessageLoading);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InteractionTypes>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

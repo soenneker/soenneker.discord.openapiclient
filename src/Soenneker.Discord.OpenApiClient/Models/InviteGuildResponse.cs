@@ -67,10 +67,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The nsfw_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_nsfw_level? NsfwLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel_Wrapper? NsfwLevel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_nsfw_level NsfwLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel_Wrapper NsfwLevel { get; set; }
 #endif
         /// <summary>The premium_subscription_count property</summary>
         public int? PremiumSubscriptionCount { get; set; }
@@ -93,10 +93,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The verification_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_verification_level? VerificationLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper? VerificationLevel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_verification_level VerificationLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper VerificationLevel { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse"/> and sets the default values.
@@ -130,11 +130,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "nsfw", n => { Nsfw = n.GetBoolValue(); } },
-                { "nsfw_level", n => { NsfwLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_nsfw_level>(global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_nsfw_level.CreateFromDiscriminatorValue); } },
+                { "nsfw_level", n => { NsfwLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel_Wrapper.CreateFromDiscriminatorValue); } },
                 { "premium_subscription_count", n => { PremiumSubscriptionCount = n.GetIntValue(); } },
                 { "splash", n => { Splash = n.GetStringValue(); } },
                 { "vanity_url_code", n => { VanityUrlCode = n.GetStringValue(); } },
-                { "verification_level", n => { VerificationLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_verification_level>(global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_verification_level.CreateFromDiscriminatorValue); } },
+                { "verification_level", n => { VerificationLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -151,162 +151,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("nsfw", Nsfw);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_nsfw_level>("nsfw_level", NsfwLevel);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel_Wrapper>("nsfw_level", NsfwLevel);
             writer.WriteIntValue("premium_subscription_count", PremiumSubscriptionCount);
             writer.WriteStringValue("splash", Splash);
             writer.WriteStringValue("vanity_url_code", VanityUrlCode);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_verification_level>("verification_level", VerificationLevel);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper>("verification_level", VerificationLevel);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_nsfw_levelMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class InviteGuildResponse_nsfw_level : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel? GuildNSFWContentLevel { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel GuildNSFWContentLevel { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_nsfw_levelMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_nsfw_levelMember1? InviteGuildResponseNsfwLevelMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_nsfw_levelMember1 InviteGuildResponseNsfwLevelMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_nsfw_level"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_nsfw_level CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_nsfw_level();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildNSFWContentLevel = new global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.InviteGuildResponseNsfwLevelMember1 = new global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_nsfw_levelMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildNSFWContentLevel != null)
-                {
-                    return GuildNSFWContentLevel.GetFieldDeserializers();
-                }
-                else if(InviteGuildResponseNsfwLevelMember1 != null)
-                {
-                    return InviteGuildResponseNsfwLevelMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildNSFWContentLevel != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel>(null, GuildNSFWContentLevel);
-                }
-                else if(InviteGuildResponseNsfwLevelMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_nsfw_levelMember1>(null, InviteGuildResponseNsfwLevelMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_verification_levelMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class InviteGuildResponse_verification_level : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_verification_levelMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_verification_levelMember1? InviteGuildResponseVerificationLevelMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_verification_levelMember1 InviteGuildResponseVerificationLevelMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels? VerificationLevels { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels VerificationLevels { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_verification_level"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_verification_level CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse.InviteGuildResponse_verification_level();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.InviteGuildResponseVerificationLevelMember1 = new global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_verification_levelMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.VerificationLevels = new global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(InviteGuildResponseVerificationLevelMember1 != null)
-                {
-                    return InviteGuildResponseVerificationLevelMember1.GetFieldDeserializers();
-                }
-                else if(VerificationLevels != null)
-                {
-                    return VerificationLevels.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(InviteGuildResponseVerificationLevelMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse_verification_levelMember1>(null, InviteGuildResponseVerificationLevelMember1);
-                }
-                else if(VerificationLevels != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels>(null, VerificationLevels);
-                }
-            }
         }
     }
 }

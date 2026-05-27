@@ -21,13 +21,19 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The spacing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest.SeparatorComponentForMessageRequest_spacing? Spacing { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize_Wrapper? Spacing { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest.SeparatorComponentForMessageRequest_spacing Spacing { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize_Wrapper Spacing { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest"/> and sets the default values.
         /// </summary>
@@ -55,8 +61,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "divider", n => { Divider = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "spacing", n => { Spacing = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest.SeparatorComponentForMessageRequest_spacing>(global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest.SeparatorComponentForMessageRequest_spacing.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "spacing", n => { Spacing = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize_Wrapper.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,84 +74,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("divider", Divider);
             writer.WriteIntValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest.SeparatorComponentForMessageRequest_spacing>("spacing", Spacing);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize_Wrapper>("spacing", Spacing);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest_spacingMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SeparatorComponentForMessageRequest_spacing : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize? MessageComponentSeparatorSpacingSize { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize MessageComponentSeparatorSpacingSize { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest_spacingMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest_spacingMember1? SeparatorComponentForMessageRequestSpacingMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest_spacingMember1 SeparatorComponentForMessageRequestSpacingMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest.SeparatorComponentForMessageRequest_spacing"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest.SeparatorComponentForMessageRequest_spacing CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest.SeparatorComponentForMessageRequest_spacing();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MessageComponentSeparatorSpacingSize = new global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SeparatorComponentForMessageRequestSpacingMember1 = new global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest_spacingMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(MessageComponentSeparatorSpacingSize != null)
-                {
-                    return MessageComponentSeparatorSpacingSize.GetFieldDeserializers();
-                }
-                else if(SeparatorComponentForMessageRequestSpacingMember1 != null)
-                {
-                    return SeparatorComponentForMessageRequestSpacingMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(MessageComponentSeparatorSpacingSize != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageComponentSeparatorSpacingSize>(null, MessageComponentSeparatorSpacingSize);
-                }
-                else if(SeparatorComponentForMessageRequestSpacingMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest_spacingMember1>(null, SeparatorComponentForMessageRequestSpacingMember1);
-                }
-            }
         }
     }
 }

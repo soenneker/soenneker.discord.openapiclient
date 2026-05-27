@@ -131,7 +131,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponse_auto_moderation_rulesMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class GuildAuditLogResponse_auto_moderation_rules : IComposedTypeWrapper, IParsable
@@ -143,14 +143,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #nullable restore
 #else
             public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse DefaultKeywordRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponse_auto_moderation_rulesMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponse_auto_moderation_rulesMember1? GuildAuditLogResponseAutoModerationRulesMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponse_auto_moderation_rulesMember1 GuildAuditLogResponseAutoModerationRulesMember1 { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -198,10 +190,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 {
                     result.DefaultKeywordRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse();
                 }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildAuditLogResponseAutoModerationRulesMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponse_auto_moderation_rulesMember1();
-                }
                 else if("KeywordRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.KeywordRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse();
@@ -229,10 +217,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 if(DefaultKeywordRuleResponse != null)
                 {
                     return DefaultKeywordRuleResponse.GetFieldDeserializers();
-                }
-                else if(GuildAuditLogResponseAutoModerationRulesMember1 != null)
-                {
-                    return GuildAuditLogResponseAutoModerationRulesMember1.GetFieldDeserializers();
                 }
                 else if(KeywordRuleResponse != null)
                 {
@@ -262,10 +246,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 if(DefaultKeywordRuleResponse != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse>(null, DefaultKeywordRuleResponse);
-                }
-                else if(GuildAuditLogResponseAutoModerationRulesMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponse_auto_moderation_rulesMember1>(null, GuildAuditLogResponseAutoModerationRulesMember1);
                 }
                 else if(KeywordRuleResponse != null)
                 {

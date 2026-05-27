@@ -27,10 +27,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_emoji? Emoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest? Emoji { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_emoji Emoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest Emoji { get; set; }
 #endif
         /// <summary>The id property</summary>
         public int? Id { get; set; }
@@ -45,15 +45,27 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The sku_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_sku_id? SkuId { get; set; }
+        public string? SkuId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_sku_id SkuId { get; set; }
+        public string SkuId { get; set; }
 #endif
         /// <summary>The style property</summary>
-        public int? Style { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ButtonStyleTypes? Style { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ButtonStyleTypes Style { get; set; }
+#endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_type Type { get; set; }
+#endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,12 +101,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "custom_id", n => { CustomId = n.GetStringValue(); } },
                 { "disabled", n => { Disabled = n.GetBoolValue(); } },
-                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_emoji>(global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_emoji.CreateFromDiscriminatorValue); } },
+                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest>(global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "sku_id", n => { SkuId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_sku_id>(global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_sku_id.CreateFromDiscriminatorValue); } },
-                { "style", n => { Style = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "sku_id", n => { SkuId = n.GetStringValue(); } },
+                { "style", n => { Style = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonStyleTypes>(global::Soenneker.Discord.OpenApiClient.Models.ButtonStyleTypes.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_type.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -107,164 +119,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("custom_id", CustomId);
             writer.WriteBoolValue("disabled", Disabled);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_emoji>("emoji", Emoji);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest>("emoji", Emoji);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("label", Label);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_sku_id>("sku_id", SkuId);
-            writer.WriteIntValue("style", Style);
-            writer.WriteIntValue("type", Type);
+            writer.WriteStringValue("sku_id", SkuId);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonStyleTypes>("style", Style);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_type>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_emojiMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ButtonComponentForMessageRequest_emoji : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_emojiMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_emojiMember1? ButtonComponentForMessageRequestEmojiMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_emojiMember1 ButtonComponentForMessageRequestEmojiMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest? ComponentEmojiForRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest ComponentEmojiForRequest { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_emoji"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_emoji CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_emoji();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ButtonComponentForMessageRequestEmojiMember1 = new global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_emojiMember1();
-                }
-                else if("ComponentEmojiForRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ComponentEmojiForRequest = new global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ButtonComponentForMessageRequestEmojiMember1 != null)
-                {
-                    return ButtonComponentForMessageRequestEmojiMember1.GetFieldDeserializers();
-                }
-                else if(ComponentEmojiForRequest != null)
-                {
-                    return ComponentEmojiForRequest.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ButtonComponentForMessageRequestEmojiMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_emojiMember1>(null, ButtonComponentForMessageRequestEmojiMember1);
-                }
-                else if(ComponentEmojiForRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest>(null, ComponentEmojiForRequest);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_sku_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ButtonComponentForMessageRequest_sku_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_sku_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_sku_idMember1? ButtonComponentForMessageRequestSkuIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_sku_idMember1 ButtonComponentForMessageRequestSkuIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_sku_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_sku_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest.ButtonComponentForMessageRequest_sku_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ButtonComponentForMessageRequestSkuIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_sku_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ButtonComponentForMessageRequestSkuIdMember1 != null)
-                {
-                    return ButtonComponentForMessageRequestSkuIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ButtonComponentForMessageRequestSkuIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest_sku_idMember1>(null, ButtonComponentForMessageRequestSkuIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
         }
     }
 }

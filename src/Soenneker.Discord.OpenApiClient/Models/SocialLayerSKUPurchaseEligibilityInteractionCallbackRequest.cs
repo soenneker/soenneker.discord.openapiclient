@@ -23,7 +23,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityCallbackData Data { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest"/> and sets the default values.
         /// </summary>
@@ -50,7 +56,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityCallbackData>(global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityCallbackData.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityCallbackData>("data", Data);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

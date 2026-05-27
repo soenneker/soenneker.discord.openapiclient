@@ -21,13 +21,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.InnerErrors? Errors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ErrorDetails? Errors { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.InnerErrors Errors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ErrorDetails Errors { get; set; }
 #endif
         /// <summary>The primary error message.</summary>
-        public override string Message { get => base.Message; }
+        public override string Message { get => MessageEscaped ?? string.Empty; }
+        /// <summary>Human-readable error message</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MessageEscaped { get; set; }
+#nullable restore
+#else
+        public string MessageEscaped { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse"/> and sets the default values.
         /// </summary>
@@ -54,7 +62,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetIntValue(); } },
-                { "errors", n => { Errors = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InnerErrors>(global::Soenneker.Discord.OpenApiClient.Models.InnerErrors.CreateFromDiscriminatorValue); } },
+                { "errors", n => { Errors = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ErrorDetails>(global::Soenneker.Discord.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue); } },
+                { "message", n => { MessageEscaped = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -65,7 +74,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InnerErrors>("errors", Errors);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ErrorDetails>("errors", Errors);
+            writer.WriteStringValue("message", MessageEscaped);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

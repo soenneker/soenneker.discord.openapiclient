@@ -26,11 +26,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string ErrorMessage { get; set; }
 #endif
-        /// <summary>The number of users processed so far.</summary>
+        /// <summary>The processed_users property</summary>
         public long? ProcessedUsers { get; set; }
-        /// <summary>The status of the job processing the target users.</summary>
-        public int? Status { get; set; }
-        /// <summary>The total number of users in the provided list.</summary>
+        /// <summary>The status property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.TargetUsersJobStatusTypes? Status { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.TargetUsersJobStatusTypes Status { get; set; }
+#endif
+        /// <summary>The total_users property</summary>
         public long? TotalUsers { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.TargetUsersJobStatusResponse"/> and sets the default values.
@@ -61,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "error_message", n => { ErrorMessage = n.GetStringValue(); } },
                 { "processed_users", n => { ProcessedUsers = n.GetLongValue(); } },
-                { "status", n => { Status = n.GetIntValue(); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TargetUsersJobStatusTypes>(global::Soenneker.Discord.OpenApiClient.Models.TargetUsersJobStatusTypes.CreateFromDiscriminatorValue); } },
                 { "total_users", n => { TotalUsers = n.GetLongValue(); } },
             };
         }
@@ -76,7 +82,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("error_message", ErrorMessage);
             writer.WriteLongValue("processed_users", ProcessedUsers);
-            writer.WriteIntValue("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TargetUsersJobStatusTypes>("status", Status);
             writer.WriteLongValue("total_users", TotalUsers);
             writer.WriteAdditionalData(AdditionalData);
         }

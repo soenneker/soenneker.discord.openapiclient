@@ -7,20 +7,18 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember2"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember3"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class AllowedMentionTypes : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class AllowedMentionTypes : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes"/> and sets the default values.
-        /// </summary>
-        public AllowedMentionTypes()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember1"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember1? AllowedMentionTypesMember1 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember2"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember2? AllowedMentionTypesMember2 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember3"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember3? AllowedMentionTypesMember3 { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,7 +27,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes();
+            if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember1>() is global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember1 allowedMentionTypesMember1Value)
+            {
+                result.AllowedMentionTypesMember1 = allowedMentionTypesMember1Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember2>() is global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember2 allowedMentionTypesMember2Value)
+            {
+                result.AllowedMentionTypesMember2 = allowedMentionTypesMember2Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember3>() is global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember3 allowedMentionTypesMember3Value)
+            {
+                result.AllowedMentionTypesMember3 = allowedMentionTypesMember3Value;
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -37,9 +49,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
-            {
-            };
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -48,7 +58,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteAdditionalData(AdditionalData);
+            if(AllowedMentionTypesMember1 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember1>(null, AllowedMentionTypesMember1);
+            }
+            else if(AllowedMentionTypesMember2 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember2>(null, AllowedMentionTypesMember2);
+            }
+            else if(AllowedMentionTypesMember3 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypesMember3>(null, AllowedMentionTypesMember3);
+            }
         }
     }
 }

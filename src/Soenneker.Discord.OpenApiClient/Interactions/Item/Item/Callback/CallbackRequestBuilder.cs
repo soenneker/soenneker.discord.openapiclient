@@ -41,11 +41,11 @@ namespace Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponse?> PostAsync(global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponse?> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.Create_interaction_responseapplication_json body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponse> PostAsync(global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponse> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.Create_interaction_responseapplication_json body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -62,11 +62,11 @@ namespace Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.Create_interaction_responseapplication_json body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.Create_interaction_responseapplication_json body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -84,108 +84,6 @@ namespace Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback
         public global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAutocompleteCallbackRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.LaunchActivityInteractionCallbackRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ModalInteractionCallbackRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.PongInteractionCallbackRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequest"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CallbackPostRequestBody : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAutocompleteCallbackRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAutocompleteCallbackRequest? ApplicationCommandAutocompleteCallbackRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAutocompleteCallbackRequest ApplicationCommandAutocompleteCallbackRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequest? CreateMessageInteractionCallbackRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequest CreateMessageInteractionCallbackRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.LaunchActivityInteractionCallbackRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.LaunchActivityInteractionCallbackRequest? LaunchActivityInteractionCallbackRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.LaunchActivityInteractionCallbackRequest LaunchActivityInteractionCallbackRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ModalInteractionCallbackRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ModalInteractionCallbackRequest? ModalInteractionCallbackRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ModalInteractionCallbackRequest ModalInteractionCallbackRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PongInteractionCallbackRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PongInteractionCallbackRequest? PongInteractionCallbackRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PongInteractionCallbackRequest PongInteractionCallbackRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest? SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequest? UpdateMessageInteractionCallbackRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequest UpdateMessageInteractionCallbackRequest { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackPostRequestBody"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackPostRequestBody();
-                result.ApplicationCommandAutocompleteCallbackRequest = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAutocompleteCallbackRequest();
-                result.CreateMessageInteractionCallbackRequest = new global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequest();
-                result.LaunchActivityInteractionCallbackRequest = new global::Soenneker.Discord.OpenApiClient.Models.LaunchActivityInteractionCallbackRequest();
-                result.ModalInteractionCallbackRequest = new global::Soenneker.Discord.OpenApiClient.Models.ModalInteractionCallbackRequest();
-                result.PongInteractionCallbackRequest = new global::Soenneker.Discord.OpenApiClient.Models.PongInteractionCallbackRequest();
-                result.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest = new global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest();
-                result.UpdateMessageInteractionCallbackRequest = new global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequest();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationCommandAutocompleteCallbackRequest != null || CreateMessageInteractionCallbackRequest != null || LaunchActivityInteractionCallbackRequest != null || ModalInteractionCallbackRequest != null || PongInteractionCallbackRequest != null || SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest != null || UpdateMessageInteractionCallbackRequest != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ApplicationCommandAutocompleteCallbackRequest, CreateMessageInteractionCallbackRequest, LaunchActivityInteractionCallbackRequest, ModalInteractionCallbackRequest, PongInteractionCallbackRequest, SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest, UpdateMessageInteractionCallbackRequest);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAutocompleteCallbackRequest>(null, ApplicationCommandAutocompleteCallbackRequest, CreateMessageInteractionCallbackRequest, LaunchActivityInteractionCallbackRequest, ModalInteractionCallbackRequest, PongInteractionCallbackRequest, SocialLayerSKUPurchaseEligibilityInteractionCallbackRequest, UpdateMessageInteractionCallbackRequest);
-            }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591

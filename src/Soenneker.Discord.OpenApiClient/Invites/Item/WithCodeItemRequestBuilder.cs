@@ -39,18 +39,18 @@ namespace Soenneker.Discord.OpenApiClient.Invites.Item
         public WithCodeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invites/{code}{?guild_scheduled_event_id*,with_counts*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeDeleteResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeDeleteResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeDeleteResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -59,20 +59,20 @@ namespace Soenneker.Discord.OpenApiClient.Invites.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeDeleteResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -81,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Invites.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeGetResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -123,196 +123,6 @@ namespace Soenneker.Discord.OpenApiClient.Invites.Item
         public global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithCodeDeleteResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse? FriendInviteResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse FriendInviteResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse? GroupDMInviteResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse GroupDMInviteResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse? GuildInviteResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse GuildInviteResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeDeleteResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeDeleteResponse();
-                if("FriendInviteResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.FriendInviteResponse = new global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse();
-                }
-                else if("GroupDMInviteResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GroupDMInviteResponse = new global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse();
-                }
-                else if("GuildInviteResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildInviteResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(FriendInviteResponse != null)
-                {
-                    return FriendInviteResponse.GetFieldDeserializers();
-                }
-                else if(GroupDMInviteResponse != null)
-                {
-                    return GroupDMInviteResponse.GetFieldDeserializers();
-                }
-                else if(GuildInviteResponse != null)
-                {
-                    return GuildInviteResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(FriendInviteResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse>(null, FriendInviteResponse);
-                }
-                else if(GroupDMInviteResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse>(null, GroupDMInviteResponse);
-                }
-                else if(GuildInviteResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse>(null, GuildInviteResponse);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithCodeGetResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse? FriendInviteResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse FriendInviteResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse? GroupDMInviteResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse GroupDMInviteResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse? GuildInviteResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse GuildInviteResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeGetResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeGetResponse();
-                if("FriendInviteResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.FriendInviteResponse = new global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse();
-                }
-                else if("GroupDMInviteResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GroupDMInviteResponse = new global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse();
-                }
-                else if("GuildInviteResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildInviteResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(FriendInviteResponse != null)
-                {
-                    return FriendInviteResponse.GetFieldDeserializers();
-                }
-                else if(GroupDMInviteResponse != null)
-                {
-                    return GroupDMInviteResponse.GetFieldDeserializers();
-                }
-                else if(GuildInviteResponse != null)
-                {
-                    return GuildInviteResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(FriendInviteResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse>(null, FriendInviteResponse);
-                }
-                else if(GroupDMInviteResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse>(null, GroupDMInviteResponse);
-                }
-                else if(GuildInviteResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse>(null, GuildInviteResponse);
-                }
-            }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591

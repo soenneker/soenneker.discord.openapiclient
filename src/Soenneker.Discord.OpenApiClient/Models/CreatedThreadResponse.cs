@@ -45,10 +45,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The last_message_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_last_message_id? LastMessageId { get; set; }
+        public string? LastMessageId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_last_message_id LastMessageId { get; set; }
+        public string LastMessageId { get; set; }
 #endif
         /// <summary>The last_pin_timestamp property</summary>
         public DateTimeOffset? LastPinTimestamp { get; set; }
@@ -83,10 +83,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The parent_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_parent_id? ParentId { get; set; }
+        public string? ParentId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_parent_id ParentId { get; set; }
+        public string ParentId { get; set; }
 #endif
         /// <summary>The permissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,11 +117,23 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The total_message_sent property</summary>
         public int? TotalMessageSent { get; set; }
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_type Type { get; set; }
+#endif
         /// <summary>The user_limit property</summary>
         public int? UserLimit { get; set; }
         /// <summary>The video_quality_mode property</summary>
-        public int? VideoQualityMode { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes? VideoQualityMode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes VideoQualityMode { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse"/> and sets the default values.
         /// </summary>
@@ -152,22 +164,22 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "last_message_id", n => { LastMessageId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_last_message_id>(global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_last_message_id.CreateFromDiscriminatorValue); } },
+                { "last_message_id", n => { LastMessageId = n.GetStringValue(); } },
                 { "last_pin_timestamp", n => { LastPinTimestamp = n.GetDateTimeOffsetValue(); } },
                 { "member", n => { Member = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadMemberResponse>(global::Soenneker.Discord.OpenApiClient.Models.ThreadMemberResponse.CreateFromDiscriminatorValue); } },
                 { "member_count", n => { MemberCount = n.GetIntValue(); } },
                 { "message_count", n => { MessageCount = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "owner_id", n => { OwnerId = n.GetStringValue(); } },
-                { "parent_id", n => { ParentId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_parent_id>(global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_parent_id.CreateFromDiscriminatorValue); } },
+                { "parent_id", n => { ParentId = n.GetStringValue(); } },
                 { "permissions", n => { Permissions = n.GetStringValue(); } },
                 { "rate_limit_per_user", n => { RateLimitPerUser = n.GetIntValue(); } },
                 { "rtc_region", n => { RtcRegion = n.GetStringValue(); } },
                 { "thread_metadata", n => { ThreadMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadMetadataResponse>(global::Soenneker.Discord.OpenApiClient.Models.ThreadMetadataResponse.CreateFromDiscriminatorValue); } },
                 { "total_message_sent", n => { TotalMessageSent = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_type.CreateFromDiscriminatorValue); } },
                 { "user_limit", n => { UserLimit = n.GetIntValue(); } },
-                { "video_quality_mode", n => { VideoQualityMode = n.GetIntValue(); } },
+                { "video_quality_mode", n => { VideoQualityMode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>(global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -182,173 +194,23 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_last_message_id>("last_message_id", LastMessageId);
+            writer.WriteStringValue("last_message_id", LastMessageId);
             writer.WriteDateTimeOffsetValue("last_pin_timestamp", LastPinTimestamp);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadMemberResponse>("member", Member);
             writer.WriteIntValue("member_count", MemberCount);
             writer.WriteIntValue("message_count", MessageCount);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("owner_id", OwnerId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_parent_id>("parent_id", ParentId);
+            writer.WriteStringValue("parent_id", ParentId);
             writer.WriteStringValue("permissions", Permissions);
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);
             writer.WriteStringValue("rtc_region", RtcRegion);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadMetadataResponse>("thread_metadata", ThreadMetadata);
             writer.WriteIntValue("total_message_sent", TotalMessageSent);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_type>("type", Type);
             writer.WriteIntValue("user_limit", UserLimit);
-            writer.WriteIntValue("video_quality_mode", VideoQualityMode);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>("video_quality_mode", VideoQualityMode);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_last_message_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CreatedThreadResponse_last_message_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_last_message_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_last_message_idMember1? CreatedThreadResponseLastMessageIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_last_message_idMember1 CreatedThreadResponseLastMessageIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_last_message_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_last_message_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_last_message_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CreatedThreadResponseLastMessageIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_last_message_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(CreatedThreadResponseLastMessageIdMember1 != null)
-                {
-                    return CreatedThreadResponseLastMessageIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(CreatedThreadResponseLastMessageIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_last_message_idMember1>(null, CreatedThreadResponseLastMessageIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_parent_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CreatedThreadResponse_parent_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_parent_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_parent_idMember1? CreatedThreadResponseParentIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_parent_idMember1 CreatedThreadResponseParentIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_parent_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_parent_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse.CreatedThreadResponse_parent_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CreatedThreadResponseParentIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_parent_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(CreatedThreadResponseParentIdMember1 != null)
-                {
-                    return CreatedThreadResponseParentIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(CreatedThreadResponseParentIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_parent_idMember1>(null, CreatedThreadResponseParentIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
         }
     }
 }

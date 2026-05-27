@@ -7,20 +7,20 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember2"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember3"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember4"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GuildJoinRequestApplicationStatus : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GuildJoinRequestApplicationStatus : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus"/> and sets the default values.
-        /// </summary>
-        public GuildJoinRequestApplicationStatus()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember1"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember1? GuildJoinRequestApplicationStatusMember1 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember2"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember2? GuildJoinRequestApplicationStatusMember2 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember3"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember3? GuildJoinRequestApplicationStatusMember3 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember4"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember4? GuildJoinRequestApplicationStatusMember4 { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,7 +29,25 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus();
+            if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember1>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember1 guildJoinRequestApplicationStatusMember1Value)
+            {
+                result.GuildJoinRequestApplicationStatusMember1 = guildJoinRequestApplicationStatusMember1Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember2>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember2 guildJoinRequestApplicationStatusMember2Value)
+            {
+                result.GuildJoinRequestApplicationStatusMember2 = guildJoinRequestApplicationStatusMember2Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember3>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember3 guildJoinRequestApplicationStatusMember3Value)
+            {
+                result.GuildJoinRequestApplicationStatusMember3 = guildJoinRequestApplicationStatusMember3Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember4>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember4 guildJoinRequestApplicationStatusMember4Value)
+            {
+                result.GuildJoinRequestApplicationStatusMember4 = guildJoinRequestApplicationStatusMember4Value;
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -37,9 +55,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
-            {
-            };
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -48,7 +64,22 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteAdditionalData(AdditionalData);
+            if(GuildJoinRequestApplicationStatusMember1 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember1>(null, GuildJoinRequestApplicationStatusMember1);
+            }
+            else if(GuildJoinRequestApplicationStatusMember2 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember2>(null, GuildJoinRequestApplicationStatusMember2);
+            }
+            else if(GuildJoinRequestApplicationStatusMember3 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember3>(null, GuildJoinRequestApplicationStatusMember3);
+            }
+            else if(GuildJoinRequestApplicationStatusMember4 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusMember4>(null, GuildJoinRequestApplicationStatusMember4);
+            }
         }
     }
 }

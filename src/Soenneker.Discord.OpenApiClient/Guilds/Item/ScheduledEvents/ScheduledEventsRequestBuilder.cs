@@ -46,18 +46,18 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents
         public ScheduledEventsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/scheduled-events{?with_user_count*}", rawUrl)
         {
         }
-        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEvents&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ListGuildScheduledEvents200&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEvents>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ListGuildScheduledEvents200>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEvents>> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ListGuildScheduledEvents200>> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -66,10 +66,10 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEvents>(requestInfo, global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEvents.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ListGuildScheduledEvents200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ListGuildScheduledEvents200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent200"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -77,11 +77,11 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostResponse?> PostAsync(global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent200?> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostResponse> PostAsync(global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent200> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -91,7 +91,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -114,11 +114,11 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -141,7 +141,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents
         /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventResponse"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ScheduledEvents : IComposedTypeWrapper, IParsable
+        public partial class ListGuildScheduledEvents200 : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -170,203 +170,13 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEvents"/></returns>
+            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ListGuildScheduledEvents200"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEvents CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ListGuildScheduledEvents200 CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEvents();
-                if("ExternalScheduledEventResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ExternalScheduledEventResponse = new global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponse();
-                }
-                else if("StageScheduledEventResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.StageScheduledEventResponse = new global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse();
-                }
-                else if("VoiceScheduledEventResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.VoiceScheduledEventResponse = new global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ExternalScheduledEventResponse != null)
-                {
-                    return ExternalScheduledEventResponse.GetFieldDeserializers();
-                }
-                else if(StageScheduledEventResponse != null)
-                {
-                    return StageScheduledEventResponse.GetFieldDeserializers();
-                }
-                else if(VoiceScheduledEventResponse != null)
-                {
-                    return VoiceScheduledEventResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ExternalScheduledEventResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponse>(null, ExternalScheduledEventResponse);
-                }
-                else if(StageScheduledEventResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse>(null, StageScheduledEventResponse);
-                }
-                else if(VoiceScheduledEventResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventResponse>(null, VoiceScheduledEventResponse);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventCreateRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventCreateRequest"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ScheduledEventsPostRequestBody : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequest? ExternalScheduledEventCreateRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequest ExternalScheduledEventCreateRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventCreateRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventCreateRequest? StageScheduledEventCreateRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventCreateRequest StageScheduledEventCreateRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventCreateRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventCreateRequest? VoiceScheduledEventCreateRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventCreateRequest VoiceScheduledEventCreateRequest { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostRequestBody"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostRequestBody();
-                if("ExternalScheduledEventCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ExternalScheduledEventCreateRequest = new global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequest();
-                }
-                else if("StageScheduledEventCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.StageScheduledEventCreateRequest = new global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventCreateRequest();
-                }
-                else if("VoiceScheduledEventCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.VoiceScheduledEventCreateRequest = new global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventCreateRequest();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ExternalScheduledEventCreateRequest != null)
-                {
-                    return ExternalScheduledEventCreateRequest.GetFieldDeserializers();
-                }
-                else if(StageScheduledEventCreateRequest != null)
-                {
-                    return StageScheduledEventCreateRequest.GetFieldDeserializers();
-                }
-                else if(VoiceScheduledEventCreateRequest != null)
-                {
-                    return VoiceScheduledEventCreateRequest.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ExternalScheduledEventCreateRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequest>(null, ExternalScheduledEventCreateRequest);
-                }
-                else if(StageScheduledEventCreateRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventCreateRequest>(null, StageScheduledEventCreateRequest);
-                }
-                else if(VoiceScheduledEventCreateRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventCreateRequest>(null, VoiceScheduledEventCreateRequest);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ScheduledEventsPostResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponse? ExternalScheduledEventResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponse ExternalScheduledEventResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse? StageScheduledEventResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse StageScheduledEventResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventResponse? VoiceScheduledEventResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventResponse VoiceScheduledEventResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsPostResponse();
+                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ListGuildScheduledEvents200();
                 if("ExternalScheduledEventResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.ExternalScheduledEventResponse = new global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponse();

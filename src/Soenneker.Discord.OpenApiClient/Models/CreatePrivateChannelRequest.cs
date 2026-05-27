@@ -33,10 +33,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The recipient_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest.CreatePrivateChannelRequest_recipient_id? RecipientId { get; set; }
+        public string? RecipientId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest.CreatePrivateChannelRequest_recipient_id RecipientId { get; set; }
+        public string RecipientId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "access_tokens", n => { AccessTokens = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "nicks", n => { Nicks = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_nicks>(global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_nicks.CreateFromDiscriminatorValue); } },
-                { "recipient_id", n => { RecipientId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest.CreatePrivateChannelRequest_recipient_id>(global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest.CreatePrivateChannelRequest_recipient_id.CreateFromDiscriminatorValue); } },
+                { "recipient_id", n => { RecipientId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -77,83 +77,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("access_tokens", AccessTokens);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_nicks>("nicks", Nicks);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest.CreatePrivateChannelRequest_recipient_id>("recipient_id", RecipientId);
+            writer.WriteStringValue("recipient_id", RecipientId);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_recipient_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CreatePrivateChannelRequest_recipient_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_recipient_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_recipient_idMember1? CreatePrivateChannelRequestRecipientIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_recipient_idMember1 CreatePrivateChannelRequestRecipientIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest.CreatePrivateChannelRequest_recipient_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest.CreatePrivateChannelRequest_recipient_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest.CreatePrivateChannelRequest_recipient_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CreatePrivateChannelRequestRecipientIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_recipient_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(CreatePrivateChannelRequestRecipientIdMember1 != null)
-                {
-                    return CreatePrivateChannelRequestRecipientIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(CreatePrivateChannelRequestRecipientIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_recipient_idMember1>(null, CreatePrivateChannelRequestRecipientIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
         }
     }
 }

@@ -117,18 +117,18 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item
         public WithChannel_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_DeleteResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.DeleteChannel200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_DeleteResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.DeleteChannel200?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_DeleteResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.DeleteChannel200> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -137,20 +137,20 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_DeleteResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.DeleteChannel200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.DeleteChannel200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_GetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GetChannel200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_GetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GetChannel200?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_GetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GetChannel200> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -159,9 +159,9 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_GetResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_GetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.GetChannel200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.GetChannel200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateChannel200"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -169,11 +169,11 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchResponse?> PatchAsync(global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.UpdateChannel200?> PatchAsync(global::Soenneker.Discord.OpenApiClient.Models.UpdateChannel body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchResponse> PatchAsync(global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.UpdateChannel200> PatchAsync(global::Soenneker.Discord.OpenApiClient.Models.UpdateChannel body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -183,7 +183,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.UpdateChannel200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.UpdateChannel200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -222,11 +222,11 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.UpdateChannel body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.UpdateChannel body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -244,426 +244,6 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item
         public global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithChannel_DeleteResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse? GuildChannelResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse GuildChannelResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse? PrivateChannelResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse PrivateChannelResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse? PrivateGroupChannelResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse PrivateGroupChannelResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse? ThreadResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse ThreadResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_DeleteResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_DeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_DeleteResponse();
-                if("GuildChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse();
-                }
-                else if("PrivateChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PrivateChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse();
-                }
-                else if("PrivateGroupChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PrivateGroupChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse();
-                }
-                else if("ThreadResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ThreadResponse = new global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildChannelResponse != null)
-                {
-                    return GuildChannelResponse.GetFieldDeserializers();
-                }
-                else if(PrivateChannelResponse != null)
-                {
-                    return PrivateChannelResponse.GetFieldDeserializers();
-                }
-                else if(PrivateGroupChannelResponse != null)
-                {
-                    return PrivateGroupChannelResponse.GetFieldDeserializers();
-                }
-                else if(ThreadResponse != null)
-                {
-                    return ThreadResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildChannelResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse>(null, GuildChannelResponse);
-                }
-                else if(PrivateChannelResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse>(null, PrivateChannelResponse);
-                }
-                else if(PrivateGroupChannelResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse>(null, PrivateGroupChannelResponse);
-                }
-                else if(ThreadResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>(null, ThreadResponse);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithChannel_GetResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse? GuildChannelResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse GuildChannelResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse? PrivateChannelResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse PrivateChannelResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse? PrivateGroupChannelResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse PrivateGroupChannelResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse? ThreadResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse ThreadResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_GetResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_GetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_GetResponse();
-                if("GuildChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse();
-                }
-                else if("PrivateChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PrivateChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse();
-                }
-                else if("PrivateGroupChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PrivateGroupChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse();
-                }
-                else if("ThreadResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ThreadResponse = new global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildChannelResponse != null)
-                {
-                    return GuildChannelResponse.GetFieldDeserializers();
-                }
-                else if(PrivateChannelResponse != null)
-                {
-                    return PrivateChannelResponse.GetFieldDeserializers();
-                }
-                else if(PrivateGroupChannelResponse != null)
-                {
-                    return PrivateGroupChannelResponse.GetFieldDeserializers();
-                }
-                else if(ThreadResponse != null)
-                {
-                    return ThreadResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildChannelResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse>(null, GuildChannelResponse);
-                }
-                else if(PrivateChannelResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse>(null, PrivateChannelResponse);
-                }
-                else if(PrivateGroupChannelResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse>(null, PrivateGroupChannelResponse);
-                }
-                else if(ThreadResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>(null, ThreadResponse);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateDMRequestPartial"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateGroupDMRequestPartial"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartial"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartial"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithChannel_PatchRequestBody : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateDMRequestPartial"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UpdateDMRequestPartial? UpdateDMRequestPartial { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UpdateDMRequestPartial UpdateDMRequestPartial { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateGroupDMRequestPartial"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UpdateGroupDMRequestPartial? UpdateGroupDMRequestPartial { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UpdateGroupDMRequestPartial UpdateGroupDMRequestPartial { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartial"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartial? UpdateGuildChannelRequestPartial { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartial UpdateGuildChannelRequestPartial { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartial"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartial? UpdateThreadRequestPartial { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartial UpdateThreadRequestPartial { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchRequestBody"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchRequestBody();
-                result.UpdateDMRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.UpdateDMRequestPartial();
-                result.UpdateGroupDMRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.UpdateGroupDMRequestPartial();
-                result.UpdateGuildChannelRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartial();
-                result.UpdateThreadRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartial();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(UpdateDMRequestPartial != null || UpdateGroupDMRequestPartial != null || UpdateGuildChannelRequestPartial != null || UpdateThreadRequestPartial != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(UpdateDMRequestPartial, UpdateGroupDMRequestPartial, UpdateGuildChannelRequestPartial, UpdateThreadRequestPartial);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateDMRequestPartial>(null, UpdateDMRequestPartial, UpdateGroupDMRequestPartial, UpdateGuildChannelRequestPartial, UpdateThreadRequestPartial);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithChannel_PatchResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse? GuildChannelResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse GuildChannelResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse? PrivateChannelResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse PrivateChannelResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse? PrivateGroupChannelResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse PrivateGroupChannelResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse? ThreadResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse ThreadResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder.WithChannel_PatchResponse();
-                if("GuildChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse();
-                }
-                else if("PrivateChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PrivateChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse();
-                }
-                else if("PrivateGroupChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PrivateGroupChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse();
-                }
-                else if("ThreadResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ThreadResponse = new global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildChannelResponse != null)
-                {
-                    return GuildChannelResponse.GetFieldDeserializers();
-                }
-                else if(PrivateChannelResponse != null)
-                {
-                    return PrivateChannelResponse.GetFieldDeserializers();
-                }
-                else if(PrivateGroupChannelResponse != null)
-                {
-                    return PrivateGroupChannelResponse.GetFieldDeserializers();
-                }
-                else if(ThreadResponse != null)
-                {
-                    return ThreadResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildChannelResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse>(null, GuildChannelResponse);
-                }
-                else if(PrivateChannelResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse>(null, PrivateChannelResponse);
-                }
-                else if(PrivateGroupChannelResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateGroupChannelResponse>(null, PrivateGroupChannelResponse);
-                }
-                else if(ThreadResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>(null, ThreadResponse);
-                }
-            }
         }
     }
 }

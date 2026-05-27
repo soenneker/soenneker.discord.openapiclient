@@ -25,18 +25,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The new_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NewValue { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse_new_value? NewValue { get; set; }
 #nullable restore
 #else
-        public UntypedNode NewValue { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse_new_value NewValue { get; set; }
 #endif
         /// <summary>The old_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OldValue { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse_old_value? OldValue { get; set; }
 #nullable restore
 #else
-        public UntypedNode OldValue { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse_old_value OldValue { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse"/> and sets the default values.
@@ -64,8 +64,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "key", n => { Key = n.GetStringValue(); } },
-                { "new_value", n => { NewValue = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "old_value", n => { OldValue = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "new_value", n => { NewValue = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse_new_value>(global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse_new_value.CreateFromDiscriminatorValue); } },
+                { "old_value", n => { OldValue = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse_old_value>(global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse_old_value.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,8 +76,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("key", Key);
-            writer.WriteObjectValue<UntypedNode>("new_value", NewValue);
-            writer.WriteObjectValue<UntypedNode>("old_value", OldValue);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse_new_value>("new_value", NewValue);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse_old_value>("old_value", OldValue);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

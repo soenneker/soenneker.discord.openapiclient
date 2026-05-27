@@ -43,13 +43,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The dm_permission property</summary>
         public bool? DmPermission { get; set; }
         /// <summary>The handler property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial.ApplicationCommandPatchRequestPartial_handler? Handler { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial.ApplicationCommandPatchRequestPartial_handler Handler { get; set; }
-#endif
+        public int? Handler { get; set; }
         /// <summary>The integration_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -112,7 +106,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_description_localizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_description_localizations.CreateFromDiscriminatorValue); } },
                 { "dm_permission", n => { DmPermission = n.GetBoolValue(); } },
-                { "handler", n => { Handler = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial.ApplicationCommandPatchRequestPartial_handler>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial.ApplicationCommandPatchRequestPartial_handler.CreateFromDiscriminatorValue); } },
+                { "handler", n => { Handler = n.GetIntValue(); } },
                 { "integration_types", n => { IntegrationTypes = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_name_localizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_name_localizations.CreateFromDiscriminatorValue); } },
@@ -131,87 +125,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_description_localizations>("description_localizations", DescriptionLocalizations);
             writer.WriteBoolValue("dm_permission", DmPermission);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial.ApplicationCommandPatchRequestPartial_handler>("handler", Handler);
+            writer.WriteIntValue("handler", Handler);
             writer.WriteCollectionOfPrimitiveValues<int?>("integration_types", IntegrationTypes);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_name_localizations>("name_localizations", NameLocalizations);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial.ApplicationCommandPatchRequestPartial_options>("options", Options);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_handlerMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationCommandPatchRequestPartial_handler : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler? ApplicationCommandHandler { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler ApplicationCommandHandler { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_handlerMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_handlerMember1? ApplicationCommandPatchRequestPartialHandlerMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_handlerMember1 ApplicationCommandPatchRequestPartialHandlerMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial.ApplicationCommandPatchRequestPartial_handler"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial.ApplicationCommandPatchRequestPartial_handler CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial.ApplicationCommandPatchRequestPartial_handler();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandHandler = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandPatchRequestPartialHandlerMember1 = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_handlerMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationCommandHandler != null)
-                {
-                    return ApplicationCommandHandler.GetFieldDeserializers();
-                }
-                else if(ApplicationCommandPatchRequestPartialHandlerMember1 != null)
-                {
-                    return ApplicationCommandPatchRequestPartialHandlerMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApplicationCommandHandler != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler>(null, ApplicationCommandHandler);
-                }
-                else if(ApplicationCommandPatchRequestPartialHandlerMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartial_handlerMember1>(null, ApplicationCommandPatchRequestPartialHandlerMember1);
-                }
-            }
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandBooleanOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandChannelOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandMentionableOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandNumberOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandRoleOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandStringOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandGroupOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOption"/>

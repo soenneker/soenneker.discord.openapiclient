@@ -43,20 +43,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The dm_permission property</summary>
         public bool? DmPermission { get; set; }
         /// <summary>The handler property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_handler? Handler { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_handler Handler { get; set; }
-#endif
+        public int? Handler { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_id? Id { get; set; }
+        public string? Id { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_id Id { get; set; }
+        public string Id { get; set; }
 #endif
         /// <summary>The integration_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,10 +87,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_type? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType_Wrapper? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_type Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType_Wrapper Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest"/> and sets the default values.
@@ -128,13 +122,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_description_localizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_description_localizations.CreateFromDiscriminatorValue); } },
                 { "dm_permission", n => { DmPermission = n.GetBoolValue(); } },
-                { "handler", n => { Handler = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_handler>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_handler.CreateFromDiscriminatorValue); } },
-                { "id", n => { Id = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_id>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_id.CreateFromDiscriminatorValue); } },
+                { "handler", n => { Handler = n.GetIntValue(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
                 { "integration_types", n => { IntegrationTypes = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_name_localizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_name_localizations.CreateFromDiscriminatorValue); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_options>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_options.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType_Wrapper.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -149,164 +143,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_description_localizations>("description_localizations", DescriptionLocalizations);
             writer.WriteBoolValue("dm_permission", DmPermission);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_handler>("handler", Handler);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_id>("id", Id);
+            writer.WriteIntValue("handler", Handler);
+            writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfPrimitiveValues<int?>("integration_types", IntegrationTypes);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_name_localizations>("name_localizations", NameLocalizations);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_options>("options", Options);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType_Wrapper>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_handlerMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationCommandUpdateRequest_handler : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler? ApplicationCommandHandler { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler ApplicationCommandHandler { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_handlerMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_handlerMember1? ApplicationCommandUpdateRequestHandlerMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_handlerMember1 ApplicationCommandUpdateRequestHandlerMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_handler"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_handler CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_handler();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandHandler = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandUpdateRequestHandlerMember1 = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_handlerMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationCommandHandler != null)
-                {
-                    return ApplicationCommandHandler.GetFieldDeserializers();
-                }
-                else if(ApplicationCommandUpdateRequestHandlerMember1 != null)
-                {
-                    return ApplicationCommandUpdateRequestHandlerMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApplicationCommandHandler != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler>(null, ApplicationCommandHandler);
-                }
-                else if(ApplicationCommandUpdateRequestHandlerMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_handlerMember1>(null, ApplicationCommandUpdateRequestHandlerMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationCommandUpdateRequest_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_idMember1? ApplicationCommandUpdateRequestIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_idMember1 ApplicationCommandUpdateRequestIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandUpdateRequestIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationCommandUpdateRequestIdMember1 != null)
-                {
-                    return ApplicationCommandUpdateRequestIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApplicationCommandUpdateRequestIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_idMember1>(null, ApplicationCommandUpdateRequestIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandBooleanOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandChannelOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandMentionableOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandNumberOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandRoleOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandStringOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandGroupOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOption"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOption"/>
@@ -560,81 +404,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 else if(ApplicationCommandUserOption != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOption>(null, ApplicationCommandUserOption);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_typeMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationCommandUpdateRequest_type : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType? ApplicationCommandType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType ApplicationCommandType { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_typeMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_typeMember1? ApplicationCommandUpdateRequestTypeMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_typeMember1 ApplicationCommandUpdateRequestTypeMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_type"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_type CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest.ApplicationCommandUpdateRequest_type();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandType = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandUpdateRequestTypeMember1 = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_typeMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationCommandType != null)
-                {
-                    return ApplicationCommandType.GetFieldDeserializers();
-                }
-                else if(ApplicationCommandUpdateRequestTypeMember1 != null)
-                {
-                    return ApplicationCommandUpdateRequestTypeMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApplicationCommandType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType>(null, ApplicationCommandType);
-                }
-                else if(ApplicationCommandUpdateRequestTypeMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUpdateRequest_typeMember1>(null, ApplicationCommandUpdateRequestTypeMember1);
                 }
             }
         }

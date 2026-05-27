@@ -46,17 +46,18 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item
         public WithWebhook_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhook_id}", rawUrl)
         {
         }
+        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -65,20 +66,20 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_GetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GetWebhook200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_GetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GetWebhook200?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_GetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GetWebhook200> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -87,9 +88,9 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_GetResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_GetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.GetWebhook200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.GetWebhook200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_PatchResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateWebhook200"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -97,11 +98,11 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_PatchResponse?> PatchAsync(global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.UpdateWebhook200?> PatchAsync(global::Soenneker.Discord.OpenApiClient.Models.UpdateWebhook body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_PatchResponse> PatchAsync(global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.UpdateWebhook200> PatchAsync(global::Soenneker.Discord.OpenApiClient.Models.UpdateWebhook body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -111,7 +112,7 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_PatchResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_PatchResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.UpdateWebhook200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.UpdateWebhook200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -150,11 +151,11 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.UpdateWebhook body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.UpdateWebhook body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -172,196 +173,6 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item
         public global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithWebhook_GetResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse? ApplicationIncomingWebhookResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse ApplicationIncomingWebhookResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse? ChannelFollowerWebhookResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse ChannelFollowerWebhookResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse? GuildIncomingWebhookResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse GuildIncomingWebhookResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_GetResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_GetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_GetResponse();
-                if("ApplicationIncomingWebhookResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationIncomingWebhookResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse();
-                }
-                else if("ChannelFollowerWebhookResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ChannelFollowerWebhookResponse = new global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse();
-                }
-                else if("GuildIncomingWebhookResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildIncomingWebhookResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationIncomingWebhookResponse != null)
-                {
-                    return ApplicationIncomingWebhookResponse.GetFieldDeserializers();
-                }
-                else if(ChannelFollowerWebhookResponse != null)
-                {
-                    return ChannelFollowerWebhookResponse.GetFieldDeserializers();
-                }
-                else if(GuildIncomingWebhookResponse != null)
-                {
-                    return GuildIncomingWebhookResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApplicationIncomingWebhookResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse>(null, ApplicationIncomingWebhookResponse);
-                }
-                else if(ChannelFollowerWebhookResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse>(null, ChannelFollowerWebhookResponse);
-                }
-                else if(GuildIncomingWebhookResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse>(null, GuildIncomingWebhookResponse);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithWebhook_PatchResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse? ApplicationIncomingWebhookResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse ApplicationIncomingWebhookResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse? ChannelFollowerWebhookResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse ChannelFollowerWebhookResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse? GuildIncomingWebhookResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse GuildIncomingWebhookResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_PatchResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_PatchResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder.WithWebhook_PatchResponse();
-                if("ApplicationIncomingWebhookResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationIncomingWebhookResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse();
-                }
-                else if("ChannelFollowerWebhookResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ChannelFollowerWebhookResponse = new global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse();
-                }
-                else if("GuildIncomingWebhookResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildIncomingWebhookResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationIncomingWebhookResponse != null)
-                {
-                    return ApplicationIncomingWebhookResponse.GetFieldDeserializers();
-                }
-                else if(ChannelFollowerWebhookResponse != null)
-                {
-                    return ChannelFollowerWebhookResponse.GetFieldDeserializers();
-                }
-                else if(GuildIncomingWebhookResponse != null)
-                {
-                    return GuildIncomingWebhookResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApplicationIncomingWebhookResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse>(null, ApplicationIncomingWebhookResponse);
-                }
-                else if(ChannelFollowerWebhookResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse>(null, ChannelFollowerWebhookResponse);
-                }
-                else if(GuildIncomingWebhookResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse>(null, GuildIncomingWebhookResponse);
-                }
-            }
         }
     }
 }

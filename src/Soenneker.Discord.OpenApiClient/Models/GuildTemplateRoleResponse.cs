@@ -19,10 +19,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The colors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse.GuildTemplateRoleResponse_colors? Colors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse? Colors { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse.GuildTemplateRoleResponse_colors Colors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse Colors { get; set; }
 #endif
         /// <summary>The hoist property</summary>
         public bool? Hoist { get; set; }
@@ -88,7 +88,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "color", n => { Color = n.GetIntValue(); } },
-                { "colors", n => { Colors = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse.GuildTemplateRoleResponse_colors>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse.GuildTemplateRoleResponse_colors.CreateFromDiscriminatorValue); } },
+                { "colors", n => { Colors = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse.CreateFromDiscriminatorValue); } },
                 { "hoist", n => { Hoist = n.GetBoolValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("color", Color);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse.GuildTemplateRoleResponse_colors>("colors", Colors);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse>("colors", Colors);
             writer.WriteBoolValue("hoist", Hoist);
             writer.WriteStringValue("icon", Icon);
             writer.WriteIntValue("id", Id);
@@ -115,81 +115,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("permissions", Permissions);
             writer.WriteStringValue("unicode_emoji", UnicodeEmoji);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse_colorsMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildTemplateRoleResponse_colors : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse? GuildTemplateRoleColorsResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse GuildTemplateRoleColorsResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse_colorsMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse_colorsMember1? GuildTemplateRoleResponseColorsMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse_colorsMember1 GuildTemplateRoleResponseColorsMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse.GuildTemplateRoleResponse_colors"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse.GuildTemplateRoleResponse_colors CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse.GuildTemplateRoleResponse_colors();
-                if("GuildTemplateRoleColorsResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildTemplateRoleColorsResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildTemplateRoleResponseColorsMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse_colorsMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildTemplateRoleColorsResponse != null)
-                {
-                    return GuildTemplateRoleColorsResponse.GetFieldDeserializers();
-                }
-                else if(GuildTemplateRoleResponseColorsMember1 != null)
-                {
-                    return GuildTemplateRoleResponseColorsMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildTemplateRoleColorsResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse>(null, GuildTemplateRoleColorsResponse);
-                }
-                else if(GuildTemplateRoleResponseColorsMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse_colorsMember1>(null, GuildTemplateRoleResponseColorsMember1);
-                }
-            }
         }
     }
 }

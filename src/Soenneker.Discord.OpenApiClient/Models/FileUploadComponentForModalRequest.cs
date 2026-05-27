@@ -31,7 +31,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The required property</summary>
         public bool? Required { get; set; }
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.FileUploadComponentForModalRequest_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.FileUploadComponentForModalRequest_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.FileUploadComponentForModalRequest"/> and sets the default values.
         /// </summary>
@@ -62,7 +68,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "max_values", n => { MaxValues = n.GetIntValue(); } },
                 { "min_values", n => { MinValues = n.GetIntValue(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FileUploadComponentForModalRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.FileUploadComponentForModalRequest_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,7 +83,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("max_values", MaxValues);
             writer.WriteIntValue("min_values", MinValues);
             writer.WriteBoolValue("required", Required);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FileUploadComponentForModalRequest_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

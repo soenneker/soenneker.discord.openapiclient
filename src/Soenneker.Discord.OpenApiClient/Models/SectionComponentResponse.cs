@@ -33,7 +33,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse"/> and sets the default values.
         /// </summary>
@@ -62,7 +68,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "accessory", n => { Accessory = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse.SectionComponentResponse_accessory>(global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse.SectionComponentResponse_accessory.CreateFromDiscriminatorValue); } },
                 { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse>(global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse.SectionComponentResponse_accessory>("accessory", Accessory);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse>("components", Components);
             writer.WriteIntValue("id", Id);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>

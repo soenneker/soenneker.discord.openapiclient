@@ -37,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The spoiler property</summary>
         public bool? Spoiler { get; set; }
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse"/> and sets the default values.
         /// </summary>
@@ -68,7 +74,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetIntValue(); } },
                 { "spoiler", n => { Spoiler = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -83,7 +89,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("size", Size);
             writer.WriteBoolValue("spoiler", Spoiler);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

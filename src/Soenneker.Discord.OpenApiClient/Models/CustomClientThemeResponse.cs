@@ -17,7 +17,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The base_mix property</summary>
         public int? BaseMix { get; set; }
         /// <summary>The base_theme property</summary>
-        public int? BaseTheme { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme? BaseTheme { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme BaseTheme { get; set; }
+#endif
         /// <summary>The colors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,7 +60,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "base_mix", n => { BaseMix = n.GetIntValue(); } },
-                { "base_theme", n => { BaseTheme = n.GetIntValue(); } },
+                { "base_theme", n => { BaseTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme>(global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme.CreateFromDiscriminatorValue); } },
                 { "colors", n => { Colors = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "gradient_angle", n => { GradientAngle = n.GetIntValue(); } },
             };
@@ -67,7 +73,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("base_mix", BaseMix);
-            writer.WriteIntValue("base_theme", BaseTheme);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme>("base_theme", BaseTheme);
             writer.WriteCollectionOfPrimitiveValues<string>("colors", Colors);
             writer.WriteIntValue("gradient_angle", GradientAngle);
             writer.WriteAdditionalData(AdditionalData);

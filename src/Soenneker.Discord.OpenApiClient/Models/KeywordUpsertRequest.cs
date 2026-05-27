@@ -25,7 +25,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The enabled property</summary>
         public bool? Enabled { get; set; }
         /// <summary>The event_type property</summary>
-        public int? EventType { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType? EventType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType EventType { get; set; }
+#endif
         /// <summary>The exempt_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,13 +59,19 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The trigger_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest.KeywordUpsertRequest_trigger_metadata? TriggerMetadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata? TriggerMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest.KeywordUpsertRequest_trigger_metadata TriggerMetadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata TriggerMetadata { get; set; }
 #endif
         /// <summary>The trigger_type property</summary>
-        public int? TriggerType { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest_trigger_type? TriggerType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest_trigger_type TriggerType { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest"/> and sets the default values.
         /// </summary>
@@ -87,12 +99,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest.KeywordUpsertRequest_actions>(global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest.KeywordUpsertRequest_actions.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "event_type", n => { EventType = n.GetIntValue(); } },
+                { "event_type", n => { EventType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType>(global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType.CreateFromDiscriminatorValue); } },
                 { "exempt_channels", n => { ExemptChannels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "exempt_roles", n => { ExemptRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "trigger_metadata", n => { TriggerMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest.KeywordUpsertRequest_trigger_metadata>(global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest.KeywordUpsertRequest_trigger_metadata.CreateFromDiscriminatorValue); } },
-                { "trigger_type", n => { TriggerType = n.GetIntValue(); } },
+                { "trigger_metadata", n => { TriggerMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata>(global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata.CreateFromDiscriminatorValue); } },
+                { "trigger_type", n => { TriggerType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest_trigger_type>(global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest_trigger_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -104,12 +116,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest.KeywordUpsertRequest_actions>("actions", Actions);
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteIntValue("event_type", EventType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType>("event_type", EventType);
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_channels", ExemptChannels);
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_roles", ExemptRoles);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest.KeywordUpsertRequest_trigger_metadata>("trigger_metadata", TriggerMetadata);
-            writer.WriteIntValue("trigger_type", TriggerType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata>("trigger_metadata", TriggerMetadata);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest_trigger_type>("trigger_type", TriggerType);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
@@ -224,81 +236,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 else if(UserCommunicationDisabledAction != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledAction>(null, UserCommunicationDisabledAction);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest_trigger_metadataMember1"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class KeywordUpsertRequest_trigger_metadata : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata? KeywordTriggerMetadata { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata KeywordTriggerMetadata { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest_trigger_metadataMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest_trigger_metadataMember1? KeywordUpsertRequestTriggerMetadataMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest_trigger_metadataMember1 KeywordUpsertRequestTriggerMetadataMember1 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest.KeywordUpsertRequest_trigger_metadata"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest.KeywordUpsertRequest_trigger_metadata CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest.KeywordUpsertRequest_trigger_metadata();
-                if("KeywordTriggerMetadata".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.KeywordTriggerMetadata = new global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.KeywordUpsertRequestTriggerMetadataMember1 = new global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest_trigger_metadataMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(KeywordTriggerMetadata != null)
-                {
-                    return KeywordTriggerMetadata.GetFieldDeserializers();
-                }
-                else if(KeywordUpsertRequestTriggerMetadataMember1 != null)
-                {
-                    return KeywordUpsertRequestTriggerMetadataMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(KeywordTriggerMetadata != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata>(null, KeywordTriggerMetadata);
-                }
-                else if(KeywordUpsertRequestTriggerMetadataMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequest_trigger_metadataMember1>(null, KeywordUpsertRequestTriggerMetadataMember1);
                 }
             }
         }

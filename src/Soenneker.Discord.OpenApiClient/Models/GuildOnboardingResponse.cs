@@ -33,7 +33,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string GuildId { get; set; }
 #endif
         /// <summary>The mode property</summary>
-        public int? Mode { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode? Mode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode Mode { get; set; }
+#endif
         /// <summary>The prompts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,7 +76,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "default_channel_ids", n => { DefaultChannelIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
-                { "mode", n => { Mode = n.GetIntValue(); } },
+                { "mode", n => { Mode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode>(global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode.CreateFromDiscriminatorValue); } },
                 { "prompts", n => { Prompts = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptResponse>(global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptResponse.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -84,7 +90,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("default_channel_ids", DefaultChannelIds);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("guild_id", GuildId);
-            writer.WriteIntValue("mode", Mode);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode>("mode", Mode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptResponse>("prompts", Prompts);
             writer.WriteAdditionalData(AdditionalData);
         }

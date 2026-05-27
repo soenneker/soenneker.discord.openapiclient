@@ -47,7 +47,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public List<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse> Recipients { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ChannelTypes? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ChannelTypes Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse"/> and sets the default values.
         /// </summary>
@@ -77,7 +83,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse>(global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelTypes>(global::Soenneker.Discord.OpenApiClient.Models.ChannelTypes.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -91,7 +97,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse>("recipients", Recipients);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelTypes>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,13 +17,19 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionMetadataResponse? Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse_metadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionMetadataResponse Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse_metadata Metadata { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse"/> and sets the default values.
         /// </summary>
@@ -49,8 +55,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionMetadataResponse>(global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionMetadataResponse.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse_metadata>(global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse_metadata.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -60,8 +66,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionMetadataResponse>("metadata", Metadata);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

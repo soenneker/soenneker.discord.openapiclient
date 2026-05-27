@@ -46,18 +46,18 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations
         public IntegrationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/integrations", rawUrl)
         {
         }
-        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.Integrations&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.ListGuildIntegrations200&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.Integrations>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.ListGuildIntegrations200>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.Integrations>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.ListGuildIntegrations200>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -66,7 +66,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.Integrations>(requestInfo, global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.Integrations.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.ListGuildIntegrations200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.ListGuildIntegrations200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
@@ -98,7 +98,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations
         /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildSubscriptionIntegrationResponse"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Integrations : IComposedTypeWrapper, IParsable
+        public partial class ListGuildIntegrations200 : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,13 +127,13 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.Integrations"/></returns>
+            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.ListGuildIntegrations200"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.Integrations CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.ListGuildIntegrations200 CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.Integrations();
+                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Integrations.IntegrationsRequestBuilder.ListGuildIntegrations200();
                 if("DiscordIntegrationResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.DiscordIntegrationResponse = new global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponse();

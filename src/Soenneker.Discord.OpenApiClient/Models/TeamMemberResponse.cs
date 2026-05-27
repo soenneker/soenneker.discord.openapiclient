@@ -15,7 +15,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The membership_state property</summary>
-        public int? MembershipState { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.TeamMembershipStates? MembershipState { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.TeamMembershipStates MembershipState { get; set; }
+#endif
         /// <summary>The permissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -27,10 +33,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The role property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Role { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.TeamMemberRoles? Role { get; set; }
 #nullable restore
 #else
-        public string Role { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.TeamMemberRoles Role { get; set; }
 #endif
         /// <summary>The team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,9 +79,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "membership_state", n => { MembershipState = n.GetIntValue(); } },
+                { "membership_state", n => { MembershipState = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamMembershipStates>(global::Soenneker.Discord.OpenApiClient.Models.TeamMembershipStates.CreateFromDiscriminatorValue); } },
                 { "permissions", n => { Permissions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "role", n => { Role = n.GetStringValue(); } },
+                { "role", n => { Role = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamMemberRoles>(global::Soenneker.Discord.OpenApiClient.Models.TeamMemberRoles.CreateFromDiscriminatorValue); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
             };
@@ -87,9 +93,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("membership_state", MembershipState);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamMembershipStates>("membership_state", MembershipState);
             writer.WriteCollectionOfPrimitiveValues<string>("permissions", Permissions);
-            writer.WriteStringValue("role", Role);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamMemberRoles>("role", Role);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
             writer.WriteAdditionalData(AdditionalData);

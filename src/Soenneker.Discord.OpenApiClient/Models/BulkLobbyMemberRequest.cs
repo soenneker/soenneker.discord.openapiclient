@@ -15,13 +15,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The flags property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest.BulkLobbyMemberRequest_flags? Flags { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest.BulkLobbyMemberRequest_flags Flags { get; set; }
-#endif
+        public int? Flags { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,7 +59,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flags", n => { Flags = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest.BulkLobbyMemberRequest_flags>(global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest.BulkLobbyMemberRequest_flags.CreateFromDiscriminatorValue); } },
+                { "flags", n => { Flags = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_metadata>(global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_metadata.CreateFromDiscriminatorValue); } },
                 { "remove_member", n => { RemoveMember = n.GetBoolValue(); } },
@@ -78,76 +72,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest.BulkLobbyMemberRequest_flags>("flags", Flags);
+            writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_metadata>("metadata", Metadata);
             writer.WriteBoolValue("remove_member", RemoveMember);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_flagsMember1"/>, <see cref="int"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BulkLobbyMemberRequest_flags : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_flagsMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_flagsMember1? BulkLobbyMemberRequestFlagsMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_flagsMember1 BulkLobbyMemberRequestFlagsMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="int"/></summary>
-            public int? Integer { get; set; }
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest.BulkLobbyMemberRequest_flags"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest.BulkLobbyMemberRequest_flags CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest.BulkLobbyMemberRequest_flags();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.BulkLobbyMemberRequestFlagsMember1 = new global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_flagsMember1();
-                }
-                else if(parseNode.GetIntValue() is int integerValue)
-                {
-                    result.Integer = integerValue;
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BulkLobbyMemberRequestFlagsMember1 != null)
-                {
-                    return BulkLobbyMemberRequestFlagsMember1.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(BulkLobbyMemberRequestFlagsMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_flagsMember1>(null, BulkLobbyMemberRequestFlagsMember1);
-                }
-                else if(Integer != null)
-                {
-                    writer.WriteIntValue(null, Integer);
-                }
-            }
         }
     }
 }

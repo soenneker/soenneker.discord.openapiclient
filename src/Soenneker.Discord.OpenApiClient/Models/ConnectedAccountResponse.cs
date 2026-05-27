@@ -49,15 +49,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProviders? Type { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProviders Type { get; set; }
 #endif
         /// <summary>The verified property</summary>
         public bool? Verified { get; set; }
         /// <summary>The visibility property</summary>
-        public int? Visibility { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountVisibility? Visibility { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountVisibility Visibility { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountResponse"/> and sets the default values.
         /// </summary>
@@ -90,9 +96,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "revoked", n => { Revoked = n.GetBoolValue(); } },
                 { "show_activity", n => { ShowActivity = n.GetBoolValue(); } },
                 { "two_way_link", n => { TwoWayLink = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProviders>(global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProviders.CreateFromDiscriminatorValue); } },
                 { "verified", n => { Verified = n.GetBoolValue(); } },
-                { "visibility", n => { Visibility = n.GetIntValue(); } },
+                { "visibility", n => { Visibility = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountVisibility>(global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountVisibility.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -109,9 +115,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("revoked", Revoked);
             writer.WriteBoolValue("show_activity", ShowActivity);
             writer.WriteBoolValue("two_way_link", TwoWayLink);
-            writer.WriteStringValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProviders>("type", Type);
             writer.WriteBoolValue("verified", Verified);
-            writer.WriteIntValue("visibility", Visibility);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountVisibility>("visibility", Visibility);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

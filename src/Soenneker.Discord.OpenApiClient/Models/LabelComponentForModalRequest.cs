@@ -41,7 +41,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Label { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.LabelComponentForModalRequest_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.LabelComponentForModalRequest_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.LabelComponentForModalRequest"/> and sets the default values.
         /// </summary>
@@ -71,7 +77,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LabelComponentForModalRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.LabelComponentForModalRequest_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,7 +91,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("label", Label);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LabelComponentForModalRequest_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>

@@ -33,18 +33,18 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks
         public WebhooksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/webhooks", rawUrl)
         {
         }
-        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.Webhooks&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.ListChannelWebhooks200&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.Webhooks>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.ListChannelWebhooks200>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.Webhooks>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.ListChannelWebhooks200>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -53,7 +53,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.Webhooks>(requestInfo, global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.Webhooks.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.ListChannelWebhooks200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.ListChannelWebhooks200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse"/></returns>
@@ -64,11 +64,11 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse?> PostAsync(global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse?> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateWebhook body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse> PostAsync(global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateWebhook body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -101,11 +101,11 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateWebhook body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateWebhook body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -128,7 +128,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks
         /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Webhooks : IComposedTypeWrapper, IParsable
+        public partial class ListChannelWebhooks200 : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -157,13 +157,13 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.Webhooks"/></returns>
+            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.ListChannelWebhooks200"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.Webhooks CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.ListChannelWebhooks200 CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.Webhooks();
+                var result = new global::Soenneker.Discord.OpenApiClient.Channels.Item.Webhooks.WebhooksRequestBuilder.ListChannelWebhooks200();
                 if("ApplicationIncomingWebhookResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.ApplicationIncomingWebhookResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse();

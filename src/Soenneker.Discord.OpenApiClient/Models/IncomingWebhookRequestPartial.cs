@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The allowed_mentions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_allowed_mentions? AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? AllowedMentions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_allowed_mentions AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest AllowedMentions { get; set; }
 #endif
         /// <summary>The applied_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,10 +75,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The poll property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_poll? Poll { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest? Poll { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_poll Poll { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest Poll { get; set; }
 #endif
         /// <summary>The thread_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,7 +123,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_allowed_mentions>(global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_allowed_mentions.CreateFromDiscriminatorValue); } },
+                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest.CreateFromDiscriminatorValue); } },
                 { "applied_tags", n => { AppliedTags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
@@ -131,7 +131,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "embeds", n => { Embeds = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbed.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
-                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_poll>(global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_poll.CreateFromDiscriminatorValue); } },
+                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.CreateFromDiscriminatorValue); } },
                 { "thread_name", n => { ThreadName = n.GetStringValue(); } },
                 { "tts", n => { Tts = n.GetBoolValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
@@ -144,7 +144,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_allowed_mentions>("allowed_mentions", AllowedMentions);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>("allowed_mentions", AllowedMentions);
             writer.WriteCollectionOfPrimitiveValues<string>("applied_tags", AppliedTags);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>("attachments", Attachments);
             writer.WriteStringValue("avatar_url", AvatarUrl);
@@ -152,86 +152,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("content", Content);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>("embeds", Embeds);
             writer.WriteIntValue("flags", Flags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_poll>("poll", Poll);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>("poll", Poll);
             writer.WriteStringValue("thread_name", ThreadName);
             writer.WriteBoolValue("tts", Tts);
             writer.WriteStringValue("username", Username);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_allowed_mentionsMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IncomingWebhookRequestPartial_allowed_mentions : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_allowed_mentionsMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_allowed_mentionsMember1? IncomingWebhookRequestPartialAllowedMentionsMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_allowed_mentionsMember1 IncomingWebhookRequestPartialAllowedMentionsMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? MessageAllowedMentionsRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest MessageAllowedMentionsRequest { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_allowed_mentions"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_allowed_mentions CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_allowed_mentions();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.IncomingWebhookRequestPartialAllowedMentionsMember1 = new global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_allowed_mentionsMember1();
-                }
-                else if("MessageAllowedMentionsRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MessageAllowedMentionsRequest = new global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(IncomingWebhookRequestPartialAllowedMentionsMember1 != null)
-                {
-                    return IncomingWebhookRequestPartialAllowedMentionsMember1.GetFieldDeserializers();
-                }
-                else if(MessageAllowedMentionsRequest != null)
-                {
-                    return MessageAllowedMentionsRequest.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(IncomingWebhookRequestPartialAllowedMentionsMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_allowed_mentionsMember1>(null, IncomingWebhookRequestPartialAllowedMentionsMember1);
-                }
-                else if(MessageAllowedMentionsRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>(null, MessageAllowedMentionsRequest);
-                }
-            }
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.FileComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SectionComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentForMessageRequest"/>
@@ -405,81 +330,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 else if(TextDisplayComponentForMessageRequest != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentForMessageRequest>(null, TextDisplayComponentForMessageRequest);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_pollMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IncomingWebhookRequestPartial_poll : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_pollMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_pollMember1? IncomingWebhookRequestPartialPollMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_pollMember1 IncomingWebhookRequestPartialPollMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest? PollCreateRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest PollCreateRequest { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_poll"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_poll CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial.IncomingWebhookRequestPartial_poll();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.IncomingWebhookRequestPartialPollMember1 = new global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_pollMember1();
-                }
-                else if("PollCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.PollCreateRequest = new global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(IncomingWebhookRequestPartialPollMember1 != null)
-                {
-                    return IncomingWebhookRequestPartialPollMember1.GetFieldDeserializers();
-                }
-                else if(PollCreateRequest != null)
-                {
-                    return PollCreateRequest.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(IncomingWebhookRequestPartialPollMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartial_pollMember1>(null, IncomingWebhookRequestPartialPollMember1);
-                }
-                else if(PollCreateRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>(null, PollCreateRequest);
                 }
             }
         }

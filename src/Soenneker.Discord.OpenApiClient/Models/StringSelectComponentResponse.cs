@@ -47,7 +47,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Placeholder { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentResponse_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentResponse"/> and sets the default values.
         /// </summary>
@@ -80,7 +86,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "min_values", n => { MinValues = n.GetIntValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.StringSelectOptionResponse>(global::Soenneker.Discord.OpenApiClient.Models.StringSelectOptionResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentResponse_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -97,7 +103,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("min_values", MinValues);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.StringSelectOptionResponse>("options", Options);
             writer.WriteStringValue("placeholder", Placeholder);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentResponse_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

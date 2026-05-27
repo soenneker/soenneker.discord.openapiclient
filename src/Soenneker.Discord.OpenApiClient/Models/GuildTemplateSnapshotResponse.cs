@@ -17,13 +17,19 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The afk_channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_afk_channel_id? AfkChannelId { get; set; }
+        public string? AfkChannelId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_afk_channel_id AfkChannelId { get; set; }
+        public string AfkChannelId { get; set; }
 #endif
         /// <summary>The afk_timeout property</summary>
-        public int? AfkTimeout { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts? AfkTimeout { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts AfkTimeout { get; set; }
+#endif
         /// <summary>The channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -33,7 +39,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public List<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponse> Channels { get; set; }
 #endif
         /// <summary>The default_message_notifications property</summary>
-        public int? DefaultMessageNotifications { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings? DefaultMessageNotifications { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings DefaultMessageNotifications { get; set; }
+#endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -43,7 +55,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The explicit_content_filter property</summary>
-        public int? ExplicitContentFilter { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes? ExplicitContentFilter { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes ExplicitContentFilter { get; set; }
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,10 +73,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The preferred_locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreferredLocale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum? PreferredLocale { get; set; }
 #nullable restore
 #else
-        public string PreferredLocale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum PreferredLocale { get; set; }
 #endif
         /// <summary>The region property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,13 +99,19 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The system_channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_system_channel_id? SystemChannelId { get; set; }
+        public string? SystemChannelId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_system_channel_id SystemChannelId { get; set; }
+        public string SystemChannelId { get; set; }
 #endif
         /// <summary>The verification_level property</summary>
-        public int? VerificationLevel { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels? VerificationLevel { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels VerificationLevel { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse"/> and sets the default values.
         /// </summary>
@@ -113,19 +137,19 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "afk_channel_id", n => { AfkChannelId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_afk_channel_id>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_afk_channel_id.CreateFromDiscriminatorValue); } },
-                { "afk_timeout", n => { AfkTimeout = n.GetIntValue(); } },
+                { "afk_channel_id", n => { AfkChannelId = n.GetStringValue(); } },
+                { "afk_timeout", n => { AfkTimeout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts>(global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts.CreateFromDiscriminatorValue); } },
                 { "channels", n => { Channels = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "default_message_notifications", n => { DefaultMessageNotifications = n.GetIntValue(); } },
+                { "default_message_notifications", n => { DefaultMessageNotifications = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings>(global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetIntValue(); } },
+                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes>(global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "preferred_locale", n => { PreferredLocale = n.GetStringValue(); } },
+                { "preferred_locale", n => { PreferredLocale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>(global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum.CreateFromDiscriminatorValue); } },
                 { "region", n => { Region = n.GetStringValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "system_channel_flags", n => { SystemChannelFlags = n.GetIntValue(); } },
-                { "system_channel_id", n => { SystemChannelId = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_system_channel_id>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_system_channel_id.CreateFromDiscriminatorValue); } },
-                { "verification_level", n => { VerificationLevel = n.GetIntValue(); } },
+                { "system_channel_id", n => { SystemChannelId = n.GetStringValue(); } },
+                { "verification_level", n => { VerificationLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels>(global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -135,170 +159,20 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_afk_channel_id>("afk_channel_id", AfkChannelId);
-            writer.WriteIntValue("afk_timeout", AfkTimeout);
+            writer.WriteStringValue("afk_channel_id", AfkChannelId);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts>("afk_timeout", AfkTimeout);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponse>("channels", Channels);
-            writer.WriteIntValue("default_message_notifications", DefaultMessageNotifications);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings>("default_message_notifications", DefaultMessageNotifications);
             writer.WriteStringValue("description", Description);
-            writer.WriteIntValue("explicit_content_filter", ExplicitContentFilter);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes>("explicit_content_filter", ExplicitContentFilter);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("preferred_locale", PreferredLocale);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>("preferred_locale", PreferredLocale);
             writer.WriteStringValue("region", Region);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse>("roles", Roles);
             writer.WriteIntValue("system_channel_flags", SystemChannelFlags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_system_channel_id>("system_channel_id", SystemChannelId);
-            writer.WriteIntValue("verification_level", VerificationLevel);
+            writer.WriteStringValue("system_channel_id", SystemChannelId);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels>("verification_level", VerificationLevel);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_afk_channel_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildTemplateSnapshotResponse_afk_channel_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_afk_channel_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_afk_channel_idMember1? GuildTemplateSnapshotResponseAfkChannelIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_afk_channel_idMember1 GuildTemplateSnapshotResponseAfkChannelIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_afk_channel_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_afk_channel_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_afk_channel_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildTemplateSnapshotResponseAfkChannelIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_afk_channel_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildTemplateSnapshotResponseAfkChannelIdMember1 != null)
-                {
-                    return GuildTemplateSnapshotResponseAfkChannelIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildTemplateSnapshotResponseAfkChannelIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_afk_channel_idMember1>(null, GuildTemplateSnapshotResponseAfkChannelIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_system_channel_idMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class GuildTemplateSnapshotResponse_system_channel_id : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_system_channel_idMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_system_channel_idMember1? GuildTemplateSnapshotResponseSystemChannelIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_system_channel_idMember1 GuildTemplateSnapshotResponseSystemChannelIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType? SnowflakeType { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType SnowflakeType { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_system_channel_id"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_system_channel_id CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse.GuildTemplateSnapshotResponse_system_channel_id();
-                if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildTemplateSnapshotResponseSystemChannelIdMember1 = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_system_channel_idMember1();
-                }
-                else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SnowflakeType = new global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildTemplateSnapshotResponseSystemChannelIdMember1 != null)
-                {
-                    return GuildTemplateSnapshotResponseSystemChannelIdMember1.GetFieldDeserializers();
-                }
-                else if(SnowflakeType != null)
-                {
-                    return SnowflakeType.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildTemplateSnapshotResponseSystemChannelIdMember1 != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse_system_channel_idMember1>(null, GuildTemplateSnapshotResponseSystemChannelIdMember1);
-                }
-                else if(SnowflakeType != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SnowflakeType>(null, SnowflakeType);
-                }
-            }
         }
     }
 }

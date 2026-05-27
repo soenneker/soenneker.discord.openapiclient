@@ -123,7 +123,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse.ApplicationCommandResponse_options> Options { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType Type { get; set; }
+#endif
         /// <summary>The version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -172,7 +178,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "name_localized", n => { NameLocalized = n.GetStringValue(); } },
                 { "nsfw", n => { Nsfw = n.GetBoolValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse.ApplicationCommandResponse_options>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse.ApplicationCommandResponse_options.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType.CreateFromDiscriminatorValue); } },
                 { "version", n => { Version = n.GetStringValue(); } },
             };
         }
@@ -198,7 +204,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("name_localized", NameLocalized);
             writer.WriteBoolValue("nsfw", Nsfw);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse.ApplicationCommandResponse_options>("options", Options);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType>("type", Type);
             writer.WriteStringValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }

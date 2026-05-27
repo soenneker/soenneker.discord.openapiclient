@@ -47,7 +47,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Placeholder { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentResponse_type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentResponse_type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentResponse"/> and sets the default values.
         /// </summary>
@@ -80,7 +86,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "max_values", n => { MaxValues = n.GetIntValue(); } },
                 { "min_values", n => { MinValues = n.GetIntValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentResponse_type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -97,7 +103,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("max_values", MaxValues);
             writer.WriteIntValue("min_values", MinValues);
             writer.WriteStringValue("placeholder", Placeholder);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentResponse_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

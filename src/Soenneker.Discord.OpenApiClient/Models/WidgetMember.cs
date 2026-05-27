@@ -51,10 +51,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The discriminator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Discriminator { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.WidgetUserDiscriminator? Discriminator { get; set; }
 #nullable restore
 #else
-        public string Discriminator { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.WidgetUserDiscriminator Discriminator { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,7 +118,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "deaf", n => { Deaf = n.GetBoolValue(); } },
-                { "discriminator", n => { Discriminator = n.GetStringValue(); } },
+                { "discriminator", n => { Discriminator = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.WidgetUserDiscriminator>(global::Soenneker.Discord.OpenApiClient.Models.WidgetUserDiscriminator.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "mute", n => { Mute = n.GetBoolValue(); } },
                 { "self_deaf", n => { SelfDeaf = n.GetBoolValue(); } },
@@ -140,7 +140,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("avatar_url", AvatarUrl);
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteBoolValue("deaf", Deaf);
-            writer.WriteStringValue("discriminator", Discriminator);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.WidgetUserDiscriminator>("discriminator", Discriminator);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("mute", Mute);
             writer.WriteBoolValue("self_deaf", SelfDeaf);
