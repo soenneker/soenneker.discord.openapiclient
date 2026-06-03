@@ -28,7 +28,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithGuild_scheduled_event_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}{?with_user_count*}", pathParameters)
+        public WithGuild_scheduled_event_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithGuild_scheduled_event_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}{?with_user_count*}", rawUrl)
+        public WithGuild_scheduled_event_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}", rawUrl)
         {
         }
         /// <returns>A <see cref="Stream"/></returns>
