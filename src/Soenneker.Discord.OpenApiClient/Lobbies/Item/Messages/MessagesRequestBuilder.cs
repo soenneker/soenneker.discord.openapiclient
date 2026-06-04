@@ -104,7 +104,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Messages
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Lobbies.Item.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/lobbies/{lobby_id}/messages{?limit*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -122,7 +122,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Messages
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/lobbies/{lobby_id}/messages", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

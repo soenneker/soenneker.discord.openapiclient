@@ -146,7 +146,7 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Messages.Original
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PATCH, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PATCH, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/messages/@original{?thread_id*,with_components*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

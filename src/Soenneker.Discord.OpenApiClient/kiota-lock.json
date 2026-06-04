@@ -2,7 +2,7 @@
   "descriptionHash": "5942F463328C378D1E016B478F84E14945F5465465CAF735E6F419A6F32AA27DFF2D2D8C4F590F53DE1DA28A057CE8E5524033670646CF68223023C1D9E663B3",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.32.0",
+  "kiotaVersion": "1.32.1",
   "clientClassName": "DiscordOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Discord.OpenApiClient",

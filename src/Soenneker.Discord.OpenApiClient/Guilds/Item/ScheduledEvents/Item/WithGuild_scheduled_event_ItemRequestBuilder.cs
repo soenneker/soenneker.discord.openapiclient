@@ -134,7 +134,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.WithGuild_scheduled_event_ItemRequestBuilder.WithGuild_scheduled_event_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}{?with_user_count*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -135,7 +135,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands.CommandsRequestBuilder.CommandsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/applications/{application_id}/guilds/{guild_id}/commands{?with_localizations*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -90,7 +90,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Prune
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Prune.PruneRequestBuilder.PruneRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/guilds/{guild_id}/prune{?days*,include_roles*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -108,7 +108,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Prune
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/guilds/{guild_id}/prune", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

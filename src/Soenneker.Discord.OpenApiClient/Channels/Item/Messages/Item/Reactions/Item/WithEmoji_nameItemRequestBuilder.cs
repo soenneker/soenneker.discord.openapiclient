@@ -108,7 +108,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/channels/{channel_id}/messages/{message_id}/reactions/{emoji_name}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -124,7 +124,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.Item.WithEmoji_nameItemRequestBuilder.WithEmoji_nameItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/channels/{channel_id}/messages/{message_id}/reactions/{emoji_name}{?after*,limit*,type*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

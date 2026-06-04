@@ -104,7 +104,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.EntitlementsRequestBuilder.EntitlementsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/applications/{application_id}/entitlements{?after*,before*,exclude_deleted*,exclude_ended*,guild_id*,limit*,only_active*,sku_ids*,user_id*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -122,7 +122,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/applications/{application_id}/entitlements", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

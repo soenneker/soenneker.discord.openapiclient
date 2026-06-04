@@ -126,7 +126,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers.Item.WithUser_ItemRequestBuilder.WithUser_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/channels/{channel_id}/thread-members/{user_id}{?with_member*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
