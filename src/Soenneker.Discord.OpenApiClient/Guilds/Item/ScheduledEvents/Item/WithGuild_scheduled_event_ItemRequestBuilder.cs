@@ -28,7 +28,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithGuild_scheduled_event_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}", pathParameters)
+        public WithGuild_scheduled_event_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}{?with_user_count*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithGuild_scheduled_event_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}", rawUrl)
+        public WithGuild_scheduled_event_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}{?with_user_count*}", rawUrl)
         {
         }
         /// <returns>A <see cref="Stream"/></returns>
@@ -134,7 +134,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.WithGuild_scheduled_event_ItemRequestBuilder.WithGuild_scheduled_event_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}{?with_user_count*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

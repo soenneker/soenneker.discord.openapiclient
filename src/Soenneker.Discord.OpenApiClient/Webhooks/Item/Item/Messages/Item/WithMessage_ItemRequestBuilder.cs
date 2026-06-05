@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Messages.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithMessage_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/messages/{message_id}{?thread_id*}", pathParameters)
+        public WithMessage_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/messages/{message_id}{?thread_id*,with_components*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Messages.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithMessage_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/messages/{message_id}{?thread_id*}", rawUrl)
+        public WithMessage_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/messages/{message_id}{?thread_id*,with_components*}", rawUrl)
         {
         }
         /// <returns>A <see cref="Stream"/></returns>
@@ -146,7 +146,7 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Messages.Item
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PATCH, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/messages/{message_id}{?thread_id*,with_components*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.PATCH, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
