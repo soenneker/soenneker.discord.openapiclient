@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Requests
 {
     /// <summary>
-    /// Builds and executes requests for operations under \guilds\{guild_id}\requests
+    /// Builds and executes requests for operations under \guilds\{guildId}\requests
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RequestsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.guilds.item.requests.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Requests.Item.WithRequest_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Requests.Item.WithRequest_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Requests.Item.WithRequestItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Requests.Item.WithRequestItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("request_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Requests.Item.WithRequest_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("requestId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Requests.Item.WithRequestItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Requests
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RequestsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/requests{?after*,before*,limit*,status*}", pathParameters)
+        public RequestsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/requests{?after*,before*,limit*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Requests
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RequestsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/requests{?after*,before*,limit*,status*}", rawUrl)
+        public RequestsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/requests{?after*,before*,limit*,status*}", rawUrl)
         {
         }
         /// <summary>

@@ -9,7 +9,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "SUBMITTED")]
         #pragma warning disable CS1591
-        SUBMITTED,
+        Submitted,
         #pragma warning restore CS1591
     }
 }

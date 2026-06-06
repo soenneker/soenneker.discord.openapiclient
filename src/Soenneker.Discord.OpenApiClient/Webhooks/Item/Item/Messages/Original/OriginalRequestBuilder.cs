@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Messages.Original
 {
     /// <summary>
-    /// Builds and executes requests for operations under \webhooks\{webhook_id}\{webhook_token}\messages\@original
+    /// Builds and executes requests for operations under \webhooks\{webhookId}\{webhookToken}\messages\@original
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OriginalRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Messages.Original
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OriginalRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/messages/@original{?thread_id*,with_components*}", pathParameters)
+        public OriginalRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhookId}/{webhookToken}/messages/@original{?thread_id*,with_components*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Messages.Original
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OriginalRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/messages/@original{?thread_id*,with_components*}", rawUrl)
+        public OriginalRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhookId}/{webhookToken}/messages/@original{?thread_id*,with_components*}", rawUrl)
         {
         }
         /// <returns>A <see cref="Stream"/></returns>

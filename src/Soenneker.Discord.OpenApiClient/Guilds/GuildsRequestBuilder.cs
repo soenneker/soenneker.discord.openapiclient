@@ -23,14 +23,14 @@ namespace Soenneker.Discord.OpenApiClient.Guilds
         }
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.guilds.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.WithGuild_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.WithGuild_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.WithGuildItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.WithGuildItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("guild_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.WithGuild_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("guildId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.WithGuildItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

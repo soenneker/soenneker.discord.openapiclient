@@ -39,18 +39,18 @@ namespace Soenneker.Discord.OpenApiClient.Invites.Item
         public WithCodeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invites/{code}{?guild_scheduled_event_id*,with_counts*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200Response?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -59,20 +59,20 @@ namespace Soenneker.Discord.OpenApiClient.Invites.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200Response>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.InviteRevoke200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Invites.Item.WithCodeItemRequestBuilder.WithCodeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -81,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Invites.Item
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200Response>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.InviteResolve200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -25,13 +25,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The archived property</summary>
         public bool? Archived { get; set; }
         /// <summary>The auto_archive_duration property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper? AutoArchiveDuration { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper AutoArchiveDuration { get; set; }
-#endif
+        public int? AutoArchiveDuration { get; set; }
         /// <summary>The bitrate property</summary>
         public int? Bitrate { get; set; }
         /// <summary>The flags property</summary>
@@ -61,13 +55,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The user_limit property</summary>
         public int? UserLimit { get; set; }
         /// <summary>The video_quality_mode property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes_Wrapper? VideoQualityMode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes_Wrapper VideoQualityMode { get; set; }
-#endif
+        public int? VideoQualityMode { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartial"/> and sets the default values.
         /// </summary>
@@ -95,7 +83,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "applied_tags", n => { AppliedTags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper.CreateFromDiscriminatorValue); } },
+                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetIntValue(); } },
                 { "bitrate", n => { Bitrate = n.GetIntValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "invitable", n => { Invitable = n.GetBoolValue(); } },
@@ -104,7 +92,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "rate_limit_per_user", n => { RateLimitPerUser = n.GetIntValue(); } },
                 { "rtc_region", n => { RtcRegion = n.GetStringValue(); } },
                 { "user_limit", n => { UserLimit = n.GetIntValue(); } },
-                { "video_quality_mode", n => { VideoQualityMode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes_Wrapper.CreateFromDiscriminatorValue); } },
+                { "video_quality_mode", n => { VideoQualityMode = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -116,7 +104,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("applied_tags", AppliedTags);
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper>("auto_archive_duration", AutoArchiveDuration);
+            writer.WriteIntValue("auto_archive_duration", AutoArchiveDuration);
             writer.WriteIntValue("bitrate", Bitrate);
             writer.WriteIntValue("flags", Flags);
             writer.WriteBoolValue("invitable", Invitable);
@@ -125,7 +113,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);
             writer.WriteStringValue("rtc_region", RtcRegion);
             writer.WriteIntValue("user_limit", UserLimit);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes_Wrapper>("video_quality_mode", VideoQualityMode);
+            writer.WriteIntValue("video_quality_mode", VideoQualityMode);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

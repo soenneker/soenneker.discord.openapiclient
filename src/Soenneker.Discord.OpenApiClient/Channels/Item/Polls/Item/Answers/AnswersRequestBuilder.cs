@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\polls\{message_id}\answers
+    /// Builds and executes requests for operations under \channels\{channelId}\polls\{messageId}\answers
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AnswersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item.polls.item.answers.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswer_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswer_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswerItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswerItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("answer_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswer_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("answerId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswerItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AnswersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/polls/{message_id}/answers", pathParameters)
+        public AnswersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/polls/{messageId}/answers", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AnswersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/polls/{message_id}/answers", rawUrl)
+        public AnswersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/polls/{messageId}/answers", rawUrl)
         {
         }
     }

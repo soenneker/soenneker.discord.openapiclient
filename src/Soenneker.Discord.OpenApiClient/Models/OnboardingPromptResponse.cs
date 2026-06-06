@@ -45,13 +45,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptType Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptResponse"/> and sets the default values.
         /// </summary>
@@ -83,7 +77,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "required", n => { Required = n.GetBoolValue(); } },
                 { "single_select", n => { SingleSelect = n.GetBoolValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptType>(global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -99,7 +93,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("required", Required);
             writer.WriteBoolValue("single_select", SingleSelect);
             writer.WriteStringValue("title", Title);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.OnboardingPromptType>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

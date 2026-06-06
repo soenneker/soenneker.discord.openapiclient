@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Guilds.Item.NewMemberWelcome
 {
     /// <summary>
-    /// Builds and executes requests for operations under \guilds\{guild_id}\new-member-welcome
+    /// Builds and executes requests for operations under \guilds\{guildId}\new-member-welcome
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NewMemberWelcomeRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.NewMemberWelcome
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NewMemberWelcomeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/new-member-welcome", pathParameters)
+        public NewMemberWelcomeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/new-member-welcome", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.NewMemberWelcome
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NewMemberWelcomeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/new-member-welcome", rawUrl)
+        public NewMemberWelcomeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/new-member-welcome", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse"/></returns>

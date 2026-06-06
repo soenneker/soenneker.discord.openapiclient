@@ -14,9 +14,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The dms_disabled_until property</summary>
+        /// <summary>When direct messages get enabled again</summary>
         public DateTimeOffset? DmsDisabledUntil { get; set; }
-        /// <summary>The invites_disabled_until property</summary>
+        /// <summary>When invites get enabled again</summary>
         public DateTimeOffset? InvitesDisabledUntil { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse"/> and sets the default values.

@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.Recipients
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\recipients
+    /// Builds and executes requests for operations under \channels\{channelId}\recipients
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RecipientsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item.recipients.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Recipients.Item.WithUser_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Recipients.Item.WithUser_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Recipients.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Recipients.Item.WithUserItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Recipients.Item.WithUser_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Recipients.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Recipients
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecipientsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/recipients", pathParameters)
+        public RecipientsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/recipients", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Recipients
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecipientsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/recipients", rawUrl)
+        public RecipientsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/recipients", rawUrl)
         {
         }
     }

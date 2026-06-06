@@ -9,7 +9,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "REJECTED")]
         #pragma warning disable CS1591
-        REJECTED,
+        Rejected,
         #pragma warning restore CS1591
     }
 }

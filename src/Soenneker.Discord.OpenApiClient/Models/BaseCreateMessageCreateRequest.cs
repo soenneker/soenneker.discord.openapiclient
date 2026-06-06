@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The allowed_mentions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions? AllowedMentions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions AllowedMentions { get; set; }
 #endif
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,10 +33,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The components property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequest.BaseCreateMessageCreateRequest_components>? Components { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem>? Components { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequest.BaseCreateMessageCreateRequest_components> Components { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem> Components { get; set; }
 #endif
         /// <summary>The content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,18 +59,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The poll property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest? Poll { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll? Poll { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest Poll { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll Poll { get; set; }
 #endif
         /// <summary>The shared_client_theme property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest? SharedClientTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme? SharedClientTheme { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest SharedClientTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme SharedClientTheme { get; set; }
 #endif
         /// <summary>The sticker_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,14 +105,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest.CreateFromDiscriminatorValue); } },
+                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions.CreateFromDiscriminatorValue); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequest.BaseCreateMessageCreateRequest_components>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequest.BaseCreateMessageCreateRequest_components.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "embeds", n => { Embeds = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbed.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
-                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.CreateFromDiscriminatorValue); } },
-                { "shared_client_theme", n => { SharedClientTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest>(global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest.CreateFromDiscriminatorValue); } },
+                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll.CreateFromDiscriminatorValue); } },
+                { "shared_client_theme", n => { SharedClientTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme.CreateFromDiscriminatorValue); } },
                 { "sticker_ids", n => { StickerIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -123,191 +123,16 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>("allowed_mentions", AllowedMentions);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions>("allowed_mentions", AllowedMentions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>("attachments", Attachments);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequest.BaseCreateMessageCreateRequest_components>("components", Components);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem>("components", Components);
             writer.WriteStringValue("content", Content);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>("embeds", Embeds);
             writer.WriteIntValue("flags", Flags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>("poll", Poll);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest>("shared_client_theme", SharedClientTheme);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll>("poll", Poll);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme>("shared_client_theme", SharedClientTheme);
             writer.WriteCollectionOfPrimitiveValues<string>("sticker_ids", StickerIds);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.FileComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SectionComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentForMessageRequest"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BaseCreateMessageCreateRequest_components : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForMessageRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForMessageRequest? ActionRowComponentForMessageRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForMessageRequest ActionRowComponentForMessageRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentForMessageRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentForMessageRequest? ContainerComponentForMessageRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentForMessageRequest ContainerComponentForMessageRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.FileComponentForMessageRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.FileComponentForMessageRequest? FileComponentForMessageRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.FileComponentForMessageRequest FileComponentForMessageRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentForMessageRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentForMessageRequest? MediaGalleryComponentForMessageRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentForMessageRequest MediaGalleryComponentForMessageRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SectionComponentForMessageRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentForMessageRequest? SectionComponentForMessageRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentForMessageRequest SectionComponentForMessageRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest? SeparatorComponentForMessageRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest SeparatorComponentForMessageRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentForMessageRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentForMessageRequest? TextDisplayComponentForMessageRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentForMessageRequest TextDisplayComponentForMessageRequest { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequest.BaseCreateMessageCreateRequest_components"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequest.BaseCreateMessageCreateRequest_components CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequest.BaseCreateMessageCreateRequest_components();
-                if("ActionRowComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ActionRowComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForMessageRequest();
-                }
-                else if("ContainerComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ContainerComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentForMessageRequest();
-                }
-                else if("FileComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.FileComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.FileComponentForMessageRequest();
-                }
-                else if("MediaGalleryComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MediaGalleryComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentForMessageRequest();
-                }
-                else if("SectionComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SectionComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.SectionComponentForMessageRequest();
-                }
-                else if("SeparatorComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SeparatorComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest();
-                }
-                else if("TextDisplayComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.TextDisplayComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentForMessageRequest();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ActionRowComponentForMessageRequest != null)
-                {
-                    return ActionRowComponentForMessageRequest.GetFieldDeserializers();
-                }
-                else if(ContainerComponentForMessageRequest != null)
-                {
-                    return ContainerComponentForMessageRequest.GetFieldDeserializers();
-                }
-                else if(FileComponentForMessageRequest != null)
-                {
-                    return FileComponentForMessageRequest.GetFieldDeserializers();
-                }
-                else if(MediaGalleryComponentForMessageRequest != null)
-                {
-                    return MediaGalleryComponentForMessageRequest.GetFieldDeserializers();
-                }
-                else if(SectionComponentForMessageRequest != null)
-                {
-                    return SectionComponentForMessageRequest.GetFieldDeserializers();
-                }
-                else if(SeparatorComponentForMessageRequest != null)
-                {
-                    return SeparatorComponentForMessageRequest.GetFieldDeserializers();
-                }
-                else if(TextDisplayComponentForMessageRequest != null)
-                {
-                    return TextDisplayComponentForMessageRequest.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ActionRowComponentForMessageRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForMessageRequest>(null, ActionRowComponentForMessageRequest);
-                }
-                else if(ContainerComponentForMessageRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentForMessageRequest>(null, ContainerComponentForMessageRequest);
-                }
-                else if(FileComponentForMessageRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FileComponentForMessageRequest>(null, FileComponentForMessageRequest);
-                }
-                else if(MediaGalleryComponentForMessageRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentForMessageRequest>(null, MediaGalleryComponentForMessageRequest);
-                }
-                else if(SectionComponentForMessageRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentForMessageRequest>(null, SectionComponentForMessageRequest);
-                }
-                else if(SeparatorComponentForMessageRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentForMessageRequest>(null, SeparatorComponentForMessageRequest);
-                }
-                else if(TextDisplayComponentForMessageRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentForMessageRequest>(null, TextDisplayComponentForMessageRequest);
-                }
-            }
         }
     }
 }

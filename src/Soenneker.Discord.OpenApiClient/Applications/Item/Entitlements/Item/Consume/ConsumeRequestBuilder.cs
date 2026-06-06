@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.Item.Consume
 {
     /// <summary>
-    /// Builds and executes requests for operations under \applications\{application_id}\entitlements\{entitlement_id}\consume
+    /// Builds and executes requests for operations under \applications\{applicationId}\entitlements\{entitlementId}\consume
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConsumeRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.Item.Co
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConsumeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/entitlements/{entitlement_id}/consume", pathParameters)
+        public ConsumeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/entitlements/{entitlementId}/consume", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.Item.Co
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConsumeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/entitlements/{entitlement_id}/consume", rawUrl)
+        public ConsumeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/entitlements/{entitlementId}/consume", rawUrl)
         {
         }
         /// <returns>A <see cref="Stream"/></returns>

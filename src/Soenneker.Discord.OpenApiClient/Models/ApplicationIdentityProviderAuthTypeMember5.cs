@@ -10,7 +10,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "UNITY_SERVICES_ID_TOKEN")]
         #pragma warning disable CS1591
-        UNITY_SERVICES_ID_TOKEN,
+        UnityServicesIdToken,
         #pragma warning restore CS1591
     }
 }

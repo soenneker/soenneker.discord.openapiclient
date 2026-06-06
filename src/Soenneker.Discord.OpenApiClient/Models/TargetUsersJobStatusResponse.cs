@@ -29,13 +29,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The processed_users property</summary>
         public long? ProcessedUsers { get; set; }
         /// <summary>The status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.TargetUsersJobStatusTypes? Status { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.TargetUsersJobStatusTypes Status { get; set; }
-#endif
+        public int? Status { get; set; }
         /// <summary>The total_users property</summary>
         public long? TotalUsers { get; set; }
         /// <summary>
@@ -67,7 +61,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "error_message", n => { ErrorMessage = n.GetStringValue(); } },
                 { "processed_users", n => { ProcessedUsers = n.GetLongValue(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TargetUsersJobStatusTypes>(global::Soenneker.Discord.OpenApiClient.Models.TargetUsersJobStatusTypes.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetIntValue(); } },
                 { "total_users", n => { TotalUsers = n.GetLongValue(); } },
             };
         }
@@ -82,7 +76,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("error_message", ErrorMessage);
             writer.WriteLongValue("processed_users", ProcessedUsers);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TargetUsersJobStatusTypes>("status", Status);
+            writer.WriteIntValue("status", Status);
             writer.WriteLongValue("total_users", TotalUsers);
             writer.WriteAdditionalData(AdditionalData);
         }

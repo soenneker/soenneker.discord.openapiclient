@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Github
 {
     /// <summary>
-    /// Builds and executes requests for operations under \webhooks\{webhook_id}\{webhook_token}\github
+    /// Builds and executes requests for operations under \webhooks\{webhookId}\{webhookToken}\github
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GithubRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Github
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GithubRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/github{?thread_id*,wait*}", pathParameters)
+        public GithubRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhookId}/{webhookToken}/github{?thread_id*,wait*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Github
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GithubRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/github{?thread_id*,wait*}", rawUrl)
+        public GithubRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhookId}/{webhookToken}/github{?thread_id*,wait*}", rawUrl)
         {
         }
         /// <returns>A <see cref="Stream"/></returns>

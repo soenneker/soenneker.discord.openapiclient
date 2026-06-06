@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Guilds.Item.WelcomeScreen
 {
     /// <summary>
-    /// Builds and executes requests for operations under \guilds\{guild_id}\welcome-screen
+    /// Builds and executes requests for operations under \guilds\{guildId}\welcome-screen
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WelcomeScreenRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.WelcomeScreen
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WelcomeScreenRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/welcome-screen", pathParameters)
+        public WelcomeScreenRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/welcome-screen", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.WelcomeScreen
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WelcomeScreenRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/welcome-screen", rawUrl)
+        public WelcomeScreenRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/welcome-screen", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildWelcomeScreenResponse"/></returns>

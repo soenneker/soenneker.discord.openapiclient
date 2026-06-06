@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The default_values property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest.MentionableSelectComponentForModalRequest_default_values>? DefaultValues { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequestDefaultValuesItem>? DefaultValues { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest.MentionableSelectComponentForModalRequest_default_values> DefaultValues { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequestDefaultValuesItem> DefaultValues { get; set; }
 #endif
         /// <summary>The disabled property</summary>
         public bool? Disabled { get; set; }
@@ -49,13 +49,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The required property</summary>
         public bool? Required { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest"/> and sets the default values.
         /// </summary>
@@ -82,14 +76,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "custom_id", n => { CustomId = n.GetStringValue(); } },
-                { "default_values", n => { DefaultValues = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest.MentionableSelectComponentForModalRequest_default_values>(global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest.MentionableSelectComponentForModalRequest_default_values.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "default_values", n => { DefaultValues = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequestDefaultValuesItem>(global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequestDefaultValuesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "disabled", n => { Disabled = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "max_values", n => { MaxValues = n.GetIntValue(); } },
                 { "min_values", n => { MinValues = n.GetIntValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -100,90 +94,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("custom_id", CustomId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest.MentionableSelectComponentForModalRequest_default_values>("default_values", DefaultValues);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequestDefaultValuesItem>("default_values", DefaultValues);
             writer.WriteBoolValue("disabled", Disabled);
             writer.WriteIntValue("id", Id);
             writer.WriteIntValue("max_values", MaxValues);
             writer.WriteIntValue("min_values", MinValues);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteBoolValue("required", Required);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.RoleSelectDefaultValue"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserSelectDefaultValue"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class MentionableSelectComponentForModalRequest_default_values : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.RoleSelectDefaultValue"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.RoleSelectDefaultValue? RoleSelectDefaultValue { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.RoleSelectDefaultValue RoleSelectDefaultValue { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserSelectDefaultValue"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UserSelectDefaultValue? UserSelectDefaultValue { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UserSelectDefaultValue UserSelectDefaultValue { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest.MentionableSelectComponentForModalRequest_default_values"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest.MentionableSelectComponentForModalRequest_default_values CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest.MentionableSelectComponentForModalRequest_default_values();
-                if("RoleSelectDefaultValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.RoleSelectDefaultValue = new global::Soenneker.Discord.OpenApiClient.Models.RoleSelectDefaultValue();
-                }
-                else if("UserSelectDefaultValue".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UserSelectDefaultValue = new global::Soenneker.Discord.OpenApiClient.Models.UserSelectDefaultValue();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(RoleSelectDefaultValue != null)
-                {
-                    return RoleSelectDefaultValue.GetFieldDeserializers();
-                }
-                else if(UserSelectDefaultValue != null)
-                {
-                    return UserSelectDefaultValue.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(RoleSelectDefaultValue != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RoleSelectDefaultValue>(null, RoleSelectDefaultValue);
-                }
-                else if(UserSelectDefaultValue != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserSelectDefaultValue>(null, UserSelectDefaultValue);
-                }
-            }
         }
     }
 }

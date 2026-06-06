@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponse_metadata? Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponse_metadata Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The platform_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponse_metadata>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponse_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "platform_name", n => { PlatformName = n.GetStringValue(); } },
                 { "platform_username", n => { PlatformUsername = n.GetStringValue(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponse_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("platform_name", PlatformName);
             writer.WriteStringValue("platform_username", PlatformUsername);
             writer.WriteAdditionalData(AdditionalData);

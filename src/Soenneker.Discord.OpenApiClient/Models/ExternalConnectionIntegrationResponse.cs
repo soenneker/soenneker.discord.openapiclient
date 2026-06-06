@@ -27,21 +27,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The enable_emoticons property</summary>
         public bool? EnableEmoticons { get; set; }
         /// <summary>The expire_behavior property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireBehaviorTypes? ExpireBehavior { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireBehaviorTypes ExpireBehavior { get; set; }
-#endif
+        public int? ExpireBehavior { get; set; }
         /// <summary>The expire_grace_period property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireGracePeriodTypes? ExpireGracePeriod { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireGracePeriodTypes ExpireGracePeriod { get; set; }
-#endif
+        public int? ExpireGracePeriod { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +63,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The syncing property</summary>
         public bool? Syncing { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse_type? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Type { get; set; }
+#nullable restore
+#else
+        public string Type { get; set; }
+#endif
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -112,8 +106,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "account", n => { Account = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AccountResponse>(global::Soenneker.Discord.OpenApiClient.Models.AccountResponse.CreateFromDiscriminatorValue); } },
                 { "enable_emoticons", n => { EnableEmoticons = n.GetBoolValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "expire_behavior", n => { ExpireBehavior = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireBehaviorTypes>(global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireBehaviorTypes.CreateFromDiscriminatorValue); } },
-                { "expire_grace_period", n => { ExpireGracePeriod = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireGracePeriodTypes>(global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireGracePeriodTypes.CreateFromDiscriminatorValue); } },
+                { "expire_behavior", n => { ExpireBehavior = n.GetIntValue(); } },
+                { "expire_grace_period", n => { ExpireGracePeriod = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "revoked", n => { Revoked = n.GetBoolValue(); } },
@@ -121,7 +115,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "subscriber_count", n => { SubscriberCount = n.GetIntValue(); } },
                 { "synced_at", n => { SyncedAt = n.GetDateTimeOffsetValue(); } },
                 { "syncing", n => { Syncing = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse_type>(); } },
+                { "type", n => { Type = n.GetStringValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
             };
         }
@@ -135,8 +129,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AccountResponse>("account", Account);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteBoolValue("enable_emoticons", EnableEmoticons);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireBehaviorTypes>("expire_behavior", ExpireBehavior);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationExpireGracePeriodTypes>("expire_grace_period", ExpireGracePeriod);
+            writer.WriteIntValue("expire_behavior", ExpireBehavior);
+            writer.WriteIntValue("expire_grace_period", ExpireGracePeriod);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("revoked", Revoked);
@@ -144,7 +138,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("subscriber_count", SubscriberCount);
             writer.WriteDateTimeOffsetValue("synced_at", SyncedAt);
             writer.WriteBoolValue("syncing", Syncing);
-            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse_type>("type", Type);
+            writer.WriteStringValue("type", Type);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }

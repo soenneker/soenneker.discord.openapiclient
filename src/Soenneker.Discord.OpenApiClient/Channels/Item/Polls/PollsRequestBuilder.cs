@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.Polls
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\polls
+    /// Builds and executes requests for operations under \channels\{channelId}\polls
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PollsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item.polls.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.WithMessage_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.WithMessage_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.WithMessageItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.WithMessageItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("message_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.WithMessage_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("messageId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.WithMessageItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Polls
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PollsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/polls", pathParameters)
+        public PollsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/polls", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Polls
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PollsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/polls", rawUrl)
+        public PollsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/polls", rawUrl)
         {
         }
     }

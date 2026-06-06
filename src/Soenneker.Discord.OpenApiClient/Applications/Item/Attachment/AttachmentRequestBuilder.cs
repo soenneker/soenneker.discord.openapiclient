@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Applications.Item.Attachment
 {
     /// <summary>
-    /// Builds and executes requests for operations under \applications\{application_id}\attachment
+    /// Builds and executes requests for operations under \applications\{applicationId}\attachment
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AttachmentRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Attachment
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AttachmentRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/attachment", pathParameters)
+        public AttachmentRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/attachment", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Attachment
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AttachmentRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/attachment", rawUrl)
+        public AttachmentRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/attachment", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ActivitiesAttachmentResponse"/></returns>

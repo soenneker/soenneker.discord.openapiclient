@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.Invites
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\invites
+    /// Builds and executes requests for operations under \channels\{channelId}\invites
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InvitesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Invites
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InvitesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/invites", pathParameters)
+        public InvitesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/invites", pathParameters)
         {
         }
         /// <summary>
@@ -30,21 +30,21 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Invites
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InvitesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/invites", rawUrl)
+        public InvitesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/invites", rawUrl)
         {
         }
-        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Channels.Item.Invites.InvitesRequestBuilder.ListChannelInvites200&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.ListChannelInvites200ResponseItem&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Channels.Item.Invites.InvitesRequestBuilder.ListChannelInvites200>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Models.ListChannelInvites200ResponseItem>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Channels.Item.Invites.InvitesRequestBuilder.ListChannelInvites200>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Models.ListChannelInvites200ResponseItem>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -53,10 +53,10 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Invites
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Channels.Item.Invites.InvitesRequestBuilder.ListChannelInvites200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Channels.Item.Invites.InvitesRequestBuilder.ListChannelInvites200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Models.ListChannelInvites200ResponseItem>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.ListChannelInvites200ResponseItem.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInvite200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInvite200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -64,11 +64,11 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Invites
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInvite200?> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.Create_channel_inviteapplication_json body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInvite200Response?> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInviteJsonRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInvite200> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.Create_channel_inviteapplication_json body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInvite200Response> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInviteJsonRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -78,7 +78,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Invites
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInvite200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInvite200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInvite200Response>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInvite200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -101,11 +101,11 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Invites
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.Create_channel_inviteapplication_json body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInviteJsonRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.Create_channel_inviteapplication_json body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateChannelInviteJsonRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -123,101 +123,6 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Invites
         public global::Soenneker.Discord.OpenApiClient.Channels.Item.Invites.InvitesRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Invites.InvitesRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ListChannelInvites200 : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse? FriendInviteResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse FriendInviteResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse? GroupDMInviteResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse GroupDMInviteResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse? GuildInviteResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse GuildInviteResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Invites.InvitesRequestBuilder.ListChannelInvites200"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Channels.Item.Invites.InvitesRequestBuilder.ListChannelInvites200 CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Channels.Item.Invites.InvitesRequestBuilder.ListChannelInvites200();
-                if("FriendInviteResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.FriendInviteResponse = new global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse();
-                }
-                else if("GroupDMInviteResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GroupDMInviteResponse = new global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse();
-                }
-                else if("GuildInviteResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildInviteResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(FriendInviteResponse != null)
-                {
-                    return FriendInviteResponse.GetFieldDeserializers();
-                }
-                else if(GroupDMInviteResponse != null)
-                {
-                    return GroupDMInviteResponse.GetFieldDeserializers();
-                }
-                else if(GuildInviteResponse != null)
-                {
-                    return GuildInviteResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(FriendInviteResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse>(null, FriendInviteResponse);
-                }
-                else if(GroupDMInviteResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GroupDMInviteResponse>(null, GroupDMInviteResponse);
-                }
-                else if(GuildInviteResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse>(null, GuildInviteResponse);
-                }
-            }
         }
     }
 }

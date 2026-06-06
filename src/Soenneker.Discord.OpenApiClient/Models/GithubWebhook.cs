@@ -25,34 +25,34 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The answer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubComment? Answer { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer? Answer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubComment Answer { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer Answer { get; set; }
 #endif
         /// <summary>The check_run property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun? CheckRun { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun? CheckRun { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun CheckRun { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun CheckRun { get; set; }
 #endif
         /// <summary>The check_suite property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite? CheckSuite { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite? CheckSuite { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite CheckSuite { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite CheckSuite { get; set; }
 #endif
         /// <summary>The comment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubComment? Comment { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookComment? Comment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubComment Comment { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookComment Comment { get; set; }
 #endif
         /// <summary>The commits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,52 +73,52 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The discussion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion? Discussion { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion? Discussion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion Discussion { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion Discussion { get; set; }
 #endif
         /// <summary>The forced property</summary>
         public bool? Forced { get; set; }
         /// <summary>The forkee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRepository? Forkee { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee? Forkee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRepository Forkee { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee Forkee { get; set; }
 #endif
         /// <summary>The head_commit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCommit? HeadCommit { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit? HeadCommit { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCommit HeadCommit { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit HeadCommit { get; set; }
 #endif
         /// <summary>The issue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubIssue? Issue { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue? Issue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubIssue Issue { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue Issue { get; set; }
 #endif
         /// <summary>The member property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubUser? Member { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember? Member { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubUser Member { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember Member { get; set; }
 #endif
         /// <summary>The pull_request property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubIssue? PullRequest { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookPullRequest? PullRequest { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubIssue PullRequest { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookPullRequest PullRequest { get; set; }
 #endif
         /// <summary>The ref property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -139,26 +139,26 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The release property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRelease? Release { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease? Release { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRelease Release { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease Release { get; set; }
 #endif
         /// <summary>The repository property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRepository? Repository { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRepository? Repository { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRepository Repository { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRepository Repository { get; set; }
 #endif
         /// <summary>The review property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubReview? Review { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview? Review { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubReview Review { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview Review { get; set; }
 #endif
         /// <summary>The sender property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -194,24 +194,24 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "action", n => { Action = n.GetStringValue(); } },
-                { "answer", n => { Answer = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubComment>(global::Soenneker.Discord.OpenApiClient.Models.GithubComment.CreateFromDiscriminatorValue); } },
-                { "check_run", n => { CheckRun = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun>(global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun.CreateFromDiscriminatorValue); } },
-                { "check_suite", n => { CheckSuite = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite>(global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite.CreateFromDiscriminatorValue); } },
-                { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubComment>(global::Soenneker.Discord.OpenApiClient.Models.GithubComment.CreateFromDiscriminatorValue); } },
+                { "answer", n => { Answer = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer.CreateFromDiscriminatorValue); } },
+                { "check_run", n => { CheckRun = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun.CreateFromDiscriminatorValue); } },
+                { "check_suite", n => { CheckSuite = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite.CreateFromDiscriminatorValue); } },
+                { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookComment>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookComment.CreateFromDiscriminatorValue); } },
                 { "commits", n => { Commits = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GithubCommit>(global::Soenneker.Discord.OpenApiClient.Models.GithubCommit.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "compare", n => { Compare = n.GetStringValue(); } },
-                { "discussion", n => { Discussion = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion>(global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion.CreateFromDiscriminatorValue); } },
+                { "discussion", n => { Discussion = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion.CreateFromDiscriminatorValue); } },
                 { "forced", n => { Forced = n.GetBoolValue(); } },
-                { "forkee", n => { Forkee = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRepository>(global::Soenneker.Discord.OpenApiClient.Models.GithubRepository.CreateFromDiscriminatorValue); } },
-                { "head_commit", n => { HeadCommit = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCommit>(global::Soenneker.Discord.OpenApiClient.Models.GithubCommit.CreateFromDiscriminatorValue); } },
-                { "issue", n => { Issue = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubIssue>(global::Soenneker.Discord.OpenApiClient.Models.GithubIssue.CreateFromDiscriminatorValue); } },
-                { "member", n => { Member = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>(global::Soenneker.Discord.OpenApiClient.Models.GithubUser.CreateFromDiscriminatorValue); } },
-                { "pull_request", n => { PullRequest = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubIssue>(global::Soenneker.Discord.OpenApiClient.Models.GithubIssue.CreateFromDiscriminatorValue); } },
+                { "forkee", n => { Forkee = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee.CreateFromDiscriminatorValue); } },
+                { "head_commit", n => { HeadCommit = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit.CreateFromDiscriminatorValue); } },
+                { "issue", n => { Issue = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue.CreateFromDiscriminatorValue); } },
+                { "member", n => { Member = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember.CreateFromDiscriminatorValue); } },
+                { "pull_request", n => { PullRequest = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookPullRequest>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookPullRequest.CreateFromDiscriminatorValue); } },
                 { "ref", n => { Ref = n.GetStringValue(); } },
                 { "ref_type", n => { RefType = n.GetStringValue(); } },
-                { "release", n => { Release = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRelease>(global::Soenneker.Discord.OpenApiClient.Models.GithubRelease.CreateFromDiscriminatorValue); } },
-                { "repository", n => { Repository = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRepository>(global::Soenneker.Discord.OpenApiClient.Models.GithubRepository.CreateFromDiscriminatorValue); } },
-                { "review", n => { Review = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubReview>(global::Soenneker.Discord.OpenApiClient.Models.GithubReview.CreateFromDiscriminatorValue); } },
+                { "release", n => { Release = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease.CreateFromDiscriminatorValue); } },
+                { "repository", n => { Repository = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRepository>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRepository.CreateFromDiscriminatorValue); } },
+                { "review", n => { Review = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview.CreateFromDiscriminatorValue); } },
                 { "sender", n => { Sender = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>(global::Soenneker.Discord.OpenApiClient.Models.GithubUser.CreateFromDiscriminatorValue); } },
             };
         }
@@ -223,24 +223,24 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("action", Action);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubComment>("answer", Answer);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun>("check_run", CheckRun);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite>("check_suite", CheckSuite);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubComment>("comment", Comment);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer>("answer", Answer);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun>("check_run", CheckRun);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite>("check_suite", CheckSuite);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookComment>("comment", Comment);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GithubCommit>("commits", Commits);
             writer.WriteStringValue("compare", Compare);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion>("discussion", Discussion);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion>("discussion", Discussion);
             writer.WriteBoolValue("forced", Forced);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRepository>("forkee", Forkee);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCommit>("head_commit", HeadCommit);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubIssue>("issue", Issue);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>("member", Member);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubIssue>("pull_request", PullRequest);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee>("forkee", Forkee);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit>("head_commit", HeadCommit);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue>("issue", Issue);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember>("member", Member);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookPullRequest>("pull_request", PullRequest);
             writer.WriteStringValue("ref", Ref);
             writer.WriteStringValue("ref_type", RefType);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRelease>("release", Release);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRepository>("repository", Repository);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubReview>("review", Review);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease>("release", Release);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRepository>("repository", Repository);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview>("review", Review);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>("sender", Sender);
             writer.WriteAdditionalData(AdditionalData);
         }

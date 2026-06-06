@@ -14,7 +14,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The channel_id property</summary>
+        /// <summary>Channel ID in which the scheduled event will be hosted, or null if entity type is EXTERNAL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ChannelId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.UserResponse Creator { get; set; }
 #endif
-        /// <summary>The creator_id property</summary>
+        /// <summary>ID of the user that created the scheduled event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CreatorId { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string CreatorId { get; set; }
 #endif
-        /// <summary>The description property</summary>
+        /// <summary>Description of the scheduled event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The entity_id property</summary>
+        /// <summary>ID of the hosting entity associated with the scheduled event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntityId { get; set; }
@@ -57,19 +57,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The entity_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse_entity_metadata? EntityMetadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseEntityMetadata? EntityMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse_entity_metadata EntityMetadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseEntityMetadata EntityMetadata { get; set; }
 #endif
-        /// <summary>The entity_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse_entity_type? EntityType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse_entity_type EntityType { get; set; }
-#endif
+        /// <summary>Type of hosting entity associated with the scheduled event</summary>
+        public int? EntityType { get; set; }
         /// <summary>The guild_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,6 +71,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #nullable restore
 #else
         public string GuildId { get; set; }
+#endif
+        /// <summary>The guild_scheduled_event_exceptions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventExceptionResponse>? GuildScheduledEventExceptions { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventExceptionResponse> GuildScheduledEventExceptions { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,7 +88,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The image property</summary>
+        /// <summary>Cover image hash of the scheduled event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Image { get; set; }
@@ -94,7 +96,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Image { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>Name of the scheduled event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -103,34 +105,30 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The privacy_level property</summary>
+        public int? PrivacyLevel { get; set; }
+        /// <summary>Recurrence rule for the scheduled event, or null if not recurring</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevels? PrivacyLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule? RecurrenceRule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevels PrivacyLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule RecurrenceRule { get; set; }
 #endif
-        /// <summary>The scheduled_end_time property</summary>
+        /// <summary>When the scheduled event will end, or null if no end time</summary>
         public DateTimeOffset? ScheduledEndTime { get; set; }
-        /// <summary>The scheduled_start_time property</summary>
+        /// <summary>When the scheduled event will start</summary>
         public DateTimeOffset? ScheduledStartTime { get; set; }
         /// <summary>The status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventStatuses? Status { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventStatuses Status { get; set; }
-#endif
-        /// <summary>The user_count property</summary>
+        public int? Status { get; set; }
+        /// <summary>Number of users subscribed to the scheduled event</summary>
         public int? UserCount { get; set; }
         /// <summary>The user_rsvp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse? UserRsvp { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvp? UserRsvp { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse UserRsvp { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvp UserRsvp { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse"/> and sets the default values.
@@ -162,18 +160,20 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "creator_id", n => { CreatorId = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "entity_id", n => { EntityId = n.GetStringValue(); } },
-                { "entity_metadata", n => { EntityMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse_entity_metadata>(global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse_entity_metadata.CreateFromDiscriminatorValue); } },
-                { "entity_type", n => { EntityType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse_entity_type>(global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse_entity_type.CreateFromDiscriminatorValue); } },
+                { "entity_metadata", n => { EntityMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseEntityMetadata>(global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseEntityMetadata.CreateFromDiscriminatorValue); } },
+                { "entity_type", n => { EntityType = n.GetIntValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
+                { "guild_scheduled_event_exceptions", n => { GuildScheduledEventExceptions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventExceptionResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventExceptionResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "privacy_level", n => { PrivacyLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevels>(global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevels.CreateFromDiscriminatorValue); } },
+                { "privacy_level", n => { PrivacyLevel = n.GetIntValue(); } },
+                { "recurrence_rule", n => { RecurrenceRule = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule>(global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule.CreateFromDiscriminatorValue); } },
                 { "scheduled_end_time", n => { ScheduledEndTime = n.GetDateTimeOffsetValue(); } },
                 { "scheduled_start_time", n => { ScheduledStartTime = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventStatuses>(global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventStatuses.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetIntValue(); } },
                 { "user_count", n => { UserCount = n.GetIntValue(); } },
-                { "user_rsvp", n => { UserRsvp = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse>(global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse.CreateFromDiscriminatorValue); } },
+                { "user_rsvp", n => { UserRsvp = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvp>(global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvp.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -188,18 +188,20 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("creator_id", CreatorId);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("entity_id", EntityId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse_entity_metadata>("entity_metadata", EntityMetadata);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponse_entity_type>("entity_type", EntityType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseEntityMetadata>("entity_metadata", EntityMetadata);
+            writer.WriteIntValue("entity_type", EntityType);
             writer.WriteStringValue("guild_id", GuildId);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventExceptionResponse>("guild_scheduled_event_exceptions", GuildScheduledEventExceptions);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("image", Image);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevels>("privacy_level", PrivacyLevel);
+            writer.WriteIntValue("privacy_level", PrivacyLevel);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule>("recurrence_rule", RecurrenceRule);
             writer.WriteDateTimeOffsetValue("scheduled_end_time", ScheduledEndTime);
             writer.WriteDateTimeOffsetValue("scheduled_start_time", ScheduledStartTime);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventStatuses>("status", Status);
+            writer.WriteIntValue("status", Status);
             writer.WriteIntValue("user_count", UserCount);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse>("user_rsvp", UserRsvp);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvp>("user_rsvp", UserRsvp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

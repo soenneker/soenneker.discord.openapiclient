@@ -10,7 +10,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "DISCORD_BOT_ISSUED_ACCESS_TOKEN")]
         #pragma warning disable CS1591
-        DISCORD_BOT_ISSUED_ACCESS_TOKEN,
+        DiscordBotIssuedAccessToken,
         #pragma warning restore CS1591
     }
 }

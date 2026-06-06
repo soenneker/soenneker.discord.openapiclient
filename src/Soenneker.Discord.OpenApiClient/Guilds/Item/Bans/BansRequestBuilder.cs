@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Bans
 {
     /// <summary>
-    /// Builds and executes requests for operations under \guilds\{guild_id}\bans
+    /// Builds and executes requests for operations under \guilds\{guildId}\bans
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BansRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.guilds.item.bans.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Bans.Item.WithUser_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Bans.Item.WithUser_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Bans.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Bans.Item.WithUserItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Bans.Item.WithUser_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Bans.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Bans
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BansRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/bans{?after*,before*,limit*}", pathParameters)
+        public BansRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/bans{?after*,before*,limit*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Bans
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BansRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/bans{?after*,before*,limit*}", rawUrl)
+        public BansRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/bans{?after*,before*,limit*}", rawUrl)
         {
         }
         /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.GuildBanResponse&gt;</returns>

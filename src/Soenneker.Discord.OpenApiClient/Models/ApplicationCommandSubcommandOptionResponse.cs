@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The description_localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_description_localizations? DescriptionLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizations? DescriptionLocalizations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_description_localizations DescriptionLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizations DescriptionLocalizations { get; set; }
 #endif
         /// <summary>The description_localized property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The name_localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_name_localizations? NameLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizations? NameLocalizations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_name_localizations NameLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizations NameLocalizations { get; set; }
 #endif
         /// <summary>The name_localized property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,21 +65,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse.ApplicationCommandSubcommandOptionResponse_options>? Options { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseOptionsItem>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse.ApplicationCommandSubcommandOptionResponse_options> Options { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseOptionsItem> Options { get; set; }
 #endif
         /// <summary>The required property</summary>
         public bool? Required { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse"/> and sets the default values.
         /// </summary>
@@ -106,14 +100,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_description_localizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_description_localizations.CreateFromDiscriminatorValue); } },
+                { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizations.CreateFromDiscriminatorValue); } },
                 { "description_localized", n => { DescriptionLocalized = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_name_localizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_name_localizations.CreateFromDiscriminatorValue); } },
+                { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizations.CreateFromDiscriminatorValue); } },
                 { "name_localized", n => { NameLocalized = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse.ApplicationCommandSubcommandOptionResponse_options>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse.ApplicationCommandSubcommandOptionResponse_options.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseOptionsItem>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseOptionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -124,230 +118,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_description_localizations>("description_localizations", DescriptionLocalizations);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizations>("description_localizations", DescriptionLocalizations);
             writer.WriteStringValue("description_localized", DescriptionLocalized);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_name_localizations>("name_localizations", NameLocalizations);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizations>("name_localizations", NameLocalizations);
             writer.WriteStringValue("name_localized", NameLocalized);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse.ApplicationCommandSubcommandOptionResponse_options>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseOptionsItem>("options", Options);
             writer.WriteBoolValue("required", Required);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandBooleanOptionResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandChannelOptionResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandMentionableOptionResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandNumberOptionResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandRoleOptionResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandStringOptionResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOptionResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationCommandSubcommandOptionResponse_options : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse? ApplicationCommandAttachmentOptionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse ApplicationCommandAttachmentOptionResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandBooleanOptionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandBooleanOptionResponse? ApplicationCommandBooleanOptionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandBooleanOptionResponse ApplicationCommandBooleanOptionResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandChannelOptionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandChannelOptionResponse? ApplicationCommandChannelOptionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandChannelOptionResponse ApplicationCommandChannelOptionResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionResponse? ApplicationCommandIntegerOptionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionResponse ApplicationCommandIntegerOptionResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandMentionableOptionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandMentionableOptionResponse? ApplicationCommandMentionableOptionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandMentionableOptionResponse ApplicationCommandMentionableOptionResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandNumberOptionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandNumberOptionResponse? ApplicationCommandNumberOptionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandNumberOptionResponse ApplicationCommandNumberOptionResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandRoleOptionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandRoleOptionResponse? ApplicationCommandRoleOptionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandRoleOptionResponse ApplicationCommandRoleOptionResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandStringOptionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandStringOptionResponse? ApplicationCommandStringOptionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandStringOptionResponse ApplicationCommandStringOptionResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOptionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOptionResponse? ApplicationCommandUserOptionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOptionResponse ApplicationCommandUserOptionResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse.ApplicationCommandSubcommandOptionResponse_options"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse.ApplicationCommandSubcommandOptionResponse_options CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponse.ApplicationCommandSubcommandOptionResponse_options();
-                if("ApplicationCommandAttachmentOptionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandAttachmentOptionResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse();
-                }
-                else if("ApplicationCommandBooleanOptionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandBooleanOptionResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandBooleanOptionResponse();
-                }
-                else if("ApplicationCommandChannelOptionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandChannelOptionResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandChannelOptionResponse();
-                }
-                else if("ApplicationCommandIntegerOptionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandIntegerOptionResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionResponse();
-                }
-                else if("ApplicationCommandMentionableOptionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandMentionableOptionResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandMentionableOptionResponse();
-                }
-                else if("ApplicationCommandNumberOptionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandNumberOptionResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandNumberOptionResponse();
-                }
-                else if("ApplicationCommandRoleOptionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandRoleOptionResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandRoleOptionResponse();
-                }
-                else if("ApplicationCommandStringOptionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandStringOptionResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandStringOptionResponse();
-                }
-                else if("ApplicationCommandUserOptionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ApplicationCommandUserOptionResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOptionResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationCommandAttachmentOptionResponse != null)
-                {
-                    return ApplicationCommandAttachmentOptionResponse.GetFieldDeserializers();
-                }
-                else if(ApplicationCommandBooleanOptionResponse != null)
-                {
-                    return ApplicationCommandBooleanOptionResponse.GetFieldDeserializers();
-                }
-                else if(ApplicationCommandChannelOptionResponse != null)
-                {
-                    return ApplicationCommandChannelOptionResponse.GetFieldDeserializers();
-                }
-                else if(ApplicationCommandIntegerOptionResponse != null)
-                {
-                    return ApplicationCommandIntegerOptionResponse.GetFieldDeserializers();
-                }
-                else if(ApplicationCommandMentionableOptionResponse != null)
-                {
-                    return ApplicationCommandMentionableOptionResponse.GetFieldDeserializers();
-                }
-                else if(ApplicationCommandNumberOptionResponse != null)
-                {
-                    return ApplicationCommandNumberOptionResponse.GetFieldDeserializers();
-                }
-                else if(ApplicationCommandRoleOptionResponse != null)
-                {
-                    return ApplicationCommandRoleOptionResponse.GetFieldDeserializers();
-                }
-                else if(ApplicationCommandStringOptionResponse != null)
-                {
-                    return ApplicationCommandStringOptionResponse.GetFieldDeserializers();
-                }
-                else if(ApplicationCommandUserOptionResponse != null)
-                {
-                    return ApplicationCommandUserOptionResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ApplicationCommandAttachmentOptionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOptionResponse>(null, ApplicationCommandAttachmentOptionResponse);
-                }
-                else if(ApplicationCommandBooleanOptionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandBooleanOptionResponse>(null, ApplicationCommandBooleanOptionResponse);
-                }
-                else if(ApplicationCommandChannelOptionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandChannelOptionResponse>(null, ApplicationCommandChannelOptionResponse);
-                }
-                else if(ApplicationCommandIntegerOptionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionResponse>(null, ApplicationCommandIntegerOptionResponse);
-                }
-                else if(ApplicationCommandMentionableOptionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandMentionableOptionResponse>(null, ApplicationCommandMentionableOptionResponse);
-                }
-                else if(ApplicationCommandNumberOptionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandNumberOptionResponse>(null, ApplicationCommandNumberOptionResponse);
-                }
-                else if(ApplicationCommandRoleOptionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandRoleOptionResponse>(null, ApplicationCommandRoleOptionResponse);
-                }
-                else if(ApplicationCommandStringOptionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandStringOptionResponse>(null, ApplicationCommandStringOptionResponse);
-                }
-                else if(ApplicationCommandUserOptionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOptionResponse>(null, ApplicationCommandUserOptionResponse);
-                }
-            }
         }
     }
 }

@@ -39,13 +39,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.EntityMetadataExternal EntityMetadata { get; set; }
 #endif
         /// <summary>The entity_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequest_entity_type? EntityType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequest_entity_type EntityType { get; set; }
-#endif
+        public int? EntityType { get; set; }
         /// <summary>The image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,12 +57,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The privacy_level property</summary>
+        public int? PrivacyLevel { get; set; }
+        /// <summary>Recurrence rule for the scheduled event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevels? PrivacyLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequestRecurrenceRule? RecurrenceRule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevels PrivacyLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequestRecurrenceRule RecurrenceRule { get; set; }
 #endif
         /// <summary>The scheduled_end_time property</summary>
         public DateTimeOffset? ScheduledEndTime { get; set; }
@@ -102,10 +98,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "entity_metadata", n => { EntityMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntityMetadataExternal>(global::Soenneker.Discord.OpenApiClient.Models.EntityMetadataExternal.CreateFromDiscriminatorValue); } },
-                { "entity_type", n => { EntityType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequest_entity_type>(global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequest_entity_type.CreateFromDiscriminatorValue); } },
+                { "entity_type", n => { EntityType = n.GetIntValue(); } },
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "privacy_level", n => { PrivacyLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevels>(global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevels.CreateFromDiscriminatorValue); } },
+                { "privacy_level", n => { PrivacyLevel = n.GetIntValue(); } },
+                { "recurrence_rule", n => { RecurrenceRule = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequestRecurrenceRule>(global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequestRecurrenceRule.CreateFromDiscriminatorValue); } },
                 { "scheduled_end_time", n => { ScheduledEndTime = n.GetDateTimeOffsetValue(); } },
                 { "scheduled_start_time", n => { ScheduledStartTime = n.GetDateTimeOffsetValue(); } },
             };
@@ -120,10 +117,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntityMetadataExternal>("entity_metadata", EntityMetadata);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequest_entity_type>("entity_type", EntityType);
+            writer.WriteIntValue("entity_type", EntityType);
             writer.WriteStringValue("image", Image);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevels>("privacy_level", PrivacyLevel);
+            writer.WriteIntValue("privacy_level", PrivacyLevel);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventCreateRequestRecurrenceRule>("recurrence_rule", RecurrenceRule);
             writer.WriteDateTimeOffsetValue("scheduled_end_time", ScheduledEndTime);
             writer.WriteDateTimeOffsetValue("scheduled_start_time", ScheduledStartTime);
             writer.WriteAdditionalData(AdditionalData);

@@ -29,7 +29,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypes();
             if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesMember1>() is global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesMember1 integrationTypesMember1Value)
             {

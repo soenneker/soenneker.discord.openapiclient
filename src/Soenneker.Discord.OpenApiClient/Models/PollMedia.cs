@@ -14,15 +14,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The emoji property</summary>
+        /// <summary>The emoji of the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollEmoji? Emoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollMediaEmoji? Emoji { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollEmoji Emoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollMediaEmoji Emoji { get; set; }
 #endif
-        /// <summary>The text property</summary>
+        /// <summary>The text of the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Text { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollEmoji>(global::Soenneker.Discord.OpenApiClient.Models.PollEmoji.CreateFromDiscriminatorValue); } },
+                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMediaEmoji>(global::Soenneker.Discord.OpenApiClient.Models.PollMediaEmoji.CreateFromDiscriminatorValue); } },
                 { "text", n => { Text = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollEmoji>("emoji", Emoji);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMediaEmoji>("emoji", Emoji);
             writer.WriteStringValue("text", Text);
             writer.WriteAdditionalData(AdditionalData);
         }

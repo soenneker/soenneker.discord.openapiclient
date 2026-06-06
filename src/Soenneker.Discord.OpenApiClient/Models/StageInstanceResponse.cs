@@ -49,13 +49,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The privacy_level property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels? PrivacyLevel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels PrivacyLevel { get; set; }
-#endif
+        public int? PrivacyLevel { get; set; }
         /// <summary>The topic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +88,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "guild_scheduled_event_id", n => { GuildScheduledEventId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "privacy_level", n => { PrivacyLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels>(global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels.CreateFromDiscriminatorValue); } },
+                { "privacy_level", n => { PrivacyLevel = n.GetIntValue(); } },
                 { "topic", n => { Topic = n.GetStringValue(); } },
             };
         }
@@ -110,7 +104,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("guild_scheduled_event_id", GuildScheduledEventId);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels>("privacy_level", PrivacyLevel);
+            writer.WriteIntValue("privacy_level", PrivacyLevel);
             writer.WriteStringValue("topic", Topic);
             writer.WriteAdditionalData(AdditionalData);
         }

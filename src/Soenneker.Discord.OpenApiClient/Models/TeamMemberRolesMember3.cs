@@ -9,7 +9,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "read_only")]
         #pragma warning disable CS1591
-        Read_only,
+        ReadOnlyValue,
         #pragma warning restore CS1591
     }
 }

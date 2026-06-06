@@ -17,14 +17,14 @@ namespace Soenneker.Discord.OpenApiClient.Stickers
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.stickers.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Stickers.Item.WithSticker_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Stickers.Item.WithSticker_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Stickers.Item.WithStickerItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Stickers.Item.WithStickerItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sticker_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Stickers.Item.WithSticker_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("stickerId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Stickers.Item.WithStickerItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

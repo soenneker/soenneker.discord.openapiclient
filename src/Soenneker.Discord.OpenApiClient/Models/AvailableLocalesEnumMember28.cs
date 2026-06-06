@@ -9,7 +9,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "sv-SE")]
         #pragma warning disable CS1591
-        SvSE,
+        SvSe,
         #pragma warning restore CS1591
     }
 }

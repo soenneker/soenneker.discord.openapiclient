@@ -17,14 +17,14 @@ namespace Soenneker.Discord.OpenApiClient.Channels
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannelItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannelItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("channel_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannel_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("channelId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.WithChannelItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

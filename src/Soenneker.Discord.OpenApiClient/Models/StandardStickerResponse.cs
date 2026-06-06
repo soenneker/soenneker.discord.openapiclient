@@ -23,13 +23,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The format_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes_Wrapper? FormatType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes_Wrapper FormatType { get; set; }
-#endif
+        public int? FormatType { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,13 +59,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Tags { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse"/> and sets the default values.
         /// </summary>
@@ -98,13 +86,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "format_type", n => { FormatType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes_Wrapper.CreateFromDiscriminatorValue); } },
+                { "format_type", n => { FormatType = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "pack_id", n => { PackId = n.GetStringValue(); } },
                 { "sort_value", n => { SortValue = n.GetIntValue(); } },
                 { "tags", n => { Tags = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -115,13 +103,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes_Wrapper>("format_type", FormatType);
+            writer.WriteIntValue("format_type", FormatType);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("pack_id", PackId);
             writer.WriteIntValue("sort_value", SortValue);
             writer.WriteStringValue("tags", Tags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

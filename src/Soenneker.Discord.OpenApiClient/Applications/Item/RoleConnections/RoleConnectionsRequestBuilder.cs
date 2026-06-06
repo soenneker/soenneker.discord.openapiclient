@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Applications.Item.RoleConnections
 {
     /// <summary>
-    /// Builds and executes requests for operations under \applications\{application_id}\role-connections
+    /// Builds and executes requests for operations under \applications\{applicationId}\role-connections
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RoleConnectionsRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.RoleConnections
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RoleConnectionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/role-connections", pathParameters)
+        public RoleConnectionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/role-connections", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.RoleConnections
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RoleConnectionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/role-connections", rawUrl)
+        public RoleConnectionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/role-connections", rawUrl)
         {
         }
     }

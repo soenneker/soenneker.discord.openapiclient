@@ -65,13 +65,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The nsfw property</summary>
         public bool? Nsfw { get; set; }
         /// <summary>The nsfw_level property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel_Wrapper? NsfwLevel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel_Wrapper NsfwLevel { get; set; }
-#endif
+        public int? NsfwLevel { get; set; }
         /// <summary>The premium_subscription_count property</summary>
         public int? PremiumSubscriptionCount { get; set; }
         /// <summary>The splash property</summary>
@@ -91,13 +85,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string VanityUrlCode { get; set; }
 #endif
         /// <summary>The verification_level property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper? VerificationLevel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper VerificationLevel { get; set; }
-#endif
+        public int? VerificationLevel { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteGuildResponse"/> and sets the default values.
         /// </summary>
@@ -130,11 +118,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "nsfw", n => { Nsfw = n.GetBoolValue(); } },
-                { "nsfw_level", n => { NsfwLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel_Wrapper.CreateFromDiscriminatorValue); } },
+                { "nsfw_level", n => { NsfwLevel = n.GetIntValue(); } },
                 { "premium_subscription_count", n => { PremiumSubscriptionCount = n.GetIntValue(); } },
                 { "splash", n => { Splash = n.GetStringValue(); } },
                 { "vanity_url_code", n => { VanityUrlCode = n.GetStringValue(); } },
-                { "verification_level", n => { VerificationLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper.CreateFromDiscriminatorValue); } },
+                { "verification_level", n => { VerificationLevel = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -151,11 +139,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("nsfw", Nsfw);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildNSFWContentLevel_Wrapper>("nsfw_level", NsfwLevel);
+            writer.WriteIntValue("nsfw_level", NsfwLevel);
             writer.WriteIntValue("premium_subscription_count", PremiumSubscriptionCount);
             writer.WriteStringValue("splash", Splash);
             writer.WriteStringValue("vanity_url_code", VanityUrlCode);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper>("verification_level", VerificationLevel);
+            writer.WriteIntValue("verification_level", VerificationLevel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

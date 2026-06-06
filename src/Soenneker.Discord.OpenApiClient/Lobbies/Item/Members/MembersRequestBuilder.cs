@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members
 {
     /// <summary>
-    /// Builds and executes requests for operations under \lobbies\{lobby_id}\members
+    /// Builds and executes requests for operations under \lobbies\{lobbyId}\members
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MembersRequestBuilder : BaseRequestBuilder
@@ -29,14 +29,14 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members
         }
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.lobbies.item.members.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Item.WithUser_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Item.WithUser_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Item.WithUserItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Item.WithUser_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -44,7 +44,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobby_id}/members", pathParameters)
+        public MembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobbyId}/members", pathParameters)
         {
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobby_id}/members", rawUrl)
+        public MembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobbyId}/members", rawUrl)
         {
         }
     }

@@ -117,23 +117,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The total_message_sent property</summary>
         public int? TotalMessageSent { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>The user_limit property</summary>
         public int? UserLimit { get; set; }
         /// <summary>The video_quality_mode property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes? VideoQualityMode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes VideoQualityMode { get; set; }
-#endif
+        public int? VideoQualityMode { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse"/> and sets the default values.
         /// </summary>
@@ -177,9 +165,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "rtc_region", n => { RtcRegion = n.GetStringValue(); } },
                 { "thread_metadata", n => { ThreadMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadMetadataResponse>(global::Soenneker.Discord.OpenApiClient.Models.ThreadMetadataResponse.CreateFromDiscriminatorValue); } },
                 { "total_message_sent", n => { TotalMessageSent = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
                 { "user_limit", n => { UserLimit = n.GetIntValue(); } },
-                { "video_quality_mode", n => { VideoQualityMode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>(global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes.CreateFromDiscriminatorValue); } },
+                { "video_quality_mode", n => { VideoQualityMode = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -207,9 +195,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("rtc_region", RtcRegion);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadMetadataResponse>("thread_metadata", ThreadMetadata);
             writer.WriteIntValue("total_message_sent", TotalMessageSent);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatedThreadResponse_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteIntValue("user_limit", UserLimit);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>("video_quality_mode", VideoQualityMode);
+            writer.WriteIntValue("video_quality_mode", VideoQualityMode);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

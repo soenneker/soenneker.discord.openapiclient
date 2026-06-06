@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Guilds.Item.BulkBan
 {
     /// <summary>
-    /// Builds and executes requests for operations under \guilds\{guild_id}\bulk-ban
+    /// Builds and executes requests for operations under \guilds\{guildId}\bulk-ban
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkBanRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.BulkBan
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BulkBanRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/bulk-ban", pathParameters)
+        public BulkBanRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/bulk-ban", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.BulkBan
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BulkBanRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/bulk-ban", rawUrl)
+        public BulkBanRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/bulk-ban", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.BulkBanUsersResponse"/></returns>

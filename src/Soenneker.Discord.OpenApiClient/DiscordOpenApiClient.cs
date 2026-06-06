@@ -15,6 +15,7 @@ using Soenneker.Discord.OpenApiClient.Invites;
 using Soenneker.Discord.OpenApiClient.Lobbies;
 using Soenneker.Discord.OpenApiClient.Oauth2;
 using Soenneker.Discord.OpenApiClient.PartnerSdk;
+using Soenneker.Discord.OpenApiClient.Skus;
 using Soenneker.Discord.OpenApiClient.SoundboardDefaultSounds;
 using Soenneker.Discord.OpenApiClient.StageInstances;
 using Soenneker.Discord.OpenApiClient.StickerPacks;
@@ -78,6 +79,11 @@ namespace Soenneker.Discord.OpenApiClient
         public global::Soenneker.Discord.OpenApiClient.PartnerSdk.PartnerSdkRequestBuilder PartnerSdk
         {
             get => new global::Soenneker.Discord.OpenApiClient.PartnerSdk.PartnerSdkRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The skus property</summary>
+        public global::Soenneker.Discord.OpenApiClient.Skus.SkusRequestBuilder Skus
+        {
+            get => new global::Soenneker.Discord.OpenApiClient.Skus.SkusRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The soundboardDefaultSounds property</summary>
         public global::Soenneker.Discord.OpenApiClient.SoundboardDefaultSounds.SoundboardDefaultSoundsRequestBuilder SoundboardDefaultSounds

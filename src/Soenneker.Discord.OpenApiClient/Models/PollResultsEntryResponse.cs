@@ -14,11 +14,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The count property</summary>
+        /// <summary>The number of votes for this answer</summary>
         public int? Count { get; set; }
-        /// <summary>The id property</summary>
+        /// <summary>The answer_id</summary>
         public int? Id { get; set; }
-        /// <summary>The me_voted property</summary>
+        /// <summary>Whether the current user voted for this answer</summary>
         public bool? MeVoted { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PollResultsEntryResponse"/> and sets the default values.

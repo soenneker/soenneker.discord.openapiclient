@@ -15,7 +15,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\messages
+    /// Builds and executes requests for operations under \channels\{channelId}\messages
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MessagesRequestBuilder : BaseRequestBuilder
@@ -32,14 +32,14 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages
         }
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item.messages.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.WithMessage_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.WithMessage_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.WithMessageItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.WithMessageItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("message_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.WithMessage_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("messageId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.WithMessageItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -47,7 +47,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/messages{?after*,around*,before*,limit*}", pathParameters)
+        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/messages{?after*,around*,before*,limit*}", pathParameters)
         {
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/messages{?after*,around*,before*,limit*}", rawUrl)
+        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/messages{?after*,around*,before*,limit*}", rawUrl)
         {
         }
         /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.MessageResponse&gt;</returns>

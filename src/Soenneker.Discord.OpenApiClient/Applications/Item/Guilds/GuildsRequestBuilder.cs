@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds
 {
     /// <summary>
-    /// Builds and executes requests for operations under \applications\{application_id}\guilds
+    /// Builds and executes requests for operations under \applications\{applicationId}\guilds
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GuildsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.applications.item.guilds.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.WithGuild_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.WithGuild_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.WithGuildItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.WithGuildItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("guild_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.WithGuild_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("guildId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.WithGuildItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GuildsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/guilds", pathParameters)
+        public GuildsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/guilds", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GuildsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/guilds", rawUrl)
+        public GuildsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/guilds", rawUrl)
         {
         }
     }

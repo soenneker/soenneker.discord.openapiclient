@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The choices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice>? Choices { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesItem>? Choices { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice> Choices { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesItem> Choices { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberData"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "choices", n => { Choices = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "choices", n => { Choices = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesItem>(global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionNumberChoice>("choices", Choices);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackNumberDataChoicesItem>("choices", Choices);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Pins
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\messages\pins
+    /// Builds and executes requests for operations under \channels\{channelId}\messages\pins
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PinsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item.messages.pins.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Pins.Item.WithMessage_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Pins.Item.WithMessage_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Pins.Item.WithMessageItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Pins.Item.WithMessageItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("message_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Pins.Item.WithMessage_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("messageId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Pins.Item.WithMessageItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Pins
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PinsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/messages/pins{?before*,limit*}", pathParameters)
+        public PinsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/messages/pins{?before*,limit*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Pins
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PinsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/messages/pins{?before*,limit*}", rawUrl)
+        public PinsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/messages/pins{?before*,limit*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.PinnedMessagesResponse"/></returns>

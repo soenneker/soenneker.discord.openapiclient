@@ -9,7 +9,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "match_some")]
         #pragma warning disable CS1591
-        Match_some,
+        MatchSome,
         #pragma warning restore CS1591
     }
 }

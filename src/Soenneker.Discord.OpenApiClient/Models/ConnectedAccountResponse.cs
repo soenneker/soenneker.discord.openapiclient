@@ -57,13 +57,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The verified property</summary>
         public bool? Verified { get; set; }
         /// <summary>The visibility property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountVisibility? Visibility { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountVisibility Visibility { get; set; }
-#endif
+        public int? Visibility { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountResponse"/> and sets the default values.
         /// </summary>
@@ -98,7 +92,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "two_way_link", n => { TwoWayLink = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProviders>(global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProviders.CreateFromDiscriminatorValue); } },
                 { "verified", n => { Verified = n.GetBoolValue(); } },
-                { "visibility", n => { Visibility = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountVisibility>(global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountVisibility.CreateFromDiscriminatorValue); } },
+                { "visibility", n => { Visibility = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -117,7 +111,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("two_way_link", TwoWayLink);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProviders>("type", Type);
             writer.WriteBoolValue("verified", Verified);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountVisibility>("visibility", Visibility);
+            writer.WriteIntValue("visibility", Visibility);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

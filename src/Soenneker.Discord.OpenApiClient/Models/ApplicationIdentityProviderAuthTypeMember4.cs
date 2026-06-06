@@ -10,7 +10,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "STEAM_SESSION_TICKET")]
         #pragma warning disable CS1591
-        STEAM_SESSION_TICKET,
+        SteamSessionTicket,
         #pragma warning restore CS1591
     }
 }

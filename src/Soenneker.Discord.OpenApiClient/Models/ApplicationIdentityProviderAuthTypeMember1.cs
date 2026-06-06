@@ -10,7 +10,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "OIDC")]
         #pragma warning disable CS1591
-        OIDC,
+        Oidc,
         #pragma warning restore CS1591
     }
 }

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Users.Me.Guilds.Item.Member
 {
     /// <summary>
-    /// Builds and executes requests for operations under \users\@me\guilds\{guild_id}\member
+    /// Builds and executes requests for operations under \users\@me\guilds\{guildId}\member
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MemberRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Guilds.Item.Member
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MemberRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/guilds/{guild_id}/member", pathParameters)
+        public MemberRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/guilds/{guildId}/member", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Guilds.Item.Member
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MemberRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/guilds/{guild_id}/member", rawUrl)
+        public MemberRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/guilds/{guildId}/member", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateGuildMemberResponse"/></returns>

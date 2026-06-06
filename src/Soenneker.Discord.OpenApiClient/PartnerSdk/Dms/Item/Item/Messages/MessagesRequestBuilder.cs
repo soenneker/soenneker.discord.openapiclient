@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages
 {
     /// <summary>
-    /// Builds and executes requests for operations under \partner-sdk\dms\{user_id_1}\{user_id_2}\messages
+    /// Builds and executes requests for operations under \partner-sdk\dms\{userId1}\{userId2}\messages
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MessagesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.partnerSdk.dms.item.item.messages.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages.Item.WithMessage_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages.Item.WithMessage_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages.Item.WithMessageItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages.Item.WithMessageItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("message_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages.Item.WithMessage_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("messageId", position);
+                return new global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages.Item.WithMessageItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/partner-sdk/dms/{user_id_1}/{user_id_2}/messages", pathParameters)
+        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/partner-sdk/dms/{userId1}/{userId2}/messages", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/partner-sdk/dms/{user_id_1}/{user_id_2}/messages", rawUrl)
+        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/partner-sdk/dms/{userId1}/{userId2}/messages", rawUrl)
         {
         }
     }

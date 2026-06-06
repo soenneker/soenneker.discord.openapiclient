@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The authorizing_integration_owners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse_authorizing_integration_owners? AuthorizingIntegrationOwners { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponseAuthorizingIntegrationOwnersProperty? AuthorizingIntegrationOwners { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse_authorizing_integration_owners AuthorizingIntegrationOwners { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponseAuthorizingIntegrationOwnersProperty AuthorizingIntegrationOwners { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -47,13 +47,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string OriginalResponseMessageId { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,11 +81,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "authorizing_integration_owners", n => { AuthorizingIntegrationOwners = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse_authorizing_integration_owners>(global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse_authorizing_integration_owners.CreateFromDiscriminatorValue); } },
+                { "authorizing_integration_owners", n => { AuthorizingIntegrationOwners = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponseAuthorizingIntegrationOwnersProperty>(global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponseAuthorizingIntegrationOwnersProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "interacted_message_id", n => { InteractedMessageId = n.GetStringValue(); } },
                 { "original_response_message_id", n => { OriginalResponseMessageId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
             };
         }
@@ -102,11 +96,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse_authorizing_integration_owners>("authorizing_integration_owners", AuthorizingIntegrationOwners);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponseAuthorizingIntegrationOwnersProperty>("authorizing_integration_owners", AuthorizingIntegrationOwners);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("interacted_message_id", InteractedMessageId);
             writer.WriteStringValue("original_response_message_id", OriginalResponseMessageId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }

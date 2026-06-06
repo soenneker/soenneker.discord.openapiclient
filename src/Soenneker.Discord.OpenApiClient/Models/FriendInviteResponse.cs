@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse? Channel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannel? Channel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse Channel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannel Channel { get; set; }
 #endif
         /// <summary>The code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -53,13 +53,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The max_uses property</summary>
         public int? MaxUses { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>The uses property</summary>
         public int? Uses { get; set; }
         /// <summary>
@@ -87,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse>(global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse.CreateFromDiscriminatorValue); } },
+                { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannel>(global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannel.CreateFromDiscriminatorValue); } },
                 { "code", n => { Code = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
@@ -97,7 +91,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "is_contact", n => { IsContact = n.GetBoolValue(); } },
                 { "max_age", n => { MaxAge = n.GetIntValue(); } },
                 { "max_uses", n => { MaxUses = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
                 { "uses", n => { Uses = n.GetIntValue(); } },
             };
         }
@@ -108,7 +102,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse>("channel", Channel);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannel>("channel", Channel);
             writer.WriteStringValue("code", Code);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteDateTimeOffsetValue("expires_at", ExpiresAt);
@@ -118,7 +112,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("is_contact", IsContact);
             writer.WriteIntValue("max_age", MaxAge);
             writer.WriteIntValue("max_uses", MaxUses);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteIntValue("uses", Uses);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\thread-members
+    /// Builds and executes requests for operations under \channels\{channelId}\thread-members
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ThreadMembersRequestBuilder : BaseRequestBuilder
@@ -26,14 +26,14 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers
         }
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item.threadMembers.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers.Item.WithUser_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers.Item.WithUser_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers.Item.WithUserItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers.Item.WithUser_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ThreadMembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/thread-members{?after*,limit*,with_member*}", pathParameters)
+        public ThreadMembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/thread-members{?after*,limit*,with_member*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ThreadMembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/thread-members{?after*,limit*,with_member*}", rawUrl)
+        public ThreadMembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/thread-members{?after*,limit*,with_member*}", rawUrl)
         {
         }
         /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.ThreadMemberResponse&gt;</returns>

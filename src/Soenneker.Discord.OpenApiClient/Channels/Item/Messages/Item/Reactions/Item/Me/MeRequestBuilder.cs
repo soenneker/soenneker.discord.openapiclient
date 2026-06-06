@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.Item.Me
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\messages\{message_id}\reactions\{emoji_name}\@me
+    /// Builds and executes requests for operations under \channels\{channelId}\messages\{messageId}\reactions\{emojiName}\@me
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MeRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/messages/{message_id}/reactions/{emoji_name}/@me", pathParameters)
+        public MeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/messages/{messageId}/reactions/{emojiName}/@me", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/messages/{message_id}/reactions/{emoji_name}/@me", rawUrl)
+        public MeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/messages/{messageId}/reactions/{emojiName}/@me", rawUrl)
         {
         }
         /// <returns>A <see cref="Stream"/></returns>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.Entitlements
 {
     /// <summary>
-    /// Builds and executes requests for operations under \users\@me\applications\{application_id}\entitlements
+    /// Builds and executes requests for operations under \users\@me\applications\{applicationId}\entitlements
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EntitlementsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.Entitlement
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EntitlementsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/applications/{application_id}/entitlements{?exclude_consumed*,sku_ids*}", pathParameters)
+        public EntitlementsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/applications/{applicationId}/entitlements{?exclude_consumed*,sku_ids*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.Entitlement
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EntitlementsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/applications/{application_id}/entitlements{?exclude_consumed*,sku_ids*}", rawUrl)
+        public EntitlementsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/applications/{applicationId}/entitlements{?exclude_consumed*,sku_ids*}", rawUrl)
         {
         }
         /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse&gt;</returns>

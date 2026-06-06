@@ -95,10 +95,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The integration_types_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponse_integration_types_config? IntegrationTypesConfig { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponseIntegrationTypesConfigProperty? IntegrationTypesConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponse_integration_types_config IntegrationTypesConfig { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponseIntegrationTypesConfigProperty IntegrationTypesConfig { get; set; }
 #endif
         /// <summary>The max_participants property</summary>
         public int? MaxParticipants { get; set; }
@@ -159,13 +159,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string TermsOfServiceUrl { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>The verify_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -211,7 +205,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "install_params", n => { InstallParams = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParamsResponse>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParamsResponse.CreateFromDiscriminatorValue); } },
-                { "integration_types_config", n => { IntegrationTypesConfig = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponse_integration_types_config>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponse_integration_types_config.CreateFromDiscriminatorValue); } },
+                { "integration_types_config", n => { IntegrationTypesConfig = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponseIntegrationTypesConfigProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponseIntegrationTypesConfigProperty.CreateFromDiscriminatorValue); } },
                 { "max_participants", n => { MaxParticipants = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "primary_sku_id", n => { PrimarySkuId = n.GetStringValue(); } },
@@ -220,7 +214,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "terms_of_service_url", n => { TermsOfServiceUrl = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
                 { "verify_key", n => { VerifyKey = n.GetStringValue(); } },
             };
         }
@@ -243,7 +237,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParamsResponse>("install_params", InstallParams);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponse_integration_types_config>("integration_types_config", IntegrationTypesConfig);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationResponseIntegrationTypesConfigProperty>("integration_types_config", IntegrationTypesConfig);
             writer.WriteIntValue("max_participants", MaxParticipants);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("primary_sku_id", PrimarySkuId);
@@ -252,7 +246,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("slug", Slug);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
             writer.WriteStringValue("terms_of_service_url", TermsOfServiceUrl);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteStringValue("verify_key", VerifyKey);
             writer.WriteAdditionalData(AdditionalData);
         }

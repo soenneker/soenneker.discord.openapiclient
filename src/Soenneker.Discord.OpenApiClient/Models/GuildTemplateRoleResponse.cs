@@ -19,10 +19,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The colors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse? Colors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponseColors? Colors { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse Colors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponseColors Colors { get; set; }
 #endif
         /// <summary>The hoist property</summary>
         public bool? Hoist { get; set; }
@@ -88,7 +88,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "color", n => { Color = n.GetIntValue(); } },
-                { "colors", n => { Colors = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse.CreateFromDiscriminatorValue); } },
+                { "colors", n => { Colors = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponseColors>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponseColors.CreateFromDiscriminatorValue); } },
                 { "hoist", n => { Hoist = n.GetBoolValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("color", Color);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleColorsResponse>("colors", Colors);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponseColors>("colors", Colors);
             writer.WriteBoolValue("hoist", Hoist);
             writer.WriteStringValue("icon", Icon);
             writer.WriteIntValue("id", Id);

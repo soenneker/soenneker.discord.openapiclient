@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The nicks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_nicks? Nicks { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequestNicks? Nicks { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_nicks Nicks { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequestNicks Nicks { get; set; }
 #endif
         /// <summary>The recipient_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "access_tokens", n => { AccessTokens = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "nicks", n => { Nicks = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_nicks>(global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_nicks.CreateFromDiscriminatorValue); } },
+                { "nicks", n => { Nicks = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequestNicks>(global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequestNicks.CreateFromDiscriminatorValue); } },
                 { "recipient_id", n => { RecipientId = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("access_tokens", AccessTokens);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequest_nicks>("nicks", Nicks);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreatePrivateChannelRequestNicks>("nicks", Nicks);
             writer.WriteStringValue("recipient_id", RecipientId);
             writer.WriteAdditionalData(AdditionalData);
         }

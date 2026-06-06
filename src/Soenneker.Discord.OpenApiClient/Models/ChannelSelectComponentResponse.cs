@@ -55,13 +55,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Placeholder { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentResponse_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentResponse_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentResponse"/> and sets the default values.
         /// </summary>
@@ -95,7 +89,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "max_values", n => { MaxValues = n.GetIntValue(); } },
                 { "min_values", n => { MinValues = n.GetIntValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -113,7 +107,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("max_values", MaxValues);
             writer.WriteIntValue("min_values", MinValues);
             writer.WriteStringValue("placeholder", Placeholder);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentResponse_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

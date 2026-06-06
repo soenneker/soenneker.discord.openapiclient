@@ -63,13 +63,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -109,7 +103,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
             };
         }
@@ -126,7 +120,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }

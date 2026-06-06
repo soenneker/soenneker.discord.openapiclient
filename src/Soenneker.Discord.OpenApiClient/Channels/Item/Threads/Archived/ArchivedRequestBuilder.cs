@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.Threads.Archived
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\threads\archived
+    /// Builds and executes requests for operations under \channels\{channelId}\threads\archived
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ArchivedRequestBuilder : BaseRequestBuilder
@@ -31,7 +31,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Threads.Archived
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArchivedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/threads/archived", pathParameters)
+        public ArchivedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/threads/archived", pathParameters)
         {
         }
         /// <summary>
@@ -39,7 +39,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Threads.Archived
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArchivedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/threads/archived", rawUrl)
+        public ArchivedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/threads/archived", rawUrl)
         {
         }
     }

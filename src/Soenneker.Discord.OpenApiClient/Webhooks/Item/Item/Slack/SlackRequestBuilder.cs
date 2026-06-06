@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Slack
 {
     /// <summary>
-    /// Builds and executes requests for operations under \webhooks\{webhook_id}\{webhook_token}\slack
+    /// Builds and executes requests for operations under \webhooks\{webhookId}\{webhookToken}\slack
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SlackRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Slack
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SlackRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/slack{?thread_id*,wait*}", pathParameters)
+        public SlackRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhookId}/{webhookToken}/slack{?thread_id*,wait*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item.Slack
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SlackRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhook_id}/{webhook_token}/slack{?thread_id*,wait*}", rawUrl)
+        public SlackRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/webhooks/{webhookId}/{webhookToken}/slack{?thread_id*,wait*}", rawUrl)
         {
         }
         /// <returns>A <see cref="string"/></returns>

@@ -9,7 +9,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "zh-CN")]
         #pragma warning disable CS1591
-        ZhCN,
+        ZhCn,
         #pragma warning restore CS1591
     }
 }

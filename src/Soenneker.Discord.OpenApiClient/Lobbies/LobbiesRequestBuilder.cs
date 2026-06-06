@@ -20,14 +20,14 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.lobbies.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Lobbies.Item.WithLobby_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Lobbies.Item.WithLobby_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Lobbies.Item.WithLobbyItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Lobbies.Item.WithLobbyItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("lobby_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Lobbies.Item.WithLobby_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("lobbyId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Lobbies.Item.WithLobbyItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -54,11 +54,11 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse?> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateLobby body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse?> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateLobbyRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateLobby body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateLobbyRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -78,11 +78,11 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse?> PutAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobby body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse?> PutAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse> PutAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobby body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse> PutAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -99,11 +99,11 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateLobby body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateLobbyRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateLobby body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateLobbyRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -118,11 +118,11 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobby body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobby body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

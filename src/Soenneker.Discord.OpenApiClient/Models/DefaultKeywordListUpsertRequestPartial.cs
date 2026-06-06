@@ -15,23 +15,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial.DefaultKeywordListUpsertRequestPartial_actions>? Actions { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartialActionsItem>? Actions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial.DefaultKeywordListUpsertRequestPartial_actions> Actions { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartialActionsItem> Actions { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The enabled property</summary>
         public bool? Enabled { get; set; }
         /// <summary>The event_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType? EventType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType EventType { get; set; }
-#endif
+        public int? EventType { get; set; }
         /// <summary>The exempt_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,13 +59,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListTriggerMetadata TriggerMetadata { get; set; }
 #endif
         /// <summary>The trigger_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial_trigger_type? TriggerType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial_trigger_type TriggerType { get; set; }
-#endif
+        public int? TriggerType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial"/> and sets the default values.
         /// </summary>
@@ -97,14 +85,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial.DefaultKeywordListUpsertRequestPartial_actions>(global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial.DefaultKeywordListUpsertRequestPartial_actions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartialActionsItem>(global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartialActionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "event_type", n => { EventType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType>(global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType.CreateFromDiscriminatorValue); } },
+                { "event_type", n => { EventType = n.GetIntValue(); } },
                 { "exempt_channels", n => { ExemptChannels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "exempt_roles", n => { ExemptRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "trigger_metadata", n => { TriggerMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListTriggerMetadata>(global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListTriggerMetadata.CreateFromDiscriminatorValue); } },
-                { "trigger_type", n => { TriggerType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial_trigger_type>(global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial_trigger_type.CreateFromDiscriminatorValue); } },
+                { "trigger_type", n => { TriggerType = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -114,130 +102,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial.DefaultKeywordListUpsertRequestPartial_actions>("actions", Actions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartialActionsItem>("actions", Actions);
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType>("event_type", EventType);
+            writer.WriteIntValue("event_type", EventType);
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_channels", ExemptChannels);
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_roles", ExemptRoles);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListTriggerMetadata>("trigger_metadata", TriggerMetadata);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial_trigger_type>("trigger_type", TriggerType);
+            writer.WriteIntValue("trigger_type", TriggerType);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.BlockMessageAction"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelAction"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserAction"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledAction"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DefaultKeywordListUpsertRequestPartial_actions : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.BlockMessageAction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageAction? BlockMessageAction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageAction BlockMessageAction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelAction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelAction? FlagToChannelAction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelAction FlagToChannelAction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserAction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserAction? QuarantineUserAction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserAction QuarantineUserAction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledAction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledAction? UserCommunicationDisabledAction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledAction UserCommunicationDisabledAction { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial.DefaultKeywordListUpsertRequestPartial_actions"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial.DefaultKeywordListUpsertRequestPartial_actions CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestPartial.DefaultKeywordListUpsertRequestPartial_actions();
-                if("BlockMessageAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.BlockMessageAction = new global::Soenneker.Discord.OpenApiClient.Models.BlockMessageAction();
-                }
-                else if("FlagToChannelAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.FlagToChannelAction = new global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelAction();
-                }
-                else if("QuarantineUserAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.QuarantineUserAction = new global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserAction();
-                }
-                else if("UserCommunicationDisabledAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UserCommunicationDisabledAction = new global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledAction();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BlockMessageAction != null)
-                {
-                    return BlockMessageAction.GetFieldDeserializers();
-                }
-                else if(FlagToChannelAction != null)
-                {
-                    return FlagToChannelAction.GetFieldDeserializers();
-                }
-                else if(QuarantineUserAction != null)
-                {
-                    return QuarantineUserAction.GetFieldDeserializers();
-                }
-                else if(UserCommunicationDisabledAction != null)
-                {
-                    return UserCommunicationDisabledAction.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(BlockMessageAction != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BlockMessageAction>(null, BlockMessageAction);
-                }
-                else if(FlagToChannelAction != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelAction>(null, FlagToChannelAction);
-                }
-                else if(QuarantineUserAction != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserAction>(null, QuarantineUserAction);
-                }
-                else if(UserCommunicationDisabledAction != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledAction>(null, UserCommunicationDisabledAction);
-                }
-            }
         }
     }
 }

@@ -51,10 +51,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse_metadata? Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.LobbyResponseMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse_metadata Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.LobbyResponseMetadata Metadata { get; set; }
 #endif
         /// <summary>The override_event_webhooks_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,7 +94,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "linked_channel", n => { LinkedChannel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse.CreateFromDiscriminatorValue); } },
                 { "members", n => { Members = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponse>(global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse_metadata>(global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponseMetadata>(global::Soenneker.Discord.OpenApiClient.Models.LobbyResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "override_event_webhooks_url", n => { OverrideEventWebhooksUrl = n.GetStringValue(); } },
             };
         }
@@ -110,7 +110,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse>("linked_channel", LinkedChannel);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponse>("members", Members);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponse_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyResponseMetadata>("metadata", Metadata);
             writer.WriteStringValue("override_event_webhooks_url", OverrideEventWebhooksUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

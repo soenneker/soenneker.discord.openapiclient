@@ -25,13 +25,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForModalRequest_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForModalRequest_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForModalRequest"/> and sets the default values.
         /// </summary>
@@ -59,7 +53,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.TextInputComponentForModalRequest>(global::Soenneker.Discord.OpenApiClient.Models.TextInputComponentForModalRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForModalRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForModalRequest_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -71,7 +65,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.TextInputComponentForModalRequest>("components", Components);
             writer.WriteIntValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForModalRequest_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

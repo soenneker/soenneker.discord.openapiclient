@@ -23,13 +23,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string AfkChannelId { get; set; }
 #endif
         /// <summary>The afk_timeout property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts? AfkTimeout { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts AfkTimeout { get; set; }
-#endif
+        public int? AfkTimeout { get; set; }
         /// <summary>The channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,13 +33,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public List<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponse> Channels { get; set; }
 #endif
         /// <summary>The default_message_notifications property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings? DefaultMessageNotifications { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings DefaultMessageNotifications { get; set; }
-#endif
+        public int? DefaultMessageNotifications { get; set; }
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,13 +43,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The explicit_content_filter property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes? ExplicitContentFilter { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes ExplicitContentFilter { get; set; }
-#endif
+        public int? ExplicitContentFilter { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,13 +87,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string SystemChannelId { get; set; }
 #endif
         /// <summary>The verification_level property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels? VerificationLevel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels VerificationLevel { get; set; }
-#endif
+        public int? VerificationLevel { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateSnapshotResponse"/> and sets the default values.
         /// </summary>
@@ -138,18 +114,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "afk_channel_id", n => { AfkChannelId = n.GetStringValue(); } },
-                { "afk_timeout", n => { AfkTimeout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts>(global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts.CreateFromDiscriminatorValue); } },
+                { "afk_timeout", n => { AfkTimeout = n.GetIntValue(); } },
                 { "channels", n => { Channels = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "default_message_notifications", n => { DefaultMessageNotifications = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings>(global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings.CreateFromDiscriminatorValue); } },
+                { "default_message_notifications", n => { DefaultMessageNotifications = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes>(global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes.CreateFromDiscriminatorValue); } },
+                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "preferred_locale", n => { PreferredLocale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>(global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum.CreateFromDiscriminatorValue); } },
                 { "region", n => { Region = n.GetStringValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "system_channel_flags", n => { SystemChannelFlags = n.GetIntValue(); } },
                 { "system_channel_id", n => { SystemChannelId = n.GetStringValue(); } },
-                { "verification_level", n => { VerificationLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels>(global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels.CreateFromDiscriminatorValue); } },
+                { "verification_level", n => { VerificationLevel = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -160,18 +136,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("afk_channel_id", AfkChannelId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts>("afk_timeout", AfkTimeout);
+            writer.WriteIntValue("afk_timeout", AfkTimeout);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponse>("channels", Channels);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings>("default_message_notifications", DefaultMessageNotifications);
+            writer.WriteIntValue("default_message_notifications", DefaultMessageNotifications);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes>("explicit_content_filter", ExplicitContentFilter);
+            writer.WriteIntValue("explicit_content_filter", ExplicitContentFilter);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>("preferred_locale", PreferredLocale);
             writer.WriteStringValue("region", Region);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse>("roles", Roles);
             writer.WriteIntValue("system_channel_flags", SystemChannelFlags);
             writer.WriteStringValue("system_channel_id", SystemChannelId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels>("verification_level", VerificationLevel);
+            writer.WriteIntValue("verification_level", VerificationLevel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

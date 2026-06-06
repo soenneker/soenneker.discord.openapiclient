@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands.Item.Permissions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \applications\{application_id}\guilds\{guild_id}\commands\{command_id}\permissions
+    /// Builds and executes requests for operations under \applications\{applicationId}\guilds\{guildId}\commands\{commandId}\permissions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PermissionsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PermissionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/guilds/{guild_id}/commands/{command_id}/permissions", pathParameters)
+        public PermissionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/guilds/{guildId}/commands/{commandId}/permissions", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PermissionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/guilds/{guild_id}/commands/{command_id}/permissions", rawUrl)
+        public PermissionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/guilds/{guildId}/commands/{commandId}/permissions", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CommandPermissionsResponse"/></returns>
@@ -63,11 +63,11 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CommandPermissionsResponse?> PutAsync(global::Soenneker.Discord.OpenApiClient.Models.SetGuildApplicationCommandPermissions body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CommandPermissionsResponse?> PutAsync(global::Soenneker.Discord.OpenApiClient.Models.SetGuildApplicationCommandPermissionsRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CommandPermissionsResponse> PutAsync(global::Soenneker.Discord.OpenApiClient.Models.SetGuildApplicationCommandPermissions body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CommandPermissionsResponse> PutAsync(global::Soenneker.Discord.OpenApiClient.Models.SetGuildApplicationCommandPermissionsRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -100,11 +100,11 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.SetGuildApplicationCommandPermissions body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.SetGuildApplicationCommandPermissionsRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.SetGuildApplicationCommandPermissions body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.SetGuildApplicationCommandPermissionsRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

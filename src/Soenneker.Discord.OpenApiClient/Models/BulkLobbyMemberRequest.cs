@@ -27,10 +27,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_metadata? Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_metadata Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadata Metadata { get; set; }
 #endif
         /// <summary>The remove_member property</summary>
         public bool? RemoveMember { get; set; }
@@ -61,7 +61,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_metadata>(global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadata>(global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadata.CreateFromDiscriminatorValue); } },
                 { "remove_member", n => { RemoveMember = n.GetBoolValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadata>("metadata", Metadata);
             writer.WriteBoolValue("remove_member", RemoveMember);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -19,10 +19,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The colors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RoleColors? Colors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateRoleRequestPartialColors? Colors { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RoleColors Colors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateRoleRequestPartialColors Colors { get; set; }
 #endif
         /// <summary>The hoist property</summary>
         public bool? Hoist { get; set; }
@@ -80,7 +80,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "color", n => { Color = n.GetIntValue(); } },
-                { "colors", n => { Colors = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RoleColors>(global::Soenneker.Discord.OpenApiClient.Models.RoleColors.CreateFromDiscriminatorValue); } },
+                { "colors", n => { Colors = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateRoleRequestPartialColors>(global::Soenneker.Discord.OpenApiClient.Models.UpdateRoleRequestPartialColors.CreateFromDiscriminatorValue); } },
                 { "hoist", n => { Hoist = n.GetBoolValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "mentionable", n => { Mentionable = n.GetBoolValue(); } },
@@ -97,7 +97,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("color", Color);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RoleColors>("colors", Colors);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateRoleRequestPartialColors>("colors", Colors);
             writer.WriteBoolValue("hoist", Hoist);
             writer.WriteStringValue("icon", Icon);
             writer.WriteBoolValue("mentionable", Mentionable);

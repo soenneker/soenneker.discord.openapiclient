@@ -10,7 +10,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "PLAYSTATION_NETWORK_ID_TOKEN")]
         #pragma warning disable CS1591
-        PLAYSTATION_NETWORK_ID_TOKEN,
+        PlaystationNetworkIdToken,
         #pragma warning restore CS1591
     }
 }

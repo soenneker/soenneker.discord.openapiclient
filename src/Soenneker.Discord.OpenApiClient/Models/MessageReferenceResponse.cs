@@ -39,13 +39,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string MessageId { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceType Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceResponse"/> and sets the default values.
         /// </summary>
@@ -74,7 +68,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "message_id", n => { MessageId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceType>(global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -87,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("message_id", MessageId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceType>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

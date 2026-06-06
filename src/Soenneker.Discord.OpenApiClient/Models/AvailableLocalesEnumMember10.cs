@@ -9,7 +9,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "es-ES")]
         #pragma warning disable CS1591
-        EsES,
+        EsEs,
         #pragma warning restore CS1591
     }
 }

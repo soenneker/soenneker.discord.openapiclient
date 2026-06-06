@@ -89,7 +89,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum();
             if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumMember1>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumMember1 availableLocalesEnumMember1Value)
             {

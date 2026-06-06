@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.Threads.Search
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\threads\search
+    /// Builds and executes requests for operations under \channels\{channelId}\threads\search
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SearchRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Threads.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/threads/search{?archived*,limit*,max_id*,min_id*,name*,offset*,slop*,sort_by*,sort_order*,tag*,tag_setting*}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/threads/search{?archived*,limit*,max_id*,min_id*,name*,offset*,slop*,sort_by*,sort_order*,tag*,tag_setting*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Threads.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/threads/search{?archived*,limit*,max_id*,min_id*,name*,offset*,slop*,sort_by*,sort_order*,tag*,tag_setting*}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/threads/search{?archived*,limit*,max_id*,min_id*,name*,offset*,slop*,sort_by*,sort_order*,tag*,tag_setting*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchResponse"/></returns>

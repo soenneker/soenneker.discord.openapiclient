@@ -21,10 +21,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The include_roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UnionBranch? IncludeRoles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles? IncludeRoles { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UnionBranch IncludeRoles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles IncludeRoles { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequest"/> and sets the default values.
@@ -53,7 +53,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "compute_prune_count", n => { ComputePruneCount = n.GetBoolValue(); } },
                 { "days", n => { Days = n.GetIntValue(); } },
-                { "include_roles", n => { IncludeRoles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UnionBranch>(global::Soenneker.Discord.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "include_roles", n => { IncludeRoles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles>(global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("compute_prune_count", ComputePruneCount);
             writer.WriteIntValue("days", Days);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UnionBranch>("include_roles", IncludeRoles);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles>("include_roles", IncludeRoles);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

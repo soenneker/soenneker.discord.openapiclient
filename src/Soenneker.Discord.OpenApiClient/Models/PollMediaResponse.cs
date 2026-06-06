@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.MessageReactionEmojiResponse Emoji { get; set; }
 #endif
-        /// <summary>The text property</summary>
+        /// <summary>The text of the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Text { get; set; }

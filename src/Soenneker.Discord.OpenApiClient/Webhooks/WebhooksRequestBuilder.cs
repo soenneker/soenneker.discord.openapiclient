@@ -17,14 +17,14 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.webhooks.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhookItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhookItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("webhook_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhook_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("webhookId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Webhooks.Item.WithWebhookItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

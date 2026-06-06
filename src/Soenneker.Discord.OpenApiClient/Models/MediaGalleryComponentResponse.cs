@@ -25,13 +25,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public List<global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryItemResponse> Items { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse"/> and sets the default values.
         /// </summary>
@@ -59,7 +53,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryItemResponse>(global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryItemResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -71,7 +65,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryItemResponse>("items", Items);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

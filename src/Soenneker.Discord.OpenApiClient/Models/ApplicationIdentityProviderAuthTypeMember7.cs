@@ -10,7 +10,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "APPLE_ID_TOKEN")]
         #pragma warning disable CS1591
-        APPLE_ID_TOKEN,
+        AppleIdToken,
         #pragma warning restore CS1591
     }
 }

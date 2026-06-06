@@ -10,7 +10,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "guild_subscription")]
         #pragma warning disable CS1591
-        Guild_subscription,
+        GuildSubscription,
         #pragma warning restore CS1591
     }
 }

@@ -15,13 +15,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The format_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes? FormatType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes FormatType { get; set; }
-#endif
+        public int? FormatType { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,7 +57,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "format_type", n => { FormatType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes>(global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes.CreateFromDiscriminatorValue); } },
+                { "format_type", n => { FormatType = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
             };
@@ -75,7 +69,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes>("format_type", FormatType);
+            writer.WriteIntValue("format_type", FormatType);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);

@@ -27,10 +27,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest? Emoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StringSelectOptionForRequestEmoji? Emoji { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest Emoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StringSelectOptionForRequestEmoji Emoji { get; set; }
 #endif
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "default", n => { Default = n.GetBoolValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest>(global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest.CreateFromDiscriminatorValue); } },
+                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StringSelectOptionForRequestEmoji>(global::Soenneker.Discord.OpenApiClient.Models.StringSelectOptionForRequestEmoji.CreateFromDiscriminatorValue); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
@@ -89,7 +89,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("default", Default);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest>("emoji", Emoji);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StringSelectOptionForRequestEmoji>("emoji", Emoji);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

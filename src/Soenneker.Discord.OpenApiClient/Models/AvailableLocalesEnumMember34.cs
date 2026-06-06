@@ -9,7 +9,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "zh-TW")]
         #pragma warning disable CS1591
-        ZhTW,
+        ZhTw,
         #pragma warning restore CS1591
     }
 }

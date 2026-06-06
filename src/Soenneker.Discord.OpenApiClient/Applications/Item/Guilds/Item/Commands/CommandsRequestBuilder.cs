@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands
 {
     /// <summary>
-    /// Builds and executes requests for operations under \applications\{application_id}\guilds\{guild_id}\commands
+    /// Builds and executes requests for operations under \applications\{applicationId}\guilds\{guildId}\commands
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CommandsRequestBuilder : BaseRequestBuilder
@@ -26,14 +26,14 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands
         }
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.applications.item.guilds.item.commands.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands.Item.WithCommand_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands.Item.WithCommand_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands.Item.WithCommandItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands.Item.WithCommandItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("command_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands.Item.WithCommand_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("commandId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands.Item.WithCommandItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CommandsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/guilds/{guild_id}/commands{?with_localizations*}", pathParameters)
+        public CommandsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/guilds/{guildId}/commands{?with_localizations*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CommandsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/guilds/{guild_id}/commands{?with_localizations*}", rawUrl)
+        public CommandsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/guilds/{guildId}/commands{?with_localizations*}", rawUrl)
         {
         }
         /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse&gt;</returns>

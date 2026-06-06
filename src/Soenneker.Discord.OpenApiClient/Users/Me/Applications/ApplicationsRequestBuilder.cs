@@ -17,14 +17,14 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Applications
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.users.Me.applications.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.WithApplication_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.WithApplication_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.WithApplicationItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.WithApplicationItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("application_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.WithApplication_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("applicationId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.WithApplicationItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

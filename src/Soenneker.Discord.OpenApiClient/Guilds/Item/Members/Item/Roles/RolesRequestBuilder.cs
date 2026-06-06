@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Members.Item.Roles
 {
     /// <summary>
-    /// Builds and executes requests for operations under \guilds\{guild_id}\members\{user_id}\roles
+    /// Builds and executes requests for operations under \guilds\{guildId}\members\{userId}\roles
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RolesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.guilds.item.members.item.roles.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Members.Item.Roles.Item.WithRole_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Members.Item.Roles.Item.WithRole_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Members.Item.Roles.Item.WithRoleItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Members.Item.Roles.Item.WithRoleItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("role_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Members.Item.Roles.Item.WithRole_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("roleId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Members.Item.Roles.Item.WithRoleItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Members.Item.Roles
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RolesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/members/{user_id}/roles", pathParameters)
+        public RolesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/members/{userId}/roles", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Members.Item.Roles
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RolesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/members/{user_id}/roles", rawUrl)
+        public RolesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/members/{userId}/roles", rawUrl)
         {
         }
     }

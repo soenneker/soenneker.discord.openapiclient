@@ -57,20 +57,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The event_webhooks_status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationEventWebhooksStatus? EventWebhooksStatus { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationEventWebhooksStatus EventWebhooksStatus { get; set; }
-#endif
+        public int? EventWebhooksStatus { get; set; }
         /// <summary>The event_webhooks_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_event_webhooks_types?>? EventWebhooksTypes { get; set; }
+        public List<string>? EventWebhooksTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_event_webhooks_types?> EventWebhooksTypes { get; set; }
+        public List<string> EventWebhooksTypes { get; set; }
 #endif
         /// <summary>The event_webhooks_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,13 +75,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string EventWebhooksUrl { get; set; }
 #endif
         /// <summary>The explicit_content_filter property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes? ExplicitContentFilter { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes ExplicitContentFilter { get; set; }
-#endif
+        public int? ExplicitContentFilter { get; set; }
         /// <summary>The flags property</summary>
         public int? Flags { get; set; }
         /// <summary>The flags_new property</summary>
@@ -133,10 +121,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The integration_types_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_integration_types_config? IntegrationTypesConfig { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseIntegrationTypesConfigProperty? IntegrationTypesConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_integration_types_config IntegrationTypesConfig { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseIntegrationTypesConfigProperty IntegrationTypesConfig { get; set; }
 #endif
         /// <summary>The interactions_endpoint_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -223,10 +211,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.TeamResponse? Team { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam? Team { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.TeamResponse Team { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam Team { get; set; }
 #endif
         /// <summary>The terms_of_service_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -237,13 +225,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string TermsOfServiceUrl { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>The verify_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -286,17 +268,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "cover_image", n => { CoverImage = n.GetStringValue(); } },
                 { "custom_install_url", n => { CustomInstallUrl = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "event_webhooks_status", n => { EventWebhooksStatus = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationEventWebhooksStatus>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationEventWebhooksStatus.CreateFromDiscriminatorValue); } },
-                { "event_webhooks_types", n => { EventWebhooksTypes = n.GetCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_event_webhooks_types>()?.AsList(); } },
+                { "event_webhooks_status", n => { EventWebhooksStatus = n.GetIntValue(); } },
+                { "event_webhooks_types", n => { EventWebhooksTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "event_webhooks_url", n => { EventWebhooksUrl = n.GetStringValue(); } },
-                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes.CreateFromDiscriminatorValue); } },
+                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetIntValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "flags_new", n => { FlagsNew = n.GetStringValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "install_params", n => { InstallParams = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParamsResponse>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParamsResponse.CreateFromDiscriminatorValue); } },
-                { "integration_types_config", n => { IntegrationTypesConfig = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_integration_types_config>(global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_integration_types_config.CreateFromDiscriminatorValue); } },
+                { "integration_types_config", n => { IntegrationTypesConfig = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseIntegrationTypesConfigProperty>(global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseIntegrationTypesConfigProperty.CreateFromDiscriminatorValue); } },
                 { "interactions_endpoint_url", n => { InteractionsEndpointUrl = n.GetStringValue(); } },
                 { "max_participants", n => { MaxParticipants = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -308,9 +290,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "rpc_origins", n => { RpcOrigins = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamResponse>(global::Soenneker.Discord.OpenApiClient.Models.TeamResponse.CreateFromDiscriminatorValue); } },
+                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam>(global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam.CreateFromDiscriminatorValue); } },
                 { "terms_of_service_url", n => { TermsOfServiceUrl = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
                 { "verify_key", n => { VerifyKey = n.GetStringValue(); } },
             };
         }
@@ -330,17 +312,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("cover_image", CoverImage);
             writer.WriteStringValue("custom_install_url", CustomInstallUrl);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationEventWebhooksStatus>("event_webhooks_status", EventWebhooksStatus);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_event_webhooks_types>("event_webhooks_types", EventWebhooksTypes);
+            writer.WriteIntValue("event_webhooks_status", EventWebhooksStatus);
+            writer.WriteCollectionOfPrimitiveValues<string>("event_webhooks_types", EventWebhooksTypes);
             writer.WriteStringValue("event_webhooks_url", EventWebhooksUrl);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes>("explicit_content_filter", ExplicitContentFilter);
+            writer.WriteIntValue("explicit_content_filter", ExplicitContentFilter);
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("flags_new", FlagsNew);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParamsResponse>("install_params", InstallParams);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse_integration_types_config>("integration_types_config", IntegrationTypesConfig);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseIntegrationTypesConfigProperty>("integration_types_config", IntegrationTypesConfig);
             writer.WriteStringValue("interactions_endpoint_url", InteractionsEndpointUrl);
             writer.WriteIntValue("max_participants", MaxParticipants);
             writer.WriteStringValue("name", Name);
@@ -352,9 +334,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("rpc_origins", RpcOrigins);
             writer.WriteStringValue("slug", Slug);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamResponse>("team", Team);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam>("team", Team);
             writer.WriteStringValue("terms_of_service_url", TermsOfServiceUrl);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes_Wrapper>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteStringValue("verify_key", VerifyKey);
             writer.WriteAdditionalData(AdditionalData);
         }

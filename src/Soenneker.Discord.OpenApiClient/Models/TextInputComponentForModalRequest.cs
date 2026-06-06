@@ -47,21 +47,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The required property</summary>
         public bool? Required { get; set; }
         /// <summary>The style property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.TextInputStyleTypes? Style { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.TextInputStyleTypes Style { get; set; }
-#endif
+        public int? Style { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.TextInputComponentForModalRequest_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.TextInputComponentForModalRequest_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,8 +90,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "min_length", n => { MinLength = n.GetIntValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
-                { "style", n => { Style = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TextInputStyleTypes>(global::Soenneker.Discord.OpenApiClient.Models.TextInputStyleTypes.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TextInputComponentForModalRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.TextInputComponentForModalRequest_type.CreateFromDiscriminatorValue); } },
+                { "style", n => { Style = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetIntValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
         }
@@ -121,8 +109,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("min_length", MinLength);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteBoolValue("required", Required);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TextInputStyleTypes>("style", Style);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TextInputComponentForModalRequest_type>("type", Type);
+            writer.WriteIntValue("style", Style);
+            writer.WriteIntValue("type", Type);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }

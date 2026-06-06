@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements
 {
     /// <summary>
-    /// Builds and executes requests for operations under \applications\{application_id}\entitlements
+    /// Builds and executes requests for operations under \applications\{applicationId}\entitlements
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EntitlementsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.applications.item.entitlements.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.Item.WithEntitlement_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.Item.WithEntitlement_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.Item.WithEntitlementItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.Item.WithEntitlementItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("entitlement_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.Item.WithEntitlement_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("entitlementId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements.Item.WithEntitlementItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EntitlementsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/entitlements{?after*,before*,exclude_deleted*,exclude_ended*,guild_id*,limit*,only_active*,sku_ids*,user_id*}", pathParameters)
+        public EntitlementsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/entitlements{?after*,before*,exclude_deleted*,exclude_ended*,guild_id*,limit*,only_active*,sku_ids*,user_id*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Entitlements
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EntitlementsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/entitlements{?after*,before*,exclude_deleted*,exclude_ended*,guild_id*,limit*,only_active*,sku_ids*,user_id*}", rawUrl)
+        public EntitlementsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/entitlements{?after*,before*,exclude_deleted*,exclude_ended*,guild_id*,limit*,only_active*,sku_ids*,user_id*}", rawUrl)
         {
         }
         /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponse&gt;</returns>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Bulk
 {
     /// <summary>
-    /// Builds and executes requests for operations under \lobbies\{lobby_id}\members\bulk
+    /// Builds and executes requests for operations under \lobbies\{lobbyId}\members\bulk
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Bulk
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BulkRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobby_id}/members/bulk", pathParameters)
+        public BulkRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobbyId}/members/bulk", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Bulk
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BulkRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobby_id}/members/bulk", rawUrl)
+        public BulkRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobbyId}/members/bulk", rawUrl)
         {
         }
         /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponse&gt;</returns>

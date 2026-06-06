@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Item.Invites
 {
     /// <summary>
-    /// Builds and executes requests for operations under \lobbies\{lobby_id}\members\{user_id}\invites
+    /// Builds and executes requests for operations under \lobbies\{lobbyId}\members\{userId}\invites
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InvitesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Item.Invites
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InvitesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobby_id}/members/{user_id}/invites", pathParameters)
+        public InvitesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobbyId}/members/{userId}/invites", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Item.Invites
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InvitesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobby_id}/members/{user_id}/invites", rawUrl)
+        public InvitesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobbyId}/members/{userId}/invites", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.LobbyGuildInviteResponse"/></returns>

@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules
 {
     /// <summary>
-    /// Builds and executes requests for operations under \guilds\{guild_id}\auto-moderation\rules
+    /// Builds and executes requests for operations under \guilds\{guildId}\auto-moderation\rules
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RulesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.guilds.item.autoModeration.rules.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRuleItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRuleItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("rule_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRule_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("ruleId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.Item.WithRuleItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/auto-moderation/rules", pathParameters)
+        public RulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/auto-moderation/rules", pathParameters)
         {
         }
         /// <summary>
@@ -43,21 +43,21 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/auto-moderation/rules", rawUrl)
+        public RulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/auto-moderation/rules", rawUrl)
         {
         }
-        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.RulesRequestBuilder.ListAutoModerationRules200&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.ListAutoModerationRules200ResponseItem&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.RulesRequestBuilder.ListAutoModerationRules200>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Models.ListAutoModerationRules200ResponseItem>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.RulesRequestBuilder.ListAutoModerationRules200>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Models.ListAutoModerationRules200ResponseItem>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -66,10 +66,10 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.RulesRequestBuilder.ListAutoModerationRules200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.RulesRequestBuilder.ListAutoModerationRules200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Models.ListAutoModerationRules200ResponseItem>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.ListAutoModerationRules200ResponseItem.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -77,11 +77,11 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule200?> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule200Response?> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRuleRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule200> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule200Response> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRuleRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -91,7 +91,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule200>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule200Response>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -114,11 +114,11 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRuleRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRule body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRuleRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -136,141 +136,6 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules
         public global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.RulesRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.RulesRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ListAutoModerationRules200 : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse? DefaultKeywordRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse DefaultKeywordRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse? KeywordRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse KeywordRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse? MentionSpamRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse MentionSpamRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse? MLSpamRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse MLSpamRuleResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse? SpamLinkRuleResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse SpamLinkRuleResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.RulesRequestBuilder.ListAutoModerationRules200"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.RulesRequestBuilder.ListAutoModerationRules200 CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration.Rules.RulesRequestBuilder.ListAutoModerationRules200();
-                if("DefaultKeywordRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.DefaultKeywordRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse();
-                }
-                else if("KeywordRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.KeywordRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse();
-                }
-                else if("MLSpamRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MLSpamRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse();
-                }
-                else if("MentionSpamRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MentionSpamRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse();
-                }
-                else if("SpamLinkRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SpamLinkRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(DefaultKeywordRuleResponse != null)
-                {
-                    return DefaultKeywordRuleResponse.GetFieldDeserializers();
-                }
-                else if(KeywordRuleResponse != null)
-                {
-                    return KeywordRuleResponse.GetFieldDeserializers();
-                }
-                else if(MentionSpamRuleResponse != null)
-                {
-                    return MentionSpamRuleResponse.GetFieldDeserializers();
-                }
-                else if(MLSpamRuleResponse != null)
-                {
-                    return MLSpamRuleResponse.GetFieldDeserializers();
-                }
-                else if(SpamLinkRuleResponse != null)
-                {
-                    return SpamLinkRuleResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(DefaultKeywordRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse>(null, DefaultKeywordRuleResponse);
-                }
-                else if(KeywordRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse>(null, KeywordRuleResponse);
-                }
-                else if(MentionSpamRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse>(null, MentionSpamRuleResponse);
-                }
-                else if(MLSpamRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MLSpamRuleResponse>(null, MLSpamRuleResponse);
-                }
-                else if(SpamLinkRuleResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SpamLinkRuleResponse>(null, SpamLinkRuleResponse);
-                }
-            }
         }
     }
 }

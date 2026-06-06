@@ -14,6 +14,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>ID of the scheduled event exception</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GuildScheduledEventExceptionId { get; set; }
+#nullable restore
+#else
+        public string GuildScheduledEventExceptionId { get; set; }
+#endif
         /// <summary>The guild_scheduled_event_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -30,6 +38,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse Member { get; set; }
 #endif
+        /// <summary>The response property</summary>
+        public int? Response { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,8 +81,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "guild_scheduled_event_exception_id", n => { GuildScheduledEventExceptionId = n.GetStringValue(); } },
                 { "guild_scheduled_event_id", n => { GuildScheduledEventId = n.GetStringValue(); } },
                 { "member", n => { Member = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse.CreateFromDiscriminatorValue); } },
+                { "response", n => { Response = n.GetIntValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
@@ -84,8 +96,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("guild_scheduled_event_exception_id", GuildScheduledEventExceptionId);
             writer.WriteStringValue("guild_scheduled_event_id", GuildScheduledEventId);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse>("member", Member);
+            writer.WriteIntValue("response", Response);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);

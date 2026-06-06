@@ -39,13 +39,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwrites? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwrites Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteResponse"/> and sets the default values.
         /// </summary>
@@ -74,7 +68,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "allow", n => { Allow = n.GetStringValue(); } },
                 { "deny", n => { Deny = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwrites>(global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwrites.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -87,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("allow", Allow);
             writer.WriteStringValue("deny", Deny);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwrites>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

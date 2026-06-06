@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Users.Counts;
 using Soenneker.Discord.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -12,17 +13,22 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Users
 {
     /// <summary>
-    /// Builds and executes requests for operations under \guilds\{guild_id}\scheduled-events\{guild_scheduled_event_id}\users
+    /// Builds and executes requests for operations under \guilds\{guildId}\scheduled-events\{guildScheduledEventId}\users
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UsersRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The counts property</summary>
+        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Users.Counts.CountsRequestBuilder Counts
+        {
+            get => new global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Users.Counts.CountsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Users.UsersRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}/users{?after*,before*,limit*,with_member*}", pathParameters)
+        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/scheduled-events/{guildScheduledEventId}/users{?after*,before*,limit*,with_member*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +36,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Users
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}/users{?after*,before*,limit*,with_member*}", rawUrl)
+        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/scheduled-events/{guildScheduledEventId}/users{?after*,before*,limit*,with_member*}", rawUrl)
         {
         }
         /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse&gt;</returns>

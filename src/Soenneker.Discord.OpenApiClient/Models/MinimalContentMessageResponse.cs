@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The components property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_components>? Components { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponseComponentsItem>? Components { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_components> Components { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponseComponentsItem> Components { get; set; }
 #endif
         /// <summary>The content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -77,21 +77,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The stickers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_stickers>? Stickers { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponseStickersItem>? Stickers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_stickers> Stickers { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponseStickersItem> Stickers { get; set; }
 #endif
         /// <summary>The timestamp property</summary>
         public DateTimeOffset? Timestamp { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageType Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse"/> and sets the default values.
         /// </summary>
@@ -118,7 +112,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_components>(global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_components.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponseComponentsItem>(global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponseComponentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "edited_timestamp", n => { EditedTimestamp = n.GetDateTimeOffsetValue(); } },
                 { "embeds", n => { Embeds = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedResponse.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -126,9 +120,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "mention_roles", n => { MentionRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "mentions", n => { Mentions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "sticker_items", n => { StickerItems = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageStickerItemResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageStickerItemResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "stickers", n => { Stickers = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_stickers>(global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_stickers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "stickers", n => { Stickers = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponseStickersItem>(global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponseStickersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageType>(global::Soenneker.Discord.OpenApiClient.Models.MessageType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -139,7 +133,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentResponse>("attachments", Attachments);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_components>("components", Components);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponseComponentsItem>("components", Components);
             writer.WriteStringValue("content", Content);
             writer.WriteDateTimeOffsetValue("edited_timestamp", EditedTimestamp);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageEmbedResponse>("embeds", Embeds);
@@ -147,260 +141,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("mention_roles", MentionRoles);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("mentions", Mentions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageStickerItemResponse>("sticker_items", StickerItems);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_stickers>("stickers", Stickers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponseStickersItem>("stickers", Stickers);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageType>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class MinimalContentMessageResponse_components : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentResponse? ActionRowComponentResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentResponse ActionRowComponentResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse? ContainerComponentResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse ContainerComponentResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse? FileComponentResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse FileComponentResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse? MediaGalleryComponentResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse MediaGalleryComponentResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse? SectionComponentResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse SectionComponentResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse? SeparatorComponentResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse SeparatorComponentResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse? TextDisplayComponentResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse TextDisplayComponentResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_components"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_components CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_components();
-                if("ActionRowComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ActionRowComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentResponse();
-                }
-                else if("ContainerComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ContainerComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse();
-                }
-                else if("FileComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.FileComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse();
-                }
-                else if("MediaGalleryComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.MediaGalleryComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse();
-                }
-                else if("SectionComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SectionComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse();
-                }
-                else if("SeparatorComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SeparatorComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse();
-                }
-                else if("TextDisplayComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.TextDisplayComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ActionRowComponentResponse != null)
-                {
-                    return ActionRowComponentResponse.GetFieldDeserializers();
-                }
-                else if(ContainerComponentResponse != null)
-                {
-                    return ContainerComponentResponse.GetFieldDeserializers();
-                }
-                else if(FileComponentResponse != null)
-                {
-                    return FileComponentResponse.GetFieldDeserializers();
-                }
-                else if(MediaGalleryComponentResponse != null)
-                {
-                    return MediaGalleryComponentResponse.GetFieldDeserializers();
-                }
-                else if(SectionComponentResponse != null)
-                {
-                    return SectionComponentResponse.GetFieldDeserializers();
-                }
-                else if(SeparatorComponentResponse != null)
-                {
-                    return SeparatorComponentResponse.GetFieldDeserializers();
-                }
-                else if(TextDisplayComponentResponse != null)
-                {
-                    return TextDisplayComponentResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ActionRowComponentResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentResponse>(null, ActionRowComponentResponse);
-                }
-                else if(ContainerComponentResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse>(null, ContainerComponentResponse);
-                }
-                else if(FileComponentResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse>(null, FileComponentResponse);
-                }
-                else if(MediaGalleryComponentResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse>(null, MediaGalleryComponentResponse);
-                }
-                else if(SectionComponentResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse>(null, SectionComponentResponse);
-                }
-                else if(SeparatorComponentResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse>(null, SeparatorComponentResponse);
-                }
-                else if(TextDisplayComponentResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse>(null, TextDisplayComponentResponse);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildStickerResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class MinimalContentMessageResponse_stickers : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildStickerResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildStickerResponse? GuildStickerResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.GuildStickerResponse GuildStickerResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse? StandardStickerResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse StandardStickerResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_stickers"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_stickers CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponse.MinimalContentMessageResponse_stickers();
-                if("GuildStickerResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.GuildStickerResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildStickerResponse();
-                }
-                else if("StandardStickerResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.StandardStickerResponse = new global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(GuildStickerResponse != null)
-                {
-                    return GuildStickerResponse.GetFieldDeserializers();
-                }
-                else if(StandardStickerResponse != null)
-                {
-                    return StandardStickerResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(GuildStickerResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildStickerResponse>(null, GuildStickerResponse);
-                }
-                else if(StandardStickerResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponse>(null, StandardStickerResponse);
-                }
-            }
         }
     }
 }

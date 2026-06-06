@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Me
 {
     /// <summary>
-    /// Builds and executes requests for operations under \lobbies\{lobby_id}\members\@me
+    /// Builds and executes requests for operations under \lobbies\{lobbyId}\members\@me
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MeRequestBuilder : BaseRequestBuilder
@@ -28,7 +28,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Me
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobby_id}/members/@me", pathParameters)
+        public MeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobbyId}/members/@me", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Members.Me
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobby_id}/members/@me", rawUrl)
+        public MeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/lobbies/{lobbyId}/members/@me", rawUrl)
         {
         }
         /// <returns>A <see cref="Stream"/></returns>

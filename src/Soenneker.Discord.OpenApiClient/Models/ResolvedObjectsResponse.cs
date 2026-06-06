@@ -17,34 +17,34 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_channels? Channels { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseChannels? Channels { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_channels Channels { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseChannels Channels { get; set; }
 #endif
         /// <summary>The members property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_members? Members { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembers? Members { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_members Members { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembers Members { get; set; }
 #endif
         /// <summary>The roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_roles? Roles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRoles? Roles { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_roles Roles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRoles Roles { get; set; }
 #endif
         /// <summary>The users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_users? Users { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsers? Users { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_users Users { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsers Users { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channels", n => { Channels = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_channels>(global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_channels.CreateFromDiscriminatorValue); } },
-                { "members", n => { Members = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_members>(global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_members.CreateFromDiscriminatorValue); } },
-                { "roles", n => { Roles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_roles>(global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_roles.CreateFromDiscriminatorValue); } },
-                { "users", n => { Users = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_users>(global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_users.CreateFromDiscriminatorValue); } },
+                { "channels", n => { Channels = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseChannels>(global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseChannels.CreateFromDiscriminatorValue); } },
+                { "members", n => { Members = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembers>(global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembers.CreateFromDiscriminatorValue); } },
+                { "roles", n => { Roles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRoles>(global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRoles.CreateFromDiscriminatorValue); } },
+                { "users", n => { Users = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsers>(global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsers.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,10 +84,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_channels>("channels", Channels);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_members>("members", Members);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_roles>("roles", Roles);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse_users>("users", Users);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseChannels>("channels", Channels);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembers>("members", Members);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRoles>("roles", Roles);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsers>("users", Users);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -27,13 +27,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CheckboxComponentForModalRequest_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.CheckboxComponentForModalRequest_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CheckboxComponentForModalRequest"/> and sets the default values.
         /// </summary>
@@ -62,7 +56,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "custom_id", n => { CustomId = n.GetStringValue(); } },
                 { "default", n => { Default = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CheckboxComponentForModalRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.CheckboxComponentForModalRequest_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -75,7 +69,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("custom_id", CustomId);
             writer.WriteBoolValue("default", Default);
             writer.WriteIntValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CheckboxComponentForModalRequest_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

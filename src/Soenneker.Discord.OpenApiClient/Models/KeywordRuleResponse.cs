@@ -15,10 +15,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse.KeywordRuleResponse_actions>? Actions { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponseActionsItem>? Actions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse.KeywordRuleResponse_actions> Actions { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponseActionsItem> Actions { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -33,13 +33,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The enabled property</summary>
         public bool? Enabled { get; set; }
         /// <summary>The event_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType? EventType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType EventType { get; set; }
-#endif
+        public int? EventType { get; set; }
         /// <summary>The exempt_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,13 +83,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadataResponse TriggerMetadata { get; set; }
 #endif
         /// <summary>The trigger_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse_trigger_type? TriggerType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse_trigger_type TriggerType { get; set; }
-#endif
+        public int? TriggerType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/> and sets the default values.
         /// </summary>
@@ -121,17 +109,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse.KeywordRuleResponse_actions>(global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse.KeywordRuleResponse_actions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponseActionsItem>(global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponseActionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "creator_id", n => { CreatorId = n.GetStringValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "event_type", n => { EventType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType>(global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType.CreateFromDiscriminatorValue); } },
+                { "event_type", n => { EventType = n.GetIntValue(); } },
                 { "exempt_channels", n => { ExemptChannels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "exempt_roles", n => { ExemptRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "trigger_metadata", n => { TriggerMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadataResponse>(global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadataResponse.CreateFromDiscriminatorValue); } },
-                { "trigger_type", n => { TriggerType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse_trigger_type>(global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse_trigger_type.CreateFromDiscriminatorValue); } },
+                { "trigger_type", n => { TriggerType = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -141,133 +129,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse.KeywordRuleResponse_actions>("actions", Actions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponseActionsItem>("actions", Actions);
             writer.WriteStringValue("creator_id", CreatorId);
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AutomodEventType>("event_type", EventType);
+            writer.WriteIntValue("event_type", EventType);
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_channels", ExemptChannels);
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_roles", ExemptRoles);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadataResponse>("trigger_metadata", TriggerMetadata);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse_trigger_type>("trigger_type", TriggerType);
+            writer.WriteIntValue("trigger_type", TriggerType);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelActionResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledActionResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class KeywordRuleResponse_actions : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionResponse? BlockMessageActionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionResponse BlockMessageActionResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelActionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelActionResponse? FlagToChannelActionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelActionResponse FlagToChannelActionResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse? QuarantineUserActionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse QuarantineUserActionResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledActionResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledActionResponse? UserCommunicationDisabledActionResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledActionResponse UserCommunicationDisabledActionResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse.KeywordRuleResponse_actions"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse.KeywordRuleResponse_actions CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse.KeywordRuleResponse_actions();
-                if("BlockMessageActionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.BlockMessageActionResponse = new global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionResponse();
-                }
-                else if("FlagToChannelActionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.FlagToChannelActionResponse = new global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelActionResponse();
-                }
-                else if("QuarantineUserActionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.QuarantineUserActionResponse = new global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse();
-                }
-                else if("UserCommunicationDisabledActionResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UserCommunicationDisabledActionResponse = new global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledActionResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BlockMessageActionResponse != null)
-                {
-                    return BlockMessageActionResponse.GetFieldDeserializers();
-                }
-                else if(FlagToChannelActionResponse != null)
-                {
-                    return FlagToChannelActionResponse.GetFieldDeserializers();
-                }
-                else if(QuarantineUserActionResponse != null)
-                {
-                    return QuarantineUserActionResponse.GetFieldDeserializers();
-                }
-                else if(UserCommunicationDisabledActionResponse != null)
-                {
-                    return UserCommunicationDisabledActionResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(BlockMessageActionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionResponse>(null, BlockMessageActionResponse);
-                }
-                else if(FlagToChannelActionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FlagToChannelActionResponse>(null, FlagToChannelActionResponse);
-                }
-                else if(QuarantineUserActionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.QuarantineUserActionResponse>(null, QuarantineUserActionResponse);
-                }
-                else if(UserCommunicationDisabledActionResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCommunicationDisabledActionResponse>(null, UserCommunicationDisabledActionResponse);
-                }
-            }
         }
     }
 }

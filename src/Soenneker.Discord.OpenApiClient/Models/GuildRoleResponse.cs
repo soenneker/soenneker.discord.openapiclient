@@ -24,14 +24,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.GuildRoleColorsResponse Colors { get; set; }
 #endif
-        /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Description { get; set; }
-#nullable restore
-#else
-        public string Description { get; set; }
-#endif
         /// <summary>The flags property</summary>
         public int? Flags { get; set; }
         /// <summary>The hoist property</summary>
@@ -117,7 +109,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "color", n => { Color = n.GetIntValue(); } },
                 { "colors", n => { Colors = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildRoleColorsResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildRoleColorsResponse.CreateFromDiscriminatorValue); } },
-                { "description", n => { Description = n.GetStringValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "hoist", n => { Hoist = n.GetBoolValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
@@ -140,7 +131,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("color", Color);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildRoleColorsResponse>("colors", Colors);
-            writer.WriteStringValue("description", Description);
             writer.WriteIntValue("flags", Flags);
             writer.WriteBoolValue("hoist", Hoist);
             writer.WriteStringValue("icon", Icon);

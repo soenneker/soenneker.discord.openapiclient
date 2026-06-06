@@ -23,13 +23,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string AfkChannelId { get; set; }
 #endif
         /// <summary>The afk_timeout property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts_Wrapper? AfkTimeout { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts_Wrapper AfkTimeout { get; set; }
-#endif
+        public int? AfkTimeout { get; set; }
         /// <summary>The banner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,13 +33,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Banner { get; set; }
 #endif
         /// <summary>The default_message_notifications property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings_Wrapper? DefaultMessageNotifications { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings_Wrapper DefaultMessageNotifications { get; set; }
-#endif
+        public int? DefaultMessageNotifications { get; set; }
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,13 +51,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string DiscoverySplash { get; set; }
 #endif
         /// <summary>The explicit_content_filter property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes_Wrapper? ExplicitContentFilter { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes_Wrapper ExplicitContentFilter { get; set; }
-#endif
+        public int? ExplicitContentFilter { get; set; }
         /// <summary>The features property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,10 +87,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The preferred_locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum_Wrapper? PreferredLocale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum? PreferredLocale { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum_Wrapper PreferredLocale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum PreferredLocale { get; set; }
 #endif
         /// <summary>The premium_progress_bar_enabled property</summary>
         public bool? PremiumProgressBarEnabled { get; set; }
@@ -163,13 +145,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string SystemChannelId { get; set; }
 #endif
         /// <summary>The verification_level property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper? VerificationLevel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper VerificationLevel { get; set; }
-#endif
+        public int? VerificationLevel { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial"/> and sets the default values.
         /// </summary>
@@ -196,17 +172,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "afk_channel_id", n => { AfkChannelId = n.GetStringValue(); } },
-                { "afk_timeout", n => { AfkTimeout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts_Wrapper.CreateFromDiscriminatorValue); } },
+                { "afk_timeout", n => { AfkTimeout = n.GetIntValue(); } },
                 { "banner", n => { Banner = n.GetStringValue(); } },
-                { "default_message_notifications", n => { DefaultMessageNotifications = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings_Wrapper.CreateFromDiscriminatorValue); } },
+                { "default_message_notifications", n => { DefaultMessageNotifications = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discovery_splash", n => { DiscoverySplash = n.GetStringValue(); } },
-                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes_Wrapper.CreateFromDiscriminatorValue); } },
+                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetIntValue(); } },
                 { "features", n => { Features = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "home_header", n => { HomeHeader = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "preferred_locale", n => { PreferredLocale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum_Wrapper.CreateFromDiscriminatorValue); } },
+                { "preferred_locale", n => { PreferredLocale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>(global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum.CreateFromDiscriminatorValue); } },
                 { "premium_progress_bar_enabled", n => { PremiumProgressBarEnabled = n.GetBoolValue(); } },
                 { "public_updates_channel_id", n => { PublicUpdatesChannelId = n.GetStringValue(); } },
                 { "region", n => { Region = n.GetStringValue(); } },
@@ -215,7 +191,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "splash", n => { Splash = n.GetStringValue(); } },
                 { "system_channel_flags", n => { SystemChannelFlags = n.GetIntValue(); } },
                 { "system_channel_id", n => { SystemChannelId = n.GetStringValue(); } },
-                { "verification_level", n => { VerificationLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper.CreateFromDiscriminatorValue); } },
+                { "verification_level", n => { VerificationLevel = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -226,17 +202,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("afk_channel_id", AfkChannelId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts_Wrapper>("afk_timeout", AfkTimeout);
+            writer.WriteIntValue("afk_timeout", AfkTimeout);
             writer.WriteStringValue("banner", Banner);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings_Wrapper>("default_message_notifications", DefaultMessageNotifications);
+            writer.WriteIntValue("default_message_notifications", DefaultMessageNotifications);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("discovery_splash", DiscoverySplash);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes_Wrapper>("explicit_content_filter", ExplicitContentFilter);
+            writer.WriteIntValue("explicit_content_filter", ExplicitContentFilter);
             writer.WriteCollectionOfPrimitiveValues<string>("features", Features);
             writer.WriteStringValue("home_header", HomeHeader);
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum_Wrapper>("preferred_locale", PreferredLocale);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>("preferred_locale", PreferredLocale);
             writer.WriteBoolValue("premium_progress_bar_enabled", PremiumProgressBarEnabled);
             writer.WriteStringValue("public_updates_channel_id", PublicUpdatesChannelId);
             writer.WriteStringValue("region", Region);
@@ -245,7 +221,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("splash", Splash);
             writer.WriteIntValue("system_channel_flags", SystemChannelFlags);
             writer.WriteStringValue("system_channel_id", SystemChannelId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels_Wrapper>("verification_level", VerificationLevel);
+            writer.WriteIntValue("verification_level", VerificationLevel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

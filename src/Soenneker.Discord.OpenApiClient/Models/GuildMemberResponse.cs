@@ -14,7 +14,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The avatar property</summary>
+        /// <summary>the member&apos;s guild avatar hash</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Avatar { get; set; }
@@ -22,15 +22,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Avatar { get; set; }
 #endif
-        /// <summary>The avatar_decoration_data property</summary>
+        /// <summary>data for the member&apos;s guild avatar decoration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse? AvatarDecorationData { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseAvatarDecorationData? AvatarDecorationData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse AvatarDecorationData { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseAvatarDecorationData AvatarDecorationData { get; set; }
 #endif
-        /// <summary>The banner property</summary>
+        /// <summary>the member&apos;s guild banner hash</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Banner { get; set; }
@@ -38,25 +38,25 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Banner { get; set; }
 #endif
-        /// <summary>The collectibles property</summary>
+        /// <summary>data for the member&apos;s collectibles</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? Collectibles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectibles? Collectibles { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse Collectibles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectibles Collectibles { get; set; }
 #endif
-        /// <summary>The communication_disabled_until property</summary>
+        /// <summary>when the user&apos;s timeout will expire and the user will be able to communicate in the guild again, null or a time in the past if the user is not timed out</summary>
         public DateTimeOffset? CommunicationDisabledUntil { get; set; }
-        /// <summary>The deaf property</summary>
+        /// <summary>whether the user is deafened in voice channels</summary>
         public bool? Deaf { get; set; }
-        /// <summary>The flags property</summary>
+        /// <summary>guild member flags represented as a bit set, defaults to 0</summary>
         public int? Flags { get; set; }
-        /// <summary>The joined_at property</summary>
+        /// <summary>when the user joined the guild</summary>
         public DateTimeOffset? JoinedAt { get; set; }
-        /// <summary>The mute property</summary>
+        /// <summary>whether the user is muted in voice channels</summary>
         public bool? Mute { get; set; }
-        /// <summary>The nick property</summary>
+        /// <summary>this user&apos;s guild nickname</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Nick { get; set; }
@@ -64,11 +64,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Nick { get; set; }
 #endif
-        /// <summary>The pending property</summary>
+        /// <summary>whether the user has not yet passed the guild&apos;s Membership Screening requirements</summary>
         public bool? Pending { get; set; }
-        /// <summary>The premium_since property</summary>
+        /// <summary>when the user started boosting the guild</summary>
         public DateTimeOffset? PremiumSince { get; set; }
-        /// <summary>The roles property</summary>
+        /// <summary>array of role object ids</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Roles { get; set; }
@@ -110,9 +110,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "avatar", n => { Avatar = n.GetStringValue(); } },
-                { "avatar_decoration_data", n => { AvatarDecorationData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse.CreateFromDiscriminatorValue); } },
+                { "avatar_decoration_data", n => { AvatarDecorationData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseAvatarDecorationData>(global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseAvatarDecorationData.CreateFromDiscriminatorValue); } },
                 { "banner", n => { Banner = n.GetStringValue(); } },
-                { "collectibles", n => { Collectibles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse.CreateFromDiscriminatorValue); } },
+                { "collectibles", n => { Collectibles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectibles>(global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectibles.CreateFromDiscriminatorValue); } },
                 { "communication_disabled_until", n => { CommunicationDisabledUntil = n.GetDateTimeOffsetValue(); } },
                 { "deaf", n => { Deaf = n.GetBoolValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
@@ -133,9 +133,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("avatar", Avatar);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse>("avatar_decoration_data", AvatarDecorationData);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseAvatarDecorationData>("avatar_decoration_data", AvatarDecorationData);
             writer.WriteStringValue("banner", Banner);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>("collectibles", Collectibles);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectibles>("collectibles", Collectibles);
             writer.WriteDateTimeOffsetValue("communication_disabled_until", CommunicationDisabledUntil);
             writer.WriteBoolValue("deaf", Deaf);
             writer.WriteIntValue("flags", Flags);

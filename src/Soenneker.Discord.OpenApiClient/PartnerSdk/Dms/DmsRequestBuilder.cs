@@ -17,14 +17,14 @@ namespace Soenneker.Discord.OpenApiClient.PartnerSdk.Dms
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.partnerSdk.dms.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.WithUser_id_1ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.WithUser_id_1ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.WithUserItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id_1", position);
-                return new global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.WithUser_id_1ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId1", position);
+                return new global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

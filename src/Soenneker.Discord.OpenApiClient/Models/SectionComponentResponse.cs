@@ -15,10 +15,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The accessory property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse.SectionComponentResponse_accessory? Accessory { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponseAccessory? Accessory { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse.SectionComponentResponse_accessory Accessory { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponseAccessory Accessory { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -33,13 +33,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse"/> and sets the default values.
         /// </summary>
@@ -65,10 +59,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accessory", n => { Accessory = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse.SectionComponentResponse_accessory>(global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse.SectionComponentResponse_accessory.CreateFromDiscriminatorValue); } },
+                { "accessory", n => { Accessory = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponseAccessory>(global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponseAccessory.CreateFromDiscriminatorValue); } },
                 { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse>(global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -78,86 +72,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse.SectionComponentResponse_accessory>("accessory", Accessory);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponseAccessory>("accessory", Accessory);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse>("components", Components);
             writer.WriteIntValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThumbnailComponentResponse"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SectionComponentResponse_accessory : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentResponse? ButtonComponentResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentResponse ButtonComponentResponse { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThumbnailComponentResponse"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Discord.OpenApiClient.Models.ThumbnailComponentResponse? ThumbnailComponentResponse { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Discord.OpenApiClient.Models.ThumbnailComponentResponse ThumbnailComponentResponse { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse.SectionComponentResponse_accessory"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse.SectionComponentResponse_accessory CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse.SectionComponentResponse_accessory();
-                if("ButtonComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ButtonComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentResponse();
-                }
-                else if("ThumbnailComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ThumbnailComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.ThumbnailComponentResponse();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ButtonComponentResponse != null)
-                {
-                    return ButtonComponentResponse.GetFieldDeserializers();
-                }
-                else if(ThumbnailComponentResponse != null)
-                {
-                    return ThumbnailComponentResponse.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ButtonComponentResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentResponse>(null, ButtonComponentResponse);
-                }
-                else if(ThumbnailComponentResponse != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThumbnailComponentResponse>(null, ThumbnailComponentResponse);
-                }
-            }
         }
     }
 }

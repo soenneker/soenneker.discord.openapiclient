@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback
 {
     /// <summary>
-    /// Builds and executes requests for operations under \interactions\{interaction_id}\{interaction_token}\callback
+    /// Builds and executes requests for operations under \interactions\{interactionId}\{interactionToken}\callback
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CallbackRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CallbackRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/interactions/{interaction_id}/{interaction_token}/callback{?with_response*}", pathParameters)
+        public CallbackRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/interactions/{interactionId}/{interactionToken}/callback{?with_response*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CallbackRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/interactions/{interaction_id}/{interaction_token}/callback{?with_response*}", rawUrl)
+        public CallbackRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/interactions/{interactionId}/{interactionToken}/callback{?with_response*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponse"/></returns>
@@ -41,11 +41,11 @@ namespace Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponse?> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.Create_interaction_responseapplication_json body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponse?> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateInteractionResponseJsonRequest body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponse> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.Create_interaction_responseapplication_json body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponse> PostAsync(global::Soenneker.Discord.OpenApiClient.Models.CreateInteractionResponseJsonRequest body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -62,11 +62,11 @@ namespace Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.Create_interaction_responseapplication_json body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateInteractionResponseJsonRequest body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.Create_interaction_responseapplication_json body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Discord.OpenApiClient.Models.CreateInteractionResponseJsonRequest body, Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback.CallbackRequestBuilder.CallbackRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

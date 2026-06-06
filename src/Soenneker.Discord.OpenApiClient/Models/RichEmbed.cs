@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor? Author { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed? Author { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor Author { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed Author { get; set; }
 #endif
         /// <summary>The color property</summary>
         public int? Color { get; set; }
@@ -43,34 +43,34 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The footer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter? Footer { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed? Footer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter Footer { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed Footer { get; set; }
 #endif
         /// <summary>The image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage? Image { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed? Image { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage Image { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed Image { get; set; }
 #endif
         /// <summary>The provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider? Provider { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed? Provider { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider Provider { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed Provider { get; set; }
 #endif
         /// <summary>The thumbnail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail? Thumbnail { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed? Thumbnail { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail Thumbnail { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed Thumbnail { get; set; }
 #endif
         /// <summary>The timestamp property</summary>
         public DateTimeOffset? Timestamp { get; set; }
@@ -101,10 +101,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The video property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo? Video { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed? Video { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo Video { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed Video { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbed"/> and sets the default values.
@@ -131,19 +131,19 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "author", n => { Author = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor.CreateFromDiscriminatorValue); } },
+                { "author", n => { Author = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed.CreateFromDiscriminatorValue); } },
                 { "color", n => { Color = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedField>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedField.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "footer", n => { Footer = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter.CreateFromDiscriminatorValue); } },
-                { "image", n => { Image = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage.CreateFromDiscriminatorValue); } },
-                { "provider", n => { Provider = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider.CreateFromDiscriminatorValue); } },
-                { "thumbnail", n => { Thumbnail = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail.CreateFromDiscriminatorValue); } },
+                { "footer", n => { Footer = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed.CreateFromDiscriminatorValue); } },
+                { "image", n => { Image = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed.CreateFromDiscriminatorValue); } },
+                { "provider", n => { Provider = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed.CreateFromDiscriminatorValue); } },
+                { "thumbnail", n => { Thumbnail = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "video", n => { Video = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo.CreateFromDiscriminatorValue); } },
+                { "video", n => { Video = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -153,19 +153,19 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor>("author", Author);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed>("author", Author);
             writer.WriteIntValue("color", Color);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedField>("fields", Fields);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter>("footer", Footer);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage>("image", Image);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider>("provider", Provider);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail>("thumbnail", Thumbnail);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed>("footer", Footer);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed>("image", Image);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed>("provider", Provider);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed>("thumbnail", Thumbnail);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("url", Url);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo>("video", Video);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed>("video", Video);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

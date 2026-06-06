@@ -31,13 +31,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The fulfilled_at property</summary>
         public DateTimeOffset? FulfilledAt { get; set; }
         /// <summary>The fulfillment_status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.EntitlementTenantFulfillmentStatusResponse_Wrapper? FulfillmentStatus { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.EntitlementTenantFulfillmentStatusResponse_Wrapper FulfillmentStatus { get; set; }
-#endif
+        public int? FulfillmentStatus { get; set; }
         /// <summary>The gifter_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,13 +75,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The starts_at property</summary>
         public DateTimeOffset? StartsAt { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.EntitlementTypes? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.EntitlementTypes Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,14 +114,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "ends_at", n => { EndsAt = n.GetDateTimeOffsetValue(); } },
                 { "fulfilled_at", n => { FulfilledAt = n.GetDateTimeOffsetValue(); } },
-                { "fulfillment_status", n => { FulfillmentStatus = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntitlementTenantFulfillmentStatusResponse_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.EntitlementTenantFulfillmentStatusResponse_Wrapper.CreateFromDiscriminatorValue); } },
+                { "fulfillment_status", n => { FulfillmentStatus = n.GetIntValue(); } },
                 { "gifter_user_id", n => { GifterUserId = n.GetStringValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "parent_id", n => { ParentId = n.GetStringValue(); } },
                 { "sku_id", n => { SkuId = n.GetStringValue(); } },
                 { "starts_at", n => { StartsAt = n.GetDateTimeOffsetValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntitlementTypes>(global::Soenneker.Discord.OpenApiClient.Models.EntitlementTypes.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -149,14 +137,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteDateTimeOffsetValue("ends_at", EndsAt);
             writer.WriteDateTimeOffsetValue("fulfilled_at", FulfilledAt);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntitlementTenantFulfillmentStatusResponse_Wrapper>("fulfillment_status", FulfillmentStatus);
+            writer.WriteIntValue("fulfillment_status", FulfillmentStatus);
             writer.WriteStringValue("gifter_user_id", GifterUserId);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("parent_id", ParentId);
             writer.WriteStringValue("sku_id", SkuId);
             writer.WriteDateTimeOffsetValue("starts_at", StartsAt);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntitlementTypes>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

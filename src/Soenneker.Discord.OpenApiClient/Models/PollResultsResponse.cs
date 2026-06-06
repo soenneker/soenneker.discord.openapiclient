@@ -14,7 +14,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The answer_counts property</summary>
+        /// <summary>The counts for each answer</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Discord.OpenApiClient.Models.PollResultsEntryResponse>? AnswerCounts { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public List<global::Soenneker.Discord.OpenApiClient.Models.PollResultsEntryResponse> AnswerCounts { get; set; }
 #endif
-        /// <summary>The is_finalized property</summary>
+        /// <summary>Whether the votes have been precisely counted</summary>
         public bool? IsFinalized { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PollResultsResponse"/> and sets the default values.

@@ -13,13 +13,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The action_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.AuditLogActionTypes? ActionType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.AuditLogActionTypes ActionType { get; set; }
-#endif
+        public int? ActionType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The changes property</summary>
@@ -41,10 +35,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse_options? Options { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponseOptionsProperty? Options { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse_options Options { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponseOptionsProperty Options { get; set; }
 #endif
         /// <summary>The reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,10 +89,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action_type", n => { ActionType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AuditLogActionTypes>(global::Soenneker.Discord.OpenApiClient.Models.AuditLogActionTypes.CreateFromDiscriminatorValue); } },
+                { "action_type", n => { ActionType = n.GetIntValue(); } },
                 { "changes", n => { Changes = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse>(global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse_options>(global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse_options.CreateFromDiscriminatorValue); } },
+                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponseOptionsProperty>(global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponseOptionsProperty.CreateFromDiscriminatorValue); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
                 { "target_id", n => { TargetId = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
@@ -111,10 +105,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AuditLogActionTypes>("action_type", ActionType);
+            writer.WriteIntValue("action_type", ActionType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.AuditLogObjectChangeResponse>("changes", Changes);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse_options>("options", Options);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponseOptionsProperty>("options", Options);
             writer.WriteStringValue("reason", Reason);
             writer.WriteStringValue("target_id", TargetId);
             writer.WriteStringValue("user_id", UserId);

@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The name_localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionStringChoice_name_localizations? NameLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionStringChoiceNameLocalizations? NameLocalizations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionStringChoice_name_localizations NameLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionStringChoiceNameLocalizations NameLocalizations { get; set; }
 #endif
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionStringChoice_name_localizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionStringChoice_name_localizations.CreateFromDiscriminatorValue); } },
+                { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionStringChoiceNameLocalizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionStringChoiceNameLocalizations.CreateFromDiscriminatorValue); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionStringChoice_name_localizations>("name_localizations", NameLocalizations);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionStringChoiceNameLocalizations>("name_localizations", NameLocalizations);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }

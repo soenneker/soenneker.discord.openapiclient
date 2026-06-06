@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Expire
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\polls\{message_id}\expire
+    /// Builds and executes requests for operations under \channels\{channelId}\polls\{messageId}\expire
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExpireRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Expire
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExpireRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/polls/{message_id}/expire", pathParameters)
+        public ExpireRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/polls/{messageId}/expire", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Expire
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExpireRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/polls/{message_id}/expire", rawUrl)
+        public ExpireRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/polls/{messageId}/expire", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageResponse"/></returns>

@@ -97,13 +97,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.InviteApplicationResponse TargetApplication { get; set; }
 #endif
         /// <summary>The target_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.InviteTargetTypes? TargetType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.InviteTargetTypes TargetType { get; set; }
-#endif
+        public int? TargetType { get; set; }
         /// <summary>The target_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -115,13 +109,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The temporary property</summary>
         public bool? Temporary { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>The uses property</summary>
         public int? Uses { get; set; }
         /// <summary>
@@ -166,10 +154,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "max_uses", n => { MaxUses = n.GetIntValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildRoleResponse>(global::Soenneker.Discord.OpenApiClient.Models.InviteGuildRoleResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "target_application", n => { TargetApplication = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteApplicationResponse>(global::Soenneker.Discord.OpenApiClient.Models.InviteApplicationResponse.CreateFromDiscriminatorValue); } },
-                { "target_type", n => { TargetType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteTargetTypes>(global::Soenneker.Discord.OpenApiClient.Models.InviteTargetTypes.CreateFromDiscriminatorValue); } },
+                { "target_type", n => { TargetType = n.GetIntValue(); } },
                 { "target_user", n => { TargetUser = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
                 { "temporary", n => { Temporary = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
                 { "uses", n => { Uses = n.GetIntValue(); } },
             };
         }
@@ -197,10 +185,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("max_uses", MaxUses);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildRoleResponse>("roles", Roles);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteApplicationResponse>("target_application", TargetApplication);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteTargetTypes>("target_type", TargetType);
+            writer.WriteIntValue("target_type", TargetType);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("target_user", TargetUser);
             writer.WriteBoolValue("temporary", Temporary);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteIntValue("uses", Uses);
             writer.WriteAdditionalData(AdditionalData);
         }

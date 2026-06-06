@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParamsResponse_scopes?>? Scopes { get; set; }
+        public List<string>? Scopes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParamsResponse_scopes?> Scopes { get; set; }
+        public List<string> Scopes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParamsResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "permissions", n => { Permissions = n.GetStringValue(); } },
-                { "scopes", n => { Scopes = n.GetCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParamsResponse_scopes>()?.AsList(); } },
+                { "scopes", n => { Scopes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("permissions", Permissions);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParamsResponse_scopes>("scopes", Scopes);
+            writer.WriteCollectionOfPrimitiveValues<string>("scopes", Scopes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

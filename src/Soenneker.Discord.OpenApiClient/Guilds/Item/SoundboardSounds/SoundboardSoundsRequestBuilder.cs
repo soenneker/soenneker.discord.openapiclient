@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Guilds.Item.SoundboardSounds
 {
     /// <summary>
-    /// Builds and executes requests for operations under \guilds\{guild_id}\soundboard-sounds
+    /// Builds and executes requests for operations under \guilds\{guildId}\soundboard-sounds
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SoundboardSoundsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.guilds.item.soundboardSounds.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.SoundboardSounds.Item.WithSound_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.SoundboardSounds.Item.WithSound_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.SoundboardSounds.Item.WithSoundItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.SoundboardSounds.Item.WithSoundItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sound_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.SoundboardSounds.Item.WithSound_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("soundId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Guilds.Item.SoundboardSounds.Item.WithSoundItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.SoundboardSounds
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SoundboardSoundsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/soundboard-sounds", pathParameters)
+        public SoundboardSoundsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/soundboard-sounds", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.SoundboardSounds
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SoundboardSoundsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/soundboard-sounds", rawUrl)
+        public SoundboardSoundsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/soundboard-sounds", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ListGuildSoundboardSoundsResponse"/></returns>

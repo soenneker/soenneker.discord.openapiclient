@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration
 {
     /// <summary>
-    /// Builds and executes requests for operations under \guilds\{guild_id}\auto-moderation
+    /// Builds and executes requests for operations under \guilds\{guildId}\auto-moderation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AutoModerationRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AutoModerationRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/auto-moderation", pathParameters)
+        public AutoModerationRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/auto-moderation", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.AutoModeration
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AutoModerationRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/auto-moderation", rawUrl)
+        public AutoModerationRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/auto-moderation", rawUrl)
         {
         }
     }

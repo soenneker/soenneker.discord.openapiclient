@@ -12,6 +12,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
     public partial class InteractionResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>The activity_instance_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ActivityInstanceId { get; set; }
+#nullable restore
+#else
+        public string ActivityInstanceId { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The channel_id property</summary>
@@ -51,13 +59,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The response_message_loading property</summary>
         public bool? ResponseMessageLoading { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.InteractionTypes? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.InteractionTypes Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.InteractionResponse"/> and sets the default values.
         /// </summary>
@@ -83,13 +85,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "activity_instance_id", n => { ActivityInstanceId = n.GetStringValue(); } },
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "response_message_ephemeral", n => { ResponseMessageEphemeral = n.GetBoolValue(); } },
                 { "response_message_id", n => { ResponseMessageId = n.GetStringValue(); } },
                 { "response_message_loading", n => { ResponseMessageLoading = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InteractionTypes>(global::Soenneker.Discord.OpenApiClient.Models.InteractionTypes.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -99,13 +102,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("activity_instance_id", ActivityInstanceId);
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("response_message_ephemeral", ResponseMessageEphemeral);
             writer.WriteStringValue("response_message_id", ResponseMessageId);
             writer.WriteBoolValue("response_message_loading", ResponseMessageLoading);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InteractionTypes>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

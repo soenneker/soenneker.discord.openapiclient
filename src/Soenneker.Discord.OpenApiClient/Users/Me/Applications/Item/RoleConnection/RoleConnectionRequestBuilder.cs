@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.RoleConnection
 {
     /// <summary>
-    /// Builds and executes requests for operations under \users\@me\applications\{application_id}\role-connection
+    /// Builds and executes requests for operations under \users\@me\applications\{applicationId}\role-connection
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RoleConnectionRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.RoleConnect
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RoleConnectionRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/applications/{application_id}/role-connection", pathParameters)
+        public RoleConnectionRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/applications/{applicationId}/role-connection", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.RoleConnect
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RoleConnectionRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/applications/{application_id}/role-connection", rawUrl)
+        public RoleConnectionRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/applications/{applicationId}/role-connection", rawUrl)
         {
         }
         /// <returns>A <see cref="Stream"/></returns>

@@ -49,13 +49,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The required property</summary>
         public bool? Required { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForModalRequest_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForModalRequest_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForModalRequest"/> and sets the default values.
         /// </summary>
@@ -89,7 +83,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.StringSelectOptionForRequest>(global::Soenneker.Discord.OpenApiClient.Models.StringSelectOptionForRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForModalRequest_type>(global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForModalRequest_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -107,7 +101,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.StringSelectOptionForRequest>("options", Options);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteBoolValue("required", Required);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForModalRequest_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

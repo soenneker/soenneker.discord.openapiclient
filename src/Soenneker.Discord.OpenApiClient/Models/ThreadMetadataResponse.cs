@@ -19,13 +19,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The archive_timestamp property</summary>
         public DateTimeOffset? ArchiveTimestamp { get; set; }
         /// <summary>The auto_archive_duration property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration? AutoArchiveDuration { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration AutoArchiveDuration { get; set; }
-#endif
+        public int? AutoArchiveDuration { get; set; }
         /// <summary>The create_timestamp property</summary>
         public DateTimeOffset? CreateTimestamp { get; set; }
         /// <summary>The invitable property</summary>
@@ -59,7 +53,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "archive_timestamp", n => { ArchiveTimestamp = n.GetDateTimeOffsetValue(); } },
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration>(global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration.CreateFromDiscriminatorValue); } },
+                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetIntValue(); } },
                 { "create_timestamp", n => { CreateTimestamp = n.GetDateTimeOffsetValue(); } },
                 { "invitable", n => { Invitable = n.GetBoolValue(); } },
                 { "locked", n => { Locked = n.GetBoolValue(); } },
@@ -74,7 +68,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
             writer.WriteDateTimeOffsetValue("archive_timestamp", ArchiveTimestamp);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration>("auto_archive_duration", AutoArchiveDuration);
+            writer.WriteIntValue("auto_archive_duration", AutoArchiveDuration);
             writer.WriteDateTimeOffsetValue("create_timestamp", CreateTimestamp);
             writer.WriteBoolValue("invitable", Invitable);
             writer.WriteBoolValue("locked", Locked);

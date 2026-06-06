@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Applications.Item.ActivityInstances
 {
     /// <summary>
-    /// Builds and executes requests for operations under \applications\{application_id}\activity-instances
+    /// Builds and executes requests for operations under \applications\{applicationId}\activity-instances
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActivityInstancesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.applications.item.activityInstances.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Applications.Item.ActivityInstances.Item.WithInstance_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Applications.Item.ActivityInstances.Item.WithInstance_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Applications.Item.ActivityInstances.Item.WithInstanceItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Applications.Item.ActivityInstances.Item.WithInstanceItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("instance_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Applications.Item.ActivityInstances.Item.WithInstance_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("instanceId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Applications.Item.ActivityInstances.Item.WithInstanceItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.ActivityInstances
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivityInstancesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/activity-instances", pathParameters)
+        public ActivityInstancesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/activity-instances", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.ActivityInstances
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivityInstancesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{application_id}/activity-instances", rawUrl)
+        public ActivityInstancesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/applications/{applicationId}/activity-instances", rawUrl)
         {
         }
     }

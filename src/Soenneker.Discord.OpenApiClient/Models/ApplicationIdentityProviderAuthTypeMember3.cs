@@ -10,7 +10,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         [EnumMember(Value = "EPIC_ONLINE_SERVICES_ID_TOKEN")]
         #pragma warning disable CS1591
-        EPIC_ONLINE_SERVICES_ID_TOKEN,
+        EpicOnlineServicesIdToken,
         #pragma warning restore CS1591
     }
 }

@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \channels\{channel_id}\messages\{message_id}\reactions
+    /// Builds and executes requests for operations under \channels\{channelId}\messages\{messageId}\reactions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReactionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item.messages.item.reactions.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.Item.WithEmoji_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.Item.WithEmoji_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.Item.WithEmojiNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.Item.WithEmojiNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("emoji_name", position);
-                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.Item.WithEmoji_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("emojiName", position);
+                return new global::Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions.Item.WithEmojiNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/messages/{message_id}/reactions", pathParameters)
+        public ReactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/messages/{messageId}/reactions", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Item.Reactions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channel_id}/messages/{message_id}/reactions", rawUrl)
+        public ReactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/channels/{channelId}/messages/{messageId}/reactions", rawUrl)
         {
         }
         /// <returns>A <see cref="Stream"/></returns>

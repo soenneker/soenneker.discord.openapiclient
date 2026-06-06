@@ -27,10 +27,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The creator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? Creator { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponseCreator? Creator { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse Creator { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponseCreator Creator { get; set; }
 #endif
         /// <summary>The creator_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,7 +105,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "code", n => { Code = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "creator", n => { Creator = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
+                { "creator", n => { Creator = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponseCreator>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponseCreator.CreateFromDiscriminatorValue); } },
                 { "creator_id", n => { CreatorId = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "is_dirty", n => { IsDirty = n.GetBoolValue(); } },
@@ -125,7 +125,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code", Code);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("creator", Creator);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateResponseCreator>("creator", Creator);
             writer.WriteStringValue("creator_id", CreatorId);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("is_dirty", IsDirty);

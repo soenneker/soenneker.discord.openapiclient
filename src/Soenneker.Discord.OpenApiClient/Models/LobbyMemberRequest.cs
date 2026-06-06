@@ -27,10 +27,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest_metadata? Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequestMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest_metadata Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequestMetadata Metadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest_metadata>(global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequestMetadata>(global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequestMetadata.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequestMetadata>("metadata", Metadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

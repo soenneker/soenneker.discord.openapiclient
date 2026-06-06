@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search
 {
     /// <summary>
-    /// Builds and executes requests for operations under \guilds\{guild_id}\messages\search
+    /// Builds and executes requests for operations under \guilds\{guildId}\messages\search
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SearchRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/messages/search{?attachment_extension*,attachment_filename*,author_id*,author_type*,channel_id*,content*,embed_provider*,embed_type*,has*,include_nsfw*,limit*,link_hostname*,max_id*,mention_everyone*,mentions*,mentions_role_id*,min_id*,offset*,pinned*,replied_to_message_id*,replied_to_user_id*,slop*,sort_by*,sort_order*}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/messages/search{?attachment_extension*,attachment_filename*,author_id*,author_type*,channel_id*,content*,embed_provider*,embed_type*,has*,include_nsfw*,limit*,link_hostname*,max_id*,mention_everyone*,mentions*,mentions_role_id*,min_id*,offset*,pinned*,replied_to_message_id*,replied_to_user_id*,slop*,sort_by*,sort_order*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guild_id}/messages/search{?attachment_extension*,attachment_filename*,author_id*,author_type*,channel_id*,content*,embed_provider*,embed_type*,has*,include_nsfw*,limit*,link_hostname*,max_id*,mention_everyone*,mentions*,mentions_role_id*,min_id*,offset*,pinned*,replied_to_message_id*,replied_to_user_id*,slop*,sort_by*,sort_order*}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/messages/search{?attachment_extension*,attachment_filename*,author_id*,author_type*,channel_id*,content*,embed_provider*,embed_type*,has*,include_nsfw*,limit*,link_hostname*,max_id*,mention_everyone*,mentions*,mentions_role_id*,min_id*,offset*,pinned*,replied_to_message_id*,replied_to_user_id*,slop*,sort_by*,sort_order*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildSearchResponse"/></returns>

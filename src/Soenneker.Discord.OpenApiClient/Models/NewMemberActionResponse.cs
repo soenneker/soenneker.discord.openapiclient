@@ -13,13 +13,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The action_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionType? ActionType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionType ActionType { get; set; }
-#endif
+        public int? ActionType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The channel_id property</summary>
@@ -87,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action_type", n => { ActionType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionType>(global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionType.CreateFromDiscriminatorValue); } },
+                { "action_type", n => { ActionType = n.GetIntValue(); } },
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SettingsEmojiResponse>(global::Soenneker.Discord.OpenApiClient.Models.SettingsEmojiResponse.CreateFromDiscriminatorValue); } },
@@ -102,7 +96,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionType>("action_type", ActionType);
+            writer.WriteIntValue("action_type", ActionType);
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SettingsEmojiResponse>("emoji", Emoji);

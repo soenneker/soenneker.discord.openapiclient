@@ -15,13 +15,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The auto_archive_duration property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper? AutoArchiveDuration { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper AutoArchiveDuration { get; set; }
-#endif
+        public int? AutoArchiveDuration { get; set; }
         /// <summary>The invitable property</summary>
         public bool? Invitable { get; set; }
         /// <summary>The name property</summary>
@@ -37,10 +31,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UnionBranch? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeWrapper? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UnionBranch Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeWrapper Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest"/> and sets the default values.
@@ -67,11 +61,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper>(global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper.CreateFromDiscriminatorValue); } },
+                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetIntValue(); } },
                 { "invitable", n => { Invitable = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "rate_limit_per_user", n => { RateLimitPerUser = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UnionBranch>(global::Soenneker.Discord.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeWrapper>(global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeWrapper.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,11 +75,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration_Wrapper>("auto_archive_duration", AutoArchiveDuration);
+            writer.WriteIntValue("auto_archive_duration", AutoArchiveDuration);
             writer.WriteBoolValue("invitable", Invitable);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UnionBranch>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeWrapper>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

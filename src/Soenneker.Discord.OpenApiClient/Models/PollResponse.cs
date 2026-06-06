@@ -14,9 +14,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The allow_multiselect property</summary>
+        /// <summary>Whether a user can select multiple answers</summary>
         public bool? AllowMultiselect { get; set; }
-        /// <summary>The answers property</summary>
+        /// <summary>Each of the answers available in the poll</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerResponse>? Answers { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public List<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerResponse> Answers { get; set; }
 #endif
-        /// <summary>The expiry property</summary>
+        /// <summary>The time when the poll ends</summary>
         public DateTimeOffset? Expiry { get; set; }
         /// <summary>The layout_type property</summary>
         public int? LayoutType { get; set; }

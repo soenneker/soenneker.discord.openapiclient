@@ -17,14 +17,14 @@ namespace Soenneker.Discord.OpenApiClient.Interactions
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.interactions.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Interactions.Item.WithInteraction_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Discord.OpenApiClient.Interactions.Item.WithInteraction_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Interactions.Item.WithInteractionItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Interactions.Item.WithInteractionItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("interaction_id", position);
-                return new global::Soenneker.Discord.OpenApiClient.Interactions.Item.WithInteraction_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("interactionId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Interactions.Item.WithInteractionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

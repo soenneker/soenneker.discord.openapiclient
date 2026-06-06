@@ -43,13 +43,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public List<global::Soenneker.Discord.OpenApiClient.Models.UserResponse> Recipients { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse_type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse_type Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse"/> and sets the default values.
         /// </summary>
@@ -80,7 +74,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "last_message_id", n => { LastMessageId = n.GetStringValue(); } },
                 { "last_pin_timestamp", n => { LastPinTimestamp = n.GetDateTimeOffsetValue(); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse_type>(global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse_type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -95,7 +89,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("last_message_id", LastMessageId);
             writer.WriteDateTimeOffsetValue("last_pin_timestamp", LastPinTimestamp);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("recipients", Recipients);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelResponse_type>("type", Type);
+            writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
