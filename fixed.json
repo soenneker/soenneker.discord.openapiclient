@@ -14079,16 +14079,12 @@
           "icon": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "cover_image": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "team_id": {
             "$ref": "#/components/schemas/ApplicationFormPartialTeamId"
@@ -17513,16 +17509,12 @@
           "avatar": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "banner": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           }
         }
       },
@@ -19587,9 +19579,7 @@
           "icon": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "unicode_emoji": {
             "maxLength": 100,
@@ -20656,9 +20646,7 @@
           "image": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "scheduled_start_time": {
             "type": "string",
@@ -20705,9 +20693,7 @@
           "image": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "scheduled_start_time": {
             "type": "string",
@@ -23235,9 +23221,7 @@
           "icon": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "verification_level": {
             "$ref": "#/components/schemas/GuildPatchRequestPartialVerificationLevel"
@@ -23263,16 +23247,12 @@
           "splash": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "banner": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "system_channel_flags": {
             "type": "integer",
@@ -23292,16 +23272,12 @@
           "discovery_splash": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "home_header": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "rules_channel_id": {
             "$ref": "#/components/schemas/GuildPatchRequestPartialRulesChannelId"
@@ -25332,9 +25308,7 @@
         "properties": {
           "target_users_file": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -34596,9 +34570,7 @@
           },
           "sound": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           }
         }
       },
@@ -34791,9 +34763,7 @@
           "image": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "scheduled_start_time": {
             "type": "string",
@@ -34840,9 +34810,7 @@
           "image": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "scheduled_start_time": {
             "type": "string",
@@ -36812,9 +36780,7 @@
           "icon": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           }
         }
       },
@@ -37067,9 +37033,7 @@
           "icon": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "unicode_emoji": {
             "maxLength": 100,
@@ -38250,9 +38214,7 @@
           "image": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "scheduled_start_time": {
             "type": "string",
@@ -38299,9 +38261,7 @@
           "image": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "scheduled_start_time": {
             "type": "string",
@@ -39181,63 +39141,43 @@
           },
           "files[0]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[1]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[2]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[3]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[4]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[5]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[6]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[7]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[8]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[9]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -39292,63 +39232,43 @@
           },
           "files[0]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[1]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[2]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[3]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[4]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[5]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[6]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[7]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[8]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[9]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -39762,63 +39682,43 @@
           },
           "files[0]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[1]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[2]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[3]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[4]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[5]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[6]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[7]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[8]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[9]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -39866,63 +39766,43 @@
           },
           "files[0]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[1]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[2]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[3]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[4]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[5]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[6]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[7]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[8]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[9]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -43448,9 +43328,7 @@
         "properties": {
           "target_users_file": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -47072,63 +46950,43 @@
         "properties": {
           "files[0]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[1]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[2]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[3]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[4]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[5]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[6]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[7]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[8]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[9]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -47137,63 +46995,43 @@
         "properties": {
           "files[0]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[1]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[2]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[3]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[4]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[5]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[6]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[7]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[8]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[9]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -47202,63 +47040,43 @@
         "properties": {
           "files[0]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[1]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[2]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[3]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[4]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[5]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[6]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[7]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[8]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[9]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -47267,63 +47085,43 @@
         "properties": {
           "files[0]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[1]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[2]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[3]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[4]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[5]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[6]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[7]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[8]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           },
           "files[9]": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -48057,9 +47855,7 @@
         "properties": {
           "file": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -48099,9 +47895,7 @@
           },
           "image": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           }
         }
       },
@@ -48511,9 +48305,7 @@
           "avatar": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           }
         }
       },
@@ -48761,9 +48553,7 @@
           },
           "image": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "roles": {
             "maxItems": 1521,
@@ -48832,9 +48622,7 @@
           "avatar": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "bio": {
             "maxLength": 190,
@@ -48844,9 +48632,7 @@
           "banner": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           }
         }
       },
@@ -49157,9 +48943,7 @@
           },
           "file": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -49247,9 +49031,7 @@
       },
       "GetGuildWidgetPng200Response": {
         "type": "string",
-        "unrecognizedKeywords": {
-          "contentEncoding": "binary"
-        }
+        "x-jsonschema-contentEncoding": "binary"
       },
       "InviteResolve200Response": {
         "required": [
@@ -49316,9 +49098,7 @@
       "GetInviteTargetUsers200Response": {
         "type": "string",
         "description": "CSV file containing target users for the invite.",
-        "unrecognizedKeywords": {
-          "contentEncoding": "binary"
-        }
+        "x-jsonschema-contentEncoding": "binary"
       },
       "UpdateInviteTargetUsersFormDataRequest": {
         "required": [
@@ -49328,9 +49108,7 @@
         "properties": {
           "target_users_file": {
             "type": "string",
-            "unrecognizedKeywords": {
-              "contentEncoding": "binary"
-            }
+            "x-jsonschema-contentEncoding": "binary"
           }
         }
       },
@@ -49742,9 +49520,7 @@
           "avatar": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           },
           "channel_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -49827,9 +49603,7 @@
           "avatar": {
             "type": "string",
             "nullable": true,
-            "unrecognizedKeywords": {
-              "contentEncoding": "base64"
-            }
+            "x-jsonschema-contentEncoding": "base64"
           }
         }
       },
