@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The application property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponse? Application { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBot? Application { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponse Application { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBot Application { get; set; }
 #endif
         /// <summary>The application_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -286,7 +286,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "activity", n => { Activity = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageActivityResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageActivityResponse.CreateFromDiscriminatorValue); } },
-                { "application", n => { Application = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponse>(global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponse.CreateFromDiscriminatorValue); } },
+                { "application", n => { Application = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBot>(global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBot.CreateFromDiscriminatorValue); } },
                 { "application_id", n => { ApplicationId = n.GetStringValue(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
@@ -331,7 +331,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageActivityResponse>("activity", Activity);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponse>("application", Application);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBot>("application", Application);
             writer.WriteStringValue("application_id", ApplicationId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentResponse>("attachments", Attachments);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("author", Author);

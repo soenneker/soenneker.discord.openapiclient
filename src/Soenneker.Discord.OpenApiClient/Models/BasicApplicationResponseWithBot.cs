@@ -9,7 +9,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class BasicApplicationResponse : IAdditionalDataHolder, IParsable
+    public partial class BasicApplicationResponseWithBot : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -73,21 +73,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
         public int? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBot"/> and sets the default values.
         /// </summary>
-        public BasicApplicationResponse()
+        public BasicApplicationResponseWithBot()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBot"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBot CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponse();
+            return new global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBot();
         }
         /// <summary>
         /// The deserialization information for the current model

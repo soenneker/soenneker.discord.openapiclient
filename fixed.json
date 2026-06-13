@@ -17158,7 +17158,7 @@
           }
         }
       },
-      "BasicApplicationResponse": {
+      "BasicApplicationResponseWithBot": {
         "required": [
           "id",
           "name",
@@ -17184,7 +17184,7 @@
             "type": "string"
           },
           "type": {
-            "$ref": "#/components/schemas/BasicApplicationResponseType"
+            "$ref": "#/components/schemas/BasicApplicationResponseWithBotType"
           },
           "cover_image": {
             "type": "string"
@@ -17386,7 +17386,7 @@
             "$ref": "#/components/schemas/MessageActivityResponse"
           },
           "application": {
-            "$ref": "#/components/schemas/BasicApplicationResponse"
+            "$ref": "#/components/schemas/BasicApplicationResponseWithBot"
           },
           "application_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -26098,12 +26098,23 @@
       },
       "InviteChannelRecipientResponse": {
         "required": [
-          "username"
+          "id",
+          "username",
+          "avatar"
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          },
           "username": {
             "type": "string"
+          },
+          "avatar": {
+            "type": "string",
+            "nullable": true
           }
         }
       },
@@ -28819,7 +28830,7 @@
             "$ref": "#/components/schemas/MessageActivityResponse"
           },
           "application": {
-            "$ref": "#/components/schemas/BasicApplicationResponse"
+            "$ref": "#/components/schemas/BasicApplicationResponseWithBot"
           },
           "application_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -34023,7 +34034,7 @@
             "$ref": "#/components/schemas/MessageActivityResponse"
           },
           "application": {
-            "$ref": "#/components/schemas/BasicApplicationResponse"
+            "$ref": "#/components/schemas/BasicApplicationResponseWithBot"
           },
           "application_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -40777,7 +40788,7 @@
           }
         }
       },
-      "BasicApplicationResponseType": {
+      "BasicApplicationResponseWithBotType": {
         "type": "object",
         "oneOf": [
           {
