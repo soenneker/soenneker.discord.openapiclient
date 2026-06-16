@@ -19466,6 +19466,9 @@
           },
           "target_type": {
             "$ref": "#/components/schemas/CreateGuildInviteRequestTargetType"
+          },
+          "role_ids": {
+            "$ref": "#/components/schemas/CreateGuildInviteRequestRoleIds"
           }
         }
       },
@@ -41351,6 +41354,25 @@
         "oneOf": [
           {
             "$ref": "#/components/schemas/CreateGuildInviteRequestTargetTypeWrapper"
+          }
+        ],
+        "nullable": true
+      },
+      "CreateGuildInviteRequestRoleIds": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "maxItems": 250,
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
+            }
           }
         ],
         "nullable": true

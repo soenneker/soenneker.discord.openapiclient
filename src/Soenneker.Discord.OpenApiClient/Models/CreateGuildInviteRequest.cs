@@ -18,6 +18,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public int? MaxAge { get; set; }
         /// <summary>The max_uses property</summary>
         public int? MaxUses { get; set; }
+        /// <summary>The role_ids property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds? RoleIds { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds RoleIds { get; set; }
+#endif
         /// <summary>The target_application_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,6 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "max_age", n => { MaxAge = n.GetIntValue(); } },
                 { "max_uses", n => { MaxUses = n.GetIntValue(); } },
+                { "role_ids", n => { RoleIds = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds.CreateFromDiscriminatorValue); } },
                 { "target_application_id", n => { TargetApplicationId = n.GetStringValue(); } },
                 { "target_type", n => { TargetType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeWrapper>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeWrapper.CreateFromDiscriminatorValue); } },
                 { "target_user_id", n => { TargetUserId = n.GetStringValue(); } },
@@ -89,6 +98,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("max_age", MaxAge);
             writer.WriteIntValue("max_uses", MaxUses);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds>("role_ids", RoleIds);
             writer.WriteStringValue("target_application_id", TargetApplicationId);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeWrapper>("target_type", TargetType);
             writer.WriteStringValue("target_user_id", TargetUserId);
