@@ -22311,6 +22311,24 @@
             }
           },
           {
+            "title": "PRUNE_REQUIRES_ADMIN",
+            "enum": [
+              "PRUNE_REQUIRES_ADMIN"
+            ],
+            "type": "object",
+            "description": "guild has restricted member prune to administrators and the guild owner",
+            "x-ms-enum": {
+              "name": "GuildFeatures",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "PRUNE_REQUIRES_ADMIN",
+                  "name": "PruneRequiresAdmin"
+                }
+              ]
+            }
+          },
+          {
             "title": "ROLE_ICONS",
             "enum": [
               "ROLE_ICONS"
@@ -27610,6 +27628,10 @@
           "title": {
             "maxLength": 1024,
             "type": "string",
+            "nullable": true
+          },
+          "is_spoiler": {
+            "type": "boolean",
             "nullable": true
           },
           "is_remix": {

@@ -42,6 +42,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #endif
         /// <summary>The is_remix property</summary>
         public bool? IsRemix { get; set; }
+        /// <summary>The is_spoiler property</summary>
+        public bool? IsSpoiler { get; set; }
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,6 +90,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "filename", n => { Filename = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_remix", n => { IsRemix = n.GetBoolValue(); } },
+                { "is_spoiler", n => { IsSpoiler = n.GetBoolValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "waveform", n => { Waveform = n.GetStringValue(); } },
             };
@@ -104,6 +107,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("filename", Filename);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_remix", IsRemix);
+            writer.WriteBoolValue("is_spoiler", IsSpoiler);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("waveform", Waveform);
             writer.WriteAdditionalData(AdditionalData);
