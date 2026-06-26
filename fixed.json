@@ -7560,6 +7560,20 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "target_channel_id",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "target_message_id",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -22675,6 +22689,16 @@
           },
           "guild_scheduled_event": {
             "$ref": "#/components/schemas/ScheduledEventResponse"
+          },
+          "target_channel_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          },
+          "target_message_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           },
           "uses": {
             "type": "integer",

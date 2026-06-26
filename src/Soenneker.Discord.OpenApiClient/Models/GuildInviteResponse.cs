@@ -96,6 +96,22 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.InviteApplicationResponse TargetApplication { get; set; }
 #endif
+        /// <summary>The target_channel_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TargetChannelId { get; set; }
+#nullable restore
+#else
+        public string TargetChannelId { get; set; }
+#endif
+        /// <summary>The target_message_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TargetMessageId { get; set; }
+#nullable restore
+#else
+        public string TargetMessageId { get; set; }
+#endif
         /// <summary>The target_type property</summary>
         public int? TargetType { get; set; }
         /// <summary>The target_user property</summary>
@@ -154,6 +170,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "max_uses", n => { MaxUses = n.GetIntValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildRoleResponse>(global::Soenneker.Discord.OpenApiClient.Models.InviteGuildRoleResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "target_application", n => { TargetApplication = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteApplicationResponse>(global::Soenneker.Discord.OpenApiClient.Models.InviteApplicationResponse.CreateFromDiscriminatorValue); } },
+                { "target_channel_id", n => { TargetChannelId = n.GetStringValue(); } },
+                { "target_message_id", n => { TargetMessageId = n.GetStringValue(); } },
                 { "target_type", n => { TargetType = n.GetIntValue(); } },
                 { "target_user", n => { TargetUser = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
                 { "temporary", n => { Temporary = n.GetBoolValue(); } },
@@ -185,6 +203,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("max_uses", MaxUses);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildRoleResponse>("roles", Roles);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteApplicationResponse>("target_application", TargetApplication);
+            writer.WriteStringValue("target_channel_id", TargetChannelId);
+            writer.WriteStringValue("target_message_id", TargetMessageId);
             writer.WriteIntValue("target_type", TargetType);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("target_user", TargetUser);
             writer.WriteBoolValue("temporary", Temporary);
