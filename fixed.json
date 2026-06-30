@@ -19324,6 +19324,7 @@
             "maximum": 21600,
             "minimum": 0,
             "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "applied_tags": {
@@ -19623,6 +19624,7 @@
             "maximum": 21600,
             "minimum": 0,
             "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         }
@@ -19645,6 +19647,7 @@
             "maximum": 21600,
             "minimum": 0,
             "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "type": {
@@ -37147,6 +37150,7 @@
             "maximum": 21600,
             "minimum": 0,
             "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "flags": {
