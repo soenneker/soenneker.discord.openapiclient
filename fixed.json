@@ -22703,6 +22703,9 @@
             "type": "string",
             "format": "snowflake"
           },
+          "liveliness": {
+            "$ref": "#/components/schemas/GuildInviteResponseLiveliness"
+          },
           "uses": {
             "type": "integer",
             "format": "int32"
@@ -22885,6 +22888,26 @@
             "items": {
               "$ref": "#/components/schemas/GuildJoinRequestResponse"
             }
+          }
+        }
+      },
+      "GuildLivelinessResponse": {
+        "required": [
+          "msg_activity_bins"
+        ],
+        "type": "object",
+        "properties": {
+          "msg_activity_bins": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "last_updated_ts": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         }
       },
@@ -42533,6 +42556,30 @@
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
+      },
+      "GuildInviteResponseLiveliness": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/GuildLivelinessResponse"
+          }
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Union discriminator"
+          }
+        },
+        "nullable": true,
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "GuildLivelinessResponse": "#/components/schemas/GuildLivelinessResponse"
+          }
+        }
       },
       "GuildJoinRequestResponseApplicationStatus": {
         "type": "object",

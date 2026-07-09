@@ -76,6 +76,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public bool? IsContact { get; set; }
         /// <summary>The is_nickname_changeable property</summary>
         public bool? IsNicknameChangeable { get; set; }
+        /// <summary>The liveliness property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLiveliness? Liveliness { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLiveliness Liveliness { get; set; }
+#endif
         /// <summary>The max_age property</summary>
         public int? MaxAge { get; set; }
         /// <summary>The max_uses property</summary>
@@ -166,6 +174,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "inviter", n => { Inviter = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
                 { "is_contact", n => { IsContact = n.GetBoolValue(); } },
                 { "is_nickname_changeable", n => { IsNicknameChangeable = n.GetBoolValue(); } },
+                { "liveliness", n => { Liveliness = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLiveliness>(global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLiveliness.CreateFromDiscriminatorValue); } },
                 { "max_age", n => { MaxAge = n.GetIntValue(); } },
                 { "max_uses", n => { MaxUses = n.GetIntValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildRoleResponse>(global::Soenneker.Discord.OpenApiClient.Models.InviteGuildRoleResponse.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -199,6 +208,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("inviter", Inviter);
             writer.WriteBoolValue("is_contact", IsContact);
             writer.WriteBoolValue("is_nickname_changeable", IsNicknameChangeable);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLiveliness>("liveliness", Liveliness);
             writer.WriteIntValue("max_age", MaxAge);
             writer.WriteIntValue("max_uses", MaxUses);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteGuildRoleResponse>("roles", Roles);

@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "9C9135891903BC0DED0450BF7BD752BCD69FD4CC7E5AC61B70A54D815B4B72C26A5696D6C2E8A0FE954E1175867A85C5E0DF9FAACE3B640D64A1B0706CC6A2F6",
+  "descriptionHash": "0396334A1D9D8E7F098F181D44A3B5E2CF0F46D8E902E9D398E02FE236BD29F798EE631D0AF3B8BB3546B56333756661400735D421C41D4666B01F2A207EFE67",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.33.0",
+  "kiotaVersion": "1.34.0",
   "clientClassName": "DiscordOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Discord.OpenApiClient",
