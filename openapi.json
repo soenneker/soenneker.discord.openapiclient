@@ -6613,26 +6613,6 @@
               }
             }
           },
-          "204": {
-            "description": "204 response for bulk_ban_users_from_guild",
-            "headers": {
-              "X-RateLimit-Limit": {
-                "$ref": "#/components/headers/X-RateLimit-Limit"
-              },
-              "X-RateLimit-Remaining": {
-                "$ref": "#/components/headers/X-RateLimit-Remaining"
-              },
-              "X-RateLimit-Reset": {
-                "$ref": "#/components/headers/X-RateLimit-Reset"
-              },
-              "X-RateLimit-Reset-After": {
-                "$ref": "#/components/headers/X-RateLimit-Reset-After"
-              },
-              "X-RateLimit-Bucket": {
-                "$ref": "#/components/headers/X-RateLimit-Bucket"
-              }
-            }
-          },
           "429": {
             "$ref": "#/components/responses/ClientRatelimitedResponse"
           },
@@ -13870,6 +13850,7 @@
                   },
                   "external_auth_token": {
                     "type": "string",
+                    "minLength": 1,
                     "maxLength": 10240
                   },
                   "external_auth_type": {
@@ -13933,6 +13914,7 @@
                 "properties": {
                   "external_user_id": {
                     "type": "string",
+                    "minLength": 1,
                     "maxLength": 1024
                   }
                 },
@@ -14000,6 +13982,7 @@
                   },
                   "external_auth_token": {
                     "type": "string",
+                    "minLength": 1,
                     "maxLength": 10240
                   },
                   "external_auth_type": {
