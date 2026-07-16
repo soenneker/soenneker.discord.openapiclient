@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MlSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserProfileRuleResponse"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ListAutoModerationRules200ResponseItemMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MlSpamRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserProfileRuleResponse"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ListAutoModerationRules200ResponseItem : IComposedTypeWrapper, IParsable
@@ -28,6 +28,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse KeywordRuleResponse { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ListAutoModerationRules200ResponseItemMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ListAutoModerationRules200ResponseItemMember1? ListAutoModerationRules200ResponseItemMember1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ListAutoModerationRules200ResponseItemMember1 ListAutoModerationRules200ResponseItemMember1 { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,6 +107,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 return KeywordRuleResponse.GetFieldDeserializers();
             }
+            else if(ListAutoModerationRules200ResponseItemMember1 != null)
+            {
+                return ListAutoModerationRules200ResponseItemMember1.GetFieldDeserializers();
+            }
             else if(MentionSpamRuleResponse != null)
             {
                 return MentionSpamRuleResponse.GetFieldDeserializers();
@@ -127,6 +139,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             else if(KeywordRuleResponse != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse>(null, KeywordRuleResponse);
+            }
+            else if(ListAutoModerationRules200ResponseItemMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ListAutoModerationRules200ResponseItemMember1>(null, ListAutoModerationRules200ResponseItemMember1);
             }
             else if(MentionSpamRuleResponse != null)
             {

@@ -8,11 +8,19 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="string"/>, List&lt;string&gt;
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIdsMember1"/>, <see cref="string"/>, List&lt;string&gt;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateGuildInviteRequestRoleIds : IComposedTypeWrapper, IParsable
     {
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIdsMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIdsMember1? CreateGuildInviteRequestRoleIdsMember1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIdsMember1 CreateGuildInviteRequestRoleIdsMember1 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,6 +63,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(CreateGuildInviteRequestRoleIdsMember1 != null)
+            {
+                return CreateGuildInviteRequestRoleIdsMember1.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -64,7 +76,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(CreateGuildInviteRequestRoleIdsString != null)
+            if(CreateGuildInviteRequestRoleIdsMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIdsMember1>(null, CreateGuildInviteRequestRoleIdsMember1);
+            }
+            else if(CreateGuildInviteRequestRoleIdsString != null)
             {
                 writer.WriteStringValue(null, CreateGuildInviteRequestRoleIdsString);
             }

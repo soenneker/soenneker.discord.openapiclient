@@ -225,7 +225,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string TermsOfServiceUrl { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseType? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseType Type { get; set; }
+#endif
         /// <summary>The verify_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -292,7 +298,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam>(global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam.CreateFromDiscriminatorValue); } },
                 { "terms_of_service_url", n => { TermsOfServiceUrl = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseType>(global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseType.CreateFromDiscriminatorValue); } },
                 { "verify_key", n => { VerifyKey = n.GetStringValue(); } },
             };
         }
@@ -336,7 +342,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam>("team", Team);
             writer.WriteStringValue("terms_of_service_url", TermsOfServiceUrl);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseType>("type", Type);
             writer.WriteStringValue("verify_key", VerifyKey);
             writer.WriteAdditionalData(AdditionalData);
         }

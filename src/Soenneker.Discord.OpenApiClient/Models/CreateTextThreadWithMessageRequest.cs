@@ -15,7 +15,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The auto_archive_duration property</summary>
-        public int? AutoArchiveDuration { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithMessageRequestAutoArchiveDuration? AutoArchiveDuration { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithMessageRequestAutoArchiveDuration AutoArchiveDuration { get; set; }
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -51,7 +57,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetIntValue(); } },
+                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithMessageRequestAutoArchiveDuration>(global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithMessageRequestAutoArchiveDuration.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "rate_limit_per_user", n => { RateLimitPerUser = n.GetIntValue(); } },
             };
@@ -63,7 +69,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("auto_archive_duration", AutoArchiveDuration);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithMessageRequestAutoArchiveDuration>("auto_archive_duration", AutoArchiveDuration);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);
             writer.WriteAdditionalData(AdditionalData);

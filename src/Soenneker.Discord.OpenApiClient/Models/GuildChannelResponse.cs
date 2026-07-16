@@ -37,14 +37,20 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji DefaultReactionEmoji { get; set; }
 #endif
         /// <summary>The default_sort_order property</summary>
-        public int? DefaultSortOrder { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultSortOrder? DefaultSortOrder { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultSortOrder DefaultSortOrder { get; set; }
+#endif
         /// <summary>The default_tag_setting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting? DefaultTagSetting { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultTagSetting? DefaultTagSetting { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting DefaultTagSetting { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultTagSetting DefaultTagSetting { get; set; }
 #endif
         /// <summary>The default_thread_rate_limit_per_user property</summary>
         public int? DefaultThreadRateLimitPerUser { get; set; }
@@ -166,8 +172,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "default_auto_archive_duration", n => { DefaultAutoArchiveDuration = n.GetIntValue(); } },
                 { "default_forum_layout", n => { DefaultForumLayout = n.GetIntValue(); } },
                 { "default_reaction_emoji", n => { DefaultReactionEmoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji.CreateFromDiscriminatorValue); } },
-                { "default_sort_order", n => { DefaultSortOrder = n.GetIntValue(); } },
-                { "default_tag_setting", n => { DefaultTagSetting = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>(global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting.CreateFromDiscriminatorValue); } },
+                { "default_sort_order", n => { DefaultSortOrder = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultSortOrder>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultSortOrder.CreateFromDiscriminatorValue); } },
+                { "default_tag_setting", n => { DefaultTagSetting = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultTagSetting>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultTagSetting.CreateFromDiscriminatorValue); } },
                 { "default_thread_rate_limit_per_user", n => { DefaultThreadRateLimitPerUser = n.GetIntValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
@@ -200,8 +206,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("default_auto_archive_duration", DefaultAutoArchiveDuration);
             writer.WriteIntValue("default_forum_layout", DefaultForumLayout);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji>("default_reaction_emoji", DefaultReactionEmoji);
-            writer.WriteIntValue("default_sort_order", DefaultSortOrder);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>("default_tag_setting", DefaultTagSetting);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultSortOrder>("default_sort_order", DefaultSortOrder);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultTagSetting>("default_tag_setting", DefaultTagSetting);
             writer.WriteIntValue("default_thread_rate_limit_per_user", DefaultThreadRateLimitPerUser);
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("guild_id", GuildId);

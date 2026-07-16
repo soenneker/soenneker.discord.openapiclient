@@ -27,7 +27,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Number of hours the poll should be open for, up to 32 days. Defaults to 24</summary>
         public int? Duration { get; set; }
         /// <summary>The layout type of the poll. Defaults to... DEFAULT!</summary>
-        public int? LayoutType { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType? LayoutType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType LayoutType { get; set; }
+#endif
         /// <summary>The question property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,7 +78,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "allow_multiselect", n => { AllowMultiselect = n.GetBoolValue(); } },
                 { "answers", n => { Answers = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
-                { "layout_type", n => { LayoutType = n.GetIntValue(); } },
+                { "layout_type", n => { LayoutType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType>(global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType.CreateFromDiscriminatorValue); } },
                 { "question", n => { Question = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMedia>(global::Soenneker.Discord.OpenApiClient.Models.PollMedia.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -87,7 +93,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("allow_multiselect", AllowMultiselect);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>("answers", Answers);
             writer.WriteIntValue("duration", Duration);
-            writer.WriteIntValue("layout_type", LayoutType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType>("layout_type", LayoutType);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMedia>("question", Question);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

@@ -17,7 +17,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The eligible property</summary>
         public bool? Eligible { get; set; }
         /// <summary>The ineligible_reason property</summary>
-        public int? IneligibleReason { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSkuPurchaseEligibilityCallbackDataIneligibleReason? IneligibleReason { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSkuPurchaseEligibilityCallbackDataIneligibleReason IneligibleReason { get; set; }
+#endif
         /// <summary>The ineligible_reason_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,7 +58,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "eligible", n => { Eligible = n.GetBoolValue(); } },
-                { "ineligible_reason", n => { IneligibleReason = n.GetIntValue(); } },
+                { "ineligible_reason", n => { IneligibleReason = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSkuPurchaseEligibilityCallbackDataIneligibleReason>(global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSkuPurchaseEligibilityCallbackDataIneligibleReason.CreateFromDiscriminatorValue); } },
                 { "ineligible_reason_description", n => { IneligibleReasonDescription = n.GetStringValue(); } },
             };
         }
@@ -64,7 +70,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("eligible", Eligible);
-            writer.WriteIntValue("ineligible_reason", IneligibleReason);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSkuPurchaseEligibilityCallbackDataIneligibleReason>("ineligible_reason", IneligibleReason);
             writer.WriteStringValue("ineligible_reason_description", IneligibleReasonDescription);
             writer.WriteAdditionalData(AdditionalData);
         }

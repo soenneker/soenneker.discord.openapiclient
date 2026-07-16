@@ -25,7 +25,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The format_type property</summary>
-        public int? FormatType { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildStickerResponseFormatType? FormatType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildStickerResponseFormatType FormatType { get; set; }
+#endif
         /// <summary>The guild_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,7 +101,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "available", n => { Available = n.GetBoolValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "format_type", n => { FormatType = n.GetIntValue(); } },
+                { "format_type", n => { FormatType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildStickerResponseFormatType>(global::Soenneker.Discord.OpenApiClient.Models.GuildStickerResponseFormatType.CreateFromDiscriminatorValue); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -113,7 +119,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("available", Available);
             writer.WriteStringValue("description", Description);
-            writer.WriteIntValue("format_type", FormatType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildStickerResponseFormatType>("format_type", FormatType);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);

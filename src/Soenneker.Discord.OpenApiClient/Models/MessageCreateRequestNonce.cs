@@ -8,13 +8,21 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="long"/>, <see cref="string"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestNonceMember1"/>, <see cref="long"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MessageCreateRequestNonce : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="long"/></summary>
         public long? Int64 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestNonceMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestNonceMember1? MessageCreateRequestNonceMember1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestNonceMember1 MessageCreateRequestNonceMember1 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,6 +57,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(MessageCreateRequestNonceMember1 != null)
+            {
+                return MessageCreateRequestNonceMember1.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -58,7 +70,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(Int64 != null)
+            if(MessageCreateRequestNonceMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestNonceMember1>(null, MessageCreateRequestNonceMember1);
+            }
+            else if(Int64 != null)
             {
                 writer.WriteLongValue(null, Int64);
             }

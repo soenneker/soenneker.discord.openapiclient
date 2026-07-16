@@ -41,10 +41,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The entity_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityTypeWrapper? EntityType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityType? EntityType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityTypeWrapper EntityType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityType EntityType { get; set; }
 #endif
         /// <summary>The image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -77,7 +77,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The scheduled_start_time property</summary>
         public DateTimeOffset? ScheduledStartTime { get; set; }
         /// <summary>The status property</summary>
-        public int? Status { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialStatus? Status { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialStatus Status { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartial"/> and sets the default values.
         /// </summary>
@@ -106,14 +112,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "entity_metadata", n => { EntityMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityMetadata>(global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityMetadata.CreateFromDiscriminatorValue); } },
-                { "entity_type", n => { EntityType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityTypeWrapper>(global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityTypeWrapper.CreateFromDiscriminatorValue); } },
+                { "entity_type", n => { EntityType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityType>(global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityType.CreateFromDiscriminatorValue); } },
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "privacy_level", n => { PrivacyLevel = n.GetIntValue(); } },
                 { "recurrence_rule", n => { RecurrenceRule = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialRecurrenceRule>(global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialRecurrenceRule.CreateFromDiscriminatorValue); } },
                 { "scheduled_end_time", n => { ScheduledEndTime = n.GetDateTimeOffsetValue(); } },
                 { "scheduled_start_time", n => { ScheduledStartTime = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetIntValue(); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialStatus>(global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialStatus.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -126,14 +132,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityMetadata>("entity_metadata", EntityMetadata);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityTypeWrapper>("entity_type", EntityType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityType>("entity_type", EntityType);
             writer.WriteStringValue("image", Image);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("privacy_level", PrivacyLevel);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialRecurrenceRule>("recurrence_rule", RecurrenceRule);
             writer.WriteDateTimeOffsetValue("scheduled_end_time", ScheduledEndTime);
             writer.WriteDateTimeOffsetValue("scheduled_start_time", ScheduledStartTime);
-            writer.WriteIntValue("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

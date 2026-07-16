@@ -23765,7 +23765,9 @@
         "type": "object",
         "properties": {
           "premium_subscriber": {
-            "nullable": true
+            "enum": [
+              null
+            ]
           },
           "bot_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -23783,10 +23785,14 @@
             "format": "snowflake"
           },
           "available_for_purchase": {
-            "nullable": true
+            "enum": [
+              null
+            ]
           },
           "guild_connections": {
-            "nullable": true
+            "enum": [
+              null
+            ]
           }
         }
       },
@@ -27655,6 +27661,7 @@
           },
           "filename": {
             "maxLength": 1024,
+            "minLength": 1,
             "type": "string",
             "nullable": true
           },
@@ -38937,7 +38944,9 @@
             "$ref": "#/components/schemas/WidgetUserDiscriminator"
           },
           "avatar": {
-            "nullable": true
+            "enum": [
+              null
+            ]
           },
           "status": {
             "type": "string"
@@ -40136,20 +40145,28 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationCommandHandler"
           }
         ],
-        "description": "Determines whether the interaction is handled by the app\u0027s interactions handler or by Discord",
-        "nullable": true
+        "description": "Determines whether the interaction is handled by the app\u0027s interactions handler or by Discord"
       },
       "ApplicationCommandCreateRequestType": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationCommandType"
           }
-        ],
-        "nullable": true
+        ]
       },
       "ApplicationCommandIntegerOptionType": {
         "type": "integer",
@@ -40271,11 +40288,15 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationCommandHandler"
           }
         ],
-        "description": "Determines whether the interaction is handled by the app\u0027s interactions handler or by Discord",
-        "nullable": true
+        "description": "Determines whether the interaction is handled by the app\u0027s interactions handler or by Discord"
       },
       "ApplicationCommandResponseOptionsItem": {
         "required": [
@@ -40557,20 +40578,28 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationCommandHandler"
           }
         ],
-        "description": "Determines whether the interaction is handled by the app\u0027s interactions handler or by Discord",
-        "nullable": true
+        "description": "Determines whether the interaction is handled by the app\u0027s interactions handler or by Discord"
       },
       "ApplicationCommandUpdateRequestType": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationCommandType"
           }
-        ],
-        "nullable": true
+        ]
       },
       "ApplicationCommandUpdateRequestId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -40598,19 +40627,27 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationExplicitContentFilterTypes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "ApplicationFormPartialType": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationTypes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "ApplicationFormPartialInstallParams": {
         "required": [
@@ -40618,6 +40655,11 @@
         ],
         "type": "object",
         "oneOf": [
+          {
+            "enum": [
+              null
+            ]
+          },
           {
             "$ref": "#/components/schemas/ApplicationOAuth2InstallParams"
           }
@@ -40628,7 +40670,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -40643,6 +40684,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationIntegrationTypeConfiguration"
           }
         ],
@@ -40652,7 +40698,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -40664,10 +40709,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationFormPartialEventWebhooksStatusWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "ApplicationFormPartialEventWebhooksTypesItem": {
         "type": "string",
@@ -40703,6 +40752,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationOAuth2InstallParams"
           }
         ],
@@ -40712,7 +40766,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -40732,10 +40785,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationTypes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "AuditLogEntryResponseUserId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -40756,6 +40813,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageAllowedMentionsRequest"
           }
         ],
@@ -40765,7 +40827,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -40827,6 +40888,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/PollCreateRequest"
           }
         ],
@@ -40836,7 +40902,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -40851,6 +40916,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/CustomClientThemeShareRequest"
           }
         ],
@@ -40860,7 +40930,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -40872,10 +40941,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationTypes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "BasicGuildMemberResponseAvatarDecorationData": {
         "required": [
@@ -40883,6 +40956,11 @@
         ],
         "type": "object",
         "oneOf": [
+          {
+            "enum": [
+              null
+            ]
+          },
           {
             "$ref": "#/components/schemas/UserAvatarDecorationResponse"
           }
@@ -40894,7 +40972,6 @@
           }
         },
         "description": "data for the member\u0027s guild avatar decoration",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -40909,6 +40986,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserCollectiblesResponse"
           }
         ],
@@ -40919,7 +41001,6 @@
           }
         },
         "description": "data for the member\u0027s collectibles",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -41060,6 +41141,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/BlockMessageActionMetadata"
           }
         ],
@@ -41069,7 +41155,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -41108,6 +41193,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ComponentEmojiForRequest"
           }
         ],
@@ -41117,7 +41207,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -41157,10 +41246,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ChannelPermissionOverwrites"
           }
-        ],
-        "nullable": true
+        ]
       },
       "ChannelSelectComponentForMessageRequestType": {
         "type": "integer",
@@ -41301,19 +41394,27 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadAutoArchiveDuration"
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateGuildChannelRequestType": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/CreateGuildChannelRequestTypeWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateGuildChannelRequestParentId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -41325,19 +41426,27 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/VideoQualityModes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateGuildChannelRequestDefaultAutoArchiveDuration": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadAutoArchiveDuration"
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateGuildChannelRequestDefaultReactionEmoji": {
         "required": [
@@ -41345,6 +41454,11 @@
         ],
         "type": "object",
         "oneOf": [
+          {
+            "enum": [
+              null
+            ]
+          },
           {
             "$ref": "#/components/schemas/UpdateDefaultReactionEmojiRequest"
           }
@@ -41355,7 +41469,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -41367,28 +41480,40 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadSortOrder"
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateGuildChannelRequestDefaultForumLayout": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ForumLayout"
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateGuildChannelRequestDefaultTagSetting": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadSearchTagSetting"
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateGuildChannelRequestAvailableTagsItem": {
         "required": [
@@ -41396,6 +41521,11 @@
         ],
         "type": "object",
         "oneOf": [
+          {
+            "enum": [
+              null
+            ]
+          },
           {
             "$ref": "#/components/schemas/CreateOrUpdateThreadTagRequest"
           }
@@ -41406,7 +41536,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -41430,10 +41559,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/CreateGuildInviteRequestTargetTypeWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateGuildInviteRequestRoleIds": {
         "type": "object",
@@ -41450,9 +41583,13 @@
               "type": "string",
               "format": "snowflake"
             }
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateMessageInteractionCallbackRequestType": {
         "type": "integer",
@@ -41466,6 +41603,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/IncomingWebhookInteractionRequest"
           }
         ],
@@ -41475,7 +41617,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -41507,6 +41648,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RoleColors"
           }
         ],
@@ -41516,7 +41662,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -41528,28 +41673,40 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadAutoArchiveDuration"
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateTextThreadWithoutMessageRequestAutoArchiveDuration": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadAutoArchiveDuration"
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateTextThreadWithoutMessageRequestType": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/CreateTextThreadWithoutMessageRequestTypeWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreatedThreadResponseType": {
         "type": "integer",
@@ -41572,10 +41729,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageShareCustomUserThemeBaseTheme"
           }
-        ],
-        "nullable": true
+        ]
       },
       "DefaultKeywordListUpsertRequestActionsItem": {
         "required": [
@@ -41748,10 +41909,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/EntitlementTenantFulfillmentStatusResponse"
           }
-        ],
-        "nullable": true
+        ]
       },
       "EntitlementResponseGifterUserId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -41793,6 +41958,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RecurrenceRule"
           }
         ],
@@ -41803,7 +41973,6 @@
           }
         },
         "description": "Recurrence rule for the scheduled event",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -41815,19 +41984,27 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GuildScheduledEventStatuses"
           }
-        ],
-        "nullable": true
+        ]
       },
       "ExternalScheduledEventPatchRequestPartialEntityType": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ExternalScheduledEventPatchRequestPartialEntityTypeWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "ExternalScheduledEventPatchRequestPartialChannelId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -41842,6 +42019,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RecurrenceRule"
           }
         ],
@@ -41852,7 +42034,6 @@
           }
         },
         "description": "Recurrence rule for the scheduled event",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -41894,6 +42075,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RecurrenceRuleResponse"
           }
         ],
@@ -41904,7 +42090,6 @@
           }
         },
         "description": "Recurrence rule for the scheduled event, or null if not recurring",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -41919,6 +42104,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ScheduledEventUserResponse"
           }
         ],
@@ -41928,7 +42118,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -41979,6 +42168,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/InviteChannelResponse"
           }
         ],
@@ -41988,7 +42182,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42003,6 +42196,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubCheckRunOutput"
           }
         ],
@@ -42012,7 +42210,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42027,6 +42224,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubComment"
           }
         ],
@@ -42036,7 +42238,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42051,6 +42252,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubIssue"
           }
         ],
@@ -42060,7 +42266,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42075,6 +42280,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubIssue"
           }
         ],
@@ -42084,7 +42294,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42099,6 +42308,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubRepository"
           }
         ],
@@ -42108,7 +42322,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42123,6 +42336,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubRepository"
           }
         ],
@@ -42132,7 +42350,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42147,6 +42364,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubUser"
           }
         ],
@@ -42156,7 +42378,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42171,6 +42392,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubRelease"
           }
         ],
@@ -42180,7 +42406,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42195,6 +42420,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubCommit"
           }
         ],
@@ -42204,7 +42434,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42219,6 +42448,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubReview"
           }
         ],
@@ -42228,7 +42462,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42243,6 +42476,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubCheckRun"
           }
         ],
@@ -42252,7 +42490,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42267,6 +42504,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubCheckSuite"
           }
         ],
@@ -42276,7 +42518,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42291,6 +42532,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubDiscussion"
           }
         ],
@@ -42300,7 +42546,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42315,6 +42560,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GithubComment"
           }
         ],
@@ -42324,7 +42574,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42450,6 +42699,11 @@
           },
           {
             "$ref": "#/components/schemas/UserProfileRuleResponse"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "properties": {
@@ -42458,7 +42712,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42498,6 +42751,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/DefaultReactionEmojiResponse"
           }
         ],
@@ -42507,7 +42765,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42519,19 +42776,27 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadSortOrder"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildChannelResponseDefaultTagSetting": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadSearchTagSetting"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildIncomingWebhookResponseApplicationId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -42568,6 +42833,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GuildLivelinessResponse"
           }
         ],
@@ -42577,7 +42847,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42589,10 +42858,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GuildJoinRequestApplicationStatus"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildJoinRequestResponseUser": {
         "required": [
@@ -42600,6 +42873,11 @@
         ],
         "type": "object",
         "oneOf": [
+          {
+            "enum": [
+              null
+            ]
+          },
           {
             "$ref": "#/components/schemas/UserResponse"
           }
@@ -42610,7 +42888,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42660,6 +42937,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserResponse"
           }
         ],
@@ -42669,7 +42951,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42684,6 +42965,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserAvatarDecorationResponse"
           }
         ],
@@ -42694,7 +42980,6 @@
           }
         },
         "description": "data for the member\u0027s guild avatar decoration",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42709,6 +42994,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserCollectiblesResponse"
           }
         ],
@@ -42719,7 +43009,6 @@
           }
         },
         "description": "data for the member\u0027s collectibles",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42731,46 +43020,66 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/VerificationLevels"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildPatchRequestPartialDefaultMessageNotifications": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserNotificationSettings"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildPatchRequestPartialExplicitContentFilter": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GuildExplicitContentFilterTypes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildPatchRequestPartialPreferredLocale": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/AvailableLocalesEnum"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildPatchRequestPartialAfkTimeout": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/AfkTimeouts"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildPatchRequestPartialAfkChannelId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -42851,6 +43160,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GuildIncidentsDataResponse"
           }
         ],
@@ -42860,7 +43174,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42877,10 +43190,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/StickerFormatTypes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildSubscriptionIntegrationResponseType": {
         "type": "string",
@@ -42901,10 +43218,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadAutoArchiveDuration"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildTemplateChannelResponseDefaultReactionEmoji": {
         "required": [
@@ -42912,6 +43233,11 @@
         ],
         "type": "object",
         "oneOf": [
+          {
+            "enum": [
+              null
+            ]
+          },
           {
             "$ref": "#/components/schemas/DefaultReactionEmojiResponse"
           }
@@ -42922,7 +43248,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42934,28 +43259,40 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadSortOrder"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildTemplateChannelResponseDefaultForumLayout": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ForumLayout"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildTemplateChannelResponseDefaultTagSetting": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadSearchTagSetting"
           }
-        ],
-        "nullable": true
+        ]
       },
       "GuildTemplateChannelTagsEmojiId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -42970,6 +43307,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserResponse"
           }
         ],
@@ -42979,7 +43321,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -42994,6 +43335,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GuildTemplateRoleColorsResponse"
           }
         ],
@@ -43003,7 +43349,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43084,6 +43429,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GuildIncidentsDataResponse"
           }
         ],
@@ -43093,7 +43443,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43108,6 +43457,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageAllowedMentionsRequest"
           }
         ],
@@ -43117,7 +43471,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43179,6 +43532,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/PollCreateRequest"
           }
         ],
@@ -43188,7 +43546,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43203,6 +43560,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageAllowedMentionsRequest"
           }
         ],
@@ -43212,7 +43574,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43274,6 +43635,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/PollCreateRequest"
           }
         ],
@@ -43283,7 +43649,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43298,6 +43663,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageAllowedMentionsRequest"
           }
         ],
@@ -43307,7 +43677,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43369,6 +43738,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageAllowedMentionsRequest"
           }
         ],
@@ -43378,7 +43752,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43440,6 +43813,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/PollCreateRequest"
           }
         ],
@@ -43449,7 +43827,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43470,10 +43847,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationTypes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "InteractionApplicationCommandAutocompleteCallbackIntegerDataChoicesItem": {
         "required": [
@@ -43481,6 +43862,11 @@
         ],
         "type": "object",
         "oneOf": [
+          {
+            "enum": [
+              null
+            ]
+          },
           {
             "$ref": "#/components/schemas/ApplicationCommandOptionIntegerChoice"
           }
@@ -43491,7 +43877,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43506,6 +43891,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationCommandOptionNumberChoice"
           }
         ],
@@ -43515,7 +43905,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43530,6 +43919,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationCommandOptionStringChoice"
           }
         ],
@@ -43539,7 +43933,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43582,28 +43975,40 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationTypes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "InviteGuildResponseVerificationLevel": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/VerificationLevels"
           }
-        ],
-        "nullable": true
+        ]
       },
       "InviteGuildResponseNsfwLevel": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GuildNsfwContentLevel"
           }
-        ],
-        "nullable": true
+        ]
       },
       "KeywordRuleResponseActionsItem": {
         "required": [
@@ -43692,6 +44097,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/KeywordTriggerMetadata"
           }
         ],
@@ -43701,7 +44111,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43756,6 +44165,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/KeywordTriggerMetadata"
           }
         ],
@@ -43765,7 +44179,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -43942,6 +44355,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "type": "object"
           }
         ],
@@ -43951,7 +44369,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44006,6 +44423,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "type": "object"
           }
         ],
@@ -44015,7 +44437,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44120,6 +44541,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MentionSpamTriggerMetadata"
           }
         ],
@@ -44129,7 +44555,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44184,6 +44609,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MentionSpamTriggerMetadata"
           }
         ],
@@ -44193,7 +44623,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44301,10 +44730,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/AllowedMentionTypes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "MessageAllowedMentionsRequestUsersItem": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -44330,6 +44763,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageAllowedMentionsRequest"
           }
         ],
@@ -44339,7 +44777,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44401,6 +44838,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/PollCreateRequest"
           }
         ],
@@ -44410,7 +44852,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44425,6 +44866,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/CustomClientThemeShareRequest"
           }
         ],
@@ -44434,7 +44880,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44449,6 +44894,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageReferenceRequest"
           }
         ],
@@ -44458,7 +44908,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44479,9 +44928,13 @@
             "maxLength": 25,
             "type": "string",
             "format": "nonce"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "MessageEditRequestPartialAllowedMentions": {
         "required": [
@@ -44489,6 +44942,11 @@
         ],
         "type": "object",
         "oneOf": [
+          {
+            "enum": [
+              null
+            ]
+          },
           {
             "$ref": "#/components/schemas/MessageAllowedMentionsRequest"
           }
@@ -44499,7 +44957,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44576,10 +45033,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageReferenceType"
           }
-        ],
-        "nullable": true
+        ]
       },
       "MessageResponseComponentsItem": {
         "required": [
@@ -44709,6 +45170,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/BasicMessageResponse"
           }
         ],
@@ -44718,7 +45184,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44906,11 +45371,15 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/PollLayoutTypes"
           }
         ],
-        "description": "The layout type of the poll. Defaults to... DEFAULT!",
-        "nullable": true
+        "description": "The layout type of the poll. Defaults to... DEFAULT!"
       },
       "PollEmojiId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -44933,6 +45402,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/PollEmoji"
           }
         ],
@@ -44943,7 +45417,6 @@
           }
         },
         "description": "The emoji of the field",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44958,6 +45431,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/PollEmojiCreateRequest"
           }
         ],
@@ -44968,7 +45446,6 @@
           }
         },
         "description": "The emoji of the field",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -44985,10 +45462,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ApplicationTypes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "PrivateApplicationResponseEventWebhooksTypesItem": {
         "type": "string",
@@ -45001,6 +45482,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/TeamResponse"
           }
         ],
@@ -45010,7 +45496,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45051,6 +45536,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserAvatarDecorationResponse"
           }
         ],
@@ -45061,7 +45551,6 @@
           }
         },
         "description": "data for the member\u0027s guild avatar decoration",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45076,6 +45565,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserCollectiblesResponse"
           }
         ],
@@ -45086,7 +45580,6 @@
           }
         },
         "description": "data for the member\u0027s collectibles",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45109,9 +45602,13 @@
               "type": "string",
               "format": "snowflake"
             }
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "QuarantineUserActionType": {
         "type": "integer",
@@ -45125,6 +45622,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "type": "object"
           }
         ],
@@ -45134,7 +45636,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45194,6 +45695,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RichEmbedAuthor"
           }
         ],
@@ -45203,7 +45709,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45218,6 +45723,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RichEmbedImage"
           }
         ],
@@ -45227,7 +45737,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45242,6 +45751,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RichEmbedThumbnail"
           }
         ],
@@ -45251,7 +45765,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45266,6 +45779,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RichEmbedFooter"
           }
         ],
@@ -45275,7 +45793,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45290,6 +45807,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RichEmbedProvider"
           }
         ],
@@ -45299,7 +45821,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45314,6 +45835,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RichEmbedVideo"
           }
         ],
@@ -45323,7 +45849,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45361,6 +45886,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageAllowedMentionsRequest"
           }
         ],
@@ -45370,7 +45900,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45432,6 +45961,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/PollCreateRequest"
           }
         ],
@@ -45441,7 +45975,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45456,6 +45989,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/CustomClientThemeShareRequest"
           }
         ],
@@ -45465,7 +46003,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45480,6 +46017,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageReferenceRequest"
           }
         ],
@@ -45489,7 +46031,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45510,9 +46051,13 @@
             "maxLength": 25,
             "type": "string",
             "format": "nonce"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "ScheduledEventResponseChannelId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -45542,6 +46087,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RecurrenceRuleResponse"
           }
         ],
@@ -45552,7 +46102,6 @@
           }
         },
         "description": "Recurrence rule for the scheduled event, or null if not recurring",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45567,6 +46116,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ScheduledEventUserResponse"
           }
         ],
@@ -45576,7 +46130,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45719,6 +46272,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/BasicMessageResponse"
           }
         ],
@@ -45728,7 +46286,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45809,10 +46366,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageComponentSeparatorSpacingSize"
           }
-        ],
-        "nullable": true
+        ]
       },
       "SeparatorComponentResponseType": {
         "type": "integer",
@@ -45829,10 +46390,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/SkuIneligibilityReason"
           }
-        ],
-        "nullable": true
+        ]
       },
       "SocialLayerSkuPurchaseEligibilityInteractionCallbackRequestType": {
         "type": "integer",
@@ -45887,6 +46452,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RecurrenceRule"
           }
         ],
@@ -45897,7 +46467,6 @@
           }
         },
         "description": "Recurrence rule for the scheduled event",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45912,6 +46481,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "type": "object"
           }
         ],
@@ -45921,7 +46495,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45933,19 +46506,27 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GuildScheduledEventStatuses"
           }
-        ],
-        "nullable": true
+        ]
       },
       "StageScheduledEventPatchRequestPartialEntityType": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/StageScheduledEventPatchRequestPartialEntityTypeWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "StageScheduledEventPatchRequestPartialChannelId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -45960,6 +46541,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RecurrenceRule"
           }
         ],
@@ -45970,7 +46556,6 @@
           }
         },
         "description": "Recurrence rule for the scheduled event",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -45985,6 +46570,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "type": "object"
           }
         ],
@@ -45994,7 +46584,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46036,6 +46625,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RecurrenceRuleResponse"
           }
         ],
@@ -46046,7 +46640,6 @@
           }
         },
         "description": "Recurrence rule for the scheduled event, or null if not recurring",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46061,6 +46654,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ScheduledEventUserResponse"
           }
         ],
@@ -46070,7 +46668,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46085,6 +46682,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "type": "object"
           }
         ],
@@ -46094,7 +46696,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46111,10 +46712,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/StickerFormatTypes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "StringSelectComponentForMessageRequestType": {
         "type": "integer",
@@ -46138,6 +46743,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ComponentEmojiForRequest"
           }
         ],
@@ -46147,7 +46757,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46227,10 +46836,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UpdateGuildChannelRequestPartialTypeWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateGuildChannelRequestPartialParentId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -46242,19 +46855,27 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/VideoQualityModes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateGuildChannelRequestPartialDefaultAutoArchiveDuration": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadAutoArchiveDuration"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateGuildChannelRequestPartialDefaultReactionEmoji": {
         "required": [
@@ -46262,6 +46883,11 @@
         ],
         "type": "object",
         "oneOf": [
+          {
+            "enum": [
+              null
+            ]
+          },
           {
             "$ref": "#/components/schemas/UpdateDefaultReactionEmojiRequest"
           }
@@ -46272,7 +46898,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46284,37 +46909,53 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadSortOrder"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateGuildChannelRequestPartialDefaultForumLayout": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ForumLayout"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateGuildChannelRequestPartialDefaultTagSetting": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadSearchTagSetting"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateGuildOnboardingRequestMode": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GuildOnboardingMode"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateMessageInteractionCallbackRequestType": {
         "type": "integer",
@@ -46328,6 +46969,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/IncomingWebhookUpdateForInteractionCallbackRequestPartial"
           }
         ],
@@ -46337,7 +46983,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46354,10 +46999,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/OnboardingPromptType"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateRolePositionsRequestId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -46372,6 +47021,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RoleColors"
           }
         ],
@@ -46381,7 +47035,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46399,19 +47052,27 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ThreadAutoArchiveDuration"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateThreadRequestPartialVideoQualityMode": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/VideoQualityModes"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateThreadTagRequestEmojiId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -46445,6 +47106,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserNameplateResponse"
           }
         ],
@@ -46455,7 +47121,6 @@
           }
         },
         "description": "Object mapping of nameplate data",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46487,6 +47152,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserAvatarDecorationResponse"
           }
         ],
@@ -46497,7 +47167,6 @@
           }
         },
         "description": "data for the user\u0027s avatar decoration",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46512,6 +47181,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserCollectiblesResponse"
           }
         ],
@@ -46522,7 +47196,6 @@
           }
         },
         "description": "data for the user\u0027s collectibles",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46537,6 +47210,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserPrimaryGuildResponse"
           }
         ],
@@ -46546,7 +47224,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46688,6 +47365,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserAvatarDecorationResponse"
           }
         ],
@@ -46698,7 +47380,6 @@
           }
         },
         "description": "data for the user\u0027s avatar decoration",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46713,6 +47394,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserCollectiblesResponse"
           }
         ],
@@ -46723,7 +47409,6 @@
           }
         },
         "description": "data for the user\u0027s collectibles",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46738,6 +47423,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserPrimaryGuildResponse"
           }
         ],
@@ -46748,7 +47438,6 @@
           }
         },
         "description": "the user\u0027s primary guild",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46786,6 +47475,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/VanityUrlErrorResponse"
           }
         ],
@@ -46795,7 +47489,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46821,6 +47514,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RecurrenceRule"
           }
         ],
@@ -46831,7 +47529,6 @@
           }
         },
         "description": "Recurrence rule for the scheduled event",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46846,6 +47543,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "type": "object"
           }
         ],
@@ -46855,7 +47557,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46867,19 +47568,27 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GuildScheduledEventStatuses"
           }
-        ],
-        "nullable": true
+        ]
       },
       "VoiceScheduledEventPatchRequestPartialEntityType": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/VoiceScheduledEventPatchRequestPartialEntityTypeWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "VoiceScheduledEventPatchRequestPartialChannelId": {
         "pattern": "^(0|[1-9][0-9]*)$",
@@ -46894,6 +47603,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RecurrenceRule"
           }
         ],
@@ -46904,7 +47618,6 @@
           }
         },
         "description": "Recurrence rule for the scheduled event",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46919,6 +47632,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "type": "object"
           }
         ],
@@ -46928,7 +47646,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46970,6 +47687,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/RecurrenceRuleResponse"
           }
         ],
@@ -46980,7 +47702,6 @@
           }
         },
         "description": "Recurrence rule for the scheduled event, or null if not recurring",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -46995,6 +47716,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ScheduledEventUserResponse"
           }
         ],
@@ -47004,7 +47730,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -47019,6 +47744,11 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "type": "object"
           }
         ],
@@ -47028,7 +47758,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -50050,18 +50779,26 @@
           },
           {
             "$ref": "#/components/schemas/GuildInviteResponse"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "SetChannelPermissionOverwriteRequestType": {
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ChannelPermissionOverwrites"
           }
-        ],
-        "nullable": true
+        ]
       },
       "ListChannelWebhooks200ResponseItem": {
         "type": "object",
@@ -50094,9 +50831,13 @@
           },
           {
             "$ref": "#/components/schemas/UserProfileRuleResponse"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "ListGuildChannels200ResponseItem": {
         "type": "object",
@@ -50140,9 +50881,13 @@
           },
           {
             "$ref": "#/components/schemas/GuildInviteResponse"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "ListGuildScheduledEvents200ResponseItem": {
         "type": "object",
@@ -50176,10 +50921,14 @@
         "type": "object",
         "oneOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/StageInstancesPrivacyLevels"
           }
-        ],
-        "nullable": true
+        ]
       },
       "ApplicationCommandInteractionMetadataResponseAuthorizingIntegrationOwnersProperty": {
         "type": "object",

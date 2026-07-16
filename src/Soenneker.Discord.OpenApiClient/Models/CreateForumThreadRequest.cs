@@ -23,7 +23,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public List<string> AppliedTags { get; set; }
 #endif
         /// <summary>The auto_archive_duration property</summary>
-        public int? AutoArchiveDuration { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateForumThreadRequestAutoArchiveDuration? AutoArchiveDuration { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateForumThreadRequestAutoArchiveDuration AutoArchiveDuration { get; set; }
+#endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +74,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "applied_tags", n => { AppliedTags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetIntValue(); } },
+                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateForumThreadRequestAutoArchiveDuration>(global::Soenneker.Discord.OpenApiClient.Models.CreateForumThreadRequestAutoArchiveDuration.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequest.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "rate_limit_per_user", n => { RateLimitPerUser = n.GetIntValue(); } },
@@ -82,7 +88,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("applied_tags", AppliedTags);
-            writer.WriteIntValue("auto_archive_duration", AutoArchiveDuration);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateForumThreadRequestAutoArchiveDuration>("auto_archive_duration", AutoArchiveDuration);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequest>("message", Message);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);

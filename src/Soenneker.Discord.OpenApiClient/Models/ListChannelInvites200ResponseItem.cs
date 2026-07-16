@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GroupDmInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GroupDmInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ListChannelInvites200ResponseItemMember1"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ListChannelInvites200ResponseItem : IComposedTypeWrapper, IParsable
@@ -36,6 +36,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse GuildInviteResponse { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ListChannelInvites200ResponseItemMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ListChannelInvites200ResponseItemMember1? ListChannelInvites200ResponseItemMember1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ListChannelInvites200ResponseItemMember1 ListChannelInvites200ResponseItemMember1 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -79,6 +87,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 return GuildInviteResponse.GetFieldDeserializers();
             }
+            else if(ListChannelInvites200ResponseItemMember1 != null)
+            {
+                return ListChannelInvites200ResponseItemMember1.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -99,6 +111,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             else if(GuildInviteResponse != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponse>(null, GuildInviteResponse);
+            }
+            else if(ListChannelInvites200ResponseItemMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ListChannelInvites200ResponseItemMember1>(null, ListChannelInvites200ResponseItemMember1);
             }
         }
     }

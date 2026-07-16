@@ -71,7 +71,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string PrimarySkuId { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBotType? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBotType Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBot"/> and sets the default values.
         /// </summary>
@@ -104,7 +110,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "primary_sku_id", n => { PrimarySkuId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBotType>(global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBotType.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -121,7 +127,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("primary_sku_id", PrimarySkuId);
-            writer.WriteIntValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicApplicationResponseWithBotType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
