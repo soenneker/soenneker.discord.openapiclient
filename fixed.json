@@ -17457,6 +17457,9 @@
             "items": {
               "$ref": "#/components/schemas/MessageSnapshotResponse"
             }
+          },
+          "lobby_member": {
+            "$ref": "#/components/schemas/MessageLobbyMemberResponse"
           }
         }
       },
@@ -17640,6 +17643,12 @@
           },
           "remove_member": {
             "type": "boolean",
+            "nullable": true
+          },
+          "additional_name": {
+            "maxLength": 80,
+            "minLength": 1,
+            "type": "string",
             "nullable": true
           }
         }
@@ -26840,6 +26849,9 @@
           "flags": {
             "type": "integer",
             "format": "int32"
+          },
+          "additional_name": {
+            "type": "string"
           }
         }
       },
@@ -26878,6 +26890,9 @@
           },
           "author": {
             "$ref": "#/components/schemas/UserResponse"
+          },
+          "lobby_member": {
+            "$ref": "#/components/schemas/MessageLobbyMemberResponse"
           },
           "metadata": {
             "$ref": "#/components/schemas/LobbyMessageResponseMetadataProperty"
@@ -28623,6 +28638,17 @@
           }
         }
       },
+      "MessageLobbyMemberResponse": {
+        "required": [
+          "additional_name"
+        ],
+        "type": "object",
+        "properties": {
+          "additional_name": {
+            "type": "string"
+          }
+        }
+      },
       "MessageMentionChannelResponse": {
         "required": [
           "id",
@@ -28969,6 +28995,9 @@
             "items": {
               "$ref": "#/components/schemas/MessageSnapshotResponse"
             }
+          },
+          "lobby_member": {
+            "$ref": "#/components/schemas/MessageLobbyMemberResponse"
           },
           "reactions": {
             "type": "array",
@@ -32001,7 +32030,8 @@
           "approximate_user_install_count",
           "approximate_user_authorization_count",
           "explicit_content_filter",
-          "team"
+          "team",
+          "eligible_oauth2_scopes"
         ],
         "type": "object",
         "properties": {
@@ -32146,6 +32176,12 @@
           },
           "team": {
             "$ref": "#/components/schemas/PrivateApplicationResponseTeam"
+          },
+          "eligible_oauth2_scopes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OAuth2Scopes"
+            }
           }
         }
       },
@@ -34173,6 +34209,9 @@
             "items": {
               "$ref": "#/components/schemas/MessageSnapshotResponse"
             }
+          },
+          "lobby_member": {
+            "$ref": "#/components/schemas/MessageLobbyMemberResponse"
           },
           "reactions": {
             "type": "array",
@@ -50102,6 +50141,12 @@
           },
           "flags": {
             "$ref": "#/components/schemas/AddLobbyMemberRequestFlags"
+          },
+          "additional_name": {
+            "maxLength": 80,
+            "minLength": 1,
+            "type": "string",
+            "nullable": true
           }
         }
       },

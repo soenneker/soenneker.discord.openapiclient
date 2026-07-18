@@ -56,6 +56,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>The eligible_oauth2_scopes property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? EligibleOauth2Scopes { get; set; }
+#nullable restore
+#else
+        public List<string> EligibleOauth2Scopes { get; set; }
+#endif
         /// <summary>The event_webhooks_status property</summary>
         public int? EventWebhooksStatus { get; set; }
         /// <summary>The event_webhooks_types property</summary>
@@ -274,6 +282,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "cover_image", n => { CoverImage = n.GetStringValue(); } },
                 { "custom_install_url", n => { CustomInstallUrl = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
+                { "eligible_oauth2_scopes", n => { EligibleOauth2Scopes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "event_webhooks_status", n => { EventWebhooksStatus = n.GetIntValue(); } },
                 { "event_webhooks_types", n => { EventWebhooksTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "event_webhooks_url", n => { EventWebhooksUrl = n.GetStringValue(); } },
@@ -318,6 +327,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("cover_image", CoverImage);
             writer.WriteStringValue("custom_install_url", CustomInstallUrl);
             writer.WriteStringValue("description", Description);
+            writer.WriteCollectionOfPrimitiveValues<string>("eligible_oauth2_scopes", EligibleOauth2Scopes);
             writer.WriteIntValue("event_webhooks_status", EventWebhooksStatus);
             writer.WriteCollectionOfPrimitiveValues<string>("event_webhooks_types", EventWebhooksTypes);
             writer.WriteStringValue("event_webhooks_url", EventWebhooksUrl);

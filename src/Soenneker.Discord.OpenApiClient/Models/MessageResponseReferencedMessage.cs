@@ -122,6 +122,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponseInteractionMetadata InteractionMetadata { get; set; }
 #endif
+        /// <summary>The lobby_member property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse? LobbyMember { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse LobbyMember { get; set; }
+#endif
         /// <summary>The mention_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -300,6 +308,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "interaction", n => { Interaction = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageInteractionResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageInteractionResponse.CreateFromDiscriminatorValue); } },
                 { "interaction_metadata", n => { InteractionMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponseInteractionMetadata>(global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponseInteractionMetadata.CreateFromDiscriminatorValue); } },
+                { "lobby_member", n => { LobbyMember = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse.CreateFromDiscriminatorValue); } },
                 { "mention_channels", n => { MentionChannels = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "mention_everyone", n => { MentionEveryone = n.GetBoolValue(); } },
                 { "mention_roles", n => { MentionRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -345,6 +354,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageInteractionResponse>("interaction", Interaction);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponseInteractionMetadata>("interaction_metadata", InteractionMetadata);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse>("lobby_member", LobbyMember);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageMentionChannelResponse>("mention_channels", MentionChannels);
             writer.WriteBoolValue("mention_everyone", MentionEveryone);
             writer.WriteCollectionOfPrimitiveValues<string>("mention_roles", MentionRoles);

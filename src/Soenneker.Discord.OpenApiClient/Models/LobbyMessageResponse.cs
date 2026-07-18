@@ -64,6 +64,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string LobbyId { get; set; }
 #endif
+        /// <summary>The lobby_member property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse? LobbyMember { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse LobbyMember { get; set; }
+#endif
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -114,6 +122,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "lobby_id", n => { LobbyId = n.GetStringValue(); } },
+                { "lobby_member", n => { LobbyMember = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMessageResponseMetadataProperty>(global::Soenneker.Discord.OpenApiClient.Models.LobbyMessageResponseMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "moderation_metadata", n => { ModerationMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMessageResponseModerationMetadataProperty>(global::Soenneker.Discord.OpenApiClient.Models.LobbyMessageResponseModerationMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetIntValue(); } },
@@ -133,6 +142,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("lobby_id", LobbyId);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse>("lobby_member", LobbyMember);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMessageResponseMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMessageResponseModerationMetadataProperty>("moderation_metadata", ModerationMetadata);
             writer.WriteIntValue("type", Type);

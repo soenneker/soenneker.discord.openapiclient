@@ -9,7 +9,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class BulkLobbyMemberRequest : IAdditionalDataHolder, IParsable
+    public partial class MessageLobbyMemberResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -22,42 +22,22 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string AdditionalName { get; set; }
 #endif
-        /// <summary>The flags property</summary>
-        public int? Flags { get; set; }
-        /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
-        /// <summary>The metadata property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadata? Metadata { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadata Metadata { get; set; }
-#endif
-        /// <summary>The remove_member property</summary>
-        public bool? RemoveMember { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse"/> and sets the default values.
         /// </summary>
-        public BulkLobbyMemberRequest()
+        public MessageLobbyMemberResponse()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequest();
+            return new global::Soenneker.Discord.OpenApiClient.Models.MessageLobbyMemberResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,10 +48,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "additional_name", n => { AdditionalName = n.GetStringValue(); } },
-                { "flags", n => { Flags = n.GetIntValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadata>(global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadata.CreateFromDiscriminatorValue); } },
-                { "remove_member", n => { RemoveMember = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -82,10 +58,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("additional_name", AdditionalName);
-            writer.WriteIntValue("flags", Flags);
-            writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadata>("metadata", Metadata);
-            writer.WriteBoolValue("remove_member", RemoveMember);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

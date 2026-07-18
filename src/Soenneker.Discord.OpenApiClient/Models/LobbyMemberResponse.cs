@@ -14,6 +14,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The additional_name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AdditionalName { get; set; }
+#nullable restore
+#else
+        public string AdditionalName { get; set; }
+#endif
         /// <summary>The flags property</summary>
         public int? Flags { get; set; }
         /// <summary>The id property</summary>
@@ -57,6 +65,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "additional_name", n => { AdditionalName = n.GetStringValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadata>(global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadata.CreateFromDiscriminatorValue); } },
@@ -69,6 +78,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("additional_name", AdditionalName);
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadata>("metadata", Metadata);
