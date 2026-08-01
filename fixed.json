@@ -799,7 +799,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetEntitlements200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetEntitlements200ResponseSchema"
                 }
               }
             }
@@ -1140,7 +1140,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListGuildApplicationCommandPermissions200ResponseResponseJson"
+                  "$ref": "#/components/schemas/ListGuildApplicationCommandPermissions200ResponseSchema"
                 }
               }
             }
@@ -2187,7 +2187,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListMessageReactionsByEmoji200ResponseResponseJson"
+                  "$ref": "#/components/schemas/ListMessageReactionsByEmoji200ResponseSchema"
                 }
               }
             }
@@ -2832,7 +2832,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListThreadMembers200ResponseResponseJson"
+                  "$ref": "#/components/schemas/ListThreadMembers200ResponseSchema"
                 }
               }
             }
@@ -4615,7 +4615,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListGuildMembers200ResponseResponseJson"
+                  "$ref": "#/components/schemas/ListGuildMembers200ResponseSchema"
                 }
               }
             }
@@ -4721,7 +4721,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchGuildMembers200ResponseResponseJson"
+                  "$ref": "#/components/schemas/SearchGuildMembers200ResponseSchema"
                 }
               }
             }
@@ -5679,7 +5679,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListGuildRoles200ResponseResponseJson"
+                  "$ref": "#/components/schemas/ListGuildRoles200ResponseSchema"
                 }
               }
             }
@@ -5749,7 +5749,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BulkUpdateGuildRoles200ResponseResponseJson"
+                  "$ref": "#/components/schemas/BulkUpdateGuildRoles200ResponseSchema"
                 }
               }
             }
@@ -5787,7 +5787,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GuildRoleMemberCounts200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GuildRoleMemberCounts200ResponseSchema"
                 }
               }
             }
@@ -6644,7 +6644,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListGuildStickers200ResponseResponseJson"
+                  "$ref": "#/components/schemas/ListGuildStickers200ResponseSchema"
                 }
               }
             }
@@ -7437,7 +7437,7 @@
             "content": {
               "image/png": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetGuildWidgetPng200ResponseResponsePng"
+                  "$ref": "#/components/schemas/GetGuildWidgetPng200PngResponseSchema"
                 }
               }
             }
@@ -7649,7 +7649,7 @@
             "content": {
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetInviteTargetUsers200ResponseResponseCsv"
+                  "$ref": "#/components/schemas/GetInviteTargetUsers200CsvResponseSchema"
                 }
               }
             }
@@ -8744,7 +8744,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetSkuSubscriptions200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetSkuSubscriptions200ResponseSchema"
                 }
               }
             }
@@ -8914,7 +8914,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetSoundboardDefaultSounds200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetSoundboardDefaultSounds200ResponseSchema"
                 }
               }
             }
@@ -9273,7 +9273,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetCurrentUserApplicationEntitlements200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetCurrentUserApplicationEntitlements200ResponseSchema"
                 }
               }
             }
@@ -49931,7 +49931,7 @@
           }
         }
       },
-      "GetGuildWidgetPng200Response": {
+      "GetGuildWidgetPng200PngResponse": {
         "type": "string",
         "x-jsonschema-contentEncoding": "binary"
       },
@@ -49997,7 +49997,7 @@
           }
         }
       },
-      "GetInviteTargetUsers200Response": {
+      "GetInviteTargetUsers200CsvResponse": {
         "type": "string",
         "description": "CSV file containing target users for the invite.",
         "x-jsonschema-contentEncoding": "binary"
@@ -50661,25 +50661,25 @@
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
-      "GetEntitlements200ResponseResponseJson": {
+      "GetEntitlements200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/EntitlementResponse"
         }
       },
-      "ListGuildApplicationCommandPermissions200ResponseResponseJson": {
+      "ListGuildApplicationCommandPermissions200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CommandPermissionsResponse"
         }
       },
-      "ListMessageReactionsByEmoji200ResponseResponseJson": {
+      "ListMessageReactionsByEmoji200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UserResponse"
         }
       },
-      "ListThreadMembers200ResponseResponseJson": {
+      "ListThreadMembers200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ThreadMemberResponse"
@@ -50697,19 +50697,19 @@
           "$ref": "#/components/schemas/BulkUpdateGuildChannelsRequestRequestBodyItem"
         }
       },
-      "ListGuildMembers200ResponseResponseJson": {
+      "ListGuildMembers200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/GuildMemberResponse"
         }
       },
-      "SearchGuildMembers200ResponseResponseJson": {
+      "SearchGuildMembers200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/GuildMemberResponse"
         }
       },
-      "ListGuildRoles200ResponseResponseJson": {
+      "ListGuildRoles200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/GuildRoleResponse"
@@ -50721,29 +50721,29 @@
           "$ref": "#/components/schemas/UpdateRolePositionsRequest"
         }
       },
-      "BulkUpdateGuildRoles200ResponseResponseJson": {
+      "BulkUpdateGuildRoles200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/GuildRoleResponse"
         }
       },
-      "GuildRoleMemberCounts200ResponseResponseJson": {
+      "GuildRoleMemberCounts200ResponseSchema": {
         "type": "object",
         "additionalProperties": {
           "type": "integer",
           "format": "int32"
         }
       },
-      "ListGuildStickers200ResponseResponseJson": {
+      "ListGuildStickers200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/GuildStickerResponse"
         }
       },
-      "GetGuildWidgetPng200ResponseResponsePng": {
+      "GetGuildWidgetPng200PngResponseSchema": {
         "type": "string"
       },
-      "GetInviteTargetUsers200ResponseResponseCsv": {
+      "GetInviteTargetUsers200CsvResponseSchema": {
         "type": "string",
         "description": "CSV file containing target users for the invite."
       },
@@ -50795,19 +50795,19 @@
         },
         "description": "The moderation metadata attached to the message"
       },
-      "GetSkuSubscriptions200ResponseResponseJson": {
+      "GetSkuSubscriptions200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/SubscriptionResponse"
         }
       },
-      "GetSoundboardDefaultSounds200ResponseResponseJson": {
+      "GetSoundboardDefaultSounds200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/SoundboardSoundResponse"
         }
       },
-      "GetCurrentUserApplicationEntitlements200ResponseResponseJson": {
+      "GetCurrentUserApplicationEntitlements200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/EntitlementResponse"
