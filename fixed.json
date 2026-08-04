@@ -12577,10 +12577,22 @@
             "nullable": true
           },
           "min_value": {
-            "$ref": "#/components/schemas/ApplicationCommandIntegerOptionMinValue"
+            "maximum": 9007199254740991,
+            "exclusiveMaximum": false,
+            "minimum": -9007199254740991,
+            "exclusiveMinimum": false,
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
           },
           "max_value": {
-            "$ref": "#/components/schemas/ApplicationCommandIntegerOptionMaxValue"
+            "maximum": 9007199254740991,
+            "exclusiveMaximum": false,
+            "minimum": -9007199254740991,
+            "exclusiveMinimum": false,
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
           }
         }
       },
@@ -13909,7 +13921,10 @@
             "$ref": "#/components/schemas/ApplicationCommandUpdateRequestType"
           },
           "id": {
-            "$ref": "#/components/schemas/ApplicationCommandUpdateRequestId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           }
         }
       },
@@ -14101,7 +14116,10 @@
             "x-jsonschema-contentEncoding": "base64"
           },
           "team_id": {
-            "$ref": "#/components/schemas/ApplicationFormPartialTeamId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "flags": {
             "type": "integer",
@@ -14326,17 +14344,26 @@
         "type": "object",
         "properties": {
           "application_id": {
-            "$ref": "#/components/schemas/ApplicationIncomingWebhookResponseApplicationId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "avatar": {
             "type": "string",
             "nullable": true
           },
           "channel_id": {
-            "$ref": "#/components/schemas/ApplicationIncomingWebhookResponseChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "guild_id": {
-            "$ref": "#/components/schemas/ApplicationIncomingWebhookResponseGuildId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "id": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -16061,10 +16088,16 @@
             "$ref": "#/components/schemas/AuditLogActionTypes"
           },
           "user_id": {
-            "$ref": "#/components/schemas/AuditLogEntryResponseUserId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "target_id": {
-            "$ref": "#/components/schemas/AuditLogEntryResponseTargetId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "changes": {
             "type": "array",
@@ -17695,7 +17728,10 @@
             "nullable": true
           },
           "sku_id": {
-            "$ref": "#/components/schemas/ButtonComponentForMessageRequestSkuId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji": {
             "$ref": "#/components/schemas/ButtonComponentForMessageRequestEmoji"
@@ -17921,17 +17957,26 @@
         "type": "object",
         "properties": {
           "application_id": {
-            "$ref": "#/components/schemas/ChannelFollowerWebhookResponseApplicationId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "avatar": {
             "type": "string",
             "nullable": true
           },
           "channel_id": {
-            "$ref": "#/components/schemas/ChannelFollowerWebhookResponseChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "guild_id": {
-            "$ref": "#/components/schemas/ChannelFollowerWebhookResponseGuildId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "id": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -18646,7 +18691,10 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/ComponentEmojiForRequestId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "name": {
             "maxLength": 32,
@@ -19411,7 +19459,10 @@
             "nullable": true
           },
           "parent_id": {
-            "$ref": "#/components/schemas/CreateGuildChannelRequestParentId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "permission_overwrites": {
             "maxItems": 100,
@@ -19483,10 +19534,16 @@
             "nullable": true
           },
           "target_user_id": {
-            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetUserId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "target_application_id": {
-            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetApplicationId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "target_type": {
             "$ref": "#/components/schemas/CreateGuildInviteRequestTargetType"
@@ -19539,7 +19596,10 @@
             "type": "string"
           },
           "emoji_id": {
-            "$ref": "#/components/schemas/CreateOrUpdateThreadTagRequestEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "maxLength": 100,
@@ -19556,7 +19616,10 @@
         "type": "object",
         "properties": {
           "recipient_id": {
-            "$ref": "#/components/schemas/CreatePrivateChannelRequestRecipientId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "access_tokens": {
             "maxItems": 1521,
@@ -19693,7 +19756,10 @@
             "format": "int32"
           },
           "last_message_id": {
-            "$ref": "#/components/schemas/CreatedThreadResponseLastMessageId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "flags": {
             "type": "integer",
@@ -19713,7 +19779,10 @@
             "type": "string"
           },
           "parent_id": {
-            "$ref": "#/components/schemas/CreatedThreadResponseParentId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "rate_limit_per_user": {
             "type": "integer",
@@ -20073,7 +20142,10 @@
         "type": "object",
         "properties": {
           "emoji_id": {
-            "$ref": "#/components/schemas/DefaultReactionEmojiResponseEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "type": "string",
@@ -20340,7 +20412,10 @@
             "format": "snowflake"
           },
           "guild_id": {
-            "$ref": "#/components/schemas/EntitlementResponseGuildId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "deleted": {
             "type": "boolean"
@@ -20370,10 +20445,16 @@
             "type": "boolean"
           },
           "gifter_user_id": {
-            "$ref": "#/components/schemas/EntitlementResponseGifterUserId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "parent_id": {
-            "$ref": "#/components/schemas/EntitlementResponseParentId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           }
         }
       },
@@ -20643,7 +20724,10 @@
             "format": "date-time"
           },
           "role_id": {
-            "$ref": "#/components/schemas/ExternalConnectionIntegrationResponseRoleId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "syncing": {
             "type": "boolean"
@@ -20694,7 +20778,10 @@
             "format": "int32"
           },
           "channel_id": {
-            "$ref": "#/components/schemas/ExternalScheduledEventCreateRequestChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "recurrence_rule": {
             "$ref": "#/components/schemas/ExternalScheduledEventCreateRequestRecurrenceRule"
@@ -20740,7 +20827,10 @@
             "$ref": "#/components/schemas/GuildScheduledEventPrivacyLevels"
           },
           "channel_id": {
-            "$ref": "#/components/schemas/ExternalScheduledEventPatchRequestPartialChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "recurrence_rule": {
             "$ref": "#/components/schemas/ExternalScheduledEventPatchRequestPartialRecurrenceRule"
@@ -20791,10 +20881,18 @@
             "nullable": true
           },
           "channel_id": {
-            "$ref": "#/components/schemas/ExternalScheduledEventResponseChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "Channel ID in which the scheduled event will be hosted, or null if entity type is EXTERNAL",
+            "format": "snowflake",
+            "nullable": true
           },
           "creator_id": {
-            "$ref": "#/components/schemas/ExternalScheduledEventResponseCreatorId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "ID of the user that created the scheduled event",
+            "format": "snowflake",
+            "nullable": true
           },
           "creator": {
             "$ref": "#/components/schemas/UserResponse"
@@ -20824,7 +20922,11 @@
             "format": "int32"
           },
           "entity_id": {
-            "$ref": "#/components/schemas/ExternalScheduledEventResponseEntityId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "ID of the hosting entity associated with the scheduled event",
+            "format": "snowflake",
+            "nullable": true
           },
           "recurrence_rule": {
             "$ref": "#/components/schemas/ExternalScheduledEventResponseRecurrenceRule"
@@ -21093,7 +21195,10 @@
             "type": "boolean"
           },
           "emoji_id": {
-            "$ref": "#/components/schemas/ForumTagResponseEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "type": "string",
@@ -21843,7 +21948,10 @@
             "format": "int32"
           },
           "last_message_id": {
-            "$ref": "#/components/schemas/GuildChannelResponseLastMessageId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "flags": {
             "type": "integer",
@@ -21863,7 +21971,10 @@
             "type": "string"
           },
           "parent_id": {
-            "$ref": "#/components/schemas/GuildChannelResponseParentId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "rate_limit_per_user": {
             "type": "integer",
@@ -22602,17 +22713,26 @@
         "type": "object",
         "properties": {
           "application_id": {
-            "$ref": "#/components/schemas/GuildIncomingWebhookResponseApplicationId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "avatar": {
             "type": "string",
             "nullable": true
           },
           "channel_id": {
-            "$ref": "#/components/schemas/GuildIncomingWebhookResponseChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "guild_id": {
-            "$ref": "#/components/schemas/GuildIncomingWebhookResponseGuildId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "id": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -23319,10 +23439,16 @@
             "$ref": "#/components/schemas/GuildPatchRequestPartialAfkTimeout"
           },
           "afk_channel_id": {
-            "$ref": "#/components/schemas/GuildPatchRequestPartialAfkChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "system_channel_id": {
-            "$ref": "#/components/schemas/GuildPatchRequestPartialSystemChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "splash": {
             "type": "string",
@@ -23360,13 +23486,22 @@
             "x-jsonschema-contentEncoding": "base64"
           },
           "rules_channel_id": {
-            "$ref": "#/components/schemas/GuildPatchRequestPartialRulesChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "safety_alerts_channel_id": {
-            "$ref": "#/components/schemas/GuildPatchRequestPartialSafetyAlertsChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "public_updates_channel_id": {
-            "$ref": "#/components/schemas/GuildPatchRequestPartialPublicUpdatesChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "premium_progress_bar_enabled": {
             "type": "boolean",
@@ -23568,19 +23703,28 @@
             "format": "snowflake"
           },
           "application_id": {
-            "$ref": "#/components/schemas/GuildResponseApplicationId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "region": {
             "type": "string"
           },
           "afk_channel_id": {
-            "$ref": "#/components/schemas/GuildResponseAfkChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "afk_timeout": {
             "$ref": "#/components/schemas/AfkTimeouts"
           },
           "system_channel_id": {
-            "$ref": "#/components/schemas/GuildResponseSystemChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "system_channel_flags": {
             "type": "integer",
@@ -23590,7 +23734,10 @@
             "type": "boolean"
           },
           "widget_channel_id": {
-            "$ref": "#/components/schemas/GuildResponseWidgetChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "verification_level": {
             "$ref": "#/components/schemas/VerificationLevels"
@@ -23642,13 +23789,22 @@
             "$ref": "#/components/schemas/AvailableLocalesEnum"
           },
           "rules_channel_id": {
-            "$ref": "#/components/schemas/GuildResponseRulesChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "safety_alerts_channel_id": {
-            "$ref": "#/components/schemas/GuildResponseSafetyAlertsChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "public_updates_channel_id": {
-            "$ref": "#/components/schemas/GuildResponsePublicUpdatesChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "premium_progress_bar_enabled": {
             "type": "boolean"
@@ -24295,7 +24451,10 @@
             "format": "int32"
           },
           "parent_id": {
-            "$ref": "#/components/schemas/GuildTemplateChannelResponseParentId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "default_auto_archive_duration": {
             "$ref": "#/components/schemas/GuildTemplateChannelResponseDefaultAutoArchiveDuration"
@@ -24359,7 +24518,10 @@
             "type": "string"
           },
           "emoji_id": {
-            "$ref": "#/components/schemas/GuildTemplateChannelTagsEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "type": "string",
@@ -24544,13 +24706,19 @@
             "$ref": "#/components/schemas/AvailableLocalesEnum"
           },
           "afk_channel_id": {
-            "$ref": "#/components/schemas/GuildTemplateSnapshotResponseAfkChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "afk_timeout": {
             "$ref": "#/components/schemas/AfkTimeouts"
           },
           "system_channel_id": {
-            "$ref": "#/components/schemas/GuildTemplateSnapshotResponseSystemChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "system_channel_flags": {
             "type": "integer",
@@ -24588,7 +24756,10 @@
             "type": "string"
           },
           "emoji_id": {
-            "$ref": "#/components/schemas/GuildWelcomeChannelEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "maxLength": 152133,
@@ -24615,7 +24786,10 @@
             "type": "string"
           },
           "emoji_id": {
-            "$ref": "#/components/schemas/GuildWelcomeScreenChannelResponseEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "type": "string",
@@ -24732,19 +24906,28 @@
             "format": "snowflake"
           },
           "application_id": {
-            "$ref": "#/components/schemas/GuildWithCountsResponseApplicationId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "region": {
             "type": "string"
           },
           "afk_channel_id": {
-            "$ref": "#/components/schemas/GuildWithCountsResponseAfkChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "afk_timeout": {
             "$ref": "#/components/schemas/AfkTimeouts"
           },
           "system_channel_id": {
-            "$ref": "#/components/schemas/GuildWithCountsResponseSystemChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "system_channel_flags": {
             "type": "integer",
@@ -24754,7 +24937,10 @@
             "type": "boolean"
           },
           "widget_channel_id": {
-            "$ref": "#/components/schemas/GuildWithCountsResponseWidgetChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "verification_level": {
             "$ref": "#/components/schemas/VerificationLevels"
@@ -24806,13 +24992,22 @@
             "$ref": "#/components/schemas/AvailableLocalesEnum"
           },
           "rules_channel_id": {
-            "$ref": "#/components/schemas/GuildWithCountsResponseRulesChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "safety_alerts_channel_id": {
-            "$ref": "#/components/schemas/GuildWithCountsResponseSafetyAlertsChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "public_updates_channel_id": {
-            "$ref": "#/components/schemas/GuildWithCountsResponsePublicUpdatesChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "premium_progress_bar_enabled": {
             "type": "boolean"
@@ -27644,7 +27839,10 @@
             "uniqueItems": true,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MessageAllowedMentionsRequestUsersItem"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake",
+              "nullable": true
             },
             "nullable": true
           },
@@ -27653,7 +27851,10 @@
             "uniqueItems": true,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MessageAllowedMentionsRequestRolesItem"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake",
+              "nullable": true
             },
             "nullable": true
           },
@@ -28701,7 +28902,10 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/MessageReactionEmojiResponseId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "name": {
             "type": "string",
@@ -28754,10 +28958,16 @@
         "type": "object",
         "properties": {
           "guild_id": {
-            "$ref": "#/components/schemas/MessageReferenceRequestGuildId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "channel_id": {
-            "$ref": "#/components/schemas/MessageReferenceRequestChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "message_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -31254,7 +31464,10 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/OnboardingPromptOptionRequestId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "title": {
             "maxLength": 50,
@@ -31267,7 +31480,10 @@
             "nullable": true
           },
           "emoji_id": {
-            "$ref": "#/components/schemas/OnboardingPromptOptionRequestEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "maxLength": 100,
@@ -31662,7 +31878,11 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/PollEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "The ID of the custom emoji",
+            "format": "snowflake",
+            "nullable": true
           },
           "name": {
             "maxLength": 32,
@@ -31681,7 +31901,11 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/PollEmojiCreateRequestId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "The ID of the custom emoji",
+            "format": "snowflake",
+            "nullable": true
           },
           "name": {
             "maxLength": 32,
@@ -32225,7 +32449,10 @@
             "format": "int32"
           },
           "last_message_id": {
-            "$ref": "#/components/schemas/PrivateChannelResponseLastMessageId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "flags": {
             "type": "integer",
@@ -32266,7 +32493,10 @@
             "format": "int32"
           },
           "last_message_id": {
-            "$ref": "#/components/schemas/PrivateGroupChannelResponseLastMessageId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "flags": {
             "type": "integer",
@@ -33907,10 +34137,18 @@
             "nullable": true
           },
           "channel_id": {
-            "$ref": "#/components/schemas/ScheduledEventResponseChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "Channel ID in which the scheduled event will be hosted, or null if entity type is EXTERNAL",
+            "format": "snowflake",
+            "nullable": true
           },
           "creator_id": {
-            "$ref": "#/components/schemas/ScheduledEventResponseCreatorId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "ID of the user that created the scheduled event",
+            "format": "snowflake",
+            "nullable": true
           },
           "creator": {
             "$ref": "#/components/schemas/UserResponse"
@@ -33938,7 +34176,11 @@
             "$ref": "#/components/schemas/GuildScheduledEventEntityTypes"
           },
           "entity_id": {
-            "$ref": "#/components/schemas/ScheduledEventResponseEntityId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "ID of the hosting entity associated with the scheduled event",
+            "format": "snowflake",
+            "nullable": true
           },
           "recurrence_rule": {
             "$ref": "#/components/schemas/ScheduledEventResponseRecurrenceRule"
@@ -33993,7 +34235,11 @@
             "format": "snowflake"
           },
           "guild_scheduled_event_exception_id": {
-            "$ref": "#/components/schemas/ScheduledEventUserResponseGuildScheduledEventExceptionId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "ID of the scheduled event exception",
+            "format": "snowflake",
+            "nullable": true
           },
           "user_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -34439,7 +34685,10 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/SettingsEmojiResponseId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "name": {
             "type": "string",
@@ -34696,7 +34945,10 @@
             "nullable": true
           },
           "emoji_id": {
-            "$ref": "#/components/schemas/SoundboardCreateRequestEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "maxLength": 32,
@@ -34726,7 +34978,10 @@
             "nullable": true
           },
           "emoji_id": {
-            "$ref": "#/components/schemas/SoundboardPatchRequestPartialEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "maxLength": 32,
@@ -34760,7 +35015,10 @@
             "format": "double"
           },
           "emoji_id": {
-            "$ref": "#/components/schemas/SoundboardSoundResponseEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "type": "string",
@@ -34791,7 +35049,10 @@
             "format": "snowflake"
           },
           "source_guild_id": {
-            "$ref": "#/components/schemas/SoundboardSoundSendRequestSourceGuildId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           }
         }
       },
@@ -34832,7 +35093,10 @@
             "type": "boolean"
           },
           "guild_scheduled_event_id": {
-            "$ref": "#/components/schemas/StageInstanceResponseGuildScheduledEventId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           }
         }
       },
@@ -34918,7 +35182,10 @@
             "format": "int32"
           },
           "channel_id": {
-            "$ref": "#/components/schemas/StageScheduledEventCreateRequestChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "recurrence_rule": {
             "$ref": "#/components/schemas/StageScheduledEventCreateRequestRecurrenceRule"
@@ -34964,7 +35231,10 @@
             "$ref": "#/components/schemas/GuildScheduledEventPrivacyLevels"
           },
           "channel_id": {
-            "$ref": "#/components/schemas/StageScheduledEventPatchRequestPartialChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "recurrence_rule": {
             "$ref": "#/components/schemas/StageScheduledEventPatchRequestPartialRecurrenceRule"
@@ -35015,10 +35285,18 @@
             "nullable": true
           },
           "channel_id": {
-            "$ref": "#/components/schemas/StageScheduledEventResponseChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "Channel ID in which the scheduled event will be hosted, or null if entity type is EXTERNAL",
+            "format": "snowflake",
+            "nullable": true
           },
           "creator_id": {
-            "$ref": "#/components/schemas/StageScheduledEventResponseCreatorId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "ID of the user that created the scheduled event",
+            "format": "snowflake",
+            "nullable": true
           },
           "creator": {
             "$ref": "#/components/schemas/UserResponse"
@@ -35048,7 +35326,11 @@
             "format": "int32"
           },
           "entity_id": {
-            "$ref": "#/components/schemas/StageScheduledEventResponseEntityId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "ID of the hosting entity associated with the scheduled event",
+            "format": "snowflake",
+            "nullable": true
           },
           "recurrence_rule": {
             "$ref": "#/components/schemas/StageScheduledEventResponseRecurrenceRule"
@@ -36400,7 +36682,10 @@
             "format": "int32"
           },
           "last_message_id": {
-            "$ref": "#/components/schemas/ThreadResponseLastMessageId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "flags": {
             "type": "integer",
@@ -36420,7 +36705,10 @@
             "type": "string"
           },
           "parent_id": {
-            "$ref": "#/components/schemas/ThreadResponseParentId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "rate_limit_per_user": {
             "type": "integer",
@@ -36895,7 +37183,10 @@
         "type": "object",
         "properties": {
           "emoji_id": {
-            "$ref": "#/components/schemas/UpdateDefaultReactionEmojiRequestEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "maxLength": 100,
@@ -36966,7 +37257,10 @@
             "nullable": true
           },
           "parent_id": {
-            "$ref": "#/components/schemas/UpdateGuildChannelRequestPartialParentId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "permission_overwrites": {
             "maxItems": 100,
@@ -37127,7 +37421,10 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/UpdateRolePositionsRequestId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "position": {
             "type": "integer",
@@ -37191,7 +37488,10 @@
             "nullable": true
           },
           "channel_id": {
-            "$ref": "#/components/schemas/UpdateSelfVoiceStateRequestPartialChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           }
         }
       },
@@ -37273,7 +37573,10 @@
             "type": "string"
           },
           "emoji_id": {
-            "$ref": "#/components/schemas/UpdateThreadTagRequestEmojiId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "emoji_name": {
             "maxLength": 100,
@@ -37285,7 +37588,10 @@
             "nullable": true
           },
           "id": {
-            "$ref": "#/components/schemas/UpdateThreadTagRequestId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           }
         }
       },
@@ -37297,7 +37603,10 @@
             "nullable": true
           },
           "channel_id": {
-            "$ref": "#/components/schemas/UpdateVoiceStateRequestPartialChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           }
         }
       },
@@ -37313,7 +37622,11 @@
             "description": "the avatar decoration hash"
           },
           "sku_id": {
-            "$ref": "#/components/schemas/UserAvatarDecorationResponseSkuId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "id of the avatar decoration\u0027s SKU",
+            "format": "snowflake",
+            "nullable": true
           }
         }
       },
@@ -37431,7 +37744,11 @@
         "type": "object",
         "properties": {
           "sku_id": {
-            "$ref": "#/components/schemas/UserNameplateResponseSkuId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "ID of the nameplate SKU",
+            "format": "snowflake",
+            "nullable": true
           },
           "asset": {
             "type": "string",
@@ -37592,7 +37909,11 @@
         "type": "object",
         "properties": {
           "identity_guild_id": {
-            "$ref": "#/components/schemas/UserPrimaryGuildResponseIdentityGuildId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "the id of the user\u0027s primary guild",
+            "format": "snowflake",
+            "nullable": true
           },
           "identity_enabled": {
             "type": "boolean",
@@ -38370,7 +38691,10 @@
             "format": "int32"
           },
           "channel_id": {
-            "$ref": "#/components/schemas/VoiceScheduledEventCreateRequestChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "recurrence_rule": {
             "$ref": "#/components/schemas/VoiceScheduledEventCreateRequestRecurrenceRule"
@@ -38416,7 +38740,10 @@
             "$ref": "#/components/schemas/GuildScheduledEventPrivacyLevels"
           },
           "channel_id": {
-            "$ref": "#/components/schemas/VoiceScheduledEventPatchRequestPartialChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "recurrence_rule": {
             "$ref": "#/components/schemas/VoiceScheduledEventPatchRequestPartialRecurrenceRule"
@@ -38467,10 +38794,18 @@
             "nullable": true
           },
           "channel_id": {
-            "$ref": "#/components/schemas/VoiceScheduledEventResponseChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "Channel ID in which the scheduled event will be hosted, or null if entity type is EXTERNAL",
+            "format": "snowflake",
+            "nullable": true
           },
           "creator_id": {
-            "$ref": "#/components/schemas/VoiceScheduledEventResponseCreatorId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "ID of the user that created the scheduled event",
+            "format": "snowflake",
+            "nullable": true
           },
           "creator": {
             "$ref": "#/components/schemas/UserResponse"
@@ -38500,7 +38835,11 @@
             "format": "int32"
           },
           "entity_id": {
-            "$ref": "#/components/schemas/VoiceScheduledEventResponseEntityId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "description": "ID of the hosting entity associated with the scheduled event",
+            "format": "snowflake",
+            "nullable": true
           },
           "recurrence_rule": {
             "$ref": "#/components/schemas/VoiceScheduledEventResponseRecurrenceRule"
@@ -38545,13 +38884,19 @@
         "type": "object",
         "properties": {
           "channel_id": {
-            "$ref": "#/components/schemas/VoiceStateResponseChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "deaf": {
             "type": "boolean"
           },
           "guild_id": {
-            "$ref": "#/components/schemas/VoiceStateResponseGuildId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           },
           "member": {
             "$ref": "#/components/schemas/GuildMemberResponse"
@@ -39071,7 +39416,10 @@
             "type": "boolean"
           },
           "channel_id": {
-            "$ref": "#/components/schemas/WidgetSettingsResponseChannelId"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake",
+            "nullable": true
           }
         }
       },
@@ -40212,24 +40560,6 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "ApplicationCommandIntegerOptionMinValue": {
-        "maximum": 9007199254740991,
-        "exclusiveMaximum": false,
-        "minimum": -9007199254740991,
-        "exclusiveMinimum": false,
-        "type": "integer",
-        "format": "int64",
-        "nullable": true
-      },
-      "ApplicationCommandIntegerOptionMaxValue": {
-        "maximum": 9007199254740991,
-        "exclusiveMaximum": false,
-        "minimum": -9007199254740991,
-        "exclusiveMinimum": false,
-        "type": "integer",
-        "format": "int64",
-        "nullable": true
-      },
       "ApplicationCommandIntegerOptionResponseType": {
         "type": "integer",
         "additionalProperties": false,
@@ -40640,12 +40970,6 @@
           }
         ]
       },
-      "ApplicationCommandUpdateRequestId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "ApplicationCommandUserOptionType": {
         "type": "integer",
         "additionalProperties": false,
@@ -40655,12 +40979,6 @@
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "ApplicationFormPartialTeamId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "ApplicationFormPartialExplicitContentFilter": {
         "type": "object",
@@ -40761,24 +41079,6 @@
         "type": "string",
         "additionalProperties": false
       },
-      "ApplicationIncomingWebhookResponseApplicationId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "ApplicationIncomingWebhookResponseChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "ApplicationIncomingWebhookResponseGuildId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "ApplicationIncomingWebhookResponseType": {
         "type": "integer",
         "additionalProperties": false,
@@ -40832,18 +41132,6 @@
             "$ref": "#/components/schemas/ApplicationTypes"
           }
         ]
-      },
-      "AuditLogEntryResponseUserId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "AuditLogEntryResponseTargetId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "BaseCreateMessageCreateRequestAllowedMentions": {
         "required": [
@@ -41206,24 +41494,10 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "BulkLobbyMemberRequestFlags": {
-        "enum": [
-          1
-        ],
-        "type": "integer",
-        "additionalProperties": false,
-        "nullable": true
-      },
       "ButtonComponentForMessageRequestType": {
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "ButtonComponentForMessageRequestSkuId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "ButtonComponentForMessageRequestEmoji": {
         "required": [
@@ -41257,24 +41531,6 @@
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "ChannelFollowerWebhookResponseApplicationId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "ChannelFollowerWebhookResponseChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "ChannelFollowerWebhookResponseGuildId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "ChannelFollowerWebhookResponseType": {
         "type": "integer",
@@ -41326,12 +41582,6 @@
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "ComponentEmojiForRequestId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "ContainerComponentForMessageRequestType": {
         "type": "integer",
@@ -41455,12 +41705,6 @@
           }
         ]
       },
-      "CreateGuildChannelRequestParentId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "CreateGuildChannelRequestVideoQualityMode": {
         "type": "object",
         "oneOf": [
@@ -41582,18 +41826,6 @@
           }
         }
       },
-      "CreateGuildInviteRequestTargetUserId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "CreateGuildInviteRequestTargetApplicationId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "CreateGuildInviteRequestTargetType": {
         "type": "object",
         "oneOf": [
@@ -41668,18 +41900,6 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "CreateOrUpdateThreadTagRequestEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "CreatePrivateChannelRequestRecipientId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "CreateRoleRequestColors": {
         "required": [
           "type"
@@ -41751,18 +41971,6 @@
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "CreatedThreadResponseLastMessageId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "CreatedThreadResponseParentId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "CustomClientThemeShareRequestBaseTheme": {
         "type": "object",
@@ -41897,12 +42105,6 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "DefaultReactionEmojiResponseEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "DiscordIntegrationResponseType": {
         "type": "string",
         "additionalProperties": false
@@ -41938,12 +42140,6 @@
           }
         }
       },
-      "EntitlementResponseGuildId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "EntitlementResponseFulfillmentStatus": {
         "type": "object",
         "oneOf": [
@@ -41957,38 +42153,14 @@
           }
         ]
       },
-      "EntitlementResponseGifterUserId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "EntitlementResponseParentId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "ExternalConnectionIntegrationResponseType": {
         "type": "string",
         "additionalProperties": false
-      },
-      "ExternalConnectionIntegrationResponseRoleId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "ExternalScheduledEventCreateRequestEntityType": {
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "ExternalScheduledEventCreateRequestChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "ExternalScheduledEventCreateRequestRecurrenceRule": {
         "required": [
@@ -42045,12 +42217,6 @@
           }
         ]
       },
-      "ExternalScheduledEventPatchRequestPartialChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "ExternalScheduledEventPatchRequestPartialRecurrenceRule": {
         "required": [
           "type"
@@ -42080,32 +42246,11 @@
           }
         }
       },
-      "ExternalScheduledEventResponseChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "Channel ID in which the scheduled event will be hosted, or null if entity type is EXTERNAL",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "ExternalScheduledEventResponseCreatorId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "ID of the user that created the scheduled event",
-        "format": "snowflake",
-        "nullable": true
-      },
       "ExternalScheduledEventResponseEntityType": {
         "type": "integer",
         "additionalProperties": false,
         "description": "Type of hosting entity associated with the scheduled event",
         "format": "int32"
-      },
-      "ExternalScheduledEventResponseEntityId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "ID of the hosting entity associated with the scheduled event",
-        "format": "snowflake",
-        "nullable": true
       },
       "ExternalScheduledEventResponseRecurrenceRule": {
         "required": [
@@ -42188,12 +42333,6 @@
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "ForumTagResponseEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "FriendInviteResponseType": {
         "type": "integer",
@@ -42771,18 +42910,6 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "GuildChannelResponseLastMessageId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildChannelResponseParentId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "GuildChannelResponseDefaultReactionEmoji": {
         "required": [
           "type"
@@ -42836,24 +42963,6 @@
             "$ref": "#/components/schemas/ThreadSearchTagSetting"
           }
         ]
-      },
-      "GuildIncomingWebhookResponseApplicationId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildIncomingWebhookResponseChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildIncomingWebhookResponseGuildId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "GuildIncomingWebhookResponseType": {
         "type": "integer",
@@ -43120,78 +43229,6 @@
           }
         ]
       },
-      "GuildPatchRequestPartialAfkChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildPatchRequestPartialSystemChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildPatchRequestPartialRulesChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildPatchRequestPartialSafetyAlertsChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildPatchRequestPartialPublicUpdatesChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildResponseApplicationId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildResponseAfkChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildResponseSystemChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildResponseWidgetChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildResponseRulesChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildResponseSafetyAlertsChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildResponsePublicUpdatesChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "GuildResponseIncidentsData": {
         "required": [
           "type"
@@ -43246,12 +43283,6 @@
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "GuildTemplateChannelResponseParentId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "GuildTemplateChannelResponseDefaultAutoArchiveDuration": {
         "type": "object",
@@ -43333,12 +43364,6 @@
           }
         ]
       },
-      "GuildTemplateChannelTagsEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "GuildTemplateResponseCreator": {
         "required": [
           "type"
@@ -43394,72 +43419,6 @@
             "GuildTemplateRoleColorsResponse": "#/components/schemas/GuildTemplateRoleColorsResponse"
           }
         }
-      },
-      "GuildTemplateSnapshotResponseAfkChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildTemplateSnapshotResponseSystemChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildWelcomeChannelEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildWelcomeScreenChannelResponseEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildWithCountsResponseApplicationId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildWithCountsResponseAfkChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildWithCountsResponseSystemChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildWithCountsResponseWidgetChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildWithCountsResponseRulesChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildWithCountsResponseSafetyAlertsChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "GuildWithCountsResponsePublicUpdatesChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "GuildWithCountsResponseIncidentsData": {
         "required": [
@@ -44299,14 +44258,6 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "LobbyMemberRequestFlags": {
-        "enum": [
-          1
-        ],
-        "type": "integer",
-        "additionalProperties": false,
-        "nullable": true
-      },
       "MlSpamRuleResponseActionsItem": {
         "required": [
           "type"
@@ -44778,18 +44729,6 @@
           }
         ]
       },
-      "MessageAllowedMentionsRequestUsersItem": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "MessageAllowedMentionsRequestRolesItem": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "MessageComponentInteractionMetadataResponseType": {
         "type": "integer",
         "additionalProperties": false,
@@ -45049,24 +44988,6 @@
             "TextDisplayComponentForMessageRequest": "#/components/schemas/TextDisplayComponentForMessageRequest"
           }
         }
-      },
-      "MessageReactionEmojiResponseId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "MessageReferenceRequestGuildId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "MessageReferenceRequestChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "MessageReferenceRequestType": {
         "type": "object",
@@ -45377,18 +45298,6 @@
         "additionalProperties": false,
         "description": "Type of form field"
       },
-      "OnboardingPromptOptionRequestId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "OnboardingPromptOptionRequestEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "ParagraphFormFieldResponseFieldType": {
         "type": "string",
         "additionalProperties": false,
@@ -45419,20 +45328,6 @@
           }
         ],
         "description": "The layout type of the poll. Defaults to... DEFAULT!"
-      },
-      "PollEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "The ID of the custom emoji",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "PollEmojiCreateRequestId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "The ID of the custom emoji",
-        "format": "snowflake",
-        "nullable": true
       },
       "PollMediaEmoji": {
         "required": [
@@ -45551,22 +45446,10 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "PrivateChannelResponseLastMessageId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "PrivateGroupChannelResponseType": {
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "PrivateGroupChannelResponseLastMessageId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "PrivateGuildMemberResponseAvatarDecorationData": {
         "required": [
@@ -46098,27 +45981,6 @@
           }
         ]
       },
-      "ScheduledEventResponseChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "Channel ID in which the scheduled event will be hosted, or null if entity type is EXTERNAL",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "ScheduledEventResponseCreatorId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "ID of the user that created the scheduled event",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "ScheduledEventResponseEntityId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "ID of the hosting entity associated with the scheduled event",
-        "format": "snowflake",
-        "nullable": true
-      },
       "ScheduledEventResponseRecurrenceRule": {
         "required": [
           "type"
@@ -46175,13 +46037,6 @@
             "ScheduledEventUserResponse": "#/components/schemas/ScheduledEventUserResponse"
           }
         }
-      },
-      "ScheduledEventUserResponseGuildScheduledEventExceptionId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "ID of the scheduled event exception",
-        "format": "snowflake",
-        "nullable": true
       },
       "SearchMessageResponseComponentsItem": {
         "required": [
@@ -46419,12 +46274,6 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "SettingsEmojiResponseId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "SocialLayerSkuPurchaseEligibilityCallbackDataIneligibleReason": {
         "type": "object",
         "oneOf": [
@@ -46443,46 +46292,10 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "SoundboardCreateRequestEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "SoundboardPatchRequestPartialEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "SoundboardSoundResponseEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "SoundboardSoundSendRequestSourceGuildId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "StageInstanceResponseGuildScheduledEventId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "StageScheduledEventCreateRequestEntityType": {
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "StageScheduledEventCreateRequestChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "StageScheduledEventCreateRequestRecurrenceRule": {
         "required": [
@@ -46567,12 +46380,6 @@
           }
         ]
       },
-      "StageScheduledEventPatchRequestPartialChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "StageScheduledEventPatchRequestPartialRecurrenceRule": {
         "required": [
           "type"
@@ -46630,32 +46437,11 @@
           }
         }
       },
-      "StageScheduledEventResponseChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "Channel ID in which the scheduled event will be hosted, or null if entity type is EXTERNAL",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "StageScheduledEventResponseCreatorId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "ID of the user that created the scheduled event",
-        "format": "snowflake",
-        "nullable": true
-      },
       "StageScheduledEventResponseEntityType": {
         "type": "integer",
         "additionalProperties": false,
         "description": "Type of hosting entity associated with the scheduled event",
         "format": "int32"
-      },
-      "StageScheduledEventResponseEntityId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "ID of the hosting entity associated with the scheduled event",
-        "format": "snowflake",
-        "nullable": true
       },
       "StageScheduledEventResponseRecurrenceRule": {
         "required": [
@@ -46843,18 +46629,6 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "ThreadResponseLastMessageId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "ThreadResponseParentId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "ThumbnailComponentForMessageRequestType": {
         "type": "integer",
         "additionalProperties": false,
@@ -46864,12 +46638,6 @@
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "UpdateDefaultReactionEmojiRequestEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "UpdateGuildChannelRequestPartialType": {
         "type": "object",
@@ -46883,12 +46651,6 @@
             "$ref": "#/components/schemas/UpdateGuildChannelRequestPartialTypeWrapper"
           }
         ]
-      },
-      "UpdateGuildChannelRequestPartialParentId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "UpdateGuildChannelRequestPartialVideoQualityMode": {
         "type": "object",
@@ -47047,12 +46809,6 @@
           }
         ]
       },
-      "UpdateRolePositionsRequestId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "UpdateRoleRequestPartialColors": {
         "required": [
           "type"
@@ -47081,12 +46837,6 @@
           }
         }
       },
-      "UpdateSelfVoiceStateRequestPartialChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "UpdateThreadRequestPartialAutoArchiveDuration": {
         "type": "object",
         "oneOf": [
@@ -47112,31 +46862,6 @@
             "$ref": "#/components/schemas/VideoQualityModes"
           }
         ]
-      },
-      "UpdateThreadTagRequestEmojiId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "UpdateThreadTagRequestId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "UpdateVoiceStateRequestPartialChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "UserAvatarDecorationResponseSkuId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "id of the avatar decoration\u0027s SKU",
-        "format": "snowflake",
-        "nullable": true
       },
       "UserCollectiblesResponseNameplate": {
         "required": [
@@ -47176,13 +46901,6 @@
         "type": "integer",
         "additionalProperties": false,
         "format": "int32"
-      },
-      "UserNameplateResponseSkuId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "ID of the nameplate SKU",
-        "format": "snowflake",
-        "nullable": true
       },
       "UserPiiResponseAvatarDecorationData": {
         "required": [
@@ -47269,13 +46987,6 @@
             "UserPrimaryGuildResponse": "#/components/schemas/UserPrimaryGuildResponse"
           }
         }
-      },
-      "UserPrimaryGuildResponseIdentityGuildId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "the id of the user\u0027s primary guild",
-        "format": "snowflake",
-        "nullable": true
       },
       "UserProfileRuleResponseActionsItem": {
         "required": [
@@ -47540,12 +47251,6 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "VoiceScheduledEventCreateRequestChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "VoiceScheduledEventCreateRequestRecurrenceRule": {
         "required": [
           "type"
@@ -47629,12 +47334,6 @@
           }
         ]
       },
-      "VoiceScheduledEventPatchRequestPartialChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
       "VoiceScheduledEventPatchRequestPartialRecurrenceRule": {
         "required": [
           "type"
@@ -47692,32 +47391,11 @@
           }
         }
       },
-      "VoiceScheduledEventResponseChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "Channel ID in which the scheduled event will be hosted, or null if entity type is EXTERNAL",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "VoiceScheduledEventResponseCreatorId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "ID of the user that created the scheduled event",
-        "format": "snowflake",
-        "nullable": true
-      },
       "VoiceScheduledEventResponseEntityType": {
         "type": "integer",
         "additionalProperties": false,
         "description": "Type of hosting entity associated with the scheduled event",
         "format": "int32"
-      },
-      "VoiceScheduledEventResponseEntityId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "description": "ID of the hosting entity associated with the scheduled event",
-        "format": "snowflake",
-        "nullable": true
       },
       "VoiceScheduledEventResponseRecurrenceRule": {
         "required": [
@@ -47803,24 +47481,6 @@
             "EntityMetadataVoiceResponse": "#/components/schemas/EntityMetadataVoiceResponse"
           }
         }
-      },
-      "VoiceStateResponseChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "VoiceStateResponseGuildId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
-      },
-      "WidgetSettingsResponseChannelId": {
-        "pattern": "^(0|[1-9][0-9]*)$",
-        "type": "string",
-        "format": "snowflake",
-        "nullable": true
       },
       "ErrorResponseAllOf2": {
         "type": "object",
@@ -51162,6 +50822,22 @@
             "nullable": true
           }
         }
+      },
+      "BulkLobbyMemberRequestFlags": {
+        "enum": [
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "nullable": true
+      },
+      "LobbyMemberRequestFlags": {
+        "enum": [
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "nullable": true
       },
       "CreateOrJoinLobbyRequestFlags": {
         "enum": [
