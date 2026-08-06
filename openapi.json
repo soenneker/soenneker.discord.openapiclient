@@ -17545,6 +17545,19 @@
               "boolean",
               "null"
             ]
+          },
+          "file_types": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 16
+            },
+            "maxItems": 10,
+            "uniqueItems": true
           }
         },
         "required": [
@@ -17600,6 +17613,14 @@
           },
           "required": {
             "type": "boolean"
+          },
+          "file_types": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 16
+            },
+            "uniqueItems": true
           }
         },
         "required": [
@@ -22163,12 +22184,6 @@
               }
             ]
           },
-          "remove_member": {
-            "type": [
-              "boolean",
-              "null"
-            ]
-          },
           "additional_name": {
             "type": [
               "string",
@@ -22176,6 +22191,12 @@
             ],
             "minLength": 1,
             "maxLength": 80
+          },
+          "remove_member": {
+            "type": [
+              "boolean",
+              "null"
+            ]
           }
         },
         "required": [
@@ -25526,6 +25547,19 @@
               "boolean",
               "null"
             ]
+          },
+          "file_types": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 16
+            },
+            "maxItems": 10,
+            "uniqueItems": true
           }
         },
         "required": [
@@ -31119,6 +31153,14 @@
                 ]
               }
             ]
+          },
+          "additional_name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "maxLength": 80
           }
         },
         "required": [

@@ -22,6 +22,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string CustomId { get; set; }
 #endif
+        /// <summary>The file_types property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? FileTypes { get; set; }
+#nullable restore
+#else
+        public List<string> FileTypes { get; set; }
+#endif
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>The max_values property</summary>
@@ -58,6 +66,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "custom_id", n => { CustomId = n.GetStringValue(); } },
+                { "file_types", n => { FileTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "max_values", n => { MaxValues = n.GetIntValue(); } },
                 { "min_values", n => { MinValues = n.GetIntValue(); } },
@@ -73,6 +82,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("custom_id", CustomId);
+            writer.WriteCollectionOfPrimitiveValues<string>("file_types", FileTypes);
             writer.WriteIntValue("id", Id);
             writer.WriteIntValue("max_values", MaxValues);
             writer.WriteIntValue("min_values", MinValues);
