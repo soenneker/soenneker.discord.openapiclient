@@ -49223,7 +49223,7 @@
             "x-jsonschema-contentEncoding": "base64"
           },
           "bio": {
-            "maxLength": 190,
+            "maxLength": 300,
             "type": "string",
             "nullable": true
           },

@@ -7548,7 +7548,7 @@
                       "string",
                       "null"
                     ],
-                    "maxLength": 190
+                    "maxLength": 300
                   },
                   "banner": {
                     "type": [
