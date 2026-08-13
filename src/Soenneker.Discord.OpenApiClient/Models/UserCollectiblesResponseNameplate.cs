@@ -8,60 +8,27 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
     /// <summary>
-    /// Object mapping of nameplate data
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplateMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class UserCollectiblesResponseNameplate : IAdditionalDataHolder, IParsable
+    public partial class UserCollectiblesResponseNameplate : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Path to the nameplate asset</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplateMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Asset { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplateMember1? UserCollectiblesResponseNameplateMember1 { get; set; }
 #nullable restore
 #else
-        public string Asset { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplateMember1 UserCollectiblesResponseNameplateMember1 { get; set; }
 #endif
-        /// <summary>The label of this nameplate. Currently unused</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse? UserNameplateResponse { get; set; }
 #nullable restore
 #else
-        public string Label { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse UserNameplateResponse { get; set; }
 #endif
-        /// <summary>The palette property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.NameplatePalette? Palette { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.NameplatePalette Palette { get; set; }
-#endif
-        /// <summary>ID of the nameplate SKU</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SkuId { get; set; }
-#nullable restore
-#else
-        public string SkuId { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate"/> and sets the default values.
-        /// </summary>
-        public UserCollectiblesResponseNameplate()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -70,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate();
+            if("UserNameplateResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.UserNameplateResponse = new global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,14 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(UserCollectiblesResponseNameplateMember1 != null)
             {
-                { "asset", n => { Asset = n.GetStringValue(); } },
-                { "label", n => { Label = n.GetStringValue(); } },
-                { "palette", n => { Palette = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePalette>(global::Soenneker.Discord.OpenApiClient.Models.NameplatePalette.CreateFromDiscriminatorValue); } },
-                { "sku_id", n => { SkuId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return UserCollectiblesResponseNameplateMember1.GetFieldDeserializers();
+            }
+            else if(UserNameplateResponse != null)
+            {
+                return UserNameplateResponse.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -94,12 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("asset", Asset);
-            writer.WriteStringValue("label", Label);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePalette>("palette", Palette);
-            writer.WriteStringValue("sku_id", SkuId);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(UserCollectiblesResponseNameplateMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplateMember1>(null, UserCollectiblesResponseNameplateMember1);
+            }
+            else if(UserNameplateResponse != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse>(null, UserNameplateResponse);
+            }
         }
     }
 }

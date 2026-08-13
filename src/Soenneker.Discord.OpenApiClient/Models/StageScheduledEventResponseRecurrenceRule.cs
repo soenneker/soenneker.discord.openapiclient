@@ -8,78 +8,27 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
     /// <summary>
-    /// Recurrence rule for the scheduled event, or null if not recurring
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRuleMember1"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class StageScheduledEventResponseRecurrenceRule : IAdditionalDataHolder, IParsable
+    public partial class StageScheduledEventResponseRecurrenceRule : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Set of specific months to recur on</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ByMonth { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse? RecurrenceRuleResponse { get; set; }
 #nullable restore
 #else
-        public List<int?> ByMonth { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse RecurrenceRuleResponse { get; set; }
 #endif
-        /// <summary>Set of specific dates within a month to recur on</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRuleMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ByMonthDay { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRuleMember1? StageScheduledEventResponseRecurrenceRuleMember1 { get; set; }
 #nullable restore
 #else
-        public List<int?> ByMonthDay { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRuleMember1 StageScheduledEventResponseRecurrenceRuleMember1 { get; set; }
 #endif
-        /// <summary>List of specific days within a specific week to recur on</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ByNWeekdayResponse>? ByNWeekday { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ByNWeekdayResponse> ByNWeekday { get; set; }
-#endif
-        /// <summary>Set of specific days within a week for the event to recur on</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<int?>? ByWeekday { get; set; }
-#nullable restore
-#else
-        public List<int?> ByWeekday { get; set; }
-#endif
-        /// <summary>Set of days within a year to recur on (1-364)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<int?>? ByYearDay { get; set; }
-#nullable restore
-#else
-        public List<int?> ByYearDay { get; set; }
-#endif
-        /// <summary>Total number of times the event is allowed to recur</summary>
-        public int? Count { get; set; }
-        /// <summary>Ending time of the recurrence interval</summary>
-        public DateTimeOffset? End { get; set; }
-        /// <summary>The frequency property</summary>
-        public int? Frequency { get; set; }
-        /// <summary>The spacing between events, defined by frequency</summary>
-        public int? Interval { get; set; }
-        /// <summary>Starting time of the recurrence interval</summary>
-        public DateTimeOffset? Start { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule"/> and sets the default values.
-        /// </summary>
-        public StageScheduledEventResponseRecurrenceRule()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -88,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule();
+            if("RecurrenceRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RecurrenceRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,20 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(RecurrenceRuleResponse != null)
             {
-                { "by_month", n => { ByMonth = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
-                { "by_month_day", n => { ByMonthDay = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
-                { "by_n_weekday", n => { ByNWeekday = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ByNWeekdayResponse>(global::Soenneker.Discord.OpenApiClient.Models.ByNWeekdayResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "by_weekday", n => { ByWeekday = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
-                { "by_year_day", n => { ByYearDay = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
-                { "count", n => { Count = n.GetIntValue(); } },
-                { "end", n => { End = n.GetDateTimeOffsetValue(); } },
-                { "frequency", n => { Frequency = n.GetIntValue(); } },
-                { "interval", n => { Interval = n.GetIntValue(); } },
-                { "start", n => { Start = n.GetDateTimeOffsetValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return RecurrenceRuleResponse.GetFieldDeserializers();
+            }
+            else if(StageScheduledEventResponseRecurrenceRuleMember1 != null)
+            {
+                return StageScheduledEventResponseRecurrenceRuleMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -118,18 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<int?>("by_month", ByMonth);
-            writer.WriteCollectionOfPrimitiveValues<int?>("by_month_day", ByMonthDay);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ByNWeekdayResponse>("by_n_weekday", ByNWeekday);
-            writer.WriteCollectionOfPrimitiveValues<int?>("by_weekday", ByWeekday);
-            writer.WriteCollectionOfPrimitiveValues<int?>("by_year_day", ByYearDay);
-            writer.WriteIntValue("count", Count);
-            writer.WriteDateTimeOffsetValue("end", End);
-            writer.WriteIntValue("frequency", Frequency);
-            writer.WriteIntValue("interval", Interval);
-            writer.WriteDateTimeOffsetValue("start", Start);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(RecurrenceRuleResponse != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse>(null, RecurrenceRuleResponse);
+            }
+            else if(StageScheduledEventResponseRecurrenceRuleMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRuleMember1>(null, StageScheduledEventResponseRecurrenceRuleMember1);
+            }
         }
     }
 }

@@ -26,9 +26,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #endif
         /// <summary>The time when the poll ends</summary>
         public DateTimeOffset? Expiry { get; set; }
-        /// <summary>The layout_type property</summary>
+        /// <summary>The layout type of the poll</summary>
         public int? LayoutType { get; set; }
-        /// <summary>The question property</summary>
+        /// <summary>The question of the poll. Only `text` is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse? Question { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse Question { get; set; }
 #endif
-        /// <summary>The results property</summary>
+        /// <summary>The results of the poll</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Discord.OpenApiClient.Models.PollResultsResponse? Results { get; set; }

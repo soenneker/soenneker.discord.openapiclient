@@ -7,38 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseErrorMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class VanityUrlResponseError : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class VanityUrlResponseError : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The code property</summary>
-        public int? Code { get; set; }
-        /// <summary>The message property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse? VanityUrlErrorResponse { get; set; }
 #nullable restore
 #else
-        public string Message { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse VanityUrlErrorResponse { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseErrorMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseErrorMember1? VanityUrlResponseErrorMember1 { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseErrorMember1 VanityUrlResponseErrorMember1 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError"/> and sets the default values.
-        /// </summary>
-        public VanityUrlResponseError()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -47,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError();
+            if("VanityUrlErrorResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.VanityUrlErrorResponse = new global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,12 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(VanityUrlErrorResponse != null)
             {
-                { "code", n => { Code = n.GetIntValue(); } },
-                { "message", n => { Message = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return VanityUrlErrorResponse.GetFieldDeserializers();
+            }
+            else if(VanityUrlResponseErrorMember1 != null)
+            {
+                return VanityUrlResponseErrorMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -69,10 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("code", Code);
-            writer.WriteStringValue("message", Message);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(VanityUrlErrorResponse != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse>(null, VanityUrlErrorResponse);
+            }
+            else if(VanityUrlResponseErrorMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseErrorMember1>(null, VanityUrlResponseErrorMember1);
+            }
         }
     }
 }

@@ -7,56 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPollMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class BaseCreateMessageCreateRequestPoll : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class BaseCreateMessageCreateRequestPoll : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether a user can select multiple answers</summary>
-        public bool? AllowMultiselect { get; set; }
-        /// <summary>Each of the answers available in the poll, up to 10</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPollMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>? Answers { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPollMember1? BaseCreateMessageCreateRequestPollMember1 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest> Answers { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPollMember1 BaseCreateMessageCreateRequestPollMember1 { get; set; }
 #endif
-        /// <summary>Number of hours the poll should be open for, up to 32 days. Defaults to 24</summary>
-        public int? Duration { get; set; }
-        /// <summary>The layout type of the poll. Defaults to... DEFAULT!</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType? LayoutType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest? PollCreateRequest { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType LayoutType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest PollCreateRequest { get; set; }
 #endif
-        /// <summary>The question property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollMedia? Question { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollMedia Question { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll"/> and sets the default values.
-        /// </summary>
-        public BaseCreateMessageCreateRequestPoll()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -65,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll();
+            if("PollCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PollCreateRequest = new global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,15 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(BaseCreateMessageCreateRequestPollMember1 != null)
             {
-                { "allow_multiselect", n => { AllowMultiselect = n.GetBoolValue(); } },
-                { "answers", n => { Answers = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "duration", n => { Duration = n.GetIntValue(); } },
-                { "layout_type", n => { LayoutType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType>(global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType.CreateFromDiscriminatorValue); } },
-                { "question", n => { Question = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMedia>(global::Soenneker.Discord.OpenApiClient.Models.PollMedia.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return BaseCreateMessageCreateRequestPollMember1.GetFieldDeserializers();
+            }
+            else if(PollCreateRequest != null)
+            {
+                return PollCreateRequest.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -90,13 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("allow_multiselect", AllowMultiselect);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>("answers", Answers);
-            writer.WriteIntValue("duration", Duration);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType>("layout_type", LayoutType);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMedia>("question", Question);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(BaseCreateMessageCreateRequestPollMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPollMember1>(null, BaseCreateMessageCreateRequestPollMember1);
+            }
+            else if(PollCreateRequest != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>(null, PollCreateRequest);
+            }
         }
     }
 }

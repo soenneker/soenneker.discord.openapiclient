@@ -7,20 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestModeMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class UpdateGuildOnboardingRequestMode : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class UpdateGuildOnboardingRequestMode : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestMode"/> and sets the default values.
-        /// </summary>
-        public UpdateGuildOnboardingRequestMode()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode? GuildOnboardingMode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode GuildOnboardingMode { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestModeMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestModeMember1? UpdateGuildOnboardingRequestModeMember1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestModeMember1 UpdateGuildOnboardingRequestModeMember1 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,7 +37,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestMode CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestMode();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestMode();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -37,9 +47,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(GuildOnboardingMode != null)
             {
-            };
+                return GuildOnboardingMode.GetFieldDeserializers();
+            }
+            else if(UpdateGuildOnboardingRequestModeMember1 != null)
+            {
+                return UpdateGuildOnboardingRequestModeMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -48,7 +64,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteAdditionalData(AdditionalData);
+            if(GuildOnboardingMode != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode>(null, GuildOnboardingMode);
+            }
+            else if(UpdateGuildOnboardingRequestModeMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestModeMember1>(null, UpdateGuildOnboardingRequestModeMember1);
+            }
         }
     }
 }

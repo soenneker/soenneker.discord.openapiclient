@@ -7,60 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannelMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class FriendInviteResponseChannel : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class FriendInviteResponseChannel : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The icon property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannelMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Icon { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannelMember1? FriendInviteResponseChannelMember1 { get; set; }
 #nullable restore
 #else
-        public string Icon { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannelMember1 FriendInviteResponseChannelMember1 { get; set; }
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse? InviteChannelResponse { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse InviteChannelResponse { get; set; }
 #endif
-        /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Name { get; set; }
-#nullable restore
-#else
-        public string Name { get; set; }
-#endif
-        /// <summary>The recipients property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse>? Recipients { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse> Recipients { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannel"/> and sets the default values.
-        /// </summary>
-        public FriendInviteResponseChannel()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -69,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannel();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannel();
+            if("InviteChannelResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.InviteChannelResponse = new global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,14 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(FriendInviteResponseChannelMember1 != null)
             {
-                { "icon", n => { Icon = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse>(global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return FriendInviteResponseChannelMember1.GetFieldDeserializers();
+            }
+            else if(InviteChannelResponse != null)
+            {
+                return InviteChannelResponse.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -93,12 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("icon", Icon);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse>("recipients", Recipients);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(FriendInviteResponseChannelMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FriendInviteResponseChannelMember1>(null, FriendInviteResponseChannelMember1);
+            }
+            else if(InviteChannelResponse != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse>(null, InviteChannelResponse);
+            }
         }
     }
 }

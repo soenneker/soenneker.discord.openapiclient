@@ -7,20 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponseDefaultTagSettingMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GuildTemplateChannelResponseDefaultTagSetting : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GuildTemplateChannelResponseDefaultTagSetting : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponseDefaultTagSetting"/> and sets the default values.
-        /// </summary>
-        public GuildTemplateChannelResponseDefaultTagSetting()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponseDefaultTagSettingMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponseDefaultTagSettingMember1? GuildTemplateChannelResponseDefaultTagSettingMember1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponseDefaultTagSettingMember1 GuildTemplateChannelResponseDefaultTagSettingMember1 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting? ThreadSearchTagSetting { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting ThreadSearchTagSetting { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,7 +37,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponseDefaultTagSetting CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponseDefaultTagSetting();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponseDefaultTagSetting();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -37,9 +47,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(GuildTemplateChannelResponseDefaultTagSettingMember1 != null)
             {
-            };
+                return GuildTemplateChannelResponseDefaultTagSettingMember1.GetFieldDeserializers();
+            }
+            else if(ThreadSearchTagSetting != null)
+            {
+                return ThreadSearchTagSetting.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -48,7 +64,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteAdditionalData(AdditionalData);
+            if(GuildTemplateChannelResponseDefaultTagSettingMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateChannelResponseDefaultTagSettingMember1>(null, GuildTemplateChannelResponseDefaultTagSettingMember1);
+            }
+            else if(ThreadSearchTagSetting != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>(null, ThreadSearchTagSetting);
+            }
         }
     }
 }

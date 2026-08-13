@@ -84,7 +84,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public List<string> Roles { get; set; }
 #endif
-        /// <summary>The user property</summary>
+        /// <summary>the user this guild member represents</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? User { get; set; }

@@ -7,32 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadataMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class MentionSpamUpsertRequestPartialTriggerMetadata : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class MentionSpamUpsertRequestPartialTriggerMetadata : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The mention_raid_protection_enabled property</summary>
-        public bool? MentionRaidProtectionEnabled { get; set; }
-        /// <summary>The mention_total_limit property</summary>
-        public int? MentionTotalLimit { get; set; }
-        /// <summary>Union discriminator</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata? MentionSpamTriggerMetadata { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata MentionSpamTriggerMetadata { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadata"/> and sets the default values.
-        /// </summary>
-        public MentionSpamUpsertRequestPartialTriggerMetadata()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadataMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadataMember1? MentionSpamUpsertRequestPartialTriggerMetadataMember1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadataMember1 MentionSpamUpsertRequestPartialTriggerMetadataMember1 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -41,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadata();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadata();
+            if("MentionSpamTriggerMetadata".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.MentionSpamTriggerMetadata = new global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,12 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(MentionSpamTriggerMetadata != null)
             {
-                { "mention_raid_protection_enabled", n => { MentionRaidProtectionEnabled = n.GetBoolValue(); } },
-                { "mention_total_limit", n => { MentionTotalLimit = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return MentionSpamTriggerMetadata.GetFieldDeserializers();
+            }
+            else if(MentionSpamUpsertRequestPartialTriggerMetadataMember1 != null)
+            {
+                return MentionSpamUpsertRequestPartialTriggerMetadataMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -63,10 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("mention_raid_protection_enabled", MentionRaidProtectionEnabled);
-            writer.WriteIntValue("mention_total_limit", MentionTotalLimit);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(MentionSpamTriggerMetadata != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata>(null, MentionSpamTriggerMetadata);
+            }
+            else if(MentionSpamUpsertRequestPartialTriggerMetadataMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadataMember1>(null, MentionSpamUpsertRequestPartialTriggerMetadataMember1);
+            }
         }
     }
 }

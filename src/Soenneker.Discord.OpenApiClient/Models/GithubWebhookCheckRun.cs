@@ -7,84 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRunMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GithubWebhookCheckRun : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GithubWebhookCheckRun : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The check_suite property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite? CheckSuite { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun? GithubCheckRun { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite CheckSuite { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun GithubCheckRun { get; set; }
 #endif
-        /// <summary>The conclusion property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRunMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Conclusion { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRunMember1? GithubWebhookCheckRunMember1 { get; set; }
 #nullable restore
 #else
-        public string Conclusion { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRunMember1 GithubWebhookCheckRunMember1 { get; set; }
 #endif
-        /// <summary>The details_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? DetailsUrl { get; set; }
-#nullable restore
-#else
-        public string DetailsUrl { get; set; }
-#endif
-        /// <summary>The html_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? HtmlUrl { get; set; }
-#nullable restore
-#else
-        public string HtmlUrl { get; set; }
-#endif
-        /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Name { get; set; }
-#nullable restore
-#else
-        public string Name { get; set; }
-#endif
-        /// <summary>The output property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutputComposed? Output { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutputComposed Output { get; set; }
-#endif
-        /// <summary>The pull_requests property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckPullRequest>? PullRequests { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckPullRequest> PullRequests { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun"/> and sets the default values.
-        /// </summary>
-        public GithubWebhookCheckRun()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -93,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun();
+            if("GithubCheckRun".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GithubCheckRun = new global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -101,17 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(GithubCheckRun != null)
             {
-                { "check_suite", n => { CheckSuite = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite>(global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite.CreateFromDiscriminatorValue); } },
-                { "conclusion", n => { Conclusion = n.GetStringValue(); } },
-                { "details_url", n => { DetailsUrl = n.GetStringValue(); } },
-                { "html_url", n => { HtmlUrl = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "output", n => { Output = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutputComposed>(global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutputComposed.CreateFromDiscriminatorValue); } },
-                { "pull_requests", n => { PullRequests = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckPullRequest>(global::Soenneker.Discord.OpenApiClient.Models.GithubCheckPullRequest.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return GithubCheckRun.GetFieldDeserializers();
+            }
+            else if(GithubWebhookCheckRunMember1 != null)
+            {
+                return GithubWebhookCheckRunMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -120,15 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite>("check_suite", CheckSuite);
-            writer.WriteStringValue("conclusion", Conclusion);
-            writer.WriteStringValue("details_url", DetailsUrl);
-            writer.WriteStringValue("html_url", HtmlUrl);
-            writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutputComposed>("output", Output);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckPullRequest>("pull_requests", PullRequests);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(GithubCheckRun != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun>(null, GithubCheckRun);
+            }
+            else if(GithubWebhookCheckRunMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRunMember1>(null, GithubWebhookCheckRunMember1);
+            }
         }
     }
 }

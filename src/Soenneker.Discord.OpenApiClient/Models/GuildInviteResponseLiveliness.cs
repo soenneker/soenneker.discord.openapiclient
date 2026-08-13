@@ -7,38 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLivelinessMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildLivelinessResponse"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GuildInviteResponseLiveliness : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GuildInviteResponseLiveliness : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The last_updated_ts property</summary>
-        public DateTimeOffset? LastUpdatedTs { get; set; }
-        /// <summary>The msg_activity_bins property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLivelinessMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? MsgActivityBins { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLivelinessMember1? GuildInviteResponseLivelinessMember1 { get; set; }
 #nullable restore
 #else
-        public List<int?> MsgActivityBins { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLivelinessMember1 GuildInviteResponseLivelinessMember1 { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildLivelinessResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildLivelinessResponse? GuildLivelinessResponse { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildLivelinessResponse GuildLivelinessResponse { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLiveliness"/> and sets the default values.
-        /// </summary>
-        public GuildInviteResponseLiveliness()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -47,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLiveliness CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLiveliness();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLiveliness();
+            if("GuildLivelinessResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GuildLivelinessResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildLivelinessResponse();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,12 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(GuildInviteResponseLivelinessMember1 != null)
             {
-                { "last_updated_ts", n => { LastUpdatedTs = n.GetDateTimeOffsetValue(); } },
-                { "msg_activity_bins", n => { MsgActivityBins = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return GuildInviteResponseLivelinessMember1.GetFieldDeserializers();
+            }
+            else if(GuildLivelinessResponse != null)
+            {
+                return GuildLivelinessResponse.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -69,10 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteDateTimeOffsetValue("last_updated_ts", LastUpdatedTs);
-            writer.WriteCollectionOfPrimitiveValues<int?>("msg_activity_bins", MsgActivityBins);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(GuildInviteResponseLivelinessMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildInviteResponseLivelinessMember1>(null, GuildInviteResponseLivelinessMember1);
+            }
+            else if(GuildLivelinessResponse != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildLivelinessResponse>(null, GuildLivelinessResponse);
+            }
         }
     }
 }

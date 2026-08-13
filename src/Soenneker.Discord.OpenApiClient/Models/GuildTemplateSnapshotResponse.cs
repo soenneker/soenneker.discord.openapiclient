@@ -55,10 +55,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The preferred_locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum? PreferredLocale { get; set; }
+        public string? PreferredLocale { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum PreferredLocale { get; set; }
+        public string PreferredLocale { get; set; }
 #endif
         /// <summary>The region property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -120,7 +120,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "explicit_content_filter", n => { ExplicitContentFilter = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "preferred_locale", n => { PreferredLocale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>(global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum.CreateFromDiscriminatorValue); } },
+                { "preferred_locale", n => { PreferredLocale = n.GetStringValue(); } },
                 { "region", n => { Region = n.GetStringValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "system_channel_flags", n => { SystemChannelFlags = n.GetIntValue(); } },
@@ -142,7 +142,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("explicit_content_filter", ExplicitContentFilter);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>("preferred_locale", PreferredLocale);
+            writer.WriteStringValue("preferred_locale", PreferredLocale);
             writer.WriteStringValue("region", Region);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildTemplateRoleResponse>("roles", Roles);
             writer.WriteIntValue("system_channel_flags", SystemChannelFlags);

@@ -7,70 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartial"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestDataMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class UpdateMessageInteractionCallbackRequestData : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class UpdateMessageInteractionCallbackRequestData : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The allowed_mentions property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartial"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialAllowedMentions? AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartial? IncomingWebhookUpdateForInteractionCallbackRequestPartial { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialAllowedMentions AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartial IncomingWebhookUpdateForInteractionCallbackRequestPartial { get; set; }
 #endif
-        /// <summary>The attachments property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestDataMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>? Attachments { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestDataMember1? UpdateMessageInteractionCallbackRequestDataMember1 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest> Attachments { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestDataMember1 UpdateMessageInteractionCallbackRequestDataMember1 { get; set; }
 #endif
-        /// <summary>The components property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialComponentsItem>? Components { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialComponentsItem> Components { get; set; }
-#endif
-        /// <summary>The content property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Content { get; set; }
-#nullable restore
-#else
-        public string Content { get; set; }
-#endif
-        /// <summary>The embeds property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>? Embeds { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed> Embeds { get; set; }
-#endif
-        /// <summary>The flags property</summary>
-        public int? Flags { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestData"/> and sets the default values.
-        /// </summary>
-        public UpdateMessageInteractionCallbackRequestData()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -79,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestData();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestData();
+            if("IncomingWebhookUpdateForInteractionCallbackRequestPartial".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IncomingWebhookUpdateForInteractionCallbackRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartial();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,16 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(IncomingWebhookUpdateForInteractionCallbackRequestPartial != null)
             {
-                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialAllowedMentions>(global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialAllowedMentions.CreateFromDiscriminatorValue); } },
-                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialComponentsItem>(global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialComponentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "content", n => { Content = n.GetStringValue(); } },
-                { "embeds", n => { Embeds = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbed.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "flags", n => { Flags = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return IncomingWebhookUpdateForInteractionCallbackRequestPartial.GetFieldDeserializers();
+            }
+            else if(UpdateMessageInteractionCallbackRequestDataMember1 != null)
+            {
+                return UpdateMessageInteractionCallbackRequestDataMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -105,14 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialAllowedMentions>("allowed_mentions", AllowedMentions);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>("attachments", Attachments);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialComponentsItem>("components", Components);
-            writer.WriteStringValue("content", Content);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>("embeds", Embeds);
-            writer.WriteIntValue("flags", Flags);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(IncomingWebhookUpdateForInteractionCallbackRequestPartial != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartial>(null, IncomingWebhookUpdateForInteractionCallbackRequestPartial);
+            }
+            else if(UpdateMessageInteractionCallbackRequestDataMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestDataMember1>(null, UpdateMessageInteractionCallbackRequestDataMember1);
+            }
         }
     }
 }

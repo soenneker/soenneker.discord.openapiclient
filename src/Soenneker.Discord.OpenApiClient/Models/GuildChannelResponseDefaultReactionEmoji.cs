@@ -7,44 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmojiMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GuildChannelResponseDefaultReactionEmoji : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GuildChannelResponseDefaultReactionEmoji : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The emoji_id property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmojiId { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse? DefaultReactionEmojiResponse { get; set; }
 #nullable restore
 #else
-        public string EmojiId { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse DefaultReactionEmojiResponse { get; set; }
 #endif
-        /// <summary>The emoji_name property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmojiMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmojiName { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmojiMember1? GuildChannelResponseDefaultReactionEmojiMember1 { get; set; }
 #nullable restore
 #else
-        public string EmojiName { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmojiMember1 GuildChannelResponseDefaultReactionEmojiMember1 { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji"/> and sets the default values.
-        /// </summary>
-        public GuildChannelResponseDefaultReactionEmoji()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -53,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji();
+            if("DefaultReactionEmojiResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DefaultReactionEmojiResponse = new global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,12 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(DefaultReactionEmojiResponse != null)
             {
-                { "emoji_id", n => { EmojiId = n.GetStringValue(); } },
-                { "emoji_name", n => { EmojiName = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return DefaultReactionEmojiResponse.GetFieldDeserializers();
+            }
+            else if(GuildChannelResponseDefaultReactionEmojiMember1 != null)
+            {
+                return GuildChannelResponseDefaultReactionEmojiMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -75,10 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("emoji_id", EmojiId);
-            writer.WriteStringValue("emoji_name", EmojiName);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(DefaultReactionEmojiResponse != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse>(null, DefaultReactionEmojiResponse);
+            }
+            else if(GuildChannelResponseDefaultReactionEmojiMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmojiMember1>(null, GuildChannelResponseDefaultReactionEmojiMember1);
+            }
         }
     }
 }

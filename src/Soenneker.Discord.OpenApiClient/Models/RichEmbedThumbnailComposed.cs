@@ -7,60 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposedMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class RichEmbedThumbnailComposed : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class RichEmbedThumbnailComposed : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The description property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail? RichEmbedThumbnail { get; set; }
 #nullable restore
 #else
-        public string Description { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail RichEmbedThumbnail { get; set; }
 #endif
-        /// <summary>The height property</summary>
-        public int? Height { get; set; }
-        /// <summary>The is_animated property</summary>
-        public bool? IsAnimated { get; set; }
-        /// <summary>The placeholder property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposedMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Placeholder { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposedMember1? RichEmbedThumbnailComposedMember1 { get; set; }
 #nullable restore
 #else
-        public string Placeholder { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposedMember1 RichEmbedThumbnailComposedMember1 { get; set; }
 #endif
-        /// <summary>The placeholder_version property</summary>
-        public int? PlaceholderVersion { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>The url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Url { get; set; }
-#nullable restore
-#else
-        public string Url { get; set; }
-#endif
-        /// <summary>The width property</summary>
-        public int? Width { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed"/> and sets the default values.
-        /// </summary>
-        public RichEmbedThumbnailComposed()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -69,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed();
+            if("RichEmbedThumbnail".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichEmbedThumbnail = new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,17 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(RichEmbedThumbnail != null)
             {
-                { "description", n => { Description = n.GetStringValue(); } },
-                { "height", n => { Height = n.GetIntValue(); } },
-                { "is_animated", n => { IsAnimated = n.GetBoolValue(); } },
-                { "placeholder", n => { Placeholder = n.GetStringValue(); } },
-                { "placeholder_version", n => { PlaceholderVersion = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-                { "url", n => { Url = n.GetStringValue(); } },
-                { "width", n => { Width = n.GetIntValue(); } },
-            };
+                return RichEmbedThumbnail.GetFieldDeserializers();
+            }
+            else if(RichEmbedThumbnailComposedMember1 != null)
+            {
+                return RichEmbedThumbnailComposedMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -96,15 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("description", Description);
-            writer.WriteIntValue("height", Height);
-            writer.WriteBoolValue("is_animated", IsAnimated);
-            writer.WriteStringValue("placeholder", Placeholder);
-            writer.WriteIntValue("placeholder_version", PlaceholderVersion);
-            writer.WriteStringValue("type", Type);
-            writer.WriteStringValue("url", Url);
-            writer.WriteIntValue("width", Width);
-            writer.WriteAdditionalData(AdditionalData);
+            if(RichEmbedThumbnail != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail>(null, RichEmbedThumbnail);
+            }
+            else if(RichEmbedThumbnailComposedMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposedMember1>(null, RichEmbedThumbnailComposedMember1);
+            }
         }
     }
 }

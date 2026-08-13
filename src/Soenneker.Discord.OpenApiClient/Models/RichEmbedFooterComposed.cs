@@ -7,44 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposedMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class RichEmbedFooterComposed : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class RichEmbedFooterComposed : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The icon_url property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IconUrl { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter? RichEmbedFooter { get; set; }
 #nullable restore
 #else
-        public string IconUrl { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter RichEmbedFooter { get; set; }
 #endif
-        /// <summary>The text property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposedMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Text { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposedMember1? RichEmbedFooterComposedMember1 { get; set; }
 #nullable restore
 #else
-        public string Text { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposedMember1 RichEmbedFooterComposedMember1 { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed"/> and sets the default values.
-        /// </summary>
-        public RichEmbedFooterComposed()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -53,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed();
+            if("RichEmbedFooter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichEmbedFooter = new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,12 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(RichEmbedFooter != null)
             {
-                { "icon_url", n => { IconUrl = n.GetStringValue(); } },
-                { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return RichEmbedFooter.GetFieldDeserializers();
+            }
+            else if(RichEmbedFooterComposedMember1 != null)
+            {
+                return RichEmbedFooterComposedMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -75,10 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("icon_url", IconUrl);
-            writer.WriteStringValue("text", Text);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(RichEmbedFooter != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter>(null, RichEmbedFooter);
+            }
+            else if(RichEmbedFooterComposedMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposedMember1>(null, RichEmbedFooterComposedMember1);
+            }
         }
     }
 }

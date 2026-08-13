@@ -7,48 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientThemeMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class BaseCreateMessageCreateRequestSharedClientTheme : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class BaseCreateMessageCreateRequestSharedClientTheme : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The base_mix property</summary>
-        public int? BaseMix { get; set; }
-        /// <summary>The base_theme property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientThemeMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequestBaseTheme? BaseTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientThemeMember1? BaseCreateMessageCreateRequestSharedClientThemeMember1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequestBaseTheme BaseTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientThemeMember1 BaseCreateMessageCreateRequestSharedClientThemeMember1 { get; set; }
 #endif
-        /// <summary>The colors property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Colors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest? CustomClientThemeShareRequest { get; set; }
 #nullable restore
 #else
-        public List<string> Colors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest CustomClientThemeShareRequest { get; set; }
 #endif
-        /// <summary>The gradient_angle property</summary>
-        public int? GradientAngle { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme"/> and sets the default values.
-        /// </summary>
-        public BaseCreateMessageCreateRequestSharedClientTheme()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -57,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme();
+            if("CustomClientThemeShareRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.CustomClientThemeShareRequest = new global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,14 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(BaseCreateMessageCreateRequestSharedClientThemeMember1 != null)
             {
-                { "base_mix", n => { BaseMix = n.GetIntValue(); } },
-                { "base_theme", n => { BaseTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequestBaseTheme>(global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequestBaseTheme.CreateFromDiscriminatorValue); } },
-                { "colors", n => { Colors = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "gradient_angle", n => { GradientAngle = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return BaseCreateMessageCreateRequestSharedClientThemeMember1.GetFieldDeserializers();
+            }
+            else if(CustomClientThemeShareRequest != null)
+            {
+                return CustomClientThemeShareRequest.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -81,12 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("base_mix", BaseMix);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequestBaseTheme>("base_theme", BaseTheme);
-            writer.WriteCollectionOfPrimitiveValues<string>("colors", Colors);
-            writer.WriteIntValue("gradient_angle", GradientAngle);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(BaseCreateMessageCreateRequestSharedClientThemeMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientThemeMember1>(null, BaseCreateMessageCreateRequestSharedClientThemeMember1);
+            }
+            else if(CustomClientThemeShareRequest != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest>(null, CustomClientThemeShareRequest);
+            }
         }
     }
 }

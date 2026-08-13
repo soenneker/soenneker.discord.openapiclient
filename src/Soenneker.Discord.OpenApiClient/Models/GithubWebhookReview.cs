@@ -7,60 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GithubReview"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReviewMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GithubWebhookReview : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GithubWebhookReview : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The body property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GithubReview"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Body { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubReview? GithubReview { get; set; }
 #nullable restore
 #else
-        public string Body { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubReview GithubReview { get; set; }
 #endif
-        /// <summary>The html_url property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReviewMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlUrl { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReviewMember1? GithubWebhookReviewMember1 { get; set; }
 #nullable restore
 #else
-        public string HtmlUrl { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReviewMember1 GithubWebhookReviewMember1 { get; set; }
 #endif
-        /// <summary>The state property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? State { get; set; }
-#nullable restore
-#else
-        public string State { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>The user property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubUser? User { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubUser User { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview"/> and sets the default values.
-        /// </summary>
-        public GithubWebhookReview()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -69,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview();
+            if("GithubReview".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GithubReview = new global::Soenneker.Discord.OpenApiClient.Models.GithubReview();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,14 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(GithubReview != null)
             {
-                { "body", n => { Body = n.GetStringValue(); } },
-                { "html_url", n => { HtmlUrl = n.GetStringValue(); } },
-                { "state", n => { State = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>(global::Soenneker.Discord.OpenApiClient.Models.GithubUser.CreateFromDiscriminatorValue); } },
-            };
+                return GithubReview.GetFieldDeserializers();
+            }
+            else if(GithubWebhookReviewMember1 != null)
+            {
+                return GithubWebhookReviewMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -93,12 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("body", Body);
-            writer.WriteStringValue("html_url", HtmlUrl);
-            writer.WriteStringValue("state", State);
-            writer.WriteStringValue("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>("user", User);
-            writer.WriteAdditionalData(AdditionalData);
+            if(GithubReview != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubReview>(null, GithubReview);
+            }
+            else if(GithubWebhookReviewMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReviewMember1>(null, GithubWebhookReviewMember1);
+            }
         }
     }
 }

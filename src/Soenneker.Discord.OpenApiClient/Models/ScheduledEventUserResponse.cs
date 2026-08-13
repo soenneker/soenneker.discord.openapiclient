@@ -30,7 +30,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string GuildScheduledEventId { get; set; }
 #endif
-        /// <summary>The member property</summary>
+        /// <summary>Guild member object for the RSVP user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse? Member { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse Member { get; set; }
 #endif
-        /// <summary>The response property</summary>
+        /// <summary>User&apos;s RSVP status for the event</summary>
         public int? Response { get; set; }
-        /// <summary>The user property</summary>
+        /// <summary>User object for the RSVP user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? User { get; set; }

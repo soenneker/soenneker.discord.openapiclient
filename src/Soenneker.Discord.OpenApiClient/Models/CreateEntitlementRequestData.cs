@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string OwnerId { get; set; }
 #endif
-        /// <summary>The owner_type property</summary>
+        /// <summary>1 for a guild subscription, 2 for a user subscription</summary>
         public int? OwnerType { get; set; }
         /// <summary>The sku_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -41,10 +41,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The external_auth_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType? ExternalAuthType { get; set; }
+        public string? ExternalAuthType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType ExternalAuthType { get; set; }
+        public string ExternalAuthType { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PartnerSdkTokenRequest"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "external_auth_token", n => { ExternalAuthToken = n.GetStringValue(); } },
-                { "external_auth_type", n => { ExternalAuthType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType.CreateFromDiscriminatorValue); } },
+                { "external_auth_type", n => { ExternalAuthType = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("client_id", ClientId);
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteStringValue("external_auth_token", ExternalAuthToken);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType>("external_auth_type", ExternalAuthType);
+            writer.WriteStringValue("external_auth_type", ExternalAuthType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

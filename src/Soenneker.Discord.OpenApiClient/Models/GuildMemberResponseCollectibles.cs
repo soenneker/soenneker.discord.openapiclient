@@ -8,36 +8,27 @@ using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
     /// <summary>
-    /// data for the member&apos;s collectibles
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectiblesMember1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GuildMemberResponseCollectibles : IAdditionalDataHolder, IParsable
+    public partial class GuildMemberResponseCollectibles : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Object mapping of nameplate data</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectiblesMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate? Nameplate { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectiblesMember1? GuildMemberResponseCollectiblesMember1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate Nameplate { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectiblesMember1 GuildMemberResponseCollectiblesMember1 { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? UserCollectiblesResponse { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse UserCollectiblesResponse { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectibles"/> and sets the default values.
-        /// </summary>
-        public GuildMemberResponseCollectibles()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -46,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectibles CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectibles();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectibles();
+            if("UserCollectiblesResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.UserCollectiblesResponse = new global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -54,11 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(GuildMemberResponseCollectiblesMember1 != null)
             {
-                { "nameplate", n => { Nameplate = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate>(global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return GuildMemberResponseCollectiblesMember1.GetFieldDeserializers();
+            }
+            else if(UserCollectiblesResponse != null)
+            {
+                return UserCollectiblesResponse.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -67,9 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate>("nameplate", Nameplate);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(GuildMemberResponseCollectiblesMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponseCollectiblesMember1>(null, GuildMemberResponseCollectiblesMember1);
+            }
+            else if(UserCollectiblesResponse != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>(null, UserCollectiblesResponse);
+            }
         }
     }
 }

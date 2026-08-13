@@ -72,7 +72,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string GuildId { get; set; }
 #endif
-        /// <summary>The handler property</summary>
+        /// <summary>Determines whether the interaction is handled by the app&apos;s interactions handler or by Discord</summary>
         public int? Handler { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

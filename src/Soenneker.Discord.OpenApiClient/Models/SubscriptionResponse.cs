@@ -60,7 +60,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public List<string> SkuIds { get; set; }
 #endif
-        /// <summary>The status property</summary>
+        /// <summary>Current status of the subscription</summary>
         public int? Status { get; set; }
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

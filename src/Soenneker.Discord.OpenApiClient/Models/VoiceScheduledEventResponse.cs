@@ -22,7 +22,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string ChannelId { get; set; }
 #endif
-        /// <summary>The creator property</summary>
+        /// <summary>User that created the scheduled event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? Creator { get; set; }
@@ -104,7 +104,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The privacy_level property</summary>
+        /// <summary>Privacy level of the scheduled event</summary>
         public int? PrivacyLevel { get; set; }
         /// <summary>Recurrence rule for the scheduled event, or null if not recurring</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,7 +118,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public DateTimeOffset? ScheduledEndTime { get; set; }
         /// <summary>When the scheduled event will start</summary>
         public DateTimeOffset? ScheduledStartTime { get; set; }
-        /// <summary>The status property</summary>
+        /// <summary>Status of the scheduled event</summary>
         public int? Status { get; set; }
         /// <summary>Number of users subscribed to the scheduled event</summary>
         public int? UserCount { get; set; }

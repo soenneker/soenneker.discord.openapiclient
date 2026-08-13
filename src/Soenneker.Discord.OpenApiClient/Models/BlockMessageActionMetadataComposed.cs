@@ -7,36 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadata"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposedMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class BlockMessageActionMetadataComposed : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class BlockMessageActionMetadataComposed : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The custom_message property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadata"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomMessage { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadata? BlockMessageActionMetadata { get; set; }
 #nullable restore
 #else
-        public string CustomMessage { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadata BlockMessageActionMetadata { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposedMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposedMember1? BlockMessageActionMetadataComposedMember1 { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposedMember1 BlockMessageActionMetadataComposedMember1 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposed"/> and sets the default values.
-        /// </summary>
-        public BlockMessageActionMetadataComposed()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -45,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposed();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposed();
+            if("BlockMessageActionMetadata".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.BlockMessageActionMetadata = new global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadata();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,11 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(BlockMessageActionMetadata != null)
             {
-                { "custom_message", n => { CustomMessage = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return BlockMessageActionMetadata.GetFieldDeserializers();
+            }
+            else if(BlockMessageActionMetadataComposedMember1 != null)
+            {
+                return BlockMessageActionMetadataComposedMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -66,9 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("custom_message", CustomMessage);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(BlockMessageActionMetadata != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadata>(null, BlockMessageActionMetadata);
+            }
+            else if(BlockMessageActionMetadataComposedMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposedMember1>(null, BlockMessageActionMetadataComposedMember1);
+            }
         }
     }
 }

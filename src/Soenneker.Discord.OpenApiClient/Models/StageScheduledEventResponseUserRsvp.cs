@@ -7,70 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvpMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class StageScheduledEventResponseUserRsvp : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class StageScheduledEventResponseUserRsvp : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>ID of the scheduled event exception</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GuildScheduledEventExceptionId { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse? ScheduledEventUserResponse { get; set; }
 #nullable restore
 #else
-        public string GuildScheduledEventExceptionId { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse ScheduledEventUserResponse { get; set; }
 #endif
-        /// <summary>The guild_scheduled_event_id property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvpMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GuildScheduledEventId { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvpMember1? StageScheduledEventResponseUserRsvpMember1 { get; set; }
 #nullable restore
 #else
-        public string GuildScheduledEventId { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvpMember1 StageScheduledEventResponseUserRsvpMember1 { get; set; }
 #endif
-        /// <summary>The member property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse? Member { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse Member { get; set; }
-#endif
-        /// <summary>The response property</summary>
-        public int? Response { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>The user property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? User { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse User { get; set; }
-#endif
-        /// <summary>The user_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UserId { get; set; }
-#nullable restore
-#else
-        public string UserId { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvp"/> and sets the default values.
-        /// </summary>
-        public StageScheduledEventResponseUserRsvp()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -79,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvp CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvp();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvp();
+            if("ScheduledEventUserResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.ScheduledEventUserResponse = new global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,16 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(ScheduledEventUserResponse != null)
             {
-                { "guild_scheduled_event_exception_id", n => { GuildScheduledEventExceptionId = n.GetStringValue(); } },
-                { "guild_scheduled_event_id", n => { GuildScheduledEventId = n.GetStringValue(); } },
-                { "member", n => { Member = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse.CreateFromDiscriminatorValue); } },
-                { "response", n => { Response = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
-                { "user_id", n => { UserId = n.GetStringValue(); } },
-            };
+                return ScheduledEventUserResponse.GetFieldDeserializers();
+            }
+            else if(StageScheduledEventResponseUserRsvpMember1 != null)
+            {
+                return StageScheduledEventResponseUserRsvpMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -105,14 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("guild_scheduled_event_exception_id", GuildScheduledEventExceptionId);
-            writer.WriteStringValue("guild_scheduled_event_id", GuildScheduledEventId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse>("member", Member);
-            writer.WriteIntValue("response", Response);
-            writer.WriteStringValue("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
-            writer.WriteStringValue("user_id", UserId);
-            writer.WriteAdditionalData(AdditionalData);
+            if(ScheduledEventUserResponse != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse>(null, ScheduledEventUserResponse);
+            }
+            else if(StageScheduledEventResponseUserRsvpMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseUserRsvpMember1>(null, StageScheduledEventResponseUserRsvpMember1);
+            }
         }
     }
 }

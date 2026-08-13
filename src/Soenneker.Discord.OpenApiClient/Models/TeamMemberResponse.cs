@@ -27,10 +27,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The role property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.TeamMemberRoles? Role { get; set; }
+        public string? Role { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.TeamMemberRoles Role { get; set; }
+        public string Role { get; set; }
 #endif
         /// <summary>The team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "membership_state", n => { MembershipState = n.GetIntValue(); } },
                 { "permissions", n => { Permissions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "role", n => { Role = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamMemberRoles>(global::Soenneker.Discord.OpenApiClient.Models.TeamMemberRoles.CreateFromDiscriminatorValue); } },
+                { "role", n => { Role = n.GetStringValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
             };
@@ -89,7 +89,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("membership_state", MembershipState);
             writer.WriteCollectionOfPrimitiveValues<string>("permissions", Permissions);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamMemberRoles>("role", Role);
+            writer.WriteStringValue("role", Role);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
             writer.WriteAdditionalData(AdditionalData);

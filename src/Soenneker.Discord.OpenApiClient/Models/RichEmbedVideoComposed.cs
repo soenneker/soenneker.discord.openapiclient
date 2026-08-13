@@ -7,60 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposedMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class RichEmbedVideoComposed : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class RichEmbedVideoComposed : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The description property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo? RichEmbedVideo { get; set; }
 #nullable restore
 #else
-        public string Description { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo RichEmbedVideo { get; set; }
 #endif
-        /// <summary>The height property</summary>
-        public int? Height { get; set; }
-        /// <summary>The is_animated property</summary>
-        public bool? IsAnimated { get; set; }
-        /// <summary>The placeholder property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposedMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Placeholder { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposedMember1? RichEmbedVideoComposedMember1 { get; set; }
 #nullable restore
 #else
-        public string Placeholder { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposedMember1 RichEmbedVideoComposedMember1 { get; set; }
 #endif
-        /// <summary>The placeholder_version property</summary>
-        public int? PlaceholderVersion { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>The url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Url { get; set; }
-#nullable restore
-#else
-        public string Url { get; set; }
-#endif
-        /// <summary>The width property</summary>
-        public int? Width { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed"/> and sets the default values.
-        /// </summary>
-        public RichEmbedVideoComposed()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -69,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed();
+            if("RichEmbedVideo".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichEmbedVideo = new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,17 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(RichEmbedVideo != null)
             {
-                { "description", n => { Description = n.GetStringValue(); } },
-                { "height", n => { Height = n.GetIntValue(); } },
-                { "is_animated", n => { IsAnimated = n.GetBoolValue(); } },
-                { "placeholder", n => { Placeholder = n.GetStringValue(); } },
-                { "placeholder_version", n => { PlaceholderVersion = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-                { "url", n => { Url = n.GetStringValue(); } },
-                { "width", n => { Width = n.GetIntValue(); } },
-            };
+                return RichEmbedVideo.GetFieldDeserializers();
+            }
+            else if(RichEmbedVideoComposedMember1 != null)
+            {
+                return RichEmbedVideoComposedMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -96,15 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("description", Description);
-            writer.WriteIntValue("height", Height);
-            writer.WriteBoolValue("is_animated", IsAnimated);
-            writer.WriteStringValue("placeholder", Placeholder);
-            writer.WriteIntValue("placeholder_version", PlaceholderVersion);
-            writer.WriteStringValue("type", Type);
-            writer.WriteStringValue("url", Url);
-            writer.WriteIntValue("width", Width);
-            writer.WriteAdditionalData(AdditionalData);
+            if(RichEmbedVideo != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo>(null, RichEmbedVideo);
+            }
+            else if(RichEmbedVideoComposedMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposedMember1>(null, RichEmbedVideoComposedMember1);
+            }
         }
     }
 }

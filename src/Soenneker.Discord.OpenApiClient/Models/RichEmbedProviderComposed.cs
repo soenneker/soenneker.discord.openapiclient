@@ -7,44 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposedMember1"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class RichEmbedProviderComposed : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class RichEmbedProviderComposed : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider? RichEmbedProvider { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider RichEmbedProvider { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposedMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposedMember1? RichEmbedProviderComposedMember1 { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposedMember1 RichEmbedProviderComposedMember1 { get; set; }
 #endif
-        /// <summary>The url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Url { get; set; }
-#nullable restore
-#else
-        public string Url { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed"/> and sets the default values.
-        /// </summary>
-        public RichEmbedProviderComposed()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -53,7 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed();
+            if("RichEmbedProvider".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichEmbedProvider = new global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,12 +51,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(RichEmbedProvider != null)
             {
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-                { "url", n => { Url = n.GetStringValue(); } },
-            };
+                return RichEmbedProvider.GetFieldDeserializers();
+            }
+            else if(RichEmbedProviderComposedMember1 != null)
+            {
+                return RichEmbedProviderComposedMember1.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -75,10 +68,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("type", Type);
-            writer.WriteStringValue("url", Url);
-            writer.WriteAdditionalData(AdditionalData);
+            if(RichEmbedProvider != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider>(null, RichEmbedProvider);
+            }
+            else if(RichEmbedProviderComposedMember1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposedMember1>(null, RichEmbedProviderComposedMember1);
+            }
         }
     }
 }

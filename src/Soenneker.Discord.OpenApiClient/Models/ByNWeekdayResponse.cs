@@ -14,7 +14,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The day property</summary>
+        /// <summary>The day within the week to reoccur on</summary>
         public int? Day { get; set; }
         /// <summary>The week to reoccur on (1-5, where 5 represents the last week)</summary>
         public int? N { get; set; }

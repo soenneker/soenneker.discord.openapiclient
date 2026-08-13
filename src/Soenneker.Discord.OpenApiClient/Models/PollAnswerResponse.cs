@@ -16,7 +16,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the answer</summary>
         public int? AnswerId { get; set; }
-        /// <summary>The poll_media property</summary>
+        /// <summary>The data of the answer</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse? PollMedia { get; set; }

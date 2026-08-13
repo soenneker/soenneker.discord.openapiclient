@@ -28,7 +28,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #endif
         /// <summary>The processed_users property</summary>
         public long? ProcessedUsers { get; set; }
-        /// <summary>The status property</summary>
+        /// <summary>The status of the job processing the target users.</summary>
         public int? Status { get; set; }
         /// <summary>The total_users property</summary>
         public long? TotalUsers { get; set; }
