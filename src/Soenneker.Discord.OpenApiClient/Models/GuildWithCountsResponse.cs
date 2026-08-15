@@ -145,10 +145,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The preferred_locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreferredLocale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum? PreferredLocale { get; set; }
 #nullable restore
 #else
-        public string PreferredLocale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum PreferredLocale { get; set; }
 #endif
         /// <summary>The premium_progress_bar_enabled property</summary>
         public bool? PremiumProgressBarEnabled { get; set; }
@@ -294,7 +294,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "nsfw", n => { Nsfw = n.GetBoolValue(); } },
                 { "nsfw_level", n => { NsfwLevel = n.GetIntValue(); } },
                 { "owner_id", n => { OwnerId = n.GetStringValue(); } },
-                { "preferred_locale", n => { PreferredLocale = n.GetStringValue(); } },
+                { "preferred_locale", n => { PreferredLocale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>(global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum.CreateFromDiscriminatorValue); } },
                 { "premium_progress_bar_enabled", n => { PremiumProgressBarEnabled = n.GetBoolValue(); } },
                 { "premium_progress_bar_enabled_user_updated_at", n => { PremiumProgressBarEnabledUserUpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "premium_subscription_count", n => { PremiumSubscriptionCount = n.GetIntValue(); } },
@@ -346,7 +346,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("nsfw", Nsfw);
             writer.WriteIntValue("nsfw_level", NsfwLevel);
             writer.WriteStringValue("owner_id", OwnerId);
-            writer.WriteStringValue("preferred_locale", PreferredLocale);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>("preferred_locale", PreferredLocale);
             writer.WriteBoolValue("premium_progress_bar_enabled", PremiumProgressBarEnabled);
             writer.WriteDateTimeOffsetValue("premium_progress_bar_enabled_user_updated_at", PremiumProgressBarEnabledUserUpdatedAt);
             writer.WriteIntValue("premium_subscription_count", PremiumSubscriptionCount);

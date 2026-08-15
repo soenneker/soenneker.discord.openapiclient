@@ -39,7 +39,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string MessageId { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceTypeOneOf1? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceResponse"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "message_id", n => { MessageId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceTypeOneOf1>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("message_id", MessageId);
-            writer.WriteIntValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceTypeOneOf1>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

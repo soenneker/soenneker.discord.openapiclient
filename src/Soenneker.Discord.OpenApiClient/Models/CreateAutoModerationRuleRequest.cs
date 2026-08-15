@@ -61,7 +61,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRuleRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.CreateAutoModerationRuleRequest();
             if("DefaultKeywordListUpsertRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {

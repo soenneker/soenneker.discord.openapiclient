@@ -105,7 +105,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>Privacy level of the scheduled event</summary>
-        public int? PrivacyLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1? PrivacyLevel { get; set; }
         /// <summary>Recurrence rule for the scheduled event, or null if not recurring</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -167,7 +167,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "privacy_level", n => { PrivacyLevel = n.GetIntValue(); } },
+                { "privacy_level", n => { PrivacyLevel = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1>(); } },
                 { "recurrence_rule", n => { RecurrenceRule = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule>(global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule.CreateFromDiscriminatorValue); } },
                 { "scheduled_end_time", n => { ScheduledEndTime = n.GetDateTimeOffsetValue(); } },
                 { "scheduled_start_time", n => { ScheduledStartTime = n.GetDateTimeOffsetValue(); } },
@@ -195,7 +195,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("image", Image);
             writer.WriteStringValue("name", Name);
-            writer.WriteIntValue("privacy_level", PrivacyLevel);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1>("privacy_level", PrivacyLevel);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventResponseRecurrenceRule>("recurrence_rule", RecurrenceRule);
             writer.WriteDateTimeOffsetValue("scheduled_end_time", ScheduledEndTime);
             writer.WriteDateTimeOffsetValue("scheduled_start_time", ScheduledStartTime);

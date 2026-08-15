@@ -53,7 +53,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem();
             if("MultipleChoiceFormFieldResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {

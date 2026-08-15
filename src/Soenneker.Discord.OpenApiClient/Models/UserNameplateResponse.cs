@@ -33,10 +33,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Background color of the nameplate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Palette { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.NameplatePalette? Palette { get; set; }
 #nullable restore
 #else
-        public string Palette { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.NameplatePalette Palette { get; set; }
 #endif
         /// <summary>ID of the nameplate SKU</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +73,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "asset", n => { Asset = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "palette", n => { Palette = n.GetStringValue(); } },
+                { "palette", n => { Palette = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePalette>(global::Soenneker.Discord.OpenApiClient.Models.NameplatePalette.CreateFromDiscriminatorValue); } },
                 { "sku_id", n => { SkuId = n.GetStringValue(); } },
             };
         }
@@ -86,7 +86,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("asset", Asset);
             writer.WriteStringValue("label", Label);
-            writer.WriteStringValue("palette", Palette);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePalette>("palette", Palette);
             writer.WriteStringValue("sku_id", SkuId);
             writer.WriteAdditionalData(AdditionalData);
         }

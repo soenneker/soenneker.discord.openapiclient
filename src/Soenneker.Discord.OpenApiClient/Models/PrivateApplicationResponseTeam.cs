@@ -37,7 +37,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam();
             if("TeamResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {

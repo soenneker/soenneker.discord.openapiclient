@@ -22,14 +22,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public List<global::Soenneker.Discord.OpenApiClient.Models.Error> Errors { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorDetails"/> and sets the default values.
         /// </summary>
@@ -56,7 +48,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "_errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.Error>(global::Soenneker.Discord.OpenApiClient.Models.Error.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,7 +58,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.Error>("_errors", Errors);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

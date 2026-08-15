@@ -23,7 +23,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public global::Soenneker.Discord.OpenApiClient.Models.GuildProductPurchaseResponse GuildProductPurchase { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PurchaseTypeOneOf1? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PurchaseNotificationResponse"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "guild_product_purchase", n => { GuildProductPurchase = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildProductPurchaseResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildProductPurchaseResponse.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.PurchaseTypeOneOf1>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildProductPurchaseResponse>("guild_product_purchase", GuildProductPurchase);
-            writer.WriteIntValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.PurchaseTypeOneOf1>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

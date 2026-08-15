@@ -27,7 +27,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The time when the poll ends</summary>
         public DateTimeOffset? Expiry { get; set; }
         /// <summary>The layout type of the poll</summary>
-        public int? LayoutType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypesOneOf1? LayoutType { get; set; }
         /// <summary>The question of the poll. Only `text` is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,7 +72,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "allow_multiselect", n => { AllowMultiselect = n.GetBoolValue(); } },
                 { "answers", n => { Answers = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerResponse>(global::Soenneker.Discord.OpenApiClient.Models.PollAnswerResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "expiry", n => { Expiry = n.GetDateTimeOffsetValue(); } },
-                { "layout_type", n => { LayoutType = n.GetIntValue(); } },
+                { "layout_type", n => { LayoutType = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypesOneOf1>(); } },
                 { "question", n => { Question = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse>(global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse.CreateFromDiscriminatorValue); } },
                 { "results", n => { Results = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollResultsResponse>(global::Soenneker.Discord.OpenApiClient.Models.PollResultsResponse.CreateFromDiscriminatorValue); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("allow_multiselect", AllowMultiselect);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerResponse>("answers", Answers);
             writer.WriteDateTimeOffsetValue("expiry", Expiry);
-            writer.WriteIntValue("layout_type", LayoutType);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypesOneOf1>("layout_type", LayoutType);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse>("question", Question);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollResultsResponse>("results", Results);
             writer.WriteAdditionalData(AdditionalData);

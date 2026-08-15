@@ -87,10 +87,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum? Locale { get; set; }
 #nullable restore
 #else
-        public string Locale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum Locale { get; set; }
 #endif
         /// <summary>The mfa_enabled property</summary>
         public bool? MfaEnabled { get; set; }
@@ -154,7 +154,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "flags", n => { Flags = n.GetLongValue(); } },
                 { "global_name", n => { GlobalName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetStringValue(); } },
+                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>(global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum.CreateFromDiscriminatorValue); } },
                 { "mfa_enabled", n => { MfaEnabled = n.GetBoolValue(); } },
                 { "premium_type", n => { PremiumType = n.GetIntValue(); } },
                 { "primary_guild", n => { PrimaryGuild = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponsePrimaryGuild>(global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponsePrimaryGuild.CreateFromDiscriminatorValue); } },
@@ -182,7 +182,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteLongValue("flags", Flags);
             writer.WriteStringValue("global_name", GlobalName);
             writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("locale", Locale);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>("locale", Locale);
             writer.WriteBoolValue("mfa_enabled", MfaEnabled);
             writer.WriteIntValue("premium_type", PremiumType);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponsePrimaryGuild>("primary_guild", PrimaryGuild);

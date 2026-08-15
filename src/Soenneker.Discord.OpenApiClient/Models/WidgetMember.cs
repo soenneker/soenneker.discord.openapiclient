@@ -49,13 +49,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The deaf property</summary>
         public bool? Deaf { get; set; }
         /// <summary>The discriminator property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Discriminator { get; set; }
-#nullable restore
-#else
-        public string Discriminator { get; set; }
-#endif
+        public global::Soenneker.Discord.OpenApiClient.Models.WidgetUserDiscriminatorOneOf1? Discriminator { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,7 +112,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "deaf", n => { Deaf = n.GetBoolValue(); } },
-                { "discriminator", n => { Discriminator = n.GetStringValue(); } },
+                { "discriminator", n => { Discriminator = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.WidgetUserDiscriminatorOneOf1>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "mute", n => { Mute = n.GetBoolValue(); } },
                 { "self_deaf", n => { SelfDeaf = n.GetBoolValue(); } },
@@ -140,7 +134,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("avatar_url", AvatarUrl);
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteBoolValue("deaf", Deaf);
-            writer.WriteStringValue("discriminator", Discriminator);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.WidgetUserDiscriminatorOneOf1>("discriminator", Discriminator);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("mute", Mute);
             writer.WriteBoolValue("self_deaf", SelfDeaf);

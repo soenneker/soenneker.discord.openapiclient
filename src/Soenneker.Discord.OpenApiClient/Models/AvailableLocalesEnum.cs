@@ -9,11 +9,79 @@ namespace Soenneker.Discord.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class AvailableLocalesEnum : IAdditionalDataHolder, IParsable
+    public partial class AvailableLocalesEnum : IAdditionalDataHolder, IComposedTypeWrapper, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf1"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf1? AvailableLocalesEnumOneOf1 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf10"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf10? AvailableLocalesEnumOneOf10 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf11"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf11? AvailableLocalesEnumOneOf11 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf12"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf12? AvailableLocalesEnumOneOf12 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf13"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf13? AvailableLocalesEnumOneOf13 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf14"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf14? AvailableLocalesEnumOneOf14 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf15"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf15? AvailableLocalesEnumOneOf15 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf16"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf16? AvailableLocalesEnumOneOf16 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf17"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf17? AvailableLocalesEnumOneOf17 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf18"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf18? AvailableLocalesEnumOneOf18 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf19"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf19? AvailableLocalesEnumOneOf19 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf2"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf2? AvailableLocalesEnumOneOf2 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf20"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf20? AvailableLocalesEnumOneOf20 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf21"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf21? AvailableLocalesEnumOneOf21 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf22"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf22? AvailableLocalesEnumOneOf22 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf23"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf23? AvailableLocalesEnumOneOf23 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf24"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf24? AvailableLocalesEnumOneOf24 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf25"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf25? AvailableLocalesEnumOneOf25 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf26"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf26? AvailableLocalesEnumOneOf26 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf27"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf27? AvailableLocalesEnumOneOf27 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf28"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf28? AvailableLocalesEnumOneOf28 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf29"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf29? AvailableLocalesEnumOneOf29 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf3"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf3? AvailableLocalesEnumOneOf3 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf30"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf30? AvailableLocalesEnumOneOf30 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf31"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf31? AvailableLocalesEnumOneOf31 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf32"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf32? AvailableLocalesEnumOneOf32 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf33"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf33? AvailableLocalesEnumOneOf33 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf34"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf34? AvailableLocalesEnumOneOf34 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf4"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf4? AvailableLocalesEnumOneOf4 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf5"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf5? AvailableLocalesEnumOneOf5 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf6"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf6? AvailableLocalesEnumOneOf6 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf7"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf7? AvailableLocalesEnumOneOf7 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf8"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf8? AvailableLocalesEnumOneOf8 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf9"/></summary>
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf9? AvailableLocalesEnumOneOf9 { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum"/> and sets the default values.
         /// </summary>
@@ -29,7 +97,145 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum();
+            if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf1>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf1 availableLocalesEnumOneOf1Value)
+            {
+                result.AvailableLocalesEnumOneOf1 = availableLocalesEnumOneOf1Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf10>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf10 availableLocalesEnumOneOf10Value)
+            {
+                result.AvailableLocalesEnumOneOf10 = availableLocalesEnumOneOf10Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf11>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf11 availableLocalesEnumOneOf11Value)
+            {
+                result.AvailableLocalesEnumOneOf11 = availableLocalesEnumOneOf11Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf12>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf12 availableLocalesEnumOneOf12Value)
+            {
+                result.AvailableLocalesEnumOneOf12 = availableLocalesEnumOneOf12Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf13>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf13 availableLocalesEnumOneOf13Value)
+            {
+                result.AvailableLocalesEnumOneOf13 = availableLocalesEnumOneOf13Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf14>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf14 availableLocalesEnumOneOf14Value)
+            {
+                result.AvailableLocalesEnumOneOf14 = availableLocalesEnumOneOf14Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf15>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf15 availableLocalesEnumOneOf15Value)
+            {
+                result.AvailableLocalesEnumOneOf15 = availableLocalesEnumOneOf15Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf16>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf16 availableLocalesEnumOneOf16Value)
+            {
+                result.AvailableLocalesEnumOneOf16 = availableLocalesEnumOneOf16Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf17>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf17 availableLocalesEnumOneOf17Value)
+            {
+                result.AvailableLocalesEnumOneOf17 = availableLocalesEnumOneOf17Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf18>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf18 availableLocalesEnumOneOf18Value)
+            {
+                result.AvailableLocalesEnumOneOf18 = availableLocalesEnumOneOf18Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf19>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf19 availableLocalesEnumOneOf19Value)
+            {
+                result.AvailableLocalesEnumOneOf19 = availableLocalesEnumOneOf19Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf2>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf2 availableLocalesEnumOneOf2Value)
+            {
+                result.AvailableLocalesEnumOneOf2 = availableLocalesEnumOneOf2Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf20>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf20 availableLocalesEnumOneOf20Value)
+            {
+                result.AvailableLocalesEnumOneOf20 = availableLocalesEnumOneOf20Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf21>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf21 availableLocalesEnumOneOf21Value)
+            {
+                result.AvailableLocalesEnumOneOf21 = availableLocalesEnumOneOf21Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf22>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf22 availableLocalesEnumOneOf22Value)
+            {
+                result.AvailableLocalesEnumOneOf22 = availableLocalesEnumOneOf22Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf23>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf23 availableLocalesEnumOneOf23Value)
+            {
+                result.AvailableLocalesEnumOneOf23 = availableLocalesEnumOneOf23Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf24>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf24 availableLocalesEnumOneOf24Value)
+            {
+                result.AvailableLocalesEnumOneOf24 = availableLocalesEnumOneOf24Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf25>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf25 availableLocalesEnumOneOf25Value)
+            {
+                result.AvailableLocalesEnumOneOf25 = availableLocalesEnumOneOf25Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf26>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf26 availableLocalesEnumOneOf26Value)
+            {
+                result.AvailableLocalesEnumOneOf26 = availableLocalesEnumOneOf26Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf27>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf27 availableLocalesEnumOneOf27Value)
+            {
+                result.AvailableLocalesEnumOneOf27 = availableLocalesEnumOneOf27Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf28>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf28 availableLocalesEnumOneOf28Value)
+            {
+                result.AvailableLocalesEnumOneOf28 = availableLocalesEnumOneOf28Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf29>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf29 availableLocalesEnumOneOf29Value)
+            {
+                result.AvailableLocalesEnumOneOf29 = availableLocalesEnumOneOf29Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf3>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf3 availableLocalesEnumOneOf3Value)
+            {
+                result.AvailableLocalesEnumOneOf3 = availableLocalesEnumOneOf3Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf30>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf30 availableLocalesEnumOneOf30Value)
+            {
+                result.AvailableLocalesEnumOneOf30 = availableLocalesEnumOneOf30Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf31>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf31 availableLocalesEnumOneOf31Value)
+            {
+                result.AvailableLocalesEnumOneOf31 = availableLocalesEnumOneOf31Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf32>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf32 availableLocalesEnumOneOf32Value)
+            {
+                result.AvailableLocalesEnumOneOf32 = availableLocalesEnumOneOf32Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf33>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf33 availableLocalesEnumOneOf33Value)
+            {
+                result.AvailableLocalesEnumOneOf33 = availableLocalesEnumOneOf33Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf34>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf34 availableLocalesEnumOneOf34Value)
+            {
+                result.AvailableLocalesEnumOneOf34 = availableLocalesEnumOneOf34Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf4>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf4 availableLocalesEnumOneOf4Value)
+            {
+                result.AvailableLocalesEnumOneOf4 = availableLocalesEnumOneOf4Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf5>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf5 availableLocalesEnumOneOf5Value)
+            {
+                result.AvailableLocalesEnumOneOf5 = availableLocalesEnumOneOf5Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf6>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf6 availableLocalesEnumOneOf6Value)
+            {
+                result.AvailableLocalesEnumOneOf6 = availableLocalesEnumOneOf6Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf7>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf7 availableLocalesEnumOneOf7Value)
+            {
+                result.AvailableLocalesEnumOneOf7 = availableLocalesEnumOneOf7Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf8>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf8 availableLocalesEnumOneOf8Value)
+            {
+                result.AvailableLocalesEnumOneOf8 = availableLocalesEnumOneOf8Value;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf9>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf9 availableLocalesEnumOneOf9Value)
+            {
+                result.AvailableLocalesEnumOneOf9 = availableLocalesEnumOneOf9Value;
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -37,9 +243,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
-            {
-            };
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -48,6 +252,142 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            if(AvailableLocalesEnumOneOf1 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf1>(null, AvailableLocalesEnumOneOf1);
+            }
+            else if(AvailableLocalesEnumOneOf10 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf10>(null, AvailableLocalesEnumOneOf10);
+            }
+            else if(AvailableLocalesEnumOneOf11 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf11>(null, AvailableLocalesEnumOneOf11);
+            }
+            else if(AvailableLocalesEnumOneOf12 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf12>(null, AvailableLocalesEnumOneOf12);
+            }
+            else if(AvailableLocalesEnumOneOf13 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf13>(null, AvailableLocalesEnumOneOf13);
+            }
+            else if(AvailableLocalesEnumOneOf14 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf14>(null, AvailableLocalesEnumOneOf14);
+            }
+            else if(AvailableLocalesEnumOneOf15 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf15>(null, AvailableLocalesEnumOneOf15);
+            }
+            else if(AvailableLocalesEnumOneOf16 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf16>(null, AvailableLocalesEnumOneOf16);
+            }
+            else if(AvailableLocalesEnumOneOf17 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf17>(null, AvailableLocalesEnumOneOf17);
+            }
+            else if(AvailableLocalesEnumOneOf18 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf18>(null, AvailableLocalesEnumOneOf18);
+            }
+            else if(AvailableLocalesEnumOneOf19 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf19>(null, AvailableLocalesEnumOneOf19);
+            }
+            else if(AvailableLocalesEnumOneOf2 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf2>(null, AvailableLocalesEnumOneOf2);
+            }
+            else if(AvailableLocalesEnumOneOf20 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf20>(null, AvailableLocalesEnumOneOf20);
+            }
+            else if(AvailableLocalesEnumOneOf21 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf21>(null, AvailableLocalesEnumOneOf21);
+            }
+            else if(AvailableLocalesEnumOneOf22 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf22>(null, AvailableLocalesEnumOneOf22);
+            }
+            else if(AvailableLocalesEnumOneOf23 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf23>(null, AvailableLocalesEnumOneOf23);
+            }
+            else if(AvailableLocalesEnumOneOf24 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf24>(null, AvailableLocalesEnumOneOf24);
+            }
+            else if(AvailableLocalesEnumOneOf25 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf25>(null, AvailableLocalesEnumOneOf25);
+            }
+            else if(AvailableLocalesEnumOneOf26 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf26>(null, AvailableLocalesEnumOneOf26);
+            }
+            else if(AvailableLocalesEnumOneOf27 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf27>(null, AvailableLocalesEnumOneOf27);
+            }
+            else if(AvailableLocalesEnumOneOf28 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf28>(null, AvailableLocalesEnumOneOf28);
+            }
+            else if(AvailableLocalesEnumOneOf29 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf29>(null, AvailableLocalesEnumOneOf29);
+            }
+            else if(AvailableLocalesEnumOneOf3 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf3>(null, AvailableLocalesEnumOneOf3);
+            }
+            else if(AvailableLocalesEnumOneOf30 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf30>(null, AvailableLocalesEnumOneOf30);
+            }
+            else if(AvailableLocalesEnumOneOf31 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf31>(null, AvailableLocalesEnumOneOf31);
+            }
+            else if(AvailableLocalesEnumOneOf32 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf32>(null, AvailableLocalesEnumOneOf32);
+            }
+            else if(AvailableLocalesEnumOneOf33 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf33>(null, AvailableLocalesEnumOneOf33);
+            }
+            else if(AvailableLocalesEnumOneOf34 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf34>(null, AvailableLocalesEnumOneOf34);
+            }
+            else if(AvailableLocalesEnumOneOf4 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf4>(null, AvailableLocalesEnumOneOf4);
+            }
+            else if(AvailableLocalesEnumOneOf5 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf5>(null, AvailableLocalesEnumOneOf5);
+            }
+            else if(AvailableLocalesEnumOneOf6 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf6>(null, AvailableLocalesEnumOneOf6);
+            }
+            else if(AvailableLocalesEnumOneOf7 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf7>(null, AvailableLocalesEnumOneOf7);
+            }
+            else if(AvailableLocalesEnumOneOf8 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf8>(null, AvailableLocalesEnumOneOf8);
+            }
+            else if(AvailableLocalesEnumOneOf9 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf9>(null, AvailableLocalesEnumOneOf9);
+            }
             writer.WriteAdditionalData(AdditionalData);
         }
     }
