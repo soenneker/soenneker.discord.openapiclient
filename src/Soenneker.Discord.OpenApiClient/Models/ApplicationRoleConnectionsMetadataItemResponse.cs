@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The description_localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizations? DescriptionLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizationsProperty? DescriptionLocalizations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizations DescriptionLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizationsProperty DescriptionLocalizations { get; set; }
 #endif
         /// <summary>The key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The name_localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseNameLocalizations? NameLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseNameLocalizationsProperty? NameLocalizations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseNameLocalizations NameLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseNameLocalizationsProperty NameLocalizations { get; set; }
 #endif
         /// <summary>The type property</summary>
         public int? Type { get; set; }
@@ -82,10 +82,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizations.CreateFromDiscriminatorValue); } },
+                { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizationsProperty.CreateFromDiscriminatorValue); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseNameLocalizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseNameLocalizations.CreateFromDiscriminatorValue); } },
+                { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseNameLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseNameLocalizationsProperty.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetIntValue(); } },
             };
         }
@@ -97,10 +97,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizations>("description_localizations", DescriptionLocalizations);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizationsProperty>("description_localizations", DescriptionLocalizations);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseNameLocalizations>("name_localizations", NameLocalizations);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationRoleConnectionsMetadataItemResponseNameLocalizationsProperty>("name_localizations", NameLocalizations);
             writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

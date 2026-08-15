@@ -11597,7 +11597,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandAttachmentOptionNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandAttachmentOptionNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -11605,7 +11605,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandAttachmentOptionDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandAttachmentOptionDescriptionLocalizationsProperty"
           },
           "required": {
             "type": [
@@ -11647,7 +11647,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandAttachmentOptionResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandAttachmentOptionResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -11656,7 +11656,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandAttachmentOptionResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandAttachmentOptionResponseDescriptionLocalizationsProperty"
           },
           "required": {
             "type": "boolean"
@@ -11705,7 +11705,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandBooleanOptionNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandBooleanOptionNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -11713,7 +11713,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandBooleanOptionDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandBooleanOptionDescriptionLocalizationsProperty"
           },
           "required": {
             "type": [
@@ -11742,7 +11742,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandBooleanOptionResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandBooleanOptionResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -11751,7 +11751,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandBooleanOptionResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandBooleanOptionResponseDescriptionLocalizationsProperty"
           },
           "required": {
             "type": "boolean"
@@ -11776,7 +11776,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandChannelOptionNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandChannelOptionNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -11784,7 +11784,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandChannelOptionDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandChannelOptionDescriptionLocalizationsProperty"
           },
           "required": {
             "type": [
@@ -11823,7 +11823,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandChannelOptionResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandChannelOptionResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -11832,7 +11832,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandChannelOptionResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandChannelOptionResponseDescriptionLocalizationsProperty"
           },
           "required": {
             "type": "boolean"
@@ -11858,7 +11858,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandCreateRequestNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandCreateRequestNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -11868,7 +11868,7 @@
             ]
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandCreateRequestDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandCreateRequestDescriptionLocalizationsProperty"
           },
           "options": {
             "maxItems": 25,
@@ -11960,7 +11960,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandIntegerOptionNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandIntegerOptionNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -11968,7 +11968,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandIntegerOptionDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandIntegerOptionDescriptionLocalizationsProperty"
           },
           "required": {
             "type": [
@@ -12031,7 +12031,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandIntegerOptionResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandIntegerOptionResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -12040,7 +12040,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandIntegerOptionResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandIntegerOptionResponseDescriptionLocalizationsProperty"
           },
           "required": {
             "type": "boolean"
@@ -12124,7 +12124,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandMentionableOptionNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandMentionableOptionNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -12132,7 +12132,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandMentionableOptionDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandMentionableOptionDescriptionLocalizationsProperty"
           },
           "required": {
             "type": [
@@ -12161,7 +12161,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandMentionableOptionResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandMentionableOptionResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -12170,7 +12170,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandMentionableOptionResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandMentionableOptionResponseDescriptionLocalizationsProperty"
           },
           "required": {
             "type": "boolean"
@@ -12195,7 +12195,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandNumberOptionNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandNumberOptionNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -12203,7 +12203,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandNumberOptionDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandNumberOptionDescriptionLocalizationsProperty"
           },
           "required": {
             "type": [
@@ -12262,7 +12262,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandNumberOptionResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandNumberOptionResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -12271,7 +12271,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandNumberOptionResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandNumberOptionResponseDescriptionLocalizationsProperty"
           },
           "required": {
             "type": "boolean"
@@ -12308,7 +12308,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandOptionIntegerChoiceNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandOptionIntegerChoiceNameLocalizationsProperty"
           },
           "value": {
             "maximum": 9007199254740991,
@@ -12332,7 +12332,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandOptionIntegerChoiceResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandOptionIntegerChoiceResponseNameLocalizationsProperty"
           },
           "value": {
             "maximum": 9007199254740991,
@@ -12355,7 +12355,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandOptionNumberChoiceNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandOptionNumberChoiceNameLocalizationsProperty"
           },
           "value": {
             "type": "number",
@@ -12377,7 +12377,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandOptionNumberChoiceResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandOptionNumberChoiceResponseNameLocalizationsProperty"
           },
           "value": {
             "type": "number",
@@ -12398,7 +12398,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandOptionStringChoiceNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandOptionStringChoiceNameLocalizationsProperty"
           },
           "value": {
             "maxLength": 6000,
@@ -12420,7 +12420,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandOptionStringChoiceResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandOptionStringChoiceResponseNameLocalizationsProperty"
           },
           "value": {
             "type": "string"
@@ -12508,7 +12508,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandPatchRequestPartialNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandPatchRequestPartialNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -12518,7 +12518,7 @@
             ]
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandPatchRequestPartialDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandPatchRequestPartialDescriptionLocalizationsProperty"
           },
           "options": {
             "maxItems": 25,
@@ -12659,7 +12659,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -12668,7 +12668,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandResponseDescriptionLocalizationsProperty"
           },
           "guild_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -12728,7 +12728,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandRoleOptionNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandRoleOptionNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -12736,7 +12736,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandRoleOptionDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandRoleOptionDescriptionLocalizationsProperty"
           },
           "required": {
             "type": [
@@ -12765,7 +12765,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandRoleOptionResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandRoleOptionResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -12774,7 +12774,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandRoleOptionResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandRoleOptionResponseDescriptionLocalizationsProperty"
           },
           "required": {
             "type": "boolean"
@@ -12799,7 +12799,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandStringOptionNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandStringOptionNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -12807,7 +12807,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandStringOptionDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandStringOptionDescriptionLocalizationsProperty"
           },
           "required": {
             "type": [
@@ -12868,7 +12868,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandStringOptionResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandStringOptionResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -12877,7 +12877,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandStringOptionResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandStringOptionResponseDescriptionLocalizationsProperty"
           },
           "required": {
             "type": "boolean"
@@ -12919,7 +12919,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandSubcommandGroupOptionNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandSubcommandGroupOptionNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -12927,7 +12927,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandSubcommandGroupOptionDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandSubcommandGroupOptionDescriptionLocalizationsProperty"
           },
           "required": {
             "type": [
@@ -12966,7 +12966,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandSubcommandGroupOptionResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandSubcommandGroupOptionResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -12975,7 +12975,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandSubcommandGroupOptionResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandSubcommandGroupOptionResponseDescriptionLocalizationsProperty"
           },
           "required": {
             "type": "boolean"
@@ -13006,7 +13006,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandSubcommandOptionNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandSubcommandOptionNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -13014,7 +13014,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandSubcommandOptionDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandSubcommandOptionDescriptionLocalizationsProperty"
           },
           "required": {
             "type": [
@@ -13053,7 +13053,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandSubcommandOptionResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandSubcommandOptionResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -13062,7 +13062,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandSubcommandOptionResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandSubcommandOptionResponseDescriptionLocalizationsProperty"
           },
           "required": {
             "type": "boolean"
@@ -13117,7 +13117,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandUpdateRequestNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandUpdateRequestNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -13127,7 +13127,7 @@
             ]
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandUpdateRequestDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandUpdateRequestDescriptionLocalizationsProperty"
           },
           "options": {
             "maxItems": 25,
@@ -13209,7 +13209,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandUserOptionNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandUserOptionNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 100,
@@ -13217,7 +13217,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandUserOptionDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandUserOptionDescriptionLocalizationsProperty"
           },
           "required": {
             "type": [
@@ -13246,7 +13246,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandUserOptionResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandUserOptionResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
@@ -13255,7 +13255,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationCommandUserOptionResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationCommandUserOptionResponseDescriptionLocalizationsProperty"
           },
           "required": {
             "type": "boolean"
@@ -13392,7 +13392,7 @@
             "format": "uri"
           },
           "integration_types_config": {
-            "$ref": "#/components/schemas/ApplicationFormPartialIntegrationTypesConfig"
+            "$ref": "#/components/schemas/ApplicationFormPartialIntegrationTypesConfigProperty"
           },
           "event_webhooks_status": {
             "$ref": "#/components/schemas/ApplicationFormPartialEventWebhooksStatus"
@@ -13729,7 +13729,7 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationRoleConnectionsMetadataItemRequestNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationRoleConnectionsMetadataItemRequestNameLocalizationsProperty"
           },
           "description": {
             "maxLength": 200,
@@ -13737,7 +13737,7 @@
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationRoleConnectionsMetadataItemRequestDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationRoleConnectionsMetadataItemRequestDescriptionLocalizationsProperty"
           }
         }
       },
@@ -13760,13 +13760,13 @@
             "type": "string"
           },
           "name_localizations": {
-            "$ref": "#/components/schemas/ApplicationRoleConnectionsMetadataItemResponseNameLocalizations"
+            "$ref": "#/components/schemas/ApplicationRoleConnectionsMetadataItemResponseNameLocalizationsProperty"
           },
           "description": {
             "type": "string"
           },
           "description_localizations": {
-            "$ref": "#/components/schemas/ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizationsProperty"
           }
         }
       },
@@ -15278,7 +15278,7 @@
             "format": "snowflake"
           },
           "metadata": {
-            "$ref": "#/components/schemas/BulkLobbyMemberRequestMetadata"
+            "$ref": "#/components/schemas/BulkLobbyMemberRequestMetadataProperty"
           },
           "flags": {
             "$ref": "#/components/schemas/BulkLobbyMemberRequestFlags"
@@ -16834,7 +16834,7 @@
             }
           },
           "nicks": {
-            "$ref": "#/components/schemas/CreatePrivateChannelRequestNicks"
+            "$ref": "#/components/schemas/CreatePrivateChannelRequestNicksProperty"
           }
         }
       },
@@ -23201,7 +23201,7 @@
             "format": "snowflake"
           },
           "metadata": {
-            "$ref": "#/components/schemas/LobbyMemberRequestMetadata"
+            "$ref": "#/components/schemas/LobbyMemberRequestMetadataProperty"
           },
           "flags": {
             "$ref": "#/components/schemas/LobbyMemberRequestFlags"
@@ -23230,7 +23230,7 @@
             "format": "snowflake"
           },
           "metadata": {
-            "$ref": "#/components/schemas/LobbyMemberResponseMetadata"
+            "$ref": "#/components/schemas/LobbyMemberResponseMetadataProperty"
           },
           "flags": {
             "type": "integer",
@@ -23318,7 +23318,7 @@
             "format": "snowflake"
           },
           "metadata": {
-            "$ref": "#/components/schemas/LobbyResponseMetadata"
+            "$ref": "#/components/schemas/LobbyResponseMetadataProperty"
           },
           "members": {
             "type": "array",
@@ -28042,16 +28042,16 @@
         "type": "object",
         "properties": {
           "users": {
-            "$ref": "#/components/schemas/ResolvedObjectsResponseUsers"
+            "$ref": "#/components/schemas/ResolvedObjectsResponseUsersProperty"
           },
           "members": {
-            "$ref": "#/components/schemas/ResolvedObjectsResponseMembers"
+            "$ref": "#/components/schemas/ResolvedObjectsResponseMembersProperty"
           },
           "channels": {
-            "$ref": "#/components/schemas/ResolvedObjectsResponseChannels"
+            "$ref": "#/components/schemas/ResolvedObjectsResponseChannelsProperty"
           },
           "roles": {
-            "$ref": "#/components/schemas/ResolvedObjectsResponseRoles"
+            "$ref": "#/components/schemas/ResolvedObjectsResponseRolesProperty"
           }
         }
       },
@@ -31477,7 +31477,7 @@
             ]
           },
           "metadata": {
-            "$ref": "#/components/schemas/UpdateApplicationUserRoleConnectionRequestMetadata"
+            "$ref": "#/components/schemas/UpdateApplicationUserRoleConnectionRequestMetadataProperty"
           }
         }
       },
@@ -42379,7 +42379,7 @@
             "type": "string"
           },
           "localizations": {
-            "$ref": "#/components/schemas/ApplicationFormPartialDescriptionLocalizations"
+            "$ref": "#/components/schemas/ApplicationFormPartialDescriptionLocalizationsProperty"
           }
         }
       },
@@ -44996,6 +44996,134 @@
           }
         ]
       },
+      "ApplicationCommandAttachmentOptionNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandAttachmentOptionDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandAttachmentOptionResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandAttachmentOptionResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandBooleanOptionNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandBooleanOptionDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandBooleanOptionResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandBooleanOptionResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandChannelOptionNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandChannelOptionDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandChannelOptionResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandChannelOptionResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandCreateRequestNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandCreateRequestDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandIntegerOptionNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandIntegerOptionDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandIntegerOptionResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandIntegerOptionResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
       "ApplicationCommandInteractionMetadataResponseAuthorizingIntegrationOwnersProperty": {
         "type": "object",
         "additionalProperties": {
@@ -45004,10 +45132,332 @@
           "format": "snowflake"
         }
       },
+      "ApplicationCommandMentionableOptionNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandMentionableOptionDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandMentionableOptionResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandMentionableOptionResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandNumberOptionNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandNumberOptionDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandNumberOptionResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandNumberOptionResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandOptionIntegerChoiceNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandOptionIntegerChoiceResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandOptionNumberChoiceNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandOptionNumberChoiceResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandOptionStringChoiceNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandOptionStringChoiceResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandPatchRequestPartialNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandPatchRequestPartialDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandRoleOptionNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandRoleOptionDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandRoleOptionResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandRoleOptionResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandStringOptionNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandStringOptionDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandStringOptionResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandStringOptionResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandSubcommandGroupOptionNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandSubcommandGroupOptionDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandSubcommandGroupOptionResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandSubcommandGroupOptionResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandSubcommandOptionNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandSubcommandOptionDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandSubcommandOptionResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandSubcommandOptionResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandUpdateRequestNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandUpdateRequestDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandUserOptionNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 32,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandUserOptionDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationCommandUserOptionResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationCommandUserOptionResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationFormPartialIntegrationTypesConfigProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ApplicationFormPartialIntegrationTypesConfigAdditionalProperties"
+        }
+      },
       "ApplicationResponseIntegrationTypesConfigProperty": {
         "type": "object",
         "additionalProperties": {
           "$ref": "#/components/schemas/ApplicationIntegrationTypeConfigurationResponse"
+        }
+      },
+      "ApplicationRoleConnectionsMetadataItemRequestNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "ApplicationRoleConnectionsMetadataItemRequestDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 200,
+          "minLength": 1,
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "ApplicationRoleConnectionsMetadataItemResponseNameLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ApplicationRoleConnectionsMetadataItemResponseDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
         }
       },
       "ApplicationUserRoleConnectionResponseMetadataProperty": {
@@ -45028,6 +45478,23 @@
       "AuditLogObjectChangeResponseOldValue": {
         "type": "object"
       },
+      "BulkLobbyMemberRequestMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 1024,
+          "type": "string"
+        }
+      },
+      "CreatePrivateChannelRequestNicksProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 152133,
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
       "GithubIssuePullRequest": {
         "type": "object"
       },
@@ -45037,6 +45504,19 @@
           "$ref": "#/components/schemas/ApplicationIntegrationTypeConfigurationResponse"
         }
       },
+      "LobbyMemberRequestMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 1024,
+          "type": "string"
+        }
+      },
+      "LobbyMemberResponseMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
       "LobbyMessageResponseMetadataProperty": {
         "type": "object",
         "additionalProperties": {
@@ -45044,6 +45524,12 @@
         }
       },
       "LobbyMessageResponseModerationMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "LobbyResponseMetadataProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
@@ -45077,6 +45563,30 @@
       "QuarantineUserActionResponseMetadata": {
         "type": "object"
       },
+      "ResolvedObjectsResponseUsersProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/UserResponse"
+        }
+      },
+      "ResolvedObjectsResponseMembersProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/BasicGuildMemberResponse"
+        }
+      },
+      "ResolvedObjectsResponseChannelsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ResolvedObjectsResponseChannelsAdditionalProperties"
+        }
+      },
+      "ResolvedObjectsResponseRolesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/GuildRoleResponse"
+        }
+      },
       "ScheduledEventUserCountResponseGuildScheduledEventExceptionCountsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -45084,6 +45594,21 @@
           "format": "int32"
         },
         "description": "Map of exception IDs to user counts for each exception"
+      },
+      "UpdateApplicationUserRoleConnectionRequestMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "ApplicationFormPartialDescriptionLocalizationsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 400,
+          "type": "string"
+        }
       },
       "BulkUpdateGuildChannelsRequestItem": {
         "type": "object",

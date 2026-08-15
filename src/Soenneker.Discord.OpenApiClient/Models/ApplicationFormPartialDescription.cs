@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizations? Localizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty? Localizations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizations Localizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty Localizations { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescription"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "default", n => { Default = n.GetStringValue(); } },
-                { "localizations", n => { Localizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizations.CreateFromDiscriminatorValue); } },
+                { "localizations", n => { Localizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("default", Default);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizations>("localizations", Localizations);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty>("localizations", Localizations);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

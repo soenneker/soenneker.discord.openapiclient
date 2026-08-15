@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The description_localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizations? DescriptionLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizationsProperty? DescriptionLocalizations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizations DescriptionLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizationsProperty DescriptionLocalizations { get; set; }
 #endif
         /// <summary>The description_localized property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The name_localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizations? NameLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizationsProperty? NameLocalizations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizations NameLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizationsProperty NameLocalizations { get; set; }
 #endif
         /// <summary>The name_localized property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,10 +100,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizations.CreateFromDiscriminatorValue); } },
+                { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizationsProperty.CreateFromDiscriminatorValue); } },
                 { "description_localized", n => { DescriptionLocalized = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizations.CreateFromDiscriminatorValue); } },
+                { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizationsProperty.CreateFromDiscriminatorValue); } },
                 { "name_localized", n => { NameLocalized = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseOptionsItem>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseOptionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
@@ -118,10 +118,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizations>("description_localizations", DescriptionLocalizations);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseDescriptionLocalizationsProperty>("description_localizations", DescriptionLocalizations);
             writer.WriteStringValue("description_localized", DescriptionLocalized);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizations>("name_localizations", NameLocalizations);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseNameLocalizationsProperty>("name_localizations", NameLocalizations);
             writer.WriteStringValue("name_localized", NameLocalized);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionResponseOptionsItem>("options", Options);
             writer.WriteBoolValue("required", Required);

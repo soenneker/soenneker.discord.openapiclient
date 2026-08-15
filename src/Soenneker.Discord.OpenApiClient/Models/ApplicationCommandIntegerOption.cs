@@ -35,10 +35,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The description_localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionDescriptionLocalizations? DescriptionLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionDescriptionLocalizationsProperty? DescriptionLocalizations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionDescriptionLocalizations DescriptionLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionDescriptionLocalizationsProperty DescriptionLocalizations { get; set; }
 #endif
         /// <summary>The max_value property</summary>
         public long? MaxValue { get; set; }
@@ -55,10 +55,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The name_localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionNameLocalizations? NameLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionNameLocalizationsProperty? NameLocalizations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionNameLocalizations NameLocalizations { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionNameLocalizationsProperty NameLocalizations { get; set; }
 #endif
         /// <summary>The required property</summary>
         public bool? Required { get; set; }
@@ -92,11 +92,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "autocomplete", n => { Autocomplete = n.GetBoolValue(); } },
                 { "choices", n => { Choices = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionDescriptionLocalizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionDescriptionLocalizations.CreateFromDiscriminatorValue); } },
+                { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionDescriptionLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionDescriptionLocalizationsProperty.CreateFromDiscriminatorValue); } },
                 { "max_value", n => { MaxValue = n.GetLongValue(); } },
                 { "min_value", n => { MinValue = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionNameLocalizations>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionNameLocalizations.CreateFromDiscriminatorValue); } },
+                { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionNameLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionNameLocalizationsProperty.CreateFromDiscriminatorValue); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetIntValue(); } },
             };
@@ -111,11 +111,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("autocomplete", Autocomplete);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice>("choices", Choices);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionDescriptionLocalizations>("description_localizations", DescriptionLocalizations);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionDescriptionLocalizationsProperty>("description_localizations", DescriptionLocalizations);
             writer.WriteLongValue("max_value", MaxValue);
             writer.WriteLongValue("min_value", MinValue);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionNameLocalizations>("name_localizations", NameLocalizations);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOptionNameLocalizationsProperty>("name_localizations", NameLocalizations);
             writer.WriteBoolValue("required", Required);
             writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

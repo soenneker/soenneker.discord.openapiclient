@@ -35,10 +35,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadata? Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadata Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponse"/> and sets the default values.
@@ -68,7 +68,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "additional_name", n => { AdditionalName = n.GetStringValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadata>(global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadataProperty>(global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadataProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("additional_name", AdditionalName);
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberResponseMetadataProperty>("metadata", Metadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
