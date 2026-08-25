@@ -6920,8 +6920,7 @@
             "name": "after",
             "in": "query",
             "schema": {
-              "minimum": 0,
-              "type": "integer"
+              "type": "string"
             }
           }
         ],

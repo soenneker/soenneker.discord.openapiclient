@@ -111,8 +111,15 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Members
         public partial class MembersRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("after")]
-            public int? After { get; set; }
+            public string? After { get; set; }
+#nullable restore
+#else
+            [QueryParameter("after")]
+            public string After { get; set; }
+#endif
             [QueryParameter("limit")]
             public int? Limit { get; set; }
         }

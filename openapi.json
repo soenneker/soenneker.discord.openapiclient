@@ -7460,8 +7460,7 @@
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "integer",
-              "minimum": 0
+              "$ref": "#/components/schemas/SnowflakeType"
             }
           }
         ],
