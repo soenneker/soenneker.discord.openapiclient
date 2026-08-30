@@ -1077,7 +1077,6 @@
             "name": "sku_ids",
             "in": "query",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string"
@@ -4801,7 +4800,6 @@
             "name": "tag",
             "in": "query",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string"
@@ -8085,7 +8083,6 @@
             "name": "include_roles",
             "in": "query",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string"
@@ -13785,7 +13782,6 @@
             "name": "sku_ids",
             "in": "query",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string"
@@ -43717,14 +43713,9 @@
         "format": "int32"
       },
       "MlSpamUpsertRequestTriggerMetadata": {
-        "type": "object",
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "type": "object"
-          }
+        "type": [
+          "null",
+          "object"
         ]
       },
       "MlSpamUpsertRequestPartialActionsItem": {
@@ -43756,14 +43747,9 @@
         "format": "int32"
       },
       "MlSpamUpsertRequestPartialTriggerMetadata": {
-        "type": "object",
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "type": "object"
-          }
+        "type": [
+          "null",
+          "object"
         ]
       },
       "MediaGalleryComponentForMessageRequestType": {
@@ -45346,14 +45332,9 @@
         "format": "int32"
       },
       "QuarantineUserActionMetadataComposed": {
-        "type": "object",
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "type": "object"
-          }
+        "type": [
+          "null",
+          "object"
         ]
       },
       "QuarantineUserActionResponseType": {
@@ -46970,14 +46951,9 @@
         "description": "Recurrence rule for the scheduled event"
       },
       "StageScheduledEventCreateRequestEntityMetadata": {
-        "type": "object",
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "type": "object"
-          }
+        "type": [
+          "null",
+          "object"
         ]
       },
       "StageScheduledEventPatchRequestPartialStatus": {
@@ -47122,14 +47098,9 @@
         "description": "Recurrence rule for the scheduled event"
       },
       "StageScheduledEventPatchRequestPartialEntityMetadata": {
-        "type": "object",
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "type": "object"
-          }
+        "type": [
+          "null",
+          "object"
         ]
       },
       "StageScheduledEventResponseEntityType": {
@@ -47283,14 +47254,9 @@
         }
       },
       "StageScheduledEventResponseEntityMetadata": {
-        "type": "object",
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "type": "object"
-          }
+        "type": [
+          "null",
+          "object"
         ]
       },
       "StandardStickerResponseType": {
@@ -48115,14 +48081,9 @@
         "description": "Recurrence rule for the scheduled event"
       },
       "VoiceScheduledEventCreateRequestEntityMetadata": {
-        "type": "object",
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "type": "object"
-          }
+        "type": [
+          "null",
+          "object"
         ]
       },
       "VoiceScheduledEventPatchRequestPartialStatus": {
@@ -48267,14 +48228,9 @@
         "description": "Recurrence rule for the scheduled event"
       },
       "VoiceScheduledEventPatchRequestPartialEntityMetadata": {
-        "type": "object",
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "type": "object"
-          }
+        "type": [
+          "null",
+          "object"
         ]
       },
       "VoiceScheduledEventResponseEntityType": {
@@ -48428,14 +48384,9 @@
         }
       },
       "VoiceScheduledEventResponseEntityMetadata": {
-        "type": "object",
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "type": "object"
-          }
+        "type": [
+          "null",
+          "object"
         ]
       },
       "ErrorResponseAllOf2": {
