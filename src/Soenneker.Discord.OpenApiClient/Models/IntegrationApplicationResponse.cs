@@ -38,6 +38,16 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>The flags property</summary>
+        public int? Flags { get; set; }
+        /// <summary>The flags_new property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FlagsNew { get; set; }
+#nullable restore
+#else
+        public string FlagsNew { get; set; }
+#endif
         /// <summary>The icon property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -106,6 +116,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "bot", n => { Bot = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
                 { "cover_image", n => { CoverImage = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
+                { "flags", n => { Flags = n.GetIntValue(); } },
+                { "flags_new", n => { FlagsNew = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -123,6 +135,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("bot", Bot);
             writer.WriteStringValue("cover_image", CoverImage);
             writer.WriteStringValue("description", Description);
+            writer.WriteIntValue("flags", Flags);
+            writer.WriteStringValue("flags_new", FlagsNew);
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);

@@ -17843,9 +17843,9 @@
           "icon",
           "description",
           "type",
-          "verify_key",
           "flags",
-          "flags_new"
+          "flags_new",
+          "verify_key"
         ],
         "type": "object",
         "properties": {
@@ -17876,6 +17876,13 @@
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
             "format": "snowflake"
+          },
+          "flags": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "flags_new": {
+            "type": "string"
           },
           "bot": {
             "$ref": "#/components/schemas/UserResponse"
@@ -17919,13 +17926,6 @@
             "$ref": "#/components/schemas/ApplicationResponseIntegrationTypesConfigProperty"
           },
           "verify_key": {
-            "type": "string"
-          },
-          "flags": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "flags_new": {
             "type": "string"
           },
           "max_participants": {
@@ -18713,7 +18713,9 @@
           "name",
           "icon",
           "description",
-          "type"
+          "type",
+          "flags",
+          "flags_new"
         ],
         "type": "object",
         "properties": {
@@ -18744,6 +18746,13 @@
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
             "format": "snowflake"
+          },
+          "flags": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "flags_new": {
+            "type": "string"
           },
           "bot": {
             "$ref": "#/components/schemas/UserResponse"
@@ -25718,7 +25727,9 @@
           "name",
           "icon",
           "description",
-          "type"
+          "type",
+          "flags",
+          "flags_new"
         ],
         "type": "object",
         "properties": {
@@ -25749,6 +25760,13 @@
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
             "format": "snowflake"
+          },
+          "flags": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "flags_new": {
+            "type": "string"
           },
           "bot": {
             "$ref": "#/components/schemas/UserResponse"
@@ -25987,9 +26005,9 @@
           "icon",
           "description",
           "type",
-          "verify_key",
           "flags",
-          "flags_new"
+          "flags_new",
+          "verify_key"
         ],
         "type": "object",
         "properties": {
@@ -26020,6 +26038,13 @@
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
             "format": "snowflake"
+          },
+          "flags": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "flags_new": {
+            "type": "string"
           },
           "bot": {
             "$ref": "#/components/schemas/UserResponse"
@@ -26063,13 +26088,6 @@
             "$ref": "#/components/schemas/InviteApplicationResponseIntegrationTypesConfigProperty"
           },
           "verify_key": {
-            "type": "string"
-          },
-          "flags": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "flags_new": {
             "type": "string"
           },
           "max_participants": {
@@ -30153,9 +30171,9 @@
           "icon",
           "description",
           "type",
-          "verify_key",
           "flags",
           "flags_new",
+          "verify_key",
           "redirect_uris",
           "interactions_endpoint_url",
           "role_connections_verification_url",
@@ -30196,6 +30214,13 @@
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
             "format": "snowflake"
+          },
+          "flags": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "flags_new": {
+            "type": "string"
           },
           "bot": {
             "$ref": "#/components/schemas/UserResponse"
@@ -30239,13 +30264,6 @@
             "$ref": "#/components/schemas/PrivateApplicationResponseIntegrationTypesConfigProperty"
           },
           "verify_key": {
-            "type": "string"
-          },
-          "flags": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "flags_new": {
             "type": "string"
           },
           "max_participants": {
