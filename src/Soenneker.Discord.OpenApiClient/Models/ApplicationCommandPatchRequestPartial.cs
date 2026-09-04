@@ -45,10 +45,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Determines whether the interaction is handled by the app&apos;s interactions handler or by Discord</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialHandler? Handler { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler? Handler { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialHandler Handler { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler Handler { get; set; }
 #endif
         /// <summary>The integration_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,7 +112,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialDescriptionLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialDescriptionLocalizationsProperty.CreateFromDiscriminatorValue); } },
                 { "dm_permission", n => { DmPermission = n.GetBoolValue(); } },
-                { "handler", n => { Handler = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialHandler>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialHandler.CreateFromDiscriminatorValue); } },
+                { "handler", n => { Handler = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler.CreateFromDiscriminatorValue); } },
                 { "integration_types", n => { IntegrationTypes = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialNameLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialNameLocalizationsProperty.CreateFromDiscriminatorValue); } },
@@ -131,7 +131,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialDescriptionLocalizationsProperty>("description_localizations", DescriptionLocalizations);
             writer.WriteBoolValue("dm_permission", DmPermission);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialHandler>("handler", Handler);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler>("handler", Handler);
             writer.WriteCollectionOfPrimitiveValues<int?>("integration_types", IntegrationTypes);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialNameLocalizationsProperty>("name_localizations", NameLocalizations);

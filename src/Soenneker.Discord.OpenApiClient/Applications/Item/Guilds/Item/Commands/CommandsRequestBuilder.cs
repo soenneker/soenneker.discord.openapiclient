@@ -192,8 +192,10 @@ namespace Soenneker.Discord.OpenApiClient.Applications.Item.Guilds.Item.Commands
         public partial class CommandsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("with_localizations")]
             public bool? WithLocalizations { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

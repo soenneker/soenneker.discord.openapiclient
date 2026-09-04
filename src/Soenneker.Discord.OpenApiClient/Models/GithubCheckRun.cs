@@ -57,10 +57,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The output property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutputComposed? Output { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutput? Output { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutputComposed Output { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutput Output { get; set; }
 #endif
         /// <summary>The pull_requests property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "details_url", n => { DetailsUrl = n.GetStringValue(); } },
                 { "html_url", n => { HtmlUrl = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "output", n => { Output = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutputComposed>(global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutputComposed.CreateFromDiscriminatorValue); } },
+                { "output", n => { Output = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutput>(global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutput.CreateFromDiscriminatorValue); } },
                 { "pull_requests", n => { PullRequests = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckPullRequest>(global::Soenneker.Discord.OpenApiClient.Models.GithubCheckPullRequest.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -116,7 +116,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("details_url", DetailsUrl);
             writer.WriteStringValue("html_url", HtmlUrl);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutputComposed>("output", Output);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRunOutput>("output", Output);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckPullRequest>("pull_requests", PullRequests);
             writer.WriteAdditionalData(AdditionalData);
         }

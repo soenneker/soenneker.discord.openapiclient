@@ -98,10 +98,14 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Messages.Pins
         public partial class PinsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("before")]
             public DateTimeOffset? Before { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

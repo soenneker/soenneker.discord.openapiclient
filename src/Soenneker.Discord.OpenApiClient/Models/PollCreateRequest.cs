@@ -29,10 +29,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The layout type of the poll. Defaults to... DEFAULT!</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType? LayoutType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes? LayoutType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType LayoutType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes LayoutType { get; set; }
 #endif
         /// <summary>The question of the poll. Only `text` is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,7 +70,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "allow_multiselect", n => { AllowMultiselect = n.GetBoolValue(); } },
                 { "answers", n => { Answers = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
-                { "layout_type", n => { LayoutType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType>(global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType.CreateFromDiscriminatorValue); } },
+                { "layout_type", n => { LayoutType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes>(global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes.CreateFromDiscriminatorValue); } },
                 { "question", n => { Question = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMedia>(global::Soenneker.Discord.OpenApiClient.Models.PollMedia.CreateFromDiscriminatorValue); } },
             };
         }
@@ -84,7 +84,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("allow_multiselect", AllowMultiselect);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>("answers", Answers);
             writer.WriteIntValue("duration", Duration);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequestLayoutType>("layout_type", LayoutType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes>("layout_type", LayoutType);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMedia>("question", Question);
             writer.WriteAdditionalData(AdditionalData);
         }

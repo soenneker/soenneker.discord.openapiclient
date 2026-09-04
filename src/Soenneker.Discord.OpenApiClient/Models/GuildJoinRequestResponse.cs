@@ -15,20 +15,20 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The actioned_by_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser? ActionedByUser { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? ActionedByUser { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser ActionedByUser { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse ActionedByUser { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The application_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseApplicationStatus? ApplicationStatus { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus? ApplicationStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseApplicationStatus ApplicationStatus { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus ApplicationStatus { get; set; }
 #endif
         /// <summary>The created_at property</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -69,10 +69,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseUser? User { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseUser User { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse User { get; set; }
 #endif
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,15 +107,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actioned_by_user", n => { ActionedByUser = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser>(global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser.CreateFromDiscriminatorValue); } },
-                { "application_status", n => { ApplicationStatus = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseApplicationStatus>(global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseApplicationStatus.CreateFromDiscriminatorValue); } },
+                { "actioned_by_user", n => { ActionedByUser = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
+                { "application_status", n => { ApplicationStatus = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus>(global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "form_responses", n => { FormResponses = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem>(global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "rejection_reason", n => { RejectionReason = n.GetStringValue(); } },
                 { "reviewed_at", n => { ReviewedAt = n.GetDateTimeOffsetValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseUser>(global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseUser.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -126,15 +126,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser>("actioned_by_user", ActionedByUser);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseApplicationStatus>("application_status", ApplicationStatus);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("actioned_by_user", ActionedByUser);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus>("application_status", ApplicationStatus);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem>("form_responses", FormResponses);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("rejection_reason", RejectionReason);
             writer.WriteDateTimeOffsetValue("reviewed_at", ReviewedAt);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseUser>("user", User);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -33,10 +33,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The fulfillment_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponseFulfillmentStatus? FulfillmentStatus { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.EntitlementTenantFulfillmentStatusResponse? FulfillmentStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponseFulfillmentStatus FulfillmentStatus { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.EntitlementTenantFulfillmentStatusResponse FulfillmentStatus { get; set; }
 #endif
         /// <summary>The gifter_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -120,7 +120,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "ends_at", n => { EndsAt = n.GetDateTimeOffsetValue(); } },
                 { "fulfilled_at", n => { FulfilledAt = n.GetDateTimeOffsetValue(); } },
-                { "fulfillment_status", n => { FulfillmentStatus = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponseFulfillmentStatus>(global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponseFulfillmentStatus.CreateFromDiscriminatorValue); } },
+                { "fulfillment_status", n => { FulfillmentStatus = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntitlementTenantFulfillmentStatusResponse>(global::Soenneker.Discord.OpenApiClient.Models.EntitlementTenantFulfillmentStatusResponse.CreateFromDiscriminatorValue); } },
                 { "gifter_user_id", n => { GifterUserId = n.GetStringValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -143,7 +143,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteDateTimeOffsetValue("ends_at", EndsAt);
             writer.WriteDateTimeOffsetValue("fulfilled_at", FulfilledAt);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntitlementResponseFulfillmentStatus>("fulfillment_status", FulfillmentStatus);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntitlementTenantFulfillmentStatusResponse>("fulfillment_status", FulfillmentStatus);
             writer.WriteStringValue("gifter_user_id", GifterUserId);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("id", Id);

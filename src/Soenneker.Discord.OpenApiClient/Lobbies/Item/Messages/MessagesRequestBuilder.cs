@@ -142,8 +142,10 @@ namespace Soenneker.Discord.OpenApiClient.Lobbies.Item.Messages
         public partial class MessagesRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

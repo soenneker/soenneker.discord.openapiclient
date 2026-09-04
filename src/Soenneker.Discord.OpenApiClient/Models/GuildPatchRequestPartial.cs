@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The afk_timeout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialAfkTimeout? AfkTimeout { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts? AfkTimeout { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialAfkTimeout AfkTimeout { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts AfkTimeout { get; set; }
 #endif
         /// <summary>The banner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The default_message_notifications property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialDefaultMessageNotifications? DefaultMessageNotifications { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings? DefaultMessageNotifications { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialDefaultMessageNotifications DefaultMessageNotifications { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings DefaultMessageNotifications { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,10 +65,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The explicit_content_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialExplicitContentFilter? ExplicitContentFilter { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes? ExplicitContentFilter { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialExplicitContentFilter ExplicitContentFilter { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes ExplicitContentFilter { get; set; }
 #endif
         /// <summary>The features property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,10 +105,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The preferred_locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialPreferredLocale? PreferredLocale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum? PreferredLocale { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialPreferredLocale PreferredLocale { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum PreferredLocale { get; set; }
 #endif
         /// <summary>The premium_progress_bar_enabled property</summary>
         public bool? PremiumProgressBarEnabled { get; set; }
@@ -165,10 +165,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The verification_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialVerificationLevel? VerificationLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels? VerificationLevel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialVerificationLevel VerificationLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels VerificationLevel { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartial"/> and sets the default values.
@@ -196,17 +196,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "afk_channel_id", n => { AfkChannelId = n.GetStringValue(); } },
-                { "afk_timeout", n => { AfkTimeout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialAfkTimeout>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialAfkTimeout.CreateFromDiscriminatorValue); } },
+                { "afk_timeout", n => { AfkTimeout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts>(global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts.CreateFromDiscriminatorValue); } },
                 { "banner", n => { Banner = n.GetStringValue(); } },
-                { "default_message_notifications", n => { DefaultMessageNotifications = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialDefaultMessageNotifications>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialDefaultMessageNotifications.CreateFromDiscriminatorValue); } },
+                { "default_message_notifications", n => { DefaultMessageNotifications = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings>(global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discovery_splash", n => { DiscoverySplash = n.GetStringValue(); } },
-                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialExplicitContentFilter>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialExplicitContentFilter.CreateFromDiscriminatorValue); } },
+                { "explicit_content_filter", n => { ExplicitContentFilter = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes>(global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes.CreateFromDiscriminatorValue); } },
                 { "features", n => { Features = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "home_header", n => { HomeHeader = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "preferred_locale", n => { PreferredLocale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialPreferredLocale>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialPreferredLocale.CreateFromDiscriminatorValue); } },
+                { "preferred_locale", n => { PreferredLocale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>(global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum.CreateFromDiscriminatorValue); } },
                 { "premium_progress_bar_enabled", n => { PremiumProgressBarEnabled = n.GetBoolValue(); } },
                 { "public_updates_channel_id", n => { PublicUpdatesChannelId = n.GetStringValue(); } },
                 { "region", n => { Region = n.GetStringValue(); } },
@@ -215,7 +215,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "splash", n => { Splash = n.GetStringValue(); } },
                 { "system_channel_flags", n => { SystemChannelFlags = n.GetIntValue(); } },
                 { "system_channel_id", n => { SystemChannelId = n.GetStringValue(); } },
-                { "verification_level", n => { VerificationLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialVerificationLevel>(global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialVerificationLevel.CreateFromDiscriminatorValue); } },
+                { "verification_level", n => { VerificationLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels>(global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -226,17 +226,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("afk_channel_id", AfkChannelId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialAfkTimeout>("afk_timeout", AfkTimeout);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AfkTimeouts>("afk_timeout", AfkTimeout);
             writer.WriteStringValue("banner", Banner);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialDefaultMessageNotifications>("default_message_notifications", DefaultMessageNotifications);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNotificationSettings>("default_message_notifications", DefaultMessageNotifications);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("discovery_splash", DiscoverySplash);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialExplicitContentFilter>("explicit_content_filter", ExplicitContentFilter);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildExplicitContentFilterTypes>("explicit_content_filter", ExplicitContentFilter);
             writer.WriteCollectionOfPrimitiveValues<string>("features", Features);
             writer.WriteStringValue("home_header", HomeHeader);
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialPreferredLocale>("preferred_locale", PreferredLocale);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>("preferred_locale", PreferredLocale);
             writer.WriteBoolValue("premium_progress_bar_enabled", PremiumProgressBarEnabled);
             writer.WriteStringValue("public_updates_channel_id", PublicUpdatesChannelId);
             writer.WriteStringValue("region", Region);
@@ -245,7 +245,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("splash", Splash);
             writer.WriteIntValue("system_channel_flags", SystemChannelFlags);
             writer.WriteStringValue("system_channel_id", SystemChannelId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildPatchRequestPartialVerificationLevel>("verification_level", VerificationLevel);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VerificationLevels>("verification_level", VerificationLevel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

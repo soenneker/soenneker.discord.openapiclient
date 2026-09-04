@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError? Error { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse? Error { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError Error { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse Error { get; set; }
 #endif
         /// <summary>The uses property</summary>
         public int? Uses { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError>(global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError.CreateFromDiscriminatorValue); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse>(global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse.CreateFromDiscriminatorValue); } },
                 { "uses", n => { Uses = n.GetIntValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError>("error", Error);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse>("error", Error);
             writer.WriteIntValue("uses", Uses);
             writer.WriteAdditionalData(AdditionalData);
         }

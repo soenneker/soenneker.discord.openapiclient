@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposed? Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposed Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadata Metadata { get; set; }
 #endif
         /// <summary>The type property</summary>
         public int? Type { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposed>(global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposed.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadata>(global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadata.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetIntValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadataComposed>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BlockMessageActionMetadata>("metadata", Metadata);
             writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

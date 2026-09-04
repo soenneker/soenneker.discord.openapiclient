@@ -27,10 +27,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The auto_archive_duration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartialAutoArchiveDuration? AutoArchiveDuration { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration? AutoArchiveDuration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartialAutoArchiveDuration AutoArchiveDuration { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration AutoArchiveDuration { get; set; }
 #endif
         /// <summary>The bitrate property</summary>
         public int? Bitrate { get; set; }
@@ -63,10 +63,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The video_quality_mode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartialVideoQualityMode? VideoQualityMode { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes? VideoQualityMode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartialVideoQualityMode VideoQualityMode { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes VideoQualityMode { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartial"/> and sets the default values.
@@ -95,7 +95,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "applied_tags", n => { AppliedTags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartialAutoArchiveDuration>(global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartialAutoArchiveDuration.CreateFromDiscriminatorValue); } },
+                { "auto_archive_duration", n => { AutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration>(global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration.CreateFromDiscriminatorValue); } },
                 { "bitrate", n => { Bitrate = n.GetIntValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "invitable", n => { Invitable = n.GetBoolValue(); } },
@@ -104,7 +104,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "rate_limit_per_user", n => { RateLimitPerUser = n.GetIntValue(); } },
                 { "rtc_region", n => { RtcRegion = n.GetStringValue(); } },
                 { "user_limit", n => { UserLimit = n.GetIntValue(); } },
-                { "video_quality_mode", n => { VideoQualityMode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartialVideoQualityMode>(global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartialVideoQualityMode.CreateFromDiscriminatorValue); } },
+                { "video_quality_mode", n => { VideoQualityMode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>(global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -116,7 +116,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("applied_tags", AppliedTags);
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartialAutoArchiveDuration>("auto_archive_duration", AutoArchiveDuration);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration>("auto_archive_duration", AutoArchiveDuration);
             writer.WriteIntValue("bitrate", Bitrate);
             writer.WriteIntValue("flags", Flags);
             writer.WriteBoolValue("invitable", Invitable);
@@ -125,7 +125,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);
             writer.WriteStringValue("rtc_region", RtcRegion);
             writer.WriteIntValue("user_limit", UserLimit);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartialVideoQualityMode>("video_quality_mode", VideoQualityMode);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>("video_quality_mode", VideoQualityMode);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

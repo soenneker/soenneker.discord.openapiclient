@@ -25,10 +25,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The format_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponseFormatType? FormatType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes? FormatType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponseFormatType FormatType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes FormatType { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -92,7 +92,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "format_type", n => { FormatType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponseFormatType>(global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponseFormatType.CreateFromDiscriminatorValue); } },
+                { "format_type", n => { FormatType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes>(global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "pack_id", n => { PackId = n.GetStringValue(); } },
@@ -109,7 +109,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StandardStickerResponseFormatType>("format_type", FormatType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StickerFormatTypes>("format_type", FormatType);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("pack_id", PackId);

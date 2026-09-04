@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The allowed_mentions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions? AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? AllowedMentions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest AllowedMentions { get; set; }
 #endif
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,18 +59,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The poll property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll? Poll { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest? Poll { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll Poll { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest Poll { get; set; }
 #endif
         /// <summary>The shared_client_theme property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme? SharedClientTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest? SharedClientTheme { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme SharedClientTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest SharedClientTheme { get; set; }
 #endif
         /// <summary>The sticker_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,14 +105,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions.CreateFromDiscriminatorValue); } },
+                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest.CreateFromDiscriminatorValue); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "embeds", n => { Embeds = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbed.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
-                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll.CreateFromDiscriminatorValue); } },
-                { "shared_client_theme", n => { SharedClientTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme.CreateFromDiscriminatorValue); } },
+                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.CreateFromDiscriminatorValue); } },
+                { "shared_client_theme", n => { SharedClientTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest>(global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest.CreateFromDiscriminatorValue); } },
                 { "sticker_ids", n => { StickerIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -123,14 +123,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions>("allowed_mentions", AllowedMentions);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>("allowed_mentions", AllowedMentions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>("attachments", Attachments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem>("components", Components);
             writer.WriteStringValue("content", Content);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>("embeds", Embeds);
             writer.WriteIntValue("flags", Flags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll>("poll", Poll);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme>("shared_client_theme", SharedClientTheme);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>("poll", Poll);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest>("shared_client_theme", SharedClientTheme);
             writer.WriteCollectionOfPrimitiveValues<string>("sticker_ids", StickerIds);
             writer.WriteAdditionalData(AdditionalData);
         }

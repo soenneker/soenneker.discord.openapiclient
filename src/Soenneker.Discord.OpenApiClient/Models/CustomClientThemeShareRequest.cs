@@ -19,10 +19,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The base_theme property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequestBaseTheme? BaseTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme? BaseTheme { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequestBaseTheme BaseTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme BaseTheme { get; set; }
 #endif
         /// <summary>The colors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,7 +60,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "base_mix", n => { BaseMix = n.GetIntValue(); } },
-                { "base_theme", n => { BaseTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequestBaseTheme>(global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequestBaseTheme.CreateFromDiscriminatorValue); } },
+                { "base_theme", n => { BaseTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme>(global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme.CreateFromDiscriminatorValue); } },
                 { "colors", n => { Colors = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "gradient_angle", n => { GradientAngle = n.GetIntValue(); } },
             };
@@ -73,7 +73,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("base_mix", BaseMix);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequestBaseTheme>("base_theme", BaseTheme);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme>("base_theme", BaseTheme);
             writer.WriteCollectionOfPrimitiveValues<string>("colors", Colors);
             writer.WriteIntValue("gradient_angle", GradientAngle);
             writer.WriteAdditionalData(AdditionalData);

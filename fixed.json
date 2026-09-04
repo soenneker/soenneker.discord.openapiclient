@@ -17890,6 +17890,11 @@
           "slug": {
             "type": "string"
           },
+          "vibegrations_project_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          },
           "guild_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
@@ -26052,6 +26057,11 @@
           "slug": {
             "type": "string"
           },
+          "vibegrations_project_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          },
           "guild_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
@@ -30227,6 +30237,11 @@
           },
           "slug": {
             "type": "string"
+          },
+          "vibegrations_project_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           },
           "guild_id": {
             "pattern": "^(0|[1-9][0-9]*)$",

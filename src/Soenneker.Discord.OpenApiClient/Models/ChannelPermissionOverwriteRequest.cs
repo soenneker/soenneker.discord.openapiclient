@@ -29,10 +29,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequestType? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwrites? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequestType Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwrites Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequest"/> and sets the default values.
@@ -62,7 +62,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "allow", n => { Allow = n.GetIntValue(); } },
                 { "deny", n => { Deny = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequestType>(global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequestType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwrites>(global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwrites.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("allow", Allow);
             writer.WriteIntValue("deny", Deny);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequestType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwrites>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

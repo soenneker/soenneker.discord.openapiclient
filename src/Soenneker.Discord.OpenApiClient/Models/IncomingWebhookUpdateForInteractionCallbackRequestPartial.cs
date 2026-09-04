@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The allowed_mentions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialAllowedMentions? AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? AllowedMentions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialAllowedMentions AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest AllowedMentions { get; set; }
 #endif
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialAllowedMentions>(global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialAllowedMentions.CreateFromDiscriminatorValue); } },
+                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest.CreateFromDiscriminatorValue); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialComponentsItem>(global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialComponentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
@@ -96,7 +96,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialAllowedMentions>("allowed_mentions", AllowedMentions);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>("allowed_mentions", AllowedMentions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>("attachments", Attachments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartialComponentsItem>("components", Components);
             writer.WriteStringValue("content", Content);

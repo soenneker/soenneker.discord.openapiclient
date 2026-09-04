@@ -103,10 +103,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The incidents_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData? IncidentsData { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse? IncidentsData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData IncidentsData { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse IncidentsData { get; set; }
 #endif
         /// <summary>The max_members property</summary>
         public int? MaxMembers { get; set; }
@@ -278,7 +278,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "home_header", n => { HomeHeader = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "incidents_data", n => { IncidentsData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData>(global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData.CreateFromDiscriminatorValue); } },
+                { "incidents_data", n => { IncidentsData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse.CreateFromDiscriminatorValue); } },
                 { "max_members", n => { MaxMembers = n.GetIntValue(); } },
                 { "max_presences", n => { MaxPresences = n.GetIntValue(); } },
                 { "max_stage_video_channel_users", n => { MaxStageVideoChannelUsers = n.GetIntValue(); } },
@@ -328,7 +328,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("home_header", HomeHeader);
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData>("incidents_data", IncidentsData);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse>("incidents_data", IncidentsData);
             writer.WriteIntValue("max_members", MaxMembers);
             writer.WriteIntValue("max_presences", MaxPresences);
             writer.WriteIntValue("max_stage_video_channel_users", MaxStageVideoChannelUsers);

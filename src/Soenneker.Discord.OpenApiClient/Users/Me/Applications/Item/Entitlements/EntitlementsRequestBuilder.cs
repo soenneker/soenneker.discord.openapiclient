@@ -86,16 +86,22 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Applications.Item.Entitlement
         public partial class EntitlementsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("exclude_consumed")]
             public bool? ExcludeConsumed { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("sku_ids")]
             public string? SkuIds { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("sku_ids")]
             public string SkuIds { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

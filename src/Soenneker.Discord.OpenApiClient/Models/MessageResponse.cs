@@ -211,10 +211,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The referenced_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageResponseReferencedMessage? ReferencedMessage { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse? ReferencedMessage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageResponseReferencedMessage ReferencedMessage { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse ReferencedMessage { get; set; }
 #endif
         /// <summary>The resolved property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -331,7 +331,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "position", n => { Position = n.GetIntValue(); } },
                 { "purchase_notification", n => { PurchaseNotification = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PurchaseNotificationResponse>(global::Soenneker.Discord.OpenApiClient.Models.PurchaseNotificationResponse.CreateFromDiscriminatorValue); } },
                 { "reactions", n => { Reactions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageReactionResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageReactionResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "referenced_message", n => { ReferencedMessage = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageResponseReferencedMessage>(global::Soenneker.Discord.OpenApiClient.Models.MessageResponseReferencedMessage.CreateFromDiscriminatorValue); } },
+                { "referenced_message", n => { ReferencedMessage = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse>(global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse.CreateFromDiscriminatorValue); } },
                 { "resolved", n => { Resolved = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse>(global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse.CreateFromDiscriminatorValue); } },
                 { "role_subscription_data", n => { RoleSubscriptionData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageRoleSubscriptionDataResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageRoleSubscriptionDataResponse.CreateFromDiscriminatorValue); } },
                 { "shared_client_theme", n => { SharedClientTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse>(global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse.CreateFromDiscriminatorValue); } },
@@ -379,7 +379,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("position", Position);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PurchaseNotificationResponse>("purchase_notification", PurchaseNotification);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageReactionResponse>("reactions", Reactions);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageResponseReferencedMessage>("referenced_message", ReferencedMessage);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicMessageResponse>("referenced_message", ReferencedMessage);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse>("resolved", Resolved);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageRoleSubscriptionDataResponse>("role_subscription_data", RoleSubscriptionData);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse>("shared_client_theme", SharedClientTheme);

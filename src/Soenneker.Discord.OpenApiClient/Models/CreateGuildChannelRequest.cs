@@ -17,52 +17,52 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The available_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem>? AvailableTags { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest>? AvailableTags { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem> AvailableTags { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest> AvailableTags { get; set; }
 #endif
         /// <summary>The bitrate property</summary>
         public int? Bitrate { get; set; }
         /// <summary>The default_auto_archive_duration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultAutoArchiveDuration? DefaultAutoArchiveDuration { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration? DefaultAutoArchiveDuration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultAutoArchiveDuration DefaultAutoArchiveDuration { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration DefaultAutoArchiveDuration { get; set; }
 #endif
         /// <summary>The default_forum_layout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultForumLayout? DefaultForumLayout { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ForumLayout? DefaultForumLayout { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultForumLayout DefaultForumLayout { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ForumLayout DefaultForumLayout { get; set; }
 #endif
         /// <summary>The default_reaction_emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji? DefaultReactionEmoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest? DefaultReactionEmoji { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji DefaultReactionEmoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest DefaultReactionEmoji { get; set; }
 #endif
         /// <summary>The default_sort_order property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultSortOrder? DefaultSortOrder { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder? DefaultSortOrder { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultSortOrder DefaultSortOrder { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder DefaultSortOrder { get; set; }
 #endif
         /// <summary>The default_tag_setting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultTagSetting? DefaultTagSetting { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting? DefaultTagSetting { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultTagSetting DefaultTagSetting { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting DefaultTagSetting { get; set; }
 #endif
         /// <summary>The default_thread_rate_limit_per_user property</summary>
         public int? DefaultThreadRateLimitPerUser { get; set; }
@@ -115,20 +115,20 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestType? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeWrapper? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestType Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeWrapper Type { get; set; }
 #endif
         /// <summary>The user_limit property</summary>
         public int? UserLimit { get; set; }
         /// <summary>The video_quality_mode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestVideoQualityMode? VideoQualityMode { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes? VideoQualityMode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestVideoQualityMode VideoQualityMode { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes VideoQualityMode { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequest"/> and sets the default values.
@@ -155,13 +155,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "available_tags", n => { AvailableTags = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "available_tags", n => { AvailableTags = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest>(global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "bitrate", n => { Bitrate = n.GetIntValue(); } },
-                { "default_auto_archive_duration", n => { DefaultAutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultAutoArchiveDuration>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultAutoArchiveDuration.CreateFromDiscriminatorValue); } },
-                { "default_forum_layout", n => { DefaultForumLayout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultForumLayout>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultForumLayout.CreateFromDiscriminatorValue); } },
-                { "default_reaction_emoji", n => { DefaultReactionEmoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji.CreateFromDiscriminatorValue); } },
-                { "default_sort_order", n => { DefaultSortOrder = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultSortOrder>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultSortOrder.CreateFromDiscriminatorValue); } },
-                { "default_tag_setting", n => { DefaultTagSetting = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultTagSetting>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultTagSetting.CreateFromDiscriminatorValue); } },
+                { "default_auto_archive_duration", n => { DefaultAutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration>(global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration.CreateFromDiscriminatorValue); } },
+                { "default_forum_layout", n => { DefaultForumLayout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ForumLayout>(global::Soenneker.Discord.OpenApiClient.Models.ForumLayout.CreateFromDiscriminatorValue); } },
+                { "default_reaction_emoji", n => { DefaultReactionEmoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest>(global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest.CreateFromDiscriminatorValue); } },
+                { "default_sort_order", n => { DefaultSortOrder = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder>(global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder.CreateFromDiscriminatorValue); } },
+                { "default_tag_setting", n => { DefaultTagSetting = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>(global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting.CreateFromDiscriminatorValue); } },
                 { "default_thread_rate_limit_per_user", n => { DefaultThreadRateLimitPerUser = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "nsfw", n => { Nsfw = n.GetBoolValue(); } },
@@ -171,9 +171,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "rate_limit_per_user", n => { RateLimitPerUser = n.GetIntValue(); } },
                 { "rtc_region", n => { RtcRegion = n.GetStringValue(); } },
                 { "topic", n => { Topic = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestType>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeWrapper>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeWrapper.CreateFromDiscriminatorValue); } },
                 { "user_limit", n => { UserLimit = n.GetIntValue(); } },
-                { "video_quality_mode", n => { VideoQualityMode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestVideoQualityMode>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestVideoQualityMode.CreateFromDiscriminatorValue); } },
+                { "video_quality_mode", n => { VideoQualityMode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>(global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -183,13 +183,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem>("available_tags", AvailableTags);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest>("available_tags", AvailableTags);
             writer.WriteIntValue("bitrate", Bitrate);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultAutoArchiveDuration>("default_auto_archive_duration", DefaultAutoArchiveDuration);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultForumLayout>("default_forum_layout", DefaultForumLayout);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji>("default_reaction_emoji", DefaultReactionEmoji);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultSortOrder>("default_sort_order", DefaultSortOrder);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultTagSetting>("default_tag_setting", DefaultTagSetting);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration>("default_auto_archive_duration", DefaultAutoArchiveDuration);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ForumLayout>("default_forum_layout", DefaultForumLayout);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest>("default_reaction_emoji", DefaultReactionEmoji);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder>("default_sort_order", DefaultSortOrder);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>("default_tag_setting", DefaultTagSetting);
             writer.WriteIntValue("default_thread_rate_limit_per_user", DefaultThreadRateLimitPerUser);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("nsfw", Nsfw);
@@ -199,9 +199,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);
             writer.WriteStringValue("rtc_region", RtcRegion);
             writer.WriteStringValue("topic", Topic);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeWrapper>("type", Type);
             writer.WriteIntValue("user_limit", UserLimit);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestVideoQualityMode>("video_quality_mode", VideoQualityMode);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>("video_quality_mode", VideoQualityMode);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

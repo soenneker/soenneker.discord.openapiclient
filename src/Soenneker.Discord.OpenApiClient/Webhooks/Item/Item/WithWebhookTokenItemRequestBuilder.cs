@@ -228,17 +228,25 @@ namespace Soenneker.Discord.OpenApiClient.Webhooks.Item.Item
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("thread_id")]
             public string? ThreadId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("thread_id")]
             public string ThreadId { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("wait")]
             public bool? Wait { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("with_components")]
             public bool? WithComponents { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

@@ -219,10 +219,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam? Team { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.TeamResponse? Team { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam Team { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.TeamResponse Team { get; set; }
 #endif
         /// <summary>The terms_of_service_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -235,10 +235,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseType? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseType Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes Type { get; set; }
 #endif
         /// <summary>The verify_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -247,6 +247,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #nullable restore
 #else
         public string VerifyKey { get; set; }
+#endif
+        /// <summary>The vibegrations_project_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VibegrationsProjectId { get; set; }
+#nullable restore
+#else
+        public string VibegrationsProjectId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponse"/> and sets the default values.
@@ -305,10 +313,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "rpc_origins", n => { RpcOrigins = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam>(global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam.CreateFromDiscriminatorValue); } },
+                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamResponse>(global::Soenneker.Discord.OpenApiClient.Models.TeamResponse.CreateFromDiscriminatorValue); } },
                 { "terms_of_service_url", n => { TermsOfServiceUrl = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseType>(global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes.CreateFromDiscriminatorValue); } },
                 { "verify_key", n => { VerifyKey = n.GetStringValue(); } },
+                { "vibegrations_project_id", n => { VibegrationsProjectId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -350,10 +359,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("rpc_origins", RpcOrigins);
             writer.WriteStringValue("slug", Slug);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam>("team", Team);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamResponse>("team", Team);
             writer.WriteStringValue("terms_of_service_url", TermsOfServiceUrl);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes>("type", Type);
             writer.WriteStringValue("verify_key", VerifyKey);
+            writer.WriteStringValue("vibegrations_project_id", VibegrationsProjectId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

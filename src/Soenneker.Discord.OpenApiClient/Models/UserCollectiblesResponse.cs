@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Object mapping of nameplate data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate? Nameplate { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse? Nameplate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate Nameplate { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse Nameplate { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "nameplate", n => { Nameplate = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate>(global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate.CreateFromDiscriminatorValue); } },
+                { "nameplate", n => { Nameplate = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponseNameplate>("nameplate", Nameplate);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse>("nameplate", Nameplate);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -190,8 +190,10 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item
         public partial class WithGuildScheduledEventItemRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("with_user_count")]
             public bool? WithUserCount { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

@@ -85,10 +85,14 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Threads.Archived.Private
         public partial class PrivateRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("before")]
             public DateTimeOffset? Before { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

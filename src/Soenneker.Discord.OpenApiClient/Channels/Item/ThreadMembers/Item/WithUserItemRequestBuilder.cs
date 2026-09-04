@@ -159,8 +159,10 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.ThreadMembers.Item
         public partial class WithUserItemRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("with_member")]
             public bool? WithMember { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

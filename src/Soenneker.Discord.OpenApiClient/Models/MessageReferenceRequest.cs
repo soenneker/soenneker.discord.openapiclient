@@ -43,10 +43,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequestType? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceType? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequestType Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceType Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequest"/> and sets the default values.
@@ -77,7 +77,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "fail_if_not_exists", n => { FailIfNotExists = n.GetBoolValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
                 { "message_id", n => { MessageId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequestType>(global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequestType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceType>(global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceType.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("fail_if_not_exists", FailIfNotExists);
             writer.WriteStringValue("guild_id", GuildId);
             writer.WriteStringValue("message_id", MessageId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequestType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

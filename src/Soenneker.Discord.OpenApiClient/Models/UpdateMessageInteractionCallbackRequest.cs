@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestData? Data { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartial? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestData Data { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartial Data { get; set; }
 #endif
         /// <summary>The type property</summary>
         public int? Type { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestData>(global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestData.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartial>(global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartial.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetIntValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateMessageInteractionCallbackRequestData>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateForInteractionCallbackRequestPartial>("data", Data);
             writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

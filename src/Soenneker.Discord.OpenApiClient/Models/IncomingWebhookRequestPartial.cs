@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The allowed_mentions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartialAllowedMentions? AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? AllowedMentions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartialAllowedMentions AllowedMentions { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest AllowedMentions { get; set; }
 #endif
         /// <summary>The applied_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,10 +75,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The poll property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartialPoll? Poll { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest? Poll { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartialPoll Poll { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest Poll { get; set; }
 #endif
         /// <summary>The thread_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,7 +123,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartialAllowedMentions>(global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartialAllowedMentions.CreateFromDiscriminatorValue); } },
+                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest.CreateFromDiscriminatorValue); } },
                 { "applied_tags", n => { AppliedTags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
@@ -131,7 +131,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "embeds", n => { Embeds = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbed.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
-                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartialPoll>(global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartialPoll.CreateFromDiscriminatorValue); } },
+                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.CreateFromDiscriminatorValue); } },
                 { "thread_name", n => { ThreadName = n.GetStringValue(); } },
                 { "tts", n => { Tts = n.GetBoolValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
@@ -144,7 +144,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartialAllowedMentions>("allowed_mentions", AllowedMentions);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>("allowed_mentions", AllowedMentions);
             writer.WriteCollectionOfPrimitiveValues<string>("applied_tags", AppliedTags);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>("attachments", Attachments);
             writer.WriteStringValue("avatar_url", AvatarUrl);
@@ -152,7 +152,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("content", Content);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>("embeds", Embeds);
             writer.WriteIntValue("flags", Flags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookRequestPartialPoll>("poll", Poll);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>("poll", Poll);
             writer.WriteStringValue("thread_name", ThreadName);
             writer.WriteBoolValue("tts", Tts);
             writer.WriteStringValue("username", Username);

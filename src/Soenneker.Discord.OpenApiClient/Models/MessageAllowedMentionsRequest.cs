@@ -17,10 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The parse property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequestParseItem>? Parse { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes>? Parse { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequestParseItem> Parse { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes> Parse { get; set; }
 #endif
         /// <summary>The replied_user property</summary>
         public bool? RepliedUser { get; set; }
@@ -65,7 +65,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "parse", n => { Parse = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequestParseItem>(global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequestParseItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "parse", n => { Parse = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes>(global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "replied_user", n => { RepliedUser = n.GetBoolValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "users", n => { Users = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -78,7 +78,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequestParseItem>("parse", Parse);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes>("parse", Parse);
             writer.WriteBoolValue("replied_user", RepliedUser);
             writer.WriteCollectionOfPrimitiveValues<string>("roles", Roles);
             writer.WriteCollectionOfPrimitiveValues<string>("users", Users);

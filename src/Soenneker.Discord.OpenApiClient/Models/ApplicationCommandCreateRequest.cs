@@ -45,10 +45,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Determines whether the interaction is handled by the app&apos;s interactions handler or by Discord</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestHandler? Handler { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler? Handler { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestHandler Handler { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler Handler { get; set; }
 #endif
         /// <summary>The integration_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,10 +85,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestType? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestType Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequest"/> and sets the default values.
@@ -120,12 +120,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestDescriptionLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestDescriptionLocalizationsProperty.CreateFromDiscriminatorValue); } },
                 { "dm_permission", n => { DmPermission = n.GetBoolValue(); } },
-                { "handler", n => { Handler = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestHandler>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestHandler.CreateFromDiscriminatorValue); } },
+                { "handler", n => { Handler = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler.CreateFromDiscriminatorValue); } },
                 { "integration_types", n => { IntegrationTypes = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "name_localizations", n => { NameLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestNameLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestNameLocalizationsProperty.CreateFromDiscriminatorValue); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestOptionsItem>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestOptionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestType>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -140,12 +140,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestDescriptionLocalizationsProperty>("description_localizations", DescriptionLocalizations);
             writer.WriteBoolValue("dm_permission", DmPermission);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestHandler>("handler", Handler);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandHandler>("handler", Handler);
             writer.WriteCollectionOfPrimitiveValues<int?>("integration_types", IntegrationTypes);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestNameLocalizationsProperty>("name_localizations", NameLocalizations);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestOptionsItem>("options", Options);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandCreateRequestType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

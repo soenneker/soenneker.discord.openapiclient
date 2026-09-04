@@ -27,10 +27,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The mode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestMode? Mode { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode? Mode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestMode Mode { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode Mode { get; set; }
 #endif
         /// <summary>The prompts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "default_channel_ids", n => { DefaultChannelIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "mode", n => { Mode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestMode>(global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestMode.CreateFromDiscriminatorValue); } },
+                { "mode", n => { Mode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode>(global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode.CreateFromDiscriminatorValue); } },
                 { "prompts", n => { Prompts = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UpdateOnboardingPromptRequest>(global::Soenneker.Discord.OpenApiClient.Models.UpdateOnboardingPromptRequest.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -80,7 +80,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("default_channel_ids", DefaultChannelIds);
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildOnboardingRequestMode>("mode", Mode);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildOnboardingMode>("mode", Mode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UpdateOnboardingPromptRequest>("prompts", Prompts);
             writer.WriteAdditionalData(AdditionalData);
         }

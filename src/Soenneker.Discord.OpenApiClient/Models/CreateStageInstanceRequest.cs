@@ -33,10 +33,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The privacy_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateStageInstanceRequestPrivacyLevel? PrivacyLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels? PrivacyLevel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateStageInstanceRequestPrivacyLevel PrivacyLevel { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels PrivacyLevel { get; set; }
 #endif
         /// <summary>The send_start_notification property</summary>
         public bool? SendStartNotification { get; set; }
@@ -75,7 +75,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "guild_scheduled_event_id", n => { GuildScheduledEventId = n.GetStringValue(); } },
-                { "privacy_level", n => { PrivacyLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateStageInstanceRequestPrivacyLevel>(global::Soenneker.Discord.OpenApiClient.Models.CreateStageInstanceRequestPrivacyLevel.CreateFromDiscriminatorValue); } },
+                { "privacy_level", n => { PrivacyLevel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels>(global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels.CreateFromDiscriminatorValue); } },
                 { "send_start_notification", n => { SendStartNotification = n.GetBoolValue(); } },
                 { "topic", n => { Topic = n.GetStringValue(); } },
             };
@@ -89,7 +89,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("guild_scheduled_event_id", GuildScheduledEventId);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateStageInstanceRequestPrivacyLevel>("privacy_level", PrivacyLevel);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels>("privacy_level", PrivacyLevel);
             writer.WriteBoolValue("send_start_notification", SendStartNotification);
             writer.WriteStringValue("topic", Topic);
             writer.WriteAdditionalData(AdditionalData);

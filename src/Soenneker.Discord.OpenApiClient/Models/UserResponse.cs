@@ -27,10 +27,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>data for the user&apos;s avatar decoration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponseAvatarDecorationData? AvatarDecorationData { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse? AvatarDecorationData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponseAvatarDecorationData AvatarDecorationData { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse AvatarDecorationData { get; set; }
 #endif
         /// <summary>the user&apos;s banner hash</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -45,10 +45,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>data for the user&apos;s collectibles</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponseCollectibles? Collectibles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? Collectibles { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponseCollectibles Collectibles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse Collectibles { get; set; }
 #endif
         /// <summary>the user&apos;s Discord-tag</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,10 +79,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>the user&apos;s primary guild</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponsePrimaryGuild? PrimaryGuild { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse? PrimaryGuild { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponsePrimaryGuild PrimaryGuild { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse PrimaryGuild { get; set; }
 #endif
         /// <summary>the public flags on a user&apos;s account</summary>
         public int? PublicFlags { get; set; }
@@ -123,15 +123,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "accent_color", n => { AccentColor = n.GetIntValue(); } },
                 { "avatar", n => { Avatar = n.GetStringValue(); } },
-                { "avatar_decoration_data", n => { AvatarDecorationData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponseAvatarDecorationData>(global::Soenneker.Discord.OpenApiClient.Models.UserResponseAvatarDecorationData.CreateFromDiscriminatorValue); } },
+                { "avatar_decoration_data", n => { AvatarDecorationData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse.CreateFromDiscriminatorValue); } },
                 { "banner", n => { Banner = n.GetStringValue(); } },
                 { "bot", n => { Bot = n.GetBoolValue(); } },
-                { "collectibles", n => { Collectibles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponseCollectibles>(global::Soenneker.Discord.OpenApiClient.Models.UserResponseCollectibles.CreateFromDiscriminatorValue); } },
+                { "collectibles", n => { Collectibles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse.CreateFromDiscriminatorValue); } },
                 { "discriminator", n => { Discriminator = n.GetStringValue(); } },
                 { "flags", n => { Flags = n.GetLongValue(); } },
                 { "global_name", n => { GlobalName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "primary_guild", n => { PrimaryGuild = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponsePrimaryGuild>(global::Soenneker.Discord.OpenApiClient.Models.UserResponsePrimaryGuild.CreateFromDiscriminatorValue); } },
+                { "primary_guild", n => { PrimaryGuild = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse.CreateFromDiscriminatorValue); } },
                 { "public_flags", n => { PublicFlags = n.GetIntValue(); } },
                 { "system", n => { System = n.GetBoolValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
@@ -146,15 +146,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("accent_color", AccentColor);
             writer.WriteStringValue("avatar", Avatar);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponseAvatarDecorationData>("avatar_decoration_data", AvatarDecorationData);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse>("avatar_decoration_data", AvatarDecorationData);
             writer.WriteStringValue("banner", Banner);
             writer.WriteBoolValue("bot", Bot);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponseCollectibles>("collectibles", Collectibles);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>("collectibles", Collectibles);
             writer.WriteStringValue("discriminator", Discriminator);
             writer.WriteLongValue("flags", Flags);
             writer.WriteStringValue("global_name", GlobalName);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponsePrimaryGuild>("primary_guild", PrimaryGuild);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse>("primary_guild", PrimaryGuild);
             writer.WriteIntValue("public_flags", PublicFlags);
             writer.WriteBoolValue("system", System);
             writer.WriteStringValue("username", Username);

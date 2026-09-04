@@ -128,16 +128,22 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Prune
         public partial class PruneRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("days")]
             public int? Days { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("include_roles")]
             public string? IncludeRoles { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("include_roles")]
             public string IncludeRoles { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

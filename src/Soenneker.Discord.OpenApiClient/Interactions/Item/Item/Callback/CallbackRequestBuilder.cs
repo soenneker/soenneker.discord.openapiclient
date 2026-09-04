@@ -90,8 +90,10 @@ namespace Soenneker.Discord.OpenApiClient.Interactions.Item.Item.Callback
         public partial class CallbackRequestBuilderPostQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("with_response")]
             public bool? WithResponse { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

@@ -53,10 +53,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The trigger_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadata? TriggerMetadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata? TriggerMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadata TriggerMetadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata TriggerMetadata { get; set; }
 #endif
         /// <summary>The trigger_type property</summary>
         public int? TriggerType { get; set; }
@@ -91,7 +91,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "exempt_channels", n => { ExemptChannels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "exempt_roles", n => { ExemptRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "trigger_metadata", n => { TriggerMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadata>(global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadata.CreateFromDiscriminatorValue); } },
+                { "trigger_metadata", n => { TriggerMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata>(global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata.CreateFromDiscriminatorValue); } },
                 { "trigger_type", n => { TriggerType = n.GetIntValue(); } },
             };
         }
@@ -108,7 +108,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_channels", ExemptChannels);
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_roles", ExemptRoles);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionSpamUpsertRequestPartialTriggerMetadata>("trigger_metadata", TriggerMetadata);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata>("trigger_metadata", TriggerMetadata);
             writer.WriteIntValue("trigger_type", TriggerType);
             writer.WriteAdditionalData(AdditionalData);
         }
