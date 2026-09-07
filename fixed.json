@@ -23339,9 +23339,6 @@
             "type": "string",
             "format": "snowflake"
           },
-          "liveliness": {
-            "$ref": "#/components/schemas/GuildInviteResponseLiveliness"
-          },
           "uses": {
             "type": "integer",
             "format": "int32"
@@ -23476,28 +23473,6 @@
             "items": {
               "$ref": "#/components/schemas/GuildJoinRequestResponse"
             }
-          }
-        }
-      },
-      "GuildLivelinessResponse": {
-        "required": [
-          "msg_activity_bins"
-        ],
-        "type": "object",
-        "properties": {
-          "msg_activity_bins": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          "last_updated_ts": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "date-time"
           }
         }
       },
@@ -41796,33 +41771,6 @@
         "additionalProperties": false,
         "format": "int32"
       },
-      "GuildInviteResponseLiveliness": {
-        "type": "object",
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "$ref": "#/components/schemas/GuildLivelinessResponse"
-          }
-        ],
-        "properties": {
-          "msg_activity_bins": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          "last_updated_ts": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "date-time"
-          }
-        }
-      },
       "GuildJoinRequestResponseApplicationStatus": {
         "type": "object",
         "oneOf": [
@@ -50466,9 +50414,6 @@
             "type": "string",
             "format": "snowflake"
           },
-          "liveliness": {
-            "$ref": "#/components/schemas/GuildInviteResponseLiveliness"
-          },
           "temporary": {
             "type": "boolean"
           },
@@ -52060,9 +52005,6 @@
             "type": "string",
             "format": "snowflake"
           },
-          "liveliness": {
-            "$ref": "#/components/schemas/GuildInviteResponseLiveliness"
-          },
           "temporary": {
             "type": "boolean"
           },
@@ -52181,9 +52123,6 @@
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
             "format": "snowflake"
-          },
-          "liveliness": {
-            "$ref": "#/components/schemas/GuildInviteResponseLiveliness"
           },
           "temporary": {
             "type": "boolean"
@@ -53417,9 +53356,6 @@
             "type": "string",
             "format": "snowflake"
           },
-          "liveliness": {
-            "$ref": "#/components/schemas/GuildInviteResponseLiveliness"
-          },
           "temporary": {
             "type": "boolean"
           },
@@ -53957,9 +53893,6 @@
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
             "format": "snowflake"
-          },
-          "liveliness": {
-            "$ref": "#/components/schemas/GuildInviteResponseLiveliness"
           },
           "temporary": {
             "type": "boolean"
