@@ -27688,12 +27688,6 @@
               "null",
               "boolean"
             ]
-          },
-          "is_remix": {
-            "type": [
-              "null",
-              "boolean"
-            ]
           }
         }
       },
