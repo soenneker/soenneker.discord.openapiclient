@@ -3,6 +3,9 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.BulkAdd;
+using Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.BulkDelete;
+using Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.Item;
 using Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.JobStatus;
 using Soenneker.Discord.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -18,10 +21,32 @@ namespace Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TargetUsersRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The bulkAdd property</summary>
+        public global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.BulkAdd.BulkAddRequestBuilder BulkAdd
+        {
+            get => new global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.BulkAdd.BulkAddRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The bulkDelete property</summary>
+        public global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.BulkDelete.BulkDeleteRequestBuilder BulkDelete
+        {
+            get => new global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.BulkDelete.BulkDeleteRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The jobStatus property</summary>
         public global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.JobStatus.JobStatusRequestBuilder JobStatus
         {
             get => new global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.JobStatus.JobStatusRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.invites.item.targetUsers.item collection</summary>
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.Item.WithUserItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.TargetUsersRequestBuilder"/> and sets the default values.
