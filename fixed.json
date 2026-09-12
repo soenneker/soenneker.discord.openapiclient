@@ -20617,7 +20617,7 @@
         "type": "object",
         "properties": {
           "max_age": {
-            "maximum": 604800,
+            "maximum": 2592000,
             "minimum": 1,
             "type": [
               "null",
@@ -32654,7 +32654,7 @@
         ],
         "properties": {
           "max_age": {
-            "maximum": 604800,
+            "maximum": 2592000,
             "minimum": 1,
             "type": [
               "null",
@@ -34544,7 +34544,7 @@
         ],
         "properties": {
           "max_age": {
-            "maximum": 604800,
+            "maximum": 2592000,
             "minimum": 1,
             "type": [
               "null",
