@@ -50,6 +50,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string TargetUserId { get; set; }
 #endif
+        /// <summary>The IDs of the users to target with this invite.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds? TargetUserIds { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds TargetUserIds { get; set; }
+#endif
         /// <summary>The temporary property</summary>
         public bool? Temporary { get; set; }
         /// <summary>The unique property</summary>
@@ -85,6 +93,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "target_application_id", n => { TargetApplicationId = n.GetStringValue(); } },
                 { "target_type", n => { TargetType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeWrapper>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeWrapper.CreateFromDiscriminatorValue); } },
                 { "target_user_id", n => { TargetUserId = n.GetStringValue(); } },
+                { "target_user_ids", n => { TargetUserIds = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds.CreateFromDiscriminatorValue); } },
                 { "temporary", n => { Temporary = n.GetBoolValue(); } },
                 { "unique", n => { Unique = n.GetBoolValue(); } },
             };
@@ -102,6 +111,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("target_application_id", TargetApplicationId);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeWrapper>("target_type", TargetType);
             writer.WriteStringValue("target_user_id", TargetUserId);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds>("target_user_ids", TargetUserIds);
             writer.WriteBoolValue("temporary", Temporary);
             writer.WriteBoolValue("unique", Unique);
             writer.WriteAdditionalData(AdditionalData);

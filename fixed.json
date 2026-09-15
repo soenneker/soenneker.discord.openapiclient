@@ -20800,6 +20800,9 @@
           },
           "role_ids": {
             "$ref": "#/components/schemas/CreateGuildInviteRequestRoleIds"
+          },
+          "target_user_ids": {
+            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetUserIds"
           }
         }
       },
@@ -32702,6 +32705,9 @@
           },
           "role_ids": {
             "$ref": "#/components/schemas/CreateGuildInviteRequestRoleIds"
+          },
+          "target_user_ids": {
+            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetUserIds"
           }
         },
         "x-discord-union": "oneOf"
@@ -34592,6 +34598,9 @@
           },
           "role_ids": {
             "$ref": "#/components/schemas/CreateGuildInviteRequestRoleIds"
+          },
+          "target_user_ids": {
+            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetUserIds"
           }
         },
         "x-discord-union": "oneOf"
@@ -40336,6 +40345,28 @@
             "type": "null"
           }
         ]
+      },
+      "CreateGuildInviteRequestTargetUserIds": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "maxItems": 1000,
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
+            }
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "description": "The IDs of the users to target with this invite."
       },
       "CreateMessageInteractionCallbackRequestType": {
         "type": "integer",
