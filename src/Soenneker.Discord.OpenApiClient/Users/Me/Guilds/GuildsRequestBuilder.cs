@@ -35,7 +35,7 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Guilds
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GuildsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/guilds{?after*,before*,limit*,with_counts*}", pathParameters)
+        public GuildsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/guilds{?after*,before*,limit*,shard*,with_counts*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Guilds
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GuildsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/guilds{?after*,before*,limit*,with_counts*}", rawUrl)
+        public GuildsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/@me/guilds{?after*,before*,limit*,shard*,with_counts*}", rawUrl)
         {
         }
         /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.MyGuildResponse&gt;</returns>
@@ -128,6 +128,10 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Guilds
             #pragma warning disable CS1591
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("shard")]
+            public int? Shard { get; set; }
             #pragma warning restore CS1591
             #pragma warning disable CS1591
             [QueryParameter("with_counts")]

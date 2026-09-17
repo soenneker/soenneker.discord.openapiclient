@@ -14415,6 +14415,14 @@
             }
           },
           {
+            "name": "shard",
+            "in": "query",
+            "schema": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          {
             "name": "with_counts",
             "in": "query",
             "schema": {
@@ -26365,6 +26373,9 @@
           },
           "icon": {
             "type": "string"
+          },
+          "nsfw": {
+            "type": "boolean"
           },
           "recipients": {
             "type": "array",
@@ -41140,6 +41151,9 @@
           },
           "icon": {
             "type": "string"
+          },
+          "nsfw": {
+            "type": "boolean"
           },
           "recipients": {
             "type": "array",

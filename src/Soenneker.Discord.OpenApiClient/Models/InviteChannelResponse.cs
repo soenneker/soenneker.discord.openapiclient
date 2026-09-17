@@ -38,6 +38,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>The nsfw property</summary>
+        public bool? Nsfw { get; set; }
         /// <summary>The recipients property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,6 +78,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "nsfw", n => { Nsfw = n.GetBoolValue(); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse>(global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetIntValue(); } },
             };
@@ -90,6 +93,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
+            writer.WriteBoolValue("nsfw", Nsfw);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelRecipientResponse>("recipients", Recipients);
             writer.WriteIntValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
