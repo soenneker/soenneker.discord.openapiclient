@@ -225,7 +225,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -282,7 +284,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -396,7 +400,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -614,7 +620,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -779,7 +787,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -787,7 +797,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -899,7 +911,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -1049,7 +1063,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -1057,7 +1073,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -1070,7 +1088,9 @@
             "name": "user_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -1101,21 +1121,27 @@
             "name": "guild_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "before",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -1258,7 +1284,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -1363,7 +1391,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -1371,7 +1401,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -1426,7 +1458,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -1434,7 +1468,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -1652,7 +1688,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -1660,7 +1698,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -1722,7 +1762,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -1730,7 +1772,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -1895,7 +1939,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -1903,7 +1949,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -1911,7 +1959,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -2033,7 +2083,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -2041,7 +2093,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -2049,7 +2103,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -2161,7 +2217,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -2318,7 +2376,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -2385,7 +2445,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -2527,7 +2589,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -2540,21 +2604,27 @@
             "name": "around",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "before",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -2681,7 +2751,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -2741,7 +2813,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -2817,7 +2891,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -2905,7 +2981,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -2913,7 +2991,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -3073,7 +3153,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3081,7 +3163,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -3138,7 +3222,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3146,7 +3232,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -3196,7 +3284,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3204,7 +3294,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -3217,7 +3309,9 @@
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -3324,7 +3418,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3332,7 +3428,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3429,7 +3527,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3437,7 +3537,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3496,7 +3598,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3504,7 +3608,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3521,7 +3627,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -3588,7 +3696,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3596,7 +3706,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -3694,7 +3806,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3702,7 +3816,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -3759,7 +3875,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -3847,7 +3965,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3855,7 +3975,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -3868,7 +3990,9 @@
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -3930,7 +4054,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -3938,7 +4064,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -4006,7 +4134,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -4014,7 +4144,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -4139,7 +4271,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -4147,7 +4281,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -4207,7 +4343,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -4236,7 +4374,9 @@
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -4289,7 +4429,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -4377,7 +4519,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -4519,7 +4663,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -4527,7 +4673,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -4604,7 +4752,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -4680,7 +4830,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -4756,7 +4908,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -4786,14 +4940,18 @@
             "name": "min_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "max_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -4940,7 +5098,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -5017,7 +5177,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -5030,7 +5192,9 @@
             "name": "before",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -5092,7 +5256,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -5153,7 +5319,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -5265,7 +5433,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -5540,7 +5710,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -5553,14 +5725,18 @@
             "name": "user_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "target_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -5574,14 +5750,18 @@
             "name": "before",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -5643,7 +5823,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -5755,7 +5937,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -5905,7 +6089,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -5913,7 +6099,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -5935,14 +6123,18 @@
             "name": "before",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -5995,7 +6187,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -6148,7 +6342,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -6156,7 +6352,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -6223,7 +6421,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -6386,7 +6586,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -6498,7 +6700,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -6648,7 +6852,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -6656,7 +6862,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -6724,7 +6932,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -6781,7 +6991,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -6831,7 +7043,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -6839,7 +7053,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -6896,7 +7112,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -6918,7 +7136,9 @@
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -6971,7 +7191,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -7038,7 +7260,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -7116,7 +7340,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -7361,7 +7587,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -7369,7 +7597,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -7457,7 +7687,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -7465,7 +7697,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -7473,7 +7707,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -7606,14 +7842,18 @@
             "name": "min_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "max_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -7815,7 +8055,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -7892,7 +8134,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -8004,7 +8248,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -8061,7 +8307,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -8208,7 +8456,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -8265,7 +8515,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -8296,14 +8548,18 @@
             "name": "before",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -8356,7 +8612,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -8424,7 +8682,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -8432,7 +8692,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -8599,7 +8861,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -8656,7 +8920,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -8806,7 +9072,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -8814,7 +9082,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -8935,7 +9205,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -9094,7 +9366,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -9102,7 +9376,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -9170,7 +9446,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -9178,7 +9456,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -9285,7 +9565,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -9293,7 +9575,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -9301,7 +9585,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -9330,14 +9616,18 @@
             "name": "before",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -9390,7 +9680,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -9398,7 +9690,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -9471,7 +9765,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -9479,7 +9775,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -9509,14 +9807,18 @@
             "name": "before",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -9569,7 +9871,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -9577,7 +9881,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -9585,7 +9891,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -9697,7 +10005,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -9847,7 +10157,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -9855,7 +10167,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -9967,7 +10281,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -10117,7 +10433,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -10125,7 +10443,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -10237,7 +10557,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -10394,7 +10716,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -10460,7 +10784,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -10517,7 +10843,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -10622,7 +10950,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -10727,7 +11057,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -10735,7 +11067,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -10792,7 +11126,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -10904,7 +11240,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -11016,7 +11354,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -11074,7 +11414,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -11141,7 +11483,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -11248,7 +11592,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -11277,21 +11623,27 @@
             "name": "guild_scheduled_event_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "target_channel_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "target_message_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -11781,7 +12133,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -12047,7 +12401,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -12117,7 +12473,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -12170,7 +12528,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -12230,7 +12590,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -12297,7 +12659,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -12402,7 +12766,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -12410,7 +12776,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -12467,7 +12835,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -12475,7 +12845,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -12614,7 +12986,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -12685,7 +13059,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -12693,7 +13069,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -12996,7 +13374,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -13004,7 +13384,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -13012,7 +13394,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -13242,14 +13626,18 @@
             "name": "before",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -13265,7 +13653,9 @@
             "name": "user_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -13356,7 +13746,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -13370,7 +13762,9 @@
             "name": "user_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -13461,7 +13855,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -13469,7 +13865,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -13723,7 +14121,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -13828,7 +14228,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -13885,7 +14287,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -14117,7 +14521,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -14273,7 +14679,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -14395,14 +14803,18 @@
             "name": "before",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
             "name": "after",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -14524,7 +14936,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -14583,7 +14997,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -14640,7 +15056,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -14837,7 +15255,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -14903,7 +15323,9 @@
             "name": "thread_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -15099,7 +15521,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -15128,7 +15552,9 @@
             "name": "thread_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -15185,7 +15611,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -15207,7 +15635,9 @@
             "name": "thread_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -15262,7 +15692,9 @@
             "name": "thread_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -15310,7 +15742,9 @@
             "name": "thread_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -15391,7 +15825,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -15413,7 +15849,9 @@
             "name": "thread_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -15468,7 +15906,9 @@
             "name": "thread_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -15516,7 +15956,9 @@
             "name": "thread_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           },
           {
@@ -15597,7 +16039,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -15614,7 +16058,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       ]
@@ -15634,7 +16080,9 @@
             "name": "thread_id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "format": "snowflake"
             }
           }
         ],
@@ -15708,7 +16156,9 @@
           "in": "path",
           "required": true,
           "schema": {
-            "type": "string"
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         },
         {
@@ -25912,28 +26362,11 @@
           }
         }
       },
-      "CreateChannelInviteFormDataRequest": {
-        "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/CreateGroupDmInviteRequest"
-              },
-              {
-                "$ref": "#/components/schemas/CreateGuildInviteRequest"
-              }
-            ],
-            "x-discord-union": "oneOf"
-          }
-        ],
-        "properties": {
-          "target_users_file": {
-            "contentEncoding": "binary",
-            "type": "string"
-          }
-        }
+      "Int53Type": {
+        "maximum": 9007199254740991,
+        "minimum": -9007199254740991,
+        "type": "integer",
+        "format": "int64"
       },
       "IntegrationApplicationResponse": {
         "required": [
@@ -32656,72 +33089,10 @@
           }
         ]
       },
-      "CreateChannelInviteXWwwFormUrlencodedRequest": {
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/CreateGroupDmInviteRequest"
-          },
-          {
-            "$ref": "#/components/schemas/CreateGuildInviteRequest"
-          }
-        ],
-        "properties": {
-          "max_age": {
-            "maximum": 2592000,
-            "minimum": 1,
-            "type": [
-              "null",
-              "integer"
-            ]
-          },
-          "temporary": {
-            "type": [
-              "null",
-              "boolean"
-            ]
-          },
-          "max_uses": {
-            "maximum": 100,
-            "minimum": 0,
-            "type": [
-              "null",
-              "integer"
-            ]
-          },
-          "unique": {
-            "type": [
-              "null",
-              "boolean"
-            ]
-          },
-          "target_user_id": {
-            "pattern": "^(0|[1-9][0-9]*)$",
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "snowflake"
-          },
-          "target_application_id": {
-            "pattern": "^(0|[1-9][0-9]*)$",
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "snowflake"
-          },
-          "target_type": {
-            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetType"
-          },
-          "role_ids": {
-            "$ref": "#/components/schemas/CreateGuildInviteRequestRoleIds"
-          },
-          "target_user_ids": {
-            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetUserIds"
-          }
-        },
-        "x-discord-union": "oneOf"
+      "SnowflakeType": {
+        "pattern": "^(0|[1-9][0-9]*)$",
+        "type": "string",
+        "format": "snowflake"
       },
       "SocialLayerSkuPurchaseEligibilityCallbackData": {
         "required": [
@@ -34549,72 +34920,11 @@
       "TypingIndicatorResponse": {
         "type": "object"
       },
-      "CreateChannelInviteJsonRequest": {
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/CreateGroupDmInviteRequest"
-          },
-          {
-            "$ref": "#/components/schemas/CreateGuildInviteRequest"
-          }
-        ],
-        "properties": {
-          "max_age": {
-            "maximum": 2592000,
-            "minimum": 1,
-            "type": [
-              "null",
-              "integer"
-            ]
-          },
-          "temporary": {
-            "type": [
-              "null",
-              "boolean"
-            ]
-          },
-          "max_uses": {
-            "maximum": 100,
-            "minimum": 0,
-            "type": [
-              "null",
-              "integer"
-            ]
-          },
-          "unique": {
-            "type": [
-              "null",
-              "boolean"
-            ]
-          },
-          "target_user_id": {
-            "pattern": "^(0|[1-9][0-9]*)$",
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "snowflake"
-          },
-          "target_application_id": {
-            "pattern": "^(0|[1-9][0-9]*)$",
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "snowflake"
-          },
-          "target_type": {
-            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetType"
-          },
-          "role_ids": {
-            "$ref": "#/components/schemas/CreateGuildInviteRequestRoleIds"
-          },
-          "target_user_ids": {
-            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetUserIds"
-          }
-        },
-        "x-discord-union": "oneOf"
+      "UInt32Type": {
+        "maximum": 4294967295,
+        "minimum": 0,
+        "type": "integer",
+        "format": "int64"
       },
       "UnbanUserFromGuildRequest": {
         "type": "object"
@@ -37096,6 +37406,163 @@
           }
         },
         "description": "Ratelimit error object returned by the Discord API"
+      },
+      "CreateChannelInviteJsonRequest": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/CreateGroupDmInviteRequest"
+          },
+          {
+            "$ref": "#/components/schemas/CreateGuildInviteRequest"
+          }
+        ],
+        "properties": {
+          "max_age": {
+            "maximum": 2592000,
+            "minimum": 1,
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "temporary": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "max_uses": {
+            "maximum": 100,
+            "minimum": 0,
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "unique": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "target_user_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "snowflake"
+          },
+          "target_application_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "snowflake"
+          },
+          "target_type": {
+            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetType"
+          },
+          "role_ids": {
+            "$ref": "#/components/schemas/CreateGuildInviteRequestRoleIds"
+          },
+          "target_user_ids": {
+            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetUserIds"
+          }
+        },
+        "x-discord-union": "oneOf"
+      },
+      "CreateChannelInviteXWwwFormUrlencodedRequest": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/CreateGroupDmInviteRequest"
+          },
+          {
+            "$ref": "#/components/schemas/CreateGuildInviteRequest"
+          }
+        ],
+        "properties": {
+          "max_age": {
+            "maximum": 2592000,
+            "minimum": 1,
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "temporary": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "max_uses": {
+            "maximum": 100,
+            "minimum": 0,
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "unique": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "target_user_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "snowflake"
+          },
+          "target_application_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "snowflake"
+          },
+          "target_type": {
+            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetType"
+          },
+          "role_ids": {
+            "$ref": "#/components/schemas/CreateGuildInviteRequestRoleIds"
+          },
+          "target_user_ids": {
+            "$ref": "#/components/schemas/CreateGuildInviteRequestTargetUserIds"
+          }
+        },
+        "x-discord-union": "oneOf"
+      },
+      "CreateChannelInviteFormDataRequest": {
+        "type": "object",
+        "allOf": [
+          {
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CreateGroupDmInviteRequest"
+              },
+              {
+                "$ref": "#/components/schemas/CreateGuildInviteRequest"
+              }
+            ],
+            "x-discord-union": "oneOf"
+          }
+        ],
+        "properties": {
+          "target_users_file": {
+            "contentEncoding": "binary",
+            "type": "string"
+          }
+        }
       },
       "CreateMessageFormDataRequest": {
         "type": "object",
@@ -43376,15 +43843,6 @@
           }
         }
       },
-      "CreateChannelInviteFormDataRequestAllOf2": {
-        "type": "object",
-        "properties": {
-          "target_users_file": {
-            "contentEncoding": "binary",
-            "type": "string"
-          }
-        }
-      },
       "IntegrationApplicationResponseType": {
         "type": "object",
         "oneOf": [
@@ -48654,6 +49112,15 @@
           "global": {
             "type": "boolean",
             "description": "Whether you are being ratelimited by the global ratelimit or a per-endpoint ratelimit"
+          }
+        }
+      },
+      "CreateChannelInviteFormDataRequestAllOf2": {
+        "type": "object",
+        "properties": {
+          "target_users_file": {
+            "contentEncoding": "binary",
+            "type": "string"
           }
         }
       },
