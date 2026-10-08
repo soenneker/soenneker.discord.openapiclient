@@ -19710,6 +19710,9 @@
           },
           "lobby_member": {
             "$ref": "#/components/schemas/MessageLobbyMemberResponse"
+          },
+          "actor": {
+            "$ref": "#/components/schemas/UserResponse"
           }
         }
       },
@@ -27744,7 +27747,7 @@
             "minItems": 1,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MediaGalleryItemRequest"
+              "$ref": "#/components/schemas/MediaGalleryItemForMessageRequest"
             }
           }
         }
@@ -27773,7 +27776,7 @@
           }
         }
       },
-      "MediaGalleryItemRequest": {
+      "MediaGalleryItemForMessageRequest": {
         "required": [
           "media"
         ],
@@ -29363,6 +29366,9 @@
           },
           "lobby_member": {
             "$ref": "#/components/schemas/MessageLobbyMemberResponse"
+          },
+          "actor": {
+            "$ref": "#/components/schemas/UserResponse"
           },
           "reactions": {
             "type": "array",
@@ -32863,6 +32869,9 @@
           },
           "lobby_member": {
             "$ref": "#/components/schemas/MessageLobbyMemberResponse"
+          },
+          "actor": {
+            "$ref": "#/components/schemas/UserResponse"
           },
           "reactions": {
             "type": "array",
@@ -39995,7 +40004,7 @@
             "minItems": 1,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MediaGalleryItemRequest"
+              "$ref": "#/components/schemas/MediaGalleryItemForMessageRequest"
             }
           },
           "accessory": {
@@ -40537,7 +40546,7 @@
             "minItems": 1,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MediaGalleryItemRequest"
+              "$ref": "#/components/schemas/MediaGalleryItemForMessageRequest"
             }
           },
           "accessory": {
@@ -43233,7 +43242,7 @@
             "minItems": 1,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MediaGalleryItemRequest"
+              "$ref": "#/components/schemas/MediaGalleryItemForMessageRequest"
             }
           },
           "accessory": {
@@ -43431,7 +43440,7 @@
             "minItems": 1,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MediaGalleryItemRequest"
+              "$ref": "#/components/schemas/MediaGalleryItemForMessageRequest"
             }
           },
           "accessory": {
@@ -43629,7 +43638,7 @@
             "minItems": 1,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MediaGalleryItemRequest"
+              "$ref": "#/components/schemas/MediaGalleryItemForMessageRequest"
             }
           },
           "accessory": {
@@ -43781,7 +43790,7 @@
             "minItems": 1,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MediaGalleryItemRequest"
+              "$ref": "#/components/schemas/MediaGalleryItemForMessageRequest"
             }
           },
           "accessory": {
@@ -44831,7 +44840,7 @@
             "minItems": 1,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MediaGalleryItemRequest"
+              "$ref": "#/components/schemas/MediaGalleryItemForMessageRequest"
             }
           },
           "accessory": {
@@ -45129,7 +45138,7 @@
             "minItems": 1,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MediaGalleryItemRequest"
+              "$ref": "#/components/schemas/MediaGalleryItemForMessageRequest"
             }
           },
           "accessory": {
@@ -45533,6 +45542,9 @@
           },
           "lobby_member": {
             "$ref": "#/components/schemas/MessageLobbyMemberResponse"
+          },
+          "actor": {
+            "$ref": "#/components/schemas/UserResponse"
           }
         }
       },
@@ -46661,7 +46673,7 @@
             "minItems": 1,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MediaGalleryItemRequest"
+              "$ref": "#/components/schemas/MediaGalleryItemForMessageRequest"
             }
           },
           "accessory": {
@@ -47344,6 +47356,9 @@
           },
           "lobby_member": {
             "$ref": "#/components/schemas/MessageLobbyMemberResponse"
+          },
+          "actor": {
+            "$ref": "#/components/schemas/UserResponse"
           }
         }
       },
