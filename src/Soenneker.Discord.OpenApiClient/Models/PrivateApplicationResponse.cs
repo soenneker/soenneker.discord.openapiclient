@@ -32,6 +32,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public bool? BotPublic { get; set; }
         /// <summary>The bot_require_code_grant property</summary>
         public bool? BotRequireCodeGrant { get; set; }
+        /// <summary>The conjure_project_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ConjureProjectId { get; set; }
+#nullable restore
+#else
+        public string ConjureProjectId { get; set; }
+#endif
         /// <summary>The cover_image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -287,6 +295,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "bot", n => { Bot = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
                 { "bot_public", n => { BotPublic = n.GetBoolValue(); } },
                 { "bot_require_code_grant", n => { BotRequireCodeGrant = n.GetBoolValue(); } },
+                { "conjure_project_id", n => { ConjureProjectId = n.GetStringValue(); } },
                 { "cover_image", n => { CoverImage = n.GetStringValue(); } },
                 { "custom_install_url", n => { CustomInstallUrl = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -333,6 +342,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("bot", Bot);
             writer.WriteBoolValue("bot_public", BotPublic);
             writer.WriteBoolValue("bot_require_code_grant", BotRequireCodeGrant);
+            writer.WriteStringValue("conjure_project_id", ConjureProjectId);
             writer.WriteStringValue("cover_image", CoverImage);
             writer.WriteStringValue("custom_install_url", CustomInstallUrl);
             writer.WriteStringValue("description", Description);

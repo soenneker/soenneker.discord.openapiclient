@@ -18577,6 +18577,11 @@
           "slug": {
             "type": "string"
           },
+          "conjure_project_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          },
           "vibegrations_project_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
@@ -26708,6 +26713,11 @@
           "slug": {
             "type": "string"
           },
+          "conjure_project_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          },
           "vibegrations_project_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
@@ -30889,6 +30899,11 @@
           "slug": {
             "type": "string"
           },
+          "conjure_project_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          },
           "vibegrations_project_id": {
             "pattern": "^(0|[1-9][0-9]*)$",
             "type": "string",
@@ -32888,6 +32903,19 @@
           "restriction_count": {
             "type": "integer",
             "format": "int32"
+          },
+          "author_restriction_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "source_author_restriction_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "forward_source_author_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
           }
         }
       },
