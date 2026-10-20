@@ -8,9 +8,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
     public enum ConnectedAccountProvidersOneOf24
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "domain")]
+        [EnumMember(Value = "youtube")]
         #pragma warning disable CS1591
-        Domain,
+        Youtube,
         #pragma warning restore CS1591
     }
 }

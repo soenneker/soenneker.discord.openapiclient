@@ -8,9 +8,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
     public enum ConnectedAccountProvidersOneOf12
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "playstation")]
+        [EnumMember(Value = "paypal")]
         #pragma warning disable CS1591
-        Playstation,
+        Paypal,
         #pragma warning restore CS1591
     }
 }

@@ -14,6 +14,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The audio property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio? Audio { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio Audio { get; set; }
+#endif
         /// <summary>The author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -131,6 +139,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "audio", n => { Audio = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio.CreateFromDiscriminatorValue); } },
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor.CreateFromDiscriminatorValue); } },
                 { "color", n => { Color = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -153,6 +162,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio>("audio", Audio);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor>("author", Author);
             writer.WriteIntValue("color", Color);
             writer.WriteStringValue("description", Description);

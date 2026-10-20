@@ -8,9 +8,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
     public enum ConnectedAccountProvidersOneOf9
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "mastodon")]
+        [EnumMember(Value = "letterboxd")]
         #pragma warning disable CS1591
-        Mastodon,
+        Letterboxd,
         #pragma warning restore CS1591
     }
 }

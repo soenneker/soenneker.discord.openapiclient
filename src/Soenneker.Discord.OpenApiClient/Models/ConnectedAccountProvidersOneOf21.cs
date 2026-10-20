@@ -8,9 +8,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
     public enum ConnectedAccountProvidersOneOf21
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "twitter")]
+        [EnumMember(Value = "twitch")]
         #pragma warning disable CS1591
-        Twitter,
+        Twitch,
         #pragma warning restore CS1591
     }
 }

@@ -20875,6 +20875,9 @@
           },
           {
             "$ref": "#/components/schemas/ConnectedAccountProvidersOneOf24"
+          },
+          {
+            "$ref": "#/components/schemas/ConnectedAccountProvidersOneOf25"
           }
         ]
       },
@@ -28754,6 +28757,24 @@
           }
         }
       },
+      "MessageEmbedAudioResponse": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "proxy_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "content_type": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
       "MessageEmbedAuthorResponse": {
         "required": [
           "name"
@@ -28919,6 +28940,9 @@
           },
           "video": {
             "$ref": "#/components/schemas/MessageEmbedVideoResponse"
+          },
+          "audio": {
+            "$ref": "#/components/schemas/MessageEmbedAudioResponse"
           },
           "footer": {
             "$ref": "#/components/schemas/MessageEmbedFooterResponse"
@@ -31897,6 +31921,29 @@
           },
           "video": {
             "$ref": "#/components/schemas/RichEmbedVideoComposed"
+          },
+          "audio": {
+            "$ref": "#/components/schemas/RichEmbedAudioComposed"
+          }
+        }
+      },
+      "RichEmbedAudio": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "maxLength": 2048,
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "uri"
+          },
+          "description": {
+            "maxLength": 4096,
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },
@@ -46548,6 +46595,34 @@
           }
         }
       },
+      "RichEmbedAudioComposed": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "null"
+          },
+          {
+            "$ref": "#/components/schemas/RichEmbedAudio"
+          }
+        ],
+        "properties": {
+          "url": {
+            "maxLength": 2048,
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "uri"
+          },
+          "description": {
+            "maxLength": 4096,
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
       "RoleSelectComponentForMessageRequestType": {
         "type": "integer",
         "additionalProperties": false,
@@ -60997,13 +61072,31 @@
       },
       "ConnectedAccountProvidersOneOf9": {
         "const": null,
+        "title": "LETTERBOXD",
+        "enum": [
+          "letterboxd"
+        ],
+        "type": "object",
+        "x-ms-enum": {
+          "name": "ConnectedAccountProvidersOneOf9",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "letterboxd",
+              "name": "Letterboxd"
+            }
+          ]
+        }
+      },
+      "ConnectedAccountProvidersOneOf10": {
+        "const": null,
         "title": "MASTODON",
         "enum": [
           "mastodon"
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf9",
+          "name": "ConnectedAccountProvidersOneOf10",
           "modelAsString": false,
           "values": [
             {
@@ -61013,7 +61106,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf10": {
+      "ConnectedAccountProvidersOneOf11": {
         "const": null,
         "title": "LEAGUE_OF_LEGENDS",
         "enum": [
@@ -61021,7 +61114,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf10",
+          "name": "ConnectedAccountProvidersOneOf11",
           "modelAsString": false,
           "values": [
             {
@@ -61031,7 +61124,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf11": {
+      "ConnectedAccountProvidersOneOf12": {
         "const": null,
         "title": "PAYPAL",
         "enum": [
@@ -61039,7 +61132,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf11",
+          "name": "ConnectedAccountProvidersOneOf12",
           "modelAsString": false,
           "values": [
             {
@@ -61049,7 +61142,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf12": {
+      "ConnectedAccountProvidersOneOf13": {
         "const": null,
         "title": "PLAYSTATION",
         "enum": [
@@ -61057,7 +61150,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf12",
+          "name": "ConnectedAccountProvidersOneOf13",
           "modelAsString": false,
           "values": [
             {
@@ -61067,7 +61160,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf13": {
+      "ConnectedAccountProvidersOneOf14": {
         "const": null,
         "title": "REDDIT",
         "enum": [
@@ -61075,7 +61168,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf13",
+          "name": "ConnectedAccountProvidersOneOf14",
           "modelAsString": false,
           "values": [
             {
@@ -61085,7 +61178,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf14": {
+      "ConnectedAccountProvidersOneOf15": {
         "const": null,
         "title": "RIOT_GAMES",
         "enum": [
@@ -61093,7 +61186,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf14",
+          "name": "ConnectedAccountProvidersOneOf15",
           "modelAsString": false,
           "values": [
             {
@@ -61103,7 +61196,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf15": {
+      "ConnectedAccountProvidersOneOf16": {
         "const": null,
         "title": "ROBLOX",
         "enum": [
@@ -61111,7 +61204,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf15",
+          "name": "ConnectedAccountProvidersOneOf16",
           "modelAsString": false,
           "values": [
             {
@@ -61121,7 +61214,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf16": {
+      "ConnectedAccountProvidersOneOf17": {
         "const": null,
         "title": "SKYPE",
         "enum": [
@@ -61129,7 +61222,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf16",
+          "name": "ConnectedAccountProvidersOneOf17",
           "modelAsString": false,
           "values": [
             {
@@ -61139,7 +61232,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf17": {
+      "ConnectedAccountProvidersOneOf18": {
         "const": null,
         "title": "SPOTIFY",
         "enum": [
@@ -61147,7 +61240,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf17",
+          "name": "ConnectedAccountProvidersOneOf18",
           "modelAsString": false,
           "values": [
             {
@@ -61157,7 +61250,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf18": {
+      "ConnectedAccountProvidersOneOf19": {
         "const": null,
         "title": "STEAM",
         "enum": [
@@ -61165,7 +61258,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf18",
+          "name": "ConnectedAccountProvidersOneOf19",
           "modelAsString": false,
           "values": [
             {
@@ -61175,7 +61268,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf19": {
+      "ConnectedAccountProvidersOneOf20": {
         "const": null,
         "title": "TIKTOK",
         "enum": [
@@ -61183,7 +61276,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf19",
+          "name": "ConnectedAccountProvidersOneOf20",
           "modelAsString": false,
           "values": [
             {
@@ -61193,7 +61286,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf20": {
+      "ConnectedAccountProvidersOneOf21": {
         "const": null,
         "title": "TWITCH",
         "enum": [
@@ -61201,7 +61294,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf20",
+          "name": "ConnectedAccountProvidersOneOf21",
           "modelAsString": false,
           "values": [
             {
@@ -61211,7 +61304,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf21": {
+      "ConnectedAccountProvidersOneOf22": {
         "const": null,
         "title": "TWITTER",
         "enum": [
@@ -61219,7 +61312,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf21",
+          "name": "ConnectedAccountProvidersOneOf22",
           "modelAsString": false,
           "values": [
             {
@@ -61229,7 +61322,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf22": {
+      "ConnectedAccountProvidersOneOf23": {
         "const": null,
         "title": "XBOX",
         "enum": [
@@ -61237,7 +61330,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf22",
+          "name": "ConnectedAccountProvidersOneOf23",
           "modelAsString": false,
           "values": [
             {
@@ -61247,7 +61340,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf23": {
+      "ConnectedAccountProvidersOneOf24": {
         "const": null,
         "title": "YOUTUBE",
         "enum": [
@@ -61255,7 +61348,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf23",
+          "name": "ConnectedAccountProvidersOneOf24",
           "modelAsString": false,
           "values": [
             {
@@ -61265,7 +61358,7 @@
           ]
         }
       },
-      "ConnectedAccountProvidersOneOf24": {
+      "ConnectedAccountProvidersOneOf25": {
         "const": null,
         "title": "DOMAIN",
         "enum": [
@@ -61273,7 +61366,7 @@
         ],
         "type": "object",
         "x-ms-enum": {
-          "name": "ConnectedAccountProvidersOneOf24",
+          "name": "ConnectedAccountProvidersOneOf25",
           "modelAsString": false,
           "values": [
             {
