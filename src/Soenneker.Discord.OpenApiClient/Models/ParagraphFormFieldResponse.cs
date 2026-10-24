@@ -23,13 +23,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>Type of form field</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? FieldType { get; set; }
-#nullable restore
-#else
-        public string FieldType { get; set; }
-#endif
+        public global::Soenneker.Discord.OpenApiClient.Models.ParagraphFormFieldResponseFieldType? FieldType { get; set; }
         /// <summary>Label shown above field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +76,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "field_type", n => { FieldType = n.GetStringValue(); } },
+                { "field_type", n => { FieldType = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ParagraphFormFieldResponseFieldType>(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
@@ -97,7 +91,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteStringValue("field_type", FieldType);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ParagraphFormFieldResponseFieldType>("field_type", FieldType);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteBoolValue("required", Required);

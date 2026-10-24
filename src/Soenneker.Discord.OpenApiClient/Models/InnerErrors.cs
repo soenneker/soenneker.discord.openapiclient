@@ -9,29 +9,26 @@ namespace Soenneker.Discord.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class VoiceScheduledEventPatchRequestPartialEntityTypeWrapper : IAdditionalDataHolder, IParsable
+    public partial class InnerErrors : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The value property</summary>
-        public int? Value { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityTypeWrapper"/> and sets the default values.
-        /// </summary>
-        public VoiceScheduledEventPatchRequestPartialEntityTypeWrapper()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>The list of errors for this field</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Discord.OpenApiClient.Models.Error>? Errors { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Discord.OpenApiClient.Models.Error> Errors { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityTypeWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.InnerErrors"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityTypeWrapper CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Discord.OpenApiClient.Models.InnerErrors CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.VoiceScheduledEventPatchRequestPartialEntityTypeWrapper();
+            return new global::Soenneker.Discord.OpenApiClient.Models.InnerErrors();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -41,7 +38,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "value", n => { Value = n.GetIntValue(); } },
+                { "_errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.Error>(global::Soenneker.Discord.OpenApiClient.Models.Error.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -51,8 +48,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("value", Value);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.Error>("_errors", Errors);
         }
     }
 }

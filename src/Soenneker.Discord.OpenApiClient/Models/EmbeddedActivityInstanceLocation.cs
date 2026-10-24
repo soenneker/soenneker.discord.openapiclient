@@ -37,13 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.EmbeddedActivityInstanceLocation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("kind")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.EmbeddedActivityInstanceLocation();
-            if("GuildChannelLocation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("gc".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GuildChannelLocation = new global::Soenneker.Discord.OpenApiClient.Models.GuildChannelLocation();
             }
-            else if("PrivateChannelLocation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("pc".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.PrivateChannelLocation = new global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelLocation();
             }

@@ -37,10 +37,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The pull_request property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubIssuePullRequest? PullRequest { get; set; }
+        public UntypedNode? PullRequest { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubIssuePullRequest PullRequest { get; set; }
+        public UntypedNode PullRequest { get; set; }
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,7 +87,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "html_url", n => { HtmlUrl = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "number", n => { Number = n.GetIntValue(); } },
-                { "pull_request", n => { PullRequest = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubIssuePullRequest>(global::Soenneker.Discord.OpenApiClient.Models.GithubIssuePullRequest.CreateFromDiscriminatorValue); } },
+                { "pull_request", n => { PullRequest = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>(global::Soenneker.Discord.OpenApiClient.Models.GithubUser.CreateFromDiscriminatorValue); } },
             };
@@ -103,7 +103,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("html_url", HtmlUrl);
             writer.WriteIntValue("id", Id);
             writer.WriteIntValue("number", Number);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubIssuePullRequest>("pull_request", PullRequest);
+            writer.WriteObjectValue<UntypedNode>("pull_request", PullRequest);
             writer.WriteStringValue("title", Title);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>("user", User);
             writer.WriteAdditionalData(AdditionalData);

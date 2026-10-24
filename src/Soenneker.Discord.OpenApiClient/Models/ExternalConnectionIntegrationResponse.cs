@@ -63,13 +63,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The syncing property</summary>
         public bool? Syncing { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        public global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponseType? Type { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -115,7 +109,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "subscriber_count", n => { SubscriberCount = n.GetIntValue(); } },
                 { "synced_at", n => { SyncedAt = n.GetDateTimeOffsetValue(); } },
                 { "syncing", n => { Syncing = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponseType>(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
             };
         }
@@ -138,7 +132,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("subscriber_count", SubscriberCount);
             writer.WriteDateTimeOffsetValue("synced_at", SyncedAt);
             writer.WriteBoolValue("syncing", Syncing);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponseType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }

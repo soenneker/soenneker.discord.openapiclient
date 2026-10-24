@@ -31,13 +31,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The kind property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Kind { get; set; }
-#nullable restore
-#else
-        public string Kind { get; set; }
-#endif
+        public global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelLocationKind? Kind { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelLocation"/> and sets the default values.
         /// </summary>
@@ -65,7 +59,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "kind", n => { Kind = n.GetStringValue(); } },
+                { "kind", n => { Kind = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelLocationKind>(); } },
             };
         }
         /// <summary>
@@ -77,7 +71,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("kind", Kind);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateChannelLocationKind>("kind", Kind);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

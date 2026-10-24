@@ -115,10 +115,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeWrapper? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeOneOf2? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeWrapper Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeOneOf2 Type { get; set; }
 #endif
         /// <summary>The user_limit property</summary>
         public int? UserLimit { get; set; }
@@ -171,7 +171,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "rate_limit_per_user", n => { RateLimitPerUser = n.GetIntValue(); } },
                 { "rtc_region", n => { RtcRegion = n.GetStringValue(); } },
                 { "topic", n => { Topic = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeWrapper>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeWrapper.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeOneOf2>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeOneOf2.CreateFromDiscriminatorValue); } },
                 { "user_limit", n => { UserLimit = n.GetIntValue(); } },
                 { "video_quality_mode", n => { VideoQualityMode = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>(global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes.CreateFromDiscriminatorValue); } },
             };
@@ -199,7 +199,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);
             writer.WriteStringValue("rtc_region", RtcRegion);
             writer.WriteStringValue("topic", Topic);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeWrapper>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestTypeOneOf2>("type", Type);
             writer.WriteIntValue("user_limit", UserLimit);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>("video_quality_mode", VideoQualityMode);
             writer.WriteAdditionalData(AdditionalData);

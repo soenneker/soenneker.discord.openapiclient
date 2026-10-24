@@ -15,7 +15,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The flags property</summary>
-        public int? Flags { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.EditLobbyRequestFlags? Flags { get; set; }
         /// <summary>The idle_timeout_seconds property</summary>
         public int? IdleTimeoutSeconds { get; set; }
         /// <summary>The members property</summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flags", n => { Flags = n.GetIntValue(); } },
+                { "flags", n => { Flags = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.EditLobbyRequestFlags>(); } },
                 { "idle_timeout_seconds", n => { IdleTimeoutSeconds = n.GetIntValue(); } },
                 { "members", n => { Members = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest>(global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EditLobbyRequestMetadata>(global::Soenneker.Discord.OpenApiClient.Models.EditLobbyRequestMetadata.CreateFromDiscriminatorValue); } },
@@ -81,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("flags", Flags);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.EditLobbyRequestFlags>("flags", Flags);
             writer.WriteIntValue("idle_timeout_seconds", IdleTimeoutSeconds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest>("members", Members);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EditLobbyRequestMetadata>("metadata", Metadata);

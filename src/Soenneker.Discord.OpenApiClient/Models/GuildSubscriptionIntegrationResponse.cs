@@ -41,13 +41,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildSubscriptionIntegrationResponseType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildSubscriptionIntegrationResponse"/> and sets the default values.
         /// </summary>
@@ -77,7 +71,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildSubscriptionIntegrationResponseType>(); } },
             };
         }
         /// <summary>
@@ -91,7 +85,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildSubscriptionIntegrationResponseType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

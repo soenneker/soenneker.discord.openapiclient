@@ -37,10 +37,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeWrapper? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeWrapper Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2 Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "invitable", n => { Invitable = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "rate_limit_per_user", n => { RateLimitPerUser = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeWrapper>(global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeWrapper.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2>(global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("invitable", Invitable);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeWrapper>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -51,19 +51,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Scopes { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponseScopesItem?>? Scopes { get; set; }
 #nullable restore
 #else
-        public List<string> Scopes { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponseScopesItem?> Scopes { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        public global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponseType? Type { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,8 +96,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "scopes", n => { Scopes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "scopes", n => { Scopes = n.GetCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponseScopesItem>()?.AsList(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponseType>(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
             };
         }
@@ -119,8 +113,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfPrimitiveValues<string>("scopes", Scopes);
-            writer.WriteStringValue("type", Type);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponseScopesItem>("scopes", Scopes);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponseType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -53,21 +53,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("field_type")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem();
-            if("MultipleChoiceFormFieldResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("MULTIPLE_CHOICE".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.MultipleChoiceFormFieldResponse = new global::Soenneker.Discord.OpenApiClient.Models.MultipleChoiceFormFieldResponse();
             }
-            else if("ParagraphFormFieldResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("PARAGRAPH".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ParagraphFormFieldResponse = new global::Soenneker.Discord.OpenApiClient.Models.ParagraphFormFieldResponse();
             }
-            else if("TermsFormFieldResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("TERMS".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.TermsFormFieldResponse = new global::Soenneker.Discord.OpenApiClient.Models.TermsFormFieldResponse();
             }
-            else if("TextInputFormFieldResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("TEXT_INPUT".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.TextInputFormFieldResponse = new global::Soenneker.Discord.OpenApiClient.Models.TextInputFormFieldResponse();
             }

@@ -7,28 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Discord.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorDetailsOneOf1"/>, <see cref="global::Soenneker.Discord.OpenApiClient.Models.InnerErrors"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class ErrorDetails : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class ErrorDetails : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The list of errors for this field</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorDetailsOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.Error>? Errors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ErrorDetailsOneOf1? ErrorDetailsOneOf1 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.Error> Errors { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ErrorDetailsOneOf1 ErrorDetailsOneOf1 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorDetails"/> and sets the default values.
-        /// </summary>
-        public ErrorDetails()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.InnerErrors"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.InnerErrors? InnerErrors { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.InnerErrors InnerErrors { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -37,7 +37,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.ErrorDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.ErrorDetails();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var result = new global::Soenneker.Discord.OpenApiClient.Models.ErrorDetails();
+            if("ErrorDetailsOneOf1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.ErrorDetailsOneOf1 = new global::Soenneker.Discord.OpenApiClient.Models.ErrorDetailsOneOf1();
+            }
+            else if("InnerErrors".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.InnerErrors = new global::Soenneker.Discord.OpenApiClient.Models.InnerErrors();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -45,10 +55,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(ErrorDetailsOneOf1 != null)
             {
-                { "_errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.Error>(global::Soenneker.Discord.OpenApiClient.Models.Error.CreateFromDiscriminatorValue)?.AsList(); } },
-            };
+                return ErrorDetailsOneOf1.GetFieldDeserializers();
+            }
+            else if(InnerErrors != null)
+            {
+                return InnerErrors.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -57,8 +72,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.Error>("_errors", Errors);
-            writer.WriteAdditionalData(AdditionalData);
+            if(ErrorDetailsOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ErrorDetailsOneOf1>(null, ErrorDetailsOneOf1);
+            }
+            else if(InnerErrors != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InnerErrors>(null, InnerErrors);
+            }
         }
     }
 }

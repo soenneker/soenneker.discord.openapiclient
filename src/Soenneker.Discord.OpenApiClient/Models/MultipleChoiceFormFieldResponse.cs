@@ -31,13 +31,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>Type of form field</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? FieldType { get; set; }
-#nullable restore
-#else
-        public string FieldType { get; set; }
-#endif
+        public global::Soenneker.Discord.OpenApiClient.Models.MultipleChoiceFormFieldResponseFieldType? FieldType { get; set; }
         /// <summary>Label shown above field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +71,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "choices", n => { Choices = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "field_type", n => { FieldType = n.GetStringValue(); } },
+                { "field_type", n => { FieldType = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.MultipleChoiceFormFieldResponseFieldType>(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
                 { "response", n => { Response = n.GetIntValue(); } },
@@ -92,7 +86,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("choices", Choices);
             writer.WriteStringValue("description", Description);
-            writer.WriteStringValue("field_type", FieldType);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.MultipleChoiceFormFieldResponseFieldType>("field_type", FieldType);
             writer.WriteStringValue("label", Label);
             writer.WriteBoolValue("required", Required);
             writer.WriteIntValue("response", Response);

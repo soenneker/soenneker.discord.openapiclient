@@ -41,10 +41,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The entity_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventPatchRequestPartialEntityTypeWrapper? EntityType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventPatchRequestPartialEntityTypeOneOf2? EntityType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventPatchRequestPartialEntityTypeWrapper EntityType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventPatchRequestPartialEntityTypeOneOf2 EntityType { get; set; }
 #endif
         /// <summary>The image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,7 +112,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "entity_metadata", n => { EntityMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntityMetadataExternal>(global::Soenneker.Discord.OpenApiClient.Models.EntityMetadataExternal.CreateFromDiscriminatorValue); } },
-                { "entity_type", n => { EntityType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventPatchRequestPartialEntityTypeWrapper>(global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventPatchRequestPartialEntityTypeWrapper.CreateFromDiscriminatorValue); } },
+                { "entity_type", n => { EntityType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventPatchRequestPartialEntityTypeOneOf2>(global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventPatchRequestPartialEntityTypeOneOf2.CreateFromDiscriminatorValue); } },
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "privacy_level", n => { PrivacyLevel = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1>(); } },
@@ -132,7 +132,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EntityMetadataExternal>("entity_metadata", EntityMetadata);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventPatchRequestPartialEntityTypeWrapper>("entity_type", EntityType);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventPatchRequestPartialEntityTypeOneOf2>("entity_type", EntityType);
             writer.WriteStringValue("image", Image);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1>("privacy_level", PrivacyLevel);

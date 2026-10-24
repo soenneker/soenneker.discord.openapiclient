@@ -37,13 +37,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentResponseDefaultValuesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentResponseDefaultValuesItem();
-            if("RoleSelectDefaultValueResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("role".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.RoleSelectDefaultValueResponse = new global::Soenneker.Discord.OpenApiClient.Models.RoleSelectDefaultValueResponse();
             }
-            else if("UserSelectDefaultValueResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("user".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.UserSelectDefaultValueResponse = new global::Soenneker.Discord.OpenApiClient.Models.UserSelectDefaultValueResponse();
             }

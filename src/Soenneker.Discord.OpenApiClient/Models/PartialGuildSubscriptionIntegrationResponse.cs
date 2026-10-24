@@ -39,13 +39,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        public global::Soenneker.Discord.OpenApiClient.Models.PartialGuildSubscriptionIntegrationResponseType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PartialGuildSubscriptionIntegrationResponse"/> and sets the default values.
         /// </summary>
@@ -74,7 +68,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "account", n => { Account = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AccountResponse>(global::Soenneker.Discord.OpenApiClient.Models.AccountResponse.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.PartialGuildSubscriptionIntegrationResponseType>(); } },
             };
         }
         /// <summary>
@@ -87,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AccountResponse>("account", Account);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.PartialGuildSubscriptionIntegrationResponseType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

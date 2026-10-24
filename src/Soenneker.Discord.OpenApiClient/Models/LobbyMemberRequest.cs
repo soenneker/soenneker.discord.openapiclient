@@ -23,7 +23,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public string AdditionalName { get; set; }
 #endif
         /// <summary>The flags property</summary>
-        public int? Flags { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequestFlags? Flags { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "additional_name", n => { AdditionalName = n.GetStringValue(); } },
-                { "flags", n => { Flags = n.GetIntValue(); } },
+                { "flags", n => { Flags = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequestFlags>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequestMetadataProperty>(global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequestMetadataProperty.CreateFromDiscriminatorValue); } },
             };
@@ -79,7 +79,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("additional_name", AdditionalName);
-            writer.WriteIntValue("flags", Flags);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequestFlags>("flags", Flags);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequestMetadataProperty>("metadata", Metadata);
             writer.WriteAdditionalData(AdditionalData);

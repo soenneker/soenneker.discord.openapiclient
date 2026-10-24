@@ -15,10 +15,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Whether to approve or reject the join request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Action { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction? Action { get; set; }
 #nullable restore
 #else
-        public string Action { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction Action { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetStringValue(); } },
+                { "action", n => { Action = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction>(global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction.CreateFromDiscriminatorValue); } },
                 { "rejection_reason", n => { RejectionReason = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("action", Action);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction>("action", Action);
             writer.WriteStringValue("rejection_reason", RejectionReason);
             writer.WriteAdditionalData(AdditionalData);
         }

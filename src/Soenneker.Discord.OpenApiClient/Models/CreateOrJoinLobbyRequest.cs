@@ -15,7 +15,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The flags property</summary>
-        public int? Flags { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestFlags? Flags { get; set; }
         /// <summary>The idle_timeout_seconds property</summary>
         public int? IdleTimeoutSeconds { get; set; }
         /// <summary>The lobby_metadata property</summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flags", n => { Flags = n.GetIntValue(); } },
+                { "flags", n => { Flags = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestFlags>(); } },
                 { "idle_timeout_seconds", n => { IdleTimeoutSeconds = n.GetIntValue(); } },
                 { "lobby_metadata", n => { LobbyMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestLobbyMetadata>(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestLobbyMetadata.CreateFromDiscriminatorValue); } },
                 { "member_metadata", n => { MemberMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestMemberMetadata>(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestMemberMetadata.CreateFromDiscriminatorValue); } },
@@ -81,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("flags", Flags);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestFlags>("flags", Flags);
             writer.WriteIntValue("idle_timeout_seconds", IdleTimeoutSeconds);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestLobbyMetadata>("lobby_metadata", LobbyMetadata);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestMemberMetadata>("member_metadata", MemberMetadata);
