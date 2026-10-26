@@ -44586,6 +44586,14 @@
           },
           "flags": {
             "$ref": "#/components/schemas/CreateOrJoinLobbyRequestFlags"
+          },
+          "name": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },
@@ -44624,6 +44632,14 @@
               "string"
             ],
             "format": "uri"
+          },
+          "name": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },
@@ -44662,6 +44678,14 @@
               "string"
             ],
             "format": "uri"
+          },
+          "name": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },

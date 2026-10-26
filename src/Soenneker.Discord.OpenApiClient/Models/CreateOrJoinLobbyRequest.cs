@@ -34,6 +34,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestMemberMetadata MemberMetadata { get; set; }
 #endif
+        /// <summary>The name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
         /// <summary>The secret property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,6 +79,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "idle_timeout_seconds", n => { IdleTimeoutSeconds = n.GetIntValue(); } },
                 { "lobby_metadata", n => { LobbyMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestLobbyMetadata>(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestLobbyMetadata.CreateFromDiscriminatorValue); } },
                 { "member_metadata", n => { MemberMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestMemberMetadata>(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestMemberMetadata.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetStringValue(); } },
                 { "secret", n => { Secret = n.GetStringValue(); } },
             };
         }
@@ -85,6 +94,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("idle_timeout_seconds", IdleTimeoutSeconds);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestLobbyMetadata>("lobby_metadata", LobbyMetadata);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestMemberMetadata>("member_metadata", MemberMetadata);
+            writer.WriteStringValue("name", Name);
             writer.WriteStringValue("secret", Secret);
             writer.WriteAdditionalData(AdditionalData);
         }

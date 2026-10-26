@@ -34,6 +34,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public global::Soenneker.Discord.OpenApiClient.Models.EditLobbyRequestMetadata Metadata { get; set; }
 #endif
+        /// <summary>The name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
         /// <summary>The override_event_webhooks_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,6 +79,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "idle_timeout_seconds", n => { IdleTimeoutSeconds = n.GetIntValue(); } },
                 { "members", n => { Members = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest>(global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EditLobbyRequestMetadata>(global::Soenneker.Discord.OpenApiClient.Models.EditLobbyRequestMetadata.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetStringValue(); } },
                 { "override_event_webhooks_url", n => { OverrideEventWebhooksUrl = n.GetStringValue(); } },
             };
         }
@@ -85,6 +94,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("idle_timeout_seconds", IdleTimeoutSeconds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.LobbyMemberRequest>("members", Members);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.EditLobbyRequestMetadata>("metadata", Metadata);
+            writer.WriteStringValue("name", Name);
             writer.WriteStringValue("override_event_webhooks_url", OverrideEventWebhooksUrl);
             writer.WriteAdditionalData(AdditionalData);
         }
