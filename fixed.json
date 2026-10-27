@@ -3716,6 +3716,164 @@
         }
       ]
     },
+    "/channels/{channelId}/permissions/member/{userId}": {
+      "get": {
+        "description": "Returns the fully cascaded permissions for a member in this channel, applying their roles and the channel\u0027s permission overwrites.",
+        "operationId": "GetChannelMemberPermissions",
+        "parameters": [
+          {
+            "name": "implicit",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response for get_channel_member_permissions",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionsResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Client ratelimited response",
+            "$ref": "#/components/responses/ClientRatelimitedResponse"
+          },
+          "4XX": {
+            "description": "Client error response",
+            "$ref": "#/components/responses/ClientErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "BotToken": []
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "name": "channelId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          }
+        },
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          }
+        }
+      ]
+    },
+    "/channels/{channelId}/permissions/role/{roleId}": {
+      "get": {
+        "description": "Returns the permissions a role grants in this channel, applying the channel\u0027s permission overwrites on top of the role\u0027s guild-level permissions.",
+        "operationId": "GetChannelRolePermissions",
+        "parameters": [
+          {
+            "name": "implicit",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response for get_channel_role_permissions",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionsResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Client ratelimited response",
+            "$ref": "#/components/responses/ClientRatelimitedResponse"
+          },
+          "4XX": {
+            "description": "Client error response",
+            "$ref": "#/components/responses/ClientErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "BotToken": []
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "name": "channelId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          }
+        },
+        {
+          "name": "roleId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          }
+        }
+      ]
+    },
     "/channels/{channelId}/permissions/{overwriteId}": {
       "put": {
         "operationId": "SetChannelPermissionOverwrite",
@@ -8251,6 +8409,146 @@
       "parameters": [
         {
           "name": "guildId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          }
+        }
+      ]
+    },
+    "/guilds/{guildId}/permissions/member/{userId}": {
+      "get": {
+        "description": "Returns the fully cascaded guild-level permissions for a member, applying all of their roles including @everyone\u0027s",
+        "operationId": "GetGuildMemberPermissions",
+        "responses": {
+          "200": {
+            "description": "200 response for get_guild_member_permissions",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionsResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Client ratelimited response",
+            "$ref": "#/components/responses/ClientRatelimitedResponse"
+          },
+          "4XX": {
+            "description": "Client error response",
+            "$ref": "#/components/responses/ClientErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "BotToken": []
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "name": "guildId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          }
+        },
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          }
+        }
+      ]
+    },
+    "/guilds/{guildId}/permissions/role/{roleId}": {
+      "get": {
+        "description": "Returns the permissions a role grants at the guild level, combining the role\u0027s own permissions with @everyone\u0027s.",
+        "operationId": "GetGuildRolePermissions",
+        "responses": {
+          "200": {
+            "description": "200 response for get_guild_role_permissions",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionsResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Client ratelimited response",
+            "$ref": "#/components/responses/ClientRatelimitedResponse"
+          },
+          "4XX": {
+            "description": "Client error response",
+            "$ref": "#/components/responses/ClientErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "BotToken": []
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "name": "guildId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": "string",
+            "format": "snowflake"
+          }
+        },
+        {
+          "name": "roleId",
           "in": "path",
           "required": true,
           "schema": {
@@ -20992,6 +21290,18 @@
           }
         }
       },
+      "ContentScanMetadataResponse": {
+        "required": [
+          "flags"
+        ],
+        "type": "object",
+        "properties": {
+          "flags": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
       "CreateEntitlementRequestData": {
         "required": [
           "sku_id",
@@ -30416,6 +30726,18 @@
           }
         }
       },
+      "PermissionsResponse": {
+        "required": [
+          "permissions"
+        ],
+        "type": "object",
+        "properties": {
+          "permissions": {
+            "type": "string",
+            "description": "The computed permissions, as a stringified bitfield"
+          }
+        }
+      },
       "PinnedMessageResponse": {
         "required": [
           "pinned_at",
@@ -34941,8 +35263,7 @@
       "UnfurledMediaResponse": {
         "required": [
           "id",
-          "url",
-          "proxy_url"
+          "url"
         ],
         "type": "object",
         "properties": {
@@ -34971,11 +35292,31 @@
             ],
             "format": "int32"
           },
+          "placeholder": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "placeholder_version": {
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int32"
+          },
+          "content_scan_metadata": {
+            "$ref": "#/components/schemas/ContentScanMetadataResponse"
+          },
           "content_type": {
             "type": [
               "null",
               "string"
             ]
+          },
+          "flags": {
+            "type": "integer",
+            "format": "int32"
           },
           "attachment_id": {
             "pattern": "^(0|[1-9][0-9]*)$",

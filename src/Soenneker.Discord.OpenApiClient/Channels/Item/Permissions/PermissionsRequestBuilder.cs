@@ -3,6 +3,8 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Item;
+using Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Member;
+using Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Role;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,6 +17,16 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Permissions
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PermissionsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The member property</summary>
+        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Member.MemberRequestBuilder Member
+        {
+            get => new global::Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Member.MemberRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The role property</summary>
+        public global::Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Role.RoleRequestBuilder Role
+        {
+            get => new global::Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Role.RoleRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item.permissions.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Item.WithOverwriteItemRequestBuilder"/></returns>

@@ -16,6 +16,7 @@ using Soenneker.Discord.OpenApiClient.Guilds.Item.Members;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.Messages;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.NewMemberWelcome;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.Onboarding;
+using Soenneker.Discord.OpenApiClient.Guilds.Item.Permissions;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.Preview;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.Prune;
 using Soenneker.Discord.OpenApiClient.Guilds.Item.Regions;
@@ -111,6 +112,11 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item
         public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Onboarding.OnboardingRequestBuilder Onboarding
         {
             get => new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Onboarding.OnboardingRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The permissions property</summary>
+        public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Permissions.PermissionsRequestBuilder Permissions
+        {
+            get => new global::Soenneker.Discord.OpenApiClient.Guilds.Item.Permissions.PermissionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The preview property</summary>
         public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Preview.PreviewRequestBuilder Preview

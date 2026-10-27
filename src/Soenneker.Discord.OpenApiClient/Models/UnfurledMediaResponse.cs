@@ -22,6 +22,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string AttachmentId { get; set; }
 #endif
+        /// <summary>The content_scan_metadata property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.ContentScanMetadataResponse? ContentScanMetadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.ContentScanMetadataResponse ContentScanMetadata { get; set; }
+#endif
         /// <summary>The content_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -30,6 +38,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string ContentType { get; set; }
 #endif
+        /// <summary>The flags property</summary>
+        public int? Flags { get; set; }
         /// <summary>The height property</summary>
         public int? Height { get; set; }
         /// <summary>The id property</summary>
@@ -40,6 +50,16 @@ namespace Soenneker.Discord.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The placeholder property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Placeholder { get; set; }
+#nullable restore
+#else
+        public string Placeholder { get; set; }
+#endif
+        /// <summary>The placeholder_version property</summary>
+        public int? PlaceholderVersion { get; set; }
         /// <summary>The proxy_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,9 +104,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "attachment_id", n => { AttachmentId = n.GetStringValue(); } },
+                { "content_scan_metadata", n => { ContentScanMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ContentScanMetadataResponse>(global::Soenneker.Discord.OpenApiClient.Models.ContentScanMetadataResponse.CreateFromDiscriminatorValue); } },
                 { "content_type", n => { ContentType = n.GetStringValue(); } },
+                { "flags", n => { Flags = n.GetIntValue(); } },
                 { "height", n => { Height = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "placeholder", n => { Placeholder = n.GetStringValue(); } },
+                { "placeholder_version", n => { PlaceholderVersion = n.GetIntValue(); } },
                 { "proxy_url", n => { ProxyUrl = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "width", n => { Width = n.GetIntValue(); } },
@@ -100,9 +124,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("attachment_id", AttachmentId);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ContentScanMetadataResponse>("content_scan_metadata", ContentScanMetadata);
             writer.WriteStringValue("content_type", ContentType);
+            writer.WriteIntValue("flags", Flags);
             writer.WriteIntValue("height", Height);
             writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("placeholder", Placeholder);
+            writer.WriteIntValue("placeholder_version", PlaceholderVersion);
             writer.WriteStringValue("proxy_url", ProxyUrl);
             writer.WriteStringValue("url", Url);
             writer.WriteIntValue("width", Width);
