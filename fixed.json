@@ -19330,6 +19330,12 @@
           },
           {
             "$ref": "#/components/schemas/AuditLogActionTypesOneOf76"
+          },
+          {
+            "$ref": "#/components/schemas/AuditLogActionTypesOneOf77"
+          },
+          {
+            "$ref": "#/components/schemas/AuditLogActionTypesOneOf78"
           }
         ],
         "format": "int32"
@@ -49123,12 +49129,30 @@
       },
       "AuditLogActionTypesOneOf8": {
         "const": null,
+        "title": "CHANNEL_POSITION_UPDATE",
+        "enum": [
+          "16"
+        ],
+        "description": "Channels were reordered",
+        "x-ms-enum": {
+          "name": "AuditLogActionTypesOneOf8",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "16",
+              "name": "Value16"
+            }
+          ]
+        }
+      },
+      "AuditLogActionTypesOneOf9": {
+        "const": null,
         "title": "MEMBER_KICK",
         "enum": [
           "20"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf8",
+          "name": "AuditLogActionTypesOneOf9",
           "modelAsString": false,
           "values": [
             {
@@ -49138,14 +49162,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf9": {
+      "AuditLogActionTypesOneOf10": {
         "const": null,
         "title": "MEMBER_PRUNE",
         "enum": [
           "21"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf9",
+          "name": "AuditLogActionTypesOneOf10",
           "modelAsString": false,
           "values": [
             {
@@ -49155,14 +49179,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf10": {
+      "AuditLogActionTypesOneOf11": {
         "const": null,
         "title": "MEMBER_BAN_ADD",
         "enum": [
           "22"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf10",
+          "name": "AuditLogActionTypesOneOf11",
           "modelAsString": false,
           "values": [
             {
@@ -49172,14 +49196,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf11": {
+      "AuditLogActionTypesOneOf12": {
         "const": null,
         "title": "MEMBER_BAN_REMOVE",
         "enum": [
           "23"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf11",
+          "name": "AuditLogActionTypesOneOf12",
           "modelAsString": false,
           "values": [
             {
@@ -49189,14 +49213,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf12": {
+      "AuditLogActionTypesOneOf13": {
         "const": null,
         "title": "MEMBER_UPDATE",
         "enum": [
           "24"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf12",
+          "name": "AuditLogActionTypesOneOf13",
           "modelAsString": false,
           "values": [
             {
@@ -49206,14 +49230,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf13": {
+      "AuditLogActionTypesOneOf14": {
         "const": null,
         "title": "MEMBER_ROLE_UPDATE",
         "enum": [
           "25"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf13",
+          "name": "AuditLogActionTypesOneOf14",
           "modelAsString": false,
           "values": [
             {
@@ -49223,14 +49247,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf14": {
+      "AuditLogActionTypesOneOf15": {
         "const": null,
         "title": "MEMBER_MOVE",
         "enum": [
           "26"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf14",
+          "name": "AuditLogActionTypesOneOf15",
           "modelAsString": false,
           "values": [
             {
@@ -49240,14 +49264,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf15": {
+      "AuditLogActionTypesOneOf16": {
         "const": null,
         "title": "MEMBER_DISCONNECT",
         "enum": [
           "27"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf15",
+          "name": "AuditLogActionTypesOneOf16",
           "modelAsString": false,
           "values": [
             {
@@ -49257,14 +49281,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf16": {
+      "AuditLogActionTypesOneOf17": {
         "const": null,
         "title": "BOT_ADD",
         "enum": [
           "28"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf16",
+          "name": "AuditLogActionTypesOneOf17",
           "modelAsString": false,
           "values": [
             {
@@ -49274,14 +49298,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf17": {
+      "AuditLogActionTypesOneOf18": {
         "const": null,
         "title": "ROLE_CREATE",
         "enum": [
           "30"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf17",
+          "name": "AuditLogActionTypesOneOf18",
           "modelAsString": false,
           "values": [
             {
@@ -49291,14 +49315,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf18": {
+      "AuditLogActionTypesOneOf19": {
         "const": null,
         "title": "ROLE_UPDATE",
         "enum": [
           "31"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf18",
+          "name": "AuditLogActionTypesOneOf19",
           "modelAsString": false,
           "values": [
             {
@@ -49308,14 +49332,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf19": {
+      "AuditLogActionTypesOneOf20": {
         "const": null,
         "title": "ROLE_DELETE",
         "enum": [
           "32"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf19",
+          "name": "AuditLogActionTypesOneOf20",
           "modelAsString": false,
           "values": [
             {
@@ -49325,14 +49349,32 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf20": {
+      "AuditLogActionTypesOneOf21": {
+        "const": null,
+        "title": "ROLE_POSITION_UPDATE",
+        "enum": [
+          "33"
+        ],
+        "description": "Roles were reordered",
+        "x-ms-enum": {
+          "name": "AuditLogActionTypesOneOf21",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "33",
+              "name": "Value33"
+            }
+          ]
+        }
+      },
+      "AuditLogActionTypesOneOf22": {
         "const": null,
         "title": "INVITE_CREATE",
         "enum": [
           "40"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf20",
+          "name": "AuditLogActionTypesOneOf22",
           "modelAsString": false,
           "values": [
             {
@@ -49342,14 +49384,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf21": {
+      "AuditLogActionTypesOneOf23": {
         "const": null,
         "title": "INVITE_UPDATE",
         "enum": [
           "41"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf21",
+          "name": "AuditLogActionTypesOneOf23",
           "modelAsString": false,
           "values": [
             {
@@ -49359,14 +49401,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf22": {
+      "AuditLogActionTypesOneOf24": {
         "const": null,
         "title": "INVITE_DELETE",
         "enum": [
           "42"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf22",
+          "name": "AuditLogActionTypesOneOf24",
           "modelAsString": false,
           "values": [
             {
@@ -49376,14 +49418,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf23": {
+      "AuditLogActionTypesOneOf25": {
         "const": null,
         "title": "WEBHOOK_CREATE",
         "enum": [
           "50"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf23",
+          "name": "AuditLogActionTypesOneOf25",
           "modelAsString": false,
           "values": [
             {
@@ -49393,14 +49435,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf24": {
+      "AuditLogActionTypesOneOf26": {
         "const": null,
         "title": "WEBHOOK_UPDATE",
         "enum": [
           "51"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf24",
+          "name": "AuditLogActionTypesOneOf26",
           "modelAsString": false,
           "values": [
             {
@@ -49410,14 +49452,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf25": {
+      "AuditLogActionTypesOneOf27": {
         "const": null,
         "title": "WEBHOOK_DELETE",
         "enum": [
           "52"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf25",
+          "name": "AuditLogActionTypesOneOf27",
           "modelAsString": false,
           "values": [
             {
@@ -49427,14 +49469,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf26": {
+      "AuditLogActionTypesOneOf28": {
         "const": null,
         "title": "EMOJI_CREATE",
         "enum": [
           "60"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf26",
+          "name": "AuditLogActionTypesOneOf28",
           "modelAsString": false,
           "values": [
             {
@@ -49444,14 +49486,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf27": {
+      "AuditLogActionTypesOneOf29": {
         "const": null,
         "title": "EMOJI_UPDATE",
         "enum": [
           "61"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf27",
+          "name": "AuditLogActionTypesOneOf29",
           "modelAsString": false,
           "values": [
             {
@@ -49461,14 +49503,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf28": {
+      "AuditLogActionTypesOneOf30": {
         "const": null,
         "title": "EMOJI_DELETE",
         "enum": [
           "62"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf28",
+          "name": "AuditLogActionTypesOneOf30",
           "modelAsString": false,
           "values": [
             {
@@ -49478,14 +49520,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf29": {
+      "AuditLogActionTypesOneOf31": {
         "const": null,
         "title": "MESSAGE_DELETE",
         "enum": [
           "72"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf29",
+          "name": "AuditLogActionTypesOneOf31",
           "modelAsString": false,
           "values": [
             {
@@ -49495,14 +49537,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf30": {
+      "AuditLogActionTypesOneOf32": {
         "const": null,
         "title": "MESSAGE_BULK_DELETE",
         "enum": [
           "73"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf30",
+          "name": "AuditLogActionTypesOneOf32",
           "modelAsString": false,
           "values": [
             {
@@ -49512,14 +49554,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf31": {
+      "AuditLogActionTypesOneOf33": {
         "const": null,
         "title": "MESSAGE_PIN",
         "enum": [
           "74"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf31",
+          "name": "AuditLogActionTypesOneOf33",
           "modelAsString": false,
           "values": [
             {
@@ -49529,14 +49571,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf32": {
+      "AuditLogActionTypesOneOf34": {
         "const": null,
         "title": "MESSAGE_UNPIN",
         "enum": [
           "75"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf32",
+          "name": "AuditLogActionTypesOneOf34",
           "modelAsString": false,
           "values": [
             {
@@ -49546,14 +49588,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf33": {
+      "AuditLogActionTypesOneOf35": {
         "const": null,
         "title": "INTEGRATION_CREATE",
         "enum": [
           "80"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf33",
+          "name": "AuditLogActionTypesOneOf35",
           "modelAsString": false,
           "values": [
             {
@@ -49563,14 +49605,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf34": {
+      "AuditLogActionTypesOneOf36": {
         "const": null,
         "title": "INTEGRATION_UPDATE",
         "enum": [
           "81"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf34",
+          "name": "AuditLogActionTypesOneOf36",
           "modelAsString": false,
           "values": [
             {
@@ -49580,14 +49622,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf35": {
+      "AuditLogActionTypesOneOf37": {
         "const": null,
         "title": "INTEGRATION_DELETE",
         "enum": [
           "82"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf35",
+          "name": "AuditLogActionTypesOneOf37",
           "modelAsString": false,
           "values": [
             {
@@ -49597,14 +49639,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf36": {
+      "AuditLogActionTypesOneOf38": {
         "const": null,
         "title": "STAGE_INSTANCE_CREATE",
         "enum": [
           "83"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf36",
+          "name": "AuditLogActionTypesOneOf38",
           "modelAsString": false,
           "values": [
             {
@@ -49614,14 +49656,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf37": {
+      "AuditLogActionTypesOneOf39": {
         "const": null,
         "title": "STAGE_INSTANCE_UPDATE",
         "enum": [
           "84"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf37",
+          "name": "AuditLogActionTypesOneOf39",
           "modelAsString": false,
           "values": [
             {
@@ -49631,14 +49673,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf38": {
+      "AuditLogActionTypesOneOf40": {
         "const": null,
         "title": "STAGE_INSTANCE_DELETE",
         "enum": [
           "85"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf38",
+          "name": "AuditLogActionTypesOneOf40",
           "modelAsString": false,
           "values": [
             {
@@ -49648,14 +49690,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf39": {
+      "AuditLogActionTypesOneOf41": {
         "const": null,
         "title": "STICKER_CREATE",
         "enum": [
           "90"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf39",
+          "name": "AuditLogActionTypesOneOf41",
           "modelAsString": false,
           "values": [
             {
@@ -49665,14 +49707,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf40": {
+      "AuditLogActionTypesOneOf42": {
         "const": null,
         "title": "STICKER_UPDATE",
         "enum": [
           "91"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf40",
+          "name": "AuditLogActionTypesOneOf42",
           "modelAsString": false,
           "values": [
             {
@@ -49682,14 +49724,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf41": {
+      "AuditLogActionTypesOneOf43": {
         "const": null,
         "title": "STICKER_DELETE",
         "enum": [
           "92"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf41",
+          "name": "AuditLogActionTypesOneOf43",
           "modelAsString": false,
           "values": [
             {
@@ -49699,14 +49741,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf42": {
+      "AuditLogActionTypesOneOf44": {
         "const": null,
         "title": "GUILD_SCHEDULED_EVENT_CREATE",
         "enum": [
           "100"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf42",
+          "name": "AuditLogActionTypesOneOf44",
           "modelAsString": false,
           "values": [
             {
@@ -49716,14 +49758,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf43": {
+      "AuditLogActionTypesOneOf45": {
         "const": null,
         "title": "GUILD_SCHEDULED_EVENT_UPDATE",
         "enum": [
           "101"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf43",
+          "name": "AuditLogActionTypesOneOf45",
           "modelAsString": false,
           "values": [
             {
@@ -49733,14 +49775,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf44": {
+      "AuditLogActionTypesOneOf46": {
         "const": null,
         "title": "GUILD_SCHEDULED_EVENT_DELETE",
         "enum": [
           "102"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf44",
+          "name": "AuditLogActionTypesOneOf46",
           "modelAsString": false,
           "values": [
             {
@@ -49750,14 +49792,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf45": {
+      "AuditLogActionTypesOneOf47": {
         "const": null,
         "title": "THREAD_CREATE",
         "enum": [
           "110"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf45",
+          "name": "AuditLogActionTypesOneOf47",
           "modelAsString": false,
           "values": [
             {
@@ -49767,14 +49809,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf46": {
+      "AuditLogActionTypesOneOf48": {
         "const": null,
         "title": "THREAD_UPDATE",
         "enum": [
           "111"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf46",
+          "name": "AuditLogActionTypesOneOf48",
           "modelAsString": false,
           "values": [
             {
@@ -49784,14 +49826,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf47": {
+      "AuditLogActionTypesOneOf49": {
         "const": null,
         "title": "THREAD_DELETE",
         "enum": [
           "112"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf47",
+          "name": "AuditLogActionTypesOneOf49",
           "modelAsString": false,
           "values": [
             {
@@ -49801,14 +49843,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf48": {
+      "AuditLogActionTypesOneOf50": {
         "const": null,
         "title": "APPLICATION_COMMAND_PERMISSION_UPDATE",
         "enum": [
           "121"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf48",
+          "name": "AuditLogActionTypesOneOf50",
           "modelAsString": false,
           "values": [
             {
@@ -49818,14 +49860,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf49": {
+      "AuditLogActionTypesOneOf51": {
         "const": null,
         "title": "SOUNDBOARD_SOUND_CREATE",
         "enum": [
           "130"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf49",
+          "name": "AuditLogActionTypesOneOf51",
           "modelAsString": false,
           "values": [
             {
@@ -49835,14 +49877,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf50": {
+      "AuditLogActionTypesOneOf52": {
         "const": null,
         "title": "SOUNDBOARD_SOUND_UPDATE",
         "enum": [
           "131"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf50",
+          "name": "AuditLogActionTypesOneOf52",
           "modelAsString": false,
           "values": [
             {
@@ -49852,14 +49894,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf51": {
+      "AuditLogActionTypesOneOf53": {
         "const": null,
         "title": "SOUNDBOARD_SOUND_DELETE",
         "enum": [
           "132"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf51",
+          "name": "AuditLogActionTypesOneOf53",
           "modelAsString": false,
           "values": [
             {
@@ -49869,14 +49911,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf52": {
+      "AuditLogActionTypesOneOf54": {
         "const": null,
         "title": "AUTO_MODERATION_RULE_CREATE",
         "enum": [
           "140"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf52",
+          "name": "AuditLogActionTypesOneOf54",
           "modelAsString": false,
           "values": [
             {
@@ -49886,14 +49928,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf53": {
+      "AuditLogActionTypesOneOf55": {
         "const": null,
         "title": "AUTO_MODERATION_RULE_UPDATE",
         "enum": [
           "141"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf53",
+          "name": "AuditLogActionTypesOneOf55",
           "modelAsString": false,
           "values": [
             {
@@ -49903,14 +49945,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf54": {
+      "AuditLogActionTypesOneOf56": {
         "const": null,
         "title": "AUTO_MODERATION_RULE_DELETE",
         "enum": [
           "142"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf54",
+          "name": "AuditLogActionTypesOneOf56",
           "modelAsString": false,
           "values": [
             {
@@ -49920,14 +49962,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf55": {
+      "AuditLogActionTypesOneOf57": {
         "const": null,
         "title": "AUTO_MODERATION_BLOCK_MESSAGE",
         "enum": [
           "143"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf55",
+          "name": "AuditLogActionTypesOneOf57",
           "modelAsString": false,
           "values": [
             {
@@ -49937,14 +49979,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf56": {
+      "AuditLogActionTypesOneOf58": {
         "const": null,
         "title": "AUTO_MODERATION_FLAG_TO_CHANNEL",
         "enum": [
           "144"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf56",
+          "name": "AuditLogActionTypesOneOf58",
           "modelAsString": false,
           "values": [
             {
@@ -49954,14 +49996,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf57": {
+      "AuditLogActionTypesOneOf59": {
         "const": null,
         "title": "AUTO_MODERATION_USER_COMM_DISABLED",
         "enum": [
           "145"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf57",
+          "name": "AuditLogActionTypesOneOf59",
           "modelAsString": false,
           "values": [
             {
@@ -49971,14 +50013,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf58": {
+      "AuditLogActionTypesOneOf60": {
         "const": null,
         "title": "AUTO_MODERATION_QUARANTINE_USER",
         "enum": [
           "146"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf58",
+          "name": "AuditLogActionTypesOneOf60",
           "modelAsString": false,
           "values": [
             {
@@ -49988,14 +50030,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf59": {
+      "AuditLogActionTypesOneOf61": {
         "const": null,
         "title": "CREATOR_MONETIZATION_REQUEST_CREATED",
         "enum": [
           "150"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf59",
+          "name": "AuditLogActionTypesOneOf61",
           "modelAsString": false,
           "values": [
             {
@@ -50005,14 +50047,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf60": {
+      "AuditLogActionTypesOneOf62": {
         "const": null,
         "title": "CREATOR_MONETIZATION_TERMS_ACCEPTED",
         "enum": [
           "151"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf60",
+          "name": "AuditLogActionTypesOneOf62",
           "modelAsString": false,
           "values": [
             {
@@ -50022,14 +50064,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf61": {
+      "AuditLogActionTypesOneOf63": {
         "const": null,
         "title": "ONBOARDING_PROMPT_CREATE",
         "enum": [
           "163"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf61",
+          "name": "AuditLogActionTypesOneOf63",
           "modelAsString": false,
           "values": [
             {
@@ -50039,14 +50081,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf62": {
+      "AuditLogActionTypesOneOf64": {
         "const": null,
         "title": "ONBOARDING_PROMPT_UPDATE",
         "enum": [
           "164"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf62",
+          "name": "AuditLogActionTypesOneOf64",
           "modelAsString": false,
           "values": [
             {
@@ -50056,14 +50098,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf63": {
+      "AuditLogActionTypesOneOf65": {
         "const": null,
         "title": "ONBOARDING_PROMPT_DELETE",
         "enum": [
           "165"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf63",
+          "name": "AuditLogActionTypesOneOf65",
           "modelAsString": false,
           "values": [
             {
@@ -50073,14 +50115,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf64": {
+      "AuditLogActionTypesOneOf66": {
         "const": null,
         "title": "ONBOARDING_CREATE",
         "enum": [
           "166"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf64",
+          "name": "AuditLogActionTypesOneOf66",
           "modelAsString": false,
           "values": [
             {
@@ -50090,14 +50132,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf65": {
+      "AuditLogActionTypesOneOf67": {
         "const": null,
         "title": "ONBOARDING_UPDATE",
         "enum": [
           "167"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf65",
+          "name": "AuditLogActionTypesOneOf67",
           "modelAsString": false,
           "values": [
             {
@@ -50107,14 +50149,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf66": {
+      "AuditLogActionTypesOneOf68": {
         "const": null,
         "title": "GUILD_HOME_FEATURE_ITEM",
         "enum": [
           "171"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf66",
+          "name": "AuditLogActionTypesOneOf68",
           "modelAsString": false,
           "values": [
             {
@@ -50124,14 +50166,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf67": {
+      "AuditLogActionTypesOneOf69": {
         "const": null,
         "title": "GUILD_HOME_REMOVE_ITEM",
         "enum": [
           "172"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf67",
+          "name": "AuditLogActionTypesOneOf69",
           "modelAsString": false,
           "values": [
             {
@@ -50141,14 +50183,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf68": {
+      "AuditLogActionTypesOneOf70": {
         "const": null,
         "title": "HARMFUL_LINKS_BLOCKED_MESSAGE",
         "enum": [
           "180"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf68",
+          "name": "AuditLogActionTypesOneOf70",
           "modelAsString": false,
           "values": [
             {
@@ -50158,14 +50200,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf69": {
+      "AuditLogActionTypesOneOf71": {
         "const": null,
         "title": "HOME_SETTINGS_CREATE",
         "enum": [
           "190"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf69",
+          "name": "AuditLogActionTypesOneOf71",
           "modelAsString": false,
           "values": [
             {
@@ -50175,14 +50217,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf70": {
+      "AuditLogActionTypesOneOf72": {
         "const": null,
         "title": "HOME_SETTINGS_UPDATE",
         "enum": [
           "191"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf70",
+          "name": "AuditLogActionTypesOneOf72",
           "modelAsString": false,
           "values": [
             {
@@ -50192,14 +50234,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf71": {
+      "AuditLogActionTypesOneOf73": {
         "const": null,
         "title": "VOICE_CHANNEL_STATUS_CREATE",
         "enum": [
           "192"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf71",
+          "name": "AuditLogActionTypesOneOf73",
           "modelAsString": false,
           "values": [
             {
@@ -50209,14 +50251,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf72": {
+      "AuditLogActionTypesOneOf74": {
         "const": null,
         "title": "VOICE_CHANNEL_STATUS_DELETE",
         "enum": [
           "193"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf72",
+          "name": "AuditLogActionTypesOneOf74",
           "modelAsString": false,
           "values": [
             {
@@ -50226,7 +50268,7 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf73": {
+      "AuditLogActionTypesOneOf75": {
         "const": null,
         "title": "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE",
         "enum": [
@@ -50234,7 +50276,7 @@
         ],
         "description": "Scheduled event exception was created",
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf73",
+          "name": "AuditLogActionTypesOneOf75",
           "modelAsString": false,
           "values": [
             {
@@ -50244,7 +50286,7 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf74": {
+      "AuditLogActionTypesOneOf76": {
         "const": null,
         "title": "GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE",
         "enum": [
@@ -50252,7 +50294,7 @@
         ],
         "description": "Scheduled event exception was updated",
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf74",
+          "name": "AuditLogActionTypesOneOf76",
           "modelAsString": false,
           "values": [
             {
@@ -50262,7 +50304,7 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf75": {
+      "AuditLogActionTypesOneOf77": {
         "const": null,
         "title": "GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE",
         "enum": [
@@ -50270,7 +50312,7 @@
         ],
         "description": "Scheduled event exception was deleted",
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf75",
+          "name": "AuditLogActionTypesOneOf77",
           "modelAsString": false,
           "values": [
             {
@@ -50280,14 +50322,14 @@
           ]
         }
       },
-      "AuditLogActionTypesOneOf76": {
+      "AuditLogActionTypesOneOf78": {
         "const": null,
         "title": "GUILD_PROFILE_UPDATE",
         "enum": [
           "211"
         ],
         "x-ms-enum": {
-          "name": "AuditLogActionTypesOneOf76",
+          "name": "AuditLogActionTypesOneOf78",
           "modelAsString": false,
           "values": [
             {
