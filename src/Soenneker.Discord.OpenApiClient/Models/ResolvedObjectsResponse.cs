@@ -11,40 +11,59 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ResolvedObjectsResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("channels") is { } nullNodeChannels && nullNodeChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channels = null;
+            if (parseNode.GetChildNode("members") is { } nullNodeMembers && nullNodeMembers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Members = null;
+            if (parseNode.GetChildNode("roles") is { } nullNodeRoles && nullNodeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Roles = null;
+            if (parseNode.GetChildNode("users") is { } nullNodeUsers && nullNodeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Users = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseChannelsProperty? Channels { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseChannelsProperty? Channels { get => _explicitNullValueChannels; set { _explicitNullValueChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channels"); else _explicitNullProperties?.Remove("channels"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseChannelsProperty? _explicitNullValueChannels = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseChannelsProperty Channels { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseChannelsProperty Channels { get => _explicitNullValueChannels; set { _explicitNullValueChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channels"); else _explicitNullProperties?.Remove("channels"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseChannelsProperty _explicitNullValueChannels = default!;
 #endif
         /// <summary>The members property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembersProperty? Members { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembersProperty? Members { get => _explicitNullValueMembers; set { _explicitNullValueMembers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members"); else _explicitNullProperties?.Remove("members"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembersProperty? _explicitNullValueMembers = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembersProperty Members { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembersProperty Members { get => _explicitNullValueMembers; set { _explicitNullValueMembers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members"); else _explicitNullProperties?.Remove("members"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembersProperty _explicitNullValueMembers = default!;
 #endif
         /// <summary>The roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRolesProperty? Roles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRolesProperty? Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRolesProperty? _explicitNullValueRoles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRolesProperty Roles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRolesProperty Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRolesProperty _explicitNullValueRoles = default!;
 #endif
         /// <summary>The users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsersProperty? Users { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsersProperty? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsersProperty? _explicitNullValueUsers = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsersProperty Users { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsersProperty Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsersProperty _explicitNullValueUsers = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseMembersProperty>("members", Members);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseRolesProperty>("roles", Roles);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ResolvedObjectsResponseUsersProperty>("users", Users);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

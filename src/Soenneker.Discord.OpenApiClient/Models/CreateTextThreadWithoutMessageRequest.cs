@@ -11,36 +11,56 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateTextThreadWithoutMessageRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auto_archive_duration") is { } nullNodeAutoArchiveDuration && nullNodeAutoArchiveDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoArchiveDuration = null;
+            if (parseNode.GetChildNode("invitable") is { } nullNodeInvitable && nullNodeInvitable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invitable = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("rate_limit_per_user") is { } nullNodeRateLimitPerUser && nullNodeRateLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitPerUser = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The auto_archive_duration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration? AutoArchiveDuration { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration? AutoArchiveDuration { get => _explicitNullValueAutoArchiveDuration; set { _explicitNullValueAutoArchiveDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_archive_duration"); else _explicitNullProperties?.Remove("auto_archive_duration"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration? _explicitNullValueAutoArchiveDuration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration AutoArchiveDuration { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration AutoArchiveDuration { get => _explicitNullValueAutoArchiveDuration; set { _explicitNullValueAutoArchiveDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_archive_duration"); else _explicitNullProperties?.Remove("auto_archive_duration"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration _explicitNullValueAutoArchiveDuration = default!;
 #endif
         /// <summary>The invitable property</summary>
-        public bool? Invitable { get; set; }
+        public bool? Invitable { get => _explicitNullValueInvitable; set { _explicitNullValueInvitable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invitable"); else _explicitNullProperties?.Remove("invitable"); } }
+        private bool? _explicitNullValueInvitable = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The rate_limit_per_user property</summary>
-        public int? RateLimitPerUser { get; set; }
+        public int? RateLimitPerUser { get => _explicitNullValueRateLimitPerUser; set { _explicitNullValueRateLimitPerUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate_limit_per_user"); else _explicitNullProperties?.Remove("rate_limit_per_user"); } }
+        private int? _explicitNullValueRateLimitPerUser = default!;
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2 Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2 Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2 _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest"/> and sets the default values.
@@ -57,7 +77,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("rate_limit_per_user", RateLimitPerUser);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateTextThreadWithoutMessageRequestTypeOneOf2>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

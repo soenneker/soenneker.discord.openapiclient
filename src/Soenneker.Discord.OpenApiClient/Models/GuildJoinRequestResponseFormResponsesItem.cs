@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GuildJoinRequestResponseFormResponsesItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.MultipleChoiceFormFieldResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,21 +62,32 @@ namespace Soenneker.Discord.OpenApiClient.Models
             var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem();
             if("MULTIPLE_CHOICE".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.MultipleChoiceFormFieldResponse = new global::Soenneker.Discord.OpenApiClient.Models.MultipleChoiceFormFieldResponse();
+                
             }
             else if("PARAGRAPH".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ParagraphFormFieldResponse = new global::Soenneker.Discord.OpenApiClient.Models.ParagraphFormFieldResponse();
+                
             }
             else if("TERMS".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TermsFormFieldResponse = new global::Soenneker.Discord.OpenApiClient.Models.TermsFormFieldResponse();
+                
             }
             else if("TEXT_INPUT".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TextInputFormFieldResponse = new global::Soenneker.Discord.OpenApiClient.Models.TextInputFormFieldResponse();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("field_type") != null && (parseNode.GetChildNode("field_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("MULTIPLE_CHOICE".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("choices") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("field_type") != null && (parseNode.GetChildNode("field_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("PARAGRAPH".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("field_type") != null && (parseNode.GetChildNode("field_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("TERMS".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("values") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("field_type") != null && (parseNode.GetChildNode("field_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("TEXT_INPUT".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            if (result.MultipleChoiceFormFieldResponse == null && result.ParagraphFormFieldResponse == null && result.TermsFormFieldResponse == null && result.TextInputFormFieldResponse == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3) result.MultipleChoiceFormFieldResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.MultipleChoiceFormFieldResponse(), parseNode);
+            if (result.MultipleChoiceFormFieldResponse == null && result.ParagraphFormFieldResponse == null && result.TermsFormFieldResponse == null && result.TextInputFormFieldResponse == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3) result.ParagraphFormFieldResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ParagraphFormFieldResponse(), parseNode);
+            if (result.MultipleChoiceFormFieldResponse == null && result.ParagraphFormFieldResponse == null && result.TermsFormFieldResponse == null && result.TextInputFormFieldResponse == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3) result.TermsFormFieldResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.TermsFormFieldResponse(), parseNode);
+            if (result.MultipleChoiceFormFieldResponse == null && result.ParagraphFormFieldResponse == null && result.TermsFormFieldResponse == null && result.TextInputFormFieldResponse == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.TextInputFormFieldResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.TextInputFormFieldResponse(), parseNode);
+            if (result.MultipleChoiceFormFieldResponse == null && result.ParagraphFormFieldResponse == null && result.TermsFormFieldResponse == null && result.TextInputFormFieldResponse == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,21 +119,32 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (MultipleChoiceFormFieldResponse == null && ParagraphFormFieldResponse == null && TermsFormFieldResponse == null && TextInputFormFieldResponse == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (MultipleChoiceFormFieldResponse != null && ParagraphFormFieldResponse == null && TermsFormFieldResponse == null && TextInputFormFieldResponse == null) { if (MultipleChoiceFormFieldResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MultipleChoiceFormFieldResponse); return; }
+            if (ParagraphFormFieldResponse != null && MultipleChoiceFormFieldResponse == null && TermsFormFieldResponse == null && TextInputFormFieldResponse == null) { if (ParagraphFormFieldResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ParagraphFormFieldResponse); return; }
+            if (TermsFormFieldResponse != null && MultipleChoiceFormFieldResponse == null && ParagraphFormFieldResponse == null && TextInputFormFieldResponse == null) { if (TermsFormFieldResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TermsFormFieldResponse); return; }
+            if (TextInputFormFieldResponse != null && MultipleChoiceFormFieldResponse == null && ParagraphFormFieldResponse == null && TermsFormFieldResponse == null) { if (TextInputFormFieldResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TextInputFormFieldResponse); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(MultipleChoiceFormFieldResponse != null)
             {
+                if (MultipleChoiceFormFieldResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MultipleChoiceFormFieldResponse>(null, MultipleChoiceFormFieldResponse);
             }
             else if(ParagraphFormFieldResponse != null)
             {
+                if (ParagraphFormFieldResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ParagraphFormFieldResponse>(null, ParagraphFormFieldResponse);
             }
             else if(TermsFormFieldResponse != null)
             {
+                if (TermsFormFieldResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TermsFormFieldResponse>(null, TermsFormFieldResponse);
             }
             else if(TextInputFormFieldResponse != null)
             {
+                if (TextInputFormFieldResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TextInputFormFieldResponse>(null, TextInputFormFieldResponse);
             }
         }

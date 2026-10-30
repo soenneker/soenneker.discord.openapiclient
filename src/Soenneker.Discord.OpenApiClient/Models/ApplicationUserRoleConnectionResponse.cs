@@ -11,32 +11,48 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApplicationUserRoleConnectionResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("platform_name") is { } nullNodePlatformName && nullNodePlatformName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformName = null;
+            if (parseNode.GetChildNode("platform_username") is { } nullNodePlatformUsername && nullNodePlatformUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformUsername = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty Metadata { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The platform_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlatformName { get; set; }
+        public string? PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
+        private string? _explicitNullValuePlatformName = default!;
 #nullable restore
 #else
-        public string PlatformName { get; set; }
+        public string PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
+        private string _explicitNullValuePlatformName = default!;
 #endif
         /// <summary>The platform_username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlatformUsername { get; set; }
+        public string? PlatformUsername { get => _explicitNullValuePlatformUsername; set { _explicitNullValuePlatformUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_username"); else _explicitNullProperties?.Remove("platform_username"); } }
+        private string? _explicitNullValuePlatformUsername = default!;
 #nullable restore
 #else
-        public string PlatformUsername { get; set; }
+        public string PlatformUsername { get => _explicitNullValuePlatformUsername; set { _explicitNullValuePlatformUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_username"); else _explicitNullProperties?.Remove("platform_username"); } }
+        private string _explicitNullValuePlatformUsername = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponse"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("platform_name", PlatformName);
             writer.WriteStringValue("platform_username", PlatformUsername);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

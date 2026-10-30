@@ -33,18 +33,18 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search
         public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/messages/search{?attachment_extension*,attachment_filename*,author_id*,author_type*,channel_id*,content*,embed_provider*,embed_type*,has*,include_nsfw*,limit*,link_hostname*,max_id*,mention_everyone*,mentions*,mentions_role_id*,min_id*,offset*,pinned*,replied_to_message_id*,replied_to_user_id*,slop*,sort_by*,sort_order*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildSearchResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildSearchSuccessResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GuildSearchResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GuildSearchSuccessResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GuildSearchResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Discord.OpenApiClient.Models.GuildSearchSuccessResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -52,8 +52,9 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search
             {
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.GuildSearchResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.GuildSearchResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.GuildSearchSuccessResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.GuildSearchSuccessResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

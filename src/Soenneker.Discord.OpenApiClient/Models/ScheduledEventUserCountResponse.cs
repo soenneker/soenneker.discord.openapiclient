@@ -11,18 +11,30 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ScheduledEventUserCountResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("guild_scheduled_event_count") is { } nullNodeGuildScheduledEventCount && nullNodeGuildScheduledEventCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildScheduledEventCount = null;
+            if (parseNode.GetChildNode("guild_scheduled_event_exception_counts") is { } nullNodeGuildScheduledEventExceptionCounts && nullNodeGuildScheduledEventExceptionCounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildScheduledEventExceptionCounts = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of users subscribed to the scheduled event</summary>
-        public int? GuildScheduledEventCount { get; set; }
+        public int? GuildScheduledEventCount { get => _explicitNullValueGuildScheduledEventCount; set { _explicitNullValueGuildScheduledEventCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_count"); else _explicitNullProperties?.Remove("guild_scheduled_event_count"); } }
+        private int? _explicitNullValueGuildScheduledEventCount = default!;
         /// <summary>Map of exception IDs to user counts for each exception</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserCountResponseGuildScheduledEventExceptionCountsProperty? GuildScheduledEventExceptionCounts { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserCountResponseGuildScheduledEventExceptionCountsProperty? GuildScheduledEventExceptionCounts { get => _explicitNullValueGuildScheduledEventExceptionCounts; set { _explicitNullValueGuildScheduledEventExceptionCounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_exception_counts"); else _explicitNullProperties?.Remove("guild_scheduled_event_exception_counts"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserCountResponseGuildScheduledEventExceptionCountsProperty? _explicitNullValueGuildScheduledEventExceptionCounts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserCountResponseGuildScheduledEventExceptionCountsProperty GuildScheduledEventExceptionCounts { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserCountResponseGuildScheduledEventExceptionCountsProperty GuildScheduledEventExceptionCounts { get => _explicitNullValueGuildScheduledEventExceptionCounts; set { _explicitNullValueGuildScheduledEventExceptionCounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_exception_counts"); else _explicitNullProperties?.Remove("guild_scheduled_event_exception_counts"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserCountResponseGuildScheduledEventExceptionCountsProperty _explicitNullValueGuildScheduledEventExceptionCounts = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserCountResponse"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserCountResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserCountResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserCountResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("guild_scheduled_event_count", GuildScheduledEventCount);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserCountResponseGuildScheduledEventExceptionCountsProperty>("guild_scheduled_event_exception_counts", GuildScheduledEventExceptionCounts);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

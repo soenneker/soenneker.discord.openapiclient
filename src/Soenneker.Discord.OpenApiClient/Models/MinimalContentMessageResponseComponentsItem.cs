@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MinimalContentMessageResponseComponentsItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,33 +86,50 @@ namespace Soenneker.Discord.OpenApiClient.Models
             var result = new global::Soenneker.Discord.OpenApiClient.Models.MinimalContentMessageResponseComponentsItem();
             if("ActionRowComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ActionRowComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentResponse();
+                
             }
             else if("ContainerComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ContainerComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse();
+                
             }
             else if("FileComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.FileComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse();
+                
             }
             else if("MediaGalleryComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.MediaGalleryComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse();
+                
             }
             else if("SectionComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SectionComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse();
+                
             }
             else if("SeparatorComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SeparatorComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse();
+                
             }
             else if("TextDisplayComponentResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TextDisplayComponentResponse = new global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("components") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("accent_color") != null && parseNode.GetChildNode("components") != null && parseNode.GetChildNode("spoiler") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("file") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("size") != null && parseNode.GetChildNode("spoiler") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("items") != null))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("components") != null && parseNode.GetChildNode("accessory") != null))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("spacing") != null && parseNode.GetChildNode("divider") != null))();
+            bool matchesUnionBranch6 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("content") != null))();
+            if (result.ActionRowComponentResponse == null && result.ContainerComponentResponse == null && result.FileComponentResponse == null && result.MediaGalleryComponentResponse == null && result.SectionComponentResponse == null && result.SeparatorComponentResponse == null && result.TextDisplayComponentResponse == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6) result.ActionRowComponentResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentResponse(), parseNode);
+            if (result.ActionRowComponentResponse == null && result.ContainerComponentResponse == null && result.FileComponentResponse == null && result.MediaGalleryComponentResponse == null && result.SectionComponentResponse == null && result.SeparatorComponentResponse == null && result.TextDisplayComponentResponse == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6) result.ContainerComponentResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse(), parseNode);
+            if (result.ActionRowComponentResponse == null && result.ContainerComponentResponse == null && result.FileComponentResponse == null && result.MediaGalleryComponentResponse == null && result.SectionComponentResponse == null && result.SeparatorComponentResponse == null && result.TextDisplayComponentResponse == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6) result.FileComponentResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse(), parseNode);
+            if (result.ActionRowComponentResponse == null && result.ContainerComponentResponse == null && result.FileComponentResponse == null && result.MediaGalleryComponentResponse == null && result.SectionComponentResponse == null && result.SeparatorComponentResponse == null && result.TextDisplayComponentResponse == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6) result.MediaGalleryComponentResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse(), parseNode);
+            if (result.ActionRowComponentResponse == null && result.ContainerComponentResponse == null && result.FileComponentResponse == null && result.MediaGalleryComponentResponse == null && result.SectionComponentResponse == null && result.SeparatorComponentResponse == null && result.TextDisplayComponentResponse == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch5 && !matchesUnionBranch6) result.SectionComponentResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse(), parseNode);
+            if (result.ActionRowComponentResponse == null && result.ContainerComponentResponse == null && result.FileComponentResponse == null && result.MediaGalleryComponentResponse == null && result.SectionComponentResponse == null && result.SeparatorComponentResponse == null && result.TextDisplayComponentResponse == null && matchesUnionBranch5 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch6) result.SeparatorComponentResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse(), parseNode);
+            if (result.ActionRowComponentResponse == null && result.ContainerComponentResponse == null && result.FileComponentResponse == null && result.MediaGalleryComponentResponse == null && result.SectionComponentResponse == null && result.SeparatorComponentResponse == null && result.TextDisplayComponentResponse == null && matchesUnionBranch6 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5) result.TextDisplayComponentResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse(), parseNode);
+            if (result.ActionRowComponentResponse == null && result.ContainerComponentResponse == null && result.FileComponentResponse == null && result.MediaGalleryComponentResponse == null && result.SectionComponentResponse == null && result.SeparatorComponentResponse == null && result.TextDisplayComponentResponse == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -151,33 +173,50 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (ActionRowComponentResponse == null && ContainerComponentResponse == null && FileComponentResponse == null && MediaGalleryComponentResponse == null && SectionComponentResponse == null && SeparatorComponentResponse == null && TextDisplayComponentResponse == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (ActionRowComponentResponse != null && ContainerComponentResponse == null && FileComponentResponse == null && MediaGalleryComponentResponse == null && SectionComponentResponse == null && SeparatorComponentResponse == null && TextDisplayComponentResponse == null) { if (ActionRowComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ActionRowComponentResponse); return; }
+            if (ContainerComponentResponse != null && ActionRowComponentResponse == null && FileComponentResponse == null && MediaGalleryComponentResponse == null && SectionComponentResponse == null && SeparatorComponentResponse == null && TextDisplayComponentResponse == null) { if (ContainerComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ContainerComponentResponse); return; }
+            if (FileComponentResponse != null && ActionRowComponentResponse == null && ContainerComponentResponse == null && MediaGalleryComponentResponse == null && SectionComponentResponse == null && SeparatorComponentResponse == null && TextDisplayComponentResponse == null) { if (FileComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FileComponentResponse); return; }
+            if (MediaGalleryComponentResponse != null && ActionRowComponentResponse == null && ContainerComponentResponse == null && FileComponentResponse == null && SectionComponentResponse == null && SeparatorComponentResponse == null && TextDisplayComponentResponse == null) { if (MediaGalleryComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MediaGalleryComponentResponse); return; }
+            if (SectionComponentResponse != null && ActionRowComponentResponse == null && ContainerComponentResponse == null && FileComponentResponse == null && MediaGalleryComponentResponse == null && SeparatorComponentResponse == null && TextDisplayComponentResponse == null) { if (SectionComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SectionComponentResponse); return; }
+            if (SeparatorComponentResponse != null && ActionRowComponentResponse == null && ContainerComponentResponse == null && FileComponentResponse == null && MediaGalleryComponentResponse == null && SectionComponentResponse == null && TextDisplayComponentResponse == null) { if (SeparatorComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SeparatorComponentResponse); return; }
+            if (TextDisplayComponentResponse != null && ActionRowComponentResponse == null && ContainerComponentResponse == null && FileComponentResponse == null && MediaGalleryComponentResponse == null && SectionComponentResponse == null && SeparatorComponentResponse == null) { if (TextDisplayComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TextDisplayComponentResponse); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ActionRowComponentResponse != null)
             {
+                if (ActionRowComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentResponse>(null, ActionRowComponentResponse);
             }
             else if(ContainerComponentResponse != null)
             {
+                if (ContainerComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ContainerComponentResponse>(null, ContainerComponentResponse);
             }
             else if(FileComponentResponse != null)
             {
+                if (FileComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FileComponentResponse>(null, FileComponentResponse);
             }
             else if(MediaGalleryComponentResponse != null)
             {
+                if (MediaGalleryComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MediaGalleryComponentResponse>(null, MediaGalleryComponentResponse);
             }
             else if(SectionComponentResponse != null)
             {
+                if (SectionComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SectionComponentResponse>(null, SectionComponentResponse);
             }
             else if(SeparatorComponentResponse != null)
             {
+                if (SeparatorComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SeparatorComponentResponse>(null, SeparatorComponentResponse);
             }
             else if(TextDisplayComponentResponse != null)
             {
+                if (TextDisplayComponentResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TextDisplayComponentResponse>(null, TextDisplayComponentResponse);
             }
         }

@@ -11,20 +11,34 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PruneGuildRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("compute_prune_count") is { } nullNodeComputePruneCount && nullNodeComputePruneCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComputePruneCount = null;
+            if (parseNode.GetChildNode("days") is { } nullNodeDays && nullNodeDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Days = null;
+            if (parseNode.GetChildNode("include_roles") is { } nullNodeIncludeRoles && nullNodeIncludeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeRoles = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The compute_prune_count property</summary>
-        public bool? ComputePruneCount { get; set; }
+        public bool? ComputePruneCount { get => _explicitNullValueComputePruneCount; set { _explicitNullValueComputePruneCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compute_prune_count"); else _explicitNullProperties?.Remove("compute_prune_count"); } }
+        private bool? _explicitNullValueComputePruneCount = default!;
         /// <summary>The days property</summary>
-        public int? Days { get; set; }
+        public int? Days { get => _explicitNullValueDays; set { _explicitNullValueDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days"); else _explicitNullProperties?.Remove("days"); } }
+        private int? _explicitNullValueDays = default!;
         /// <summary>The include_roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles? IncludeRoles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles? IncludeRoles { get => _explicitNullValueIncludeRoles; set { _explicitNullValueIncludeRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_roles"); else _explicitNullProperties?.Remove("include_roles"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles? _explicitNullValueIncludeRoles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles IncludeRoles { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles IncludeRoles { get => _explicitNullValueIncludeRoles; set { _explicitNullValueIncludeRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_roles"); else _explicitNullProperties?.Remove("include_roles"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles _explicitNullValueIncludeRoles = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequest"/> and sets the default values.
@@ -41,7 +55,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("compute_prune_count", ComputePruneCount);
             writer.WriteIntValue("days", Days);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles>("include_roles", IncludeRoles);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

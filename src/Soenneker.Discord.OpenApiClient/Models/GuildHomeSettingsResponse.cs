@@ -11,42 +11,63 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GuildHomeSettingsResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("guild_id") is { } nullNodeGuildId && nullNodeGuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildId = null;
+            if (parseNode.GetChildNode("new_member_actions") is { } nullNodeNewMemberActions && nullNodeNewMemberActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMemberActions = null;
+            if (parseNode.GetChildNode("resource_channels") is { } nullNodeResourceChannels && nullNodeResourceChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceChannels = null;
+            if (parseNode.GetChildNode("welcome_message") is { } nullNodeWelcomeMessage && nullNodeWelcomeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WelcomeMessage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The enabled property</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>The guild_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GuildId { get; set; }
+        public string? GuildId { get => _explicitNullValueGuildId; set { _explicitNullValueGuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_id"); else _explicitNullProperties?.Remove("guild_id"); } }
+        private string? _explicitNullValueGuildId = default!;
 #nullable restore
 #else
-        public string GuildId { get; set; }
+        public string GuildId { get => _explicitNullValueGuildId; set { _explicitNullValueGuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_id"); else _explicitNullProperties?.Remove("guild_id"); } }
+        private string _explicitNullValueGuildId = default!;
 #endif
         /// <summary>The new_member_actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse>? NewMemberActions { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse>? NewMemberActions { get => _explicitNullValueNewMemberActions; set { _explicitNullValueNewMemberActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_member_actions"); else _explicitNullProperties?.Remove("new_member_actions"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse>? _explicitNullValueNewMemberActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse> NewMemberActions { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse> NewMemberActions { get => _explicitNullValueNewMemberActions; set { _explicitNullValueNewMemberActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_member_actions"); else _explicitNullProperties?.Remove("new_member_actions"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse> _explicitNullValueNewMemberActions = default!;
 #endif
         /// <summary>The resource_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse>? ResourceChannels { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse>? ResourceChannels { get => _explicitNullValueResourceChannels; set { _explicitNullValueResourceChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_channels"); else _explicitNullProperties?.Remove("resource_channels"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse>? _explicitNullValueResourceChannels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse> ResourceChannels { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse> ResourceChannels { get => _explicitNullValueResourceChannels; set { _explicitNullValueResourceChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_channels"); else _explicitNullProperties?.Remove("resource_channels"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse> _explicitNullValueResourceChannels = default!;
 #endif
         /// <summary>The welcome_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.WelcomeMessageResponse? WelcomeMessage { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.WelcomeMessageResponse? WelcomeMessage { get => _explicitNullValueWelcomeMessage; set { _explicitNullValueWelcomeMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_message"); else _explicitNullProperties?.Remove("welcome_message"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.WelcomeMessageResponse? _explicitNullValueWelcomeMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.WelcomeMessageResponse WelcomeMessage { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.WelcomeMessageResponse WelcomeMessage { get => _explicitNullValueWelcomeMessage; set { _explicitNullValueWelcomeMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_message"); else _explicitNullProperties?.Remove("welcome_message"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.WelcomeMessageResponse _explicitNullValueWelcomeMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.NewMemberActionResponse>("new_member_actions", NewMemberActions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ResourceChannelResponse>("resource_channels", ResourceChannels);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.WelcomeMessageResponse>("welcome_message", WelcomeMessage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

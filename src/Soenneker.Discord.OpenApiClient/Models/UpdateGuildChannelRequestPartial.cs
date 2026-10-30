@@ -11,126 +11,186 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateGuildChannelRequestPartial : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("available_tags") is { } nullNodeAvailableTags && nullNodeAvailableTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableTags = null;
+            if (parseNode.GetChildNode("bitrate") is { } nullNodeBitrate && nullNodeBitrate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bitrate = null;
+            if (parseNode.GetChildNode("default_auto_archive_duration") is { } nullNodeDefaultAutoArchiveDuration && nullNodeDefaultAutoArchiveDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAutoArchiveDuration = null;
+            if (parseNode.GetChildNode("default_forum_layout") is { } nullNodeDefaultForumLayout && nullNodeDefaultForumLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultForumLayout = null;
+            if (parseNode.GetChildNode("default_reaction_emoji") is { } nullNodeDefaultReactionEmoji && nullNodeDefaultReactionEmoji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultReactionEmoji = null;
+            if (parseNode.GetChildNode("default_sort_order") is { } nullNodeDefaultSortOrder && nullNodeDefaultSortOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultSortOrder = null;
+            if (parseNode.GetChildNode("default_tag_setting") is { } nullNodeDefaultTagSetting && nullNodeDefaultTagSetting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultTagSetting = null;
+            if (parseNode.GetChildNode("default_thread_rate_limit_per_user") is { } nullNodeDefaultThreadRateLimitPerUser && nullNodeDefaultThreadRateLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultThreadRateLimitPerUser = null;
+            if (parseNode.GetChildNode("flags") is { } nullNodeFlags && nullNodeFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flags = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("nsfw") is { } nullNodeNsfw && nullNodeNsfw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nsfw = null;
+            if (parseNode.GetChildNode("parent_id") is { } nullNodeParentId && nullNodeParentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentId = null;
+            if (parseNode.GetChildNode("permission_overwrites") is { } nullNodePermissionOverwrites && nullNodePermissionOverwrites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionOverwrites = null;
+            if (parseNode.GetChildNode("position") is { } nullNodePosition && nullNodePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Position = null;
+            if (parseNode.GetChildNode("rate_limit_per_user") is { } nullNodeRateLimitPerUser && nullNodeRateLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitPerUser = null;
+            if (parseNode.GetChildNode("rtc_region") is { } nullNodeRtcRegion && nullNodeRtcRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RtcRegion = null;
+            if (parseNode.GetChildNode("topic") is { } nullNodeTopic && nullNodeTopic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Topic = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("user_limit") is { } nullNodeUserLimit && nullNodeUserLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLimit = null;
+            if (parseNode.GetChildNode("video_quality_mode") is { } nullNodeVideoQualityMode && nullNodeVideoQualityMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoQualityMode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The available_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadTagRequest>? AvailableTags { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadTagRequest>? AvailableTags { get => _explicitNullValueAvailableTags; set { _explicitNullValueAvailableTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_tags"); else _explicitNullProperties?.Remove("available_tags"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadTagRequest>? _explicitNullValueAvailableTags = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadTagRequest> AvailableTags { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadTagRequest> AvailableTags { get => _explicitNullValueAvailableTags; set { _explicitNullValueAvailableTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_tags"); else _explicitNullProperties?.Remove("available_tags"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadTagRequest> _explicitNullValueAvailableTags = default!;
 #endif
         /// <summary>The bitrate property</summary>
-        public int? Bitrate { get; set; }
+        public int? Bitrate { get => _explicitNullValueBitrate; set { _explicitNullValueBitrate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitrate"); else _explicitNullProperties?.Remove("bitrate"); } }
+        private int? _explicitNullValueBitrate = default!;
         /// <summary>The default_auto_archive_duration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration? DefaultAutoArchiveDuration { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration? DefaultAutoArchiveDuration { get => _explicitNullValueDefaultAutoArchiveDuration; set { _explicitNullValueDefaultAutoArchiveDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_auto_archive_duration"); else _explicitNullProperties?.Remove("default_auto_archive_duration"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration? _explicitNullValueDefaultAutoArchiveDuration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration DefaultAutoArchiveDuration { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration DefaultAutoArchiveDuration { get => _explicitNullValueDefaultAutoArchiveDuration; set { _explicitNullValueDefaultAutoArchiveDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_auto_archive_duration"); else _explicitNullProperties?.Remove("default_auto_archive_duration"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration _explicitNullValueDefaultAutoArchiveDuration = default!;
 #endif
         /// <summary>The default_forum_layout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ForumLayout? DefaultForumLayout { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ForumLayout? DefaultForumLayout { get => _explicitNullValueDefaultForumLayout; set { _explicitNullValueDefaultForumLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_forum_layout"); else _explicitNullProperties?.Remove("default_forum_layout"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ForumLayout? _explicitNullValueDefaultForumLayout = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ForumLayout DefaultForumLayout { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ForumLayout DefaultForumLayout { get => _explicitNullValueDefaultForumLayout; set { _explicitNullValueDefaultForumLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_forum_layout"); else _explicitNullProperties?.Remove("default_forum_layout"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ForumLayout _explicitNullValueDefaultForumLayout = default!;
 #endif
         /// <summary>The default_reaction_emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest? DefaultReactionEmoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest? DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest? _explicitNullValueDefaultReactionEmoji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest DefaultReactionEmoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest _explicitNullValueDefaultReactionEmoji = default!;
 #endif
         /// <summary>The default_sort_order property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder? DefaultSortOrder { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder? DefaultSortOrder { get => _explicitNullValueDefaultSortOrder; set { _explicitNullValueDefaultSortOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_sort_order"); else _explicitNullProperties?.Remove("default_sort_order"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder? _explicitNullValueDefaultSortOrder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder DefaultSortOrder { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder DefaultSortOrder { get => _explicitNullValueDefaultSortOrder; set { _explicitNullValueDefaultSortOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_sort_order"); else _explicitNullProperties?.Remove("default_sort_order"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder _explicitNullValueDefaultSortOrder = default!;
 #endif
         /// <summary>The default_tag_setting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting? DefaultTagSetting { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting? DefaultTagSetting { get => _explicitNullValueDefaultTagSetting; set { _explicitNullValueDefaultTagSetting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tag_setting"); else _explicitNullProperties?.Remove("default_tag_setting"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting? _explicitNullValueDefaultTagSetting = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting DefaultTagSetting { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting DefaultTagSetting { get => _explicitNullValueDefaultTagSetting; set { _explicitNullValueDefaultTagSetting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tag_setting"); else _explicitNullProperties?.Remove("default_tag_setting"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting _explicitNullValueDefaultTagSetting = default!;
 #endif
         /// <summary>The default_thread_rate_limit_per_user property</summary>
-        public int? DefaultThreadRateLimitPerUser { get; set; }
+        public int? DefaultThreadRateLimitPerUser { get => _explicitNullValueDefaultThreadRateLimitPerUser; set { _explicitNullValueDefaultThreadRateLimitPerUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_thread_rate_limit_per_user"); else _explicitNullProperties?.Remove("default_thread_rate_limit_per_user"); } }
+        private int? _explicitNullValueDefaultThreadRateLimitPerUser = default!;
         /// <summary>The flags property</summary>
-        public int? Flags { get; set; }
+        public int? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
+        private int? _explicitNullValueFlags = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The nsfw property</summary>
-        public bool? Nsfw { get; set; }
+        public bool? Nsfw { get => _explicitNullValueNsfw; set { _explicitNullValueNsfw = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nsfw"); else _explicitNullProperties?.Remove("nsfw"); } }
+        private bool? _explicitNullValueNsfw = default!;
         /// <summary>The parent_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentId { get; set; }
+        public string? ParentId { get => _explicitNullValueParentId; set { _explicitNullValueParentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_id"); else _explicitNullProperties?.Remove("parent_id"); } }
+        private string? _explicitNullValueParentId = default!;
 #nullable restore
 #else
-        public string ParentId { get; set; }
+        public string ParentId { get => _explicitNullValueParentId; set { _explicitNullValueParentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_id"); else _explicitNullProperties?.Remove("parent_id"); } }
+        private string _explicitNullValueParentId = default!;
 #endif
         /// <summary>The permission_overwrites property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequest>? PermissionOverwrites { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequest>? PermissionOverwrites { get => _explicitNullValuePermissionOverwrites; set { _explicitNullValuePermissionOverwrites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permission_overwrites"); else _explicitNullProperties?.Remove("permission_overwrites"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequest>? _explicitNullValuePermissionOverwrites = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequest> PermissionOverwrites { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequest> PermissionOverwrites { get => _explicitNullValuePermissionOverwrites; set { _explicitNullValuePermissionOverwrites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permission_overwrites"); else _explicitNullProperties?.Remove("permission_overwrites"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteRequest> _explicitNullValuePermissionOverwrites = default!;
 #endif
         /// <summary>The position property</summary>
-        public int? Position { get; set; }
+        public int? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
+        private int? _explicitNullValuePosition = default!;
         /// <summary>The rate_limit_per_user property</summary>
-        public int? RateLimitPerUser { get; set; }
+        public int? RateLimitPerUser { get => _explicitNullValueRateLimitPerUser; set { _explicitNullValueRateLimitPerUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate_limit_per_user"); else _explicitNullProperties?.Remove("rate_limit_per_user"); } }
+        private int? _explicitNullValueRateLimitPerUser = default!;
         /// <summary>The rtc_region property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RtcRegion { get; set; }
+        public string? RtcRegion { get => _explicitNullValueRtcRegion; set { _explicitNullValueRtcRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rtc_region"); else _explicitNullProperties?.Remove("rtc_region"); } }
+        private string? _explicitNullValueRtcRegion = default!;
 #nullable restore
 #else
-        public string RtcRegion { get; set; }
+        public string RtcRegion { get => _explicitNullValueRtcRegion; set { _explicitNullValueRtcRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rtc_region"); else _explicitNullProperties?.Remove("rtc_region"); } }
+        private string _explicitNullValueRtcRegion = default!;
 #endif
         /// <summary>The topic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Topic { get; set; }
+        public string? Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
+        private string? _explicitNullValueTopic = default!;
 #nullable restore
 #else
-        public string Topic { get; set; }
+        public string Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
+        private string _explicitNullValueTopic = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartialTypeOneOf2? Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartialTypeOneOf2? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartialTypeOneOf2? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartialTypeOneOf2 Type { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartialTypeOneOf2 Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartialTypeOneOf2 _explicitNullValueType = default!;
 #endif
         /// <summary>The user_limit property</summary>
-        public int? UserLimit { get; set; }
+        public int? UserLimit { get => _explicitNullValueUserLimit; set { _explicitNullValueUserLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_limit"); else _explicitNullProperties?.Remove("user_limit"); } }
+        private int? _explicitNullValueUserLimit = default!;
         /// <summary>The video_quality_mode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes? VideoQualityMode { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes? VideoQualityMode { get => _explicitNullValueVideoQualityMode; set { _explicitNullValueVideoQualityMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_quality_mode"); else _explicitNullProperties?.Remove("video_quality_mode"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes? _explicitNullValueVideoQualityMode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes VideoQualityMode { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes VideoQualityMode { get => _explicitNullValueVideoQualityMode; set { _explicitNullValueVideoQualityMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_quality_mode"); else _explicitNullProperties?.Remove("video_quality_mode"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes _explicitNullValueVideoQualityMode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartial"/> and sets the default values.
@@ -147,7 +207,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartial CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartial();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartial(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -206,6 +266,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartialTypeOneOf2>("type", Type);
             writer.WriteIntValue("user_limit", UserLimit);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VideoQualityModes>("video_quality_mode", VideoQualityMode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

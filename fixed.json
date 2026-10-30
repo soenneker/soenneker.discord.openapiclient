@@ -5206,6 +5206,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/ThreadSearchSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/ThreadSearchResponse"
                 }
               }
@@ -5233,6 +5236,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/ThreadSearchSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SearchIndexNotReadyResponse"
                 }
               }
@@ -8163,6 +8169,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/GuildSearchSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GuildSearchResponse"
                 }
               }
@@ -8190,6 +8199,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/GuildSearchSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SearchIndexNotReadyResponse"
                 }
               }
@@ -58505,6 +58517,26 @@
         "additionalProperties": {
           "$ref": "#/components/schemas/ErrorDetails"
         }
+      },
+      "ThreadSearchSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/ThreadSearchResponse"
+          },
+          {
+            "$ref": "#/components/schemas/SearchIndexNotReadyResponse"
+          }
+        ]
+      },
+      "GuildSearchSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GuildSearchResponse"
+          },
+          {
+            "$ref": "#/components/schemas/SearchIndexNotReadyResponse"
+          }
+        ]
       }
     },
     "responses": {

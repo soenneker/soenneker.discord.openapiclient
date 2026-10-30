@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApplicationCommandSubcommandOptionOptionsItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOption"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,41 +102,62 @@ namespace Soenneker.Discord.OpenApiClient.Models
             var result = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandSubcommandOptionOptionsItem();
             if("ApplicationCommandAttachmentOption".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApplicationCommandAttachmentOption = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOption();
+                
             }
             else if("ApplicationCommandBooleanOption".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApplicationCommandBooleanOption = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandBooleanOption();
+                
             }
             else if("ApplicationCommandChannelOption".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApplicationCommandChannelOption = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandChannelOption();
+                
             }
             else if("ApplicationCommandIntegerOption".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApplicationCommandIntegerOption = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption();
+                
             }
             else if("ApplicationCommandMentionableOption".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApplicationCommandMentionableOption = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandMentionableOption();
+                
             }
             else if("ApplicationCommandNumberOption".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApplicationCommandNumberOption = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandNumberOption();
+                
             }
             else if("ApplicationCommandRoleOption".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApplicationCommandRoleOption = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandRoleOption();
+                
             }
             else if("ApplicationCommandStringOption".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApplicationCommandStringOption = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandStringOption();
+                
             }
             else if("ApplicationCommandUserOption".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApplicationCommandUserOption = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOption();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("description") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("description") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("description") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("description") != null))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("description") != null))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("description") != null))();
+            bool matchesUnionBranch6 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("description") != null))();
+            bool matchesUnionBranch7 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("description") != null))();
+            bool matchesUnionBranch8 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("description") != null))();
+            if (result.ApplicationCommandAttachmentOption == null && result.ApplicationCommandBooleanOption == null && result.ApplicationCommandChannelOption == null && result.ApplicationCommandIntegerOption == null && result.ApplicationCommandMentionableOption == null && result.ApplicationCommandNumberOption == null && result.ApplicationCommandRoleOption == null && result.ApplicationCommandStringOption == null && result.ApplicationCommandUserOption == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ApplicationCommandAttachmentOption = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOption(), parseNode);
+            if (result.ApplicationCommandAttachmentOption == null && result.ApplicationCommandBooleanOption == null && result.ApplicationCommandChannelOption == null && result.ApplicationCommandIntegerOption == null && result.ApplicationCommandMentionableOption == null && result.ApplicationCommandNumberOption == null && result.ApplicationCommandRoleOption == null && result.ApplicationCommandStringOption == null && result.ApplicationCommandUserOption == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ApplicationCommandBooleanOption = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandBooleanOption(), parseNode);
+            if (result.ApplicationCommandAttachmentOption == null && result.ApplicationCommandBooleanOption == null && result.ApplicationCommandChannelOption == null && result.ApplicationCommandIntegerOption == null && result.ApplicationCommandMentionableOption == null && result.ApplicationCommandNumberOption == null && result.ApplicationCommandRoleOption == null && result.ApplicationCommandStringOption == null && result.ApplicationCommandUserOption == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ApplicationCommandChannelOption = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandChannelOption(), parseNode);
+            if (result.ApplicationCommandAttachmentOption == null && result.ApplicationCommandBooleanOption == null && result.ApplicationCommandChannelOption == null && result.ApplicationCommandIntegerOption == null && result.ApplicationCommandMentionableOption == null && result.ApplicationCommandNumberOption == null && result.ApplicationCommandRoleOption == null && result.ApplicationCommandStringOption == null && result.ApplicationCommandUserOption == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ApplicationCommandIntegerOption = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption(), parseNode);
+            if (result.ApplicationCommandAttachmentOption == null && result.ApplicationCommandBooleanOption == null && result.ApplicationCommandChannelOption == null && result.ApplicationCommandIntegerOption == null && result.ApplicationCommandMentionableOption == null && result.ApplicationCommandNumberOption == null && result.ApplicationCommandRoleOption == null && result.ApplicationCommandStringOption == null && result.ApplicationCommandUserOption == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ApplicationCommandMentionableOption = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandMentionableOption(), parseNode);
+            if (result.ApplicationCommandAttachmentOption == null && result.ApplicationCommandBooleanOption == null && result.ApplicationCommandChannelOption == null && result.ApplicationCommandIntegerOption == null && result.ApplicationCommandMentionableOption == null && result.ApplicationCommandNumberOption == null && result.ApplicationCommandRoleOption == null && result.ApplicationCommandStringOption == null && result.ApplicationCommandUserOption == null && matchesUnionBranch5 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ApplicationCommandNumberOption = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandNumberOption(), parseNode);
+            if (result.ApplicationCommandAttachmentOption == null && result.ApplicationCommandBooleanOption == null && result.ApplicationCommandChannelOption == null && result.ApplicationCommandIntegerOption == null && result.ApplicationCommandMentionableOption == null && result.ApplicationCommandNumberOption == null && result.ApplicationCommandRoleOption == null && result.ApplicationCommandStringOption == null && result.ApplicationCommandUserOption == null && matchesUnionBranch6 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ApplicationCommandRoleOption = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandRoleOption(), parseNode);
+            if (result.ApplicationCommandAttachmentOption == null && result.ApplicationCommandBooleanOption == null && result.ApplicationCommandChannelOption == null && result.ApplicationCommandIntegerOption == null && result.ApplicationCommandMentionableOption == null && result.ApplicationCommandNumberOption == null && result.ApplicationCommandRoleOption == null && result.ApplicationCommandStringOption == null && result.ApplicationCommandUserOption == null && matchesUnionBranch7 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch8) result.ApplicationCommandStringOption = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandStringOption(), parseNode);
+            if (result.ApplicationCommandAttachmentOption == null && result.ApplicationCommandBooleanOption == null && result.ApplicationCommandChannelOption == null && result.ApplicationCommandIntegerOption == null && result.ApplicationCommandMentionableOption == null && result.ApplicationCommandNumberOption == null && result.ApplicationCommandRoleOption == null && result.ApplicationCommandStringOption == null && result.ApplicationCommandUserOption == null && matchesUnionBranch8 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7) result.ApplicationCommandUserOption = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOption(), parseNode);
+            if (result.ApplicationCommandAttachmentOption == null && result.ApplicationCommandBooleanOption == null && result.ApplicationCommandChannelOption == null && result.ApplicationCommandIntegerOption == null && result.ApplicationCommandMentionableOption == null && result.ApplicationCommandNumberOption == null && result.ApplicationCommandRoleOption == null && result.ApplicationCommandStringOption == null && result.ApplicationCommandUserOption == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -183,41 +209,62 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (ApplicationCommandAttachmentOption == null && ApplicationCommandBooleanOption == null && ApplicationCommandChannelOption == null && ApplicationCommandIntegerOption == null && ApplicationCommandMentionableOption == null && ApplicationCommandNumberOption == null && ApplicationCommandRoleOption == null && ApplicationCommandStringOption == null && ApplicationCommandUserOption == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (ApplicationCommandAttachmentOption != null && ApplicationCommandBooleanOption == null && ApplicationCommandChannelOption == null && ApplicationCommandIntegerOption == null && ApplicationCommandMentionableOption == null && ApplicationCommandNumberOption == null && ApplicationCommandRoleOption == null && ApplicationCommandStringOption == null && ApplicationCommandUserOption == null) { if (ApplicationCommandAttachmentOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ApplicationCommandAttachmentOption); return; }
+            if (ApplicationCommandBooleanOption != null && ApplicationCommandAttachmentOption == null && ApplicationCommandChannelOption == null && ApplicationCommandIntegerOption == null && ApplicationCommandMentionableOption == null && ApplicationCommandNumberOption == null && ApplicationCommandRoleOption == null && ApplicationCommandStringOption == null && ApplicationCommandUserOption == null) { if (ApplicationCommandBooleanOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ApplicationCommandBooleanOption); return; }
+            if (ApplicationCommandChannelOption != null && ApplicationCommandAttachmentOption == null && ApplicationCommandBooleanOption == null && ApplicationCommandIntegerOption == null && ApplicationCommandMentionableOption == null && ApplicationCommandNumberOption == null && ApplicationCommandRoleOption == null && ApplicationCommandStringOption == null && ApplicationCommandUserOption == null) { if (ApplicationCommandChannelOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ApplicationCommandChannelOption); return; }
+            if (ApplicationCommandIntegerOption != null && ApplicationCommandAttachmentOption == null && ApplicationCommandBooleanOption == null && ApplicationCommandChannelOption == null && ApplicationCommandMentionableOption == null && ApplicationCommandNumberOption == null && ApplicationCommandRoleOption == null && ApplicationCommandStringOption == null && ApplicationCommandUserOption == null) { if (ApplicationCommandIntegerOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ApplicationCommandIntegerOption); return; }
+            if (ApplicationCommandMentionableOption != null && ApplicationCommandAttachmentOption == null && ApplicationCommandBooleanOption == null && ApplicationCommandChannelOption == null && ApplicationCommandIntegerOption == null && ApplicationCommandNumberOption == null && ApplicationCommandRoleOption == null && ApplicationCommandStringOption == null && ApplicationCommandUserOption == null) { if (ApplicationCommandMentionableOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ApplicationCommandMentionableOption); return; }
+            if (ApplicationCommandNumberOption != null && ApplicationCommandAttachmentOption == null && ApplicationCommandBooleanOption == null && ApplicationCommandChannelOption == null && ApplicationCommandIntegerOption == null && ApplicationCommandMentionableOption == null && ApplicationCommandRoleOption == null && ApplicationCommandStringOption == null && ApplicationCommandUserOption == null) { if (ApplicationCommandNumberOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ApplicationCommandNumberOption); return; }
+            if (ApplicationCommandRoleOption != null && ApplicationCommandAttachmentOption == null && ApplicationCommandBooleanOption == null && ApplicationCommandChannelOption == null && ApplicationCommandIntegerOption == null && ApplicationCommandMentionableOption == null && ApplicationCommandNumberOption == null && ApplicationCommandStringOption == null && ApplicationCommandUserOption == null) { if (ApplicationCommandRoleOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ApplicationCommandRoleOption); return; }
+            if (ApplicationCommandStringOption != null && ApplicationCommandAttachmentOption == null && ApplicationCommandBooleanOption == null && ApplicationCommandChannelOption == null && ApplicationCommandIntegerOption == null && ApplicationCommandMentionableOption == null && ApplicationCommandNumberOption == null && ApplicationCommandRoleOption == null && ApplicationCommandUserOption == null) { if (ApplicationCommandStringOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ApplicationCommandStringOption); return; }
+            if (ApplicationCommandUserOption != null && ApplicationCommandAttachmentOption == null && ApplicationCommandBooleanOption == null && ApplicationCommandChannelOption == null && ApplicationCommandIntegerOption == null && ApplicationCommandMentionableOption == null && ApplicationCommandNumberOption == null && ApplicationCommandRoleOption == null && ApplicationCommandStringOption == null) { if (ApplicationCommandUserOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ApplicationCommandUserOption); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ApplicationCommandAttachmentOption != null)
             {
+                if (ApplicationCommandAttachmentOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandAttachmentOption>(null, ApplicationCommandAttachmentOption);
             }
             else if(ApplicationCommandBooleanOption != null)
             {
+                if (ApplicationCommandBooleanOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandBooleanOption>(null, ApplicationCommandBooleanOption);
             }
             else if(ApplicationCommandChannelOption != null)
             {
+                if (ApplicationCommandChannelOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandChannelOption>(null, ApplicationCommandChannelOption);
             }
             else if(ApplicationCommandIntegerOption != null)
             {
+                if (ApplicationCommandIntegerOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandIntegerOption>(null, ApplicationCommandIntegerOption);
             }
             else if(ApplicationCommandMentionableOption != null)
             {
+                if (ApplicationCommandMentionableOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandMentionableOption>(null, ApplicationCommandMentionableOption);
             }
             else if(ApplicationCommandNumberOption != null)
             {
+                if (ApplicationCommandNumberOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandNumberOption>(null, ApplicationCommandNumberOption);
             }
             else if(ApplicationCommandRoleOption != null)
             {
+                if (ApplicationCommandRoleOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandRoleOption>(null, ApplicationCommandRoleOption);
             }
             else if(ApplicationCommandStringOption != null)
             {
+                if (ApplicationCommandStringOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandStringOption>(null, ApplicationCommandStringOption);
             }
             else if(ApplicationCommandUserOption != null)
             {
+                if (ApplicationCommandUserOption is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandUserOption>(null, ApplicationCommandUserOption);
             }
         }

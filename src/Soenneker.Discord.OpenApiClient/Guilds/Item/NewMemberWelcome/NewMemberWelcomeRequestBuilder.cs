@@ -52,6 +52,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.NewMemberWelcome
             {
                 { "429", global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.GuildHomeSettingsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

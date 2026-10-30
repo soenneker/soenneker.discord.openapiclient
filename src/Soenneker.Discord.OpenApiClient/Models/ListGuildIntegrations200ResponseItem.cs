@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ListGuildIntegrations200ResponseItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,17 +54,26 @@ namespace Soenneker.Discord.OpenApiClient.Models
             var result = new global::Soenneker.Discord.OpenApiClient.Models.ListGuildIntegrations200ResponseItem();
             if("DiscordIntegrationResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.DiscordIntegrationResponse = new global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponse();
+                
             }
             else if("ExternalConnectionIntegrationResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ExternalConnectionIntegrationResponse = new global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse();
+                
             }
             else if("GuildSubscriptionIntegrationResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.GuildSubscriptionIntegrationResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildSubscriptionIntegrationResponse();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("discord".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("account") != null && parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("application") != null && parseNode.GetChildNode("scopes") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("twitch".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "youtube".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("account") != null && parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("user") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("guild_subscription".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("account") != null && parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("id") != null))();
+            if (result.DiscordIntegrationResponse == null && result.ExternalConnectionIntegrationResponse == null && result.GuildSubscriptionIntegrationResponse == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.DiscordIntegrationResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponse(), parseNode);
+            if (result.DiscordIntegrationResponse == null && result.ExternalConnectionIntegrationResponse == null && result.GuildSubscriptionIntegrationResponse == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.ExternalConnectionIntegrationResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse(), parseNode);
+            if (result.DiscordIntegrationResponse == null && result.ExternalConnectionIntegrationResponse == null && result.GuildSubscriptionIntegrationResponse == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.GuildSubscriptionIntegrationResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.GuildSubscriptionIntegrationResponse(), parseNode);
+            if (result.DiscordIntegrationResponse == null && result.ExternalConnectionIntegrationResponse == null && result.GuildSubscriptionIntegrationResponse == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,17 +101,26 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (DiscordIntegrationResponse == null && ExternalConnectionIntegrationResponse == null && GuildSubscriptionIntegrationResponse == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (DiscordIntegrationResponse != null && ExternalConnectionIntegrationResponse == null && GuildSubscriptionIntegrationResponse == null) { if (DiscordIntegrationResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, DiscordIntegrationResponse); return; }
+            if (ExternalConnectionIntegrationResponse != null && DiscordIntegrationResponse == null && GuildSubscriptionIntegrationResponse == null) { if (ExternalConnectionIntegrationResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ExternalConnectionIntegrationResponse); return; }
+            if (GuildSubscriptionIntegrationResponse != null && DiscordIntegrationResponse == null && ExternalConnectionIntegrationResponse == null) { if (GuildSubscriptionIntegrationResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, GuildSubscriptionIntegrationResponse); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(DiscordIntegrationResponse != null)
             {
+                if (DiscordIntegrationResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DiscordIntegrationResponse>(null, DiscordIntegrationResponse);
             }
             else if(ExternalConnectionIntegrationResponse != null)
             {
+                if (ExternalConnectionIntegrationResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalConnectionIntegrationResponse>(null, ExternalConnectionIntegrationResponse);
             }
             else if(GuildSubscriptionIntegrationResponse != null)
             {
+                if (GuildSubscriptionIntegrationResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildSubscriptionIntegrationResponse>(null, GuildSubscriptionIntegrationResponse);
             }
         }

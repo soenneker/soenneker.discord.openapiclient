@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GuildAuditLogResponseWebhooksItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,17 +54,26 @@ namespace Soenneker.Discord.OpenApiClient.Models
             var result = new global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseWebhooksItem();
             if("ApplicationIncomingWebhookResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApplicationIncomingWebhookResponse = new global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse();
+                
             }
             else if("ChannelFollowerWebhookResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ChannelFollowerWebhookResponse = new global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse();
+                
             }
             else if("GuildIncomingWebhookResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.GuildIncomingWebhookResponse = new global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("application_id") != null && parseNode.GetChildNode("avatar") != null && parseNode.GetChildNode("channel_id") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("type") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("application_id") != null && parseNode.GetChildNode("avatar") != null && parseNode.GetChildNode("channel_id") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("type") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("application_id") != null && parseNode.GetChildNode("avatar") != null && parseNode.GetChildNode("channel_id") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("type") != null))();
+            if (result.ApplicationIncomingWebhookResponse == null && result.ChannelFollowerWebhookResponse == null && result.GuildIncomingWebhookResponse == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.ApplicationIncomingWebhookResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse(), parseNode);
+            if (result.ApplicationIncomingWebhookResponse == null && result.ChannelFollowerWebhookResponse == null && result.GuildIncomingWebhookResponse == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.ChannelFollowerWebhookResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse(), parseNode);
+            if (result.ApplicationIncomingWebhookResponse == null && result.ChannelFollowerWebhookResponse == null && result.GuildIncomingWebhookResponse == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.GuildIncomingWebhookResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse(), parseNode);
+            if (result.ApplicationIncomingWebhookResponse == null && result.ChannelFollowerWebhookResponse == null && result.GuildIncomingWebhookResponse == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,17 +101,26 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (ApplicationIncomingWebhookResponse == null && ChannelFollowerWebhookResponse == null && GuildIncomingWebhookResponse == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (ApplicationIncomingWebhookResponse != null && ChannelFollowerWebhookResponse == null && GuildIncomingWebhookResponse == null) { if (ApplicationIncomingWebhookResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ApplicationIncomingWebhookResponse); return; }
+            if (ChannelFollowerWebhookResponse != null && ApplicationIncomingWebhookResponse == null && GuildIncomingWebhookResponse == null) { if (ChannelFollowerWebhookResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChannelFollowerWebhookResponse); return; }
+            if (GuildIncomingWebhookResponse != null && ApplicationIncomingWebhookResponse == null && ChannelFollowerWebhookResponse == null) { if (GuildIncomingWebhookResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, GuildIncomingWebhookResponse); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ApplicationIncomingWebhookResponse != null)
             {
+                if (ApplicationIncomingWebhookResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationIncomingWebhookResponse>(null, ApplicationIncomingWebhookResponse);
             }
             else if(ChannelFollowerWebhookResponse != null)
             {
+                if (ChannelFollowerWebhookResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelFollowerWebhookResponse>(null, ChannelFollowerWebhookResponse);
             }
             else if(GuildIncomingWebhookResponse != null)
             {
+                if (GuildIncomingWebhookResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildIncomingWebhookResponse>(null, GuildIncomingWebhookResponse);
             }
         }

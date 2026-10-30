@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActionRowComponentForMessageRequestComponentsItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,29 +78,44 @@ namespace Soenneker.Discord.OpenApiClient.Models
             var result = new global::Soenneker.Discord.OpenApiClient.Models.ActionRowComponentForMessageRequestComponentsItem();
             if("ButtonComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ButtonComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest();
+                
             }
             else if("ChannelSelectComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ChannelSelectComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentForMessageRequest();
+                
             }
             else if("MentionableSelectComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.MentionableSelectComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForMessageRequest();
+                
             }
             else if("RoleSelectComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RoleSelectComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentForMessageRequest();
+                
             }
             else if("StringSelectComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.StringSelectComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForMessageRequest();
+                
             }
             else if("UserSelectComponentForMessageRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UserSelectComponentForMessageRequest = new global::Soenneker.Discord.OpenApiClient.Models.UserSelectComponentForMessageRequest();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("style") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null && parseNode.GetChildNode("options") != null))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null))();
+            if (result.ButtonComponentForMessageRequest == null && result.ChannelSelectComponentForMessageRequest == null && result.MentionableSelectComponentForMessageRequest == null && result.RoleSelectComponentForMessageRequest == null && result.StringSelectComponentForMessageRequest == null && result.UserSelectComponentForMessageRequest == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5) result.ButtonComponentForMessageRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest(), parseNode);
+            if (result.ButtonComponentForMessageRequest == null && result.ChannelSelectComponentForMessageRequest == null && result.MentionableSelectComponentForMessageRequest == null && result.RoleSelectComponentForMessageRequest == null && result.StringSelectComponentForMessageRequest == null && result.UserSelectComponentForMessageRequest == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5) result.ChannelSelectComponentForMessageRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentForMessageRequest(), parseNode);
+            if (result.ButtonComponentForMessageRequest == null && result.ChannelSelectComponentForMessageRequest == null && result.MentionableSelectComponentForMessageRequest == null && result.RoleSelectComponentForMessageRequest == null && result.StringSelectComponentForMessageRequest == null && result.UserSelectComponentForMessageRequest == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5) result.MentionableSelectComponentForMessageRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForMessageRequest(), parseNode);
+            if (result.ButtonComponentForMessageRequest == null && result.ChannelSelectComponentForMessageRequest == null && result.MentionableSelectComponentForMessageRequest == null && result.RoleSelectComponentForMessageRequest == null && result.StringSelectComponentForMessageRequest == null && result.UserSelectComponentForMessageRequest == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4 && !matchesUnionBranch5) result.RoleSelectComponentForMessageRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentForMessageRequest(), parseNode);
+            if (result.ButtonComponentForMessageRequest == null && result.ChannelSelectComponentForMessageRequest == null && result.MentionableSelectComponentForMessageRequest == null && result.RoleSelectComponentForMessageRequest == null && result.StringSelectComponentForMessageRequest == null && result.UserSelectComponentForMessageRequest == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch5) result.StringSelectComponentForMessageRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForMessageRequest(), parseNode);
+            if (result.ButtonComponentForMessageRequest == null && result.ChannelSelectComponentForMessageRequest == null && result.MentionableSelectComponentForMessageRequest == null && result.RoleSelectComponentForMessageRequest == null && result.StringSelectComponentForMessageRequest == null && result.UserSelectComponentForMessageRequest == null && matchesUnionBranch5 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4) result.UserSelectComponentForMessageRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.UserSelectComponentForMessageRequest(), parseNode);
+            if (result.ButtonComponentForMessageRequest == null && result.ChannelSelectComponentForMessageRequest == null && result.MentionableSelectComponentForMessageRequest == null && result.RoleSelectComponentForMessageRequest == null && result.StringSelectComponentForMessageRequest == null && result.UserSelectComponentForMessageRequest == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -135,29 +155,44 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (ButtonComponentForMessageRequest == null && ChannelSelectComponentForMessageRequest == null && MentionableSelectComponentForMessageRequest == null && RoleSelectComponentForMessageRequest == null && StringSelectComponentForMessageRequest == null && UserSelectComponentForMessageRequest == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (ButtonComponentForMessageRequest != null && ChannelSelectComponentForMessageRequest == null && MentionableSelectComponentForMessageRequest == null && RoleSelectComponentForMessageRequest == null && StringSelectComponentForMessageRequest == null && UserSelectComponentForMessageRequest == null) { if (ButtonComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ButtonComponentForMessageRequest); return; }
+            if (ChannelSelectComponentForMessageRequest != null && ButtonComponentForMessageRequest == null && MentionableSelectComponentForMessageRequest == null && RoleSelectComponentForMessageRequest == null && StringSelectComponentForMessageRequest == null && UserSelectComponentForMessageRequest == null) { if (ChannelSelectComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChannelSelectComponentForMessageRequest); return; }
+            if (MentionableSelectComponentForMessageRequest != null && ButtonComponentForMessageRequest == null && ChannelSelectComponentForMessageRequest == null && RoleSelectComponentForMessageRequest == null && StringSelectComponentForMessageRequest == null && UserSelectComponentForMessageRequest == null) { if (MentionableSelectComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MentionableSelectComponentForMessageRequest); return; }
+            if (RoleSelectComponentForMessageRequest != null && ButtonComponentForMessageRequest == null && ChannelSelectComponentForMessageRequest == null && MentionableSelectComponentForMessageRequest == null && StringSelectComponentForMessageRequest == null && UserSelectComponentForMessageRequest == null) { if (RoleSelectComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RoleSelectComponentForMessageRequest); return; }
+            if (StringSelectComponentForMessageRequest != null && ButtonComponentForMessageRequest == null && ChannelSelectComponentForMessageRequest == null && MentionableSelectComponentForMessageRequest == null && RoleSelectComponentForMessageRequest == null && UserSelectComponentForMessageRequest == null) { if (StringSelectComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, StringSelectComponentForMessageRequest); return; }
+            if (UserSelectComponentForMessageRequest != null && ButtonComponentForMessageRequest == null && ChannelSelectComponentForMessageRequest == null && MentionableSelectComponentForMessageRequest == null && RoleSelectComponentForMessageRequest == null && StringSelectComponentForMessageRequest == null) { if (UserSelectComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UserSelectComponentForMessageRequest); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ButtonComponentForMessageRequest != null)
             {
+                if (ButtonComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequest>(null, ButtonComponentForMessageRequest);
             }
             else if(ChannelSelectComponentForMessageRequest != null)
             {
+                if (ChannelSelectComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentForMessageRequest>(null, ChannelSelectComponentForMessageRequest);
             }
             else if(MentionableSelectComponentForMessageRequest != null)
             {
+                if (MentionableSelectComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForMessageRequest>(null, MentionableSelectComponentForMessageRequest);
             }
             else if(RoleSelectComponentForMessageRequest != null)
             {
+                if (RoleSelectComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentForMessageRequest>(null, RoleSelectComponentForMessageRequest);
             }
             else if(StringSelectComponentForMessageRequest != null)
             {
+                if (StringSelectComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForMessageRequest>(null, StringSelectComponentForMessageRequest);
             }
             else if(UserSelectComponentForMessageRequest != null)
             {
+                if (UserSelectComponentForMessageRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserSelectComponentForMessageRequest>(null, UserSelectComponentForMessageRequest);
             }
         }

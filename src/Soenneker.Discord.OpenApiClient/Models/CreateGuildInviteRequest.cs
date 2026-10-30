@@ -11,57 +11,87 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateGuildInviteRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("max_age") is { } nullNodeMaxAge && nullNodeMaxAge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxAge = null;
+            if (parseNode.GetChildNode("max_uses") is { } nullNodeMaxUses && nullNodeMaxUses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxUses = null;
+            if (parseNode.GetChildNode("role_ids") is { } nullNodeRoleIds && nullNodeRoleIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleIds = null;
+            if (parseNode.GetChildNode("target_application_id") is { } nullNodeTargetApplicationId && nullNodeTargetApplicationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetApplicationId = null;
+            if (parseNode.GetChildNode("target_type") is { } nullNodeTargetType && nullNodeTargetType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetType = null;
+            if (parseNode.GetChildNode("target_user_id") is { } nullNodeTargetUserId && nullNodeTargetUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetUserId = null;
+            if (parseNode.GetChildNode("target_user_ids") is { } nullNodeTargetUserIds && nullNodeTargetUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetUserIds = null;
+            if (parseNode.GetChildNode("temporary") is { } nullNodeTemporary && nullNodeTemporary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Temporary = null;
+            if (parseNode.GetChildNode("unique") is { } nullNodeUnique && nullNodeUnique.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unique = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The max_age property</summary>
-        public int? MaxAge { get; set; }
+        public int? MaxAge { get => _explicitNullValueMaxAge; set { _explicitNullValueMaxAge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_age"); else _explicitNullProperties?.Remove("max_age"); } }
+        private int? _explicitNullValueMaxAge = default!;
         /// <summary>The max_uses property</summary>
-        public int? MaxUses { get; set; }
+        public int? MaxUses { get => _explicitNullValueMaxUses; set { _explicitNullValueMaxUses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_uses"); else _explicitNullProperties?.Remove("max_uses"); } }
+        private int? _explicitNullValueMaxUses = default!;
         /// <summary>The role_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds? RoleIds { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds? RoleIds { get => _explicitNullValueRoleIds; set { _explicitNullValueRoleIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_ids"); else _explicitNullProperties?.Remove("role_ids"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds? _explicitNullValueRoleIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds RoleIds { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds RoleIds { get => _explicitNullValueRoleIds; set { _explicitNullValueRoleIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_ids"); else _explicitNullProperties?.Remove("role_ids"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds _explicitNullValueRoleIds = default!;
 #endif
         /// <summary>The target_application_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetApplicationId { get; set; }
+        public string? TargetApplicationId { get => _explicitNullValueTargetApplicationId; set { _explicitNullValueTargetApplicationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_application_id"); else _explicitNullProperties?.Remove("target_application_id"); } }
+        private string? _explicitNullValueTargetApplicationId = default!;
 #nullable restore
 #else
-        public string TargetApplicationId { get; set; }
+        public string TargetApplicationId { get => _explicitNullValueTargetApplicationId; set { _explicitNullValueTargetApplicationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_application_id"); else _explicitNullProperties?.Remove("target_application_id"); } }
+        private string _explicitNullValueTargetApplicationId = default!;
 #endif
         /// <summary>The target_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2? TargetType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2? TargetType { get => _explicitNullValueTargetType; set { _explicitNullValueTargetType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_type"); else _explicitNullProperties?.Remove("target_type"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2? _explicitNullValueTargetType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2 TargetType { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2 TargetType { get => _explicitNullValueTargetType; set { _explicitNullValueTargetType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_type"); else _explicitNullProperties?.Remove("target_type"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2 _explicitNullValueTargetType = default!;
 #endif
         /// <summary>The target_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetUserId { get; set; }
+        public string? TargetUserId { get => _explicitNullValueTargetUserId; set { _explicitNullValueTargetUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_id"); else _explicitNullProperties?.Remove("target_user_id"); } }
+        private string? _explicitNullValueTargetUserId = default!;
 #nullable restore
 #else
-        public string TargetUserId { get; set; }
+        public string TargetUserId { get => _explicitNullValueTargetUserId; set { _explicitNullValueTargetUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_id"); else _explicitNullProperties?.Remove("target_user_id"); } }
+        private string _explicitNullValueTargetUserId = default!;
 #endif
         /// <summary>The IDs of the users to target with this invite.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds? TargetUserIds { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds? TargetUserIds { get => _explicitNullValueTargetUserIds; set { _explicitNullValueTargetUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_ids"); else _explicitNullProperties?.Remove("target_user_ids"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds? _explicitNullValueTargetUserIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds TargetUserIds { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds TargetUserIds { get => _explicitNullValueTargetUserIds; set { _explicitNullValueTargetUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_ids"); else _explicitNullProperties?.Remove("target_user_ids"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds _explicitNullValueTargetUserIds = default!;
 #endif
         /// <summary>The temporary property</summary>
-        public bool? Temporary { get; set; }
+        public bool? Temporary { get => _explicitNullValueTemporary; set { _explicitNullValueTemporary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temporary"); else _explicitNullProperties?.Remove("temporary"); } }
+        private bool? _explicitNullValueTemporary = default!;
         /// <summary>The unique property</summary>
-        public bool? Unique { get; set; }
+        public bool? Unique { get => _explicitNullValueUnique; set { _explicitNullValueUnique = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique"); else _explicitNullProperties?.Remove("unique"); } }
+        private bool? _explicitNullValueUnique = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequest"/> and sets the default values.
         /// </summary>
@@ -77,7 +107,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +144,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds>("target_user_ids", TargetUserIds);
             writer.WriteBoolValue("temporary", Temporary);
             writer.WriteBoolValue("unique", Unique);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

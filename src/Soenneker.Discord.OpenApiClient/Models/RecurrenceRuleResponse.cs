@@ -11,59 +11,91 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RecurrenceRuleResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("by_month") is { } nullNodeByMonth && nullNodeByMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByMonth = null;
+            if (parseNode.GetChildNode("by_month_day") is { } nullNodeByMonthDay && nullNodeByMonthDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByMonthDay = null;
+            if (parseNode.GetChildNode("by_n_weekday") is { } nullNodeByNWeekday && nullNodeByNWeekday.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByNWeekday = null;
+            if (parseNode.GetChildNode("by_weekday") is { } nullNodeByWeekday && nullNodeByWeekday.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByWeekday = null;
+            if (parseNode.GetChildNode("by_year_day") is { } nullNodeByYearDay && nullNodeByYearDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByYearDay = null;
+            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("end") is { } nullNodeEnd && nullNodeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) End = null;
+            if (parseNode.GetChildNode("frequency") is { } nullNodeFrequency && nullNodeFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Frequency = null;
+            if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
+            if (parseNode.GetChildNode("start") is { } nullNodeStart && nullNodeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Start = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Set of specific months to recur on</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ByMonth { get; set; }
+        public List<int?>? ByMonth { get => _explicitNullValueByMonth; set { _explicitNullValueByMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_month"); else _explicitNullProperties?.Remove("by_month"); } }
+        private List<int?>? _explicitNullValueByMonth = default!;
 #nullable restore
 #else
-        public List<int?> ByMonth { get; set; }
+        public List<int?> ByMonth { get => _explicitNullValueByMonth; set { _explicitNullValueByMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_month"); else _explicitNullProperties?.Remove("by_month"); } }
+        private List<int?> _explicitNullValueByMonth = default!;
 #endif
         /// <summary>Set of specific dates within a month to recur on</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ByMonthDay { get; set; }
+        public List<int?>? ByMonthDay { get => _explicitNullValueByMonthDay; set { _explicitNullValueByMonthDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_month_day"); else _explicitNullProperties?.Remove("by_month_day"); } }
+        private List<int?>? _explicitNullValueByMonthDay = default!;
 #nullable restore
 #else
-        public List<int?> ByMonthDay { get; set; }
+        public List<int?> ByMonthDay { get => _explicitNullValueByMonthDay; set { _explicitNullValueByMonthDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_month_day"); else _explicitNullProperties?.Remove("by_month_day"); } }
+        private List<int?> _explicitNullValueByMonthDay = default!;
 #endif
         /// <summary>List of specific days within a specific week to recur on</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ByNWeekdayResponse>? ByNWeekday { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ByNWeekdayResponse>? ByNWeekday { get => _explicitNullValueByNWeekday; set { _explicitNullValueByNWeekday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_n_weekday"); else _explicitNullProperties?.Remove("by_n_weekday"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.ByNWeekdayResponse>? _explicitNullValueByNWeekday = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ByNWeekdayResponse> ByNWeekday { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ByNWeekdayResponse> ByNWeekday { get => _explicitNullValueByNWeekday; set { _explicitNullValueByNWeekday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_n_weekday"); else _explicitNullProperties?.Remove("by_n_weekday"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.ByNWeekdayResponse> _explicitNullValueByNWeekday = default!;
 #endif
         /// <summary>Set of specific days within a week for the event to recur on</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ByWeekday { get; set; }
+        public List<int?>? ByWeekday { get => _explicitNullValueByWeekday; set { _explicitNullValueByWeekday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_weekday"); else _explicitNullProperties?.Remove("by_weekday"); } }
+        private List<int?>? _explicitNullValueByWeekday = default!;
 #nullable restore
 #else
-        public List<int?> ByWeekday { get; set; }
+        public List<int?> ByWeekday { get => _explicitNullValueByWeekday; set { _explicitNullValueByWeekday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_weekday"); else _explicitNullProperties?.Remove("by_weekday"); } }
+        private List<int?> _explicitNullValueByWeekday = default!;
 #endif
         /// <summary>Set of days within a year to recur on (1-364)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ByYearDay { get; set; }
+        public List<int?>? ByYearDay { get => _explicitNullValueByYearDay; set { _explicitNullValueByYearDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_year_day"); else _explicitNullProperties?.Remove("by_year_day"); } }
+        private List<int?>? _explicitNullValueByYearDay = default!;
 #nullable restore
 #else
-        public List<int?> ByYearDay { get; set; }
+        public List<int?> ByYearDay { get => _explicitNullValueByYearDay; set { _explicitNullValueByYearDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_year_day"); else _explicitNullProperties?.Remove("by_year_day"); } }
+        private List<int?> _explicitNullValueByYearDay = default!;
 #endif
         /// <summary>Total number of times the event is allowed to recur</summary>
-        public int? Count { get; set; }
+        public int? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        private int? _explicitNullValueCount = default!;
         /// <summary>Ending time of the recurrence interval</summary>
-        public DateTimeOffset? End { get; set; }
+        public DateTimeOffset? End { get => _explicitNullValueEnd; set { _explicitNullValueEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end"); else _explicitNullProperties?.Remove("end"); } }
+        private DateTimeOffset? _explicitNullValueEnd = default!;
         /// <summary>How often the event occurs</summary>
-        public int? Frequency { get; set; }
+        public int? Frequency { get => _explicitNullValueFrequency; set { _explicitNullValueFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frequency"); else _explicitNullProperties?.Remove("frequency"); } }
+        private int? _explicitNullValueFrequency = default!;
         /// <summary>The spacing between events, defined by frequency</summary>
-        public int? Interval { get; set; }
+        public int? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
+        private int? _explicitNullValueInterval = default!;
         /// <summary>Starting time of the recurrence interval</summary>
-        public DateTimeOffset? Start { get; set; }
+        public DateTimeOffset? Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
+        private DateTimeOffset? _explicitNullValueStart = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse"/> and sets the default values.
         /// </summary>
@@ -79,7 +111,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +150,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("frequency", Frequency);
             writer.WriteIntValue("interval", Interval);
             writer.WriteDateTimeOffsetValue("start", Start);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

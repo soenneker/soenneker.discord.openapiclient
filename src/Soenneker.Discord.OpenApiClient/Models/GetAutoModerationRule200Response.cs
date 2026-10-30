@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetAutoModerationRule200Response : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,25 +70,38 @@ namespace Soenneker.Discord.OpenApiClient.Models
             var result = new global::Soenneker.Discord.OpenApiClient.Models.GetAutoModerationRule200Response();
             if("DefaultKeywordRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.DefaultKeywordRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse();
+                
             }
             else if("KeywordRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.KeywordRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse();
+                
             }
             else if("MentionSpamRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.MentionSpamRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse();
+                
             }
             else if("MlSpamRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.MlSpamRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.MlSpamRuleResponse();
+                
             }
             else if("UserProfileRuleResponse".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UserProfileRuleResponse = new global::Soenneker.Discord.OpenApiClient.Models.UserProfileRuleResponse();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("id") != null && parseNode.GetChildNode("guild_id") != null && parseNode.GetChildNode("creator_id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("event_type") != null && parseNode.GetChildNode("actions") != null && parseNode.GetChildNode("trigger_type") != null && parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("exempt_roles") != null && parseNode.GetChildNode("exempt_channels") != null && parseNode.GetChildNode("trigger_metadata") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("id") != null && parseNode.GetChildNode("guild_id") != null && parseNode.GetChildNode("creator_id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("event_type") != null && parseNode.GetChildNode("actions") != null && parseNode.GetChildNode("trigger_type") != null && parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("exempt_roles") != null && parseNode.GetChildNode("exempt_channels") != null && parseNode.GetChildNode("trigger_metadata") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("id") != null && parseNode.GetChildNode("guild_id") != null && parseNode.GetChildNode("creator_id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("event_type") != null && parseNode.GetChildNode("actions") != null && parseNode.GetChildNode("trigger_type") != null && parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("exempt_roles") != null && parseNode.GetChildNode("exempt_channels") != null && parseNode.GetChildNode("trigger_metadata") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("id") != null && parseNode.GetChildNode("guild_id") != null && parseNode.GetChildNode("creator_id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("event_type") != null && parseNode.GetChildNode("actions") != null && parseNode.GetChildNode("trigger_type") != null && parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("exempt_roles") != null && parseNode.GetChildNode("exempt_channels") != null && parseNode.GetChildNode("trigger_metadata") != null))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("id") != null && parseNode.GetChildNode("guild_id") != null && parseNode.GetChildNode("creator_id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("event_type") != null && parseNode.GetChildNode("actions") != null && parseNode.GetChildNode("trigger_type") != null && parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("exempt_roles") != null && parseNode.GetChildNode("exempt_channels") != null && parseNode.GetChildNode("trigger_metadata") != null))();
+            if (result.DefaultKeywordRuleResponse == null && result.KeywordRuleResponse == null && result.MentionSpamRuleResponse == null && result.MlSpamRuleResponse == null && result.UserProfileRuleResponse == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4) result.DefaultKeywordRuleResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse(), parseNode);
+            if (result.DefaultKeywordRuleResponse == null && result.KeywordRuleResponse == null && result.MentionSpamRuleResponse == null && result.MlSpamRuleResponse == null && result.UserProfileRuleResponse == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4) result.KeywordRuleResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse(), parseNode);
+            if (result.DefaultKeywordRuleResponse == null && result.KeywordRuleResponse == null && result.MentionSpamRuleResponse == null && result.MlSpamRuleResponse == null && result.UserProfileRuleResponse == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4) result.MlSpamRuleResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.MlSpamRuleResponse(), parseNode);
+            if (result.DefaultKeywordRuleResponse == null && result.KeywordRuleResponse == null && result.MentionSpamRuleResponse == null && result.MlSpamRuleResponse == null && result.UserProfileRuleResponse == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4) result.MentionSpamRuleResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse(), parseNode);
+            if (result.DefaultKeywordRuleResponse == null && result.KeywordRuleResponse == null && result.MentionSpamRuleResponse == null && result.MlSpamRuleResponse == null && result.UserProfileRuleResponse == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3) result.UserProfileRuleResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.UserProfileRuleResponse(), parseNode);
+            if (result.DefaultKeywordRuleResponse == null && result.KeywordRuleResponse == null && result.MentionSpamRuleResponse == null && result.MlSpamRuleResponse == null && result.UserProfileRuleResponse == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,25 +137,38 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (DefaultKeywordRuleResponse == null && KeywordRuleResponse == null && MentionSpamRuleResponse == null && MlSpamRuleResponse == null && UserProfileRuleResponse == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (DefaultKeywordRuleResponse != null && KeywordRuleResponse == null && MentionSpamRuleResponse == null && MlSpamRuleResponse == null && UserProfileRuleResponse == null) { if (DefaultKeywordRuleResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, DefaultKeywordRuleResponse); return; }
+            if (KeywordRuleResponse != null && DefaultKeywordRuleResponse == null && MentionSpamRuleResponse == null && MlSpamRuleResponse == null && UserProfileRuleResponse == null) { if (KeywordRuleResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, KeywordRuleResponse); return; }
+            if (MentionSpamRuleResponse != null && DefaultKeywordRuleResponse == null && KeywordRuleResponse == null && MlSpamRuleResponse == null && UserProfileRuleResponse == null) { if (MentionSpamRuleResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MentionSpamRuleResponse); return; }
+            if (MlSpamRuleResponse != null && DefaultKeywordRuleResponse == null && KeywordRuleResponse == null && MentionSpamRuleResponse == null && UserProfileRuleResponse == null) { if (MlSpamRuleResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MlSpamRuleResponse); return; }
+            if (UserProfileRuleResponse != null && DefaultKeywordRuleResponse == null && KeywordRuleResponse == null && MentionSpamRuleResponse == null && MlSpamRuleResponse == null) { if (UserProfileRuleResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UserProfileRuleResponse); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(DefaultKeywordRuleResponse != null)
             {
+                if (DefaultKeywordRuleResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordRuleResponse>(null, DefaultKeywordRuleResponse);
             }
             else if(KeywordRuleResponse != null)
             {
+                if (KeywordRuleResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordRuleResponse>(null, KeywordRuleResponse);
             }
             else if(MentionSpamRuleResponse != null)
             {
+                if (MentionSpamRuleResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionSpamRuleResponse>(null, MentionSpamRuleResponse);
             }
             else if(MlSpamRuleResponse != null)
             {
+                if (MlSpamRuleResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MlSpamRuleResponse>(null, MlSpamRuleResponse);
             }
             else if(UserProfileRuleResponse != null)
             {
+                if (UserProfileRuleResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserProfileRuleResponse>(null, UserProfileRuleResponse);
             }
         }

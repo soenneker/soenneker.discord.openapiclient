@@ -11,29 +11,46 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CustomClientThemeShareRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("base_mix") is { } nullNodeBaseMix && nullNodeBaseMix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseMix = null;
+            if (parseNode.GetChildNode("base_theme") is { } nullNodeBaseTheme && nullNodeBaseTheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseTheme = null;
+            if (parseNode.GetChildNode("colors") is { } nullNodeColors && nullNodeColors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Colors = null;
+            if (parseNode.GetChildNode("gradient_angle") is { } nullNodeGradientAngle && nullNodeGradientAngle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GradientAngle = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The base_mix property</summary>
-        public int? BaseMix { get; set; }
+        public int? BaseMix { get => _explicitNullValueBaseMix; set { _explicitNullValueBaseMix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_mix"); else _explicitNullProperties?.Remove("base_mix"); } }
+        private int? _explicitNullValueBaseMix = default!;
         /// <summary>The base_theme property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme? BaseTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme? BaseTheme { get => _explicitNullValueBaseTheme; set { _explicitNullValueBaseTheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_theme"); else _explicitNullProperties?.Remove("base_theme"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme? _explicitNullValueBaseTheme = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme BaseTheme { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme BaseTheme { get => _explicitNullValueBaseTheme; set { _explicitNullValueBaseTheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_theme"); else _explicitNullProperties?.Remove("base_theme"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme _explicitNullValueBaseTheme = default!;
 #endif
         /// <summary>The colors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Colors { get; set; }
+        public List<string>? Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
+        private List<string>? _explicitNullValueColors = default!;
 #nullable restore
 #else
-        public List<string> Colors { get; set; }
+        public List<string> Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
+        private List<string> _explicitNullValueColors = default!;
 #endif
         /// <summary>The gradient_angle property</summary>
-        public int? GradientAngle { get; set; }
+        public int? GradientAngle { get => _explicitNullValueGradientAngle; set { _explicitNullValueGradientAngle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gradient_angle"); else _explicitNullProperties?.Remove("gradient_angle"); } }
+        private int? _explicitNullValueGradientAngle = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageShareCustomUserThemeBaseTheme>("base_theme", BaseTheme);
             writer.WriteCollectionOfPrimitiveValues<string>("colors", Colors);
             writer.WriteIntValue("gradient_angle", GradientAngle);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

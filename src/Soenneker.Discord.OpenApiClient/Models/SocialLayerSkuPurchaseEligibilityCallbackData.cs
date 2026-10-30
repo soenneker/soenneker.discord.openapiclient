@@ -11,26 +11,41 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SocialLayerSkuPurchaseEligibilityCallbackData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("eligible") is { } nullNodeEligible && nullNodeEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eligible = null;
+            if (parseNode.GetChildNode("ineligible_reason") is { } nullNodeIneligibleReason && nullNodeIneligibleReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IneligibleReason = null;
+            if (parseNode.GetChildNode("ineligible_reason_description") is { } nullNodeIneligibleReasonDescription && nullNodeIneligibleReasonDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IneligibleReasonDescription = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The eligible property</summary>
-        public bool? Eligible { get; set; }
+        public bool? Eligible { get => _explicitNullValueEligible; set { _explicitNullValueEligible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible"); else _explicitNullProperties?.Remove("eligible"); } }
+        private bool? _explicitNullValueEligible = default!;
         /// <summary>The ineligible_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason? IneligibleReason { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason? IneligibleReason { get => _explicitNullValueIneligibleReason; set { _explicitNullValueIneligibleReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason"); else _explicitNullProperties?.Remove("ineligible_reason"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason? _explicitNullValueIneligibleReason = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason IneligibleReason { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason IneligibleReason { get => _explicitNullValueIneligibleReason; set { _explicitNullValueIneligibleReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason"); else _explicitNullProperties?.Remove("ineligible_reason"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason _explicitNullValueIneligibleReason = default!;
 #endif
         /// <summary>The ineligible_reason_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IneligibleReasonDescription { get; set; }
+        public string? IneligibleReasonDescription { get => _explicitNullValueIneligibleReasonDescription; set { _explicitNullValueIneligibleReasonDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason_description"); else _explicitNullProperties?.Remove("ineligible_reason_description"); } }
+        private string? _explicitNullValueIneligibleReasonDescription = default!;
 #nullable restore
 #else
-        public string IneligibleReasonDescription { get; set; }
+        public string IneligibleReasonDescription { get => _explicitNullValueIneligibleReasonDescription; set { _explicitNullValueIneligibleReasonDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason_description"); else _explicitNullProperties?.Remove("ineligible_reason_description"); } }
+        private string _explicitNullValueIneligibleReasonDescription = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSkuPurchaseEligibilityCallbackData"/> and sets the default values.
@@ -47,7 +62,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSkuPurchaseEligibilityCallbackData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSkuPurchaseEligibilityCallbackData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.SocialLayerSkuPurchaseEligibilityCallbackData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteBoolValue("eligible", Eligible);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason>("ineligible_reason", IneligibleReason);
             writer.WriteStringValue("ineligible_reason_description", IneligibleReasonDescription);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

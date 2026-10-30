@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActionGuildJoinRequestRequestAction : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf1"/></summary>
         public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf1? GuildJoinRequestApplicationStatusOneOf1 { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf2"/></summary>
@@ -31,23 +36,26 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction();
-            if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf1>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf1 guildJoinRequestApplicationStatusOneOf1Value)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue0 && ("STARTED".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf1>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf1 guildJoinRequestApplicationStatusOneOf1Value)
             {
                 result.GuildJoinRequestApplicationStatusOneOf1 = guildJoinRequestApplicationStatusOneOf1Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf2>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf2 guildJoinRequestApplicationStatusOneOf2Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("SUBMITTED".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf2>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf2 guildJoinRequestApplicationStatusOneOf2Value)
             {
                 result.GuildJoinRequestApplicationStatusOneOf2 = guildJoinRequestApplicationStatusOneOf2Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf3>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf3 guildJoinRequestApplicationStatusOneOf3Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue2 && ("REJECTED".Equals(unionEnumValue2.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf3>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf3 guildJoinRequestApplicationStatusOneOf3Value)
             {
                 result.GuildJoinRequestApplicationStatusOneOf3 = guildJoinRequestApplicationStatusOneOf3Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf4>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf4 guildJoinRequestApplicationStatusOneOf4Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue3 && ("APPROVED".Equals(unionEnumValue3.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf4>() is global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatusOneOf4 guildJoinRequestApplicationStatusOneOf4Value)
             {
                 result.GuildJoinRequestApplicationStatusOneOf4 = guildJoinRequestApplicationStatusOneOf4Value;
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.GuildJoinRequestApplicationStatusOneOf1 == null && result.GuildJoinRequestApplicationStatusOneOf2 == null && result.GuildJoinRequestApplicationStatusOneOf3 == null && result.GuildJoinRequestApplicationStatusOneOf4 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +71,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (GuildJoinRequestApplicationStatusOneOf1 == null && GuildJoinRequestApplicationStatusOneOf2 == null && GuildJoinRequestApplicationStatusOneOf3 == null && GuildJoinRequestApplicationStatusOneOf4 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(GuildJoinRequestApplicationStatusOneOf1 != null)
             {

@@ -11,50 +11,74 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MessageComponentInteractionMetadataResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("authorizing_integration_owners") is { } nullNodeAuthorizingIntegrationOwners && nullNodeAuthorizingIntegrationOwners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizingIntegrationOwners = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("interacted_message_id") is { } nullNodeInteractedMessageId && nullNodeInteractedMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteractedMessageId = null;
+            if (parseNode.GetChildNode("original_response_message_id") is { } nullNodeOriginalResponseMessageId && nullNodeOriginalResponseMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalResponseMessageId = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The authorizing_integration_owners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponseAuthorizingIntegrationOwnersProperty? AuthorizingIntegrationOwners { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponseAuthorizingIntegrationOwnersProperty? AuthorizingIntegrationOwners { get => _explicitNullValueAuthorizingIntegrationOwners; set { _explicitNullValueAuthorizingIntegrationOwners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizing_integration_owners"); else _explicitNullProperties?.Remove("authorizing_integration_owners"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponseAuthorizingIntegrationOwnersProperty? _explicitNullValueAuthorizingIntegrationOwners = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponseAuthorizingIntegrationOwnersProperty AuthorizingIntegrationOwners { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponseAuthorizingIntegrationOwnersProperty AuthorizingIntegrationOwners { get => _explicitNullValueAuthorizingIntegrationOwners; set { _explicitNullValueAuthorizingIntegrationOwners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizing_integration_owners"); else _explicitNullProperties?.Remove("authorizing_integration_owners"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponseAuthorizingIntegrationOwnersProperty _explicitNullValueAuthorizingIntegrationOwners = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The interacted_message_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InteractedMessageId { get; set; }
+        public string? InteractedMessageId { get => _explicitNullValueInteractedMessageId; set { _explicitNullValueInteractedMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interacted_message_id"); else _explicitNullProperties?.Remove("interacted_message_id"); } }
+        private string? _explicitNullValueInteractedMessageId = default!;
 #nullable restore
 #else
-        public string InteractedMessageId { get; set; }
+        public string InteractedMessageId { get => _explicitNullValueInteractedMessageId; set { _explicitNullValueInteractedMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interacted_message_id"); else _explicitNullProperties?.Remove("interacted_message_id"); } }
+        private string _explicitNullValueInteractedMessageId = default!;
 #endif
         /// <summary>The original_response_message_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalResponseMessageId { get; set; }
+        public string? OriginalResponseMessageId { get => _explicitNullValueOriginalResponseMessageId; set { _explicitNullValueOriginalResponseMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_response_message_id"); else _explicitNullProperties?.Remove("original_response_message_id"); } }
+        private string? _explicitNullValueOriginalResponseMessageId = default!;
 #nullable restore
 #else
-        public string OriginalResponseMessageId { get; set; }
+        public string OriginalResponseMessageId { get => _explicitNullValueOriginalResponseMessageId; set { _explicitNullValueOriginalResponseMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_response_message_id"); else _explicitNullProperties?.Remove("original_response_message_id"); } }
+        private string _explicitNullValueOriginalResponseMessageId = default!;
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get; set; }
+        public int? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private int? _explicitNullValueType = default!;
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? User { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UserResponse? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse User { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UserResponse _explicitNullValueUser = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse"/> and sets the default values.
@@ -71,7 +95,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.MessageComponentInteractionMetadataResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("original_response_message_id", OriginalResponseMessageId);
             writer.WriteIntValue("type", Type);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

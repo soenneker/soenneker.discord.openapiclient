@@ -11,72 +11,103 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GuildAuditLogResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("application_commands") is { } nullNodeApplicationCommands && nullNodeApplicationCommands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationCommands = null;
+            if (parseNode.GetChildNode("audit_log_entries") is { } nullNodeAuditLogEntries && nullNodeAuditLogEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuditLogEntries = null;
+            if (parseNode.GetChildNode("auto_moderation_rules") is { } nullNodeAutoModerationRules && nullNodeAutoModerationRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoModerationRules = null;
+            if (parseNode.GetChildNode("guild_scheduled_events") is { } nullNodeGuildScheduledEvents && nullNodeGuildScheduledEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildScheduledEvents = null;
+            if (parseNode.GetChildNode("integrations") is { } nullNodeIntegrations && nullNodeIntegrations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Integrations = null;
+            if (parseNode.GetChildNode("threads") is { } nullNodeThreads && nullNodeThreads.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Threads = null;
+            if (parseNode.GetChildNode("users") is { } nullNodeUsers && nullNodeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Users = null;
+            if (parseNode.GetChildNode("webhooks") is { } nullNodeWebhooks && nullNodeWebhooks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Webhooks = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The application_commands property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse>? ApplicationCommands { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse>? ApplicationCommands { get => _explicitNullValueApplicationCommands; set { _explicitNullValueApplicationCommands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_commands"); else _explicitNullProperties?.Remove("application_commands"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse>? _explicitNullValueApplicationCommands = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse> ApplicationCommands { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse> ApplicationCommands { get => _explicitNullValueApplicationCommands; set { _explicitNullValueApplicationCommands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_commands"); else _explicitNullProperties?.Remove("application_commands"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse> _explicitNullValueApplicationCommands = default!;
 #endif
         /// <summary>The audit_log_entries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse>? AuditLogEntries { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse>? AuditLogEntries { get => _explicitNullValueAuditLogEntries; set { _explicitNullValueAuditLogEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audit_log_entries"); else _explicitNullProperties?.Remove("audit_log_entries"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse>? _explicitNullValueAuditLogEntries = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse> AuditLogEntries { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse> AuditLogEntries { get => _explicitNullValueAuditLogEntries; set { _explicitNullValueAuditLogEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audit_log_entries"); else _explicitNullProperties?.Remove("audit_log_entries"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse> _explicitNullValueAuditLogEntries = default!;
 #endif
         /// <summary>The auto_moderation_rules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseAutoModerationRulesItem>? AutoModerationRules { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseAutoModerationRulesItem>? AutoModerationRules { get => _explicitNullValueAutoModerationRules; set { _explicitNullValueAutoModerationRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_moderation_rules"); else _explicitNullProperties?.Remove("auto_moderation_rules"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseAutoModerationRulesItem>? _explicitNullValueAutoModerationRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseAutoModerationRulesItem> AutoModerationRules { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseAutoModerationRulesItem> AutoModerationRules { get => _explicitNullValueAutoModerationRules; set { _explicitNullValueAutoModerationRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_moderation_rules"); else _explicitNullProperties?.Remove("auto_moderation_rules"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseAutoModerationRulesItem> _explicitNullValueAutoModerationRules = default!;
 #endif
         /// <summary>The guild_scheduled_events property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseGuildScheduledEventsItem>? GuildScheduledEvents { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseGuildScheduledEventsItem>? GuildScheduledEvents { get => _explicitNullValueGuildScheduledEvents; set { _explicitNullValueGuildScheduledEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_events"); else _explicitNullProperties?.Remove("guild_scheduled_events"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseGuildScheduledEventsItem>? _explicitNullValueGuildScheduledEvents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseGuildScheduledEventsItem> GuildScheduledEvents { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseGuildScheduledEventsItem> GuildScheduledEvents { get => _explicitNullValueGuildScheduledEvents; set { _explicitNullValueGuildScheduledEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_events"); else _explicitNullProperties?.Remove("guild_scheduled_events"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseGuildScheduledEventsItem> _explicitNullValueGuildScheduledEvents = default!;
 #endif
         /// <summary>The integrations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseIntegrationsItem>? Integrations { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseIntegrationsItem>? Integrations { get => _explicitNullValueIntegrations; set { _explicitNullValueIntegrations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integrations"); else _explicitNullProperties?.Remove("integrations"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseIntegrationsItem>? _explicitNullValueIntegrations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseIntegrationsItem> Integrations { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseIntegrationsItem> Integrations { get => _explicitNullValueIntegrations; set { _explicitNullValueIntegrations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integrations"); else _explicitNullProperties?.Remove("integrations"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseIntegrationsItem> _explicitNullValueIntegrations = default!;
 #endif
         /// <summary>The threads property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>? Threads { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>? Threads { get => _explicitNullValueThreads; set { _explicitNullValueThreads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads"); else _explicitNullProperties?.Remove("threads"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>? _explicitNullValueThreads = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse> Threads { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse> Threads { get => _explicitNullValueThreads; set { _explicitNullValueThreads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads"); else _explicitNullProperties?.Remove("threads"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse> _explicitNullValueThreads = default!;
 #endif
         /// <summary>The users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>? Users { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>? _explicitNullValueUsers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.UserResponse> Users { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.UserResponse> Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.UserResponse> _explicitNullValueUsers = default!;
 #endif
         /// <summary>The webhooks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseWebhooksItem>? Webhooks { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseWebhooksItem>? Webhooks { get => _explicitNullValueWebhooks; set { _explicitNullValueWebhooks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks"); else _explicitNullProperties?.Remove("webhooks"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseWebhooksItem>? _explicitNullValueWebhooks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseWebhooksItem> Webhooks { get; set; }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseWebhooksItem> Webhooks { get => _explicitNullValueWebhooks; set { _explicitNullValueWebhooks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks"); else _explicitNullProperties?.Remove("webhooks"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseWebhooksItem> _explicitNullValueWebhooks = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponse"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>("threads", Threads);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("users", Users);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildAuditLogResponseWebhooksItem>("webhooks", Webhooks);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

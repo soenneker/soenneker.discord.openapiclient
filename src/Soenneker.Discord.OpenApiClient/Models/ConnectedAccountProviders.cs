@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConnectedAccountProviders : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf1"/></summary>
         public global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf1? ConnectedAccountProvidersOneOf1 { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf10"/></summary>
@@ -73,107 +78,110 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProviders();
-            if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf1>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf1 connectedAccountProvidersOneOf1Value)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue0 && ("battlenet".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf1>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf1 connectedAccountProvidersOneOf1Value)
             {
                 result.ConnectedAccountProvidersOneOf1 = connectedAccountProvidersOneOf1Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf10>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf10 connectedAccountProvidersOneOf10Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("mastodon".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf10>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf10 connectedAccountProvidersOneOf10Value)
             {
                 result.ConnectedAccountProvidersOneOf10 = connectedAccountProvidersOneOf10Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf11>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf11 connectedAccountProvidersOneOf11Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue2 && ("leagueoflegends".Equals(unionEnumValue2.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf11>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf11 connectedAccountProvidersOneOf11Value)
             {
                 result.ConnectedAccountProvidersOneOf11 = connectedAccountProvidersOneOf11Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf12>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf12 connectedAccountProvidersOneOf12Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue3 && ("paypal".Equals(unionEnumValue3.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf12>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf12 connectedAccountProvidersOneOf12Value)
             {
                 result.ConnectedAccountProvidersOneOf12 = connectedAccountProvidersOneOf12Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf13>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf13 connectedAccountProvidersOneOf13Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue4 && ("playstation".Equals(unionEnumValue4.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf13>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf13 connectedAccountProvidersOneOf13Value)
             {
                 result.ConnectedAccountProvidersOneOf13 = connectedAccountProvidersOneOf13Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf14>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf14 connectedAccountProvidersOneOf14Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue5 && ("reddit".Equals(unionEnumValue5.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf14>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf14 connectedAccountProvidersOneOf14Value)
             {
                 result.ConnectedAccountProvidersOneOf14 = connectedAccountProvidersOneOf14Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf15>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf15 connectedAccountProvidersOneOf15Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue6 && ("riotgames".Equals(unionEnumValue6.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf15>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf15 connectedAccountProvidersOneOf15Value)
             {
                 result.ConnectedAccountProvidersOneOf15 = connectedAccountProvidersOneOf15Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf16>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf16 connectedAccountProvidersOneOf16Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue7 && ("roblox".Equals(unionEnumValue7.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf16>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf16 connectedAccountProvidersOneOf16Value)
             {
                 result.ConnectedAccountProvidersOneOf16 = connectedAccountProvidersOneOf16Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf17>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf17 connectedAccountProvidersOneOf17Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue8 && ("skype".Equals(unionEnumValue8.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf17>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf17 connectedAccountProvidersOneOf17Value)
             {
                 result.ConnectedAccountProvidersOneOf17 = connectedAccountProvidersOneOf17Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf18>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf18 connectedAccountProvidersOneOf18Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue9 && ("spotify".Equals(unionEnumValue9.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf18>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf18 connectedAccountProvidersOneOf18Value)
             {
                 result.ConnectedAccountProvidersOneOf18 = connectedAccountProvidersOneOf18Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf19>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf19 connectedAccountProvidersOneOf19Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue10 && ("steam".Equals(unionEnumValue10.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf19>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf19 connectedAccountProvidersOneOf19Value)
             {
                 result.ConnectedAccountProvidersOneOf19 = connectedAccountProvidersOneOf19Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf2>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf2 connectedAccountProvidersOneOf2Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue11 && ("bluesky".Equals(unionEnumValue11.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf2>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf2 connectedAccountProvidersOneOf2Value)
             {
                 result.ConnectedAccountProvidersOneOf2 = connectedAccountProvidersOneOf2Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf20>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf20 connectedAccountProvidersOneOf20Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue12 && ("tiktok".Equals(unionEnumValue12.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf20>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf20 connectedAccountProvidersOneOf20Value)
             {
                 result.ConnectedAccountProvidersOneOf20 = connectedAccountProvidersOneOf20Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf21>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf21 connectedAccountProvidersOneOf21Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue13 && ("twitch".Equals(unionEnumValue13.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf21>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf21 connectedAccountProvidersOneOf21Value)
             {
                 result.ConnectedAccountProvidersOneOf21 = connectedAccountProvidersOneOf21Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf22>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf22 connectedAccountProvidersOneOf22Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue14 && ("twitter".Equals(unionEnumValue14.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf22>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf22 connectedAccountProvidersOneOf22Value)
             {
                 result.ConnectedAccountProvidersOneOf22 = connectedAccountProvidersOneOf22Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf23>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf23 connectedAccountProvidersOneOf23Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue15 && ("xbox".Equals(unionEnumValue15.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf23>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf23 connectedAccountProvidersOneOf23Value)
             {
                 result.ConnectedAccountProvidersOneOf23 = connectedAccountProvidersOneOf23Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf24>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf24 connectedAccountProvidersOneOf24Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue16 && ("youtube".Equals(unionEnumValue16.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf24>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf24 connectedAccountProvidersOneOf24Value)
             {
                 result.ConnectedAccountProvidersOneOf24 = connectedAccountProvidersOneOf24Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf25>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf25 connectedAccountProvidersOneOf25Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue17 && ("domain".Equals(unionEnumValue17.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf25>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf25 connectedAccountProvidersOneOf25Value)
             {
                 result.ConnectedAccountProvidersOneOf25 = connectedAccountProvidersOneOf25Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf3>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf3 connectedAccountProvidersOneOf3Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue18 && ("bungie".Equals(unionEnumValue18.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf3>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf3 connectedAccountProvidersOneOf3Value)
             {
                 result.ConnectedAccountProvidersOneOf3 = connectedAccountProvidersOneOf3Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf4>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf4 connectedAccountProvidersOneOf4Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue19 && ("ebay".Equals(unionEnumValue19.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf4>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf4 connectedAccountProvidersOneOf4Value)
             {
                 result.ConnectedAccountProvidersOneOf4 = connectedAccountProvidersOneOf4Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf5>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf5 connectedAccountProvidersOneOf5Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue20 && ("epicgames".Equals(unionEnumValue20.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf5>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf5 connectedAccountProvidersOneOf5Value)
             {
                 result.ConnectedAccountProvidersOneOf5 = connectedAccountProvidersOneOf5Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf6>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf6 connectedAccountProvidersOneOf6Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue21 && ("facebook".Equals(unionEnumValue21.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf6>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf6 connectedAccountProvidersOneOf6Value)
             {
                 result.ConnectedAccountProvidersOneOf6 = connectedAccountProvidersOneOf6Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf7>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf7 connectedAccountProvidersOneOf7Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue22 && ("github".Equals(unionEnumValue22.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf7>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf7 connectedAccountProvidersOneOf7Value)
             {
                 result.ConnectedAccountProvidersOneOf7 = connectedAccountProvidersOneOf7Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf8>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf8 connectedAccountProvidersOneOf8Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue23 && ("instagram".Equals(unionEnumValue23.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf8>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf8 connectedAccountProvidersOneOf8Value)
             {
                 result.ConnectedAccountProvidersOneOf8 = connectedAccountProvidersOneOf8Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf9>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf9 connectedAccountProvidersOneOf9Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue24 && ("letterboxd".Equals(unionEnumValue24.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf9>() is global::Soenneker.Discord.OpenApiClient.Models.ConnectedAccountProvidersOneOf9 connectedAccountProvidersOneOf9Value)
             {
                 result.ConnectedAccountProvidersOneOf9 = connectedAccountProvidersOneOf9Value;
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.ConnectedAccountProvidersOneOf1 == null && result.ConnectedAccountProvidersOneOf10 == null && result.ConnectedAccountProvidersOneOf11 == null && result.ConnectedAccountProvidersOneOf12 == null && result.ConnectedAccountProvidersOneOf13 == null && result.ConnectedAccountProvidersOneOf14 == null && result.ConnectedAccountProvidersOneOf15 == null && result.ConnectedAccountProvidersOneOf16 == null && result.ConnectedAccountProvidersOneOf17 == null && result.ConnectedAccountProvidersOneOf18 == null && result.ConnectedAccountProvidersOneOf19 == null && result.ConnectedAccountProvidersOneOf2 == null && result.ConnectedAccountProvidersOneOf20 == null && result.ConnectedAccountProvidersOneOf21 == null && result.ConnectedAccountProvidersOneOf22 == null && result.ConnectedAccountProvidersOneOf23 == null && result.ConnectedAccountProvidersOneOf24 == null && result.ConnectedAccountProvidersOneOf25 == null && result.ConnectedAccountProvidersOneOf3 == null && result.ConnectedAccountProvidersOneOf4 == null && result.ConnectedAccountProvidersOneOf5 == null && result.ConnectedAccountProvidersOneOf6 == null && result.ConnectedAccountProvidersOneOf7 == null && result.ConnectedAccountProvidersOneOf8 == null && result.ConnectedAccountProvidersOneOf9 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -189,6 +197,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (ConnectedAccountProvidersOneOf1 == null && ConnectedAccountProvidersOneOf10 == null && ConnectedAccountProvidersOneOf11 == null && ConnectedAccountProvidersOneOf12 == null && ConnectedAccountProvidersOneOf13 == null && ConnectedAccountProvidersOneOf14 == null && ConnectedAccountProvidersOneOf15 == null && ConnectedAccountProvidersOneOf16 == null && ConnectedAccountProvidersOneOf17 == null && ConnectedAccountProvidersOneOf18 == null && ConnectedAccountProvidersOneOf19 == null && ConnectedAccountProvidersOneOf2 == null && ConnectedAccountProvidersOneOf20 == null && ConnectedAccountProvidersOneOf21 == null && ConnectedAccountProvidersOneOf22 == null && ConnectedAccountProvidersOneOf23 == null && ConnectedAccountProvidersOneOf24 == null && ConnectedAccountProvidersOneOf25 == null && ConnectedAccountProvidersOneOf3 == null && ConnectedAccountProvidersOneOf4 == null && ConnectedAccountProvidersOneOf5 == null && ConnectedAccountProvidersOneOf6 == null && ConnectedAccountProvidersOneOf7 == null && ConnectedAccountProvidersOneOf8 == null && ConnectedAccountProvidersOneOf9 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ConnectedAccountProvidersOneOf1 != null)
             {

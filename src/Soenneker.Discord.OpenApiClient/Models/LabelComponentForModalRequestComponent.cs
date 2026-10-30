@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LabelComponentForModalRequestComponent : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentForModalRequest"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,45 +110,68 @@ namespace Soenneker.Discord.OpenApiClient.Models
             var result = new global::Soenneker.Discord.OpenApiClient.Models.LabelComponentForModalRequestComponent();
             if("ChannelSelectComponentForModalRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ChannelSelectComponentForModalRequest = new global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentForModalRequest();
+                
             }
             else if("CheckboxComponentForModalRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.CheckboxComponentForModalRequest = new global::Soenneker.Discord.OpenApiClient.Models.CheckboxComponentForModalRequest();
+                
             }
             else if("CheckboxGroupComponentForModalRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.CheckboxGroupComponentForModalRequest = new global::Soenneker.Discord.OpenApiClient.Models.CheckboxGroupComponentForModalRequest();
+                
             }
             else if("FileUploadComponentForModalRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.FileUploadComponentForModalRequest = new global::Soenneker.Discord.OpenApiClient.Models.FileUploadComponentForModalRequest();
+                
             }
             else if("MentionableSelectComponentForModalRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.MentionableSelectComponentForModalRequest = new global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest();
+                
             }
             else if("RadioGroupComponentForModalRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RadioGroupComponentForModalRequest = new global::Soenneker.Discord.OpenApiClient.Models.RadioGroupComponentForModalRequest();
+                
             }
             else if("RoleSelectComponentForModalRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RoleSelectComponentForModalRequest = new global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentForModalRequest();
+                
             }
             else if("StringSelectComponentForModalRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.StringSelectComponentForModalRequest = new global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForModalRequest();
+                
             }
             else if("TextInputComponentForModalRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TextInputComponentForModalRequest = new global::Soenneker.Discord.OpenApiClient.Models.TextInputComponentForModalRequest();
+                
             }
             else if("UserSelectComponentForModalRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UserSelectComponentForModalRequest = new global::Soenneker.Discord.OpenApiClient.Models.UserSelectComponentForModalRequest();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null && parseNode.GetChildNode("options") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null && parseNode.GetChildNode("options") != null))();
+            bool matchesUnionBranch6 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null))();
+            bool matchesUnionBranch7 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null && parseNode.GetChildNode("options") != null))();
+            bool matchesUnionBranch8 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null && parseNode.GetChildNode("style") != null))();
+            bool matchesUnionBranch9 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && parseNode.GetChildNode("custom_id") != null))();
+            if (result.ChannelSelectComponentForModalRequest == null && result.CheckboxComponentForModalRequest == null && result.CheckboxGroupComponentForModalRequest == null && result.FileUploadComponentForModalRequest == null && result.MentionableSelectComponentForModalRequest == null && result.RadioGroupComponentForModalRequest == null && result.RoleSelectComponentForModalRequest == null && result.StringSelectComponentForModalRequest == null && result.TextInputComponentForModalRequest == null && result.UserSelectComponentForModalRequest == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.ChannelSelectComponentForModalRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentForModalRequest(), parseNode);
+            if (result.ChannelSelectComponentForModalRequest == null && result.CheckboxComponentForModalRequest == null && result.CheckboxGroupComponentForModalRequest == null && result.FileUploadComponentForModalRequest == null && result.MentionableSelectComponentForModalRequest == null && result.RadioGroupComponentForModalRequest == null && result.RoleSelectComponentForModalRequest == null && result.StringSelectComponentForModalRequest == null && result.TextInputComponentForModalRequest == null && result.UserSelectComponentForModalRequest == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.CheckboxComponentForModalRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.CheckboxComponentForModalRequest(), parseNode);
+            if (result.ChannelSelectComponentForModalRequest == null && result.CheckboxComponentForModalRequest == null && result.CheckboxGroupComponentForModalRequest == null && result.FileUploadComponentForModalRequest == null && result.MentionableSelectComponentForModalRequest == null && result.RadioGroupComponentForModalRequest == null && result.RoleSelectComponentForModalRequest == null && result.StringSelectComponentForModalRequest == null && result.TextInputComponentForModalRequest == null && result.UserSelectComponentForModalRequest == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.CheckboxGroupComponentForModalRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.CheckboxGroupComponentForModalRequest(), parseNode);
+            if (result.ChannelSelectComponentForModalRequest == null && result.CheckboxComponentForModalRequest == null && result.CheckboxGroupComponentForModalRequest == null && result.FileUploadComponentForModalRequest == null && result.MentionableSelectComponentForModalRequest == null && result.RadioGroupComponentForModalRequest == null && result.RoleSelectComponentForModalRequest == null && result.StringSelectComponentForModalRequest == null && result.TextInputComponentForModalRequest == null && result.UserSelectComponentForModalRequest == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.FileUploadComponentForModalRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.FileUploadComponentForModalRequest(), parseNode);
+            if (result.ChannelSelectComponentForModalRequest == null && result.CheckboxComponentForModalRequest == null && result.CheckboxGroupComponentForModalRequest == null && result.FileUploadComponentForModalRequest == null && result.MentionableSelectComponentForModalRequest == null && result.RadioGroupComponentForModalRequest == null && result.RoleSelectComponentForModalRequest == null && result.StringSelectComponentForModalRequest == null && result.TextInputComponentForModalRequest == null && result.UserSelectComponentForModalRequest == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.MentionableSelectComponentForModalRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest(), parseNode);
+            if (result.ChannelSelectComponentForModalRequest == null && result.CheckboxComponentForModalRequest == null && result.CheckboxGroupComponentForModalRequest == null && result.FileUploadComponentForModalRequest == null && result.MentionableSelectComponentForModalRequest == null && result.RadioGroupComponentForModalRequest == null && result.RoleSelectComponentForModalRequest == null && result.StringSelectComponentForModalRequest == null && result.TextInputComponentForModalRequest == null && result.UserSelectComponentForModalRequest == null && matchesUnionBranch5 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.RadioGroupComponentForModalRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.RadioGroupComponentForModalRequest(), parseNode);
+            if (result.ChannelSelectComponentForModalRequest == null && result.CheckboxComponentForModalRequest == null && result.CheckboxGroupComponentForModalRequest == null && result.FileUploadComponentForModalRequest == null && result.MentionableSelectComponentForModalRequest == null && result.RadioGroupComponentForModalRequest == null && result.RoleSelectComponentForModalRequest == null && result.StringSelectComponentForModalRequest == null && result.TextInputComponentForModalRequest == null && result.UserSelectComponentForModalRequest == null && matchesUnionBranch6 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.RoleSelectComponentForModalRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentForModalRequest(), parseNode);
+            if (result.ChannelSelectComponentForModalRequest == null && result.CheckboxComponentForModalRequest == null && result.CheckboxGroupComponentForModalRequest == null && result.FileUploadComponentForModalRequest == null && result.MentionableSelectComponentForModalRequest == null && result.RadioGroupComponentForModalRequest == null && result.RoleSelectComponentForModalRequest == null && result.StringSelectComponentForModalRequest == null && result.TextInputComponentForModalRequest == null && result.UserSelectComponentForModalRequest == null && matchesUnionBranch7 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch8 && !matchesUnionBranch9) result.StringSelectComponentForModalRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForModalRequest(), parseNode);
+            if (result.ChannelSelectComponentForModalRequest == null && result.CheckboxComponentForModalRequest == null && result.CheckboxGroupComponentForModalRequest == null && result.FileUploadComponentForModalRequest == null && result.MentionableSelectComponentForModalRequest == null && result.RadioGroupComponentForModalRequest == null && result.RoleSelectComponentForModalRequest == null && result.StringSelectComponentForModalRequest == null && result.TextInputComponentForModalRequest == null && result.UserSelectComponentForModalRequest == null && matchesUnionBranch8 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch9) result.TextInputComponentForModalRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.TextInputComponentForModalRequest(), parseNode);
+            if (result.ChannelSelectComponentForModalRequest == null && result.CheckboxComponentForModalRequest == null && result.CheckboxGroupComponentForModalRequest == null && result.FileUploadComponentForModalRequest == null && result.MentionableSelectComponentForModalRequest == null && result.RadioGroupComponentForModalRequest == null && result.RoleSelectComponentForModalRequest == null && result.StringSelectComponentForModalRequest == null && result.TextInputComponentForModalRequest == null && result.UserSelectComponentForModalRequest == null && matchesUnionBranch9 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.UserSelectComponentForModalRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.UserSelectComponentForModalRequest(), parseNode);
+            if (result.ChannelSelectComponentForModalRequest == null && result.CheckboxComponentForModalRequest == null && result.CheckboxGroupComponentForModalRequest == null && result.FileUploadComponentForModalRequest == null && result.MentionableSelectComponentForModalRequest == null && result.RadioGroupComponentForModalRequest == null && result.RoleSelectComponentForModalRequest == null && result.StringSelectComponentForModalRequest == null && result.TextInputComponentForModalRequest == null && result.UserSelectComponentForModalRequest == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -199,45 +227,68 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (ChannelSelectComponentForModalRequest == null && CheckboxComponentForModalRequest == null && CheckboxGroupComponentForModalRequest == null && FileUploadComponentForModalRequest == null && MentionableSelectComponentForModalRequest == null && RadioGroupComponentForModalRequest == null && RoleSelectComponentForModalRequest == null && StringSelectComponentForModalRequest == null && TextInputComponentForModalRequest == null && UserSelectComponentForModalRequest == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (ChannelSelectComponentForModalRequest != null && CheckboxComponentForModalRequest == null && CheckboxGroupComponentForModalRequest == null && FileUploadComponentForModalRequest == null && MentionableSelectComponentForModalRequest == null && RadioGroupComponentForModalRequest == null && RoleSelectComponentForModalRequest == null && StringSelectComponentForModalRequest == null && TextInputComponentForModalRequest == null && UserSelectComponentForModalRequest == null) { if (ChannelSelectComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChannelSelectComponentForModalRequest); return; }
+            if (CheckboxComponentForModalRequest != null && ChannelSelectComponentForModalRequest == null && CheckboxGroupComponentForModalRequest == null && FileUploadComponentForModalRequest == null && MentionableSelectComponentForModalRequest == null && RadioGroupComponentForModalRequest == null && RoleSelectComponentForModalRequest == null && StringSelectComponentForModalRequest == null && TextInputComponentForModalRequest == null && UserSelectComponentForModalRequest == null) { if (CheckboxComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CheckboxComponentForModalRequest); return; }
+            if (CheckboxGroupComponentForModalRequest != null && ChannelSelectComponentForModalRequest == null && CheckboxComponentForModalRequest == null && FileUploadComponentForModalRequest == null && MentionableSelectComponentForModalRequest == null && RadioGroupComponentForModalRequest == null && RoleSelectComponentForModalRequest == null && StringSelectComponentForModalRequest == null && TextInputComponentForModalRequest == null && UserSelectComponentForModalRequest == null) { if (CheckboxGroupComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CheckboxGroupComponentForModalRequest); return; }
+            if (FileUploadComponentForModalRequest != null && ChannelSelectComponentForModalRequest == null && CheckboxComponentForModalRequest == null && CheckboxGroupComponentForModalRequest == null && MentionableSelectComponentForModalRequest == null && RadioGroupComponentForModalRequest == null && RoleSelectComponentForModalRequest == null && StringSelectComponentForModalRequest == null && TextInputComponentForModalRequest == null && UserSelectComponentForModalRequest == null) { if (FileUploadComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FileUploadComponentForModalRequest); return; }
+            if (MentionableSelectComponentForModalRequest != null && ChannelSelectComponentForModalRequest == null && CheckboxComponentForModalRequest == null && CheckboxGroupComponentForModalRequest == null && FileUploadComponentForModalRequest == null && RadioGroupComponentForModalRequest == null && RoleSelectComponentForModalRequest == null && StringSelectComponentForModalRequest == null && TextInputComponentForModalRequest == null && UserSelectComponentForModalRequest == null) { if (MentionableSelectComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MentionableSelectComponentForModalRequest); return; }
+            if (RadioGroupComponentForModalRequest != null && ChannelSelectComponentForModalRequest == null && CheckboxComponentForModalRequest == null && CheckboxGroupComponentForModalRequest == null && FileUploadComponentForModalRequest == null && MentionableSelectComponentForModalRequest == null && RoleSelectComponentForModalRequest == null && StringSelectComponentForModalRequest == null && TextInputComponentForModalRequest == null && UserSelectComponentForModalRequest == null) { if (RadioGroupComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RadioGroupComponentForModalRequest); return; }
+            if (RoleSelectComponentForModalRequest != null && ChannelSelectComponentForModalRequest == null && CheckboxComponentForModalRequest == null && CheckboxGroupComponentForModalRequest == null && FileUploadComponentForModalRequest == null && MentionableSelectComponentForModalRequest == null && RadioGroupComponentForModalRequest == null && StringSelectComponentForModalRequest == null && TextInputComponentForModalRequest == null && UserSelectComponentForModalRequest == null) { if (RoleSelectComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RoleSelectComponentForModalRequest); return; }
+            if (StringSelectComponentForModalRequest != null && ChannelSelectComponentForModalRequest == null && CheckboxComponentForModalRequest == null && CheckboxGroupComponentForModalRequest == null && FileUploadComponentForModalRequest == null && MentionableSelectComponentForModalRequest == null && RadioGroupComponentForModalRequest == null && RoleSelectComponentForModalRequest == null && TextInputComponentForModalRequest == null && UserSelectComponentForModalRequest == null) { if (StringSelectComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, StringSelectComponentForModalRequest); return; }
+            if (TextInputComponentForModalRequest != null && ChannelSelectComponentForModalRequest == null && CheckboxComponentForModalRequest == null && CheckboxGroupComponentForModalRequest == null && FileUploadComponentForModalRequest == null && MentionableSelectComponentForModalRequest == null && RadioGroupComponentForModalRequest == null && RoleSelectComponentForModalRequest == null && StringSelectComponentForModalRequest == null && UserSelectComponentForModalRequest == null) { if (TextInputComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TextInputComponentForModalRequest); return; }
+            if (UserSelectComponentForModalRequest != null && ChannelSelectComponentForModalRequest == null && CheckboxComponentForModalRequest == null && CheckboxGroupComponentForModalRequest == null && FileUploadComponentForModalRequest == null && MentionableSelectComponentForModalRequest == null && RadioGroupComponentForModalRequest == null && RoleSelectComponentForModalRequest == null && StringSelectComponentForModalRequest == null && TextInputComponentForModalRequest == null) { if (UserSelectComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UserSelectComponentForModalRequest); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ChannelSelectComponentForModalRequest != null)
             {
+                if (ChannelSelectComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ChannelSelectComponentForModalRequest>(null, ChannelSelectComponentForModalRequest);
             }
             else if(CheckboxComponentForModalRequest != null)
             {
+                if (CheckboxComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CheckboxComponentForModalRequest>(null, CheckboxComponentForModalRequest);
             }
             else if(CheckboxGroupComponentForModalRequest != null)
             {
+                if (CheckboxGroupComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CheckboxGroupComponentForModalRequest>(null, CheckboxGroupComponentForModalRequest);
             }
             else if(FileUploadComponentForModalRequest != null)
             {
+                if (FileUploadComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.FileUploadComponentForModalRequest>(null, FileUploadComponentForModalRequest);
             }
             else if(MentionableSelectComponentForModalRequest != null)
             {
+                if (MentionableSelectComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MentionableSelectComponentForModalRequest>(null, MentionableSelectComponentForModalRequest);
             }
             else if(RadioGroupComponentForModalRequest != null)
             {
+                if (RadioGroupComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RadioGroupComponentForModalRequest>(null, RadioGroupComponentForModalRequest);
             }
             else if(RoleSelectComponentForModalRequest != null)
             {
+                if (RoleSelectComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RoleSelectComponentForModalRequest>(null, RoleSelectComponentForModalRequest);
             }
             else if(StringSelectComponentForModalRequest != null)
             {
+                if (StringSelectComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StringSelectComponentForModalRequest>(null, StringSelectComponentForModalRequest);
             }
             else if(TextInputComponentForModalRequest != null)
             {
+                if (TextInputComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TextInputComponentForModalRequest>(null, TextInputComponentForModalRequest);
             }
             else if(UserSelectComponentForModalRequest != null)
             {
+                if (UserSelectComponentForModalRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserSelectComponentForModalRequest>(null, UserSelectComponentForModalRequest);
             }
         }

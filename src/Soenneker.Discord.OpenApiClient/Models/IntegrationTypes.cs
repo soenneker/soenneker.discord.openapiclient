@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IntegrationTypes : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf1"/></summary>
         public global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf1? IntegrationTypesOneOf1 { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf2"/></summary>
@@ -31,23 +36,26 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypes();
-            if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf1>() is global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf1 integrationTypesOneOf1Value)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue0 && ("discord".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf1>() is global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf1 integrationTypesOneOf1Value)
             {
                 result.IntegrationTypesOneOf1 = integrationTypesOneOf1Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf2>() is global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf2 integrationTypesOneOf2Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("twitch".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf2>() is global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf2 integrationTypesOneOf2Value)
             {
                 result.IntegrationTypesOneOf2 = integrationTypesOneOf2Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf3>() is global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf3 integrationTypesOneOf3Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue2 && ("youtube".Equals(unionEnumValue2.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf3>() is global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf3 integrationTypesOneOf3Value)
             {
                 result.IntegrationTypesOneOf3 = integrationTypesOneOf3Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf4>() is global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf4 integrationTypesOneOf4Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue3 && ("guild_subscription".Equals(unionEnumValue3.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf4>() is global::Soenneker.Discord.OpenApiClient.Models.IntegrationTypesOneOf4 integrationTypesOneOf4Value)
             {
                 result.IntegrationTypesOneOf4 = integrationTypesOneOf4Value;
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.IntegrationTypesOneOf1 == null && result.IntegrationTypesOneOf2 == null && result.IntegrationTypesOneOf3 == null && result.IntegrationTypesOneOf4 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +71,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (IntegrationTypesOneOf1 == null && IntegrationTypesOneOf2 == null && IntegrationTypesOneOf3 == null && IntegrationTypesOneOf4 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(IntegrationTypesOneOf1 != null)
             {

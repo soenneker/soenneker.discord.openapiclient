@@ -11,32 +11,48 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UserProfileMetadata : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allow_list") is { } nullNodeAllowList && nullNodeAllowList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowList = null;
+            if (parseNode.GetChildNode("keyword_filter") is { } nullNodeKeywordFilter && nullNodeKeywordFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeywordFilter = null;
+            if (parseNode.GetChildNode("regex_patterns") is { } nullNodeRegexPatterns && nullNodeRegexPatterns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegexPatterns = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allow_list property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowList { get; set; }
+        public List<string>? AllowList { get => _explicitNullValueAllowList; set { _explicitNullValueAllowList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_list"); else _explicitNullProperties?.Remove("allow_list"); } }
+        private List<string>? _explicitNullValueAllowList = default!;
 #nullable restore
 #else
-        public List<string> AllowList { get; set; }
+        public List<string> AllowList { get => _explicitNullValueAllowList; set { _explicitNullValueAllowList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_list"); else _explicitNullProperties?.Remove("allow_list"); } }
+        private List<string> _explicitNullValueAllowList = default!;
 #endif
         /// <summary>The keyword_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? KeywordFilter { get; set; }
+        public List<string>? KeywordFilter { get => _explicitNullValueKeywordFilter; set { _explicitNullValueKeywordFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword_filter"); else _explicitNullProperties?.Remove("keyword_filter"); } }
+        private List<string>? _explicitNullValueKeywordFilter = default!;
 #nullable restore
 #else
-        public List<string> KeywordFilter { get; set; }
+        public List<string> KeywordFilter { get => _explicitNullValueKeywordFilter; set { _explicitNullValueKeywordFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword_filter"); else _explicitNullProperties?.Remove("keyword_filter"); } }
+        private List<string> _explicitNullValueKeywordFilter = default!;
 #endif
         /// <summary>The regex_patterns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RegexPatterns { get; set; }
+        public List<string>? RegexPatterns { get => _explicitNullValueRegexPatterns; set { _explicitNullValueRegexPatterns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regex_patterns"); else _explicitNullProperties?.Remove("regex_patterns"); } }
+        private List<string>? _explicitNullValueRegexPatterns = default!;
 #nullable restore
 #else
-        public List<string> RegexPatterns { get; set; }
+        public List<string> RegexPatterns { get => _explicitNullValueRegexPatterns; set { _explicitNullValueRegexPatterns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regex_patterns"); else _explicitNullProperties?.Remove("regex_patterns"); } }
+        private List<string> _explicitNullValueRegexPatterns = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserProfileMetadata"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.UserProfileMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.UserProfileMetadata();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.UserProfileMetadata(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("allow_list", AllowList);
             writer.WriteCollectionOfPrimitiveValues<string>("keyword_filter", KeywordFilter);
             writer.WriteCollectionOfPrimitiveValues<string>("regex_patterns", RegexPatterns);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

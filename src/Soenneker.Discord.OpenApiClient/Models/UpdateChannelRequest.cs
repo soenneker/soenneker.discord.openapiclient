@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateChannelRequest : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateDmRequestPartial"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,11 +59,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Discord.OpenApiClient.Models.UpdateChannelRequest();
-            result.UpdateDmRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.UpdateDmRequestPartial();
-            result.UpdateGroupDmRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.UpdateGroupDmRequestPartial();
-            result.UpdateGuildChannelRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.UpdateGuildChannelRequestPartial();
-            result.UpdateThreadRequestPartial = new global::Soenneker.Discord.OpenApiClient.Models.UpdateThreadRequestPartial();
-            return result;
+            
+            
+            
+            
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.UpdateDmRequestPartial == null && result.UpdateGroupDmRequestPartial == null && result.UpdateGuildChannelRequestPartial == null && result.UpdateThreadRequestPartial == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +86,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (UpdateDmRequestPartial == null && UpdateGroupDmRequestPartial == null && UpdateGuildChannelRequestPartial == null && UpdateThreadRequestPartial == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (UpdateDmRequestPartial != null && UpdateGroupDmRequestPartial == null && UpdateGuildChannelRequestPartial == null && UpdateThreadRequestPartial == null) { if (UpdateDmRequestPartial is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateDmRequestPartial); return; }
+            if (UpdateGroupDmRequestPartial != null && UpdateDmRequestPartial == null && UpdateGuildChannelRequestPartial == null && UpdateThreadRequestPartial == null) { if (UpdateGroupDmRequestPartial is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateGroupDmRequestPartial); return; }
+            if (UpdateGuildChannelRequestPartial != null && UpdateDmRequestPartial == null && UpdateGroupDmRequestPartial == null && UpdateThreadRequestPartial == null) { if (UpdateGuildChannelRequestPartial is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateGuildChannelRequestPartial); return; }
+            if (UpdateThreadRequestPartial != null && UpdateDmRequestPartial == null && UpdateGroupDmRequestPartial == null && UpdateGuildChannelRequestPartial == null) { if (UpdateThreadRequestPartial is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateThreadRequestPartial); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateDmRequestPartial>(null, UpdateDmRequestPartial, UpdateGroupDmRequestPartial, UpdateGuildChannelRequestPartial, UpdateThreadRequestPartial);
         }

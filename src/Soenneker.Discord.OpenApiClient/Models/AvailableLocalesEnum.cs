@@ -12,6 +12,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
     public partial class AvailableLocalesEnum : IAdditionalDataHolder, IComposedTypeWrapper, IParsable
     #pragma warning restore CS1591
     {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf1"/></summary>
@@ -99,143 +103,146 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum();
-            if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf1>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf1 availableLocalesEnumOneOf1Value)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue0 && ("ar".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf1>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf1 availableLocalesEnumOneOf1Value)
             {
                 result.AvailableLocalesEnumOneOf1 = availableLocalesEnumOneOf1Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf10>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf10 availableLocalesEnumOneOf10Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("es-ES".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf10>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf10 availableLocalesEnumOneOf10Value)
             {
                 result.AvailableLocalesEnumOneOf10 = availableLocalesEnumOneOf10Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf11>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf11 availableLocalesEnumOneOf11Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue2 && ("fi".Equals(unionEnumValue2.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf11>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf11 availableLocalesEnumOneOf11Value)
             {
                 result.AvailableLocalesEnumOneOf11 = availableLocalesEnumOneOf11Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf12>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf12 availableLocalesEnumOneOf12Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue3 && ("fr".Equals(unionEnumValue3.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf12>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf12 availableLocalesEnumOneOf12Value)
             {
                 result.AvailableLocalesEnumOneOf12 = availableLocalesEnumOneOf12Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf13>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf13 availableLocalesEnumOneOf13Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue4 && ("he".Equals(unionEnumValue4.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf13>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf13 availableLocalesEnumOneOf13Value)
             {
                 result.AvailableLocalesEnumOneOf13 = availableLocalesEnumOneOf13Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf14>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf14 availableLocalesEnumOneOf14Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue5 && ("hi".Equals(unionEnumValue5.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf14>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf14 availableLocalesEnumOneOf14Value)
             {
                 result.AvailableLocalesEnumOneOf14 = availableLocalesEnumOneOf14Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf15>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf15 availableLocalesEnumOneOf15Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue6 && ("hr".Equals(unionEnumValue6.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf15>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf15 availableLocalesEnumOneOf15Value)
             {
                 result.AvailableLocalesEnumOneOf15 = availableLocalesEnumOneOf15Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf16>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf16 availableLocalesEnumOneOf16Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue7 && ("hu".Equals(unionEnumValue7.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf16>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf16 availableLocalesEnumOneOf16Value)
             {
                 result.AvailableLocalesEnumOneOf16 = availableLocalesEnumOneOf16Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf17>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf17 availableLocalesEnumOneOf17Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue8 && ("id".Equals(unionEnumValue8.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf17>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf17 availableLocalesEnumOneOf17Value)
             {
                 result.AvailableLocalesEnumOneOf17 = availableLocalesEnumOneOf17Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf18>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf18 availableLocalesEnumOneOf18Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue9 && ("it".Equals(unionEnumValue9.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf18>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf18 availableLocalesEnumOneOf18Value)
             {
                 result.AvailableLocalesEnumOneOf18 = availableLocalesEnumOneOf18Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf19>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf19 availableLocalesEnumOneOf19Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue10 && ("ja".Equals(unionEnumValue10.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf19>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf19 availableLocalesEnumOneOf19Value)
             {
                 result.AvailableLocalesEnumOneOf19 = availableLocalesEnumOneOf19Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf2>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf2 availableLocalesEnumOneOf2Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue11 && ("bg".Equals(unionEnumValue11.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf2>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf2 availableLocalesEnumOneOf2Value)
             {
                 result.AvailableLocalesEnumOneOf2 = availableLocalesEnumOneOf2Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf20>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf20 availableLocalesEnumOneOf20Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue12 && ("ko".Equals(unionEnumValue12.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf20>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf20 availableLocalesEnumOneOf20Value)
             {
                 result.AvailableLocalesEnumOneOf20 = availableLocalesEnumOneOf20Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf21>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf21 availableLocalesEnumOneOf21Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue13 && ("lt".Equals(unionEnumValue13.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf21>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf21 availableLocalesEnumOneOf21Value)
             {
                 result.AvailableLocalesEnumOneOf21 = availableLocalesEnumOneOf21Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf22>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf22 availableLocalesEnumOneOf22Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue14 && ("nl".Equals(unionEnumValue14.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf22>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf22 availableLocalesEnumOneOf22Value)
             {
                 result.AvailableLocalesEnumOneOf22 = availableLocalesEnumOneOf22Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf23>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf23 availableLocalesEnumOneOf23Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue15 && ("no".Equals(unionEnumValue15.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf23>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf23 availableLocalesEnumOneOf23Value)
             {
                 result.AvailableLocalesEnumOneOf23 = availableLocalesEnumOneOf23Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf24>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf24 availableLocalesEnumOneOf24Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue16 && ("pl".Equals(unionEnumValue16.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf24>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf24 availableLocalesEnumOneOf24Value)
             {
                 result.AvailableLocalesEnumOneOf24 = availableLocalesEnumOneOf24Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf25>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf25 availableLocalesEnumOneOf25Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue17 && ("pt-BR".Equals(unionEnumValue17.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf25>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf25 availableLocalesEnumOneOf25Value)
             {
                 result.AvailableLocalesEnumOneOf25 = availableLocalesEnumOneOf25Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf26>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf26 availableLocalesEnumOneOf26Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue18 && ("ro".Equals(unionEnumValue18.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf26>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf26 availableLocalesEnumOneOf26Value)
             {
                 result.AvailableLocalesEnumOneOf26 = availableLocalesEnumOneOf26Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf27>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf27 availableLocalesEnumOneOf27Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue19 && ("ru".Equals(unionEnumValue19.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf27>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf27 availableLocalesEnumOneOf27Value)
             {
                 result.AvailableLocalesEnumOneOf27 = availableLocalesEnumOneOf27Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf28>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf28 availableLocalesEnumOneOf28Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue20 && ("sv-SE".Equals(unionEnumValue20.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf28>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf28 availableLocalesEnumOneOf28Value)
             {
                 result.AvailableLocalesEnumOneOf28 = availableLocalesEnumOneOf28Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf29>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf29 availableLocalesEnumOneOf29Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue21 && ("th".Equals(unionEnumValue21.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf29>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf29 availableLocalesEnumOneOf29Value)
             {
                 result.AvailableLocalesEnumOneOf29 = availableLocalesEnumOneOf29Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf3>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf3 availableLocalesEnumOneOf3Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue22 && ("cs".Equals(unionEnumValue22.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf3>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf3 availableLocalesEnumOneOf3Value)
             {
                 result.AvailableLocalesEnumOneOf3 = availableLocalesEnumOneOf3Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf30>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf30 availableLocalesEnumOneOf30Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue23 && ("tr".Equals(unionEnumValue23.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf30>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf30 availableLocalesEnumOneOf30Value)
             {
                 result.AvailableLocalesEnumOneOf30 = availableLocalesEnumOneOf30Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf31>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf31 availableLocalesEnumOneOf31Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue24 && ("uk".Equals(unionEnumValue24.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf31>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf31 availableLocalesEnumOneOf31Value)
             {
                 result.AvailableLocalesEnumOneOf31 = availableLocalesEnumOneOf31Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf32>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf32 availableLocalesEnumOneOf32Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue25 && ("vi".Equals(unionEnumValue25.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf32>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf32 availableLocalesEnumOneOf32Value)
             {
                 result.AvailableLocalesEnumOneOf32 = availableLocalesEnumOneOf32Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf33>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf33 availableLocalesEnumOneOf33Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue26 && ("zh-CN".Equals(unionEnumValue26.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf33>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf33 availableLocalesEnumOneOf33Value)
             {
                 result.AvailableLocalesEnumOneOf33 = availableLocalesEnumOneOf33Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf34>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf34 availableLocalesEnumOneOf34Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue27 && ("zh-TW".Equals(unionEnumValue27.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf34>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf34 availableLocalesEnumOneOf34Value)
             {
                 result.AvailableLocalesEnumOneOf34 = availableLocalesEnumOneOf34Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf4>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf4 availableLocalesEnumOneOf4Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue28 && ("da".Equals(unionEnumValue28.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf4>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf4 availableLocalesEnumOneOf4Value)
             {
                 result.AvailableLocalesEnumOneOf4 = availableLocalesEnumOneOf4Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf5>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf5 availableLocalesEnumOneOf5Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue29 && ("de".Equals(unionEnumValue29.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf5>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf5 availableLocalesEnumOneOf5Value)
             {
                 result.AvailableLocalesEnumOneOf5 = availableLocalesEnumOneOf5Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf6>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf6 availableLocalesEnumOneOf6Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue30 && ("el".Equals(unionEnumValue30.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf6>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf6 availableLocalesEnumOneOf6Value)
             {
                 result.AvailableLocalesEnumOneOf6 = availableLocalesEnumOneOf6Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf7>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf7 availableLocalesEnumOneOf7Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue31 && ("en-GB".Equals(unionEnumValue31.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf7>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf7 availableLocalesEnumOneOf7Value)
             {
                 result.AvailableLocalesEnumOneOf7 = availableLocalesEnumOneOf7Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf8>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf8 availableLocalesEnumOneOf8Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue32 && ("en-US".Equals(unionEnumValue32.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf8>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf8 availableLocalesEnumOneOf8Value)
             {
                 result.AvailableLocalesEnumOneOf8 = availableLocalesEnumOneOf8Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf9>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf9 availableLocalesEnumOneOf9Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue33 && ("es-419".Equals(unionEnumValue33.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf9>() is global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf9 availableLocalesEnumOneOf9Value)
             {
                 result.AvailableLocalesEnumOneOf9 = availableLocalesEnumOneOf9Value;
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.AvailableLocalesEnumOneOf1 == null && result.AvailableLocalesEnumOneOf10 == null && result.AvailableLocalesEnumOneOf11 == null && result.AvailableLocalesEnumOneOf12 == null && result.AvailableLocalesEnumOneOf13 == null && result.AvailableLocalesEnumOneOf14 == null && result.AvailableLocalesEnumOneOf15 == null && result.AvailableLocalesEnumOneOf16 == null && result.AvailableLocalesEnumOneOf17 == null && result.AvailableLocalesEnumOneOf18 == null && result.AvailableLocalesEnumOneOf19 == null && result.AvailableLocalesEnumOneOf2 == null && result.AvailableLocalesEnumOneOf20 == null && result.AvailableLocalesEnumOneOf21 == null && result.AvailableLocalesEnumOneOf22 == null && result.AvailableLocalesEnumOneOf23 == null && result.AvailableLocalesEnumOneOf24 == null && result.AvailableLocalesEnumOneOf25 == null && result.AvailableLocalesEnumOneOf26 == null && result.AvailableLocalesEnumOneOf27 == null && result.AvailableLocalesEnumOneOf28 == null && result.AvailableLocalesEnumOneOf29 == null && result.AvailableLocalesEnumOneOf3 == null && result.AvailableLocalesEnumOneOf30 == null && result.AvailableLocalesEnumOneOf31 == null && result.AvailableLocalesEnumOneOf32 == null && result.AvailableLocalesEnumOneOf33 == null && result.AvailableLocalesEnumOneOf34 == null && result.AvailableLocalesEnumOneOf4 == null && result.AvailableLocalesEnumOneOf5 == null && result.AvailableLocalesEnumOneOf6 == null && result.AvailableLocalesEnumOneOf7 == null && result.AvailableLocalesEnumOneOf8 == null && result.AvailableLocalesEnumOneOf9 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -251,6 +258,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AvailableLocalesEnumOneOf1 == null && AvailableLocalesEnumOneOf10 == null && AvailableLocalesEnumOneOf11 == null && AvailableLocalesEnumOneOf12 == null && AvailableLocalesEnumOneOf13 == null && AvailableLocalesEnumOneOf14 == null && AvailableLocalesEnumOneOf15 == null && AvailableLocalesEnumOneOf16 == null && AvailableLocalesEnumOneOf17 == null && AvailableLocalesEnumOneOf18 == null && AvailableLocalesEnumOneOf19 == null && AvailableLocalesEnumOneOf2 == null && AvailableLocalesEnumOneOf20 == null && AvailableLocalesEnumOneOf21 == null && AvailableLocalesEnumOneOf22 == null && AvailableLocalesEnumOneOf23 == null && AvailableLocalesEnumOneOf24 == null && AvailableLocalesEnumOneOf25 == null && AvailableLocalesEnumOneOf26 == null && AvailableLocalesEnumOneOf27 == null && AvailableLocalesEnumOneOf28 == null && AvailableLocalesEnumOneOf29 == null && AvailableLocalesEnumOneOf3 == null && AvailableLocalesEnumOneOf30 == null && AvailableLocalesEnumOneOf31 == null && AvailableLocalesEnumOneOf32 == null && AvailableLocalesEnumOneOf33 == null && AvailableLocalesEnumOneOf34 == null && AvailableLocalesEnumOneOf4 == null && AvailableLocalesEnumOneOf5 == null && AvailableLocalesEnumOneOf6 == null && AvailableLocalesEnumOneOf7 == null && AvailableLocalesEnumOneOf8 == null && AvailableLocalesEnumOneOf9 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(AvailableLocalesEnumOneOf1 != null)
             {
@@ -388,7 +398,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnumOneOf9>(null, AvailableLocalesEnumOneOf9);
             }
-            writer.WriteAdditionalData(AdditionalData);
+            
         }
     }
 }

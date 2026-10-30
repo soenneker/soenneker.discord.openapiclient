@@ -11,39 +11,61 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MessageReactionResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("burst_colors") is { } nullNodeBurstColors && nullNodeBurstColors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BurstColors = null;
+            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("count_details") is { } nullNodeCountDetails && nullNodeCountDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountDetails = null;
+            if (parseNode.GetChildNode("emoji") is { } nullNodeEmoji && nullNodeEmoji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emoji = null;
+            if (parseNode.GetChildNode("me") is { } nullNodeMe && nullNodeMe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Me = null;
+            if (parseNode.GetChildNode("me_burst") is { } nullNodeMeBurst && nullNodeMeBurst.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeBurst = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The burst_colors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BurstColors { get; set; }
+        public List<string>? BurstColors { get => _explicitNullValueBurstColors; set { _explicitNullValueBurstColors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("burst_colors"); else _explicitNullProperties?.Remove("burst_colors"); } }
+        private List<string>? _explicitNullValueBurstColors = default!;
 #nullable restore
 #else
-        public List<string> BurstColors { get; set; }
+        public List<string> BurstColors { get => _explicitNullValueBurstColors; set { _explicitNullValueBurstColors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("burst_colors"); else _explicitNullProperties?.Remove("burst_colors"); } }
+        private List<string> _explicitNullValueBurstColors = default!;
 #endif
         /// <summary>The count property</summary>
-        public int? Count { get; set; }
+        public int? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        private int? _explicitNullValueCount = default!;
         /// <summary>The count_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageReactionCountDetailsResponse? CountDetails { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageReactionCountDetailsResponse? CountDetails { get => _explicitNullValueCountDetails; set { _explicitNullValueCountDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_details"); else _explicitNullProperties?.Remove("count_details"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.MessageReactionCountDetailsResponse? _explicitNullValueCountDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageReactionCountDetailsResponse CountDetails { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageReactionCountDetailsResponse CountDetails { get => _explicitNullValueCountDetails; set { _explicitNullValueCountDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_details"); else _explicitNullProperties?.Remove("count_details"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.MessageReactionCountDetailsResponse _explicitNullValueCountDetails = default!;
 #endif
         /// <summary>The emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageReactionEmojiResponse? Emoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageReactionEmojiResponse? Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.MessageReactionEmojiResponse? _explicitNullValueEmoji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageReactionEmojiResponse Emoji { get; set; }
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageReactionEmojiResponse Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.MessageReactionEmojiResponse _explicitNullValueEmoji = default!;
 #endif
         /// <summary>The me property</summary>
-        public bool? Me { get; set; }
+        public bool? Me { get => _explicitNullValueMe; set { _explicitNullValueMe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("me"); else _explicitNullProperties?.Remove("me"); } }
+        private bool? _explicitNullValueMe = default!;
         /// <summary>The me_burst property</summary>
-        public bool? MeBurst { get; set; }
+        public bool? MeBurst { get => _explicitNullValueMeBurst; set { _explicitNullValueMeBurst = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("me_burst"); else _explicitNullProperties?.Remove("me_burst"); } }
+        private bool? _explicitNullValueMeBurst = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageReactionResponse"/> and sets the default values.
         /// </summary>
@@ -59,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.MessageReactionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.MessageReactionResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.MessageReactionResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +112,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageReactionEmojiResponse>("emoji", Emoji);
             writer.WriteBoolValue("me", Me);
             writer.WriteBoolValue("me_burst", MeBurst);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

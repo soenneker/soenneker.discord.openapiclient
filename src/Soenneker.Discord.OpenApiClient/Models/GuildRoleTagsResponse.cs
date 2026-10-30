@@ -11,56 +11,81 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GuildRoleTagsResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("available_for_purchase") is { } nullNodeAvailableForPurchase && nullNodeAvailableForPurchase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableForPurchase = null;
+            if (parseNode.GetChildNode("bot_id") is { } nullNodeBotId && nullNodeBotId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotId = null;
+            if (parseNode.GetChildNode("guild_connections") is { } nullNodeGuildConnections && nullNodeGuildConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildConnections = null;
+            if (parseNode.GetChildNode("integration_id") is { } nullNodeIntegrationId && nullNodeIntegrationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationId = null;
+            if (parseNode.GetChildNode("premium_subscriber") is { } nullNodePremiumSubscriber && nullNodePremiumSubscriber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PremiumSubscriber = null;
+            if (parseNode.GetChildNode("subscription_listing_id") is { } nullNodeSubscriptionListingId && nullNodeSubscriptionListingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionListingId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The available_for_purchase property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AvailableForPurchase { get; set; }
+        public UntypedNode? AvailableForPurchase { get => _explicitNullValueAvailableForPurchase; set { _explicitNullValueAvailableForPurchase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_for_purchase"); else _explicitNullProperties?.Remove("available_for_purchase"); } }
+        private UntypedNode? _explicitNullValueAvailableForPurchase = default!;
 #nullable restore
 #else
-        public UntypedNode AvailableForPurchase { get; set; }
+        public UntypedNode AvailableForPurchase { get => _explicitNullValueAvailableForPurchase; set { _explicitNullValueAvailableForPurchase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_for_purchase"); else _explicitNullProperties?.Remove("available_for_purchase"); } }
+        private UntypedNode _explicitNullValueAvailableForPurchase = default!;
 #endif
         /// <summary>The bot_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BotId { get; set; }
+        public string? BotId { get => _explicitNullValueBotId; set { _explicitNullValueBotId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_id"); else _explicitNullProperties?.Remove("bot_id"); } }
+        private string? _explicitNullValueBotId = default!;
 #nullable restore
 #else
-        public string BotId { get; set; }
+        public string BotId { get => _explicitNullValueBotId; set { _explicitNullValueBotId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_id"); else _explicitNullProperties?.Remove("bot_id"); } }
+        private string _explicitNullValueBotId = default!;
 #endif
         /// <summary>The guild_connections property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? GuildConnections { get; set; }
+        public UntypedNode? GuildConnections { get => _explicitNullValueGuildConnections; set { _explicitNullValueGuildConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_connections"); else _explicitNullProperties?.Remove("guild_connections"); } }
+        private UntypedNode? _explicitNullValueGuildConnections = default!;
 #nullable restore
 #else
-        public UntypedNode GuildConnections { get; set; }
+        public UntypedNode GuildConnections { get => _explicitNullValueGuildConnections; set { _explicitNullValueGuildConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_connections"); else _explicitNullProperties?.Remove("guild_connections"); } }
+        private UntypedNode _explicitNullValueGuildConnections = default!;
 #endif
         /// <summary>The integration_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntegrationId { get; set; }
+        public string? IntegrationId { get => _explicitNullValueIntegrationId; set { _explicitNullValueIntegrationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_id"); else _explicitNullProperties?.Remove("integration_id"); } }
+        private string? _explicitNullValueIntegrationId = default!;
 #nullable restore
 #else
-        public string IntegrationId { get; set; }
+        public string IntegrationId { get => _explicitNullValueIntegrationId; set { _explicitNullValueIntegrationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_id"); else _explicitNullProperties?.Remove("integration_id"); } }
+        private string _explicitNullValueIntegrationId = default!;
 #endif
         /// <summary>The premium_subscriber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PremiumSubscriber { get; set; }
+        public UntypedNode? PremiumSubscriber { get => _explicitNullValuePremiumSubscriber; set { _explicitNullValuePremiumSubscriber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premium_subscriber"); else _explicitNullProperties?.Remove("premium_subscriber"); } }
+        private UntypedNode? _explicitNullValuePremiumSubscriber = default!;
 #nullable restore
 #else
-        public UntypedNode PremiumSubscriber { get; set; }
+        public UntypedNode PremiumSubscriber { get => _explicitNullValuePremiumSubscriber; set { _explicitNullValuePremiumSubscriber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premium_subscriber"); else _explicitNullProperties?.Remove("premium_subscriber"); } }
+        private UntypedNode _explicitNullValuePremiumSubscriber = default!;
 #endif
         /// <summary>The subscription_listing_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionListingId { get; set; }
+        public string? SubscriptionListingId { get => _explicitNullValueSubscriptionListingId; set { _explicitNullValueSubscriptionListingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_listing_id"); else _explicitNullProperties?.Remove("subscription_listing_id"); } }
+        private string? _explicitNullValueSubscriptionListingId = default!;
 #nullable restore
 #else
-        public string SubscriptionListingId { get; set; }
+        public string SubscriptionListingId { get => _explicitNullValueSubscriptionListingId; set { _explicitNullValueSubscriptionListingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_listing_id"); else _explicitNullProperties?.Remove("subscription_listing_id"); } }
+        private string _explicitNullValueSubscriptionListingId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildRoleTagsResponse"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.GuildRoleTagsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.GuildRoleTagsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.GuildRoleTagsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("integration_id", IntegrationId);
             writer.WriteObjectValue<UntypedNode>("premium_subscriber", PremiumSubscriber);
             writer.WriteStringValue("subscription_listing_id", SubscriptionListingId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

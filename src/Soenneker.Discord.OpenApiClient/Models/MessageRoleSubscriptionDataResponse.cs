@@ -11,29 +11,46 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MessageRoleSubscriptionDataResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("is_renewal") is { } nullNodeIsRenewal && nullNodeIsRenewal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRenewal = null;
+            if (parseNode.GetChildNode("role_subscription_listing_id") is { } nullNodeRoleSubscriptionListingId && nullNodeRoleSubscriptionListingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleSubscriptionListingId = null;
+            if (parseNode.GetChildNode("tier_name") is { } nullNodeTierName && nullNodeTierName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TierName = null;
+            if (parseNode.GetChildNode("total_months_subscribed") is { } nullNodeTotalMonthsSubscribed && nullNodeTotalMonthsSubscribed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalMonthsSubscribed = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_renewal property</summary>
-        public bool? IsRenewal { get; set; }
+        public bool? IsRenewal { get => _explicitNullValueIsRenewal; set { _explicitNullValueIsRenewal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_renewal"); else _explicitNullProperties?.Remove("is_renewal"); } }
+        private bool? _explicitNullValueIsRenewal = default!;
         /// <summary>The role_subscription_listing_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoleSubscriptionListingId { get; set; }
+        public string? RoleSubscriptionListingId { get => _explicitNullValueRoleSubscriptionListingId; set { _explicitNullValueRoleSubscriptionListingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_subscription_listing_id"); else _explicitNullProperties?.Remove("role_subscription_listing_id"); } }
+        private string? _explicitNullValueRoleSubscriptionListingId = default!;
 #nullable restore
 #else
-        public string RoleSubscriptionListingId { get; set; }
+        public string RoleSubscriptionListingId { get => _explicitNullValueRoleSubscriptionListingId; set { _explicitNullValueRoleSubscriptionListingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_subscription_listing_id"); else _explicitNullProperties?.Remove("role_subscription_listing_id"); } }
+        private string _explicitNullValueRoleSubscriptionListingId = default!;
 #endif
         /// <summary>The tier_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TierName { get; set; }
+        public string? TierName { get => _explicitNullValueTierName; set { _explicitNullValueTierName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tier_name"); else _explicitNullProperties?.Remove("tier_name"); } }
+        private string? _explicitNullValueTierName = default!;
 #nullable restore
 #else
-        public string TierName { get; set; }
+        public string TierName { get => _explicitNullValueTierName; set { _explicitNullValueTierName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tier_name"); else _explicitNullProperties?.Remove("tier_name"); } }
+        private string _explicitNullValueTierName = default!;
 #endif
         /// <summary>The total_months_subscribed property</summary>
-        public int? TotalMonthsSubscribed { get; set; }
+        public int? TotalMonthsSubscribed { get => _explicitNullValueTotalMonthsSubscribed; set { _explicitNullValueTotalMonthsSubscribed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_months_subscribed"); else _explicitNullProperties?.Remove("total_months_subscribed"); } }
+        private int? _explicitNullValueTotalMonthsSubscribed = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageRoleSubscriptionDataResponse"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.MessageRoleSubscriptionDataResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.MessageRoleSubscriptionDataResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.MessageRoleSubscriptionDataResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("role_subscription_listing_id", RoleSubscriptionListingId);
             writer.WriteStringValue("tier_name", TierName);
             writer.WriteIntValue("total_months_subscribed", TotalMonthsSubscribed);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

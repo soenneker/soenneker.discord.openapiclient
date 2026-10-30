@@ -12,7 +12,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NameplatePalette : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf1"/></summary>
         public global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf1? NameplatePaletteOneOf1 { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf10"/></summary>
@@ -47,55 +52,58 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Discord.OpenApiClient.Models.NameplatePalette();
-            if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf1>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf1 nameplatePaletteOneOf1Value)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue0 && ("crimson".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf1>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf1 nameplatePaletteOneOf1Value)
             {
                 result.NameplatePaletteOneOf1 = nameplatePaletteOneOf1Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf10>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf10 nameplatePaletteOneOf10Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("lemon".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf10>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf10 nameplatePaletteOneOf10Value)
             {
                 result.NameplatePaletteOneOf10 = nameplatePaletteOneOf10Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf11>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf11 nameplatePaletteOneOf11Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue2 && ("white".Equals(unionEnumValue2.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf11>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf11 nameplatePaletteOneOf11Value)
             {
                 result.NameplatePaletteOneOf11 = nameplatePaletteOneOf11Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf12>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf12 nameplatePaletteOneOf12Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue3 && ("black".Equals(unionEnumValue3.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf12>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf12 nameplatePaletteOneOf12Value)
             {
                 result.NameplatePaletteOneOf12 = nameplatePaletteOneOf12Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf2>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf2 nameplatePaletteOneOf2Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue4 && ("berry".Equals(unionEnumValue4.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf2>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf2 nameplatePaletteOneOf2Value)
             {
                 result.NameplatePaletteOneOf2 = nameplatePaletteOneOf2Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf3>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf3 nameplatePaletteOneOf3Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue5 && ("sky".Equals(unionEnumValue5.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf3>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf3 nameplatePaletteOneOf3Value)
             {
                 result.NameplatePaletteOneOf3 = nameplatePaletteOneOf3Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf4>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf4 nameplatePaletteOneOf4Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue6 && ("teal".Equals(unionEnumValue6.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf4>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf4 nameplatePaletteOneOf4Value)
             {
                 result.NameplatePaletteOneOf4 = nameplatePaletteOneOf4Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf5>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf5 nameplatePaletteOneOf5Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue7 && ("forest".Equals(unionEnumValue7.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf5>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf5 nameplatePaletteOneOf5Value)
             {
                 result.NameplatePaletteOneOf5 = nameplatePaletteOneOf5Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf6>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf6 nameplatePaletteOneOf6Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue8 && ("bubble_gum".Equals(unionEnumValue8.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf6>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf6 nameplatePaletteOneOf6Value)
             {
                 result.NameplatePaletteOneOf6 = nameplatePaletteOneOf6Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf7>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf7 nameplatePaletteOneOf7Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue9 && ("violet".Equals(unionEnumValue9.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf7>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf7 nameplatePaletteOneOf7Value)
             {
                 result.NameplatePaletteOneOf7 = nameplatePaletteOneOf7Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf8>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf8 nameplatePaletteOneOf8Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue10 && ("cobalt".Equals(unionEnumValue10.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf8>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf8 nameplatePaletteOneOf8Value)
             {
                 result.NameplatePaletteOneOf8 = nameplatePaletteOneOf8Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf9>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf9 nameplatePaletteOneOf9Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue11 && ("clover".Equals(unionEnumValue11.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf9>() is global::Soenneker.Discord.OpenApiClient.Models.NameplatePaletteOneOf9 nameplatePaletteOneOf9Value)
             {
                 result.NameplatePaletteOneOf9 = nameplatePaletteOneOf9Value;
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.NameplatePaletteOneOf1 == null && result.NameplatePaletteOneOf10 == null && result.NameplatePaletteOneOf11 == null && result.NameplatePaletteOneOf12 == null && result.NameplatePaletteOneOf2 == null && result.NameplatePaletteOneOf3 == null && result.NameplatePaletteOneOf4 == null && result.NameplatePaletteOneOf5 == null && result.NameplatePaletteOneOf6 == null && result.NameplatePaletteOneOf7 == null && result.NameplatePaletteOneOf8 == null && result.NameplatePaletteOneOf9 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -111,6 +119,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (NameplatePaletteOneOf1 == null && NameplatePaletteOneOf10 == null && NameplatePaletteOneOf11 == null && NameplatePaletteOneOf12 == null && NameplatePaletteOneOf2 == null && NameplatePaletteOneOf3 == null && NameplatePaletteOneOf4 == null && NameplatePaletteOneOf5 == null && NameplatePaletteOneOf6 == null && NameplatePaletteOneOf7 == null && NameplatePaletteOneOf8 == null && NameplatePaletteOneOf9 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(NameplatePaletteOneOf1 != null)
             {

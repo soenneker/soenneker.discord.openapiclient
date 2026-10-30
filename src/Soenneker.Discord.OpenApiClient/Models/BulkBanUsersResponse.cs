@@ -11,24 +11,37 @@ namespace Soenneker.Discord.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkBanUsersResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("banned_users") is { } nullNodeBannedUsers && nullNodeBannedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BannedUsers = null;
+            if (parseNode.GetChildNode("failed_users") is { } nullNodeFailedUsers && nullNodeFailedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedUsers = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The banned_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BannedUsers { get; set; }
+        public List<string>? BannedUsers { get => _explicitNullValueBannedUsers; set { _explicitNullValueBannedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banned_users"); else _explicitNullProperties?.Remove("banned_users"); } }
+        private List<string>? _explicitNullValueBannedUsers = default!;
 #nullable restore
 #else
-        public List<string> BannedUsers { get; set; }
+        public List<string> BannedUsers { get => _explicitNullValueBannedUsers; set { _explicitNullValueBannedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banned_users"); else _explicitNullProperties?.Remove("banned_users"); } }
+        private List<string> _explicitNullValueBannedUsers = default!;
 #endif
         /// <summary>The failed_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FailedUsers { get; set; }
+        public List<string>? FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_users"); else _explicitNullProperties?.Remove("failed_users"); } }
+        private List<string>? _explicitNullValueFailedUsers = default!;
 #nullable restore
 #else
-        public List<string> FailedUsers { get; set; }
+        public List<string> FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_users"); else _explicitNullProperties?.Remove("failed_users"); } }
+        private List<string> _explicitNullValueFailedUsers = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.BulkBanUsersResponse"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public static global::Soenneker.Discord.OpenApiClient.Models.BulkBanUsersResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Discord.OpenApiClient.Models.BulkBanUsersResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.BulkBanUsersResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("banned_users", BannedUsers);
             writer.WriteCollectionOfPrimitiveValues<string>("failed_users", FailedUsers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
