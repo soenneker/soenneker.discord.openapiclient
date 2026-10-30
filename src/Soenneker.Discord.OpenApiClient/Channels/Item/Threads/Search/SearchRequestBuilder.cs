@@ -67,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Threads.Search
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Channels.Item.Threads.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://discord.com/api/v10", "/channels/{channelId}/threads/search", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -141,32 +141,14 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Threads.Search
             [QueryParameter("slop")]
             public int? Slop { get; set; }
             #pragma warning restore CS1591
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("sort_by")]
-            public string? SortBy { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortingMode? SortBy { get; set; }
             #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("sort_by")]
-            public string SortBy { get; set; }
-            #pragma warning restore CS1591
-#endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("sort_order")]
-            public string? SortOrder { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.SortingOrder? SortOrder { get; set; }
             #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("sort_order")]
-            public string SortOrder { get; set; }
-            #pragma warning restore CS1591
-#endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
@@ -180,19 +162,10 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Threads.Search
             public string Tag { get; set; }
             #pragma warning restore CS1591
 #endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("tag_setting")]
-            public string? TagSetting { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting? TagSetting { get; set; }
             #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("tag_setting")]
-            public string TagSetting { get; set; }
-            #pragma warning restore CS1591
-#endif
         }
     }
 }

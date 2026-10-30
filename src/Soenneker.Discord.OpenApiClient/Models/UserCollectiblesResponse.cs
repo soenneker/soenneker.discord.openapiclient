@@ -17,7 +17,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("nameplate") is { } nullNodeNameplate && nullNodeNameplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nameplate = null;
+            if (parseNode.GetChildNode("nameplate") is null) { _explicitNullValueNameplate = default!; _explicitNullProperties?.Remove("nameplate"); }
+            else if (parseNode.GetChildNode("nameplate") is { } nullNodeNameplate && nullNodeNameplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nameplate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Object mapping of nameplate data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse? Nameplate { get => _explicitNullValueNameplate; set { _explicitNullValueNameplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameplate"); else _explicitNullProperties?.Remove("nameplate"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse? Nameplate { get => _explicitNullValueNameplate; set { _explicitNullValueNameplate = value; AdditionalData?.Remove("nameplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameplate"); else _explicitNullProperties?.Remove("nameplate"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse? _explicitNullValueNameplate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse Nameplate { get => _explicitNullValueNameplate; set { _explicitNullValueNameplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameplate"); else _explicitNullProperties?.Remove("nameplate"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse Nameplate { get => _explicitNullValueNameplate; set { _explicitNullValueNameplate = value; AdditionalData?.Remove("nameplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameplate"); else _explicitNullProperties?.Remove("nameplate"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserNameplateResponse _explicitNullValueNameplate = default!;
 #endif
         /// <summary>

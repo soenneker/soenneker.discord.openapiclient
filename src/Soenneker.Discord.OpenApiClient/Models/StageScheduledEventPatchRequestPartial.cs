@@ -17,17 +17,28 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("channel_id") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("entity_metadata") is { } nullNodeEntityMetadata && nullNodeEntityMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityMetadata = null;
-            if (parseNode.GetChildNode("entity_type") is { } nullNodeEntityType && nullNodeEntityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityType = null;
-            if (parseNode.GetChildNode("image") is { } nullNodeImage && nullNodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("privacy_level") is { } nullNodePrivacyLevel && nullNodePrivacyLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyLevel = null;
-            if (parseNode.GetChildNode("recurrence_rule") is { } nullNodeRecurrenceRule && nullNodeRecurrenceRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurrenceRule = null;
-            if (parseNode.GetChildNode("scheduled_end_time") is { } nullNodeScheduledEndTime && nullNodeScheduledEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEndTime = null;
-            if (parseNode.GetChildNode("scheduled_start_time") is { } nullNodeScheduledStartTime && nullNodeScheduledStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledStartTime = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("channel_id") is null) { _explicitNullValueChannelId = default!; _explicitNullProperties?.Remove("channel_id"); }
+            else if (parseNode.GetChildNode("channel_id") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("entity_metadata") is null) { _explicitNullValueEntityMetadata = default!; _explicitNullProperties?.Remove("entity_metadata"); }
+            else if (parseNode.GetChildNode("entity_metadata") is { } nullNodeEntityMetadata && nullNodeEntityMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityMetadata = null;
+            if (parseNode.GetChildNode("entity_type") is null) { _explicitNullValueEntityType = default!; _explicitNullProperties?.Remove("entity_type"); }
+            else if (parseNode.GetChildNode("entity_type") is { } nullNodeEntityType && nullNodeEntityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityType = null;
+            if (parseNode.GetChildNode("image") is null) { _explicitNullValueImage = default!; _explicitNullProperties?.Remove("image"); }
+            else if (parseNode.GetChildNode("image") is { } nullNodeImage && nullNodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("privacy_level") is null) { _explicitNullValuePrivacyLevel = default!; _explicitNullProperties?.Remove("privacy_level"); }
+            else if (parseNode.GetChildNode("privacy_level") is { } nullNodePrivacyLevel && nullNodePrivacyLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyLevel = null;
+            if (parseNode.GetChildNode("recurrence_rule") is null) { _explicitNullValueRecurrenceRule = default!; _explicitNullProperties?.Remove("recurrence_rule"); }
+            else if (parseNode.GetChildNode("recurrence_rule") is { } nullNodeRecurrenceRule && nullNodeRecurrenceRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurrenceRule = null;
+            if (parseNode.GetChildNode("scheduled_end_time") is null) { _explicitNullValueScheduledEndTime = default!; _explicitNullProperties?.Remove("scheduled_end_time"); }
+            else if (parseNode.GetChildNode("scheduled_end_time") is { } nullNodeScheduledEndTime && nullNodeScheduledEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEndTime = null;
+            if (parseNode.GetChildNode("scheduled_start_time") is null) { _explicitNullValueScheduledStartTime = default!; _explicitNullProperties?.Remove("scheduled_start_time"); }
+            else if (parseNode.GetChildNode("scheduled_start_time") is { } nullNodeScheduledStartTime && nullNodeScheduledStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledStartTime = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,90 +46,90 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
         private string? _explicitNullValueChannelId = default!;
 #nullable restore
 #else
-        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
         private string _explicitNullValueChannelId = default!;
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The entity_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityMetadata? EntityMetadata { get => _explicitNullValueEntityMetadata; set { _explicitNullValueEntityMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_metadata"); else _explicitNullProperties?.Remove("entity_metadata"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityMetadata? EntityMetadata { get => _explicitNullValueEntityMetadata; set { _explicitNullValueEntityMetadata = value; AdditionalData?.Remove("entity_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_metadata"); else _explicitNullProperties?.Remove("entity_metadata"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityMetadata? _explicitNullValueEntityMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityMetadata EntityMetadata { get => _explicitNullValueEntityMetadata; set { _explicitNullValueEntityMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_metadata"); else _explicitNullProperties?.Remove("entity_metadata"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityMetadata EntityMetadata { get => _explicitNullValueEntityMetadata; set { _explicitNullValueEntityMetadata = value; AdditionalData?.Remove("entity_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_metadata"); else _explicitNullProperties?.Remove("entity_metadata"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityMetadata _explicitNullValueEntityMetadata = default!;
 #endif
         /// <summary>The entity_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityTypeOneOf2? EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityTypeOneOf2? EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; AdditionalData?.Remove("entity_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityTypeOneOf2? _explicitNullValueEntityType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityTypeOneOf2 EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityTypeOneOf2 EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; AdditionalData?.Remove("entity_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityTypeOneOf2 _explicitNullValueEntityType = default!;
 #endif
         /// <summary>The image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        public string? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
         private string? _explicitNullValueImage = default!;
 #nullable restore
 #else
-        public string Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        public string Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
         private string _explicitNullValueImage = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The privacy_level property</summary>
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1? PrivacyLevel { get => _explicitNullValuePrivacyLevel; set { _explicitNullValuePrivacyLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_level"); else _explicitNullProperties?.Remove("privacy_level"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1? PrivacyLevel { get => _explicitNullValuePrivacyLevel; set { _explicitNullValuePrivacyLevel = value; AdditionalData?.Remove("privacy_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_level"); else _explicitNullProperties?.Remove("privacy_level"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1? _explicitNullValuePrivacyLevel = default!;
         /// <summary>Recurrence rule for the scheduled event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRule? RecurrenceRule { get => _explicitNullValueRecurrenceRule; set { _explicitNullValueRecurrenceRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence_rule"); else _explicitNullProperties?.Remove("recurrence_rule"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRule? RecurrenceRule { get => _explicitNullValueRecurrenceRule; set { _explicitNullValueRecurrenceRule = value; AdditionalData?.Remove("recurrence_rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence_rule"); else _explicitNullProperties?.Remove("recurrence_rule"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRule? _explicitNullValueRecurrenceRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRule RecurrenceRule { get => _explicitNullValueRecurrenceRule; set { _explicitNullValueRecurrenceRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence_rule"); else _explicitNullProperties?.Remove("recurrence_rule"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRule RecurrenceRule { get => _explicitNullValueRecurrenceRule; set { _explicitNullValueRecurrenceRule = value; AdditionalData?.Remove("recurrence_rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence_rule"); else _explicitNullProperties?.Remove("recurrence_rule"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRule _explicitNullValueRecurrenceRule = default!;
 #endif
         /// <summary>The scheduled_end_time property</summary>
-        public DateTimeOffset? ScheduledEndTime { get => _explicitNullValueScheduledEndTime; set { _explicitNullValueScheduledEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled_end_time"); else _explicitNullProperties?.Remove("scheduled_end_time"); } }
+        public DateTimeOffset? ScheduledEndTime { get => _explicitNullValueScheduledEndTime; set { _explicitNullValueScheduledEndTime = value; AdditionalData?.Remove("scheduled_end_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled_end_time"); else _explicitNullProperties?.Remove("scheduled_end_time"); } }
         private DateTimeOffset? _explicitNullValueScheduledEndTime = default!;
         /// <summary>The scheduled_start_time property</summary>
-        public DateTimeOffset? ScheduledStartTime { get => _explicitNullValueScheduledStartTime; set { _explicitNullValueScheduledStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled_start_time"); else _explicitNullProperties?.Remove("scheduled_start_time"); } }
+        public DateTimeOffset? ScheduledStartTime { get => _explicitNullValueScheduledStartTime; set { _explicitNullValueScheduledStartTime = value; AdditionalData?.Remove("scheduled_start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled_start_time"); else _explicitNullProperties?.Remove("scheduled_start_time"); } }
         private DateTimeOffset? _explicitNullValueScheduledStartTime = default!;
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventStatuses? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventStatuses? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventStatuses? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventStatuses Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventStatuses Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventStatuses _explicitNullValueStatus = default!;
 #endif
         /// <summary>
@@ -152,7 +163,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "entity_type", n => { EntityType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityTypeOneOf2>(global::Soenneker.Discord.OpenApiClient.Models.StageScheduledEventPatchRequestPartialEntityTypeOneOf2.CreateFromDiscriminatorValue); } },
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "privacy_level", n => { PrivacyLevel = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1>(); } },
+                { "privacy_level", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePrivacyLevel = default; _explicitNullProperties?.Remove("privacy_level"); AdditionalData["privacy_level"] = unknown; } else { PrivacyLevel = parsed; AdditionalData.Remove("privacy_level"); } } },
                 { "recurrence_rule", n => { RecurrenceRule = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRule>(global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRule.CreateFromDiscriminatorValue); } },
                 { "scheduled_end_time", n => { ScheduledEndTime = n.GetDateTimeOffsetValue(); } },
                 { "scheduled_start_time", n => { ScheduledStartTime = n.GetDateTimeOffsetValue(); } },

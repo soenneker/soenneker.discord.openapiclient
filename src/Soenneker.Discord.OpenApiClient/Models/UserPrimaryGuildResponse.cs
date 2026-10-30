@@ -17,10 +17,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("badge") is { } nullNodeBadge && nullNodeBadge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Badge = null;
-            if (parseNode.GetChildNode("identity_enabled") is { } nullNodeIdentityEnabled && nullNodeIdentityEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentityEnabled = null;
-            if (parseNode.GetChildNode("identity_guild_id") is { } nullNodeIdentityGuildId && nullNodeIdentityGuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentityGuildId = null;
-            if (parseNode.GetChildNode("tag") is { } nullNodeTag && nullNodeTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tag = null;
+            if (parseNode.GetChildNode("badge") is null) { _explicitNullValueBadge = default!; _explicitNullProperties?.Remove("badge"); }
+            else if (parseNode.GetChildNode("badge") is { } nullNodeBadge && nullNodeBadge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Badge = null;
+            if (parseNode.GetChildNode("identity_enabled") is null) { _explicitNullValueIdentityEnabled = default!; _explicitNullProperties?.Remove("identity_enabled"); }
+            else if (parseNode.GetChildNode("identity_enabled") is { } nullNodeIdentityEnabled && nullNodeIdentityEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentityEnabled = null;
+            if (parseNode.GetChildNode("identity_guild_id") is null) { _explicitNullValueIdentityGuildId = default!; _explicitNullProperties?.Remove("identity_guild_id"); }
+            else if (parseNode.GetChildNode("identity_guild_id") is { } nullNodeIdentityGuildId && nullNodeIdentityGuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentityGuildId = null;
+            if (parseNode.GetChildNode("tag") is null) { _explicitNullValueTag = default!; _explicitNullProperties?.Remove("tag"); }
+            else if (parseNode.GetChildNode("tag") is { } nullNodeTag && nullNodeTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tag = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,34 +32,34 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>the server tag badge hash</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Badge { get => _explicitNullValueBadge; set { _explicitNullValueBadge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("badge"); else _explicitNullProperties?.Remove("badge"); } }
+        public string? Badge { get => _explicitNullValueBadge; set { _explicitNullValueBadge = value; AdditionalData?.Remove("badge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("badge"); else _explicitNullProperties?.Remove("badge"); } }
         private string? _explicitNullValueBadge = default!;
 #nullable restore
 #else
-        public string Badge { get => _explicitNullValueBadge; set { _explicitNullValueBadge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("badge"); else _explicitNullProperties?.Remove("badge"); } }
+        public string Badge { get => _explicitNullValueBadge; set { _explicitNullValueBadge = value; AdditionalData?.Remove("badge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("badge"); else _explicitNullProperties?.Remove("badge"); } }
         private string _explicitNullValueBadge = default!;
 #endif
         /// <summary>whether the user is displaying the primary guild&apos;s server tag</summary>
-        public bool? IdentityEnabled { get => _explicitNullValueIdentityEnabled; set { _explicitNullValueIdentityEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_enabled"); else _explicitNullProperties?.Remove("identity_enabled"); } }
+        public bool? IdentityEnabled { get => _explicitNullValueIdentityEnabled; set { _explicitNullValueIdentityEnabled = value; AdditionalData?.Remove("identity_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_enabled"); else _explicitNullProperties?.Remove("identity_enabled"); } }
         private bool? _explicitNullValueIdentityEnabled = default!;
         /// <summary>the id of the user&apos;s primary guild</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdentityGuildId { get => _explicitNullValueIdentityGuildId; set { _explicitNullValueIdentityGuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_guild_id"); else _explicitNullProperties?.Remove("identity_guild_id"); } }
+        public string? IdentityGuildId { get => _explicitNullValueIdentityGuildId; set { _explicitNullValueIdentityGuildId = value; AdditionalData?.Remove("identity_guild_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_guild_id"); else _explicitNullProperties?.Remove("identity_guild_id"); } }
         private string? _explicitNullValueIdentityGuildId = default!;
 #nullable restore
 #else
-        public string IdentityGuildId { get => _explicitNullValueIdentityGuildId; set { _explicitNullValueIdentityGuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_guild_id"); else _explicitNullProperties?.Remove("identity_guild_id"); } }
+        public string IdentityGuildId { get => _explicitNullValueIdentityGuildId; set { _explicitNullValueIdentityGuildId = value; AdditionalData?.Remove("identity_guild_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_guild_id"); else _explicitNullProperties?.Remove("identity_guild_id"); } }
         private string _explicitNullValueIdentityGuildId = default!;
 #endif
         /// <summary>the text of the user&apos;s server tag, limited to 4 characters</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
+        public string? Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; AdditionalData?.Remove("tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
         private string? _explicitNullValueTag = default!;
 #nullable restore
 #else
-        public string Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
+        public string Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; AdditionalData?.Remove("tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
         private string _explicitNullValueTag = default!;
 #endif
         /// <summary>

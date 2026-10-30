@@ -17,9 +17,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("additional_name") is { } nullNodeAdditionalName && nullNodeAdditionalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalName = null;
-            if (parseNode.GetChildNode("flags") is { } nullNodeFlags && nullNodeFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flags = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("additional_name") is null) { _explicitNullValueAdditionalName = default!; _explicitNullProperties?.Remove("additional_name"); }
+            else if (parseNode.GetChildNode("additional_name") is { } nullNodeAdditionalName && nullNodeAdditionalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalName = null;
+            if (parseNode.GetChildNode("flags") is null) { _explicitNullValueFlags = default!; _explicitNullProperties?.Remove("flags"); }
+            else if (parseNode.GetChildNode("flags") is { } nullNodeFlags && nullNodeFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flags = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The additional_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdditionalName { get => _explicitNullValueAdditionalName; set { _explicitNullValueAdditionalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_name"); else _explicitNullProperties?.Remove("additional_name"); } }
+        public string? AdditionalName { get => _explicitNullValueAdditionalName; set { _explicitNullValueAdditionalName = value; AdditionalData?.Remove("additional_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_name"); else _explicitNullProperties?.Remove("additional_name"); } }
         private string? _explicitNullValueAdditionalName = default!;
 #nullable restore
 #else
-        public string AdditionalName { get => _explicitNullValueAdditionalName; set { _explicitNullValueAdditionalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_name"); else _explicitNullProperties?.Remove("additional_name"); } }
+        public string AdditionalName { get => _explicitNullValueAdditionalName; set { _explicitNullValueAdditionalName = value; AdditionalData?.Remove("additional_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_name"); else _explicitNullProperties?.Remove("additional_name"); } }
         private string _explicitNullValueAdditionalName = default!;
 #endif
         /// <summary>The flags property</summary>
-        public global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags? _explicitNullValueFlags = default!;
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>
@@ -73,7 +76,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "additional_name", n => { AdditionalName = n.GetStringValue(); } },
-                { "flags", n => { Flags = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags>(); } },
+                { "flags", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFlags = default; _explicitNullProperties?.Remove("flags"); AdditionalData["flags"] = unknown; } else { Flags = parsed; AdditionalData.Remove("flags"); } } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestMetadata>(global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestMetadata.CreateFromDiscriminatorValue); } },
             };
         }

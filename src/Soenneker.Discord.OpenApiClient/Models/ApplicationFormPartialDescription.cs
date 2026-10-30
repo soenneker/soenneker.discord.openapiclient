@@ -17,8 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("default") is { } nullNodeDefault && nullNodeDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Default = null;
-            if (parseNode.GetChildNode("localizations") is { } nullNodeLocalizations && nullNodeLocalizations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Localizations = null;
+            if (parseNode.GetChildNode("default") is null) { _explicitNullValueDefault = default!; _explicitNullProperties?.Remove("default"); }
+            else if (parseNode.GetChildNode("default") is { } nullNodeDefault && nullNodeDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Default = null;
+            if (parseNode.GetChildNode("localizations") is null) { _explicitNullValueLocalizations = default!; _explicitNullProperties?.Remove("localizations"); }
+            else if (parseNode.GetChildNode("localizations") is { } nullNodeLocalizations && nullNodeLocalizations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Localizations = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The default property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Default { get => _explicitNullValueDefault; set { _explicitNullValueDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default"); else _explicitNullProperties?.Remove("default"); } }
+        public string? Default { get => _explicitNullValueDefault; set { _explicitNullValueDefault = value; AdditionalData?.Remove("default"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default"); else _explicitNullProperties?.Remove("default"); } }
         private string? _explicitNullValueDefault = default!;
 #nullable restore
 #else
-        public string Default { get => _explicitNullValueDefault; set { _explicitNullValueDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default"); else _explicitNullProperties?.Remove("default"); } }
+        public string Default { get => _explicitNullValueDefault; set { _explicitNullValueDefault = value; AdditionalData?.Remove("default"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default"); else _explicitNullProperties?.Remove("default"); } }
         private string _explicitNullValueDefault = default!;
 #endif
         /// <summary>The localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty? Localizations { get => _explicitNullValueLocalizations; set { _explicitNullValueLocalizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localizations"); else _explicitNullProperties?.Remove("localizations"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty? Localizations { get => _explicitNullValueLocalizations; set { _explicitNullValueLocalizations = value; AdditionalData?.Remove("localizations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localizations"); else _explicitNullProperties?.Remove("localizations"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty? _explicitNullValueLocalizations = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty Localizations { get => _explicitNullValueLocalizations; set { _explicitNullValueLocalizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localizations"); else _explicitNullProperties?.Remove("localizations"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty Localizations { get => _explicitNullValueLocalizations; set { _explicitNullValueLocalizations = value; AdditionalData?.Remove("localizations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localizations"); else _explicitNullProperties?.Remove("localizations"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty _explicitNullValueLocalizations = default!;
 #endif
         /// <summary>

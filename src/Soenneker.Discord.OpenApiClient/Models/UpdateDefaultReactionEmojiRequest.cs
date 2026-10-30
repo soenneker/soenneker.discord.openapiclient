@@ -17,8 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("emoji_id") is { } nullNodeEmojiId && nullNodeEmojiId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmojiId = null;
-            if (parseNode.GetChildNode("emoji_name") is { } nullNodeEmojiName && nullNodeEmojiName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmojiName = null;
+            if (parseNode.GetChildNode("emoji_id") is null) { _explicitNullValueEmojiId = default!; _explicitNullProperties?.Remove("emoji_id"); }
+            else if (parseNode.GetChildNode("emoji_id") is { } nullNodeEmojiId && nullNodeEmojiId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmojiId = null;
+            if (parseNode.GetChildNode("emoji_name") is null) { _explicitNullValueEmojiName = default!; _explicitNullProperties?.Remove("emoji_name"); }
+            else if (parseNode.GetChildNode("emoji_name") is { } nullNodeEmojiName && nullNodeEmojiName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmojiName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The emoji_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmojiId { get => _explicitNullValueEmojiId; set { _explicitNullValueEmojiId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_id"); else _explicitNullProperties?.Remove("emoji_id"); } }
+        public string? EmojiId { get => _explicitNullValueEmojiId; set { _explicitNullValueEmojiId = value; AdditionalData?.Remove("emoji_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_id"); else _explicitNullProperties?.Remove("emoji_id"); } }
         private string? _explicitNullValueEmojiId = default!;
 #nullable restore
 #else
-        public string EmojiId { get => _explicitNullValueEmojiId; set { _explicitNullValueEmojiId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_id"); else _explicitNullProperties?.Remove("emoji_id"); } }
+        public string EmojiId { get => _explicitNullValueEmojiId; set { _explicitNullValueEmojiId = value; AdditionalData?.Remove("emoji_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_id"); else _explicitNullProperties?.Remove("emoji_id"); } }
         private string _explicitNullValueEmojiId = default!;
 #endif
         /// <summary>The emoji_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmojiName { get => _explicitNullValueEmojiName; set { _explicitNullValueEmojiName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_name"); else _explicitNullProperties?.Remove("emoji_name"); } }
+        public string? EmojiName { get => _explicitNullValueEmojiName; set { _explicitNullValueEmojiName = value; AdditionalData?.Remove("emoji_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_name"); else _explicitNullProperties?.Remove("emoji_name"); } }
         private string? _explicitNullValueEmojiName = default!;
 #nullable restore
 #else
-        public string EmojiName { get => _explicitNullValueEmojiName; set { _explicitNullValueEmojiName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_name"); else _explicitNullProperties?.Remove("emoji_name"); } }
+        public string EmojiName { get => _explicitNullValueEmojiName; set { _explicitNullValueEmojiName = value; AdditionalData?.Remove("emoji_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_name"); else _explicitNullProperties?.Remove("emoji_name"); } }
         private string _explicitNullValueEmojiName = default!;
 #endif
         /// <summary>

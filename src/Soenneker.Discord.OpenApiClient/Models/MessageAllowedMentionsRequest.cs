@@ -17,10 +17,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("parse") is { } nullNodeParse && nullNodeParse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parse = null;
-            if (parseNode.GetChildNode("replied_user") is { } nullNodeRepliedUser && nullNodeRepliedUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepliedUser = null;
-            if (parseNode.GetChildNode("roles") is { } nullNodeRoles && nullNodeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Roles = null;
-            if (parseNode.GetChildNode("users") is { } nullNodeUsers && nullNodeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Users = null;
+            if (parseNode.GetChildNode("parse") is null) { _explicitNullValueParse = default!; _explicitNullProperties?.Remove("parse"); }
+            else if (parseNode.GetChildNode("parse") is { } nullNodeParse && nullNodeParse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parse = null;
+            if (parseNode.GetChildNode("replied_user") is null) { _explicitNullValueRepliedUser = default!; _explicitNullProperties?.Remove("replied_user"); }
+            else if (parseNode.GetChildNode("replied_user") is { } nullNodeRepliedUser && nullNodeRepliedUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepliedUser = null;
+            if (parseNode.GetChildNode("roles") is null) { _explicitNullValueRoles = default!; _explicitNullProperties?.Remove("roles"); }
+            else if (parseNode.GetChildNode("roles") is { } nullNodeRoles && nullNodeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Roles = null;
+            if (parseNode.GetChildNode("users") is null) { _explicitNullValueUsers = default!; _explicitNullProperties?.Remove("users"); }
+            else if (parseNode.GetChildNode("users") is { } nullNodeUsers && nullNodeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Users = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,34 +32,34 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The parse property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes>? Parse { get => _explicitNullValueParse; set { _explicitNullValueParse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parse"); else _explicitNullProperties?.Remove("parse"); } }
-        private List<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes>? _explicitNullValueParse = default!;
+        public List<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes?>? Parse { get => _explicitNullValueParse; set { _explicitNullValueParse = value; AdditionalData?.Remove("parse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parse"); else _explicitNullProperties?.Remove("parse"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes?>? _explicitNullValueParse = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes> Parse { get => _explicitNullValueParse; set { _explicitNullValueParse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parse"); else _explicitNullProperties?.Remove("parse"); } }
-        private List<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes> _explicitNullValueParse = default!;
+        public List<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes?> Parse { get => _explicitNullValueParse; set { _explicitNullValueParse = value; AdditionalData?.Remove("parse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parse"); else _explicitNullProperties?.Remove("parse"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes?> _explicitNullValueParse = default!;
 #endif
         /// <summary>The replied_user property</summary>
-        public bool? RepliedUser { get => _explicitNullValueRepliedUser; set { _explicitNullValueRepliedUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replied_user"); else _explicitNullProperties?.Remove("replied_user"); } }
+        public bool? RepliedUser { get => _explicitNullValueRepliedUser; set { _explicitNullValueRepliedUser = value; AdditionalData?.Remove("replied_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replied_user"); else _explicitNullProperties?.Remove("replied_user"); } }
         private bool? _explicitNullValueRepliedUser = default!;
         /// <summary>The roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        public List<string>? Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; AdditionalData?.Remove("roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
         private List<string>? _explicitNullValueRoles = default!;
 #nullable restore
 #else
-        public List<string> Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        public List<string> Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; AdditionalData?.Remove("roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
         private List<string> _explicitNullValueRoles = default!;
 #endif
         /// <summary>The users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        public List<string>? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; AdditionalData?.Remove("users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
         private List<string>? _explicitNullValueUsers = default!;
 #nullable restore
 #else
-        public List<string> Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        public List<string> Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; AdditionalData?.Remove("users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
         private List<string> _explicitNullValueUsers = default!;
 #endif
         /// <summary>
@@ -83,7 +87,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "parse", n => { Parse = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes>(global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "parse", n => { Parse = n.GetCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes>()?.AsList(); } },
                 { "replied_user", n => { RepliedUser = n.GetBoolValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "users", n => { Users = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -96,7 +100,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes>("parse", Parse);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Discord.OpenApiClient.Models.AllowedMentionTypes>("parse", Parse);
             writer.WriteBoolValue("replied_user", RepliedUser);
             writer.WriteCollectionOfPrimitiveValues<string>("roles", Roles);
             writer.WriteCollectionOfPrimitiveValues<string>("users", Users);

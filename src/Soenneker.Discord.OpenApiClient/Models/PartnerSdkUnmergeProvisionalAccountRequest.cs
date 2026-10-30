@@ -17,10 +17,14 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
-            if (parseNode.GetChildNode("client_secret") is { } nullNodeClientSecret && nullNodeClientSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSecret = null;
-            if (parseNode.GetChildNode("external_auth_token") is { } nullNodeExternalAuthToken && nullNodeExternalAuthToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAuthToken = null;
-            if (parseNode.GetChildNode("external_auth_type") is { } nullNodeExternalAuthType && nullNodeExternalAuthType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAuthType = null;
+            if (parseNode.GetChildNode("client_id") is null) { _explicitNullValueClientId = default!; _explicitNullProperties?.Remove("client_id"); }
+            else if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
+            if (parseNode.GetChildNode("client_secret") is null) { _explicitNullValueClientSecret = default!; _explicitNullProperties?.Remove("client_secret"); }
+            else if (parseNode.GetChildNode("client_secret") is { } nullNodeClientSecret && nullNodeClientSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSecret = null;
+            if (parseNode.GetChildNode("external_auth_token") is null) { _explicitNullValueExternalAuthToken = default!; _explicitNullProperties?.Remove("external_auth_token"); }
+            else if (parseNode.GetChildNode("external_auth_token") is { } nullNodeExternalAuthToken && nullNodeExternalAuthToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAuthToken = null;
+            if (parseNode.GetChildNode("external_auth_type") is null) { _explicitNullValueExternalAuthType = default!; _explicitNullProperties?.Remove("external_auth_type"); }
+            else if (parseNode.GetChildNode("external_auth_type") is { } nullNodeExternalAuthType && nullNodeExternalAuthType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAuthType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,43 +32,36 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The client_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; AdditionalData?.Remove("client_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
         private string? _explicitNullValueClientId = default!;
 #nullable restore
 #else
-        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; AdditionalData?.Remove("client_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
         private string _explicitNullValueClientId = default!;
 #endif
         /// <summary>The client_secret property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        public string? ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; AdditionalData?.Remove("client_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
         private string? _explicitNullValueClientSecret = default!;
 #nullable restore
 #else
-        public string ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        public string ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; AdditionalData?.Remove("client_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
         private string _explicitNullValueClientSecret = default!;
 #endif
         /// <summary>The external_auth_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalAuthToken { get => _explicitNullValueExternalAuthToken; set { _explicitNullValueExternalAuthToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_auth_token"); else _explicitNullProperties?.Remove("external_auth_token"); } }
+        public string? ExternalAuthToken { get => _explicitNullValueExternalAuthToken; set { _explicitNullValueExternalAuthToken = value; AdditionalData?.Remove("external_auth_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_auth_token"); else _explicitNullProperties?.Remove("external_auth_token"); } }
         private string? _explicitNullValueExternalAuthToken = default!;
 #nullable restore
 #else
-        public string ExternalAuthToken { get => _explicitNullValueExternalAuthToken; set { _explicitNullValueExternalAuthToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_auth_token"); else _explicitNullProperties?.Remove("external_auth_token"); } }
+        public string ExternalAuthToken { get => _explicitNullValueExternalAuthToken; set { _explicitNullValueExternalAuthToken = value; AdditionalData?.Remove("external_auth_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_auth_token"); else _explicitNullProperties?.Remove("external_auth_token"); } }
         private string _explicitNullValueExternalAuthToken = default!;
 #endif
         /// <summary>The external_auth_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType? ExternalAuthType { get => _explicitNullValueExternalAuthType; set { _explicitNullValueExternalAuthType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_auth_type"); else _explicitNullProperties?.Remove("external_auth_type"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType? ExternalAuthType { get => _explicitNullValueExternalAuthType; set { _explicitNullValueExternalAuthType = value; AdditionalData?.Remove("external_auth_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_auth_type"); else _explicitNullProperties?.Remove("external_auth_type"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType? _explicitNullValueExternalAuthType = default!;
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType ExternalAuthType { get => _explicitNullValueExternalAuthType; set { _explicitNullValueExternalAuthType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_auth_type"); else _explicitNullProperties?.Remove("external_auth_type"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType _explicitNullValueExternalAuthType = default!;
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.PartnerSdkUnmergeProvisionalAccountRequest"/> and sets the default values.
         /// </summary>
@@ -93,7 +90,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "external_auth_token", n => { ExternalAuthToken = n.GetStringValue(); } },
-                { "external_auth_type", n => { ExternalAuthType = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType.CreateFromDiscriminatorValue); } },
+                { "external_auth_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueExternalAuthType = default; _explicitNullProperties?.Remove("external_auth_type"); AdditionalData["external_auth_type"] = unknown; } else { ExternalAuthType = parsed; AdditionalData.Remove("external_auth_type"); } } },
             };
         }
         /// <summary>
@@ -106,7 +103,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("client_id", ClientId);
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteStringValue("external_auth_token", ExternalAuthToken);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType>("external_auth_type", ExternalAuthType);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationIdentityProviderAuthType>("external_auth_type", ExternalAuthType);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

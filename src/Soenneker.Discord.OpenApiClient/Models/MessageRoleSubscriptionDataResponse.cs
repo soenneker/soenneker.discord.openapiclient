@@ -17,39 +17,43 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_renewal") is { } nullNodeIsRenewal && nullNodeIsRenewal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRenewal = null;
-            if (parseNode.GetChildNode("role_subscription_listing_id") is { } nullNodeRoleSubscriptionListingId && nullNodeRoleSubscriptionListingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleSubscriptionListingId = null;
-            if (parseNode.GetChildNode("tier_name") is { } nullNodeTierName && nullNodeTierName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TierName = null;
-            if (parseNode.GetChildNode("total_months_subscribed") is { } nullNodeTotalMonthsSubscribed && nullNodeTotalMonthsSubscribed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalMonthsSubscribed = null;
+            if (parseNode.GetChildNode("is_renewal") is null) { _explicitNullValueIsRenewal = default!; _explicitNullProperties?.Remove("is_renewal"); }
+            else if (parseNode.GetChildNode("is_renewal") is { } nullNodeIsRenewal && nullNodeIsRenewal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRenewal = null;
+            if (parseNode.GetChildNode("role_subscription_listing_id") is null) { _explicitNullValueRoleSubscriptionListingId = default!; _explicitNullProperties?.Remove("role_subscription_listing_id"); }
+            else if (parseNode.GetChildNode("role_subscription_listing_id") is { } nullNodeRoleSubscriptionListingId && nullNodeRoleSubscriptionListingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleSubscriptionListingId = null;
+            if (parseNode.GetChildNode("tier_name") is null) { _explicitNullValueTierName = default!; _explicitNullProperties?.Remove("tier_name"); }
+            else if (parseNode.GetChildNode("tier_name") is { } nullNodeTierName && nullNodeTierName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TierName = null;
+            if (parseNode.GetChildNode("total_months_subscribed") is null) { _explicitNullValueTotalMonthsSubscribed = default!; _explicitNullProperties?.Remove("total_months_subscribed"); }
+            else if (parseNode.GetChildNode("total_months_subscribed") is { } nullNodeTotalMonthsSubscribed && nullNodeTotalMonthsSubscribed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalMonthsSubscribed = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_renewal property</summary>
-        public bool? IsRenewal { get => _explicitNullValueIsRenewal; set { _explicitNullValueIsRenewal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_renewal"); else _explicitNullProperties?.Remove("is_renewal"); } }
+        public bool? IsRenewal { get => _explicitNullValueIsRenewal; set { _explicitNullValueIsRenewal = value; AdditionalData?.Remove("is_renewal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_renewal"); else _explicitNullProperties?.Remove("is_renewal"); } }
         private bool? _explicitNullValueIsRenewal = default!;
         /// <summary>The role_subscription_listing_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoleSubscriptionListingId { get => _explicitNullValueRoleSubscriptionListingId; set { _explicitNullValueRoleSubscriptionListingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_subscription_listing_id"); else _explicitNullProperties?.Remove("role_subscription_listing_id"); } }
+        public string? RoleSubscriptionListingId { get => _explicitNullValueRoleSubscriptionListingId; set { _explicitNullValueRoleSubscriptionListingId = value; AdditionalData?.Remove("role_subscription_listing_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_subscription_listing_id"); else _explicitNullProperties?.Remove("role_subscription_listing_id"); } }
         private string? _explicitNullValueRoleSubscriptionListingId = default!;
 #nullable restore
 #else
-        public string RoleSubscriptionListingId { get => _explicitNullValueRoleSubscriptionListingId; set { _explicitNullValueRoleSubscriptionListingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_subscription_listing_id"); else _explicitNullProperties?.Remove("role_subscription_listing_id"); } }
+        public string RoleSubscriptionListingId { get => _explicitNullValueRoleSubscriptionListingId; set { _explicitNullValueRoleSubscriptionListingId = value; AdditionalData?.Remove("role_subscription_listing_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_subscription_listing_id"); else _explicitNullProperties?.Remove("role_subscription_listing_id"); } }
         private string _explicitNullValueRoleSubscriptionListingId = default!;
 #endif
         /// <summary>The tier_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TierName { get => _explicitNullValueTierName; set { _explicitNullValueTierName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tier_name"); else _explicitNullProperties?.Remove("tier_name"); } }
+        public string? TierName { get => _explicitNullValueTierName; set { _explicitNullValueTierName = value; AdditionalData?.Remove("tier_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tier_name"); else _explicitNullProperties?.Remove("tier_name"); } }
         private string? _explicitNullValueTierName = default!;
 #nullable restore
 #else
-        public string TierName { get => _explicitNullValueTierName; set { _explicitNullValueTierName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tier_name"); else _explicitNullProperties?.Remove("tier_name"); } }
+        public string TierName { get => _explicitNullValueTierName; set { _explicitNullValueTierName = value; AdditionalData?.Remove("tier_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tier_name"); else _explicitNullProperties?.Remove("tier_name"); } }
         private string _explicitNullValueTierName = default!;
 #endif
         /// <summary>The total_months_subscribed property</summary>
-        public int? TotalMonthsSubscribed { get => _explicitNullValueTotalMonthsSubscribed; set { _explicitNullValueTotalMonthsSubscribed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_months_subscribed"); else _explicitNullProperties?.Remove("total_months_subscribed"); } }
+        public int? TotalMonthsSubscribed { get => _explicitNullValueTotalMonthsSubscribed; set { _explicitNullValueTotalMonthsSubscribed = value; AdditionalData?.Remove("total_months_subscribed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_months_subscribed"); else _explicitNullProperties?.Remove("total_months_subscribed"); } }
         private int? _explicitNullValueTotalMonthsSubscribed = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MessageRoleSubscriptionDataResponse"/> and sets the default values.

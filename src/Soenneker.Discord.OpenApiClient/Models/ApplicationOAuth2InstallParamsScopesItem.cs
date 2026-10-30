@@ -8,13 +8,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
     public enum ApplicationOAuth2InstallParamsScopesItem
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "applications.commands")]
-        #pragma warning disable CS1591
-        ApplicationsCommands,
-        #pragma warning restore CS1591
         [EnumMember(Value = "bot")]
         #pragma warning disable CS1591
         Bot,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "applications.commands")]
+        #pragma warning disable CS1591
+        ApplicationsCommands,
         #pragma warning restore CS1591
     }
 }

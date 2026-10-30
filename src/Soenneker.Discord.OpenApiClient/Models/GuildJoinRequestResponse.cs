@@ -17,104 +17,107 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actioned_by_user") is { } nullNodeActionedByUser && nullNodeActionedByUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionedByUser = null;
-            if (parseNode.GetChildNode("application_status") is { } nullNodeApplicationStatus && nullNodeApplicationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationStatus = null;
-            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
-            if (parseNode.GetChildNode("form_responses") is { } nullNodeFormResponses && nullNodeFormResponses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormResponses = null;
-            if (parseNode.GetChildNode("guild_id") is { } nullNodeGuildId && nullNodeGuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildId = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("rejection_reason") is { } nullNodeRejectionReason && nullNodeRejectionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectionReason = null;
-            if (parseNode.GetChildNode("reviewed_at") is { } nullNodeReviewedAt && nullNodeReviewedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReviewedAt = null;
-            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
-            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("actioned_by_user") is null) { _explicitNullValueActionedByUser = default!; _explicitNullProperties?.Remove("actioned_by_user"); }
+            else if (parseNode.GetChildNode("actioned_by_user") is { } nullNodeActionedByUser && nullNodeActionedByUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionedByUser = null;
+            if (parseNode.GetChildNode("application_status") is null) { _explicitNullValueApplicationStatus = default!; _explicitNullProperties?.Remove("application_status"); }
+            else if (parseNode.GetChildNode("application_status") is { } nullNodeApplicationStatus && nullNodeApplicationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationStatus = null;
+            if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
+            else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("form_responses") is null) { _explicitNullValueFormResponses = default!; _explicitNullProperties?.Remove("form_responses"); }
+            else if (parseNode.GetChildNode("form_responses") is { } nullNodeFormResponses && nullNodeFormResponses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormResponses = null;
+            if (parseNode.GetChildNode("guild_id") is null) { _explicitNullValueGuildId = default!; _explicitNullProperties?.Remove("guild_id"); }
+            else if (parseNode.GetChildNode("guild_id") is { } nullNodeGuildId && nullNodeGuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("rejection_reason") is null) { _explicitNullValueRejectionReason = default!; _explicitNullProperties?.Remove("rejection_reason"); }
+            else if (parseNode.GetChildNode("rejection_reason") is { } nullNodeRejectionReason && nullNodeRejectionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectionReason = null;
+            if (parseNode.GetChildNode("reviewed_at") is null) { _explicitNullValueReviewedAt = default!; _explicitNullProperties?.Remove("reviewed_at"); }
+            else if (parseNode.GetChildNode("reviewed_at") is { } nullNodeReviewedAt && nullNodeReviewedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReviewedAt = null;
+            if (parseNode.GetChildNode("user") is null) { _explicitNullValueUser = default!; _explicitNullProperties?.Remove("user"); }
+            else if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+            if (parseNode.GetChildNode("user_id") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("user_id"); }
+            else if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
         }
 
         /// <summary>The actioned_by_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? ActionedByUser { get => _explicitNullValueActionedByUser; set { _explicitNullValueActionedByUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actioned_by_user"); else _explicitNullProperties?.Remove("actioned_by_user"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? ActionedByUser { get => _explicitNullValueActionedByUser; set { _explicitNullValueActionedByUser = value; AdditionalData?.Remove("actioned_by_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actioned_by_user"); else _explicitNullProperties?.Remove("actioned_by_user"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserResponse? _explicitNullValueActionedByUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse ActionedByUser { get => _explicitNullValueActionedByUser; set { _explicitNullValueActionedByUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actioned_by_user"); else _explicitNullProperties?.Remove("actioned_by_user"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse ActionedByUser { get => _explicitNullValueActionedByUser; set { _explicitNullValueActionedByUser = value; AdditionalData?.Remove("actioned_by_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actioned_by_user"); else _explicitNullProperties?.Remove("actioned_by_user"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserResponse _explicitNullValueActionedByUser = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The application_status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus? ApplicationStatus { get => _explicitNullValueApplicationStatus; set { _explicitNullValueApplicationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_status"); else _explicitNullProperties?.Remove("application_status"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus? ApplicationStatus { get => _explicitNullValueApplicationStatus; set { _explicitNullValueApplicationStatus = value; AdditionalData?.Remove("application_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_status"); else _explicitNullProperties?.Remove("application_status"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus? _explicitNullValueApplicationStatus = default!;
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus ApplicationStatus { get => _explicitNullValueApplicationStatus; set { _explicitNullValueApplicationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_status"); else _explicitNullProperties?.Remove("application_status"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus _explicitNullValueApplicationStatus = default!;
-#endif
         /// <summary>The created_at property</summary>
-        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>Applicant&apos;s responses on join request form</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem>? FormResponses { get => _explicitNullValueFormResponses; set { _explicitNullValueFormResponses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_responses"); else _explicitNullProperties?.Remove("form_responses"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem>? FormResponses { get => _explicitNullValueFormResponses; set { _explicitNullValueFormResponses = value; AdditionalData?.Remove("form_responses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_responses"); else _explicitNullProperties?.Remove("form_responses"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem>? _explicitNullValueFormResponses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem> FormResponses { get => _explicitNullValueFormResponses; set { _explicitNullValueFormResponses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_responses"); else _explicitNullProperties?.Remove("form_responses"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem> FormResponses { get => _explicitNullValueFormResponses; set { _explicitNullValueFormResponses = value; AdditionalData?.Remove("form_responses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_responses"); else _explicitNullProperties?.Remove("form_responses"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem> _explicitNullValueFormResponses = default!;
 #endif
         /// <summary>The guild_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GuildId { get => _explicitNullValueGuildId; set { _explicitNullValueGuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_id"); else _explicitNullProperties?.Remove("guild_id"); } }
+        public string? GuildId { get => _explicitNullValueGuildId; set { _explicitNullValueGuildId = value; AdditionalData?.Remove("guild_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_id"); else _explicitNullProperties?.Remove("guild_id"); } }
         private string? _explicitNullValueGuildId = default!;
 #nullable restore
 #else
-        public string GuildId { get => _explicitNullValueGuildId; set { _explicitNullValueGuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_id"); else _explicitNullProperties?.Remove("guild_id"); } }
+        public string GuildId { get => _explicitNullValueGuildId; set { _explicitNullValueGuildId = value; AdditionalData?.Remove("guild_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_id"); else _explicitNullProperties?.Remove("guild_id"); } }
         private string _explicitNullValueGuildId = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Reason request was rejected. Only set when application_status is REJECTED</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
+        public string? RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; AdditionalData?.Remove("rejection_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
         private string? _explicitNullValueRejectionReason = default!;
 #nullable restore
 #else
-        public string RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
+        public string RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; AdditionalData?.Remove("rejection_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
         private string _explicitNullValueRejectionReason = default!;
 #endif
         /// <summary>The reviewed_at property</summary>
-        public DateTimeOffset? ReviewedAt { get => _explicitNullValueReviewedAt; set { _explicitNullValueReviewedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewed_at"); else _explicitNullProperties?.Remove("reviewed_at"); } }
+        public DateTimeOffset? ReviewedAt { get => _explicitNullValueReviewedAt; set { _explicitNullValueReviewedAt = value; AdditionalData?.Remove("reviewed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewed_at"); else _explicitNullProperties?.Remove("reviewed_at"); } }
         private DateTimeOffset? _explicitNullValueReviewedAt = default!;
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserResponse? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserResponse _explicitNullValueUser = default!;
 #endif
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>
@@ -143,7 +146,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "actioned_by_user", n => { ActionedByUser = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
-                { "application_status", n => { ApplicationStatus = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus>(global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus.CreateFromDiscriminatorValue); } },
+                { "application_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApplicationStatus = default; _explicitNullProperties?.Remove("application_status"); AdditionalData["application_status"] = unknown; } else { ApplicationStatus = parsed; AdditionalData.Remove("application_status"); } } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "form_responses", n => { FormResponses = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem>(global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
@@ -162,7 +165,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("actioned_by_user", ActionedByUser);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus>("application_status", ApplicationStatus);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus>("application_status", ApplicationStatus);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem>("form_responses", FormResponses);
             writer.WriteStringValue("guild_id", GuildId);

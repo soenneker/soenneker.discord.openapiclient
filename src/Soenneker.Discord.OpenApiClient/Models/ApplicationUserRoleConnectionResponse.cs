@@ -17,9 +17,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("platform_name") is { } nullNodePlatformName && nullNodePlatformName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformName = null;
-            if (parseNode.GetChildNode("platform_username") is { } nullNodePlatformUsername && nullNodePlatformUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformUsername = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("platform_name") is null) { _explicitNullValuePlatformName = default!; _explicitNullProperties?.Remove("platform_name"); }
+            else if (parseNode.GetChildNode("platform_name") is { } nullNodePlatformName && nullNodePlatformName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformName = null;
+            if (parseNode.GetChildNode("platform_username") is null) { _explicitNullValuePlatformUsername = default!; _explicitNullProperties?.Remove("platform_username"); }
+            else if (parseNode.GetChildNode("platform_username") is { } nullNodePlatformUsername && nullNodePlatformUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformUsername = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.ApplicationUserRoleConnectionResponseMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The platform_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
+        public string? PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; AdditionalData?.Remove("platform_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
         private string? _explicitNullValuePlatformName = default!;
 #nullable restore
 #else
-        public string PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
+        public string PlatformName { get => _explicitNullValuePlatformName; set { _explicitNullValuePlatformName = value; AdditionalData?.Remove("platform_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_name"); else _explicitNullProperties?.Remove("platform_name"); } }
         private string _explicitNullValuePlatformName = default!;
 #endif
         /// <summary>The platform_username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlatformUsername { get => _explicitNullValuePlatformUsername; set { _explicitNullValuePlatformUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_username"); else _explicitNullProperties?.Remove("platform_username"); } }
+        public string? PlatformUsername { get => _explicitNullValuePlatformUsername; set { _explicitNullValuePlatformUsername = value; AdditionalData?.Remove("platform_username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_username"); else _explicitNullProperties?.Remove("platform_username"); } }
         private string? _explicitNullValuePlatformUsername = default!;
 #nullable restore
 #else
-        public string PlatformUsername { get => _explicitNullValuePlatformUsername; set { _explicitNullValuePlatformUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_username"); else _explicitNullProperties?.Remove("platform_username"); } }
+        public string PlatformUsername { get => _explicitNullValuePlatformUsername; set { _explicitNullValuePlatformUsername = value; AdditionalData?.Remove("platform_username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_username"); else _explicitNullProperties?.Remove("platform_username"); } }
         private string _explicitNullValuePlatformUsername = default!;
 #endif
         /// <summary>

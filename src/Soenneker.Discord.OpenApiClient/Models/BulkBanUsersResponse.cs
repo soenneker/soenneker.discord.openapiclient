@@ -17,8 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("banned_users") is { } nullNodeBannedUsers && nullNodeBannedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BannedUsers = null;
-            if (parseNode.GetChildNode("failed_users") is { } nullNodeFailedUsers && nullNodeFailedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedUsers = null;
+            if (parseNode.GetChildNode("banned_users") is null) { _explicitNullValueBannedUsers = default!; _explicitNullProperties?.Remove("banned_users"); }
+            else if (parseNode.GetChildNode("banned_users") is { } nullNodeBannedUsers && nullNodeBannedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BannedUsers = null;
+            if (parseNode.GetChildNode("failed_users") is null) { _explicitNullValueFailedUsers = default!; _explicitNullProperties?.Remove("failed_users"); }
+            else if (parseNode.GetChildNode("failed_users") is { } nullNodeFailedUsers && nullNodeFailedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedUsers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The banned_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BannedUsers { get => _explicitNullValueBannedUsers; set { _explicitNullValueBannedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banned_users"); else _explicitNullProperties?.Remove("banned_users"); } }
+        public List<string>? BannedUsers { get => _explicitNullValueBannedUsers; set { _explicitNullValueBannedUsers = value; AdditionalData?.Remove("banned_users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banned_users"); else _explicitNullProperties?.Remove("banned_users"); } }
         private List<string>? _explicitNullValueBannedUsers = default!;
 #nullable restore
 #else
-        public List<string> BannedUsers { get => _explicitNullValueBannedUsers; set { _explicitNullValueBannedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banned_users"); else _explicitNullProperties?.Remove("banned_users"); } }
+        public List<string> BannedUsers { get => _explicitNullValueBannedUsers; set { _explicitNullValueBannedUsers = value; AdditionalData?.Remove("banned_users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banned_users"); else _explicitNullProperties?.Remove("banned_users"); } }
         private List<string> _explicitNullValueBannedUsers = default!;
 #endif
         /// <summary>The failed_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_users"); else _explicitNullProperties?.Remove("failed_users"); } }
+        public List<string>? FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; AdditionalData?.Remove("failed_users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_users"); else _explicitNullProperties?.Remove("failed_users"); } }
         private List<string>? _explicitNullValueFailedUsers = default!;
 #nullable restore
 #else
-        public List<string> FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_users"); else _explicitNullProperties?.Remove("failed_users"); } }
+        public List<string> FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; AdditionalData?.Remove("failed_users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_users"); else _explicitNullProperties?.Remove("failed_users"); } }
         private List<string> _explicitNullValueFailedUsers = default!;
 #endif
         /// <summary>

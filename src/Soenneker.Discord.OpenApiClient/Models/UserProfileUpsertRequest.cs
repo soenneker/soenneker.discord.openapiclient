@@ -17,76 +17,84 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actions") is { } nullNodeActions && nullNodeActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actions = null;
-            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
-            if (parseNode.GetChildNode("event_type") is { } nullNodeEventType && nullNodeEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventType = null;
-            if (parseNode.GetChildNode("exempt_channels") is { } nullNodeExemptChannels && nullNodeExemptChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExemptChannels = null;
-            if (parseNode.GetChildNode("exempt_roles") is { } nullNodeExemptRoles && nullNodeExemptRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExemptRoles = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("trigger_metadata") is { } nullNodeTriggerMetadata && nullNodeTriggerMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerMetadata = null;
-            if (parseNode.GetChildNode("trigger_type") is { } nullNodeTriggerType && nullNodeTriggerType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerType = null;
+            if (parseNode.GetChildNode("actions") is null) { _explicitNullValueActions = default!; _explicitNullProperties?.Remove("actions"); }
+            else if (parseNode.GetChildNode("actions") is { } nullNodeActions && nullNodeActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actions = null;
+            if (parseNode.GetChildNode("enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("enabled"); }
+            else if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("event_type") is null) { _explicitNullValueEventType = default!; _explicitNullProperties?.Remove("event_type"); }
+            else if (parseNode.GetChildNode("event_type") is { } nullNodeEventType && nullNodeEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventType = null;
+            if (parseNode.GetChildNode("exempt_channels") is null) { _explicitNullValueExemptChannels = default!; _explicitNullProperties?.Remove("exempt_channels"); }
+            else if (parseNode.GetChildNode("exempt_channels") is { } nullNodeExemptChannels && nullNodeExemptChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExemptChannels = null;
+            if (parseNode.GetChildNode("exempt_roles") is null) { _explicitNullValueExemptRoles = default!; _explicitNullProperties?.Remove("exempt_roles"); }
+            else if (parseNode.GetChildNode("exempt_roles") is { } nullNodeExemptRoles && nullNodeExemptRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExemptRoles = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("trigger_metadata") is null) { _explicitNullValueTriggerMetadata = default!; _explicitNullProperties?.Remove("trigger_metadata"); }
+            else if (parseNode.GetChildNode("trigger_metadata") is { } nullNodeTriggerMetadata && nullNodeTriggerMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerMetadata = null;
+            if (parseNode.GetChildNode("trigger_type") is null) { _explicitNullValueTriggerType = default!; _explicitNullProperties?.Remove("trigger_type"); }
+            else if (parseNode.GetChildNode("trigger_type") is { } nullNodeTriggerType && nullNodeTriggerType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerType = null;
         }
 
         /// <summary>The actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.UserProfileUpsertRequestActionsItem>? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
-        private List<global::Soenneker.Discord.OpenApiClient.Models.UserProfileUpsertRequestActionsItem>? _explicitNullValueActions = default!;
+        public List<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestActionsItem>? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; AdditionalData?.Remove("actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestActionsItem>? _explicitNullValueActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.UserProfileUpsertRequestActionsItem> Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
-        private List<global::Soenneker.Discord.OpenApiClient.Models.UserProfileUpsertRequestActionsItem> _explicitNullValueActions = default!;
+        public List<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestActionsItem> Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; AdditionalData?.Remove("actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestActionsItem> _explicitNullValueActions = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The enabled property</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>The event_type property</summary>
-        public int? EventType { get => _explicitNullValueEventType; set { _explicitNullValueEventType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_type"); else _explicitNullProperties?.Remove("event_type"); } }
+        public int? EventType { get => _explicitNullValueEventType; set { _explicitNullValueEventType = value; AdditionalData?.Remove("event_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_type"); else _explicitNullProperties?.Remove("event_type"); } }
         private int? _explicitNullValueEventType = default!;
         /// <summary>The exempt_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExemptChannels { get => _explicitNullValueExemptChannels; set { _explicitNullValueExemptChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exempt_channels"); else _explicitNullProperties?.Remove("exempt_channels"); } }
+        public List<string>? ExemptChannels { get => _explicitNullValueExemptChannels; set { _explicitNullValueExemptChannels = value; AdditionalData?.Remove("exempt_channels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exempt_channels"); else _explicitNullProperties?.Remove("exempt_channels"); } }
         private List<string>? _explicitNullValueExemptChannels = default!;
 #nullable restore
 #else
-        public List<string> ExemptChannels { get => _explicitNullValueExemptChannels; set { _explicitNullValueExemptChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exempt_channels"); else _explicitNullProperties?.Remove("exempt_channels"); } }
+        public List<string> ExemptChannels { get => _explicitNullValueExemptChannels; set { _explicitNullValueExemptChannels = value; AdditionalData?.Remove("exempt_channels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exempt_channels"); else _explicitNullProperties?.Remove("exempt_channels"); } }
         private List<string> _explicitNullValueExemptChannels = default!;
 #endif
         /// <summary>The exempt_roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExemptRoles { get => _explicitNullValueExemptRoles; set { _explicitNullValueExemptRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exempt_roles"); else _explicitNullProperties?.Remove("exempt_roles"); } }
+        public List<string>? ExemptRoles { get => _explicitNullValueExemptRoles; set { _explicitNullValueExemptRoles = value; AdditionalData?.Remove("exempt_roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exempt_roles"); else _explicitNullProperties?.Remove("exempt_roles"); } }
         private List<string>? _explicitNullValueExemptRoles = default!;
 #nullable restore
 #else
-        public List<string> ExemptRoles { get => _explicitNullValueExemptRoles; set { _explicitNullValueExemptRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exempt_roles"); else _explicitNullProperties?.Remove("exempt_roles"); } }
+        public List<string> ExemptRoles { get => _explicitNullValueExemptRoles; set { _explicitNullValueExemptRoles = value; AdditionalData?.Remove("exempt_roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exempt_roles"); else _explicitNullProperties?.Remove("exempt_roles"); } }
         private List<string> _explicitNullValueExemptRoles = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The trigger_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserProfileMetadata? TriggerMetadata { get => _explicitNullValueTriggerMetadata; set { _explicitNullValueTriggerMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_metadata"); else _explicitNullProperties?.Remove("trigger_metadata"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserProfileMetadata? TriggerMetadata { get => _explicitNullValueTriggerMetadata; set { _explicitNullValueTriggerMetadata = value; AdditionalData?.Remove("trigger_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_metadata"); else _explicitNullProperties?.Remove("trigger_metadata"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserProfileMetadata? _explicitNullValueTriggerMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserProfileMetadata TriggerMetadata { get => _explicitNullValueTriggerMetadata; set { _explicitNullValueTriggerMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_metadata"); else _explicitNullProperties?.Remove("trigger_metadata"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserProfileMetadata TriggerMetadata { get => _explicitNullValueTriggerMetadata; set { _explicitNullValueTriggerMetadata = value; AdditionalData?.Remove("trigger_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_metadata"); else _explicitNullProperties?.Remove("trigger_metadata"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserProfileMetadata _explicitNullValueTriggerMetadata = default!;
 #endif
         /// <summary>The trigger_type property</summary>
-        public int? TriggerType { get => _explicitNullValueTriggerType; set { _explicitNullValueTriggerType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_type"); else _explicitNullProperties?.Remove("trigger_type"); } }
+        public int? TriggerType { get => _explicitNullValueTriggerType; set { _explicitNullValueTriggerType = value; AdditionalData?.Remove("trigger_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_type"); else _explicitNullProperties?.Remove("trigger_type"); } }
         private int? _explicitNullValueTriggerType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserProfileUpsertRequest"/> and sets the default values.
@@ -113,7 +121,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UserProfileUpsertRequestActionsItem>(global::Soenneker.Discord.OpenApiClient.Models.UserProfileUpsertRequestActionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestActionsItem>(global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestActionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "event_type", n => { EventType = n.GetIntValue(); } },
                 { "exempt_channels", n => { ExemptChannels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -130,7 +138,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.UserProfileUpsertRequestActionsItem>("actions", Actions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.DefaultKeywordListUpsertRequestActionsItem>("actions", Actions);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteIntValue("event_type", EventType);
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_channels", ExemptChannels);

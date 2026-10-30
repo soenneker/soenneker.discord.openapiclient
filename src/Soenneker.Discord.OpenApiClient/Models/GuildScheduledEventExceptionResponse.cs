@@ -17,11 +17,16 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("event_exception_id") is { } nullNodeEventExceptionId && nullNodeEventExceptionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventExceptionId = null;
-            if (parseNode.GetChildNode("event_id") is { } nullNodeEventId && nullNodeEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventId = null;
-            if (parseNode.GetChildNode("is_canceled") is { } nullNodeIsCanceled && nullNodeIsCanceled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCanceled = null;
-            if (parseNode.GetChildNode("scheduled_end_time") is { } nullNodeScheduledEndTime && nullNodeScheduledEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEndTime = null;
-            if (parseNode.GetChildNode("scheduled_start_time") is { } nullNodeScheduledStartTime && nullNodeScheduledStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledStartTime = null;
+            if (parseNode.GetChildNode("event_exception_id") is null) { _explicitNullValueEventExceptionId = default!; _explicitNullProperties?.Remove("event_exception_id"); }
+            else if (parseNode.GetChildNode("event_exception_id") is { } nullNodeEventExceptionId && nullNodeEventExceptionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventExceptionId = null;
+            if (parseNode.GetChildNode("event_id") is null) { _explicitNullValueEventId = default!; _explicitNullProperties?.Remove("event_id"); }
+            else if (parseNode.GetChildNode("event_id") is { } nullNodeEventId && nullNodeEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventId = null;
+            if (parseNode.GetChildNode("is_canceled") is null) { _explicitNullValueIsCanceled = default!; _explicitNullProperties?.Remove("is_canceled"); }
+            else if (parseNode.GetChildNode("is_canceled") is { } nullNodeIsCanceled && nullNodeIsCanceled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCanceled = null;
+            if (parseNode.GetChildNode("scheduled_end_time") is null) { _explicitNullValueScheduledEndTime = default!; _explicitNullProperties?.Remove("scheduled_end_time"); }
+            else if (parseNode.GetChildNode("scheduled_end_time") is { } nullNodeScheduledEndTime && nullNodeScheduledEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEndTime = null;
+            if (parseNode.GetChildNode("scheduled_start_time") is null) { _explicitNullValueScheduledStartTime = default!; _explicitNullProperties?.Remove("scheduled_start_time"); }
+            else if (parseNode.GetChildNode("scheduled_start_time") is { } nullNodeScheduledStartTime && nullNodeScheduledStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledStartTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,31 +34,31 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The event_exception_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventExceptionId { get => _explicitNullValueEventExceptionId; set { _explicitNullValueEventExceptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_exception_id"); else _explicitNullProperties?.Remove("event_exception_id"); } }
+        public string? EventExceptionId { get => _explicitNullValueEventExceptionId; set { _explicitNullValueEventExceptionId = value; AdditionalData?.Remove("event_exception_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_exception_id"); else _explicitNullProperties?.Remove("event_exception_id"); } }
         private string? _explicitNullValueEventExceptionId = default!;
 #nullable restore
 #else
-        public string EventExceptionId { get => _explicitNullValueEventExceptionId; set { _explicitNullValueEventExceptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_exception_id"); else _explicitNullProperties?.Remove("event_exception_id"); } }
+        public string EventExceptionId { get => _explicitNullValueEventExceptionId; set { _explicitNullValueEventExceptionId = value; AdditionalData?.Remove("event_exception_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_exception_id"); else _explicitNullProperties?.Remove("event_exception_id"); } }
         private string _explicitNullValueEventExceptionId = default!;
 #endif
         /// <summary>The event_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_id"); else _explicitNullProperties?.Remove("event_id"); } }
+        public string? EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; AdditionalData?.Remove("event_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_id"); else _explicitNullProperties?.Remove("event_id"); } }
         private string? _explicitNullValueEventId = default!;
 #nullable restore
 #else
-        public string EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_id"); else _explicitNullProperties?.Remove("event_id"); } }
+        public string EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; AdditionalData?.Remove("event_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_id"); else _explicitNullProperties?.Remove("event_id"); } }
         private string _explicitNullValueEventId = default!;
 #endif
         /// <summary>Whether this occurrence is canceled</summary>
-        public bool? IsCanceled { get => _explicitNullValueIsCanceled; set { _explicitNullValueIsCanceled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_canceled"); else _explicitNullProperties?.Remove("is_canceled"); } }
+        public bool? IsCanceled { get => _explicitNullValueIsCanceled; set { _explicitNullValueIsCanceled = value; AdditionalData?.Remove("is_canceled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_canceled"); else _explicitNullProperties?.Remove("is_canceled"); } }
         private bool? _explicitNullValueIsCanceled = default!;
         /// <summary>Overridden end time of this occurrence</summary>
-        public DateTimeOffset? ScheduledEndTime { get => _explicitNullValueScheduledEndTime; set { _explicitNullValueScheduledEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled_end_time"); else _explicitNullProperties?.Remove("scheduled_end_time"); } }
+        public DateTimeOffset? ScheduledEndTime { get => _explicitNullValueScheduledEndTime; set { _explicitNullValueScheduledEndTime = value; AdditionalData?.Remove("scheduled_end_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled_end_time"); else _explicitNullProperties?.Remove("scheduled_end_time"); } }
         private DateTimeOffset? _explicitNullValueScheduledEndTime = default!;
         /// <summary>Overridden start time of this occurrence</summary>
-        public DateTimeOffset? ScheduledStartTime { get => _explicitNullValueScheduledStartTime; set { _explicitNullValueScheduledStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled_start_time"); else _explicitNullProperties?.Remove("scheduled_start_time"); } }
+        public DateTimeOffset? ScheduledStartTime { get => _explicitNullValueScheduledStartTime; set { _explicitNullValueScheduledStartTime = value; AdditionalData?.Remove("scheduled_start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled_start_time"); else _explicitNullProperties?.Remove("scheduled_start_time"); } }
         private DateTimeOffset? _explicitNullValueScheduledStartTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventExceptionResponse"/> and sets the default values.

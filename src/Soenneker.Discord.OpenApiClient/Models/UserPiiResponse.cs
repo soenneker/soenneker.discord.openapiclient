@@ -17,162 +17,174 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accent_color") is { } nullNodeAccentColor && nullNodeAccentColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccentColor = null;
-            if (parseNode.GetChildNode("avatar") is { } nullNodeAvatar && nullNodeAvatar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Avatar = null;
-            if (parseNode.GetChildNode("avatar_decoration_data") is { } nullNodeAvatarDecorationData && nullNodeAvatarDecorationData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvatarDecorationData = null;
-            if (parseNode.GetChildNode("banner") is { } nullNodeBanner && nullNodeBanner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Banner = null;
-            if (parseNode.GetChildNode("bot") is { } nullNodeBot && nullNodeBot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bot = null;
-            if (parseNode.GetChildNode("collectibles") is { } nullNodeCollectibles && nullNodeCollectibles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Collectibles = null;
-            if (parseNode.GetChildNode("discriminator") is { } nullNodeDiscriminator && nullNodeDiscriminator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discriminator = null;
-            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("flags") is { } nullNodeFlags && nullNodeFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flags = null;
-            if (parseNode.GetChildNode("global_name") is { } nullNodeGlobalName && nullNodeGlobalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlobalName = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("mfa_enabled") is { } nullNodeMfaEnabled && nullNodeMfaEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MfaEnabled = null;
-            if (parseNode.GetChildNode("premium_type") is { } nullNodePremiumType && nullNodePremiumType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PremiumType = null;
-            if (parseNode.GetChildNode("primary_guild") is { } nullNodePrimaryGuild && nullNodePrimaryGuild.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryGuild = null;
-            if (parseNode.GetChildNode("public_flags") is { } nullNodePublicFlags && nullNodePublicFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicFlags = null;
-            if (parseNode.GetChildNode("system") is { } nullNodeSystem && nullNodeSystem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) System = null;
-            if (parseNode.GetChildNode("username") is { } nullNodeUsername && nullNodeUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Username = null;
-            if (parseNode.GetChildNode("verified") is { } nullNodeVerified && nullNodeVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verified = null;
+            if (parseNode.GetChildNode("accent_color") is null) { _explicitNullValueAccentColor = default!; _explicitNullProperties?.Remove("accent_color"); }
+            else if (parseNode.GetChildNode("accent_color") is { } nullNodeAccentColor && nullNodeAccentColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccentColor = null;
+            if (parseNode.GetChildNode("avatar") is null) { _explicitNullValueAvatar = default!; _explicitNullProperties?.Remove("avatar"); }
+            else if (parseNode.GetChildNode("avatar") is { } nullNodeAvatar && nullNodeAvatar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Avatar = null;
+            if (parseNode.GetChildNode("avatar_decoration_data") is null) { _explicitNullValueAvatarDecorationData = default!; _explicitNullProperties?.Remove("avatar_decoration_data"); }
+            else if (parseNode.GetChildNode("avatar_decoration_data") is { } nullNodeAvatarDecorationData && nullNodeAvatarDecorationData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvatarDecorationData = null;
+            if (parseNode.GetChildNode("banner") is null) { _explicitNullValueBanner = default!; _explicitNullProperties?.Remove("banner"); }
+            else if (parseNode.GetChildNode("banner") is { } nullNodeBanner && nullNodeBanner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Banner = null;
+            if (parseNode.GetChildNode("bot") is null) { _explicitNullValueBot = default!; _explicitNullProperties?.Remove("bot"); }
+            else if (parseNode.GetChildNode("bot") is { } nullNodeBot && nullNodeBot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bot = null;
+            if (parseNode.GetChildNode("collectibles") is null) { _explicitNullValueCollectibles = default!; _explicitNullProperties?.Remove("collectibles"); }
+            else if (parseNode.GetChildNode("collectibles") is { } nullNodeCollectibles && nullNodeCollectibles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Collectibles = null;
+            if (parseNode.GetChildNode("discriminator") is null) { _explicitNullValueDiscriminator = default!; _explicitNullProperties?.Remove("discriminator"); }
+            else if (parseNode.GetChildNode("discriminator") is { } nullNodeDiscriminator && nullNodeDiscriminator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discriminator = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("flags") is null) { _explicitNullValueFlags = default!; _explicitNullProperties?.Remove("flags"); }
+            else if (parseNode.GetChildNode("flags") is { } nullNodeFlags && nullNodeFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flags = null;
+            if (parseNode.GetChildNode("global_name") is null) { _explicitNullValueGlobalName = default!; _explicitNullProperties?.Remove("global_name"); }
+            else if (parseNode.GetChildNode("global_name") is { } nullNodeGlobalName && nullNodeGlobalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlobalName = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
+            else if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("mfa_enabled") is null) { _explicitNullValueMfaEnabled = default!; _explicitNullProperties?.Remove("mfa_enabled"); }
+            else if (parseNode.GetChildNode("mfa_enabled") is { } nullNodeMfaEnabled && nullNodeMfaEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MfaEnabled = null;
+            if (parseNode.GetChildNode("premium_type") is null) { _explicitNullValuePremiumType = default!; _explicitNullProperties?.Remove("premium_type"); }
+            else if (parseNode.GetChildNode("premium_type") is { } nullNodePremiumType && nullNodePremiumType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PremiumType = null;
+            if (parseNode.GetChildNode("primary_guild") is null) { _explicitNullValuePrimaryGuild = default!; _explicitNullProperties?.Remove("primary_guild"); }
+            else if (parseNode.GetChildNode("primary_guild") is { } nullNodePrimaryGuild && nullNodePrimaryGuild.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryGuild = null;
+            if (parseNode.GetChildNode("public_flags") is null) { _explicitNullValuePublicFlags = default!; _explicitNullProperties?.Remove("public_flags"); }
+            else if (parseNode.GetChildNode("public_flags") is { } nullNodePublicFlags && nullNodePublicFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicFlags = null;
+            if (parseNode.GetChildNode("system") is null) { _explicitNullValueSystem = default!; _explicitNullProperties?.Remove("system"); }
+            else if (parseNode.GetChildNode("system") is { } nullNodeSystem && nullNodeSystem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) System = null;
+            if (parseNode.GetChildNode("username") is null) { _explicitNullValueUsername = default!; _explicitNullProperties?.Remove("username"); }
+            else if (parseNode.GetChildNode("username") is { } nullNodeUsername && nullNodeUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Username = null;
+            if (parseNode.GetChildNode("verified") is null) { _explicitNullValueVerified = default!; _explicitNullProperties?.Remove("verified"); }
+            else if (parseNode.GetChildNode("verified") is { } nullNodeVerified && nullNodeVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verified = null;
         }
 
         /// <summary>the user&apos;s banner color encoded as an integer representation of hexadecimal color code</summary>
-        public int? AccentColor { get => _explicitNullValueAccentColor; set { _explicitNullValueAccentColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accent_color"); else _explicitNullProperties?.Remove("accent_color"); } }
+        public int? AccentColor { get => _explicitNullValueAccentColor; set { _explicitNullValueAccentColor = value; AdditionalData?.Remove("accent_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accent_color"); else _explicitNullProperties?.Remove("accent_color"); } }
         private int? _explicitNullValueAccentColor = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>the user&apos;s avatar hash</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Avatar { get => _explicitNullValueAvatar; set { _explicitNullValueAvatar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar"); else _explicitNullProperties?.Remove("avatar"); } }
+        public string? Avatar { get => _explicitNullValueAvatar; set { _explicitNullValueAvatar = value; AdditionalData?.Remove("avatar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar"); else _explicitNullProperties?.Remove("avatar"); } }
         private string? _explicitNullValueAvatar = default!;
 #nullable restore
 #else
-        public string Avatar { get => _explicitNullValueAvatar; set { _explicitNullValueAvatar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar"); else _explicitNullProperties?.Remove("avatar"); } }
+        public string Avatar { get => _explicitNullValueAvatar; set { _explicitNullValueAvatar = value; AdditionalData?.Remove("avatar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar"); else _explicitNullProperties?.Remove("avatar"); } }
         private string _explicitNullValueAvatar = default!;
 #endif
         /// <summary>data for the user&apos;s avatar decoration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse? AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse? AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; AdditionalData?.Remove("avatar_decoration_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse? _explicitNullValueAvatarDecorationData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; AdditionalData?.Remove("avatar_decoration_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse _explicitNullValueAvatarDecorationData = default!;
 #endif
         /// <summary>the user&apos;s banner hash</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Banner { get => _explicitNullValueBanner; set { _explicitNullValueBanner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banner"); else _explicitNullProperties?.Remove("banner"); } }
+        public string? Banner { get => _explicitNullValueBanner; set { _explicitNullValueBanner = value; AdditionalData?.Remove("banner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banner"); else _explicitNullProperties?.Remove("banner"); } }
         private string? _explicitNullValueBanner = default!;
 #nullable restore
 #else
-        public string Banner { get => _explicitNullValueBanner; set { _explicitNullValueBanner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banner"); else _explicitNullProperties?.Remove("banner"); } }
+        public string Banner { get => _explicitNullValueBanner; set { _explicitNullValueBanner = value; AdditionalData?.Remove("banner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("banner"); else _explicitNullProperties?.Remove("banner"); } }
         private string _explicitNullValueBanner = default!;
 #endif
         /// <summary>whether the user belongs to an OAuth2 application</summary>
-        public bool? Bot { get => _explicitNullValueBot; set { _explicitNullValueBot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot"); else _explicitNullProperties?.Remove("bot"); } }
+        public bool? Bot { get => _explicitNullValueBot; set { _explicitNullValueBot = value; AdditionalData?.Remove("bot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot"); else _explicitNullProperties?.Remove("bot"); } }
         private bool? _explicitNullValueBot = default!;
         /// <summary>data for the user&apos;s collectibles</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; AdditionalData?.Remove("collectibles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? _explicitNullValueCollectibles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; AdditionalData?.Remove("collectibles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse _explicitNullValueCollectibles = default!;
 #endif
         /// <summary>the user&apos;s Discord-tag</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Discriminator { get => _explicitNullValueDiscriminator; set { _explicitNullValueDiscriminator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discriminator"); else _explicitNullProperties?.Remove("discriminator"); } }
+        public string? Discriminator { get => _explicitNullValueDiscriminator; set { _explicitNullValueDiscriminator = value; AdditionalData?.Remove("discriminator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discriminator"); else _explicitNullProperties?.Remove("discriminator"); } }
         private string? _explicitNullValueDiscriminator = default!;
 #nullable restore
 #else
-        public string Discriminator { get => _explicitNullValueDiscriminator; set { _explicitNullValueDiscriminator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discriminator"); else _explicitNullProperties?.Remove("discriminator"); } }
+        public string Discriminator { get => _explicitNullValueDiscriminator; set { _explicitNullValueDiscriminator = value; AdditionalData?.Remove("discriminator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discriminator"); else _explicitNullProperties?.Remove("discriminator"); } }
         private string _explicitNullValueDiscriminator = default!;
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The flags property</summary>
-        public long? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
+        public long? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
         private long? _explicitNullValueFlags = default!;
         /// <summary>the user&apos;s display name, if it is set</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GlobalName { get => _explicitNullValueGlobalName; set { _explicitNullValueGlobalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global_name"); else _explicitNullProperties?.Remove("global_name"); } }
+        public string? GlobalName { get => _explicitNullValueGlobalName; set { _explicitNullValueGlobalName = value; AdditionalData?.Remove("global_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global_name"); else _explicitNullProperties?.Remove("global_name"); } }
         private string? _explicitNullValueGlobalName = default!;
 #nullable restore
 #else
-        public string GlobalName { get => _explicitNullValueGlobalName; set { _explicitNullValueGlobalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global_name"); else _explicitNullProperties?.Remove("global_name"); } }
+        public string GlobalName { get => _explicitNullValueGlobalName; set { _explicitNullValueGlobalName = value; AdditionalData?.Remove("global_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global_name"); else _explicitNullProperties?.Remove("global_name"); } }
         private string _explicitNullValueGlobalName = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The locale property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum? _explicitNullValueLocale = default!;
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum _explicitNullValueLocale = default!;
-#endif
         /// <summary>The mfa_enabled property</summary>
-        public bool? MfaEnabled { get => _explicitNullValueMfaEnabled; set { _explicitNullValueMfaEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_enabled"); else _explicitNullProperties?.Remove("mfa_enabled"); } }
+        public bool? MfaEnabled { get => _explicitNullValueMfaEnabled; set { _explicitNullValueMfaEnabled = value; AdditionalData?.Remove("mfa_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_enabled"); else _explicitNullProperties?.Remove("mfa_enabled"); } }
         private bool? _explicitNullValueMfaEnabled = default!;
         /// <summary>The premium_type property</summary>
-        public int? PremiumType { get => _explicitNullValuePremiumType; set { _explicitNullValuePremiumType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premium_type"); else _explicitNullProperties?.Remove("premium_type"); } }
+        public int? PremiumType { get => _explicitNullValuePremiumType; set { _explicitNullValuePremiumType = value; AdditionalData?.Remove("premium_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premium_type"); else _explicitNullProperties?.Remove("premium_type"); } }
         private int? _explicitNullValuePremiumType = default!;
         /// <summary>The primary_guild property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse? PrimaryGuild { get => _explicitNullValuePrimaryGuild; set { _explicitNullValuePrimaryGuild = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_guild"); else _explicitNullProperties?.Remove("primary_guild"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse? PrimaryGuild { get => _explicitNullValuePrimaryGuild; set { _explicitNullValuePrimaryGuild = value; AdditionalData?.Remove("primary_guild"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_guild"); else _explicitNullProperties?.Remove("primary_guild"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse? _explicitNullValuePrimaryGuild = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse PrimaryGuild { get => _explicitNullValuePrimaryGuild; set { _explicitNullValuePrimaryGuild = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_guild"); else _explicitNullProperties?.Remove("primary_guild"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse PrimaryGuild { get => _explicitNullValuePrimaryGuild; set { _explicitNullValuePrimaryGuild = value; AdditionalData?.Remove("primary_guild"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_guild"); else _explicitNullProperties?.Remove("primary_guild"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse _explicitNullValuePrimaryGuild = default!;
 #endif
         /// <summary>the public flags on a user&apos;s account</summary>
-        public int? PublicFlags { get => _explicitNullValuePublicFlags; set { _explicitNullValuePublicFlags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_flags"); else _explicitNullProperties?.Remove("public_flags"); } }
+        public int? PublicFlags { get => _explicitNullValuePublicFlags; set { _explicitNullValuePublicFlags = value; AdditionalData?.Remove("public_flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_flags"); else _explicitNullProperties?.Remove("public_flags"); } }
         private int? _explicitNullValuePublicFlags = default!;
         /// <summary>whether the user is an Official Discord System user (part of the urgent message system)</summary>
-        public bool? System { get => _explicitNullValueSystem; set { _explicitNullValueSystem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system"); else _explicitNullProperties?.Remove("system"); } }
+        public bool? System { get => _explicitNullValueSystem; set { _explicitNullValueSystem = value; AdditionalData?.Remove("system"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system"); else _explicitNullProperties?.Remove("system"); } }
         private bool? _explicitNullValueSystem = default!;
         /// <summary>the user&apos;s username, not unique across the platform</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
+        public string? Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; AdditionalData?.Remove("username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
         private string? _explicitNullValueUsername = default!;
 #nullable restore
 #else
-        public string Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
+        public string Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; AdditionalData?.Remove("username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
         private string _explicitNullValueUsername = default!;
 #endif
         /// <summary>The verified property</summary>
-        public bool? Verified { get => _explicitNullValueVerified; set { _explicitNullValueVerified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified"); else _explicitNullProperties?.Remove("verified"); } }
+        public bool? Verified { get => _explicitNullValueVerified; set { _explicitNullValueVerified = value; AdditionalData?.Remove("verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified"); else _explicitNullProperties?.Remove("verified"); } }
         private bool? _explicitNullValueVerified = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponse"/> and sets the default values.
@@ -210,7 +222,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "flags", n => { Flags = n.GetLongValue(); } },
                 { "global_name", n => { GlobalName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>(global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum.CreateFromDiscriminatorValue); } },
+                { "locale", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLocale = default; _explicitNullProperties?.Remove("locale"); AdditionalData["locale"] = unknown; } else { Locale = parsed; AdditionalData.Remove("locale"); } } },
                 { "mfa_enabled", n => { MfaEnabled = n.GetBoolValue(); } },
                 { "premium_type", n => { PremiumType = n.GetIntValue(); } },
                 { "primary_guild", n => { PrimaryGuild = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse.CreateFromDiscriminatorValue); } },
@@ -238,7 +250,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteLongValue("flags", Flags);
             writer.WriteStringValue("global_name", GlobalName);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>("locale", Locale);
             writer.WriteBoolValue("mfa_enabled", MfaEnabled);
             writer.WriteIntValue("premium_type", PremiumType);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse>("primary_guild", PrimaryGuild);

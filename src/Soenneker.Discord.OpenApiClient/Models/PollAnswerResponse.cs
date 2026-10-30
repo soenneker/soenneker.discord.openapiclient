@@ -17,23 +17,25 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("answer_id") is { } nullNodeAnswerId && nullNodeAnswerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerId = null;
-            if (parseNode.GetChildNode("poll_media") is { } nullNodePollMedia && nullNodePollMedia.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PollMedia = null;
+            if (parseNode.GetChildNode("answer_id") is null) { _explicitNullValueAnswerId = default!; _explicitNullProperties?.Remove("answer_id"); }
+            else if (parseNode.GetChildNode("answer_id") is { } nullNodeAnswerId && nullNodeAnswerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerId = null;
+            if (parseNode.GetChildNode("poll_media") is null) { _explicitNullValuePollMedia = default!; _explicitNullProperties?.Remove("poll_media"); }
+            else if (parseNode.GetChildNode("poll_media") is { } nullNodePollMedia && nullNodePollMedia.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PollMedia = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the answer</summary>
-        public int? AnswerId { get => _explicitNullValueAnswerId; set { _explicitNullValueAnswerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_id"); else _explicitNullProperties?.Remove("answer_id"); } }
+        public int? AnswerId { get => _explicitNullValueAnswerId; set { _explicitNullValueAnswerId = value; AdditionalData?.Remove("answer_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_id"); else _explicitNullProperties?.Remove("answer_id"); } }
         private int? _explicitNullValueAnswerId = default!;
         /// <summary>The data of the answer</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse? PollMedia { get => _explicitNullValuePollMedia; set { _explicitNullValuePollMedia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll_media"); else _explicitNullProperties?.Remove("poll_media"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse? PollMedia { get => _explicitNullValuePollMedia; set { _explicitNullValuePollMedia = value; AdditionalData?.Remove("poll_media"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll_media"); else _explicitNullProperties?.Remove("poll_media"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse? _explicitNullValuePollMedia = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse PollMedia { get => _explicitNullValuePollMedia; set { _explicitNullValuePollMedia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll_media"); else _explicitNullProperties?.Remove("poll_media"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse PollMedia { get => _explicitNullValuePollMedia; set { _explicitNullValuePollMedia = value; AdditionalData?.Remove("poll_media"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll_media"); else _explicitNullProperties?.Remove("poll_media"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.PollMediaResponse _explicitNullValuePollMedia = default!;
 #endif
         /// <summary>

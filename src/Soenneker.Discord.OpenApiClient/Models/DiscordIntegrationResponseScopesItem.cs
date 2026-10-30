@@ -8,10 +8,6 @@ namespace Soenneker.Discord.OpenApiClient.Models
     public enum DiscordIntegrationResponseScopesItem
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "applications.commands")]
-        #pragma warning disable CS1591
-        ApplicationsCommands,
-        #pragma warning restore CS1591
         [EnumMember(Value = "bot")]
         #pragma warning disable CS1591
         Bot,
@@ -19,6 +15,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
         [EnumMember(Value = "webhook.incoming")]
         #pragma warning disable CS1591
         WebhookIncoming,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "applications.commands")]
+        #pragma warning disable CS1591
+        ApplicationsCommands,
         #pragma warning restore CS1591
     }
 }

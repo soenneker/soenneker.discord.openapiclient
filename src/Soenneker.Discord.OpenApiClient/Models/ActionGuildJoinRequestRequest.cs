@@ -17,30 +17,25 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
-            if (parseNode.GetChildNode("rejection_reason") is { } nullNodeRejectionReason && nullNodeRejectionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectionReason = null;
+            if (parseNode.GetChildNode("action") is null) { _explicitNullValueAction = default!; _explicitNullProperties?.Remove("action"); }
+            else if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("rejection_reason") is null) { _explicitNullValueRejectionReason = default!; _explicitNullProperties?.Remove("rejection_reason"); }
+            else if (parseNode.GetChildNode("rejection_reason") is { } nullNodeRejectionReason && nullNodeRejectionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectionReason = null;
         }
 
         /// <summary>Whether to approve or reject the join request</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction? _explicitNullValueAction = default!;
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction _explicitNullValueAction = default!;
-#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Reason for rejection. Only used when action is REJECTED</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
+        public string? RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; AdditionalData?.Remove("rejection_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
         private string? _explicitNullValueRejectionReason = default!;
 #nullable restore
 #else
-        public string RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
+        public string RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; AdditionalData?.Remove("rejection_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
         private string _explicitNullValueRejectionReason = default!;
 #endif
         /// <summary>
@@ -68,7 +63,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction>(global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction.CreateFromDiscriminatorValue); } },
+                { "action", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAction = default; _explicitNullProperties?.Remove("action"); AdditionalData["action"] = unknown; } else { Action = parsed; AdditionalData.Remove("action"); } } },
                 { "rejection_reason", n => { RejectionReason = n.GetStringValue(); } },
             };
         }
@@ -79,7 +74,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction>("action", Action);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ActionGuildJoinRequestRequestAction>("action", Action);
             writer.WriteStringValue("rejection_reason", RejectionReason);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

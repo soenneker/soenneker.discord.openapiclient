@@ -17,12 +17,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("available_for_purchase") is { } nullNodeAvailableForPurchase && nullNodeAvailableForPurchase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableForPurchase = null;
-            if (parseNode.GetChildNode("bot_id") is { } nullNodeBotId && nullNodeBotId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotId = null;
-            if (parseNode.GetChildNode("guild_connections") is { } nullNodeGuildConnections && nullNodeGuildConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildConnections = null;
-            if (parseNode.GetChildNode("integration_id") is { } nullNodeIntegrationId && nullNodeIntegrationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationId = null;
-            if (parseNode.GetChildNode("premium_subscriber") is { } nullNodePremiumSubscriber && nullNodePremiumSubscriber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PremiumSubscriber = null;
-            if (parseNode.GetChildNode("subscription_listing_id") is { } nullNodeSubscriptionListingId && nullNodeSubscriptionListingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionListingId = null;
+            if (parseNode.GetChildNode("available_for_purchase") is null) { _explicitNullValueAvailableForPurchase = default!; _explicitNullProperties?.Remove("available_for_purchase"); }
+            else if (parseNode.GetChildNode("available_for_purchase") is { } nullNodeAvailableForPurchase && nullNodeAvailableForPurchase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableForPurchase = null;
+            if (parseNode.GetChildNode("bot_id") is null) { _explicitNullValueBotId = default!; _explicitNullProperties?.Remove("bot_id"); }
+            else if (parseNode.GetChildNode("bot_id") is { } nullNodeBotId && nullNodeBotId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotId = null;
+            if (parseNode.GetChildNode("guild_connections") is null) { _explicitNullValueGuildConnections = default!; _explicitNullProperties?.Remove("guild_connections"); }
+            else if (parseNode.GetChildNode("guild_connections") is { } nullNodeGuildConnections && nullNodeGuildConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildConnections = null;
+            if (parseNode.GetChildNode("integration_id") is null) { _explicitNullValueIntegrationId = default!; _explicitNullProperties?.Remove("integration_id"); }
+            else if (parseNode.GetChildNode("integration_id") is { } nullNodeIntegrationId && nullNodeIntegrationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationId = null;
+            if (parseNode.GetChildNode("premium_subscriber") is null) { _explicitNullValuePremiumSubscriber = default!; _explicitNullProperties?.Remove("premium_subscriber"); }
+            else if (parseNode.GetChildNode("premium_subscriber") is { } nullNodePremiumSubscriber && nullNodePremiumSubscriber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PremiumSubscriber = null;
+            if (parseNode.GetChildNode("subscription_listing_id") is null) { _explicitNullValueSubscriptionListingId = default!; _explicitNullProperties?.Remove("subscription_listing_id"); }
+            else if (parseNode.GetChildNode("subscription_listing_id") is { } nullNodeSubscriptionListingId && nullNodeSubscriptionListingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionListingId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,61 +36,61 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The available_for_purchase property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AvailableForPurchase { get => _explicitNullValueAvailableForPurchase; set { _explicitNullValueAvailableForPurchase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_for_purchase"); else _explicitNullProperties?.Remove("available_for_purchase"); } }
+        public UntypedNode? AvailableForPurchase { get => _explicitNullValueAvailableForPurchase; set { _explicitNullValueAvailableForPurchase = value; AdditionalData?.Remove("available_for_purchase"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_for_purchase"); else _explicitNullProperties?.Remove("available_for_purchase"); } }
         private UntypedNode? _explicitNullValueAvailableForPurchase = default!;
 #nullable restore
 #else
-        public UntypedNode AvailableForPurchase { get => _explicitNullValueAvailableForPurchase; set { _explicitNullValueAvailableForPurchase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_for_purchase"); else _explicitNullProperties?.Remove("available_for_purchase"); } }
+        public UntypedNode AvailableForPurchase { get => _explicitNullValueAvailableForPurchase; set { _explicitNullValueAvailableForPurchase = value; AdditionalData?.Remove("available_for_purchase"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_for_purchase"); else _explicitNullProperties?.Remove("available_for_purchase"); } }
         private UntypedNode _explicitNullValueAvailableForPurchase = default!;
 #endif
         /// <summary>The bot_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BotId { get => _explicitNullValueBotId; set { _explicitNullValueBotId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_id"); else _explicitNullProperties?.Remove("bot_id"); } }
+        public string? BotId { get => _explicitNullValueBotId; set { _explicitNullValueBotId = value; AdditionalData?.Remove("bot_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_id"); else _explicitNullProperties?.Remove("bot_id"); } }
         private string? _explicitNullValueBotId = default!;
 #nullable restore
 #else
-        public string BotId { get => _explicitNullValueBotId; set { _explicitNullValueBotId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_id"); else _explicitNullProperties?.Remove("bot_id"); } }
+        public string BotId { get => _explicitNullValueBotId; set { _explicitNullValueBotId = value; AdditionalData?.Remove("bot_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_id"); else _explicitNullProperties?.Remove("bot_id"); } }
         private string _explicitNullValueBotId = default!;
 #endif
         /// <summary>The guild_connections property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? GuildConnections { get => _explicitNullValueGuildConnections; set { _explicitNullValueGuildConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_connections"); else _explicitNullProperties?.Remove("guild_connections"); } }
+        public UntypedNode? GuildConnections { get => _explicitNullValueGuildConnections; set { _explicitNullValueGuildConnections = value; AdditionalData?.Remove("guild_connections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_connections"); else _explicitNullProperties?.Remove("guild_connections"); } }
         private UntypedNode? _explicitNullValueGuildConnections = default!;
 #nullable restore
 #else
-        public UntypedNode GuildConnections { get => _explicitNullValueGuildConnections; set { _explicitNullValueGuildConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_connections"); else _explicitNullProperties?.Remove("guild_connections"); } }
+        public UntypedNode GuildConnections { get => _explicitNullValueGuildConnections; set { _explicitNullValueGuildConnections = value; AdditionalData?.Remove("guild_connections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_connections"); else _explicitNullProperties?.Remove("guild_connections"); } }
         private UntypedNode _explicitNullValueGuildConnections = default!;
 #endif
         /// <summary>The integration_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntegrationId { get => _explicitNullValueIntegrationId; set { _explicitNullValueIntegrationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_id"); else _explicitNullProperties?.Remove("integration_id"); } }
+        public string? IntegrationId { get => _explicitNullValueIntegrationId; set { _explicitNullValueIntegrationId = value; AdditionalData?.Remove("integration_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_id"); else _explicitNullProperties?.Remove("integration_id"); } }
         private string? _explicitNullValueIntegrationId = default!;
 #nullable restore
 #else
-        public string IntegrationId { get => _explicitNullValueIntegrationId; set { _explicitNullValueIntegrationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_id"); else _explicitNullProperties?.Remove("integration_id"); } }
+        public string IntegrationId { get => _explicitNullValueIntegrationId; set { _explicitNullValueIntegrationId = value; AdditionalData?.Remove("integration_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_id"); else _explicitNullProperties?.Remove("integration_id"); } }
         private string _explicitNullValueIntegrationId = default!;
 #endif
         /// <summary>The premium_subscriber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PremiumSubscriber { get => _explicitNullValuePremiumSubscriber; set { _explicitNullValuePremiumSubscriber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premium_subscriber"); else _explicitNullProperties?.Remove("premium_subscriber"); } }
+        public UntypedNode? PremiumSubscriber { get => _explicitNullValuePremiumSubscriber; set { _explicitNullValuePremiumSubscriber = value; AdditionalData?.Remove("premium_subscriber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premium_subscriber"); else _explicitNullProperties?.Remove("premium_subscriber"); } }
         private UntypedNode? _explicitNullValuePremiumSubscriber = default!;
 #nullable restore
 #else
-        public UntypedNode PremiumSubscriber { get => _explicitNullValuePremiumSubscriber; set { _explicitNullValuePremiumSubscriber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premium_subscriber"); else _explicitNullProperties?.Remove("premium_subscriber"); } }
+        public UntypedNode PremiumSubscriber { get => _explicitNullValuePremiumSubscriber; set { _explicitNullValuePremiumSubscriber = value; AdditionalData?.Remove("premium_subscriber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premium_subscriber"); else _explicitNullProperties?.Remove("premium_subscriber"); } }
         private UntypedNode _explicitNullValuePremiumSubscriber = default!;
 #endif
         /// <summary>The subscription_listing_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionListingId { get => _explicitNullValueSubscriptionListingId; set { _explicitNullValueSubscriptionListingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_listing_id"); else _explicitNullProperties?.Remove("subscription_listing_id"); } }
+        public string? SubscriptionListingId { get => _explicitNullValueSubscriptionListingId; set { _explicitNullValueSubscriptionListingId = value; AdditionalData?.Remove("subscription_listing_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_listing_id"); else _explicitNullProperties?.Remove("subscription_listing_id"); } }
         private string? _explicitNullValueSubscriptionListingId = default!;
 #nullable restore
 #else
-        public string SubscriptionListingId { get => _explicitNullValueSubscriptionListingId; set { _explicitNullValueSubscriptionListingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_listing_id"); else _explicitNullProperties?.Remove("subscription_listing_id"); } }
+        public string SubscriptionListingId { get => _explicitNullValueSubscriptionListingId; set { _explicitNullValueSubscriptionListingId = value; AdditionalData?.Remove("subscription_listing_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_listing_id"); else _explicitNullProperties?.Remove("subscription_listing_id"); } }
         private string _explicitNullValueSubscriptionListingId = default!;
 #endif
         /// <summary>

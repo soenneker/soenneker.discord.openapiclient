@@ -17,7 +17,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("webhook_channel_id") is { } nullNodeWebhookChannelId && nullNodeWebhookChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookChannelId = null;
+            if (parseNode.GetChildNode("webhook_channel_id") is null) { _explicitNullValueWebhookChannelId = default!; _explicitNullProperties?.Remove("webhook_channel_id"); }
+            else if (parseNode.GetChildNode("webhook_channel_id") is { } nullNodeWebhookChannelId && nullNodeWebhookChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookChannelId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The webhook_channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhookChannelId { get => _explicitNullValueWebhookChannelId; set { _explicitNullValueWebhookChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_channel_id"); else _explicitNullProperties?.Remove("webhook_channel_id"); } }
+        public string? WebhookChannelId { get => _explicitNullValueWebhookChannelId; set { _explicitNullValueWebhookChannelId = value; AdditionalData?.Remove("webhook_channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_channel_id"); else _explicitNullProperties?.Remove("webhook_channel_id"); } }
         private string? _explicitNullValueWebhookChannelId = default!;
 #nullable restore
 #else
-        public string WebhookChannelId { get => _explicitNullValueWebhookChannelId; set { _explicitNullValueWebhookChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_channel_id"); else _explicitNullProperties?.Remove("webhook_channel_id"); } }
+        public string WebhookChannelId { get => _explicitNullValueWebhookChannelId; set { _explicitNullValueWebhookChannelId = value; AdditionalData?.Remove("webhook_channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_channel_id"); else _explicitNullProperties?.Remove("webhook_channel_id"); } }
         private string _explicitNullValueWebhookChannelId = default!;
 #endif
         /// <summary>

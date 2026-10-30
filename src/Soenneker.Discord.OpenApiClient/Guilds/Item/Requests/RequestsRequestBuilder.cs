@@ -86,7 +86,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Requests
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Requests.RequestsRequestBuilder.RequestsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://discord.com/api/v10", "/guilds/{guildId}/requests", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -136,19 +136,10 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Requests
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             #pragma warning restore CS1591
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("status")]
-            public string? Status { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Requests.GetStatusQueryParameterType? Status { get; set; }
             #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("status")]
-            public string Status { get; set; }
-            #pragma warning restore CS1591
-#endif
         }
     }
 }

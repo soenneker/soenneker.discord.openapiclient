@@ -17,34 +17,37 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("eligible") is { } nullNodeEligible && nullNodeEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eligible = null;
-            if (parseNode.GetChildNode("ineligible_reason") is { } nullNodeIneligibleReason && nullNodeIneligibleReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IneligibleReason = null;
-            if (parseNode.GetChildNode("ineligible_reason_description") is { } nullNodeIneligibleReasonDescription && nullNodeIneligibleReasonDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IneligibleReasonDescription = null;
+            if (parseNode.GetChildNode("eligible") is null) { _explicitNullValueEligible = default!; _explicitNullProperties?.Remove("eligible"); }
+            else if (parseNode.GetChildNode("eligible") is { } nullNodeEligible && nullNodeEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eligible = null;
+            if (parseNode.GetChildNode("ineligible_reason") is null) { _explicitNullValueIneligibleReason = default!; _explicitNullProperties?.Remove("ineligible_reason"); }
+            else if (parseNode.GetChildNode("ineligible_reason") is { } nullNodeIneligibleReason && nullNodeIneligibleReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IneligibleReason = null;
+            if (parseNode.GetChildNode("ineligible_reason_description") is null) { _explicitNullValueIneligibleReasonDescription = default!; _explicitNullProperties?.Remove("ineligible_reason_description"); }
+            else if (parseNode.GetChildNode("ineligible_reason_description") is { } nullNodeIneligibleReasonDescription && nullNodeIneligibleReasonDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IneligibleReasonDescription = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The eligible property</summary>
-        public bool? Eligible { get => _explicitNullValueEligible; set { _explicitNullValueEligible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible"); else _explicitNullProperties?.Remove("eligible"); } }
+        public bool? Eligible { get => _explicitNullValueEligible; set { _explicitNullValueEligible = value; AdditionalData?.Remove("eligible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible"); else _explicitNullProperties?.Remove("eligible"); } }
         private bool? _explicitNullValueEligible = default!;
         /// <summary>The ineligible_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason? IneligibleReason { get => _explicitNullValueIneligibleReason; set { _explicitNullValueIneligibleReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason"); else _explicitNullProperties?.Remove("ineligible_reason"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason? IneligibleReason { get => _explicitNullValueIneligibleReason; set { _explicitNullValueIneligibleReason = value; AdditionalData?.Remove("ineligible_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason"); else _explicitNullProperties?.Remove("ineligible_reason"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason? _explicitNullValueIneligibleReason = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason IneligibleReason { get => _explicitNullValueIneligibleReason; set { _explicitNullValueIneligibleReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason"); else _explicitNullProperties?.Remove("ineligible_reason"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason IneligibleReason { get => _explicitNullValueIneligibleReason; set { _explicitNullValueIneligibleReason = value; AdditionalData?.Remove("ineligible_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason"); else _explicitNullProperties?.Remove("ineligible_reason"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.SkuIneligibilityReason _explicitNullValueIneligibleReason = default!;
 #endif
         /// <summary>The ineligible_reason_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IneligibleReasonDescription { get => _explicitNullValueIneligibleReasonDescription; set { _explicitNullValueIneligibleReasonDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason_description"); else _explicitNullProperties?.Remove("ineligible_reason_description"); } }
+        public string? IneligibleReasonDescription { get => _explicitNullValueIneligibleReasonDescription; set { _explicitNullValueIneligibleReasonDescription = value; AdditionalData?.Remove("ineligible_reason_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason_description"); else _explicitNullProperties?.Remove("ineligible_reason_description"); } }
         private string? _explicitNullValueIneligibleReasonDescription = default!;
 #nullable restore
 #else
-        public string IneligibleReasonDescription { get => _explicitNullValueIneligibleReasonDescription; set { _explicitNullValueIneligibleReasonDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason_description"); else _explicitNullProperties?.Remove("ineligible_reason_description"); } }
+        public string IneligibleReasonDescription { get => _explicitNullValueIneligibleReasonDescription; set { _explicitNullValueIneligibleReasonDescription = value; AdditionalData?.Remove("ineligible_reason_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason_description"); else _explicitNullProperties?.Remove("ineligible_reason_description"); } }
         private string _explicitNullValueIneligibleReasonDescription = default!;
 #endif
         /// <summary>

@@ -17,12 +17,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("guild_scheduled_event_exception_id") is { } nullNodeGuildScheduledEventExceptionId && nullNodeGuildScheduledEventExceptionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildScheduledEventExceptionId = null;
-            if (parseNode.GetChildNode("guild_scheduled_event_id") is { } nullNodeGuildScheduledEventId && nullNodeGuildScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildScheduledEventId = null;
-            if (parseNode.GetChildNode("member") is { } nullNodeMember && nullNodeMember.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Member = null;
-            if (parseNode.GetChildNode("response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
-            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
-            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("guild_scheduled_event_exception_id") is null) { _explicitNullValueGuildScheduledEventExceptionId = default!; _explicitNullProperties?.Remove("guild_scheduled_event_exception_id"); }
+            else if (parseNode.GetChildNode("guild_scheduled_event_exception_id") is { } nullNodeGuildScheduledEventExceptionId && nullNodeGuildScheduledEventExceptionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildScheduledEventExceptionId = null;
+            if (parseNode.GetChildNode("guild_scheduled_event_id") is null) { _explicitNullValueGuildScheduledEventId = default!; _explicitNullProperties?.Remove("guild_scheduled_event_id"); }
+            else if (parseNode.GetChildNode("guild_scheduled_event_id") is { } nullNodeGuildScheduledEventId && nullNodeGuildScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildScheduledEventId = null;
+            if (parseNode.GetChildNode("member") is null) { _explicitNullValueMember = default!; _explicitNullProperties?.Remove("member"); }
+            else if (parseNode.GetChildNode("member") is { } nullNodeMember && nullNodeMember.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Member = null;
+            if (parseNode.GetChildNode("response") is null) { _explicitNullValueResponse = default!; _explicitNullProperties?.Remove("response"); }
+            else if (parseNode.GetChildNode("response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("user") is null) { _explicitNullValueUser = default!; _explicitNullProperties?.Remove("user"); }
+            else if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+            if (parseNode.GetChildNode("user_id") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("user_id"); }
+            else if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,54 +36,54 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>ID of the scheduled event exception</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GuildScheduledEventExceptionId { get => _explicitNullValueGuildScheduledEventExceptionId; set { _explicitNullValueGuildScheduledEventExceptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_exception_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_exception_id"); } }
+        public string? GuildScheduledEventExceptionId { get => _explicitNullValueGuildScheduledEventExceptionId; set { _explicitNullValueGuildScheduledEventExceptionId = value; AdditionalData?.Remove("guild_scheduled_event_exception_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_exception_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_exception_id"); } }
         private string? _explicitNullValueGuildScheduledEventExceptionId = default!;
 #nullable restore
 #else
-        public string GuildScheduledEventExceptionId { get => _explicitNullValueGuildScheduledEventExceptionId; set { _explicitNullValueGuildScheduledEventExceptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_exception_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_exception_id"); } }
+        public string GuildScheduledEventExceptionId { get => _explicitNullValueGuildScheduledEventExceptionId; set { _explicitNullValueGuildScheduledEventExceptionId = value; AdditionalData?.Remove("guild_scheduled_event_exception_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_exception_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_exception_id"); } }
         private string _explicitNullValueGuildScheduledEventExceptionId = default!;
 #endif
         /// <summary>The guild_scheduled_event_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GuildScheduledEventId { get => _explicitNullValueGuildScheduledEventId; set { _explicitNullValueGuildScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_id"); } }
+        public string? GuildScheduledEventId { get => _explicitNullValueGuildScheduledEventId; set { _explicitNullValueGuildScheduledEventId = value; AdditionalData?.Remove("guild_scheduled_event_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_id"); } }
         private string? _explicitNullValueGuildScheduledEventId = default!;
 #nullable restore
 #else
-        public string GuildScheduledEventId { get => _explicitNullValueGuildScheduledEventId; set { _explicitNullValueGuildScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_id"); } }
+        public string GuildScheduledEventId { get => _explicitNullValueGuildScheduledEventId; set { _explicitNullValueGuildScheduledEventId = value; AdditionalData?.Remove("guild_scheduled_event_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_id"); } }
         private string _explicitNullValueGuildScheduledEventId = default!;
 #endif
         /// <summary>Guild member object for the RSVP user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse? Member { get => _explicitNullValueMember; set { _explicitNullValueMember = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member"); else _explicitNullProperties?.Remove("member"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse? Member { get => _explicitNullValueMember; set { _explicitNullValueMember = value; AdditionalData?.Remove("member"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member"); else _explicitNullProperties?.Remove("member"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse? _explicitNullValueMember = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse Member { get => _explicitNullValueMember; set { _explicitNullValueMember = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member"); else _explicitNullProperties?.Remove("member"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse Member { get => _explicitNullValueMember; set { _explicitNullValueMember = value; AdditionalData?.Remove("member"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member"); else _explicitNullProperties?.Remove("member"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.GuildMemberResponse _explicitNullValueMember = default!;
 #endif
         /// <summary>User&apos;s RSVP status for the event</summary>
-        public int? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        public int? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
         private int? _explicitNullValueResponse = default!;
         /// <summary>User object for the RSVP user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserResponse? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.UserResponse _explicitNullValueUser = default!;
 #endif
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>

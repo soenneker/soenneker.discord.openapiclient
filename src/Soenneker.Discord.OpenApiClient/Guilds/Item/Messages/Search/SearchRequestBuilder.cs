@@ -67,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://discord.com/api/v10", "/guilds/{guildId}/messages/search", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -129,13 +129,13 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("author_type")]
-            public string[]? AuthorType { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.AuthorType[]? AuthorType { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("author_type")]
-            public string[] AuthorType { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.AuthorType[] AuthorType { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -181,26 +181,26 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("embed_type")]
-            public string[]? EmbedType { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.SearchableEmbedType[]? EmbedType { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("embed_type")]
-            public string[] EmbedType { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.SearchableEmbedType[] EmbedType { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("has")]
-            public string[]? Has { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.HasOption[]? Has { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("has")]
-            public string[] Has { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.HasOption[] Has { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -318,32 +318,14 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search
             [QueryParameter("slop")]
             public int? Slop { get; set; }
             #pragma warning restore CS1591
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("sort_by")]
-            public string? SortBy { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.SortingMode? SortBy { get; set; }
             #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("sort_by")]
-            public string SortBy { get; set; }
-            #pragma warning restore CS1591
-#endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("sort_order")]
-            public string? SortOrder { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.SortingOrder? SortOrder { get; set; }
             #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("sort_order")]
-            public string SortOrder { get; set; }
-            #pragma warning restore CS1591
-#endif
         }
     }
 }

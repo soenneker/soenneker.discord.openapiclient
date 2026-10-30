@@ -17,9 +17,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("channel_id") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
-            if (parseNode.GetChildNode("request_to_speak_timestamp") is { } nullNodeRequestToSpeakTimestamp && nullNodeRequestToSpeakTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestToSpeakTimestamp = null;
-            if (parseNode.GetChildNode("suppress") is { } nullNodeSuppress && nullNodeSuppress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Suppress = null;
+            if (parseNode.GetChildNode("channel_id") is null) { _explicitNullValueChannelId = default!; _explicitNullProperties?.Remove("channel_id"); }
+            else if (parseNode.GetChildNode("channel_id") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
+            if (parseNode.GetChildNode("request_to_speak_timestamp") is null) { _explicitNullValueRequestToSpeakTimestamp = default!; _explicitNullProperties?.Remove("request_to_speak_timestamp"); }
+            else if (parseNode.GetChildNode("request_to_speak_timestamp") is { } nullNodeRequestToSpeakTimestamp && nullNodeRequestToSpeakTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestToSpeakTimestamp = null;
+            if (parseNode.GetChildNode("suppress") is null) { _explicitNullValueSuppress = default!; _explicitNullProperties?.Remove("suppress"); }
+            else if (parseNode.GetChildNode("suppress") is { } nullNodeSuppress && nullNodeSuppress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Suppress = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,18 +30,18 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
         private string? _explicitNullValueChannelId = default!;
 #nullable restore
 #else
-        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
         private string _explicitNullValueChannelId = default!;
 #endif
         /// <summary>The request_to_speak_timestamp property</summary>
-        public DateTimeOffset? RequestToSpeakTimestamp { get => _explicitNullValueRequestToSpeakTimestamp; set { _explicitNullValueRequestToSpeakTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_to_speak_timestamp"); else _explicitNullProperties?.Remove("request_to_speak_timestamp"); } }
+        public DateTimeOffset? RequestToSpeakTimestamp { get => _explicitNullValueRequestToSpeakTimestamp; set { _explicitNullValueRequestToSpeakTimestamp = value; AdditionalData?.Remove("request_to_speak_timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_to_speak_timestamp"); else _explicitNullProperties?.Remove("request_to_speak_timestamp"); } }
         private DateTimeOffset? _explicitNullValueRequestToSpeakTimestamp = default!;
         /// <summary>The suppress property</summary>
-        public bool? Suppress { get => _explicitNullValueSuppress; set { _explicitNullValueSuppress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suppress"); else _explicitNullProperties?.Remove("suppress"); } }
+        public bool? Suppress { get => _explicitNullValueSuppress; set { _explicitNullValueSuppress = value; AdditionalData?.Remove("suppress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suppress"); else _explicitNullProperties?.Remove("suppress"); } }
         private bool? _explicitNullValueSuppress = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.UpdateSelfVoiceStateRequestPartial"/> and sets the default values.

@@ -17,11 +17,16 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("channel_id") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
-            if (parseNode.GetChildNode("guild_scheduled_event_id") is { } nullNodeGuildScheduledEventId && nullNodeGuildScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildScheduledEventId = null;
-            if (parseNode.GetChildNode("privacy_level") is { } nullNodePrivacyLevel && nullNodePrivacyLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyLevel = null;
-            if (parseNode.GetChildNode("send_start_notification") is { } nullNodeSendStartNotification && nullNodeSendStartNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendStartNotification = null;
-            if (parseNode.GetChildNode("topic") is { } nullNodeTopic && nullNodeTopic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Topic = null;
+            if (parseNode.GetChildNode("channel_id") is null) { _explicitNullValueChannelId = default!; _explicitNullProperties?.Remove("channel_id"); }
+            else if (parseNode.GetChildNode("channel_id") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
+            if (parseNode.GetChildNode("guild_scheduled_event_id") is null) { _explicitNullValueGuildScheduledEventId = default!; _explicitNullProperties?.Remove("guild_scheduled_event_id"); }
+            else if (parseNode.GetChildNode("guild_scheduled_event_id") is { } nullNodeGuildScheduledEventId && nullNodeGuildScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildScheduledEventId = null;
+            if (parseNode.GetChildNode("privacy_level") is null) { _explicitNullValuePrivacyLevel = default!; _explicitNullProperties?.Remove("privacy_level"); }
+            else if (parseNode.GetChildNode("privacy_level") is { } nullNodePrivacyLevel && nullNodePrivacyLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyLevel = null;
+            if (parseNode.GetChildNode("send_start_notification") is null) { _explicitNullValueSendStartNotification = default!; _explicitNullProperties?.Remove("send_start_notification"); }
+            else if (parseNode.GetChildNode("send_start_notification") is { } nullNodeSendStartNotification && nullNodeSendStartNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendStartNotification = null;
+            if (parseNode.GetChildNode("topic") is null) { _explicitNullValueTopic = default!; _explicitNullProperties?.Remove("topic"); }
+            else if (parseNode.GetChildNode("topic") is { } nullNodeTopic && nullNodeTopic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Topic = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
         private string? _explicitNullValueChannelId = default!;
 #nullable restore
 #else
-        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
         private string _explicitNullValueChannelId = default!;
 #endif
         /// <summary>The guild_scheduled_event_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GuildScheduledEventId { get => _explicitNullValueGuildScheduledEventId; set { _explicitNullValueGuildScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_id"); } }
+        public string? GuildScheduledEventId { get => _explicitNullValueGuildScheduledEventId; set { _explicitNullValueGuildScheduledEventId = value; AdditionalData?.Remove("guild_scheduled_event_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_id"); } }
         private string? _explicitNullValueGuildScheduledEventId = default!;
 #nullable restore
 #else
-        public string GuildScheduledEventId { get => _explicitNullValueGuildScheduledEventId; set { _explicitNullValueGuildScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_id"); } }
+        public string GuildScheduledEventId { get => _explicitNullValueGuildScheduledEventId; set { _explicitNullValueGuildScheduledEventId = value; AdditionalData?.Remove("guild_scheduled_event_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_scheduled_event_id"); else _explicitNullProperties?.Remove("guild_scheduled_event_id"); } }
         private string _explicitNullValueGuildScheduledEventId = default!;
 #endif
         /// <summary>The privacy_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels? PrivacyLevel { get => _explicitNullValuePrivacyLevel; set { _explicitNullValuePrivacyLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_level"); else _explicitNullProperties?.Remove("privacy_level"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels? PrivacyLevel { get => _explicitNullValuePrivacyLevel; set { _explicitNullValuePrivacyLevel = value; AdditionalData?.Remove("privacy_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_level"); else _explicitNullProperties?.Remove("privacy_level"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels? _explicitNullValuePrivacyLevel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels PrivacyLevel { get => _explicitNullValuePrivacyLevel; set { _explicitNullValuePrivacyLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_level"); else _explicitNullProperties?.Remove("privacy_level"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels PrivacyLevel { get => _explicitNullValuePrivacyLevel; set { _explicitNullValuePrivacyLevel = value; AdditionalData?.Remove("privacy_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_level"); else _explicitNullProperties?.Remove("privacy_level"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.StageInstancesPrivacyLevels _explicitNullValuePrivacyLevel = default!;
 #endif
         /// <summary>The send_start_notification property</summary>
-        public bool? SendStartNotification { get => _explicitNullValueSendStartNotification; set { _explicitNullValueSendStartNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_start_notification"); else _explicitNullProperties?.Remove("send_start_notification"); } }
+        public bool? SendStartNotification { get => _explicitNullValueSendStartNotification; set { _explicitNullValueSendStartNotification = value; AdditionalData?.Remove("send_start_notification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_start_notification"); else _explicitNullProperties?.Remove("send_start_notification"); } }
         private bool? _explicitNullValueSendStartNotification = default!;
         /// <summary>The topic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
+        public string? Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; AdditionalData?.Remove("topic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
         private string? _explicitNullValueTopic = default!;
 #nullable restore
 #else
-        public string Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
+        public string Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; AdditionalData?.Remove("topic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
         private string _explicitNullValueTopic = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sticker_packs") is { } nullNodeStickerPacks && nullNodeStickerPacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickerPacks = null;
+            if (parseNode.GetChildNode("sticker_packs") is null) { _explicitNullValueStickerPacks = default!; _explicitNullProperties?.Remove("sticker_packs"); }
+            else if (parseNode.GetChildNode("sticker_packs") is { } nullNodeStickerPacks && nullNodeStickerPacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickerPacks = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The sticker_packs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.StickerPackResponse>? StickerPacks { get => _explicitNullValueStickerPacks; set { _explicitNullValueStickerPacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sticker_packs"); else _explicitNullProperties?.Remove("sticker_packs"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.StickerPackResponse>? StickerPacks { get => _explicitNullValueStickerPacks; set { _explicitNullValueStickerPacks = value; AdditionalData?.Remove("sticker_packs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sticker_packs"); else _explicitNullProperties?.Remove("sticker_packs"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.StickerPackResponse>? _explicitNullValueStickerPacks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.StickerPackResponse> StickerPacks { get => _explicitNullValueStickerPacks; set { _explicitNullValueStickerPacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sticker_packs"); else _explicitNullProperties?.Remove("sticker_packs"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.StickerPackResponse> StickerPacks { get => _explicitNullValueStickerPacks; set { _explicitNullValueStickerPacks = value; AdditionalData?.Remove("sticker_packs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sticker_packs"); else _explicitNullProperties?.Remove("sticker_packs"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.StickerPackResponse> _explicitNullValueStickerPacks = default!;
 #endif
         /// <summary>

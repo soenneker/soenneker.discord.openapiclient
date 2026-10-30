@@ -17,31 +17,56 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("available_tags") is { } nullNodeAvailableTags && nullNodeAvailableTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableTags = null;
-            if (parseNode.GetChildNode("bitrate") is { } nullNodeBitrate && nullNodeBitrate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bitrate = null;
-            if (parseNode.GetChildNode("default_auto_archive_duration") is { } nullNodeDefaultAutoArchiveDuration && nullNodeDefaultAutoArchiveDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAutoArchiveDuration = null;
-            if (parseNode.GetChildNode("default_forum_layout") is { } nullNodeDefaultForumLayout && nullNodeDefaultForumLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultForumLayout = null;
-            if (parseNode.GetChildNode("default_reaction_emoji") is { } nullNodeDefaultReactionEmoji && nullNodeDefaultReactionEmoji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultReactionEmoji = null;
-            if (parseNode.GetChildNode("default_sort_order") is { } nullNodeDefaultSortOrder && nullNodeDefaultSortOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultSortOrder = null;
-            if (parseNode.GetChildNode("default_tag_setting") is { } nullNodeDefaultTagSetting && nullNodeDefaultTagSetting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultTagSetting = null;
-            if (parseNode.GetChildNode("default_thread_rate_limit_per_user") is { } nullNodeDefaultThreadRateLimitPerUser && nullNodeDefaultThreadRateLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultThreadRateLimitPerUser = null;
-            if (parseNode.GetChildNode("flags") is { } nullNodeFlags && nullNodeFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flags = null;
-            if (parseNode.GetChildNode("guild_id") is { } nullNodeGuildId && nullNodeGuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildId = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("last_message_id") is { } nullNodeLastMessageId && nullNodeLastMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastMessageId = null;
-            if (parseNode.GetChildNode("last_pin_timestamp") is { } nullNodeLastPinTimestamp && nullNodeLastPinTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastPinTimestamp = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("nsfw") is { } nullNodeNsfw && nullNodeNsfw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nsfw = null;
-            if (parseNode.GetChildNode("parent_id") is { } nullNodeParentId && nullNodeParentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentId = null;
-            if (parseNode.GetChildNode("permission_overwrites") is { } nullNodePermissionOverwrites && nullNodePermissionOverwrites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionOverwrites = null;
-            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
-            if (parseNode.GetChildNode("position") is { } nullNodePosition && nullNodePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Position = null;
-            if (parseNode.GetChildNode("rate_limit_per_user") is { } nullNodeRateLimitPerUser && nullNodeRateLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitPerUser = null;
-            if (parseNode.GetChildNode("rtc_region") is { } nullNodeRtcRegion && nullNodeRtcRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RtcRegion = null;
-            if (parseNode.GetChildNode("topic") is { } nullNodeTopic && nullNodeTopic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Topic = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("user_limit") is { } nullNodeUserLimit && nullNodeUserLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLimit = null;
-            if (parseNode.GetChildNode("video_quality_mode") is { } nullNodeVideoQualityMode && nullNodeVideoQualityMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoQualityMode = null;
+            if (parseNode.GetChildNode("available_tags") is null) { _explicitNullValueAvailableTags = default!; _explicitNullProperties?.Remove("available_tags"); }
+            else if (parseNode.GetChildNode("available_tags") is { } nullNodeAvailableTags && nullNodeAvailableTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableTags = null;
+            if (parseNode.GetChildNode("bitrate") is null) { _explicitNullValueBitrate = default!; _explicitNullProperties?.Remove("bitrate"); }
+            else if (parseNode.GetChildNode("bitrate") is { } nullNodeBitrate && nullNodeBitrate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bitrate = null;
+            if (parseNode.GetChildNode("default_auto_archive_duration") is null) { _explicitNullValueDefaultAutoArchiveDuration = default!; _explicitNullProperties?.Remove("default_auto_archive_duration"); }
+            else if (parseNode.GetChildNode("default_auto_archive_duration") is { } nullNodeDefaultAutoArchiveDuration && nullNodeDefaultAutoArchiveDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAutoArchiveDuration = null;
+            if (parseNode.GetChildNode("default_forum_layout") is null) { _explicitNullValueDefaultForumLayout = default!; _explicitNullProperties?.Remove("default_forum_layout"); }
+            else if (parseNode.GetChildNode("default_forum_layout") is { } nullNodeDefaultForumLayout && nullNodeDefaultForumLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultForumLayout = null;
+            if (parseNode.GetChildNode("default_reaction_emoji") is null) { _explicitNullValueDefaultReactionEmoji = default!; _explicitNullProperties?.Remove("default_reaction_emoji"); }
+            else if (parseNode.GetChildNode("default_reaction_emoji") is { } nullNodeDefaultReactionEmoji && nullNodeDefaultReactionEmoji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultReactionEmoji = null;
+            if (parseNode.GetChildNode("default_sort_order") is null) { _explicitNullValueDefaultSortOrder = default!; _explicitNullProperties?.Remove("default_sort_order"); }
+            else if (parseNode.GetChildNode("default_sort_order") is { } nullNodeDefaultSortOrder && nullNodeDefaultSortOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultSortOrder = null;
+            if (parseNode.GetChildNode("default_tag_setting") is null) { _explicitNullValueDefaultTagSetting = default!; _explicitNullProperties?.Remove("default_tag_setting"); }
+            else if (parseNode.GetChildNode("default_tag_setting") is { } nullNodeDefaultTagSetting && nullNodeDefaultTagSetting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultTagSetting = null;
+            if (parseNode.GetChildNode("default_thread_rate_limit_per_user") is null) { _explicitNullValueDefaultThreadRateLimitPerUser = default!; _explicitNullProperties?.Remove("default_thread_rate_limit_per_user"); }
+            else if (parseNode.GetChildNode("default_thread_rate_limit_per_user") is { } nullNodeDefaultThreadRateLimitPerUser && nullNodeDefaultThreadRateLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultThreadRateLimitPerUser = null;
+            if (parseNode.GetChildNode("flags") is null) { _explicitNullValueFlags = default!; _explicitNullProperties?.Remove("flags"); }
+            else if (parseNode.GetChildNode("flags") is { } nullNodeFlags && nullNodeFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flags = null;
+            if (parseNode.GetChildNode("guild_id") is null) { _explicitNullValueGuildId = default!; _explicitNullProperties?.Remove("guild_id"); }
+            else if (parseNode.GetChildNode("guild_id") is { } nullNodeGuildId && nullNodeGuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("last_message_id") is null) { _explicitNullValueLastMessageId = default!; _explicitNullProperties?.Remove("last_message_id"); }
+            else if (parseNode.GetChildNode("last_message_id") is { } nullNodeLastMessageId && nullNodeLastMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastMessageId = null;
+            if (parseNode.GetChildNode("last_pin_timestamp") is null) { _explicitNullValueLastPinTimestamp = default!; _explicitNullProperties?.Remove("last_pin_timestamp"); }
+            else if (parseNode.GetChildNode("last_pin_timestamp") is { } nullNodeLastPinTimestamp && nullNodeLastPinTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastPinTimestamp = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("nsfw") is null) { _explicitNullValueNsfw = default!; _explicitNullProperties?.Remove("nsfw"); }
+            else if (parseNode.GetChildNode("nsfw") is { } nullNodeNsfw && nullNodeNsfw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nsfw = null;
+            if (parseNode.GetChildNode("parent_id") is null) { _explicitNullValueParentId = default!; _explicitNullProperties?.Remove("parent_id"); }
+            else if (parseNode.GetChildNode("parent_id") is { } nullNodeParentId && nullNodeParentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentId = null;
+            if (parseNode.GetChildNode("permission_overwrites") is null) { _explicitNullValuePermissionOverwrites = default!; _explicitNullProperties?.Remove("permission_overwrites"); }
+            else if (parseNode.GetChildNode("permission_overwrites") is { } nullNodePermissionOverwrites && nullNodePermissionOverwrites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionOverwrites = null;
+            if (parseNode.GetChildNode("permissions") is null) { _explicitNullValuePermissions = default!; _explicitNullProperties?.Remove("permissions"); }
+            else if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("position") is null) { _explicitNullValuePosition = default!; _explicitNullProperties?.Remove("position"); }
+            else if (parseNode.GetChildNode("position") is { } nullNodePosition && nullNodePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Position = null;
+            if (parseNode.GetChildNode("rate_limit_per_user") is null) { _explicitNullValueRateLimitPerUser = default!; _explicitNullProperties?.Remove("rate_limit_per_user"); }
+            else if (parseNode.GetChildNode("rate_limit_per_user") is { } nullNodeRateLimitPerUser && nullNodeRateLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitPerUser = null;
+            if (parseNode.GetChildNode("rtc_region") is null) { _explicitNullValueRtcRegion = default!; _explicitNullProperties?.Remove("rtc_region"); }
+            else if (parseNode.GetChildNode("rtc_region") is { } nullNodeRtcRegion && nullNodeRtcRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RtcRegion = null;
+            if (parseNode.GetChildNode("topic") is null) { _explicitNullValueTopic = default!; _explicitNullProperties?.Remove("topic"); }
+            else if (parseNode.GetChildNode("topic") is { } nullNodeTopic && nullNodeTopic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Topic = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("user_limit") is null) { _explicitNullValueUserLimit = default!; _explicitNullProperties?.Remove("user_limit"); }
+            else if (parseNode.GetChildNode("user_limit") is { } nullNodeUserLimit && nullNodeUserLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLimit = null;
+            if (parseNode.GetChildNode("video_quality_mode") is null) { _explicitNullValueVideoQualityMode = default!; _explicitNullProperties?.Remove("video_quality_mode"); }
+            else if (parseNode.GetChildNode("video_quality_mode") is { } nullNodeVideoQualityMode && nullNodeVideoQualityMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoQualityMode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -49,168 +74,161 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The available_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse>? AvailableTags { get => _explicitNullValueAvailableTags; set { _explicitNullValueAvailableTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_tags"); else _explicitNullProperties?.Remove("available_tags"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse>? AvailableTags { get => _explicitNullValueAvailableTags; set { _explicitNullValueAvailableTags = value; AdditionalData?.Remove("available_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_tags"); else _explicitNullProperties?.Remove("available_tags"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse>? _explicitNullValueAvailableTags = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse> AvailableTags { get => _explicitNullValueAvailableTags; set { _explicitNullValueAvailableTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_tags"); else _explicitNullProperties?.Remove("available_tags"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse> AvailableTags { get => _explicitNullValueAvailableTags; set { _explicitNullValueAvailableTags = value; AdditionalData?.Remove("available_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_tags"); else _explicitNullProperties?.Remove("available_tags"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.ForumTagResponse> _explicitNullValueAvailableTags = default!;
 #endif
         /// <summary>The bitrate property</summary>
-        public int? Bitrate { get => _explicitNullValueBitrate; set { _explicitNullValueBitrate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitrate"); else _explicitNullProperties?.Remove("bitrate"); } }
+        public int? Bitrate { get => _explicitNullValueBitrate; set { _explicitNullValueBitrate = value; AdditionalData?.Remove("bitrate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitrate"); else _explicitNullProperties?.Remove("bitrate"); } }
         private int? _explicitNullValueBitrate = default!;
         /// <summary>The default_auto_archive_duration property</summary>
-        public int? DefaultAutoArchiveDuration { get => _explicitNullValueDefaultAutoArchiveDuration; set { _explicitNullValueDefaultAutoArchiveDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_auto_archive_duration"); else _explicitNullProperties?.Remove("default_auto_archive_duration"); } }
+        public int? DefaultAutoArchiveDuration { get => _explicitNullValueDefaultAutoArchiveDuration; set { _explicitNullValueDefaultAutoArchiveDuration = value; AdditionalData?.Remove("default_auto_archive_duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_auto_archive_duration"); else _explicitNullProperties?.Remove("default_auto_archive_duration"); } }
         private int? _explicitNullValueDefaultAutoArchiveDuration = default!;
         /// <summary>The default_forum_layout property</summary>
-        public int? DefaultForumLayout { get => _explicitNullValueDefaultForumLayout; set { _explicitNullValueDefaultForumLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_forum_layout"); else _explicitNullProperties?.Remove("default_forum_layout"); } }
+        public int? DefaultForumLayout { get => _explicitNullValueDefaultForumLayout; set { _explicitNullValueDefaultForumLayout = value; AdditionalData?.Remove("default_forum_layout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_forum_layout"); else _explicitNullProperties?.Remove("default_forum_layout"); } }
         private int? _explicitNullValueDefaultForumLayout = default!;
         /// <summary>The default_reaction_emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse? DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse? DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; AdditionalData?.Remove("default_reaction_emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse? _explicitNullValueDefaultReactionEmoji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; AdditionalData?.Remove("default_reaction_emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse _explicitNullValueDefaultReactionEmoji = default!;
 #endif
         /// <summary>The default_sort_order property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder? DefaultSortOrder { get => _explicitNullValueDefaultSortOrder; set { _explicitNullValueDefaultSortOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_sort_order"); else _explicitNullProperties?.Remove("default_sort_order"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder? DefaultSortOrder { get => _explicitNullValueDefaultSortOrder; set { _explicitNullValueDefaultSortOrder = value; AdditionalData?.Remove("default_sort_order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_sort_order"); else _explicitNullProperties?.Remove("default_sort_order"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder? _explicitNullValueDefaultSortOrder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder DefaultSortOrder { get => _explicitNullValueDefaultSortOrder; set { _explicitNullValueDefaultSortOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_sort_order"); else _explicitNullProperties?.Remove("default_sort_order"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder DefaultSortOrder { get => _explicitNullValueDefaultSortOrder; set { _explicitNullValueDefaultSortOrder = value; AdditionalData?.Remove("default_sort_order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_sort_order"); else _explicitNullProperties?.Remove("default_sort_order"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder _explicitNullValueDefaultSortOrder = default!;
 #endif
         /// <summary>The default_tag_setting property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting? DefaultTagSetting { get => _explicitNullValueDefaultTagSetting; set { _explicitNullValueDefaultTagSetting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tag_setting"); else _explicitNullProperties?.Remove("default_tag_setting"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting? DefaultTagSetting { get => _explicitNullValueDefaultTagSetting; set { _explicitNullValueDefaultTagSetting = value; AdditionalData?.Remove("default_tag_setting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tag_setting"); else _explicitNullProperties?.Remove("default_tag_setting"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting? _explicitNullValueDefaultTagSetting = default!;
-#nullable restore
-#else
-        public global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting DefaultTagSetting { get => _explicitNullValueDefaultTagSetting; set { _explicitNullValueDefaultTagSetting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tag_setting"); else _explicitNullProperties?.Remove("default_tag_setting"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting _explicitNullValueDefaultTagSetting = default!;
-#endif
         /// <summary>The default_thread_rate_limit_per_user property</summary>
-        public int? DefaultThreadRateLimitPerUser { get => _explicitNullValueDefaultThreadRateLimitPerUser; set { _explicitNullValueDefaultThreadRateLimitPerUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_thread_rate_limit_per_user"); else _explicitNullProperties?.Remove("default_thread_rate_limit_per_user"); } }
+        public int? DefaultThreadRateLimitPerUser { get => _explicitNullValueDefaultThreadRateLimitPerUser; set { _explicitNullValueDefaultThreadRateLimitPerUser = value; AdditionalData?.Remove("default_thread_rate_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_thread_rate_limit_per_user"); else _explicitNullProperties?.Remove("default_thread_rate_limit_per_user"); } }
         private int? _explicitNullValueDefaultThreadRateLimitPerUser = default!;
         /// <summary>The flags property</summary>
-        public int? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
+        public int? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
         private int? _explicitNullValueFlags = default!;
         /// <summary>The guild_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GuildId { get => _explicitNullValueGuildId; set { _explicitNullValueGuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_id"); else _explicitNullProperties?.Remove("guild_id"); } }
+        public string? GuildId { get => _explicitNullValueGuildId; set { _explicitNullValueGuildId = value; AdditionalData?.Remove("guild_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_id"); else _explicitNullProperties?.Remove("guild_id"); } }
         private string? _explicitNullValueGuildId = default!;
 #nullable restore
 #else
-        public string GuildId { get => _explicitNullValueGuildId; set { _explicitNullValueGuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_id"); else _explicitNullProperties?.Remove("guild_id"); } }
+        public string GuildId { get => _explicitNullValueGuildId; set { _explicitNullValueGuildId = value; AdditionalData?.Remove("guild_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_id"); else _explicitNullProperties?.Remove("guild_id"); } }
         private string _explicitNullValueGuildId = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The last_message_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastMessageId { get => _explicitNullValueLastMessageId; set { _explicitNullValueLastMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_message_id"); else _explicitNullProperties?.Remove("last_message_id"); } }
+        public string? LastMessageId { get => _explicitNullValueLastMessageId; set { _explicitNullValueLastMessageId = value; AdditionalData?.Remove("last_message_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_message_id"); else _explicitNullProperties?.Remove("last_message_id"); } }
         private string? _explicitNullValueLastMessageId = default!;
 #nullable restore
 #else
-        public string LastMessageId { get => _explicitNullValueLastMessageId; set { _explicitNullValueLastMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_message_id"); else _explicitNullProperties?.Remove("last_message_id"); } }
+        public string LastMessageId { get => _explicitNullValueLastMessageId; set { _explicitNullValueLastMessageId = value; AdditionalData?.Remove("last_message_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_message_id"); else _explicitNullProperties?.Remove("last_message_id"); } }
         private string _explicitNullValueLastMessageId = default!;
 #endif
         /// <summary>The last_pin_timestamp property</summary>
-        public DateTimeOffset? LastPinTimestamp { get => _explicitNullValueLastPinTimestamp; set { _explicitNullValueLastPinTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_pin_timestamp"); else _explicitNullProperties?.Remove("last_pin_timestamp"); } }
+        public DateTimeOffset? LastPinTimestamp { get => _explicitNullValueLastPinTimestamp; set { _explicitNullValueLastPinTimestamp = value; AdditionalData?.Remove("last_pin_timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_pin_timestamp"); else _explicitNullProperties?.Remove("last_pin_timestamp"); } }
         private DateTimeOffset? _explicitNullValueLastPinTimestamp = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The nsfw property</summary>
-        public bool? Nsfw { get => _explicitNullValueNsfw; set { _explicitNullValueNsfw = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nsfw"); else _explicitNullProperties?.Remove("nsfw"); } }
+        public bool? Nsfw { get => _explicitNullValueNsfw; set { _explicitNullValueNsfw = value; AdditionalData?.Remove("nsfw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nsfw"); else _explicitNullProperties?.Remove("nsfw"); } }
         private bool? _explicitNullValueNsfw = default!;
         /// <summary>The parent_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentId { get => _explicitNullValueParentId; set { _explicitNullValueParentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_id"); else _explicitNullProperties?.Remove("parent_id"); } }
+        public string? ParentId { get => _explicitNullValueParentId; set { _explicitNullValueParentId = value; AdditionalData?.Remove("parent_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_id"); else _explicitNullProperties?.Remove("parent_id"); } }
         private string? _explicitNullValueParentId = default!;
 #nullable restore
 #else
-        public string ParentId { get => _explicitNullValueParentId; set { _explicitNullValueParentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_id"); else _explicitNullProperties?.Remove("parent_id"); } }
+        public string ParentId { get => _explicitNullValueParentId; set { _explicitNullValueParentId = value; AdditionalData?.Remove("parent_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_id"); else _explicitNullProperties?.Remove("parent_id"); } }
         private string _explicitNullValueParentId = default!;
 #endif
         /// <summary>The permission_overwrites property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteResponse>? PermissionOverwrites { get => _explicitNullValuePermissionOverwrites; set { _explicitNullValuePermissionOverwrites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permission_overwrites"); else _explicitNullProperties?.Remove("permission_overwrites"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteResponse>? PermissionOverwrites { get => _explicitNullValuePermissionOverwrites; set { _explicitNullValuePermissionOverwrites = value; AdditionalData?.Remove("permission_overwrites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permission_overwrites"); else _explicitNullProperties?.Remove("permission_overwrites"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteResponse>? _explicitNullValuePermissionOverwrites = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteResponse> PermissionOverwrites { get => _explicitNullValuePermissionOverwrites; set { _explicitNullValuePermissionOverwrites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permission_overwrites"); else _explicitNullProperties?.Remove("permission_overwrites"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteResponse> PermissionOverwrites { get => _explicitNullValuePermissionOverwrites; set { _explicitNullValuePermissionOverwrites = value; AdditionalData?.Remove("permission_overwrites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permission_overwrites"); else _explicitNullProperties?.Remove("permission_overwrites"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.ChannelPermissionOverwriteResponse> _explicitNullValuePermissionOverwrites = default!;
 #endif
         /// <summary>The permissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        public string? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; AdditionalData?.Remove("permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
         private string? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public string Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        public string Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; AdditionalData?.Remove("permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
         private string _explicitNullValuePermissions = default!;
 #endif
         /// <summary>The position property</summary>
-        public int? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
+        public int? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
         private int? _explicitNullValuePosition = default!;
         /// <summary>The rate_limit_per_user property</summary>
-        public int? RateLimitPerUser { get => _explicitNullValueRateLimitPerUser; set { _explicitNullValueRateLimitPerUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate_limit_per_user"); else _explicitNullProperties?.Remove("rate_limit_per_user"); } }
+        public int? RateLimitPerUser { get => _explicitNullValueRateLimitPerUser; set { _explicitNullValueRateLimitPerUser = value; AdditionalData?.Remove("rate_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate_limit_per_user"); else _explicitNullProperties?.Remove("rate_limit_per_user"); } }
         private int? _explicitNullValueRateLimitPerUser = default!;
         /// <summary>The rtc_region property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RtcRegion { get => _explicitNullValueRtcRegion; set { _explicitNullValueRtcRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rtc_region"); else _explicitNullProperties?.Remove("rtc_region"); } }
+        public string? RtcRegion { get => _explicitNullValueRtcRegion; set { _explicitNullValueRtcRegion = value; AdditionalData?.Remove("rtc_region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rtc_region"); else _explicitNullProperties?.Remove("rtc_region"); } }
         private string? _explicitNullValueRtcRegion = default!;
 #nullable restore
 #else
-        public string RtcRegion { get => _explicitNullValueRtcRegion; set { _explicitNullValueRtcRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rtc_region"); else _explicitNullProperties?.Remove("rtc_region"); } }
+        public string RtcRegion { get => _explicitNullValueRtcRegion; set { _explicitNullValueRtcRegion = value; AdditionalData?.Remove("rtc_region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rtc_region"); else _explicitNullProperties?.Remove("rtc_region"); } }
         private string _explicitNullValueRtcRegion = default!;
 #endif
         /// <summary>The topic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
+        public string? Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; AdditionalData?.Remove("topic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
         private string? _explicitNullValueTopic = default!;
 #nullable restore
 #else
-        public string Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
+        public string Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; AdditionalData?.Remove("topic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
         private string _explicitNullValueTopic = default!;
 #endif
         /// <summary>The type property</summary>
-        public int? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public int? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private int? _explicitNullValueType = default!;
         /// <summary>The user_limit property</summary>
-        public int? UserLimit { get => _explicitNullValueUserLimit; set { _explicitNullValueUserLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_limit"); else _explicitNullProperties?.Remove("user_limit"); } }
+        public int? UserLimit { get => _explicitNullValueUserLimit; set { _explicitNullValueUserLimit = value; AdditionalData?.Remove("user_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_limit"); else _explicitNullProperties?.Remove("user_limit"); } }
         private int? _explicitNullValueUserLimit = default!;
         /// <summary>The video_quality_mode property</summary>
-        public int? VideoQualityMode { get => _explicitNullValueVideoQualityMode; set { _explicitNullValueVideoQualityMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_quality_mode"); else _explicitNullProperties?.Remove("video_quality_mode"); } }
+        public int? VideoQualityMode { get => _explicitNullValueVideoQualityMode; set { _explicitNullValueVideoQualityMode = value; AdditionalData?.Remove("video_quality_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_quality_mode"); else _explicitNullProperties?.Remove("video_quality_mode"); } }
         private int? _explicitNullValueVideoQualityMode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponse"/> and sets the default values.
@@ -243,7 +261,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "default_forum_layout", n => { DefaultForumLayout = n.GetIntValue(); } },
                 { "default_reaction_emoji", n => { DefaultReactionEmoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse>(global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse.CreateFromDiscriminatorValue); } },
                 { "default_sort_order", n => { DefaultSortOrder = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder>(global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder.CreateFromDiscriminatorValue); } },
-                { "default_tag_setting", n => { DefaultTagSetting = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>(global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting.CreateFromDiscriminatorValue); } },
+                { "default_tag_setting", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultTagSetting = default; _explicitNullProperties?.Remove("default_tag_setting"); AdditionalData["default_tag_setting"] = unknown; } else { DefaultTagSetting = parsed; AdditionalData.Remove("default_tag_setting"); } } },
                 { "default_thread_rate_limit_per_user", n => { DefaultThreadRateLimitPerUser = n.GetIntValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "guild_id", n => { GuildId = n.GetStringValue(); } },
@@ -277,7 +295,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("default_forum_layout", DefaultForumLayout);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse>("default_reaction_emoji", DefaultReactionEmoji);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder>("default_sort_order", DefaultSortOrder);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>("default_tag_setting", DefaultTagSetting);
+            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>("default_tag_setting", DefaultTagSetting);
             writer.WriteIntValue("default_thread_rate_limit_per_user", DefaultThreadRateLimitPerUser);
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("guild_id", GuildId);

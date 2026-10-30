@@ -17,8 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sound_id") is { } nullNodeSoundId && nullNodeSoundId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SoundId = null;
-            if (parseNode.GetChildNode("source_guild_id") is { } nullNodeSourceGuildId && nullNodeSourceGuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceGuildId = null;
+            if (parseNode.GetChildNode("sound_id") is null) { _explicitNullValueSoundId = default!; _explicitNullProperties?.Remove("sound_id"); }
+            else if (parseNode.GetChildNode("sound_id") is { } nullNodeSoundId && nullNodeSoundId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SoundId = null;
+            if (parseNode.GetChildNode("source_guild_id") is null) { _explicitNullValueSourceGuildId = default!; _explicitNullProperties?.Remove("source_guild_id"); }
+            else if (parseNode.GetChildNode("source_guild_id") is { } nullNodeSourceGuildId && nullNodeSourceGuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceGuildId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The sound_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SoundId { get => _explicitNullValueSoundId; set { _explicitNullValueSoundId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sound_id"); else _explicitNullProperties?.Remove("sound_id"); } }
+        public string? SoundId { get => _explicitNullValueSoundId; set { _explicitNullValueSoundId = value; AdditionalData?.Remove("sound_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sound_id"); else _explicitNullProperties?.Remove("sound_id"); } }
         private string? _explicitNullValueSoundId = default!;
 #nullable restore
 #else
-        public string SoundId { get => _explicitNullValueSoundId; set { _explicitNullValueSoundId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sound_id"); else _explicitNullProperties?.Remove("sound_id"); } }
+        public string SoundId { get => _explicitNullValueSoundId; set { _explicitNullValueSoundId = value; AdditionalData?.Remove("sound_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sound_id"); else _explicitNullProperties?.Remove("sound_id"); } }
         private string _explicitNullValueSoundId = default!;
 #endif
         /// <summary>The source_guild_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceGuildId { get => _explicitNullValueSourceGuildId; set { _explicitNullValueSourceGuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_guild_id"); else _explicitNullProperties?.Remove("source_guild_id"); } }
+        public string? SourceGuildId { get => _explicitNullValueSourceGuildId; set { _explicitNullValueSourceGuildId = value; AdditionalData?.Remove("source_guild_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_guild_id"); else _explicitNullProperties?.Remove("source_guild_id"); } }
         private string? _explicitNullValueSourceGuildId = default!;
 #nullable restore
 #else
-        public string SourceGuildId { get => _explicitNullValueSourceGuildId; set { _explicitNullValueSourceGuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_guild_id"); else _explicitNullProperties?.Remove("source_guild_id"); } }
+        public string SourceGuildId { get => _explicitNullValueSourceGuildId; set { _explicitNullValueSourceGuildId = value; AdditionalData?.Remove("source_guild_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_guild_id"); else _explicitNullProperties?.Remove("source_guild_id"); } }
         private string _explicitNullValueSourceGuildId = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("external_user_id") is { } nullNodeExternalUserId && nullNodeExternalUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalUserId = null;
+            if (parseNode.GetChildNode("external_user_id") is null) { _explicitNullValueExternalUserId = default!; _explicitNullProperties?.Remove("external_user_id"); }
+            else if (parseNode.GetChildNode("external_user_id") is { } nullNodeExternalUserId && nullNodeExternalUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalUserId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The external_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalUserId { get => _explicitNullValueExternalUserId; set { _explicitNullValueExternalUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_user_id"); else _explicitNullProperties?.Remove("external_user_id"); } }
+        public string? ExternalUserId { get => _explicitNullValueExternalUserId; set { _explicitNullValueExternalUserId = value; AdditionalData?.Remove("external_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_user_id"); else _explicitNullProperties?.Remove("external_user_id"); } }
         private string? _explicitNullValueExternalUserId = default!;
 #nullable restore
 #else
-        public string ExternalUserId { get => _explicitNullValueExternalUserId; set { _explicitNullValueExternalUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_user_id"); else _explicitNullProperties?.Remove("external_user_id"); } }
+        public string ExternalUserId { get => _explicitNullValueExternalUserId; set { _explicitNullValueExternalUserId = value; AdditionalData?.Remove("external_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_user_id"); else _explicitNullProperties?.Remove("external_user_id"); } }
         private string _explicitNullValueExternalUserId = default!;
 #endif
         /// <summary>

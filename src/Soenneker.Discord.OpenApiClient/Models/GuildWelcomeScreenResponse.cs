@@ -17,8 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("welcome_channels") is { } nullNodeWelcomeChannels && nullNodeWelcomeChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WelcomeChannels = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("welcome_channels") is null) { _explicitNullValueWelcomeChannels = default!; _explicitNullProperties?.Remove("welcome_channels"); }
+            else if (parseNode.GetChildNode("welcome_channels") is { } nullNodeWelcomeChannels && nullNodeWelcomeChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WelcomeChannels = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The welcome_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildWelcomeScreenChannelResponse>? WelcomeChannels { get => _explicitNullValueWelcomeChannels; set { _explicitNullValueWelcomeChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_channels"); else _explicitNullProperties?.Remove("welcome_channels"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildWelcomeScreenChannelResponse>? WelcomeChannels { get => _explicitNullValueWelcomeChannels; set { _explicitNullValueWelcomeChannels = value; AdditionalData?.Remove("welcome_channels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_channels"); else _explicitNullProperties?.Remove("welcome_channels"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.GuildWelcomeScreenChannelResponse>? _explicitNullValueWelcomeChannels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildWelcomeScreenChannelResponse> WelcomeChannels { get => _explicitNullValueWelcomeChannels; set { _explicitNullValueWelcomeChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_channels"); else _explicitNullProperties?.Remove("welcome_channels"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildWelcomeScreenChannelResponse> WelcomeChannels { get => _explicitNullValueWelcomeChannels; set { _explicitNullValueWelcomeChannels = value; AdditionalData?.Remove("welcome_channels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_channels"); else _explicitNullProperties?.Remove("welcome_channels"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.GuildWelcomeScreenChannelResponse> _explicitNullValueWelcomeChannels = default!;
 #endif
         /// <summary>

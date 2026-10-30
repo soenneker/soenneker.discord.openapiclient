@@ -17,32 +17,36 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("base_mix") is { } nullNodeBaseMix && nullNodeBaseMix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseMix = null;
-            if (parseNode.GetChildNode("base_theme") is { } nullNodeBaseTheme && nullNodeBaseTheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseTheme = null;
-            if (parseNode.GetChildNode("colors") is { } nullNodeColors && nullNodeColors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Colors = null;
-            if (parseNode.GetChildNode("gradient_angle") is { } nullNodeGradientAngle && nullNodeGradientAngle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GradientAngle = null;
+            if (parseNode.GetChildNode("base_mix") is null) { _explicitNullValueBaseMix = default!; _explicitNullProperties?.Remove("base_mix"); }
+            else if (parseNode.GetChildNode("base_mix") is { } nullNodeBaseMix && nullNodeBaseMix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseMix = null;
+            if (parseNode.GetChildNode("base_theme") is null) { _explicitNullValueBaseTheme = default!; _explicitNullProperties?.Remove("base_theme"); }
+            else if (parseNode.GetChildNode("base_theme") is { } nullNodeBaseTheme && nullNodeBaseTheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseTheme = null;
+            if (parseNode.GetChildNode("colors") is null) { _explicitNullValueColors = default!; _explicitNullProperties?.Remove("colors"); }
+            else if (parseNode.GetChildNode("colors") is { } nullNodeColors && nullNodeColors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Colors = null;
+            if (parseNode.GetChildNode("gradient_angle") is null) { _explicitNullValueGradientAngle = default!; _explicitNullProperties?.Remove("gradient_angle"); }
+            else if (parseNode.GetChildNode("gradient_angle") is { } nullNodeGradientAngle && nullNodeGradientAngle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GradientAngle = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The base_mix property</summary>
-        public int? BaseMix { get => _explicitNullValueBaseMix; set { _explicitNullValueBaseMix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_mix"); else _explicitNullProperties?.Remove("base_mix"); } }
+        public int? BaseMix { get => _explicitNullValueBaseMix; set { _explicitNullValueBaseMix = value; AdditionalData?.Remove("base_mix"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_mix"); else _explicitNullProperties?.Remove("base_mix"); } }
         private int? _explicitNullValueBaseMix = default!;
         /// <summary>The base_theme property</summary>
-        public int? BaseTheme { get => _explicitNullValueBaseTheme; set { _explicitNullValueBaseTheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_theme"); else _explicitNullProperties?.Remove("base_theme"); } }
+        public int? BaseTheme { get => _explicitNullValueBaseTheme; set { _explicitNullValueBaseTheme = value; AdditionalData?.Remove("base_theme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_theme"); else _explicitNullProperties?.Remove("base_theme"); } }
         private int? _explicitNullValueBaseTheme = default!;
         /// <summary>The colors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
+        public List<string>? Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; AdditionalData?.Remove("colors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
         private List<string>? _explicitNullValueColors = default!;
 #nullable restore
 #else
-        public List<string> Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
+        public List<string> Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; AdditionalData?.Remove("colors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
         private List<string> _explicitNullValueColors = default!;
 #endif
         /// <summary>The gradient_angle property</summary>
-        public int? GradientAngle { get => _explicitNullValueGradientAngle; set { _explicitNullValueGradientAngle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gradient_angle"); else _explicitNullProperties?.Remove("gradient_angle"); } }
+        public int? GradientAngle { get => _explicitNullValueGradientAngle; set { _explicitNullValueGradientAngle = value; AdditionalData?.Remove("gradient_angle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gradient_angle"); else _explicitNullProperties?.Remove("gradient_angle"); } }
         private int? _explicitNullValueGradientAngle = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeResponse"/> and sets the default values.

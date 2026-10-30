@@ -8,25 +8,29 @@ namespace Soenneker.Discord.OpenApiClient.Models
     public enum ApplicationFormPartialEventWebhooksTypesItem
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "APPLICATION_AUTHORIZED")]
-        #pragma warning disable CS1591
-        ApplicationAuthorized,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "APPLICATION_DEAUTHORIZED")]
-        #pragma warning disable CS1591
-        ApplicationDeauthorized,
-        #pragma warning restore CS1591
         [EnumMember(Value = "ENTITLEMENT_CREATE")]
         #pragma warning disable CS1591
         EntitlementCreate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "ENTITLEMENT_UPDATE")]
+        #pragma warning disable CS1591
+        EntitlementUpdate,
         #pragma warning restore CS1591
         [EnumMember(Value = "ENTITLEMENT_DELETE")]
         #pragma warning disable CS1591
         EntitlementDelete,
         #pragma warning restore CS1591
-        [EnumMember(Value = "ENTITLEMENT_UPDATE")]
+        [EnumMember(Value = "LOBBY_MESSAGE_CREATE")]
         #pragma warning disable CS1591
-        EntitlementUpdate,
+        LobbyMessageCreate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "LOBBY_MESSAGE_UPDATE")]
+        #pragma warning disable CS1591
+        LobbyMessageUpdate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "LOBBY_MESSAGE_DELETE")]
+        #pragma warning disable CS1591
+        LobbyMessageDelete,
         #pragma warning restore CS1591
         [EnumMember(Value = "GAME_DIRECT_MESSAGE_CREATE")]
         #pragma warning disable CS1591
@@ -40,17 +44,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         #pragma warning disable CS1591
         GameDirectMessageUpdate,
         #pragma warning restore CS1591
-        [EnumMember(Value = "LOBBY_MESSAGE_CREATE")]
+        [EnumMember(Value = "APPLICATION_AUTHORIZED")]
         #pragma warning disable CS1591
-        LobbyMessageCreate,
+        ApplicationAuthorized,
         #pragma warning restore CS1591
-        [EnumMember(Value = "LOBBY_MESSAGE_DELETE")]
+        [EnumMember(Value = "APPLICATION_DEAUTHORIZED")]
         #pragma warning disable CS1591
-        LobbyMessageDelete,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "LOBBY_MESSAGE_UPDATE")]
-        #pragma warning disable CS1591
-        LobbyMessageUpdate,
+        ApplicationDeauthorized,
         #pragma warning restore CS1591
         [EnumMember(Value = "QUEST_USER_ENROLLMENT")]
         #pragma warning disable CS1591

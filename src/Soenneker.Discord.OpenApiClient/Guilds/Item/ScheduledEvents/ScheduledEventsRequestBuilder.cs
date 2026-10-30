@@ -46,18 +46,18 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents
         public ScheduledEventsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/guilds/{guildId}/scheduled-events{?with_user_count*}", rawUrl)
         {
         }
-        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.ListGuildScheduledEvents200ResponseItem&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent200Response&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.RatelimitedResponse">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse">When receiving a 4XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Models.ListGuildScheduledEvents200ResponseItem>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent200Response>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Discord.OpenApiClient.Models.ListGuildScheduledEvents200ResponseItem>> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent200Response>> GetAsync(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -67,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents
                 { "4XX", global::Soenneker.Discord.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Models.ListGuildScheduledEvents200ResponseItem>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.ListGuildScheduledEvents200ResponseItem.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent200Response>(requestInfo, global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateGuildScheduledEvent200Response"/></returns>
@@ -106,7 +106,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.ScheduledEventsRequestBuilder.ScheduledEventsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://discord.com/api/v10", "/guilds/{guildId}/scheduled-events", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -124,7 +124,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://discord.com/api/v10", "/guilds/{guildId}/scheduled-events", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -17,8 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("interaction") is { } nullNodeInteraction && nullNodeInteraction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interaction = null;
-            if (parseNode.GetChildNode("resource") is { } nullNodeResource && nullNodeResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resource = null;
+            if (parseNode.GetChildNode("interaction") is null) { _explicitNullValueInteraction = default!; _explicitNullProperties?.Remove("interaction"); }
+            else if (parseNode.GetChildNode("interaction") is { } nullNodeInteraction && nullNodeInteraction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interaction = null;
+            if (parseNode.GetChildNode("resource") is null) { _explicitNullValueResource = default!; _explicitNullProperties?.Remove("resource"); }
+            else if (parseNode.GetChildNode("resource") is { } nullNodeResource && nullNodeResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resource = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The interaction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.InteractionResponse? Interaction { get => _explicitNullValueInteraction; set { _explicitNullValueInteraction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interaction"); else _explicitNullProperties?.Remove("interaction"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.InteractionResponse? Interaction { get => _explicitNullValueInteraction; set { _explicitNullValueInteraction = value; AdditionalData?.Remove("interaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interaction"); else _explicitNullProperties?.Remove("interaction"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.InteractionResponse? _explicitNullValueInteraction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.InteractionResponse Interaction { get => _explicitNullValueInteraction; set { _explicitNullValueInteraction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interaction"); else _explicitNullProperties?.Remove("interaction"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.InteractionResponse Interaction { get => _explicitNullValueInteraction; set { _explicitNullValueInteraction = value; AdditionalData?.Remove("interaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interaction"); else _explicitNullProperties?.Remove("interaction"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.InteractionResponse _explicitNullValueInteraction = default!;
 #endif
         /// <summary>The resource property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponseResource? Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponseResource? Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; AdditionalData?.Remove("resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponseResource? _explicitNullValueResource = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponseResource Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponseResource Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; AdditionalData?.Remove("resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.InteractionCallbackResponseResource _explicitNullValueResource = default!;
 #endif
         /// <summary>

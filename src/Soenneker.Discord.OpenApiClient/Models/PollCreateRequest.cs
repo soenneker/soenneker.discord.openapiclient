@@ -17,49 +17,54 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allow_multiselect") is { } nullNodeAllowMultiselect && nullNodeAllowMultiselect.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowMultiselect = null;
-            if (parseNode.GetChildNode("answers") is { } nullNodeAnswers && nullNodeAnswers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Answers = null;
-            if (parseNode.GetChildNode("duration") is { } nullNodeDuration && nullNodeDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duration = null;
-            if (parseNode.GetChildNode("layout_type") is { } nullNodeLayoutType && nullNodeLayoutType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LayoutType = null;
-            if (parseNode.GetChildNode("question") is { } nullNodeQuestion && nullNodeQuestion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Question = null;
+            if (parseNode.GetChildNode("allow_multiselect") is null) { _explicitNullValueAllowMultiselect = default!; _explicitNullProperties?.Remove("allow_multiselect"); }
+            else if (parseNode.GetChildNode("allow_multiselect") is { } nullNodeAllowMultiselect && nullNodeAllowMultiselect.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowMultiselect = null;
+            if (parseNode.GetChildNode("answers") is null) { _explicitNullValueAnswers = default!; _explicitNullProperties?.Remove("answers"); }
+            else if (parseNode.GetChildNode("answers") is { } nullNodeAnswers && nullNodeAnswers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Answers = null;
+            if (parseNode.GetChildNode("duration") is null) { _explicitNullValueDuration = default!; _explicitNullProperties?.Remove("duration"); }
+            else if (parseNode.GetChildNode("duration") is { } nullNodeDuration && nullNodeDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duration = null;
+            if (parseNode.GetChildNode("layout_type") is null) { _explicitNullValueLayoutType = default!; _explicitNullProperties?.Remove("layout_type"); }
+            else if (parseNode.GetChildNode("layout_type") is { } nullNodeLayoutType && nullNodeLayoutType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LayoutType = null;
+            if (parseNode.GetChildNode("question") is null) { _explicitNullValueQuestion = default!; _explicitNullProperties?.Remove("question"); }
+            else if (parseNode.GetChildNode("question") is { } nullNodeQuestion && nullNodeQuestion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Question = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether a user can select multiple answers</summary>
-        public bool? AllowMultiselect { get => _explicitNullValueAllowMultiselect; set { _explicitNullValueAllowMultiselect = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_multiselect"); else _explicitNullProperties?.Remove("allow_multiselect"); } }
+        public bool? AllowMultiselect { get => _explicitNullValueAllowMultiselect; set { _explicitNullValueAllowMultiselect = value; AdditionalData?.Remove("allow_multiselect"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_multiselect"); else _explicitNullProperties?.Remove("allow_multiselect"); } }
         private bool? _explicitNullValueAllowMultiselect = default!;
         /// <summary>Each of the answers available in the poll, up to 10</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>? Answers { get => _explicitNullValueAnswers; set { _explicitNullValueAnswers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answers"); else _explicitNullProperties?.Remove("answers"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>? Answers { get => _explicitNullValueAnswers; set { _explicitNullValueAnswers = value; AdditionalData?.Remove("answers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answers"); else _explicitNullProperties?.Remove("answers"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest>? _explicitNullValueAnswers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest> Answers { get => _explicitNullValueAnswers; set { _explicitNullValueAnswers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answers"); else _explicitNullProperties?.Remove("answers"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest> Answers { get => _explicitNullValueAnswers; set { _explicitNullValueAnswers = value; AdditionalData?.Remove("answers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answers"); else _explicitNullProperties?.Remove("answers"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerCreateRequest> _explicitNullValueAnswers = default!;
 #endif
         /// <summary>Number of hours the poll should be open for, up to 32 days. Defaults to 24</summary>
-        public int? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
+        public int? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; AdditionalData?.Remove("duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
         private int? _explicitNullValueDuration = default!;
         /// <summary>The layout type of the poll. Defaults to... DEFAULT!</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes? LayoutType { get => _explicitNullValueLayoutType; set { _explicitNullValueLayoutType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout_type"); else _explicitNullProperties?.Remove("layout_type"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes? LayoutType { get => _explicitNullValueLayoutType; set { _explicitNullValueLayoutType = value; AdditionalData?.Remove("layout_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout_type"); else _explicitNullProperties?.Remove("layout_type"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes? _explicitNullValueLayoutType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes LayoutType { get => _explicitNullValueLayoutType; set { _explicitNullValueLayoutType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout_type"); else _explicitNullProperties?.Remove("layout_type"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes LayoutType { get => _explicitNullValueLayoutType; set { _explicitNullValueLayoutType = value; AdditionalData?.Remove("layout_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout_type"); else _explicitNullProperties?.Remove("layout_type"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.PollLayoutTypes _explicitNullValueLayoutType = default!;
 #endif
         /// <summary>The question of the poll. Only `text` is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollMedia? Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("question"); else _explicitNullProperties?.Remove("question"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollMedia? Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; AdditionalData?.Remove("question"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("question"); else _explicitNullProperties?.Remove("question"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.PollMedia? _explicitNullValueQuestion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollMedia Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("question"); else _explicitNullProperties?.Remove("question"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.PollMedia Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; AdditionalData?.Remove("question"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("question"); else _explicitNullProperties?.Remove("question"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.PollMedia _explicitNullValueQuestion = default!;
 #endif
         /// <summary>

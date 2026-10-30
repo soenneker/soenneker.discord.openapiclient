@@ -17,9 +17,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("external_user_id") is { } nullNodeExternalUserId && nullNodeExternalUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalUserId = null;
-            if (parseNode.GetChildNode("preferred_global_name") is { } nullNodePreferredGlobalName && nullNodePreferredGlobalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredGlobalName = null;
-            if (parseNode.GetChildNode("provisional_user_id") is { } nullNodeProvisionalUserId && nullNodeProvisionalUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProvisionalUserId = null;
+            if (parseNode.GetChildNode("external_user_id") is null) { _explicitNullValueExternalUserId = default!; _explicitNullProperties?.Remove("external_user_id"); }
+            else if (parseNode.GetChildNode("external_user_id") is { } nullNodeExternalUserId && nullNodeExternalUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalUserId = null;
+            if (parseNode.GetChildNode("preferred_global_name") is null) { _explicitNullValuePreferredGlobalName = default!; _explicitNullProperties?.Remove("preferred_global_name"); }
+            else if (parseNode.GetChildNode("preferred_global_name") is { } nullNodePreferredGlobalName && nullNodePreferredGlobalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredGlobalName = null;
+            if (parseNode.GetChildNode("provisional_user_id") is null) { _explicitNullValueProvisionalUserId = default!; _explicitNullProperties?.Remove("provisional_user_id"); }
+            else if (parseNode.GetChildNode("provisional_user_id") is { } nullNodeProvisionalUserId && nullNodeProvisionalUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProvisionalUserId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The external_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalUserId { get => _explicitNullValueExternalUserId; set { _explicitNullValueExternalUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_user_id"); else _explicitNullProperties?.Remove("external_user_id"); } }
+        public string? ExternalUserId { get => _explicitNullValueExternalUserId; set { _explicitNullValueExternalUserId = value; AdditionalData?.Remove("external_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_user_id"); else _explicitNullProperties?.Remove("external_user_id"); } }
         private string? _explicitNullValueExternalUserId = default!;
 #nullable restore
 #else
-        public string ExternalUserId { get => _explicitNullValueExternalUserId; set { _explicitNullValueExternalUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_user_id"); else _explicitNullProperties?.Remove("external_user_id"); } }
+        public string ExternalUserId { get => _explicitNullValueExternalUserId; set { _explicitNullValueExternalUserId = value; AdditionalData?.Remove("external_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_user_id"); else _explicitNullProperties?.Remove("external_user_id"); } }
         private string _explicitNullValueExternalUserId = default!;
 #endif
         /// <summary>The preferred_global_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreferredGlobalName { get => _explicitNullValuePreferredGlobalName; set { _explicitNullValuePreferredGlobalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_global_name"); else _explicitNullProperties?.Remove("preferred_global_name"); } }
+        public string? PreferredGlobalName { get => _explicitNullValuePreferredGlobalName; set { _explicitNullValuePreferredGlobalName = value; AdditionalData?.Remove("preferred_global_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_global_name"); else _explicitNullProperties?.Remove("preferred_global_name"); } }
         private string? _explicitNullValuePreferredGlobalName = default!;
 #nullable restore
 #else
-        public string PreferredGlobalName { get => _explicitNullValuePreferredGlobalName; set { _explicitNullValuePreferredGlobalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_global_name"); else _explicitNullProperties?.Remove("preferred_global_name"); } }
+        public string PreferredGlobalName { get => _explicitNullValuePreferredGlobalName; set { _explicitNullValuePreferredGlobalName = value; AdditionalData?.Remove("preferred_global_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_global_name"); else _explicitNullProperties?.Remove("preferred_global_name"); } }
         private string _explicitNullValuePreferredGlobalName = default!;
 #endif
         /// <summary>The provisional_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProvisionalUserId { get => _explicitNullValueProvisionalUserId; set { _explicitNullValueProvisionalUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provisional_user_id"); else _explicitNullProperties?.Remove("provisional_user_id"); } }
+        public string? ProvisionalUserId { get => _explicitNullValueProvisionalUserId; set { _explicitNullValueProvisionalUserId = value; AdditionalData?.Remove("provisional_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provisional_user_id"); else _explicitNullProperties?.Remove("provisional_user_id"); } }
         private string? _explicitNullValueProvisionalUserId = default!;
 #nullable restore
 #else
-        public string ProvisionalUserId { get => _explicitNullValueProvisionalUserId; set { _explicitNullValueProvisionalUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provisional_user_id"); else _explicitNullProperties?.Remove("provisional_user_id"); } }
+        public string ProvisionalUserId { get => _explicitNullValueProvisionalUserId; set { _explicitNullValueProvisionalUserId = value; AdditionalData?.Remove("provisional_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provisional_user_id"); else _explicitNullProperties?.Remove("provisional_user_id"); } }
         private string _explicitNullValueProvisionalUserId = default!;
 #endif
         /// <summary>

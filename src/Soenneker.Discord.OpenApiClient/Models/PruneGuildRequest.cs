@@ -17,27 +17,30 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("compute_prune_count") is { } nullNodeComputePruneCount && nullNodeComputePruneCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComputePruneCount = null;
-            if (parseNode.GetChildNode("days") is { } nullNodeDays && nullNodeDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Days = null;
-            if (parseNode.GetChildNode("include_roles") is { } nullNodeIncludeRoles && nullNodeIncludeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeRoles = null;
+            if (parseNode.GetChildNode("compute_prune_count") is null) { _explicitNullValueComputePruneCount = default!; _explicitNullProperties?.Remove("compute_prune_count"); }
+            else if (parseNode.GetChildNode("compute_prune_count") is { } nullNodeComputePruneCount && nullNodeComputePruneCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComputePruneCount = null;
+            if (parseNode.GetChildNode("days") is null) { _explicitNullValueDays = default!; _explicitNullProperties?.Remove("days"); }
+            else if (parseNode.GetChildNode("days") is { } nullNodeDays && nullNodeDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Days = null;
+            if (parseNode.GetChildNode("include_roles") is null) { _explicitNullValueIncludeRoles = default!; _explicitNullProperties?.Remove("include_roles"); }
+            else if (parseNode.GetChildNode("include_roles") is { } nullNodeIncludeRoles && nullNodeIncludeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeRoles = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The compute_prune_count property</summary>
-        public bool? ComputePruneCount { get => _explicitNullValueComputePruneCount; set { _explicitNullValueComputePruneCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compute_prune_count"); else _explicitNullProperties?.Remove("compute_prune_count"); } }
+        public bool? ComputePruneCount { get => _explicitNullValueComputePruneCount; set { _explicitNullValueComputePruneCount = value; AdditionalData?.Remove("compute_prune_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compute_prune_count"); else _explicitNullProperties?.Remove("compute_prune_count"); } }
         private bool? _explicitNullValueComputePruneCount = default!;
         /// <summary>The days property</summary>
-        public int? Days { get => _explicitNullValueDays; set { _explicitNullValueDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days"); else _explicitNullProperties?.Remove("days"); } }
+        public int? Days { get => _explicitNullValueDays; set { _explicitNullValueDays = value; AdditionalData?.Remove("days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days"); else _explicitNullProperties?.Remove("days"); } }
         private int? _explicitNullValueDays = default!;
         /// <summary>The include_roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles? IncludeRoles { get => _explicitNullValueIncludeRoles; set { _explicitNullValueIncludeRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_roles"); else _explicitNullProperties?.Remove("include_roles"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles? IncludeRoles { get => _explicitNullValueIncludeRoles; set { _explicitNullValueIncludeRoles = value; AdditionalData?.Remove("include_roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_roles"); else _explicitNullProperties?.Remove("include_roles"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles? _explicitNullValueIncludeRoles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles IncludeRoles { get => _explicitNullValueIncludeRoles; set { _explicitNullValueIncludeRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_roles"); else _explicitNullProperties?.Remove("include_roles"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles IncludeRoles { get => _explicitNullValueIncludeRoles; set { _explicitNullValueIncludeRoles = value; AdditionalData?.Remove("include_roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_roles"); else _explicitNullProperties?.Remove("include_roles"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.PruneGuildRequestIncludeRoles _explicitNullValueIncludeRoles = default!;
 #endif
         /// <summary>

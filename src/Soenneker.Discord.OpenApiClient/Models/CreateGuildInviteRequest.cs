@@ -17,80 +17,89 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("max_age") is { } nullNodeMaxAge && nullNodeMaxAge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxAge = null;
-            if (parseNode.GetChildNode("max_uses") is { } nullNodeMaxUses && nullNodeMaxUses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxUses = null;
-            if (parseNode.GetChildNode("role_ids") is { } nullNodeRoleIds && nullNodeRoleIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleIds = null;
-            if (parseNode.GetChildNode("target_application_id") is { } nullNodeTargetApplicationId && nullNodeTargetApplicationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetApplicationId = null;
-            if (parseNode.GetChildNode("target_type") is { } nullNodeTargetType && nullNodeTargetType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetType = null;
-            if (parseNode.GetChildNode("target_user_id") is { } nullNodeTargetUserId && nullNodeTargetUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetUserId = null;
-            if (parseNode.GetChildNode("target_user_ids") is { } nullNodeTargetUserIds && nullNodeTargetUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetUserIds = null;
-            if (parseNode.GetChildNode("temporary") is { } nullNodeTemporary && nullNodeTemporary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Temporary = null;
-            if (parseNode.GetChildNode("unique") is { } nullNodeUnique && nullNodeUnique.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unique = null;
+            if (parseNode.GetChildNode("max_age") is null) { _explicitNullValueMaxAge = default!; _explicitNullProperties?.Remove("max_age"); }
+            else if (parseNode.GetChildNode("max_age") is { } nullNodeMaxAge && nullNodeMaxAge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxAge = null;
+            if (parseNode.GetChildNode("max_uses") is null) { _explicitNullValueMaxUses = default!; _explicitNullProperties?.Remove("max_uses"); }
+            else if (parseNode.GetChildNode("max_uses") is { } nullNodeMaxUses && nullNodeMaxUses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxUses = null;
+            if (parseNode.GetChildNode("role_ids") is null) { _explicitNullValueRoleIds = default!; _explicitNullProperties?.Remove("role_ids"); }
+            else if (parseNode.GetChildNode("role_ids") is { } nullNodeRoleIds && nullNodeRoleIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleIds = null;
+            if (parseNode.GetChildNode("target_application_id") is null) { _explicitNullValueTargetApplicationId = default!; _explicitNullProperties?.Remove("target_application_id"); }
+            else if (parseNode.GetChildNode("target_application_id") is { } nullNodeTargetApplicationId && nullNodeTargetApplicationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetApplicationId = null;
+            if (parseNode.GetChildNode("target_type") is null) { _explicitNullValueTargetType = default!; _explicitNullProperties?.Remove("target_type"); }
+            else if (parseNode.GetChildNode("target_type") is { } nullNodeTargetType && nullNodeTargetType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetType = null;
+            if (parseNode.GetChildNode("target_user_id") is null) { _explicitNullValueTargetUserId = default!; _explicitNullProperties?.Remove("target_user_id"); }
+            else if (parseNode.GetChildNode("target_user_id") is { } nullNodeTargetUserId && nullNodeTargetUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetUserId = null;
+            if (parseNode.GetChildNode("target_user_ids") is null) { _explicitNullValueTargetUserIds = default!; _explicitNullProperties?.Remove("target_user_ids"); }
+            else if (parseNode.GetChildNode("target_user_ids") is { } nullNodeTargetUserIds && nullNodeTargetUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetUserIds = null;
+            if (parseNode.GetChildNode("temporary") is null) { _explicitNullValueTemporary = default!; _explicitNullProperties?.Remove("temporary"); }
+            else if (parseNode.GetChildNode("temporary") is { } nullNodeTemporary && nullNodeTemporary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Temporary = null;
+            if (parseNode.GetChildNode("unique") is null) { _explicitNullValueUnique = default!; _explicitNullProperties?.Remove("unique"); }
+            else if (parseNode.GetChildNode("unique") is { } nullNodeUnique && nullNodeUnique.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unique = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The max_age property</summary>
-        public int? MaxAge { get => _explicitNullValueMaxAge; set { _explicitNullValueMaxAge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_age"); else _explicitNullProperties?.Remove("max_age"); } }
+        public int? MaxAge { get => _explicitNullValueMaxAge; set { _explicitNullValueMaxAge = value; AdditionalData?.Remove("max_age"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_age"); else _explicitNullProperties?.Remove("max_age"); } }
         private int? _explicitNullValueMaxAge = default!;
         /// <summary>The max_uses property</summary>
-        public int? MaxUses { get => _explicitNullValueMaxUses; set { _explicitNullValueMaxUses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_uses"); else _explicitNullProperties?.Remove("max_uses"); } }
+        public int? MaxUses { get => _explicitNullValueMaxUses; set { _explicitNullValueMaxUses = value; AdditionalData?.Remove("max_uses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_uses"); else _explicitNullProperties?.Remove("max_uses"); } }
         private int? _explicitNullValueMaxUses = default!;
         /// <summary>The role_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds? RoleIds { get => _explicitNullValueRoleIds; set { _explicitNullValueRoleIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_ids"); else _explicitNullProperties?.Remove("role_ids"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds? RoleIds { get => _explicitNullValueRoleIds; set { _explicitNullValueRoleIds = value; AdditionalData?.Remove("role_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_ids"); else _explicitNullProperties?.Remove("role_ids"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds? _explicitNullValueRoleIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds RoleIds { get => _explicitNullValueRoleIds; set { _explicitNullValueRoleIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_ids"); else _explicitNullProperties?.Remove("role_ids"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds RoleIds { get => _explicitNullValueRoleIds; set { _explicitNullValueRoleIds = value; AdditionalData?.Remove("role_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role_ids"); else _explicitNullProperties?.Remove("role_ids"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestRoleIds _explicitNullValueRoleIds = default!;
 #endif
         /// <summary>The target_application_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetApplicationId { get => _explicitNullValueTargetApplicationId; set { _explicitNullValueTargetApplicationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_application_id"); else _explicitNullProperties?.Remove("target_application_id"); } }
+        public string? TargetApplicationId { get => _explicitNullValueTargetApplicationId; set { _explicitNullValueTargetApplicationId = value; AdditionalData?.Remove("target_application_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_application_id"); else _explicitNullProperties?.Remove("target_application_id"); } }
         private string? _explicitNullValueTargetApplicationId = default!;
 #nullable restore
 #else
-        public string TargetApplicationId { get => _explicitNullValueTargetApplicationId; set { _explicitNullValueTargetApplicationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_application_id"); else _explicitNullProperties?.Remove("target_application_id"); } }
+        public string TargetApplicationId { get => _explicitNullValueTargetApplicationId; set { _explicitNullValueTargetApplicationId = value; AdditionalData?.Remove("target_application_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_application_id"); else _explicitNullProperties?.Remove("target_application_id"); } }
         private string _explicitNullValueTargetApplicationId = default!;
 #endif
         /// <summary>The target_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2? TargetType { get => _explicitNullValueTargetType; set { _explicitNullValueTargetType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_type"); else _explicitNullProperties?.Remove("target_type"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2? TargetType { get => _explicitNullValueTargetType; set { _explicitNullValueTargetType = value; AdditionalData?.Remove("target_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_type"); else _explicitNullProperties?.Remove("target_type"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2? _explicitNullValueTargetType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2 TargetType { get => _explicitNullValueTargetType; set { _explicitNullValueTargetType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_type"); else _explicitNullProperties?.Remove("target_type"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2 TargetType { get => _explicitNullValueTargetType; set { _explicitNullValueTargetType = value; AdditionalData?.Remove("target_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_type"); else _explicitNullProperties?.Remove("target_type"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetTypeOneOf2 _explicitNullValueTargetType = default!;
 #endif
         /// <summary>The target_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetUserId { get => _explicitNullValueTargetUserId; set { _explicitNullValueTargetUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_id"); else _explicitNullProperties?.Remove("target_user_id"); } }
+        public string? TargetUserId { get => _explicitNullValueTargetUserId; set { _explicitNullValueTargetUserId = value; AdditionalData?.Remove("target_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_id"); else _explicitNullProperties?.Remove("target_user_id"); } }
         private string? _explicitNullValueTargetUserId = default!;
 #nullable restore
 #else
-        public string TargetUserId { get => _explicitNullValueTargetUserId; set { _explicitNullValueTargetUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_id"); else _explicitNullProperties?.Remove("target_user_id"); } }
+        public string TargetUserId { get => _explicitNullValueTargetUserId; set { _explicitNullValueTargetUserId = value; AdditionalData?.Remove("target_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_id"); else _explicitNullProperties?.Remove("target_user_id"); } }
         private string _explicitNullValueTargetUserId = default!;
 #endif
         /// <summary>The IDs of the users to target with this invite.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds? TargetUserIds { get => _explicitNullValueTargetUserIds; set { _explicitNullValueTargetUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_ids"); else _explicitNullProperties?.Remove("target_user_ids"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds? TargetUserIds { get => _explicitNullValueTargetUserIds; set { _explicitNullValueTargetUserIds = value; AdditionalData?.Remove("target_user_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_ids"); else _explicitNullProperties?.Remove("target_user_ids"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds? _explicitNullValueTargetUserIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds TargetUserIds { get => _explicitNullValueTargetUserIds; set { _explicitNullValueTargetUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_ids"); else _explicitNullProperties?.Remove("target_user_ids"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds TargetUserIds { get => _explicitNullValueTargetUserIds; set { _explicitNullValueTargetUserIds = value; AdditionalData?.Remove("target_user_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user_ids"); else _explicitNullProperties?.Remove("target_user_ids"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequestTargetUserIds _explicitNullValueTargetUserIds = default!;
 #endif
         /// <summary>The temporary property</summary>
-        public bool? Temporary { get => _explicitNullValueTemporary; set { _explicitNullValueTemporary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temporary"); else _explicitNullProperties?.Remove("temporary"); } }
+        public bool? Temporary { get => _explicitNullValueTemporary; set { _explicitNullValueTemporary = value; AdditionalData?.Remove("temporary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temporary"); else _explicitNullProperties?.Remove("temporary"); } }
         private bool? _explicitNullValueTemporary = default!;
         /// <summary>The unique property</summary>
-        public bool? Unique { get => _explicitNullValueUnique; set { _explicitNullValueUnique = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique"); else _explicitNullProperties?.Remove("unique"); } }
+        public bool? Unique { get => _explicitNullValueUnique; set { _explicitNullValueUnique = value; AdditionalData?.Remove("unique"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique"); else _explicitNullProperties?.Remove("unique"); } }
         private bool? _explicitNullValueUnique = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.CreateGuildInviteRequest"/> and sets the default values.

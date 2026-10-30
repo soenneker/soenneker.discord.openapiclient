@@ -17,17 +17,19 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dms_disabled_until") is { } nullNodeDmsDisabledUntil && nullNodeDmsDisabledUntil.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DmsDisabledUntil = null;
-            if (parseNode.GetChildNode("invites_disabled_until") is { } nullNodeInvitesDisabledUntil && nullNodeInvitesDisabledUntil.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitesDisabledUntil = null;
+            if (parseNode.GetChildNode("dms_disabled_until") is null) { _explicitNullValueDmsDisabledUntil = default!; _explicitNullProperties?.Remove("dms_disabled_until"); }
+            else if (parseNode.GetChildNode("dms_disabled_until") is { } nullNodeDmsDisabledUntil && nullNodeDmsDisabledUntil.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DmsDisabledUntil = null;
+            if (parseNode.GetChildNode("invites_disabled_until") is null) { _explicitNullValueInvitesDisabledUntil = default!; _explicitNullProperties?.Remove("invites_disabled_until"); }
+            else if (parseNode.GetChildNode("invites_disabled_until") is { } nullNodeInvitesDisabledUntil && nullNodeInvitesDisabledUntil.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitesDisabledUntil = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When direct messages get enabled again</summary>
-        public DateTimeOffset? DmsDisabledUntil { get => _explicitNullValueDmsDisabledUntil; set { _explicitNullValueDmsDisabledUntil = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dms_disabled_until"); else _explicitNullProperties?.Remove("dms_disabled_until"); } }
+        public DateTimeOffset? DmsDisabledUntil { get => _explicitNullValueDmsDisabledUntil; set { _explicitNullValueDmsDisabledUntil = value; AdditionalData?.Remove("dms_disabled_until"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dms_disabled_until"); else _explicitNullProperties?.Remove("dms_disabled_until"); } }
         private DateTimeOffset? _explicitNullValueDmsDisabledUntil = default!;
         /// <summary>When invites get enabled again</summary>
-        public DateTimeOffset? InvitesDisabledUntil { get => _explicitNullValueInvitesDisabledUntil; set { _explicitNullValueInvitesDisabledUntil = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invites_disabled_until"); else _explicitNullProperties?.Remove("invites_disabled_until"); } }
+        public DateTimeOffset? InvitesDisabledUntil { get => _explicitNullValueInvitesDisabledUntil; set { _explicitNullValueInvitesDisabledUntil = value; AdditionalData?.Remove("invites_disabled_until"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invites_disabled_until"); else _explicitNullProperties?.Remove("invites_disabled_until"); } }
         private DateTimeOffset? _explicitNullValueInvitesDisabledUntil = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse"/> and sets the default values.

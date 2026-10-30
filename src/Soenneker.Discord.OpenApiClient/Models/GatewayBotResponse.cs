@@ -17,9 +17,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("session_start_limit") is { } nullNodeSessionStartLimit && nullNodeSessionStartLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionStartLimit = null;
-            if (parseNode.GetChildNode("shards") is { } nullNodeShards && nullNodeShards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shards = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("session_start_limit") is null) { _explicitNullValueSessionStartLimit = default!; _explicitNullProperties?.Remove("session_start_limit"); }
+            else if (parseNode.GetChildNode("session_start_limit") is { } nullNodeSessionStartLimit && nullNodeSessionStartLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionStartLimit = null;
+            if (parseNode.GetChildNode("shards") is null) { _explicitNullValueShards = default!; _explicitNullProperties?.Remove("shards"); }
+            else if (parseNode.GetChildNode("shards") is { } nullNodeShards && nullNodeShards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shards = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The session_start_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GatewayBotSessionStartLimitResponse? SessionStartLimit { get => _explicitNullValueSessionStartLimit; set { _explicitNullValueSessionStartLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_start_limit"); else _explicitNullProperties?.Remove("session_start_limit"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.GatewayBotSessionStartLimitResponse? SessionStartLimit { get => _explicitNullValueSessionStartLimit; set { _explicitNullValueSessionStartLimit = value; AdditionalData?.Remove("session_start_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_start_limit"); else _explicitNullProperties?.Remove("session_start_limit"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.GatewayBotSessionStartLimitResponse? _explicitNullValueSessionStartLimit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GatewayBotSessionStartLimitResponse SessionStartLimit { get => _explicitNullValueSessionStartLimit; set { _explicitNullValueSessionStartLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_start_limit"); else _explicitNullProperties?.Remove("session_start_limit"); } }
+        public global::Soenneker.Discord.OpenApiClient.Models.GatewayBotSessionStartLimitResponse SessionStartLimit { get => _explicitNullValueSessionStartLimit; set { _explicitNullValueSessionStartLimit = value; AdditionalData?.Remove("session_start_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_start_limit"); else _explicitNullProperties?.Remove("session_start_limit"); } }
         private global::Soenneker.Discord.OpenApiClient.Models.GatewayBotSessionStartLimitResponse _explicitNullValueSessionStartLimit = default!;
 #endif
         /// <summary>The shards property</summary>
-        public int? Shards { get => _explicitNullValueShards; set { _explicitNullValueShards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shards"); else _explicitNullProperties?.Remove("shards"); } }
+        public int? Shards { get => _explicitNullValueShards; set { _explicitNullValueShards = value; AdditionalData?.Remove("shards"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shards"); else _explicitNullProperties?.Remove("shards"); } }
         private int? _explicitNullValueShards = default!;
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

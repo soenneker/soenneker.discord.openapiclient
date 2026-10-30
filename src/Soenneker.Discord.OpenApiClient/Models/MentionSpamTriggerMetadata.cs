@@ -17,17 +17,19 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("mention_raid_protection_enabled") is { } nullNodeMentionRaidProtectionEnabled && nullNodeMentionRaidProtectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MentionRaidProtectionEnabled = null;
-            if (parseNode.GetChildNode("mention_total_limit") is { } nullNodeMentionTotalLimit && nullNodeMentionTotalLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MentionTotalLimit = null;
+            if (parseNode.GetChildNode("mention_raid_protection_enabled") is null) { _explicitNullValueMentionRaidProtectionEnabled = default!; _explicitNullProperties?.Remove("mention_raid_protection_enabled"); }
+            else if (parseNode.GetChildNode("mention_raid_protection_enabled") is { } nullNodeMentionRaidProtectionEnabled && nullNodeMentionRaidProtectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MentionRaidProtectionEnabled = null;
+            if (parseNode.GetChildNode("mention_total_limit") is null) { _explicitNullValueMentionTotalLimit = default!; _explicitNullProperties?.Remove("mention_total_limit"); }
+            else if (parseNode.GetChildNode("mention_total_limit") is { } nullNodeMentionTotalLimit && nullNodeMentionTotalLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MentionTotalLimit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The mention_raid_protection_enabled property</summary>
-        public bool? MentionRaidProtectionEnabled { get => _explicitNullValueMentionRaidProtectionEnabled; set { _explicitNullValueMentionRaidProtectionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mention_raid_protection_enabled"); else _explicitNullProperties?.Remove("mention_raid_protection_enabled"); } }
+        public bool? MentionRaidProtectionEnabled { get => _explicitNullValueMentionRaidProtectionEnabled; set { _explicitNullValueMentionRaidProtectionEnabled = value; AdditionalData?.Remove("mention_raid_protection_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mention_raid_protection_enabled"); else _explicitNullProperties?.Remove("mention_raid_protection_enabled"); } }
         private bool? _explicitNullValueMentionRaidProtectionEnabled = default!;
         /// <summary>The mention_total_limit property</summary>
-        public int? MentionTotalLimit { get => _explicitNullValueMentionTotalLimit; set { _explicitNullValueMentionTotalLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mention_total_limit"); else _explicitNullProperties?.Remove("mention_total_limit"); } }
+        public int? MentionTotalLimit { get => _explicitNullValueMentionTotalLimit; set { _explicitNullValueMentionTotalLimit = value; AdditionalData?.Remove("mention_total_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mention_total_limit"); else _explicitNullProperties?.Remove("mention_total_limit"); } }
         private int? _explicitNullValueMentionTotalLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.MentionSpamTriggerMetadata"/> and sets the default values.

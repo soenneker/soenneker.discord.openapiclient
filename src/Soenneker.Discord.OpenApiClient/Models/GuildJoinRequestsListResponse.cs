@@ -17,8 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("guild_join_requests") is { } nullNodeGuildJoinRequests && nullNodeGuildJoinRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildJoinRequests = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("guild_join_requests") is null) { _explicitNullValueGuildJoinRequests = default!; _explicitNullProperties?.Remove("guild_join_requests"); }
+            else if (parseNode.GetChildNode("guild_join_requests") is { } nullNodeGuildJoinRequests && nullNodeGuildJoinRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuildJoinRequests = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The guild_join_requests property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponse>? GuildJoinRequests { get => _explicitNullValueGuildJoinRequests; set { _explicitNullValueGuildJoinRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_join_requests"); else _explicitNullProperties?.Remove("guild_join_requests"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponse>? GuildJoinRequests { get => _explicitNullValueGuildJoinRequests; set { _explicitNullValueGuildJoinRequests = value; AdditionalData?.Remove("guild_join_requests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_join_requests"); else _explicitNullProperties?.Remove("guild_join_requests"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponse>? _explicitNullValueGuildJoinRequests = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponse> GuildJoinRequests { get => _explicitNullValueGuildJoinRequests; set { _explicitNullValueGuildJoinRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_join_requests"); else _explicitNullProperties?.Remove("guild_join_requests"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponse> GuildJoinRequests { get => _explicitNullValueGuildJoinRequests; set { _explicitNullValueGuildJoinRequests = value; AdditionalData?.Remove("guild_join_requests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guild_join_requests"); else _explicitNullProperties?.Remove("guild_join_requests"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponse> _explicitNullValueGuildJoinRequests = default!;
 #endif
         /// <summary>The total property</summary>
-        public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private int? _explicitNullValueTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestsListResponse"/> and sets the default values.

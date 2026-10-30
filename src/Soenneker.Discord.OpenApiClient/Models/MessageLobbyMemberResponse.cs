@@ -17,7 +17,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("additional_name") is { } nullNodeAdditionalName && nullNodeAdditionalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalName = null;
+            if (parseNode.GetChildNode("additional_name") is null) { _explicitNullValueAdditionalName = default!; _explicitNullProperties?.Remove("additional_name"); }
+            else if (parseNode.GetChildNode("additional_name") is { } nullNodeAdditionalName && nullNodeAdditionalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The additional_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdditionalName { get => _explicitNullValueAdditionalName; set { _explicitNullValueAdditionalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_name"); else _explicitNullProperties?.Remove("additional_name"); } }
+        public string? AdditionalName { get => _explicitNullValueAdditionalName; set { _explicitNullValueAdditionalName = value; AdditionalData?.Remove("additional_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_name"); else _explicitNullProperties?.Remove("additional_name"); } }
         private string? _explicitNullValueAdditionalName = default!;
 #nullable restore
 #else
-        public string AdditionalName { get => _explicitNullValueAdditionalName; set { _explicitNullValueAdditionalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_name"); else _explicitNullProperties?.Remove("additional_name"); } }
+        public string AdditionalName { get => _explicitNullValueAdditionalName; set { _explicitNullValueAdditionalName = value; AdditionalData?.Remove("additional_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_name"); else _explicitNullProperties?.Remove("additional_name"); } }
         private string _explicitNullValueAdditionalName = default!;
 #endif
         /// <summary>

@@ -67,7 +67,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.WidgetPng
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Discord.OpenApiClient.Guilds.Item.WidgetPng.WidgetPngRequestBuilder.WidgetPngRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://discord.com/api/v10", "/guilds/{guildId}/widget.png", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "image/png, application/json");
             return requestInfo;
@@ -86,19 +86,10 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.WidgetPng
         public partial class WidgetPngRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("style")]
-            public string? Style { get; set; }
+            public global::Soenneker.Discord.OpenApiClient.Models.WidgetImageStyles? Style { get; set; }
             #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("style")]
-            public string Style { get; set; }
-            #pragma warning restore CS1591
-#endif
         }
     }
 }

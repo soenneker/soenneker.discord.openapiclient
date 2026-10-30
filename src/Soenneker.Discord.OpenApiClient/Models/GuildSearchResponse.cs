@@ -17,54 +17,60 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("documents_indexed") is { } nullNodeDocumentsIndexed && nullNodeDocumentsIndexed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentsIndexed = null;
-            if (parseNode.GetChildNode("doing_deep_historical_index") is { } nullNodeDoingDeepHistoricalIndex && nullNodeDoingDeepHistoricalIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DoingDeepHistoricalIndex = null;
-            if (parseNode.GetChildNode("members") is { } nullNodeMembers && nullNodeMembers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Members = null;
-            if (parseNode.GetChildNode("messages") is { } nullNodeMessages && nullNodeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messages = null;
-            if (parseNode.GetChildNode("threads") is { } nullNodeThreads && nullNodeThreads.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Threads = null;
-            if (parseNode.GetChildNode("total_results") is { } nullNodeTotalResults && nullNodeTotalResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalResults = null;
+            if (parseNode.GetChildNode("documents_indexed") is null) { _explicitNullValueDocumentsIndexed = default!; _explicitNullProperties?.Remove("documents_indexed"); }
+            else if (parseNode.GetChildNode("documents_indexed") is { } nullNodeDocumentsIndexed && nullNodeDocumentsIndexed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentsIndexed = null;
+            if (parseNode.GetChildNode("doing_deep_historical_index") is null) { _explicitNullValueDoingDeepHistoricalIndex = default!; _explicitNullProperties?.Remove("doing_deep_historical_index"); }
+            else if (parseNode.GetChildNode("doing_deep_historical_index") is { } nullNodeDoingDeepHistoricalIndex && nullNodeDoingDeepHistoricalIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DoingDeepHistoricalIndex = null;
+            if (parseNode.GetChildNode("members") is null) { _explicitNullValueMembers = default!; _explicitNullProperties?.Remove("members"); }
+            else if (parseNode.GetChildNode("members") is { } nullNodeMembers && nullNodeMembers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Members = null;
+            if (parseNode.GetChildNode("messages") is null) { _explicitNullValueMessages = default!; _explicitNullProperties?.Remove("messages"); }
+            else if (parseNode.GetChildNode("messages") is { } nullNodeMessages && nullNodeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messages = null;
+            if (parseNode.GetChildNode("threads") is null) { _explicitNullValueThreads = default!; _explicitNullProperties?.Remove("threads"); }
+            else if (parseNode.GetChildNode("threads") is { } nullNodeThreads && nullNodeThreads.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Threads = null;
+            if (parseNode.GetChildNode("total_results") is null) { _explicitNullValueTotalResults = default!; _explicitNullProperties?.Remove("total_results"); }
+            else if (parseNode.GetChildNode("total_results") is { } nullNodeTotalResults && nullNodeTotalResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalResults = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The documents_indexed property</summary>
-        public int? DocumentsIndexed { get => _explicitNullValueDocumentsIndexed; set { _explicitNullValueDocumentsIndexed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents_indexed"); else _explicitNullProperties?.Remove("documents_indexed"); } }
+        public int? DocumentsIndexed { get => _explicitNullValueDocumentsIndexed; set { _explicitNullValueDocumentsIndexed = value; AdditionalData?.Remove("documents_indexed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents_indexed"); else _explicitNullProperties?.Remove("documents_indexed"); } }
         private int? _explicitNullValueDocumentsIndexed = default!;
         /// <summary>The doing_deep_historical_index property</summary>
-        public bool? DoingDeepHistoricalIndex { get => _explicitNullValueDoingDeepHistoricalIndex; set { _explicitNullValueDoingDeepHistoricalIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("doing_deep_historical_index"); else _explicitNullProperties?.Remove("doing_deep_historical_index"); } }
+        public bool? DoingDeepHistoricalIndex { get => _explicitNullValueDoingDeepHistoricalIndex; set { _explicitNullValueDoingDeepHistoricalIndex = value; AdditionalData?.Remove("doing_deep_historical_index"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("doing_deep_historical_index"); else _explicitNullProperties?.Remove("doing_deep_historical_index"); } }
         private bool? _explicitNullValueDoingDeepHistoricalIndex = default!;
         /// <summary>The members property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadMemberResponse>? Members { get => _explicitNullValueMembers; set { _explicitNullValueMembers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members"); else _explicitNullProperties?.Remove("members"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadMemberResponse>? Members { get => _explicitNullValueMembers; set { _explicitNullValueMembers = value; AdditionalData?.Remove("members"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members"); else _explicitNullProperties?.Remove("members"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.ThreadMemberResponse>? _explicitNullValueMembers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadMemberResponse> Members { get => _explicitNullValueMembers; set { _explicitNullValueMembers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members"); else _explicitNullProperties?.Remove("members"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadMemberResponse> Members { get => _explicitNullValueMembers; set { _explicitNullValueMembers = value; AdditionalData?.Remove("members"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members"); else _explicitNullProperties?.Remove("members"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.ThreadMemberResponse> _explicitNullValueMembers = default!;
 #endif
         /// <summary>The messages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        public UntypedNode? Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; AdditionalData?.Remove("messages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
         private UntypedNode? _explicitNullValueMessages = default!;
 #nullable restore
 #else
-        public UntypedNode Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        public UntypedNode Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; AdditionalData?.Remove("messages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
         private UntypedNode _explicitNullValueMessages = default!;
 #endif
         /// <summary>The threads property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>? Threads { get => _explicitNullValueThreads; set { _explicitNullValueThreads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads"); else _explicitNullProperties?.Remove("threads"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>? Threads { get => _explicitNullValueThreads; set { _explicitNullValueThreads = value; AdditionalData?.Remove("threads"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads"); else _explicitNullProperties?.Remove("threads"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse>? _explicitNullValueThreads = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse> Threads { get => _explicitNullValueThreads; set { _explicitNullValueThreads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads"); else _explicitNullProperties?.Remove("threads"); } }
+        public List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse> Threads { get => _explicitNullValueThreads; set { _explicitNullValueThreads = value; AdditionalData?.Remove("threads"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads"); else _explicitNullProperties?.Remove("threads"); } }
         private List<global::Soenneker.Discord.OpenApiClient.Models.ThreadResponse> _explicitNullValueThreads = default!;
 #endif
         /// <summary>The total_results property</summary>
-        public int? TotalResults { get => _explicitNullValueTotalResults; set { _explicitNullValueTotalResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_results"); else _explicitNullProperties?.Remove("total_results"); } }
+        public int? TotalResults { get => _explicitNullValueTotalResults; set { _explicitNullValueTotalResults = value; AdditionalData?.Remove("total_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_results"); else _explicitNullProperties?.Remove("total_results"); } }
         private int? _explicitNullValueTotalResults = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.GuildSearchResponse"/> and sets the default values.

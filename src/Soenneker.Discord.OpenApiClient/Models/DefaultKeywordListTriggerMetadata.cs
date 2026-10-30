@@ -17,8 +17,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allow_list") is { } nullNodeAllowList && nullNodeAllowList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowList = null;
-            if (parseNode.GetChildNode("presets") is { } nullNodePresets && nullNodePresets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Presets = null;
+            if (parseNode.GetChildNode("allow_list") is null) { _explicitNullValueAllowList = default!; _explicitNullProperties?.Remove("allow_list"); }
+            else if (parseNode.GetChildNode("allow_list") is { } nullNodeAllowList && nullNodeAllowList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowList = null;
+            if (parseNode.GetChildNode("presets") is null) { _explicitNullValuePresets = default!; _explicitNullProperties?.Remove("presets"); }
+            else if (parseNode.GetChildNode("presets") is { } nullNodePresets && nullNodePresets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Presets = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The allow_list property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowList { get => _explicitNullValueAllowList; set { _explicitNullValueAllowList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_list"); else _explicitNullProperties?.Remove("allow_list"); } }
+        public List<string>? AllowList { get => _explicitNullValueAllowList; set { _explicitNullValueAllowList = value; AdditionalData?.Remove("allow_list"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_list"); else _explicitNullProperties?.Remove("allow_list"); } }
         private List<string>? _explicitNullValueAllowList = default!;
 #nullable restore
 #else
-        public List<string> AllowList { get => _explicitNullValueAllowList; set { _explicitNullValueAllowList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_list"); else _explicitNullProperties?.Remove("allow_list"); } }
+        public List<string> AllowList { get => _explicitNullValueAllowList; set { _explicitNullValueAllowList = value; AdditionalData?.Remove("allow_list"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_list"); else _explicitNullProperties?.Remove("allow_list"); } }
         private List<string> _explicitNullValueAllowList = default!;
 #endif
         /// <summary>The presets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? Presets { get => _explicitNullValuePresets; set { _explicitNullValuePresets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presets"); else _explicitNullProperties?.Remove("presets"); } }
+        public List<int?>? Presets { get => _explicitNullValuePresets; set { _explicitNullValuePresets = value; AdditionalData?.Remove("presets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presets"); else _explicitNullProperties?.Remove("presets"); } }
         private List<int?>? _explicitNullValuePresets = default!;
 #nullable restore
 #else
-        public List<int?> Presets { get => _explicitNullValuePresets; set { _explicitNullValuePresets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presets"); else _explicitNullProperties?.Remove("presets"); } }
+        public List<int?> Presets { get => _explicitNullValuePresets; set { _explicitNullValuePresets = value; AdditionalData?.Remove("presets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presets"); else _explicitNullProperties?.Remove("presets"); } }
         private List<int?> _explicitNullValuePresets = default!;
 #endif
         /// <summary>
