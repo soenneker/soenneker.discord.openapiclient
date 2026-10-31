@@ -897,6 +897,34 @@
           "4XX": {
             "description": "Client error response",
             "$ref": "#/components/responses/ClientErrorResponse"
+          },
+          "200": {
+            "description": "201 response for create_application_emoji",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmojiResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -3685,6 +3713,34 @@
           "4XX": {
             "description": "Client error response",
             "$ref": "#/components/responses/ClientErrorResponse"
+          },
+          "200": {
+            "description": "201 response for create_thread_from_message",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -4380,6 +4436,34 @@
           "4XX": {
             "description": "Client error response",
             "$ref": "#/components/responses/ClientErrorResponse"
+          },
+          "200": {
+            "description": "201 response for add_group_dm_user",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddGroupDmUser201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -4899,6 +4983,34 @@
           "4XX": {
             "description": "Client error response",
             "$ref": "#/components/responses/ClientErrorResponse"
+          },
+          "200": {
+            "description": "201 response for create_thread",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatedThreadResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -6691,6 +6803,34 @@
           "4XX": {
             "description": "Client error response",
             "$ref": "#/components/responses/ClientErrorResponse"
+          },
+          "200": {
+            "description": "201 response for create_guild_channel",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GuildChannelResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -6853,6 +6993,34 @@
           "4XX": {
             "description": "Client error response",
             "$ref": "#/components/responses/ClientErrorResponse"
+          },
+          "200": {
+            "description": "201 response for create_guild_emoji",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmojiResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -7627,6 +7795,34 @@
           "4XX": {
             "description": "Client error response",
             "$ref": "#/components/responses/ClientErrorResponse"
+          },
+          "200": {
+            "description": "201 response for add_guild_member",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GuildMemberResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -10334,6 +10530,34 @@
           "4XX": {
             "description": "Client error response",
             "$ref": "#/components/responses/ClientErrorResponse"
+          },
+          "200": {
+            "description": "201 response for create_guild_soundboard_sound",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SoundboardSoundResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -10610,6 +10834,34 @@
           "4XX": {
             "description": "Client error response",
             "$ref": "#/components/responses/ClientErrorResponse"
+          },
+          "200": {
+            "description": "201 response for create_guild_sticker",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GuildStickerResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -12589,6 +12841,34 @@
           "4XX": {
             "description": "Client error response",
             "$ref": "#/components/responses/ClientErrorResponse"
+          },
+          "200": {
+            "description": "201 response for create_lobby",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LobbyResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -13312,6 +13592,34 @@
           "4XX": {
             "description": "Client error response",
             "$ref": "#/components/responses/ClientErrorResponse"
+          },
+          "200": {
+            "description": "201 response for create_lobby_message",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-RateLimit-Reset": {
+                "$ref": "#/components/headers/X-RateLimit-Reset"
+              },
+              "X-RateLimit-Reset-After": {
+                "$ref": "#/components/headers/X-RateLimit-Reset-After"
+              },
+              "X-RateLimit-Bucket": {
+                "$ref": "#/components/headers/X-RateLimit-Bucket"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LobbyMessageResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
