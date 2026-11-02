@@ -28,12 +28,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookInteractionRequest? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookInteractionRequest? _explicitNullValueData = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequestData? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequestData? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookInteractionRequest Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookInteractionRequest _explicitNullValueData = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequestData Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequestData _explicitNullValueData = default!;
 #endif
         /// <summary>The type property</summary>
         public int? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
@@ -63,7 +63,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookInteractionRequest>(global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookInteractionRequest.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequestData>(global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequestData.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetIntValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookInteractionRequest>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateMessageInteractionCallbackRequestData>("data", Data);
             writer.WriteIntValue("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

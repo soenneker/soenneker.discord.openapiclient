@@ -43,12 +43,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The colors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RoleColors? Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; AdditionalData?.Remove("colors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RoleColors? _explicitNullValueColors = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateRoleRequestColors? Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; AdditionalData?.Remove("colors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateRoleRequestColors? _explicitNullValueColors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RoleColors Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; AdditionalData?.Remove("colors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RoleColors _explicitNullValueColors = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateRoleRequestColors Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; AdditionalData?.Remove("colors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateRoleRequestColors _explicitNullValueColors = default!;
 #endif
         /// <summary>The hoist property</summary>
         public bool? Hoist { get => _explicitNullValueHoist; set { _explicitNullValueHoist = value; AdditionalData?.Remove("hoist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hoist"); else _explicitNullProperties?.Remove("hoist"); } }
@@ -115,7 +115,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "color", n => { Color = n.GetIntValue(); } },
-                { "colors", n => { Colors = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RoleColors>(global::Soenneker.Discord.OpenApiClient.Models.RoleColors.CreateFromDiscriminatorValue); } },
+                { "colors", n => { Colors = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateRoleRequestColors>(global::Soenneker.Discord.OpenApiClient.Models.CreateRoleRequestColors.CreateFromDiscriminatorValue); } },
                 { "hoist", n => { Hoist = n.GetBoolValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "mentionable", n => { Mentionable = n.GetBoolValue(); } },
@@ -132,7 +132,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("color", Color);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RoleColors>("colors", Colors);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateRoleRequestColors>("colors", Colors);
             writer.WriteBoolValue("hoist", Hoist);
             writer.WriteStringValue("icon", Icon);
             writer.WriteBoolValue("mentionable", Mentionable);

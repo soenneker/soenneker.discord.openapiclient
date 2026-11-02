@@ -28,12 +28,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The emoji of the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollEmojiCreateRequest? Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; AdditionalData?.Remove("emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.PollEmojiCreateRequest? _explicitNullValueEmoji = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.PollMediaCreateRequestEmoji? Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; AdditionalData?.Remove("emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.PollMediaCreateRequestEmoji? _explicitNullValueEmoji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollEmojiCreateRequest Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; AdditionalData?.Remove("emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.PollEmojiCreateRequest _explicitNullValueEmoji = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.PollMediaCreateRequestEmoji Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; AdditionalData?.Remove("emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.PollMediaCreateRequestEmoji _explicitNullValueEmoji = default!;
 #endif
         /// <summary>The text of the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,7 +70,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollEmojiCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.PollEmojiCreateRequest.CreateFromDiscriminatorValue); } },
+                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMediaCreateRequestEmoji>(global::Soenneker.Discord.OpenApiClient.Models.PollMediaCreateRequestEmoji.CreateFromDiscriminatorValue); } },
                 { "text", n => { Text = n.GetStringValue(); } },
             };
         }
@@ -81,7 +81,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollEmojiCreateRequest>("emoji", Emoji);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollMediaCreateRequestEmoji>("emoji", Emoji);
             writer.WriteStringValue("text", Text);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

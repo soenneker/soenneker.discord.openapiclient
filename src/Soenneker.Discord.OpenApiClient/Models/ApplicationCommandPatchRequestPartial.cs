@@ -52,8 +52,8 @@ namespace Soenneker.Discord.OpenApiClient.Models
         private List<int?> _explicitNullValueContexts = default!;
 #endif
         /// <summary>The default_member_permissions property</summary>
-        public int? DefaultMemberPermissions { get => _explicitNullValueDefaultMemberPermissions; set { _explicitNullValueDefaultMemberPermissions = value; AdditionalData?.Remove("default_member_permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_member_permissions"); else _explicitNullProperties?.Remove("default_member_permissions"); } }
-        private int? _explicitNullValueDefaultMemberPermissions = default!;
+        public long? DefaultMemberPermissions { get => _explicitNullValueDefaultMemberPermissions; set { _explicitNullValueDefaultMemberPermissions = value; AdditionalData?.Remove("default_member_permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_member_permissions"); else _explicitNullProperties?.Remove("default_member_permissions"); } }
+        private long? _explicitNullValueDefaultMemberPermissions = default!;
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -153,7 +153,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contexts", n => { Contexts = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
-                { "default_member_permissions", n => { DefaultMemberPermissions = n.GetIntValue(); } },
+                { "default_member_permissions", n => { DefaultMemberPermissions = n.GetLongValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_localizations", n => { DescriptionLocalizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialDescriptionLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialDescriptionLocalizationsProperty.CreateFromDiscriminatorValue); } },
                 { "dm_permission", n => { DmPermission = n.GetBoolValue(); } },
@@ -172,7 +172,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<int?>("contexts", Contexts);
-            writer.WriteIntValue("default_member_permissions", DefaultMemberPermissions);
+            writer.WriteLongValue("default_member_permissions", DefaultMemberPermissions);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandPatchRequestPartialDescriptionLocalizationsProperty>("description_localizations", DescriptionLocalizations);
             writer.WriteBoolValue("dm_permission", DmPermission);

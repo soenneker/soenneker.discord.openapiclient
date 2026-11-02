@@ -93,12 +93,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The default_reaction_emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse? DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; AdditionalData?.Remove("default_reaction_emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse? _explicitNullValueDefaultReactionEmoji = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji? DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; AdditionalData?.Remove("default_reaction_emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji? _explicitNullValueDefaultReactionEmoji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; AdditionalData?.Remove("default_reaction_emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse _explicitNullValueDefaultReactionEmoji = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; AdditionalData?.Remove("default_reaction_emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji _explicitNullValueDefaultReactionEmoji = default!;
 #endif
         /// <summary>The default_sort_order property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -259,7 +259,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "bitrate", n => { Bitrate = n.GetIntValue(); } },
                 { "default_auto_archive_duration", n => { DefaultAutoArchiveDuration = n.GetIntValue(); } },
                 { "default_forum_layout", n => { DefaultForumLayout = n.GetIntValue(); } },
-                { "default_reaction_emoji", n => { DefaultReactionEmoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse>(global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse.CreateFromDiscriminatorValue); } },
+                { "default_reaction_emoji", n => { DefaultReactionEmoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji>(global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji.CreateFromDiscriminatorValue); } },
                 { "default_sort_order", n => { DefaultSortOrder = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder>(global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder.CreateFromDiscriminatorValue); } },
                 { "default_tag_setting", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultTagSetting = default; _explicitNullProperties?.Remove("default_tag_setting"); AdditionalData["default_tag_setting"] = unknown; } else { DefaultTagSetting = parsed; AdditionalData.Remove("default_tag_setting"); } } },
                 { "default_thread_rate_limit_per_user", n => { DefaultThreadRateLimitPerUser = n.GetIntValue(); } },
@@ -293,7 +293,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteIntValue("bitrate", Bitrate);
             writer.WriteIntValue("default_auto_archive_duration", DefaultAutoArchiveDuration);
             writer.WriteIntValue("default_forum_layout", DefaultForumLayout);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.DefaultReactionEmojiResponse>("default_reaction_emoji", DefaultReactionEmoji);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildChannelResponseDefaultReactionEmoji>("default_reaction_emoji", DefaultReactionEmoji);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder>("default_sort_order", DefaultSortOrder);
             writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>("default_tag_setting", DefaultTagSetting);
             writer.WriteIntValue("default_thread_rate_limit_per_user", DefaultThreadRateLimitPerUser);

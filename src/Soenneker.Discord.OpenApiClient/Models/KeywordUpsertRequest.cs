@@ -86,12 +86,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The trigger_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata? TriggerMetadata { get => _explicitNullValueTriggerMetadata; set { _explicitNullValueTriggerMetadata = value; AdditionalData?.Remove("trigger_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_metadata"); else _explicitNullProperties?.Remove("trigger_metadata"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata? _explicitNullValueTriggerMetadata = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartialTriggerMetadata? TriggerMetadata { get => _explicitNullValueTriggerMetadata; set { _explicitNullValueTriggerMetadata = value; AdditionalData?.Remove("trigger_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_metadata"); else _explicitNullProperties?.Remove("trigger_metadata"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartialTriggerMetadata? _explicitNullValueTriggerMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata TriggerMetadata { get => _explicitNullValueTriggerMetadata; set { _explicitNullValueTriggerMetadata = value; AdditionalData?.Remove("trigger_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_metadata"); else _explicitNullProperties?.Remove("trigger_metadata"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata _explicitNullValueTriggerMetadata = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartialTriggerMetadata TriggerMetadata { get => _explicitNullValueTriggerMetadata; set { _explicitNullValueTriggerMetadata = value; AdditionalData?.Remove("trigger_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_metadata"); else _explicitNullProperties?.Remove("trigger_metadata"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartialTriggerMetadata _explicitNullValueTriggerMetadata = default!;
 #endif
         /// <summary>The trigger_type property</summary>
         public int? TriggerType { get => _explicitNullValueTriggerType; set { _explicitNullValueTriggerType = value; AdditionalData?.Remove("trigger_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_type"); else _explicitNullProperties?.Remove("trigger_type"); } }
@@ -127,7 +127,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "exempt_channels", n => { ExemptChannels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "exempt_roles", n => { ExemptRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "trigger_metadata", n => { TriggerMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata>(global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata.CreateFromDiscriminatorValue); } },
+                { "trigger_metadata", n => { TriggerMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartialTriggerMetadata>(global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartialTriggerMetadata.CreateFromDiscriminatorValue); } },
                 { "trigger_type", n => { TriggerType = n.GetIntValue(); } },
             };
         }
@@ -144,7 +144,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_channels", ExemptChannels);
             writer.WriteCollectionOfPrimitiveValues<string>("exempt_roles", ExemptRoles);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordTriggerMetadata>("trigger_metadata", TriggerMetadata);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.KeywordUpsertRequestPartialTriggerMetadata>("trigger_metadata", TriggerMetadata);
             writer.WriteIntValue("trigger_type", TriggerType);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

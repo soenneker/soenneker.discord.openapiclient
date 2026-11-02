@@ -62,12 +62,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>data for the member&apos;s guild avatar decoration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse? AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; AdditionalData?.Remove("avatar_decoration_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse? _explicitNullValueAvatarDecorationData = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseAvatarDecorationData? AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; AdditionalData?.Remove("avatar_decoration_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseAvatarDecorationData? _explicitNullValueAvatarDecorationData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; AdditionalData?.Remove("avatar_decoration_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse _explicitNullValueAvatarDecorationData = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseAvatarDecorationData AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; AdditionalData?.Remove("avatar_decoration_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseAvatarDecorationData _explicitNullValueAvatarDecorationData = default!;
 #endif
         /// <summary>the member&apos;s guild banner hash</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,12 +82,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>data for the member&apos;s collectibles</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; AdditionalData?.Remove("collectibles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? _explicitNullValueCollectibles = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseCollectibles? Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; AdditionalData?.Remove("collectibles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseCollectibles? _explicitNullValueCollectibles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; AdditionalData?.Remove("collectibles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse _explicitNullValueCollectibles = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseCollectibles Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; AdditionalData?.Remove("collectibles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseCollectibles _explicitNullValueCollectibles = default!;
 #endif
         /// <summary>when the user&apos;s timeout will expire and the user will be able to communicate in the guild again, null or a time in the past if the user is not timed out</summary>
         public DateTimeOffset? CommunicationDisabledUntil { get => _explicitNullValueCommunicationDisabledUntil; set { _explicitNullValueCommunicationDisabledUntil = value; AdditionalData?.Remove("communication_disabled_until"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communication_disabled_until"); else _explicitNullProperties?.Remove("communication_disabled_until"); } }
@@ -166,9 +166,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "avatar", n => { Avatar = n.GetStringValue(); } },
-                { "avatar_decoration_data", n => { AvatarDecorationData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse.CreateFromDiscriminatorValue); } },
+                { "avatar_decoration_data", n => { AvatarDecorationData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseAvatarDecorationData>(global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseAvatarDecorationData.CreateFromDiscriminatorValue); } },
                 { "banner", n => { Banner = n.GetStringValue(); } },
-                { "collectibles", n => { Collectibles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse.CreateFromDiscriminatorValue); } },
+                { "collectibles", n => { Collectibles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseCollectibles>(global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseCollectibles.CreateFromDiscriminatorValue); } },
                 { "communication_disabled_until", n => { CommunicationDisabledUntil = n.GetDateTimeOffsetValue(); } },
                 { "deaf", n => { Deaf = n.GetBoolValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
@@ -189,9 +189,9 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("avatar", Avatar);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse>("avatar_decoration_data", AvatarDecorationData);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseAvatarDecorationData>("avatar_decoration_data", AvatarDecorationData);
             writer.WriteStringValue("banner", Banner);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>("collectibles", Collectibles);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseCollectibles>("collectibles", Collectibles);
             writer.WriteDateTimeOffsetValue("communication_disabled_until", CommunicationDisabledUntil);
             writer.WriteBoolValue("deaf", Deaf);
             writer.WriteIntValue("flags", Flags);

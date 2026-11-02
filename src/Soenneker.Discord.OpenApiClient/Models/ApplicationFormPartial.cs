@@ -141,12 +141,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The install_params property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParams? InstallParams { get => _explicitNullValueInstallParams; set { _explicitNullValueInstallParams = value; AdditionalData?.Remove("install_params"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("install_params"); else _explicitNullProperties?.Remove("install_params"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParams? _explicitNullValueInstallParams = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialInstallParams? InstallParams { get => _explicitNullValueInstallParams; set { _explicitNullValueInstallParams = value; AdditionalData?.Remove("install_params"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("install_params"); else _explicitNullProperties?.Remove("install_params"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialInstallParams? _explicitNullValueInstallParams = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParams InstallParams { get => _explicitNullValueInstallParams; set { _explicitNullValueInstallParams = value; AdditionalData?.Remove("install_params"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("install_params"); else _explicitNullProperties?.Remove("install_params"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParams _explicitNullValueInstallParams = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialInstallParams InstallParams { get => _explicitNullValueInstallParams; set { _explicitNullValueInstallParams = value; AdditionalData?.Remove("install_params"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("install_params"); else _explicitNullProperties?.Remove("install_params"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialInstallParams _explicitNullValueInstallParams = default!;
 #endif
         /// <summary>The integration_types_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -245,7 +245,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "explicit_content_filter", n => { ExplicitContentFilter = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes.CreateFromDiscriminatorValue); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
-                { "install_params", n => { InstallParams = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParams>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParams.CreateFromDiscriminatorValue); } },
+                { "install_params", n => { InstallParams = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialInstallParams>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialInstallParams.CreateFromDiscriminatorValue); } },
                 { "integration_types_config", n => { IntegrationTypesConfig = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialIntegrationTypesConfigProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialIntegrationTypesConfigProperty.CreateFromDiscriminatorValue); } },
                 { "interactions_endpoint_url", n => { InteractionsEndpointUrl = n.GetStringValue(); } },
                 { "max_participants", n => { MaxParticipants = n.GetIntValue(); } },
@@ -271,7 +271,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationExplicitContentFilterTypes>("explicit_content_filter", ExplicitContentFilter);
             writer.WriteIntValue("flags", Flags);
             writer.WriteStringValue("icon", Icon);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationOAuth2InstallParams>("install_params", InstallParams);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialInstallParams>("install_params", InstallParams);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialIntegrationTypesConfigProperty>("integration_types_config", IntegrationTypesConfig);
             writer.WriteStringValue("interactions_endpoint_url", InteractionsEndpointUrl);
             writer.WriteIntValue("max_participants", MaxParticipants);

@@ -42,12 +42,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The actioned_by_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? ActionedByUser { get => _explicitNullValueActionedByUser; set { _explicitNullValueActionedByUser = value; AdditionalData?.Remove("actioned_by_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actioned_by_user"); else _explicitNullProperties?.Remove("actioned_by_user"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserResponse? _explicitNullValueActionedByUser = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser? ActionedByUser { get => _explicitNullValueActionedByUser; set { _explicitNullValueActionedByUser = value; AdditionalData?.Remove("actioned_by_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actioned_by_user"); else _explicitNullProperties?.Remove("actioned_by_user"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser? _explicitNullValueActionedByUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse ActionedByUser { get => _explicitNullValueActionedByUser; set { _explicitNullValueActionedByUser = value; AdditionalData?.Remove("actioned_by_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actioned_by_user"); else _explicitNullProperties?.Remove("actioned_by_user"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserResponse _explicitNullValueActionedByUser = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser ActionedByUser { get => _explicitNullValueActionedByUser; set { _explicitNullValueActionedByUser = value; AdditionalData?.Remove("actioned_by_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actioned_by_user"); else _explicitNullProperties?.Remove("actioned_by_user"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser _explicitNullValueActionedByUser = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -103,12 +103,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserResponse? _explicitNullValueUser = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserResponse User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserResponse _explicitNullValueUser = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser _explicitNullValueUser = default!;
 #endif
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -145,7 +145,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actioned_by_user", n => { ActionedByUser = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
+                { "actioned_by_user", n => { ActionedByUser = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser>(global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser.CreateFromDiscriminatorValue); } },
                 { "application_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApplicationStatus = default; _explicitNullProperties?.Remove("application_status"); AdditionalData["application_status"] = unknown; } else { ApplicationStatus = parsed; AdditionalData.Remove("application_status"); } } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "form_responses", n => { FormResponses = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem>(global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -153,7 +153,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "rejection_reason", n => { RejectionReason = n.GetStringValue(); } },
                 { "reviewed_at", n => { ReviewedAt = n.GetDateTimeOffsetValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser>(global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser.CreateFromDiscriminatorValue); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -164,7 +164,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("actioned_by_user", ActionedByUser);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser>("actioned_by_user", ActionedByUser);
             writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus>("application_status", ApplicationStatus);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseFormResponsesItem>("form_responses", FormResponses);
@@ -172,7 +172,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("rejection_reason", RejectionReason);
             writer.WriteDateTimeOffsetValue("reviewed_at", ReviewedAt);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>("user", User);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser>("user", User);
             writer.WriteStringValue("user_id", UserId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

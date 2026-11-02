@@ -215,12 +215,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The incidents_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse? IncidentsData { get => _explicitNullValueIncidentsData; set { _explicitNullValueIncidentsData = value; AdditionalData?.Remove("incidents_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incidents_data"); else _explicitNullProperties?.Remove("incidents_data"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse? _explicitNullValueIncidentsData = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData? IncidentsData { get => _explicitNullValueIncidentsData; set { _explicitNullValueIncidentsData = value; AdditionalData?.Remove("incidents_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incidents_data"); else _explicitNullProperties?.Remove("incidents_data"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData? _explicitNullValueIncidentsData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse IncidentsData { get => _explicitNullValueIncidentsData; set { _explicitNullValueIncidentsData = value; AdditionalData?.Remove("incidents_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incidents_data"); else _explicitNullProperties?.Remove("incidents_data"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse _explicitNullValueIncidentsData = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData IncidentsData { get => _explicitNullValueIncidentsData; set { _explicitNullValueIncidentsData = value; AdditionalData?.Remove("incidents_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incidents_data"); else _explicitNullProperties?.Remove("incidents_data"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData _explicitNullValueIncidentsData = default!;
 #endif
         /// <summary>The max_members property</summary>
         public int? MaxMembers { get => _explicitNullValueMaxMembers; set { _explicitNullValueMaxMembers = value; AdditionalData?.Remove("max_members"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_members"); else _explicitNullProperties?.Remove("max_members"); } }
@@ -425,7 +425,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "home_header", n => { HomeHeader = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "incidents_data", n => { IncidentsData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse>(global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse.CreateFromDiscriminatorValue); } },
+                { "incidents_data", n => { IncidentsData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData>(global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData.CreateFromDiscriminatorValue); } },
                 { "max_members", n => { MaxMembers = n.GetIntValue(); } },
                 { "max_presences", n => { MaxPresences = n.GetIntValue(); } },
                 { "max_stage_video_channel_users", n => { MaxStageVideoChannelUsers = n.GetIntValue(); } },
@@ -475,7 +475,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("home_header", HomeHeader);
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildIncidentsDataResponse>("incidents_data", IncidentsData);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildResponseIncidentsData>("incidents_data", IncidentsData);
             writer.WriteIntValue("max_members", MaxMembers);
             writer.WriteIntValue("max_presences", MaxPresences);
             writer.WriteIntValue("max_stage_video_channel_users", MaxStageVideoChannelUsers);

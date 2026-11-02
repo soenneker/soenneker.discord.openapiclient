@@ -38,12 +38,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The allowed_mentions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? _explicitNullValueAllowedMentions = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions? AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions? _explicitNullValueAllowedMentions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest _explicitNullValueAllowedMentions = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions _explicitNullValueAllowedMentions = default!;
 #endif
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,7 +123,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest.CreateFromDiscriminatorValue); } },
+                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions.CreateFromDiscriminatorValue); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
@@ -139,7 +139,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>("allowed_mentions", AllowedMentions);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions>("allowed_mentions", AllowedMentions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>("attachments", Attachments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem>("components", Components);
             writer.WriteStringValue("content", Content);

@@ -34,8 +34,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The flags property</summary>
-        public global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestFlags? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestFlags? _explicitNullValueFlags = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags? _explicitNullValueFlags = default!;
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags _explicitNullValueFlags = default!;
+#endif
         /// <summary>The idle_timeout_seconds property</summary>
         public int? IdleTimeoutSeconds { get => _explicitNullValueIdleTimeoutSeconds; set { _explicitNullValueIdleTimeoutSeconds = value; AdditionalData?.Remove("idle_timeout_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idle_timeout_seconds"); else _explicitNullProperties?.Remove("idle_timeout_seconds"); } }
         private int? _explicitNullValueIdleTimeoutSeconds = default!;
@@ -104,7 +111,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flags", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestFlags>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFlags = default; _explicitNullProperties?.Remove("flags"); AdditionalData["flags"] = unknown; } else { Flags = parsed; AdditionalData.Remove("flags"); } } },
+                { "flags", n => { Flags = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags>(global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags.CreateFromDiscriminatorValue); } },
                 { "idle_timeout_seconds", n => { IdleTimeoutSeconds = n.GetIntValue(); } },
                 { "lobby_metadata", n => { LobbyMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestLobbyMetadata>(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestLobbyMetadata.CreateFromDiscriminatorValue); } },
                 { "member_metadata", n => { MemberMetadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestMemberMetadata>(global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestMemberMetadata.CreateFromDiscriminatorValue); } },
@@ -119,7 +126,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestFlags>("flags", Flags);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags>("flags", Flags);
             writer.WriteIntValue("idle_timeout_seconds", IdleTimeoutSeconds);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestLobbyMetadata>("lobby_metadata", LobbyMetadata);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateOrJoinLobbyRequestMemberMetadata>("member_metadata", MemberMetadata);

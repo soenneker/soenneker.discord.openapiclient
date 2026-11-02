@@ -55,12 +55,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest? Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; AdditionalData?.Remove("emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest? _explicitNullValueEmoji = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequestEmoji? Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; AdditionalData?.Remove("emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequestEmoji? _explicitNullValueEmoji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; AdditionalData?.Remove("emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest _explicitNullValueEmoji = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequestEmoji Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; AdditionalData?.Remove("emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequestEmoji _explicitNullValueEmoji = default!;
 #endif
         /// <summary>The id property</summary>
         public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
@@ -128,7 +128,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "custom_id", n => { CustomId = n.GetStringValue(); } },
                 { "disabled", n => { Disabled = n.GetBoolValue(); } },
-                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest>(global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest.CreateFromDiscriminatorValue); } },
+                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequestEmoji>(global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequestEmoji.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "sku_id", n => { SkuId = n.GetStringValue(); } },
@@ -146,7 +146,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("custom_id", CustomId);
             writer.WriteBoolValue("disabled", Disabled);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ComponentEmojiForRequest>("emoji", Emoji);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ButtonComponentForMessageRequestEmoji>("emoji", Emoji);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("sku_id", SkuId);

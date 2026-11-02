@@ -367,12 +367,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.TeamResponse? Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; AdditionalData?.Remove("team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.TeamResponse? _explicitNullValueTeam = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam? Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; AdditionalData?.Remove("team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam? _explicitNullValueTeam = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.TeamResponse Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; AdditionalData?.Remove("team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.TeamResponse _explicitNullValueTeam = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; AdditionalData?.Remove("team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam _explicitNullValueTeam = default!;
 #endif
         /// <summary>The terms_of_service_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -472,7 +472,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "rpc_origins", n => { RpcOrigins = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamResponse>(global::Soenneker.Discord.OpenApiClient.Models.TeamResponse.CreateFromDiscriminatorValue); } },
+                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam>(global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam.CreateFromDiscriminatorValue); } },
                 { "terms_of_service_url", n => { TermsOfServiceUrl = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes.CreateFromDiscriminatorValue); } },
                 { "verify_key", n => { VerifyKey = n.GetStringValue(); } },
@@ -519,7 +519,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("rpc_origins", RpcOrigins);
             writer.WriteStringValue("slug", Slug);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.TeamResponse>("team", Team);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PrivateApplicationResponseTeam>("team", Team);
             writer.WriteStringValue("terms_of_service_url", TermsOfServiceUrl);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationTypes>("type", Type);
             writer.WriteStringValue("verify_key", VerifyKey);

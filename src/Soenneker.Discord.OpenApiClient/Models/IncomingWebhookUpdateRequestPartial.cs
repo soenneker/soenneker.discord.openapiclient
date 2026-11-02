@@ -38,12 +38,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The allowed_mentions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? _explicitNullValueAllowedMentions = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions? AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions? _explicitNullValueAllowedMentions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest _explicitNullValueAllowedMentions = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions _explicitNullValueAllowedMentions = default!;
 #endif
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,12 +91,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The poll property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest? Poll { get => _explicitNullValuePoll; set { _explicitNullValuePoll = value; AdditionalData?.Remove("poll"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll"); else _explicitNullProperties?.Remove("poll"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest? _explicitNullValuePoll = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll? Poll { get => _explicitNullValuePoll; set { _explicitNullValuePoll = value; AdditionalData?.Remove("poll"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll"); else _explicitNullProperties?.Remove("poll"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll? _explicitNullValuePoll = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest Poll { get => _explicitNullValuePoll; set { _explicitNullValuePoll = value; AdditionalData?.Remove("poll"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll"); else _explicitNullProperties?.Remove("poll"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest _explicitNullValuePoll = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll Poll { get => _explicitNullValuePoll; set { _explicitNullValuePoll = value; AdditionalData?.Remove("poll"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll"); else _explicitNullProperties?.Remove("poll"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll _explicitNullValuePoll = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.IncomingWebhookUpdateRequestPartial"/> and sets the default values.
@@ -123,13 +123,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest.CreateFromDiscriminatorValue); } },
+                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions.CreateFromDiscriminatorValue); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "embeds", n => { Embeds = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbed.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
-                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.CreateFromDiscriminatorValue); } },
+                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -139,13 +139,13 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>("allowed_mentions", AllowedMentions);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions>("allowed_mentions", AllowedMentions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>("attachments", Attachments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem>("components", Components);
             writer.WriteStringValue("content", Content);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>("embeds", Embeds);
             writer.WriteIntValue("flags", Flags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>("poll", Poll);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll>("poll", Poll);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

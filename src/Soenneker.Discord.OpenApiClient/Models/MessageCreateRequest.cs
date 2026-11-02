@@ -50,12 +50,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The allowed_mentions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest? _explicitNullValueAllowedMentions = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions? AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions? _explicitNullValueAllowedMentions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest _explicitNullValueAllowedMentions = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions AllowedMentions { get => _explicitNullValueAllowedMentions; set { _explicitNullValueAllowedMentions = value; AdditionalData?.Remove("allowed_mentions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mentions"); else _explicitNullProperties?.Remove("allowed_mentions"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions _explicitNullValueAllowedMentions = default!;
 #endif
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,12 +106,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The message_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequest? MessageReference { get => _explicitNullValueMessageReference; set { _explicitNullValueMessageReference = value; AdditionalData?.Remove("message_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_reference"); else _explicitNullProperties?.Remove("message_reference"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequest? _explicitNullValueMessageReference = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestMessageReference? MessageReference { get => _explicitNullValueMessageReference; set { _explicitNullValueMessageReference = value; AdditionalData?.Remove("message_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_reference"); else _explicitNullProperties?.Remove("message_reference"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestMessageReference? _explicitNullValueMessageReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequest MessageReference { get => _explicitNullValueMessageReference; set { _explicitNullValueMessageReference = value; AdditionalData?.Remove("message_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_reference"); else _explicitNullProperties?.Remove("message_reference"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequest _explicitNullValueMessageReference = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestMessageReference MessageReference { get => _explicitNullValueMessageReference; set { _explicitNullValueMessageReference = value; AdditionalData?.Remove("message_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_reference"); else _explicitNullProperties?.Remove("message_reference"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestMessageReference _explicitNullValueMessageReference = default!;
 #endif
         /// <summary>The nonce property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,22 +126,22 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The poll property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest? Poll { get => _explicitNullValuePoll; set { _explicitNullValuePoll = value; AdditionalData?.Remove("poll"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll"); else _explicitNullProperties?.Remove("poll"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest? _explicitNullValuePoll = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll? Poll { get => _explicitNullValuePoll; set { _explicitNullValuePoll = value; AdditionalData?.Remove("poll"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll"); else _explicitNullProperties?.Remove("poll"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll? _explicitNullValuePoll = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest Poll { get => _explicitNullValuePoll; set { _explicitNullValuePoll = value; AdditionalData?.Remove("poll"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll"); else _explicitNullProperties?.Remove("poll"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest _explicitNullValuePoll = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll Poll { get => _explicitNullValuePoll; set { _explicitNullValuePoll = value; AdditionalData?.Remove("poll"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("poll"); else _explicitNullProperties?.Remove("poll"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll _explicitNullValuePoll = default!;
 #endif
         /// <summary>The shared_client_theme property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest? SharedClientTheme { get => _explicitNullValueSharedClientTheme; set { _explicitNullValueSharedClientTheme = value; AdditionalData?.Remove("shared_client_theme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_client_theme"); else _explicitNullProperties?.Remove("shared_client_theme"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest? _explicitNullValueSharedClientTheme = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme? SharedClientTheme { get => _explicitNullValueSharedClientTheme; set { _explicitNullValueSharedClientTheme = value; AdditionalData?.Remove("shared_client_theme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_client_theme"); else _explicitNullProperties?.Remove("shared_client_theme"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme? _explicitNullValueSharedClientTheme = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest SharedClientTheme { get => _explicitNullValueSharedClientTheme; set { _explicitNullValueSharedClientTheme = value; AdditionalData?.Remove("shared_client_theme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_client_theme"); else _explicitNullProperties?.Remove("shared_client_theme"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest _explicitNullValueSharedClientTheme = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme SharedClientTheme { get => _explicitNullValueSharedClientTheme; set { _explicitNullValueSharedClientTheme = value; AdditionalData?.Remove("shared_client_theme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_client_theme"); else _explicitNullProperties?.Remove("shared_client_theme"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme _explicitNullValueSharedClientTheme = default!;
 #endif
         /// <summary>The sticker_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -181,17 +181,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest.CreateFromDiscriminatorValue); } },
+                { "allowed_mentions", n => { AllowedMentions = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions.CreateFromDiscriminatorValue); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "components", n => { Components = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "embeds", n => { Embeds = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbed.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "enforce_nonce", n => { EnforceNonce = n.GetBoolValue(); } },
                 { "flags", n => { Flags = n.GetIntValue(); } },
-                { "message_reference", n => { MessageReference = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequest>(global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequest.CreateFromDiscriminatorValue); } },
+                { "message_reference", n => { MessageReference = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestMessageReference>(global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestMessageReference.CreateFromDiscriminatorValue); } },
                 { "nonce", n => { Nonce = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestNonce>(global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestNonce.CreateFromDiscriminatorValue); } },
-                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>(global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest.CreateFromDiscriminatorValue); } },
-                { "shared_client_theme", n => { SharedClientTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest>(global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest.CreateFromDiscriminatorValue); } },
+                { "poll", n => { Poll = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll.CreateFromDiscriminatorValue); } },
+                { "shared_client_theme", n => { SharedClientTheme = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme>(global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme.CreateFromDiscriminatorValue); } },
                 { "sticker_ids", n => { StickerIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "tts", n => { Tts = n.GetBoolValue(); } },
             };
@@ -203,17 +203,17 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageAllowedMentionsRequest>("allowed_mentions", AllowedMentions);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestAllowedMentions>("allowed_mentions", AllowedMentions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.MessageAttachmentRequest>("attachments", Attachments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestComponentsItem>("components", Components);
             writer.WriteStringValue("content", Content);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbed>("embeds", Embeds);
             writer.WriteBoolValue("enforce_nonce", EnforceNonce);
             writer.WriteIntValue("flags", Flags);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageReferenceRequest>("message_reference", MessageReference);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestMessageReference>("message_reference", MessageReference);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageCreateRequestNonce>("nonce", Nonce);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.PollCreateRequest>("poll", Poll);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CustomClientThemeShareRequest>("shared_client_theme", SharedClientTheme);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestPoll>("poll", Poll);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BaseCreateMessageCreateRequestSharedClientTheme>("shared_client_theme", SharedClientTheme);
             writer.WriteCollectionOfPrimitiveValues<string>("sticker_ids", StickerIds);
             writer.WriteBoolValue("tts", Tts);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

@@ -62,12 +62,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The available_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest>? AvailableTags { get => _explicitNullValueAvailableTags; set { _explicitNullValueAvailableTags = value; AdditionalData?.Remove("available_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_tags"); else _explicitNullProperties?.Remove("available_tags"); } }
-        private List<global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest>? _explicitNullValueAvailableTags = default!;
+        public List<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem>? AvailableTags { get => _explicitNullValueAvailableTags; set { _explicitNullValueAvailableTags = value; AdditionalData?.Remove("available_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_tags"); else _explicitNullProperties?.Remove("available_tags"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem>? _explicitNullValueAvailableTags = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest> AvailableTags { get => _explicitNullValueAvailableTags; set { _explicitNullValueAvailableTags = value; AdditionalData?.Remove("available_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_tags"); else _explicitNullProperties?.Remove("available_tags"); } }
-        private List<global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest> _explicitNullValueAvailableTags = default!;
+        public List<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem> AvailableTags { get => _explicitNullValueAvailableTags; set { _explicitNullValueAvailableTags = value; AdditionalData?.Remove("available_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_tags"); else _explicitNullProperties?.Remove("available_tags"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem> _explicitNullValueAvailableTags = default!;
 #endif
         /// <summary>The bitrate property</summary>
         public int? Bitrate { get => _explicitNullValueBitrate; set { _explicitNullValueBitrate = value; AdditionalData?.Remove("bitrate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitrate"); else _explicitNullProperties?.Remove("bitrate"); } }
@@ -95,12 +95,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The default_reaction_emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest? DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; AdditionalData?.Remove("default_reaction_emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest? _explicitNullValueDefaultReactionEmoji = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji? DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; AdditionalData?.Remove("default_reaction_emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji? _explicitNullValueDefaultReactionEmoji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; AdditionalData?.Remove("default_reaction_emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest _explicitNullValueDefaultReactionEmoji = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji DefaultReactionEmoji { get => _explicitNullValueDefaultReactionEmoji; set { _explicitNullValueDefaultReactionEmoji = value; AdditionalData?.Remove("default_reaction_emoji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_reaction_emoji"); else _explicitNullProperties?.Remove("default_reaction_emoji"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji _explicitNullValueDefaultReactionEmoji = default!;
 #endif
         /// <summary>The default_sort_order property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -225,11 +225,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "available_tags", n => { AvailableTags = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest>(global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "available_tags", n => { AvailableTags = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "bitrate", n => { Bitrate = n.GetIntValue(); } },
                 { "default_auto_archive_duration", n => { DefaultAutoArchiveDuration = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration>(global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration.CreateFromDiscriminatorValue); } },
                 { "default_forum_layout", n => { DefaultForumLayout = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ForumLayout>(global::Soenneker.Discord.OpenApiClient.Models.ForumLayout.CreateFromDiscriminatorValue); } },
-                { "default_reaction_emoji", n => { DefaultReactionEmoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest>(global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest.CreateFromDiscriminatorValue); } },
+                { "default_reaction_emoji", n => { DefaultReactionEmoji = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji>(global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji.CreateFromDiscriminatorValue); } },
                 { "default_sort_order", n => { DefaultSortOrder = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder>(global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder.CreateFromDiscriminatorValue); } },
                 { "default_tag_setting", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultTagSetting = default; _explicitNullProperties?.Remove("default_tag_setting"); AdditionalData["default_tag_setting"] = unknown; } else { DefaultTagSetting = parsed; AdditionalData.Remove("default_tag_setting"); } } },
                 { "default_thread_rate_limit_per_user", n => { DefaultThreadRateLimitPerUser = n.GetIntValue(); } },
@@ -253,11 +253,11 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.CreateOrUpdateThreadTagRequest>("available_tags", AvailableTags);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestAvailableTagsItem>("available_tags", AvailableTags);
             writer.WriteIntValue("bitrate", Bitrate);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadAutoArchiveDuration>("default_auto_archive_duration", DefaultAutoArchiveDuration);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ForumLayout>("default_forum_layout", DefaultForumLayout);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UpdateDefaultReactionEmojiRequest>("default_reaction_emoji", DefaultReactionEmoji);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.CreateGuildChannelRequestDefaultReactionEmoji>("default_reaction_emoji", DefaultReactionEmoji);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSortOrder>("default_sort_order", DefaultSortOrder);
             writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.ThreadSearchTagSetting>("default_tag_setting", DefaultTagSetting);
             writer.WriteIntValue("default_thread_rate_limit_per_user", DefaultThreadRateLimitPerUser);

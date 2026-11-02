@@ -75,12 +75,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>data for the user&apos;s avatar decoration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse? AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; AdditionalData?.Remove("avatar_decoration_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse? _explicitNullValueAvatarDecorationData = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseAvatarDecorationData? AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; AdditionalData?.Remove("avatar_decoration_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseAvatarDecorationData? _explicitNullValueAvatarDecorationData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; AdditionalData?.Remove("avatar_decoration_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse _explicitNullValueAvatarDecorationData = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseAvatarDecorationData AvatarDecorationData { get => _explicitNullValueAvatarDecorationData; set { _explicitNullValueAvatarDecorationData = value; AdditionalData?.Remove("avatar_decoration_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_decoration_data"); else _explicitNullProperties?.Remove("avatar_decoration_data"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseAvatarDecorationData _explicitNullValueAvatarDecorationData = default!;
 #endif
         /// <summary>the user&apos;s banner hash</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,12 +98,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>data for the user&apos;s collectibles</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; AdditionalData?.Remove("collectibles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse? _explicitNullValueCollectibles = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseCollectibles? Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; AdditionalData?.Remove("collectibles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseCollectibles? _explicitNullValueCollectibles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; AdditionalData?.Remove("collectibles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse _explicitNullValueCollectibles = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseCollectibles Collectibles { get => _explicitNullValueCollectibles; set { _explicitNullValueCollectibles = value; AdditionalData?.Remove("collectibles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectibles"); else _explicitNullProperties?.Remove("collectibles"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseCollectibles _explicitNullValueCollectibles = default!;
 #endif
         /// <summary>the user&apos;s Discord-tag</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -160,12 +160,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The primary_guild property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse? PrimaryGuild { get => _explicitNullValuePrimaryGuild; set { _explicitNullValuePrimaryGuild = value; AdditionalData?.Remove("primary_guild"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_guild"); else _explicitNullProperties?.Remove("primary_guild"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse? _explicitNullValuePrimaryGuild = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponsePrimaryGuild? PrimaryGuild { get => _explicitNullValuePrimaryGuild; set { _explicitNullValuePrimaryGuild = value; AdditionalData?.Remove("primary_guild"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_guild"); else _explicitNullProperties?.Remove("primary_guild"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponsePrimaryGuild? _explicitNullValuePrimaryGuild = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse PrimaryGuild { get => _explicitNullValuePrimaryGuild; set { _explicitNullValuePrimaryGuild = value; AdditionalData?.Remove("primary_guild"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_guild"); else _explicitNullProperties?.Remove("primary_guild"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse _explicitNullValuePrimaryGuild = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponsePrimaryGuild PrimaryGuild { get => _explicitNullValuePrimaryGuild; set { _explicitNullValuePrimaryGuild = value; AdditionalData?.Remove("primary_guild"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_guild"); else _explicitNullProperties?.Remove("primary_guild"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponsePrimaryGuild _explicitNullValuePrimaryGuild = default!;
 #endif
         /// <summary>the public flags on a user&apos;s account</summary>
         public int? PublicFlags { get => _explicitNullValuePublicFlags; set { _explicitNullValuePublicFlags = value; AdditionalData?.Remove("public_flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_flags"); else _explicitNullProperties?.Remove("public_flags"); } }
@@ -213,10 +213,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             {
                 { "accent_color", n => { AccentColor = n.GetIntValue(); } },
                 { "avatar", n => { Avatar = n.GetStringValue(); } },
-                { "avatar_decoration_data", n => { AvatarDecorationData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse.CreateFromDiscriminatorValue); } },
+                { "avatar_decoration_data", n => { AvatarDecorationData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseAvatarDecorationData>(global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseAvatarDecorationData.CreateFromDiscriminatorValue); } },
                 { "banner", n => { Banner = n.GetStringValue(); } },
                 { "bot", n => { Bot = n.GetBoolValue(); } },
-                { "collectibles", n => { Collectibles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse.CreateFromDiscriminatorValue); } },
+                { "collectibles", n => { Collectibles = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseCollectibles>(global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseCollectibles.CreateFromDiscriminatorValue); } },
                 { "discriminator", n => { Discriminator = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "flags", n => { Flags = n.GetLongValue(); } },
@@ -225,7 +225,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "locale", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLocale = default; _explicitNullProperties?.Remove("locale"); AdditionalData["locale"] = unknown; } else { Locale = parsed; AdditionalData.Remove("locale"); } } },
                 { "mfa_enabled", n => { MfaEnabled = n.GetBoolValue(); } },
                 { "premium_type", n => { PremiumType = n.GetIntValue(); } },
-                { "primary_guild", n => { PrimaryGuild = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse.CreateFromDiscriminatorValue); } },
+                { "primary_guild", n => { PrimaryGuild = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponsePrimaryGuild>(global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponsePrimaryGuild.CreateFromDiscriminatorValue); } },
                 { "public_flags", n => { PublicFlags = n.GetIntValue(); } },
                 { "system", n => { System = n.GetBoolValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
@@ -241,10 +241,10 @@ namespace Soenneker.Discord.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("accent_color", AccentColor);
             writer.WriteStringValue("avatar", Avatar);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserAvatarDecorationResponse>("avatar_decoration_data", AvatarDecorationData);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseAvatarDecorationData>("avatar_decoration_data", AvatarDecorationData);
             writer.WriteStringValue("banner", Banner);
             writer.WriteBoolValue("bot", Bot);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserCollectiblesResponse>("collectibles", Collectibles);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponseCollectibles>("collectibles", Collectibles);
             writer.WriteStringValue("discriminator", Discriminator);
             writer.WriteStringValue("email", Email);
             writer.WriteLongValue("flags", Flags);
@@ -253,7 +253,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.AvailableLocalesEnum>("locale", Locale);
             writer.WriteBoolValue("mfa_enabled", MfaEnabled);
             writer.WriteIntValue("premium_type", PremiumType);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPrimaryGuildResponse>("primary_guild", PrimaryGuild);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserPiiResponsePrimaryGuild>("primary_guild", PrimaryGuild);
             writer.WriteIntValue("public_flags", PublicFlags);
             writer.WriteBoolValue("system", System);
             writer.WriteStringValue("username", Username);

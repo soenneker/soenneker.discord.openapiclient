@@ -26,12 +26,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The choices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice>? Choices { get => _explicitNullValueChoices; set { _explicitNullValueChoices = value; AdditionalData?.Remove("choices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("choices"); else _explicitNullProperties?.Remove("choices"); } }
-        private List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice>? _explicitNullValueChoices = default!;
+        public List<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackIntegerDataChoicesItem>? Choices { get => _explicitNullValueChoices; set { _explicitNullValueChoices = value; AdditionalData?.Remove("choices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("choices"); else _explicitNullProperties?.Remove("choices"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackIntegerDataChoicesItem>? _explicitNullValueChoices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice> Choices { get => _explicitNullValueChoices; set { _explicitNullValueChoices = value; AdditionalData?.Remove("choices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("choices"); else _explicitNullProperties?.Remove("choices"); } }
-        private List<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice> _explicitNullValueChoices = default!;
+        public List<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackIntegerDataChoicesItem> Choices { get => _explicitNullValueChoices; set { _explicitNullValueChoices = value; AdditionalData?.Remove("choices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("choices"); else _explicitNullProperties?.Remove("choices"); } }
+        private List<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackIntegerDataChoicesItem> _explicitNullValueChoices = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackIntegerData"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "choices", n => { Choices = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "choices", n => { Choices = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackIntegerDataChoicesItem>(global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackIntegerDataChoicesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandOptionIntegerChoice>("choices", Choices);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.InteractionApplicationCommandAutocompleteCallbackIntegerDataChoicesItem>("choices", Choices);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

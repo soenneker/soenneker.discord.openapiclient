@@ -42,8 +42,15 @@ namespace Soenneker.Discord.OpenApiClient.Models
         private string _explicitNullValueAdditionalName = default!;
 #endif
         /// <summary>The flags property</summary>
-        public global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestFlags? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestFlags? _explicitNullValueFlags = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags? _explicitNullValueFlags = default!;
+#nullable restore
+#else
+        public global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flags"); else _explicitNullProperties?.Remove("flags"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags _explicitNullValueFlags = default!;
+#endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,7 +100,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "additional_name", n => { AdditionalName = n.GetStringValue(); } },
-                { "flags", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestFlags>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFlags = default; _explicitNullProperties?.Remove("flags"); AdditionalData["flags"] = unknown; } else { Flags = parsed; AdditionalData.Remove("flags"); } } },
+                { "flags", n => { Flags = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags>(global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadataProperty>(global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "remove_member", n => { RemoveMember = n.GetBoolValue(); } },
@@ -107,7 +114,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("additional_name", AdditionalName);
-            writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestFlags>("flags", Flags);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.AddLobbyMemberRequestFlags>("flags", Flags);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BulkLobbyMemberRequestMetadataProperty>("metadata", Metadata);
             writer.WriteBoolValue("remove_member", RemoveMember);

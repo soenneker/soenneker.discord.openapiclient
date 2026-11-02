@@ -166,12 +166,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>Recurrence rule for the scheduled event, or null if not recurring</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse? RecurrenceRule { get => _explicitNullValueRecurrenceRule; set { _explicitNullValueRecurrenceRule = value; AdditionalData?.Remove("recurrence_rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence_rule"); else _explicitNullProperties?.Remove("recurrence_rule"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse? _explicitNullValueRecurrenceRule = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseRecurrenceRule? RecurrenceRule { get => _explicitNullValueRecurrenceRule; set { _explicitNullValueRecurrenceRule = value; AdditionalData?.Remove("recurrence_rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence_rule"); else _explicitNullProperties?.Remove("recurrence_rule"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseRecurrenceRule? _explicitNullValueRecurrenceRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse RecurrenceRule { get => _explicitNullValueRecurrenceRule; set { _explicitNullValueRecurrenceRule = value; AdditionalData?.Remove("recurrence_rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence_rule"); else _explicitNullProperties?.Remove("recurrence_rule"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse _explicitNullValueRecurrenceRule = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseRecurrenceRule RecurrenceRule { get => _explicitNullValueRecurrenceRule; set { _explicitNullValueRecurrenceRule = value; AdditionalData?.Remove("recurrence_rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence_rule"); else _explicitNullProperties?.Remove("recurrence_rule"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseRecurrenceRule _explicitNullValueRecurrenceRule = default!;
 #endif
         /// <summary>When the scheduled event will end, or null if no end time</summary>
         public DateTimeOffset? ScheduledEndTime { get => _explicitNullValueScheduledEndTime; set { _explicitNullValueScheduledEndTime = value; AdditionalData?.Remove("scheduled_end_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled_end_time"); else _explicitNullProperties?.Remove("scheduled_end_time"); } }
@@ -188,12 +188,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The user_rsvp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse? UserRsvp { get => _explicitNullValueUserRsvp; set { _explicitNullValueUserRsvp = value; AdditionalData?.Remove("user_rsvp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_rsvp"); else _explicitNullProperties?.Remove("user_rsvp"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse? _explicitNullValueUserRsvp = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseUserRsvp? UserRsvp { get => _explicitNullValueUserRsvp; set { _explicitNullValueUserRsvp = value; AdditionalData?.Remove("user_rsvp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_rsvp"); else _explicitNullProperties?.Remove("user_rsvp"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseUserRsvp? _explicitNullValueUserRsvp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse UserRsvp { get => _explicitNullValueUserRsvp; set { _explicitNullValueUserRsvp = value; AdditionalData?.Remove("user_rsvp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_rsvp"); else _explicitNullProperties?.Remove("user_rsvp"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse _explicitNullValueUserRsvp = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseUserRsvp UserRsvp { get => _explicitNullValueUserRsvp; set { _explicitNullValueUserRsvp = value; AdditionalData?.Remove("user_rsvp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_rsvp"); else _explicitNullProperties?.Remove("user_rsvp"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseUserRsvp _explicitNullValueUserRsvp = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventResponse"/> and sets the default values.
@@ -232,12 +232,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "privacy_level", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePrivacyLevel = default; _explicitNullProperties?.Remove("privacy_level"); AdditionalData["privacy_level"] = unknown; } else { PrivacyLevel = parsed; AdditionalData.Remove("privacy_level"); } } },
-                { "recurrence_rule", n => { RecurrenceRule = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse>(global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse.CreateFromDiscriminatorValue); } },
+                { "recurrence_rule", n => { RecurrenceRule = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseRecurrenceRule>(global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseRecurrenceRule.CreateFromDiscriminatorValue); } },
                 { "scheduled_end_time", n => { ScheduledEndTime = n.GetDateTimeOffsetValue(); } },
                 { "scheduled_start_time", n => { ScheduledStartTime = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetIntValue(); } },
                 { "user_count", n => { UserCount = n.GetIntValue(); } },
-                { "user_rsvp", n => { UserRsvp = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse>(global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse.CreateFromDiscriminatorValue); } },
+                { "user_rsvp", n => { UserRsvp = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseUserRsvp>(global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseUserRsvp.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -259,12 +259,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
             writer.WriteStringValue("image", Image);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildScheduledEventPrivacyLevelsOneOf1>("privacy_level", PrivacyLevel);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RecurrenceRuleResponse>("recurrence_rule", RecurrenceRule);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseRecurrenceRule>("recurrence_rule", RecurrenceRule);
             writer.WriteDateTimeOffsetValue("scheduled_end_time", ScheduledEndTime);
             writer.WriteDateTimeOffsetValue("scheduled_start_time", ScheduledStartTime);
             writer.WriteIntValue("status", Status);
             writer.WriteIntValue("user_count", UserCount);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ScheduledEventUserResponse>("user_rsvp", UserRsvp);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ExternalScheduledEventResponseUserRsvp>("user_rsvp", UserRsvp);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

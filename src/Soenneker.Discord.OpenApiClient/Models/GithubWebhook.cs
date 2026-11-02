@@ -74,42 +74,42 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The answer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubComment? Answer { get => _explicitNullValueAnswer; set { _explicitNullValueAnswer = value; AdditionalData?.Remove("answer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer"); else _explicitNullProperties?.Remove("answer"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubComment? _explicitNullValueAnswer = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer? Answer { get => _explicitNullValueAnswer; set { _explicitNullValueAnswer = value; AdditionalData?.Remove("answer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer"); else _explicitNullProperties?.Remove("answer"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer? _explicitNullValueAnswer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubComment Answer { get => _explicitNullValueAnswer; set { _explicitNullValueAnswer = value; AdditionalData?.Remove("answer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer"); else _explicitNullProperties?.Remove("answer"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubComment _explicitNullValueAnswer = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer Answer { get => _explicitNullValueAnswer; set { _explicitNullValueAnswer = value; AdditionalData?.Remove("answer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer"); else _explicitNullProperties?.Remove("answer"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer _explicitNullValueAnswer = default!;
 #endif
         /// <summary>The check_run property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun? CheckRun { get => _explicitNullValueCheckRun; set { _explicitNullValueCheckRun = value; AdditionalData?.Remove("check_run"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_run"); else _explicitNullProperties?.Remove("check_run"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun? _explicitNullValueCheckRun = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun? CheckRun { get => _explicitNullValueCheckRun; set { _explicitNullValueCheckRun = value; AdditionalData?.Remove("check_run"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_run"); else _explicitNullProperties?.Remove("check_run"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun? _explicitNullValueCheckRun = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun CheckRun { get => _explicitNullValueCheckRun; set { _explicitNullValueCheckRun = value; AdditionalData?.Remove("check_run"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_run"); else _explicitNullProperties?.Remove("check_run"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun _explicitNullValueCheckRun = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun CheckRun { get => _explicitNullValueCheckRun; set { _explicitNullValueCheckRun = value; AdditionalData?.Remove("check_run"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_run"); else _explicitNullProperties?.Remove("check_run"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun _explicitNullValueCheckRun = default!;
 #endif
         /// <summary>The check_suite property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite? CheckSuite { get => _explicitNullValueCheckSuite; set { _explicitNullValueCheckSuite = value; AdditionalData?.Remove("check_suite"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_suite"); else _explicitNullProperties?.Remove("check_suite"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite? _explicitNullValueCheckSuite = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite? CheckSuite { get => _explicitNullValueCheckSuite; set { _explicitNullValueCheckSuite = value; AdditionalData?.Remove("check_suite"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_suite"); else _explicitNullProperties?.Remove("check_suite"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite? _explicitNullValueCheckSuite = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite CheckSuite { get => _explicitNullValueCheckSuite; set { _explicitNullValueCheckSuite = value; AdditionalData?.Remove("check_suite"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_suite"); else _explicitNullProperties?.Remove("check_suite"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite _explicitNullValueCheckSuite = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite CheckSuite { get => _explicitNullValueCheckSuite; set { _explicitNullValueCheckSuite = value; AdditionalData?.Remove("check_suite"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_suite"); else _explicitNullProperties?.Remove("check_suite"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite _explicitNullValueCheckSuite = default!;
 #endif
         /// <summary>The comment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubComment? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; AdditionalData?.Remove("comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubComment? _explicitNullValueComment = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; AdditionalData?.Remove("comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer? _explicitNullValueComment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubComment Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; AdditionalData?.Remove("comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubComment _explicitNullValueComment = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; AdditionalData?.Remove("comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer _explicitNullValueComment = default!;
 #endif
         /// <summary>The commits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,12 +134,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The discussion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion? Discussion { get => _explicitNullValueDiscussion; set { _explicitNullValueDiscussion = value; AdditionalData?.Remove("discussion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussion"); else _explicitNullProperties?.Remove("discussion"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion? _explicitNullValueDiscussion = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion? Discussion { get => _explicitNullValueDiscussion; set { _explicitNullValueDiscussion = value; AdditionalData?.Remove("discussion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussion"); else _explicitNullProperties?.Remove("discussion"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion? _explicitNullValueDiscussion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion Discussion { get => _explicitNullValueDiscussion; set { _explicitNullValueDiscussion = value; AdditionalData?.Remove("discussion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussion"); else _explicitNullProperties?.Remove("discussion"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion _explicitNullValueDiscussion = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion Discussion { get => _explicitNullValueDiscussion; set { _explicitNullValueDiscussion = value; AdditionalData?.Remove("discussion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussion"); else _explicitNullProperties?.Remove("discussion"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion _explicitNullValueDiscussion = default!;
 #endif
         /// <summary>The forced property</summary>
         public bool? Forced { get => _explicitNullValueForced; set { _explicitNullValueForced = value; AdditionalData?.Remove("forced"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forced"); else _explicitNullProperties?.Remove("forced"); } }
@@ -147,52 +147,52 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The forkee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRepository? Forkee { get => _explicitNullValueForkee; set { _explicitNullValueForkee = value; AdditionalData?.Remove("forkee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forkee"); else _explicitNullProperties?.Remove("forkee"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubRepository? _explicitNullValueForkee = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee? Forkee { get => _explicitNullValueForkee; set { _explicitNullValueForkee = value; AdditionalData?.Remove("forkee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forkee"); else _explicitNullProperties?.Remove("forkee"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee? _explicitNullValueForkee = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRepository Forkee { get => _explicitNullValueForkee; set { _explicitNullValueForkee = value; AdditionalData?.Remove("forkee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forkee"); else _explicitNullProperties?.Remove("forkee"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubRepository _explicitNullValueForkee = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee Forkee { get => _explicitNullValueForkee; set { _explicitNullValueForkee = value; AdditionalData?.Remove("forkee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forkee"); else _explicitNullProperties?.Remove("forkee"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee _explicitNullValueForkee = default!;
 #endif
         /// <summary>The head_commit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCommit? HeadCommit { get => _explicitNullValueHeadCommit; set { _explicitNullValueHeadCommit = value; AdditionalData?.Remove("head_commit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_commit"); else _explicitNullProperties?.Remove("head_commit"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubCommit? _explicitNullValueHeadCommit = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit? HeadCommit { get => _explicitNullValueHeadCommit; set { _explicitNullValueHeadCommit = value; AdditionalData?.Remove("head_commit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_commit"); else _explicitNullProperties?.Remove("head_commit"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit? _explicitNullValueHeadCommit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubCommit HeadCommit { get => _explicitNullValueHeadCommit; set { _explicitNullValueHeadCommit = value; AdditionalData?.Remove("head_commit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_commit"); else _explicitNullProperties?.Remove("head_commit"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubCommit _explicitNullValueHeadCommit = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit HeadCommit { get => _explicitNullValueHeadCommit; set { _explicitNullValueHeadCommit = value; AdditionalData?.Remove("head_commit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_commit"); else _explicitNullProperties?.Remove("head_commit"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit _explicitNullValueHeadCommit = default!;
 #endif
         /// <summary>The issue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubIssue? Issue { get => _explicitNullValueIssue; set { _explicitNullValueIssue = value; AdditionalData?.Remove("issue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue"); else _explicitNullProperties?.Remove("issue"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubIssue? _explicitNullValueIssue = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue? Issue { get => _explicitNullValueIssue; set { _explicitNullValueIssue = value; AdditionalData?.Remove("issue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue"); else _explicitNullProperties?.Remove("issue"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue? _explicitNullValueIssue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubIssue Issue { get => _explicitNullValueIssue; set { _explicitNullValueIssue = value; AdditionalData?.Remove("issue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue"); else _explicitNullProperties?.Remove("issue"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubIssue _explicitNullValueIssue = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue Issue { get => _explicitNullValueIssue; set { _explicitNullValueIssue = value; AdditionalData?.Remove("issue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue"); else _explicitNullProperties?.Remove("issue"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue _explicitNullValueIssue = default!;
 #endif
         /// <summary>The member property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubUser? Member { get => _explicitNullValueMember; set { _explicitNullValueMember = value; AdditionalData?.Remove("member"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member"); else _explicitNullProperties?.Remove("member"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubUser? _explicitNullValueMember = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember? Member { get => _explicitNullValueMember; set { _explicitNullValueMember = value; AdditionalData?.Remove("member"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member"); else _explicitNullProperties?.Remove("member"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember? _explicitNullValueMember = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubUser Member { get => _explicitNullValueMember; set { _explicitNullValueMember = value; AdditionalData?.Remove("member"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member"); else _explicitNullProperties?.Remove("member"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubUser _explicitNullValueMember = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember Member { get => _explicitNullValueMember; set { _explicitNullValueMember = value; AdditionalData?.Remove("member"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member"); else _explicitNullProperties?.Remove("member"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember _explicitNullValueMember = default!;
 #endif
         /// <summary>The pull_request property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubIssue? PullRequest { get => _explicitNullValuePullRequest; set { _explicitNullValuePullRequest = value; AdditionalData?.Remove("pull_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request"); else _explicitNullProperties?.Remove("pull_request"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubIssue? _explicitNullValuePullRequest = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue? PullRequest { get => _explicitNullValuePullRequest; set { _explicitNullValuePullRequest = value; AdditionalData?.Remove("pull_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request"); else _explicitNullProperties?.Remove("pull_request"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue? _explicitNullValuePullRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubIssue PullRequest { get => _explicitNullValuePullRequest; set { _explicitNullValuePullRequest = value; AdditionalData?.Remove("pull_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request"); else _explicitNullProperties?.Remove("pull_request"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubIssue _explicitNullValuePullRequest = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue PullRequest { get => _explicitNullValuePullRequest; set { _explicitNullValuePullRequest = value; AdditionalData?.Remove("pull_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request"); else _explicitNullProperties?.Remove("pull_request"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue _explicitNullValuePullRequest = default!;
 #endif
         /// <summary>The ref property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -217,32 +217,32 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The release property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRelease? Release { get => _explicitNullValueRelease; set { _explicitNullValueRelease = value; AdditionalData?.Remove("release"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("release"); else _explicitNullProperties?.Remove("release"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubRelease? _explicitNullValueRelease = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease? Release { get => _explicitNullValueRelease; set { _explicitNullValueRelease = value; AdditionalData?.Remove("release"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("release"); else _explicitNullProperties?.Remove("release"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease? _explicitNullValueRelease = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRelease Release { get => _explicitNullValueRelease; set { _explicitNullValueRelease = value; AdditionalData?.Remove("release"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("release"); else _explicitNullProperties?.Remove("release"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubRelease _explicitNullValueRelease = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease Release { get => _explicitNullValueRelease; set { _explicitNullValueRelease = value; AdditionalData?.Remove("release"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("release"); else _explicitNullProperties?.Remove("release"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease _explicitNullValueRelease = default!;
 #endif
         /// <summary>The repository property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRepository? Repository { get => _explicitNullValueRepository; set { _explicitNullValueRepository = value; AdditionalData?.Remove("repository"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository"); else _explicitNullProperties?.Remove("repository"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubRepository? _explicitNullValueRepository = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee? Repository { get => _explicitNullValueRepository; set { _explicitNullValueRepository = value; AdditionalData?.Remove("repository"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository"); else _explicitNullProperties?.Remove("repository"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee? _explicitNullValueRepository = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubRepository Repository { get => _explicitNullValueRepository; set { _explicitNullValueRepository = value; AdditionalData?.Remove("repository"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository"); else _explicitNullProperties?.Remove("repository"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubRepository _explicitNullValueRepository = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee Repository { get => _explicitNullValueRepository; set { _explicitNullValueRepository = value; AdditionalData?.Remove("repository"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository"); else _explicitNullProperties?.Remove("repository"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee _explicitNullValueRepository = default!;
 #endif
         /// <summary>The review property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubReview? Review { get => _explicitNullValueReview; set { _explicitNullValueReview = value; AdditionalData?.Remove("review"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review"); else _explicitNullProperties?.Remove("review"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubReview? _explicitNullValueReview = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview? Review { get => _explicitNullValueReview; set { _explicitNullValueReview = value; AdditionalData?.Remove("review"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review"); else _explicitNullProperties?.Remove("review"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview? _explicitNullValueReview = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.GithubReview Review { get => _explicitNullValueReview; set { _explicitNullValueReview = value; AdditionalData?.Remove("review"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review"); else _explicitNullProperties?.Remove("review"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.GithubReview _explicitNullValueReview = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview Review { get => _explicitNullValueReview; set { _explicitNullValueReview = value; AdditionalData?.Remove("review"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review"); else _explicitNullProperties?.Remove("review"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview _explicitNullValueReview = default!;
 #endif
         /// <summary>The sender property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -280,24 +280,24 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "action", n => { Action = n.GetStringValue(); } },
-                { "answer", n => { Answer = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubComment>(global::Soenneker.Discord.OpenApiClient.Models.GithubComment.CreateFromDiscriminatorValue); } },
-                { "check_run", n => { CheckRun = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun>(global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun.CreateFromDiscriminatorValue); } },
-                { "check_suite", n => { CheckSuite = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite>(global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite.CreateFromDiscriminatorValue); } },
-                { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubComment>(global::Soenneker.Discord.OpenApiClient.Models.GithubComment.CreateFromDiscriminatorValue); } },
+                { "answer", n => { Answer = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer.CreateFromDiscriminatorValue); } },
+                { "check_run", n => { CheckRun = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun.CreateFromDiscriminatorValue); } },
+                { "check_suite", n => { CheckSuite = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite.CreateFromDiscriminatorValue); } },
+                { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer.CreateFromDiscriminatorValue); } },
                 { "commits", n => { Commits = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GithubCommit>(global::Soenneker.Discord.OpenApiClient.Models.GithubCommit.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "compare", n => { Compare = n.GetStringValue(); } },
-                { "discussion", n => { Discussion = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion>(global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion.CreateFromDiscriminatorValue); } },
+                { "discussion", n => { Discussion = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion.CreateFromDiscriminatorValue); } },
                 { "forced", n => { Forced = n.GetBoolValue(); } },
-                { "forkee", n => { Forkee = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRepository>(global::Soenneker.Discord.OpenApiClient.Models.GithubRepository.CreateFromDiscriminatorValue); } },
-                { "head_commit", n => { HeadCommit = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCommit>(global::Soenneker.Discord.OpenApiClient.Models.GithubCommit.CreateFromDiscriminatorValue); } },
-                { "issue", n => { Issue = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubIssue>(global::Soenneker.Discord.OpenApiClient.Models.GithubIssue.CreateFromDiscriminatorValue); } },
-                { "member", n => { Member = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>(global::Soenneker.Discord.OpenApiClient.Models.GithubUser.CreateFromDiscriminatorValue); } },
-                { "pull_request", n => { PullRequest = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubIssue>(global::Soenneker.Discord.OpenApiClient.Models.GithubIssue.CreateFromDiscriminatorValue); } },
+                { "forkee", n => { Forkee = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee.CreateFromDiscriminatorValue); } },
+                { "head_commit", n => { HeadCommit = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit.CreateFromDiscriminatorValue); } },
+                { "issue", n => { Issue = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue.CreateFromDiscriminatorValue); } },
+                { "member", n => { Member = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember.CreateFromDiscriminatorValue); } },
+                { "pull_request", n => { PullRequest = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue.CreateFromDiscriminatorValue); } },
                 { "ref", n => { Ref = n.GetStringValue(); } },
                 { "ref_type", n => { RefType = n.GetStringValue(); } },
-                { "release", n => { Release = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRelease>(global::Soenneker.Discord.OpenApiClient.Models.GithubRelease.CreateFromDiscriminatorValue); } },
-                { "repository", n => { Repository = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRepository>(global::Soenneker.Discord.OpenApiClient.Models.GithubRepository.CreateFromDiscriminatorValue); } },
-                { "review", n => { Review = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubReview>(global::Soenneker.Discord.OpenApiClient.Models.GithubReview.CreateFromDiscriminatorValue); } },
+                { "release", n => { Release = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease.CreateFromDiscriminatorValue); } },
+                { "repository", n => { Repository = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee.CreateFromDiscriminatorValue); } },
+                { "review", n => { Review = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview>(global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview.CreateFromDiscriminatorValue); } },
                 { "sender", n => { Sender = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>(global::Soenneker.Discord.OpenApiClient.Models.GithubUser.CreateFromDiscriminatorValue); } },
             };
         }
@@ -309,24 +309,24 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("action", Action);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubComment>("answer", Answer);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckRun>("check_run", CheckRun);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite>("check_suite", CheckSuite);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubComment>("comment", Comment);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer>("answer", Answer);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckRun>("check_run", CheckRun);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookCheckSuite>("check_suite", CheckSuite);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookAnswer>("comment", Comment);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.GithubCommit>("commits", Commits);
             writer.WriteStringValue("compare", Compare);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubDiscussion>("discussion", Discussion);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookDiscussion>("discussion", Discussion);
             writer.WriteBoolValue("forced", Forced);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRepository>("forkee", Forkee);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCommit>("head_commit", HeadCommit);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubIssue>("issue", Issue);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>("member", Member);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubIssue>("pull_request", PullRequest);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee>("forkee", Forkee);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookHeadCommit>("head_commit", HeadCommit);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue>("issue", Issue);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookMember>("member", Member);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookIssue>("pull_request", PullRequest);
             writer.WriteStringValue("ref", Ref);
             writer.WriteStringValue("ref_type", RefType);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRelease>("release", Release);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubRepository>("repository", Repository);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubReview>("review", Review);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookRelease>("release", Release);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookForkee>("repository", Repository);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubWebhookReview>("review", Review);
             writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubUser>("sender", Sender);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

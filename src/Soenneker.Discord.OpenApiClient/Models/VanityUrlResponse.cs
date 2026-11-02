@@ -40,12 +40,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse? _explicitNullValueError = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse _explicitNullValueError = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError _explicitNullValueError = default!;
 #endif
         /// <summary>The uses property</summary>
         public int? Uses { get => _explicitNullValueUses; set { _explicitNullValueUses = value; AdditionalData?.Remove("uses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uses"); else _explicitNullProperties?.Remove("uses"); } }
@@ -76,7 +76,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse>(global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse.CreateFromDiscriminatorValue); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError>(global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError.CreateFromDiscriminatorValue); } },
                 { "uses", n => { Uses = n.GetIntValue(); } },
             };
         }
@@ -88,7 +88,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VanityUrlErrorResponse>("error", Error);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.VanityUrlResponseError>("error", Error);
             writer.WriteIntValue("uses", Uses);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

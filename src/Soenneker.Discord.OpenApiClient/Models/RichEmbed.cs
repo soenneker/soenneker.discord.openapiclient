@@ -52,22 +52,22 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The audio property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio? Audio { get => _explicitNullValueAudio; set { _explicitNullValueAudio = value; AdditionalData?.Remove("audio"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio"); else _explicitNullProperties?.Remove("audio"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio? _explicitNullValueAudio = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudioComposed? Audio { get => _explicitNullValueAudio; set { _explicitNullValueAudio = value; AdditionalData?.Remove("audio"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio"); else _explicitNullProperties?.Remove("audio"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudioComposed? _explicitNullValueAudio = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio Audio { get => _explicitNullValueAudio; set { _explicitNullValueAudio = value; AdditionalData?.Remove("audio"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio"); else _explicitNullProperties?.Remove("audio"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio _explicitNullValueAudio = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudioComposed Audio { get => _explicitNullValueAudio; set { _explicitNullValueAudio = value; AdditionalData?.Remove("audio"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio"); else _explicitNullProperties?.Remove("audio"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudioComposed _explicitNullValueAudio = default!;
 #endif
         /// <summary>The author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor? Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; AdditionalData?.Remove("author"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor? _explicitNullValueAuthor = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed? Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; AdditionalData?.Remove("author"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed? _explicitNullValueAuthor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; AdditionalData?.Remove("author"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor _explicitNullValueAuthor = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; AdditionalData?.Remove("author"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed _explicitNullValueAuthor = default!;
 #endif
         /// <summary>The color property</summary>
         public int? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
@@ -95,42 +95,42 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The footer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter? Footer { get => _explicitNullValueFooter; set { _explicitNullValueFooter = value; AdditionalData?.Remove("footer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer"); else _explicitNullProperties?.Remove("footer"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter? _explicitNullValueFooter = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed? Footer { get => _explicitNullValueFooter; set { _explicitNullValueFooter = value; AdditionalData?.Remove("footer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer"); else _explicitNullProperties?.Remove("footer"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed? _explicitNullValueFooter = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter Footer { get => _explicitNullValueFooter; set { _explicitNullValueFooter = value; AdditionalData?.Remove("footer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer"); else _explicitNullProperties?.Remove("footer"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter _explicitNullValueFooter = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed Footer { get => _explicitNullValueFooter; set { _explicitNullValueFooter = value; AdditionalData?.Remove("footer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer"); else _explicitNullProperties?.Remove("footer"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed _explicitNullValueFooter = default!;
 #endif
         /// <summary>The image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage? _explicitNullValueImage = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed? _explicitNullValueImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage _explicitNullValueImage = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed _explicitNullValueImage = default!;
 #endif
         /// <summary>The provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider? _explicitNullValueProvider = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed? _explicitNullValueProvider = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider _explicitNullValueProvider = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed _explicitNullValueProvider = default!;
 #endif
         /// <summary>The thumbnail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail? Thumbnail { get => _explicitNullValueThumbnail; set { _explicitNullValueThumbnail = value; AdditionalData?.Remove("thumbnail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail"); else _explicitNullProperties?.Remove("thumbnail"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail? _explicitNullValueThumbnail = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed? Thumbnail { get => _explicitNullValueThumbnail; set { _explicitNullValueThumbnail = value; AdditionalData?.Remove("thumbnail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail"); else _explicitNullProperties?.Remove("thumbnail"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed? _explicitNullValueThumbnail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail Thumbnail { get => _explicitNullValueThumbnail; set { _explicitNullValueThumbnail = value; AdditionalData?.Remove("thumbnail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail"); else _explicitNullProperties?.Remove("thumbnail"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail _explicitNullValueThumbnail = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed Thumbnail { get => _explicitNullValueThumbnail; set { _explicitNullValueThumbnail = value; AdditionalData?.Remove("thumbnail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail"); else _explicitNullProperties?.Remove("thumbnail"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed _explicitNullValueThumbnail = default!;
 #endif
         /// <summary>The timestamp property</summary>
         public DateTimeOffset? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
@@ -168,12 +168,12 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The video property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo? Video { get => _explicitNullValueVideo; set { _explicitNullValueVideo = value; AdditionalData?.Remove("video"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video"); else _explicitNullProperties?.Remove("video"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo? _explicitNullValueVideo = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed? Video { get => _explicitNullValueVideo; set { _explicitNullValueVideo = value; AdditionalData?.Remove("video"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video"); else _explicitNullProperties?.Remove("video"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed? _explicitNullValueVideo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo Video { get => _explicitNullValueVideo; set { _explicitNullValueVideo = value; AdditionalData?.Remove("video"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video"); else _explicitNullProperties?.Remove("video"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo _explicitNullValueVideo = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed Video { get => _explicitNullValueVideo; set { _explicitNullValueVideo = value; AdditionalData?.Remove("video"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video"); else _explicitNullProperties?.Remove("video"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed _explicitNullValueVideo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.RichEmbed"/> and sets the default values.
@@ -200,20 +200,20 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "audio", n => { Audio = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio.CreateFromDiscriminatorValue); } },
-                { "author", n => { Author = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor.CreateFromDiscriminatorValue); } },
+                { "audio", n => { Audio = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudioComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudioComposed.CreateFromDiscriminatorValue); } },
+                { "author", n => { Author = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed.CreateFromDiscriminatorValue); } },
                 { "color", n => { Color = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedField>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedField.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "footer", n => { Footer = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter.CreateFromDiscriminatorValue); } },
-                { "image", n => { Image = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage.CreateFromDiscriminatorValue); } },
-                { "provider", n => { Provider = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider.CreateFromDiscriminatorValue); } },
-                { "thumbnail", n => { Thumbnail = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail.CreateFromDiscriminatorValue); } },
+                { "footer", n => { Footer = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed.CreateFromDiscriminatorValue); } },
+                { "image", n => { Image = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed.CreateFromDiscriminatorValue); } },
+                { "provider", n => { Provider = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed.CreateFromDiscriminatorValue); } },
+                { "thumbnail", n => { Thumbnail = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "video", n => { Video = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo.CreateFromDiscriminatorValue); } },
+                { "video", n => { Video = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed>(global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -223,20 +223,20 @@ namespace Soenneker.Discord.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudio>("audio", Audio);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthor>("author", Author);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAudioComposed>("audio", Audio);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedAuthorComposed>("author", Author);
             writer.WriteIntValue("color", Color);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedField>("fields", Fields);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooter>("footer", Footer);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImage>("image", Image);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProvider>("provider", Provider);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnail>("thumbnail", Thumbnail);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedFooterComposed>("footer", Footer);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedImageComposed>("image", Image);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedProviderComposed>("provider", Provider);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedThumbnailComposed>("thumbnail", Thumbnail);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("url", Url);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideo>("video", Video);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.RichEmbedVideoComposed>("video", Video);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
