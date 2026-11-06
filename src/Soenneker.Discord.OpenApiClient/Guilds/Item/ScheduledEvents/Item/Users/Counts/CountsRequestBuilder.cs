@@ -93,18 +93,15 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Users
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CountsRequestBuilderGetQueryParameters 
         {
+            /// <summary>List of scheduled event exception ids to get user counts for</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("guild_scheduled_event_exception_ids")]
             public string[]? GuildScheduledEventExceptionIds { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("guild_scheduled_event_exception_ids")]
             public string[] GuildScheduledEventExceptionIds { get; set; }
-            #pragma warning restore CS1591
 #endif
         }
     }

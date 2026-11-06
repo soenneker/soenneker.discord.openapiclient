@@ -16,7 +16,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Member
     public partial class MemberRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item.permissions.member.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the member</param>
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Member.Item.WithUserItemRequestBuilder"/></returns>
         public global::Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Member.Item.WithUserItemRequestBuilder this[string position]
         {

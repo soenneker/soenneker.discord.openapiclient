@@ -16,7 +16,7 @@ namespace Soenneker.Discord.OpenApiClient.Skus
     public partial class SkusRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.skus.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">ID of SKU</param>
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Skus.Item.WithSkuItemRequestBuilder"/></returns>
         public global::Soenneker.Discord.OpenApiClient.Skus.Item.WithSkuItemRequestBuilder this[string position]
         {

@@ -16,7 +16,7 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers
     public partial class AnswersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.channels.item.polls.item.answers.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the answer</param>
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswerItemRequestBuilder"/></returns>
         public global::Soenneker.Discord.OpenApiClient.Channels.Item.Polls.Item.Answers.Item.WithAnswerItemRequestBuilder this[int position]
         {

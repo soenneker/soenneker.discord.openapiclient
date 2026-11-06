@@ -94,40 +94,32 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Item.
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UsersRequestBuilderGetQueryParameters 
         {
+            /// <summary>Consider only users after given user id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("after")]
             public string? After { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("after")]
             public string After { get; set; }
-            #pragma warning restore CS1591
 #endif
+            /// <summary>Consider only users before given user id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("before")]
             public string? Before { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("before")]
             public string Before { get; set; }
-            #pragma warning restore CS1591
 #endif
-            #pragma warning disable CS1591
+            /// <summary>Number of users to return (up to maximum 100)</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Include guild member data if it exists</summary>
             [QueryParameter("with_member")]
             public bool? WithMember { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

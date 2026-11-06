@@ -132,14 +132,12 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Requests
             public string Before { get; set; }
             #pragma warning restore CS1591
 #endif
-            #pragma warning disable CS1591
+            /// <summary>Maximum number of join requests to return</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Filter by application status. Defaults to SUBMITTED if omitted</summary>
             [QueryParameter("status")]
             public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Requests.GetStatusQueryParameterType? Status { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

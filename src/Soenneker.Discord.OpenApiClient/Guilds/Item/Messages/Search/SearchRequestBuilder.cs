@@ -151,18 +151,15 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search
             public string[] ChannelId { get; set; }
             #pragma warning restore CS1591
 #endif
+            /// <summary>Text to search for. Matches messages containing these words within slop positions of each other.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("content")]
             public string? Content { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("content")]
             public string Content { get; set; }
-            #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -314,10 +311,9 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Messages.Search
             public string[] RepliedToUserId { get; set; }
             #pragma warning restore CS1591
 #endif
-            #pragma warning disable CS1591
+            /// <summary>How many positions apart or out of order the words in content can be and still match. 0 matches the exact phrase; higher values, up to 100, match words further apart.</summary>
             [QueryParameter("slop")]
             public int? Slop { get; set; }
-            #pragma warning restore CS1591
             #pragma warning disable CS1591
             [QueryParameter("sort_by")]
             public global::Soenneker.Discord.OpenApiClient.Models.SortingMode? SortBy { get; set; }

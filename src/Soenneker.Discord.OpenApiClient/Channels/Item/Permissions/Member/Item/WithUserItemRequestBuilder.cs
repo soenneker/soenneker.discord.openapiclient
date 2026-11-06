@@ -93,10 +93,9 @@ namespace Soenneker.Discord.OpenApiClient.Channels.Item.Permissions.Member.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithUserItemRequestBuilderGetQueryParameters 
         {
-            #pragma warning disable CS1591
+            /// <summary>Whether to apply implicit-permission computations. Defaults to true; pass false for the raw explicit permissions.</summary>
             [QueryParameter("implicit")]
             public bool? Implicit { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

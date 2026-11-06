@@ -130,10 +130,9 @@ namespace Soenneker.Discord.OpenApiClient.Users.Me.Guilds
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Return the guilds contained within the specified shard. Required for applications that are sharded. Valid values are 0 to session_start_limit.max_concurrency - 1. Not the same as Gateway shard ids.</summary>
             [QueryParameter("shard")]
             public int? Shard { get; set; }
-            #pragma warning restore CS1591
             #pragma warning disable CS1591
             [QueryParameter("with_counts")]
             public bool? WithCounts { get; set; }

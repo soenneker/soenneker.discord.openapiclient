@@ -16,7 +16,7 @@ namespace Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages
     public partial class MessagesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.partnerSdk.dms.item.item.messages.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the message to update</param>
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages.Item.WithMessageItemRequestBuilder"/></returns>
         public global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.Messages.Item.WithMessageItemRequestBuilder this[string position]
         {

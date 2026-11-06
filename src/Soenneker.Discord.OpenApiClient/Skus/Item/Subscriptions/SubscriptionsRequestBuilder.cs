@@ -19,7 +19,7 @@ namespace Soenneker.Discord.OpenApiClient.Skus.Item.Subscriptions
     public partial class SubscriptionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.skus.item.subscriptions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">ID of the subscription</param>
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Skus.Item.Subscriptions.Item.WithSubscriptionItemRequestBuilder"/></returns>
         public global::Soenneker.Discord.OpenApiClient.Skus.Item.Subscriptions.Item.WithSubscriptionItemRequestBuilder this[string position]
         {
@@ -107,48 +107,38 @@ namespace Soenneker.Discord.OpenApiClient.Skus.Item.Subscriptions
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SubscriptionsRequestBuilderGetQueryParameters 
         {
+            /// <summary>List subscriptions after this ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("after")]
             public string? After { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("after")]
             public string After { get; set; }
-            #pragma warning restore CS1591
 #endif
+            /// <summary>List subscriptions before this ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("before")]
             public string? Before { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("before")]
             public string Before { get; set; }
-            #pragma warning restore CS1591
 #endif
-            #pragma warning disable CS1591
+            /// <summary>Number of results to return (1-100)</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            #pragma warning restore CS1591
+            /// <summary>User ID for which to return subscriptions. Required except for OAuth queries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("user_id")]
             public string? UserId { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("user_id")]
             public string UserId { get; set; }
-            #pragma warning restore CS1591
 #endif
         }
     }

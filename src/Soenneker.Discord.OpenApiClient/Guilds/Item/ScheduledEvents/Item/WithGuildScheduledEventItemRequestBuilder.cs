@@ -31,7 +31,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item
             get => new global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Users.UsersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.guilds.item.scheduledEvents.item.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the event exception</param>
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Item.WithGuildScheduledEventExceptionItemRequestBuilder"/></returns>
         public global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Item.WithGuildScheduledEventExceptionItemRequestBuilder this[string position]
         {

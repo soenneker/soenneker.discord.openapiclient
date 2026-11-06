@@ -37,7 +37,7 @@ namespace Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers
             get => new global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.JobStatus.JobStatusRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.invites.item.targetUsers.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the user to target</param>
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.Item.WithUserItemRequestBuilder"/></returns>
         public global::Soenneker.Discord.OpenApiClient.Invites.Item.TargetUsers.Item.WithUserItemRequestBuilder this[string position]
         {

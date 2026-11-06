@@ -16,7 +16,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.Permissions.Role
     public partial class RoleRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.guilds.item.permissions.role.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the role</param>
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.Permissions.Role.Item.WithRoleItemRequestBuilder"/></returns>
         public global::Soenneker.Discord.OpenApiClient.Guilds.Item.Permissions.Role.Item.WithRoleItemRequestBuilder this[string position]
         {

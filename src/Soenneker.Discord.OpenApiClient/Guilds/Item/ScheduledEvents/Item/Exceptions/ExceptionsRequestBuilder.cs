@@ -19,7 +19,7 @@ namespace Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Excep
     public partial class ExceptionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.guilds.item.scheduledEvents.item.exceptions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the event exception</param>
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Exceptions.Item.WithExceptionItemRequestBuilder"/></returns>
         public global::Soenneker.Discord.OpenApiClient.Guilds.Item.ScheduledEvents.Item.Exceptions.Item.WithExceptionItemRequestBuilder this[string position]
         {

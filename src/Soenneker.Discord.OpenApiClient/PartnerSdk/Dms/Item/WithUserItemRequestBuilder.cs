@@ -15,7 +15,7 @@ namespace Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item
     public partial class WithUserItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Discord.OpenApiClient.partnerSdk.dms.item.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the second user in the DM</param>
         /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.WithUserItemRequestBuilder"/></returns>
         public global::Soenneker.Discord.OpenApiClient.PartnerSdk.Dms.Item.Item.WithUserItemRequestBuilder this[string position]
         {

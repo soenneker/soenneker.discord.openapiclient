@@ -3780,6 +3780,7 @@
           {
             "name": "implicit",
             "in": "query",
+            "description": "Whether to apply implicit-permission computations. Defaults to true; pass false for the raw explicit permissions.",
             "schema": {
               "type": "boolean"
             }
@@ -3832,6 +3833,7 @@
         {
           "name": "channelId",
           "in": "path",
+          "description": "The ID of the channel",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -3842,6 +3844,7 @@
         {
           "name": "userId",
           "in": "path",
+          "description": "The ID of the member",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -3859,6 +3862,7 @@
           {
             "name": "implicit",
             "in": "query",
+            "description": "Whether to apply implicit-permission computations. Defaults to true. Pass false for the raw explicit permissions.",
             "schema": {
               "type": "boolean"
             }
@@ -3911,6 +3915,7 @@
         {
           "name": "channelId",
           "in": "path",
+          "description": "The ID of the channel",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -3921,6 +3926,7 @@
         {
           "name": "roleId",
           "in": "path",
+          "description": "The ID of the role",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -4289,6 +4295,7 @@
         {
           "name": "answerId",
           "in": "path",
+          "description": "The ID of the answer",
           "required": true,
           "schema": {
             "maximum": 10,
@@ -7265,6 +7272,7 @@
         {
           "name": "guildId",
           "in": "path",
+          "description": "The ID of the guild",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -8098,6 +8106,7 @@
           {
             "name": "content",
             "in": "query",
+            "description": "Text to search for. Matches messages containing these words within slop positions of each other.",
             "schema": {
               "maxLength": 1024,
               "type": "string"
@@ -8106,6 +8115,7 @@
           {
             "name": "slop",
             "in": "query",
+            "description": "How many positions apart or out of order the words in content can be and still match. 0 matches the exact phrase; higher values, up to 100, match words further apart.",
             "schema": {
               "maximum": 100,
               "minimum": 0,
@@ -8678,6 +8688,7 @@
         {
           "name": "guildId",
           "in": "path",
+          "description": "The ID of the guild",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -8688,6 +8699,7 @@
         {
           "name": "userId",
           "in": "path",
+          "description": "The ID of the member",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -8748,6 +8760,7 @@
         {
           "name": "guildId",
           "in": "path",
+          "description": "The ID of the guild",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -8758,6 +8771,7 @@
         {
           "name": "roleId",
           "in": "path",
+          "description": "The ID of the role",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -9042,6 +9056,7 @@
           {
             "name": "status",
             "in": "query",
+            "description": "Filter by application status. Defaults to SUBMITTED if omitted",
             "schema": {
               "type": "string",
               "enum": [
@@ -9077,6 +9092,7 @@
           {
             "name": "limit",
             "in": "query",
+            "description": "Maximum number of join requests to return",
             "schema": {
               "maximum": 100,
               "minimum": 1,
@@ -9983,6 +9999,7 @@
         {
           "name": "guildId",
           "in": "path",
+          "description": "The ID of the guild",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -9993,6 +10010,7 @@
         {
           "name": "guildScheduledEventId",
           "in": "path",
+          "description": "The ID of the scheduled event",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -10102,6 +10120,7 @@
         {
           "name": "guildId",
           "in": "path",
+          "description": "The ID of the guild",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -10112,6 +10131,7 @@
         {
           "name": "guildScheduledEventId",
           "in": "path",
+          "description": "The ID of the scheduled event",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -10122,6 +10142,7 @@
         {
           "name": "exceptionId",
           "in": "path",
+          "description": "The ID of the event exception",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -10138,6 +10159,7 @@
           {
             "name": "with_member",
             "in": "query",
+            "description": "Include guild member data if it exists",
             "schema": {
               "type": "boolean"
             }
@@ -10145,6 +10167,7 @@
           {
             "name": "limit",
             "in": "query",
+            "description": "Number of users to return (up to maximum 100)",
             "schema": {
               "maximum": 100,
               "minimum": 1,
@@ -10154,6 +10177,7 @@
           {
             "name": "before",
             "in": "query",
+            "description": "Consider only users before given user id",
             "schema": {
               "pattern": "^(0|[1-9][0-9]*)$",
               "type": "string",
@@ -10163,6 +10187,7 @@
           {
             "name": "after",
             "in": "query",
+            "description": "Consider only users after given user id",
             "schema": {
               "pattern": "^(0|[1-9][0-9]*)$",
               "type": "string",
@@ -10244,6 +10269,7 @@
           {
             "name": "guild_scheduled_event_exception_ids",
             "in": "query",
+            "description": "List of scheduled event exception ids to get user counts for",
             "schema": {
               "maxItems": 10,
               "type": "array",
@@ -10302,6 +10328,7 @@
         {
           "name": "guildId",
           "in": "path",
+          "description": "The ID of the guild",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -10312,6 +10339,7 @@
         {
           "name": "guildScheduledEventId",
           "in": "path",
+          "description": "The ID of the scheduled event",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -10329,6 +10357,7 @@
           {
             "name": "with_member",
             "in": "query",
+            "description": "Include guild member data if it exists",
             "schema": {
               "type": "boolean"
             }
@@ -10336,6 +10365,7 @@
           {
             "name": "limit",
             "in": "query",
+            "description": "Number of users to return (up to maximum 100)",
             "schema": {
               "maximum": 100,
               "minimum": 1,
@@ -10345,6 +10375,7 @@
           {
             "name": "before",
             "in": "query",
+            "description": "Consider only users before given user id",
             "schema": {
               "pattern": "^(0|[1-9][0-9]*)$",
               "type": "string",
@@ -10354,6 +10385,7 @@
           {
             "name": "after",
             "in": "query",
+            "description": "Consider only users after given user id",
             "schema": {
               "pattern": "^(0|[1-9][0-9]*)$",
               "type": "string",
@@ -10408,6 +10440,7 @@
         {
           "name": "guildId",
           "in": "path",
+          "description": "The ID of the guild",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -10418,6 +10451,7 @@
         {
           "name": "guildScheduledEventId",
           "in": "path",
+          "description": "The ID of the scheduled event",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -10428,6 +10462,7 @@
         {
           "name": "guildScheduledEventExceptionId",
           "in": "path",
+          "description": "The ID of the event exception",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -12638,6 +12673,28 @@
       "put": {
         "description": "Add a target user to an existing invite.",
         "operationId": "AddInviteTargetUser",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "maxLength": 152133,
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "The ID of the user to target",
+            "required": true,
+            "schema": {
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "x-client-original-format": "snowflake"
+            }
+          }
+        ],
         "responses": {
           "204": {
             "description": "204 response for add_invite_target_user",
@@ -12677,6 +12734,28 @@
       "delete": {
         "description": "Remove a target user from an existing invite.",
         "operationId": "RemoveInviteTargetUser",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "maxLength": 152133,
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "The ID of the user to stop targeting",
+            "required": true,
+            "schema": {
+              "pattern": "^(0|[1-9][0-9]*)$",
+              "type": "string",
+              "x-client-original-format": "snowflake"
+            }
+          }
+        ],
         "responses": {
           "204": {
             "description": "204 response for remove_invite_target_user",
@@ -12712,28 +12791,7 @@
             "BotToken": []
           }
         ]
-      },
-      "parameters": [
-        {
-          "name": "code",
-          "in": "path",
-          "required": true,
-          "schema": {
-            "maxLength": 152133,
-            "type": "string"
-          }
-        },
-        {
-          "name": "userId",
-          "in": "path",
-          "required": true,
-          "schema": {
-            "pattern": "^(0|[1-9][0-9]*)$",
-            "type": "string",
-            "x-client-original-format": "snowflake"
-          }
-        }
-      ]
+      }
     },
     "/lobbies": {
       "put": {
@@ -13708,6 +13766,7 @@
         {
           "name": "lobbyId",
           "in": "path",
+          "description": "The ID of the lobby the message is in",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -13718,6 +13777,7 @@
         {
           "name": "messageId",
           "in": "path",
+          "description": "The ID of the message to update",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -14023,6 +14083,7 @@
         {
           "name": "userId1",
           "in": "path",
+          "description": "The ID of the first user in the DM",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -14033,6 +14094,7 @@
         {
           "name": "userId2",
           "in": "path",
+          "description": "The ID of the second user in the DM",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -14043,6 +14105,7 @@
         {
           "name": "messageId",
           "in": "path",
+          "description": "The ID of the message to update",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -14276,6 +14339,7 @@
           {
             "name": "before",
             "in": "query",
+            "description": "List subscriptions before this ID",
             "schema": {
               "pattern": "^(0|[1-9][0-9]*)$",
               "type": "string",
@@ -14285,6 +14349,7 @@
           {
             "name": "after",
             "in": "query",
+            "description": "List subscriptions after this ID",
             "schema": {
               "pattern": "^(0|[1-9][0-9]*)$",
               "type": "string",
@@ -14294,6 +14359,7 @@
           {
             "name": "limit",
             "in": "query",
+            "description": "Number of results to return (1-100)",
             "schema": {
               "maximum": 100,
               "minimum": 1,
@@ -14303,6 +14369,7 @@
           {
             "name": "user_id",
             "in": "query",
+            "description": "User ID for which to return subscriptions. Required except for OAuth queries.",
             "schema": {
               "pattern": "^(0|[1-9][0-9]*)$",
               "type": "string",
@@ -14395,6 +14462,7 @@
         {
           "name": "skuId",
           "in": "path",
+          "description": "ID of SKU",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -14412,6 +14480,7 @@
           {
             "name": "user_id",
             "in": "query",
+            "description": "User ID for which to return the subscription. Required except for OAuth queries.",
             "schema": {
               "pattern": "^(0|[1-9][0-9]*)$",
               "type": "string",
@@ -14504,6 +14573,7 @@
         {
           "name": "skuId",
           "in": "path",
+          "description": "ID of SKU",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -14514,6 +14584,7 @@
         {
           "name": "subscriptionId",
           "in": "path",
+          "description": "ID of the subscription",
           "required": true,
           "schema": {
             "pattern": "^(0|[1-9][0-9]*)$",
@@ -15480,6 +15551,7 @@
           {
             "name": "shard",
             "in": "query",
+            "description": "Return the guilds contained within the specified shard. Required for applications that are sharded. Valid values are 0 to session_start_limit.max_concurrency - 1. Not the same as Gateway shard ids.",
             "schema": {
               "minimum": 0,
               "type": "integer"
