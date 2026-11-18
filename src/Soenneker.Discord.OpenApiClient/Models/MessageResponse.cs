@@ -468,7 +468,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(40)
             {
                 { "activity", n => { Activity = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.MessageActivityResponse>(global::Soenneker.Discord.OpenApiClient.Models.MessageActivityResponse.CreateFromDiscriminatorValue); } },
                 { "actor", n => { Actor = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.UserResponse>(global::Soenneker.Discord.OpenApiClient.Models.UserResponse.CreateFromDiscriminatorValue); } },

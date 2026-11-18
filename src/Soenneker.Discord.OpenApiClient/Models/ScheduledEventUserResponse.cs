@@ -109,7 +109,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "guild_scheduled_event_exception_id", n => { GuildScheduledEventExceptionId = n.GetStringValue(); } },
                 { "guild_scheduled_event_id", n => { GuildScheduledEventId = n.GetStringValue(); } },

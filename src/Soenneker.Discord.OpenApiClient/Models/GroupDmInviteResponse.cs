@@ -105,7 +105,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "approximate_member_count", n => { ApproximateMemberCount = n.GetIntValue(); } },
                 { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse>(global::Soenneker.Discord.OpenApiClient.Models.InviteChannelResponse.CreateFromDiscriminatorValue); } },

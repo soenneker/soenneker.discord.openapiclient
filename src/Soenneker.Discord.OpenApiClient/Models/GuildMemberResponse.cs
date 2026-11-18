@@ -163,7 +163,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "avatar", n => { Avatar = n.GetStringValue(); } },
                 { "avatar_decoration_data", n => { AvatarDecorationData = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseAvatarDecorationData>(global::Soenneker.Discord.OpenApiClient.Models.BasicGuildMemberResponseAvatarDecorationData.CreateFromDiscriminatorValue); } },

@@ -95,7 +95,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "allow_multiselect", n => { AllowMultiselect = n.GetBoolValue(); } },
                 { "answers", n => { Answers = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.PollAnswerResponse>(global::Soenneker.Discord.OpenApiClient.Models.PollAnswerResponse.CreateFromDiscriminatorValue)?.AsList(); } },

@@ -130,7 +130,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "check_suite", n => { CheckSuite = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite>(global::Soenneker.Discord.OpenApiClient.Models.GithubCheckSuite.CreateFromDiscriminatorValue); } },
                 { "conclusion", n => { Conclusion = n.GetStringValue(); } },

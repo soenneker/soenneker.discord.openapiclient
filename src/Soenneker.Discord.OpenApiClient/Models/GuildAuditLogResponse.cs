@@ -140,7 +140,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "application_commands", n => { ApplicationCommands = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationCommandResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "audit_log_entries", n => { AuditLogEntries = n.GetCollectionOfObjectValues<global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse>(global::Soenneker.Discord.OpenApiClient.Models.AuditLogEntryResponse.CreateFromDiscriminatorValue)?.AsList(); } },

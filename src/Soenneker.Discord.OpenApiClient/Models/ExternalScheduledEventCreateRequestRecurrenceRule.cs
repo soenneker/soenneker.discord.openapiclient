@@ -132,7 +132,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "by_month", n => { ByMonth = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "by_month_day", n => { ByMonthDay = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },

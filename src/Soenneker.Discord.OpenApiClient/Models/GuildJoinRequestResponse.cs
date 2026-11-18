@@ -143,7 +143,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "actioned_by_user", n => { ActionedByUser = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser>(global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestResponseActionedByUser.CreateFromDiscriminatorValue); } },
                 { "application_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Discord.OpenApiClient.Models.GuildJoinRequestApplicationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApplicationStatus = default; _explicitNullProperties?.Remove("application_status"); AdditionalData["application_status"] = unknown; } else { ApplicationStatus = parsed; AdditionalData.Remove("application_status"); } } },
