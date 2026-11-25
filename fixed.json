@@ -68,7 +68,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ApplicationFormPartial"
+                "$ref": "#/components/schemas/ApplicationUpdateFormPartial"
               }
             }
           },
@@ -170,7 +170,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ApplicationFormPartial"
+                "$ref": "#/components/schemas/ApplicationUpdateFormPartial"
               }
             }
           },
@@ -18675,120 +18675,6 @@
         ],
         "format": "int32"
       },
-      "ApplicationFormPartial": {
-        "type": "object",
-        "properties": {
-          "description": {
-            "$ref": "#/components/schemas/ApplicationFormPartialDescription"
-          },
-          "icon": {
-            "contentEncoding": "base64",
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "cover_image": {
-            "contentEncoding": "base64",
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "team_id": {
-            "pattern": "^(0|[1-9][0-9]*)$",
-            "type": [
-              "null",
-              "string"
-            ],
-            "x-client-original-format": "snowflake"
-          },
-          "flags": {
-            "type": [
-              "null",
-              "integer"
-            ]
-          },
-          "interactions_endpoint_url": {
-            "maxLength": 2048,
-            "type": [
-              "null",
-              "string"
-            ],
-            "x-client-original-format": "uri"
-          },
-          "explicit_content_filter": {
-            "$ref": "#/components/schemas/ApplicationFormPartialExplicitContentFilter"
-          },
-          "max_participants": {
-            "minimum": -1,
-            "type": [
-              "null",
-              "integer"
-            ],
-            "format": "int32"
-          },
-          "type": {
-            "$ref": "#/components/schemas/ApplicationFormPartialType"
-          },
-          "tags": {
-            "maxItems": 5,
-            "uniqueItems": true,
-            "type": [
-              "null",
-              "array"
-            ],
-            "items": {
-              "maxLength": 20,
-              "type": "string"
-            }
-          },
-          "custom_install_url": {
-            "maxLength": 2048,
-            "type": [
-              "null",
-              "string"
-            ],
-            "x-client-original-format": "uri"
-          },
-          "install_params": {
-            "$ref": "#/components/schemas/ApplicationFormPartialInstallParams"
-          },
-          "role_connections_verification_url": {
-            "maxLength": 2048,
-            "type": [
-              "null",
-              "string"
-            ],
-            "x-client-original-format": "uri"
-          },
-          "integration_types_config": {
-            "$ref": "#/components/schemas/ApplicationFormPartialIntegrationTypesConfigProperty"
-          },
-          "event_webhooks_status": {
-            "$ref": "#/components/schemas/ApplicationFormPartialEventWebhooksStatus"
-          },
-          "event_webhooks_url": {
-            "maxLength": 2048,
-            "type": [
-              "null",
-              "string"
-            ],
-            "description": "Event webhooks URL for the app to receive webhook events",
-            "x-client-original-format": "uri"
-          },
-          "event_webhooks_types": {
-            "uniqueItems": true,
-            "type": [
-              "null",
-              "array"
-            ],
-            "items": {
-              "$ref": "#/components/schemas/ApplicationFormPartialEventWebhooksTypesItem"
-            }
-          }
-        }
-      },
       "ApplicationIdentityProviderAuthType": {
         "type": "string",
         "enum": [
@@ -18967,7 +18853,7 @@
             "type": "string"
           },
           "type": {
-            "$ref": "#/components/schemas/ApplicationFormPartialType"
+            "$ref": "#/components/schemas/ApplicationResponseType"
           },
           "cover_image": {
             "type": "string"
@@ -19126,6 +19012,120 @@
           }
         ],
         "format": "int32"
+      },
+      "ApplicationUpdateFormPartial": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "$ref": "#/components/schemas/ApplicationUpdateFormPartialDescription"
+          },
+          "icon": {
+            "contentEncoding": "base64",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "cover_image": {
+            "contentEncoding": "base64",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "team_id": {
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "type": [
+              "null",
+              "string"
+            ],
+            "x-client-original-format": "snowflake"
+          },
+          "flags": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "interactions_endpoint_url": {
+            "maxLength": 2048,
+            "type": [
+              "null",
+              "string"
+            ],
+            "x-client-original-format": "uri"
+          },
+          "explicit_content_filter": {
+            "$ref": "#/components/schemas/ApplicationUpdateFormPartialExplicitContentFilter"
+          },
+          "max_participants": {
+            "minimum": -1,
+            "type": [
+              "null",
+              "integer"
+            ],
+            "format": "int32"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ApplicationResponseType"
+          },
+          "tags": {
+            "maxItems": 5,
+            "uniqueItems": true,
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "maxLength": 20,
+              "type": "string"
+            }
+          },
+          "custom_install_url": {
+            "maxLength": 2048,
+            "type": [
+              "null",
+              "string"
+            ],
+            "x-client-original-format": "uri"
+          },
+          "install_params": {
+            "$ref": "#/components/schemas/ApplicationIntegrationTypeConfigurationOAuth2InstallParams"
+          },
+          "role_connections_verification_url": {
+            "maxLength": 2048,
+            "type": [
+              "null",
+              "string"
+            ],
+            "x-client-original-format": "uri"
+          },
+          "integration_types_config": {
+            "$ref": "#/components/schemas/ApplicationUpdateFormPartialIntegrationTypesConfigProperty"
+          },
+          "event_webhooks_status": {
+            "$ref": "#/components/schemas/ApplicationUpdateFormPartialEventWebhooksStatus"
+          },
+          "event_webhooks_url": {
+            "maxLength": 2048,
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Event webhooks URL for the app to receive webhook events",
+            "x-client-original-format": "uri"
+          },
+          "event_webhooks_types": {
+            "uniqueItems": true,
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "$ref": "#/components/schemas/ApplicationUpdateFormPartialEventWebhooksTypesItem"
+            }
+          }
+        }
       },
       "ApplicationUserRoleConnectionResponse": {
         "type": "object",
@@ -19902,7 +19902,7 @@
             "type": "string"
           },
           "type": {
-            "$ref": "#/components/schemas/ApplicationFormPartialType"
+            "$ref": "#/components/schemas/ApplicationResponseType"
           },
           "cover_image": {
             "type": "string"
@@ -26108,7 +26108,7 @@
             "type": "string"
           },
           "type": {
-            "$ref": "#/components/schemas/ApplicationFormPartialType"
+            "$ref": "#/components/schemas/ApplicationResponseType"
           },
           "cover_image": {
             "type": "string"
@@ -26367,7 +26367,7 @@
             "type": "string"
           },
           "type": {
-            "$ref": "#/components/schemas/ApplicationFormPartialType"
+            "$ref": "#/components/schemas/ApplicationResponseType"
           },
           "cover_image": {
             "type": "string"
@@ -30171,7 +30171,7 @@
             "type": "string"
           },
           "type": {
-            "$ref": "#/components/schemas/ApplicationFormPartialType"
+            "$ref": "#/components/schemas/ApplicationResponseType"
           },
           "cover_image": {
             "type": "string"
@@ -36927,27 +36927,12 @@
         "format": "int32",
         "not": {}
       },
-      "ApplicationFormPartialExplicitContentFilter": {
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "$ref": "#/components/schemas/ApplicationExplicitContentFilterTypes"
-          }
-        ]
+      "ApplicationIncomingWebhookResponseType": {
+        "type": "integer",
+        "format": "int32",
+        "not": {}
       },
-      "ApplicationFormPartialType": {
-        "oneOf": [
-          {
-            "type": "null"
-          },
-          {
-            "$ref": "#/components/schemas/ApplicationTypes"
-          }
-        ]
-      },
-      "ApplicationFormPartialInstallParams": {
+      "ApplicationIntegrationTypeConfigurationOAuth2InstallParams": {
         "type": [
           "object",
           "null"
@@ -36985,14 +36970,76 @@
           ]
         }
       },
-      "ApplicationFormPartialIntegrationTypesConfigAdditionalProperties": {
+      "ApplicationOAuth2InstallParamsScopesItem": {
+        "type": "string",
+        "enum": [
+          "bot",
+          "applications.commands"
+        ],
+        "x-ms-enum": {
+          "name": "ApplicationOAuth2InstallParamsScopesItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "bot",
+              "name": "Bot"
+            },
+            {
+              "value": "applications.commands",
+              "name": "ApplicationsCommands"
+            }
+          ]
+        }
+      },
+      "ApplicationOAuth2InstallParamsResponseScopesItem": {
+        "type": "string",
+        "enum": [
+          "bot",
+          "applications.commands"
+        ],
+        "x-ms-enum": {
+          "name": "ApplicationOAuth2InstallParamsResponseScopesItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "bot",
+              "name": "Bot"
+            },
+            {
+              "value": "applications.commands",
+              "name": "ApplicationsCommands"
+            }
+          ]
+        }
+      },
+      "ApplicationResponseType": {
+        "oneOf": [
+          {
+            "type": "null"
+          },
+          {
+            "$ref": "#/components/schemas/ApplicationTypes"
+          }
+        ]
+      },
+      "ApplicationUpdateFormPartialExplicitContentFilter": {
+        "oneOf": [
+          {
+            "type": "null"
+          },
+          {
+            "$ref": "#/components/schemas/ApplicationExplicitContentFilterTypes"
+          }
+        ]
+      },
+      "ApplicationUpdateFormPartialIntegrationTypesConfigAdditionalProperties": {
         "type": [
           "object",
           "null"
         ],
         "properties": {
           "oauth2_install_params": {
-            "$ref": "#/components/schemas/ApplicationFormPartialInstallParams"
+            "$ref": "#/components/schemas/ApplicationIntegrationTypeConfigurationOAuth2InstallParams"
           }
         },
         "x-client-original-nullable-union": {
@@ -37006,17 +37053,17 @@
           ]
         }
       },
-      "ApplicationFormPartialEventWebhooksStatus": {
+      "ApplicationUpdateFormPartialEventWebhooksStatus": {
         "oneOf": [
           {
             "type": "null"
           },
           {
-            "$ref": "#/components/schemas/ApplicationFormPartialEventWebhooksStatusOneOf2"
+            "$ref": "#/components/schemas/ApplicationUpdateFormPartialEventWebhooksStatusOneOf2"
           }
         ]
       },
-      "ApplicationFormPartialEventWebhooksTypesItem": {
+      "ApplicationUpdateFormPartialEventWebhooksTypesItem": {
         "type": "string",
         "enum": [
           "ENTITLEMENT_CREATE",
@@ -37033,7 +37080,7 @@
           "QUEST_USER_ENROLLMENT"
         ],
         "x-ms-enum": {
-          "name": "ApplicationFormPartialEventWebhooksTypesItem",
+          "name": "ApplicationUpdateFormPartialEventWebhooksTypesItem",
           "modelAsString": false,
           "values": [
             {
@@ -37083,53 +37130,6 @@
             {
               "value": "QUEST_USER_ENROLLMENT",
               "name": "QuestUserEnrollment"
-            }
-          ]
-        }
-      },
-      "ApplicationIncomingWebhookResponseType": {
-        "type": "integer",
-        "format": "int32",
-        "not": {}
-      },
-      "ApplicationOAuth2InstallParamsScopesItem": {
-        "type": "string",
-        "enum": [
-          "bot",
-          "applications.commands"
-        ],
-        "x-ms-enum": {
-          "name": "ApplicationOAuth2InstallParamsScopesItem",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "bot",
-              "name": "Bot"
-            },
-            {
-              "value": "applications.commands",
-              "name": "ApplicationsCommands"
-            }
-          ]
-        }
-      },
-      "ApplicationOAuth2InstallParamsResponseScopesItem": {
-        "type": "string",
-        "enum": [
-          "bot",
-          "applications.commands"
-        ],
-        "x-ms-enum": {
-          "name": "ApplicationOAuth2InstallParamsResponseScopesItem",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "bot",
-              "name": "Bot"
-            },
-            {
-              "value": "applications.commands",
-              "name": "ApplicationsCommands"
             }
           ]
         }
@@ -41673,7 +41673,7 @@
           "object"
         ]
       },
-      "ApplicationFormPartialDescription": {
+      "ApplicationUpdateFormPartialDescription": {
         "required": [
           "default"
         ],
@@ -41687,7 +41687,7 @@
             "type": "string"
           },
           "localizations": {
-            "$ref": "#/components/schemas/ApplicationFormPartialDescriptionLocalizationsProperty"
+            "$ref": "#/components/schemas/ApplicationUpdateFormPartialDescriptionLocalizationsProperty"
           }
         }
       },
@@ -43856,17 +43856,6 @@
           "type": "string"
         }
       },
-      "ApplicationFormPartialIntegrationTypesConfigProperty": {
-        "maxProperties": 2,
-        "minProperties": 1,
-        "type": [
-          "null",
-          "object"
-        ],
-        "additionalProperties": {
-          "$ref": "#/components/schemas/ApplicationFormPartialIntegrationTypesConfigAdditionalProperties"
-        }
-      },
       "ApplicationResponseIntegrationTypesConfigProperty": {
         "type": "object",
         "additionalProperties": {
@@ -43919,6 +43908,17 @@
         ],
         "additionalProperties": {
           "type": "string"
+        }
+      },
+      "ApplicationUpdateFormPartialIntegrationTypesConfigProperty": {
+        "maxProperties": 2,
+        "minProperties": 1,
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ApplicationUpdateFormPartialIntegrationTypesConfigAdditionalProperties"
         }
       },
       "ApplicationUserRoleConnectionResponseMetadataProperty": {
@@ -44089,7 +44089,7 @@
           "type": "string"
         }
       },
-      "ApplicationFormPartialDescriptionLocalizationsProperty": {
+      "ApplicationUpdateFormPartialDescriptionLocalizationsProperty": {
         "type": [
           "null",
           "object"
@@ -49710,7 +49710,7 @@
           ]
         }
       },
-      "ApplicationFormPartialEventWebhooksStatusOneOf2": {
+      "ApplicationUpdateFormPartialEventWebhooksStatusOneOf2": {
         "type": "integer",
         "format": "int32",
         "not": {}
@@ -51058,7 +51058,7 @@
       "type": "object",
       "properties": {
         "oauth2_install_params": {
-          "$ref": "#/components/schemas/ApplicationFormPartialInstallParams"
+          "$ref": "#/components/schemas/ApplicationIntegrationTypeConfigurationOAuth2InstallParams"
         }
       }
     },
@@ -53701,7 +53701,17 @@
         }
       ]
     },
-    "ApplicationIntegrationTypeConfigurationOAuth2InstallParams": {
+    "ApplicationUpdateFormPartialType": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/components/schemas/ApplicationTypes"
+        }
+      ]
+    },
+    "ApplicationUpdateFormPartialInstallParams": {
       "type": [
         "object",
         "null"
@@ -53738,16 +53748,6 @@
           }
         ]
       }
-    },
-    "ApplicationResponseType": {
-      "oneOf": [
-        {
-          "type": "null"
-        },
-        {
-          "$ref": "#/components/schemas/ApplicationTypes"
-        }
-      ]
     },
     "BasicApplicationResponseWithBotType": {
       "oneOf": [
@@ -58440,17 +58440,6 @@
         "type": "string"
       }
     },
-    "ApplicationFormPartialIntegrationTypesConfig": {
-      "maxProperties": 2,
-      "minProperties": 1,
-      "type": [
-        "null",
-        "object"
-      ],
-      "additionalProperties": {
-        "$ref": "#/components/schemas/ApplicationFormPartialIntegrationTypesConfigAdditionalProperties"
-      }
-    },
     "ApplicationResponseIntegrationTypesConfig": {
       "type": "object",
       "additionalProperties": {
@@ -58503,6 +58492,17 @@
       ],
       "additionalProperties": {
         "type": "string"
+      }
+    },
+    "ApplicationUpdateFormPartialIntegrationTypesConfig": {
+      "maxProperties": 2,
+      "minProperties": 1,
+      "type": [
+        "null",
+        "object"
+      ],
+      "additionalProperties": {
+        "$ref": "#/components/schemas/ApplicationUpdateFormPartialIntegrationTypesConfigAdditionalProperties"
       }
     },
     "ApplicationUserRoleConnectionResponseMetadata": {
@@ -58667,7 +58667,7 @@
         "type": "string"
       }
     },
-    "ApplicationFormPartialDescriptionLocalizations": {
+    "ApplicationUpdateFormPartialDescriptionLocalizations": {
       "type": [
         "null",
         "object"

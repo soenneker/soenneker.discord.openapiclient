@@ -9,7 +9,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApplicationFormPartialDescription : IAdditionalDataHolder, IParsable
+    public partial class ApplicationUpdateFormPartialDescription : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -38,31 +38,31 @@ namespace Soenneker.Discord.OpenApiClient.Models
         /// <summary>The localizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty? Localizations { get => _explicitNullValueLocalizations; set { _explicitNullValueLocalizations = value; AdditionalData?.Remove("localizations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localizations"); else _explicitNullProperties?.Remove("localizations"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty? _explicitNullValueLocalizations = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUpdateFormPartialDescriptionLocalizationsProperty? Localizations { get => _explicitNullValueLocalizations; set { _explicitNullValueLocalizations = value; AdditionalData?.Remove("localizations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localizations"); else _explicitNullProperties?.Remove("localizations"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ApplicationUpdateFormPartialDescriptionLocalizationsProperty? _explicitNullValueLocalizations = default!;
 #nullable restore
 #else
-        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty Localizations { get => _explicitNullValueLocalizations; set { _explicitNullValueLocalizations = value; AdditionalData?.Remove("localizations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localizations"); else _explicitNullProperties?.Remove("localizations"); } }
-        private global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty _explicitNullValueLocalizations = default!;
+        public global::Soenneker.Discord.OpenApiClient.Models.ApplicationUpdateFormPartialDescriptionLocalizationsProperty Localizations { get => _explicitNullValueLocalizations; set { _explicitNullValueLocalizations = value; AdditionalData?.Remove("localizations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localizations"); else _explicitNullProperties?.Remove("localizations"); } }
+        private global::Soenneker.Discord.OpenApiClient.Models.ApplicationUpdateFormPartialDescriptionLocalizationsProperty _explicitNullValueLocalizations = default!;
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescription"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationUpdateFormPartialDescription"/> and sets the default values.
         /// </summary>
-        public ApplicationFormPartialDescription()
+        public ApplicationUpdateFormPartialDescription()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescription"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Discord.OpenApiClient.Models.ApplicationUpdateFormPartialDescription"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescription CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Discord.OpenApiClient.Models.ApplicationUpdateFormPartialDescription CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             // Preserve a nullable root response.
             if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescription(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Discord.OpenApiClient.Models.ApplicationUpdateFormPartialDescription(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,7 +73,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "default", n => { Default = n.GetStringValue(); } },
-                { "localizations", n => { Localizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty.CreateFromDiscriminatorValue); } },
+                { "localizations", n => { Localizations = n.GetObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationUpdateFormPartialDescriptionLocalizationsProperty>(global::Soenneker.Discord.OpenApiClient.Models.ApplicationUpdateFormPartialDescriptionLocalizationsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,7 +84,7 @@ namespace Soenneker.Discord.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("default", Default);
-            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationFormPartialDescriptionLocalizationsProperty>("localizations", Localizations);
+            writer.WriteObjectValue<global::Soenneker.Discord.OpenApiClient.Models.ApplicationUpdateFormPartialDescriptionLocalizationsProperty>("localizations", Localizations);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
